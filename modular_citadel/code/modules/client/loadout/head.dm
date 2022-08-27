@@ -262,21 +262,6 @@
 	path = /obj/item/clothing/head/f13/chinese/officer
 	cost = 2
 
-/datum/gear/head/khan_horned
-	name = "horned helmet"
-	path = /obj/item/clothing/head/helmet/f13/khan
-	cost = 2
-
-/datum/gear/head/khan_furtrimmed
-	name = "horned fur-trimmed helmet"
-	path = /obj/item/clothing/head/helmet/f13/khan/pelt
-	cost = 2
-
-/datum/gear/head/khan_bandana
-	name = "outlaw bandana"
-	path = /obj/item/clothing/head/helmet/f13/khan/bandana
-	cost = 2
-
 //NCR
 
 /datum/gear/head/ncr_sapper
@@ -433,3 +418,19 @@ datum/gear/head/steelpot_bandolier
 							"Secretary",
 							"Shopkeeper",
 						)
+
+/datum/gear/head/khan_bandana
+	name = "Great Khan bandana"
+	path = /obj/item/clothing/head/helmet/f13/khan/bandana
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "KHAN"
+	restricted_roles = list("Great Khan")
+
+/datum/gear/head/khan_furtrimmed
+	name = "Great Khan fur-trimmed helmet"
+	path = /obj/item/clothing/head/helmet/f13/khan/pelt
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "KHAN"
+	restricted_roles = list("Great Khan")

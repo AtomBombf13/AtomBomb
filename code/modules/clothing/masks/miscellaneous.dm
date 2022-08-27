@@ -418,7 +418,7 @@
 	adjustmask(user)
 
 /////////////////////
-//"LEGION" BANDANAS//
+//LEGION BANDANAS//
 /////////////////////
 
 /obj/item/clothing/mask/bandana/legion
@@ -432,13 +432,13 @@
 	actions_types = list(/datum/action/item_action/adjust)
 
 /obj/item/clothing/mask/bandana/legion/camp
-	name = "desperado bandana"
-	desc = "Simple black cloth normally used by desperados"
+	name = "camp duty bandana"
+	desc = "Simple black cloth intended for men on camp duty."
 	icon_state = "legaux"
 
 /obj/item/clothing/mask/bandana/legion/legrecruit
-	name = "thieves bandana"
-	desc = "A coarse dark thieves bandana."
+	name = "recruit bandana"
+	desc = "A coarse dark recruit bandana."
 	icon_state = "legrecruit"
 
 /obj/item/clothing/mask/bandana/legion/legprime
@@ -447,20 +447,20 @@
 	icon_state = "legdecan"
 
 /obj/item/clothing/mask/bandana/legion/legvet
-	name = "bandito bandana"
-	desc = "A banditos bandana in red."
+	name = "veteran bandana"
+	desc = "A veterans bandana in red."
 	icon_state = "legvet"
 
 /obj/item/clothing/mask/bandana/legion/legdecan
-	name = "outlaw bandana"
-	desc = "A fine bandana in dark red."
+	name = "decanus bandana"
+	desc = "A fine decan bandana in dark red."
 	icon = 'icons/fallout/clothing/masks.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/mask.dmi'
 	icon_state = "legdecan"
 
 /obj/item/clothing/mask/bandana/legion/legcenturion
-	name = "overboss bandana"
-	desc = "A high quality bandana made for a overboss."
+	name = "centurion bandana"
+	desc = "A high quality bandana made for a centurion."
 	icon_state = "legcenturion"
 
 

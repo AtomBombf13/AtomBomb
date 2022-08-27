@@ -104,14 +104,6 @@
 	name = "plated war boots"
 	path = /obj/item/clothing/shoes/f13/military/plated
 
-/datum/gear/shoes/military/steeltipped
-	name = "steel tipped boots"
-	path = /obj/item/clothing/shoes/f13/military/khan
-
-/datum/gear/shoes/military/steelpelts
-	name = "steel tipped pelt boots"
-	path = /obj/item/clothing/shoes/f13/military/khan_pelt
-
 /datum/gear/shoes/military/duty
 	name = "duty boots"
 	path = /obj/item/clothing/shoes/f13/military/duty
@@ -148,3 +140,11 @@
 							"NCR Rear Echelon",
 							"NCR Off-Duty"
 						)
+
+/datum/gear/shoes/khan_peltboots
+	name = "Great Khan pelt boots"
+	path = /obj/item/clothing/shoes/f13/military/khan_pelt
+	cost = 2
+	subcategory = LOADOUT_SUBCATEGORY_SHOES_FACTIONS
+	restricted_desc = "KHAN"
+	restricted_roles = list("Great Khan")
