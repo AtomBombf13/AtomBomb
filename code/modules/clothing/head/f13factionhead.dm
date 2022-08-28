@@ -851,8 +851,8 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 ////////////////////////
 
 /obj/item/clothing/head/helmet/f13/khan
-	name = "horned helmet"
-	desc = "A piece of headwear commonly worn by the horned tribals that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
+	name = "Great Khan helmet"
+	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
 	icon = 'icons/fallout/clothing/khans.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_helmet"
@@ -869,7 +869,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
  */
 
 /obj/item/clothing/head/helmet/f13/khan/pelt
-	desc = "A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the horned tribals who wants to show off their hair."
+	desc = "A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the Khan who wants to show off their hair."
 	icon_state = "khan_helmetpelt"
 	item_state = "khan_helmetpelt"
 
@@ -879,7 +879,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
  */
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
-	name = "outlaw bandana"
+	name = "Great Khan bandana"
 	desc = "A bandana. Tougher than it looks. One side of the cloth is dark, the other red, so it can be reversed."
 	icon_state = "khan_bandana"
 	item_state = "khan_bandana"
