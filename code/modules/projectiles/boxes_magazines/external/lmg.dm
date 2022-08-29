@@ -96,3 +96,22 @@
 /obj/item/ammo_box/magazine/mm762/update_icon()
 	..()
 	icon_state = "762belt-[round(ammo_count(),20)]"
+
+/obj/item/ammo_box/magazine/cal50
+	name = "ammo belt (.50)"
+	icon_state = "762belt"
+	ammo_type = /obj/item/ammo_casing/a50MG
+	max_ammo = 80
+	w_class = WEIGHT_CLASS_NORMAL
+	caliber = list(CALIBER_50MG)
+	custom_materials = list(/datum/material/iron = MATS_MEDIUM_BELT_MAGAZINE)
+
+/obj/item/ammo_box/magazine/cal50/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/cal50/can_load()
+	return 0
+
+/obj/item/ammo_box/magazine/cal50/update_icon()
+	..()
+	icon_state = "762belt-[round(ammo_count(),20)]"

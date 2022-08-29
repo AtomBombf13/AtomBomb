@@ -112,33 +112,6 @@
 	burst_size = 1
 
 
-//Plasma carbine
-/obj/item/gun/energy/laser/plasma/carbine
-	name ="plasma carbine"
-	item_state = "plasma"
-	icon_state = "plasmacarbine"
-	desc = "A burst-fire energy weapon that fires a steady stream of toroidal plasma towards an unlucky target."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmacarbine)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-	scope_state = "plasma_scope"
-	scope_x_offset = 13
-	scope_y_offset = 16
-	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 2
-	init_firemodes = list(
-		BURST_2_ROUND
-	)
-
 //Multiplas rifle
 /obj/item/gun/energy/laser/plasma/scatter
 	name = "multiplas rifle"
@@ -158,7 +131,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 
-
+//Plasma-caster spear - On hold; possible removal depending on use.
 /obj/item/gun/energy/laser/plasma/spear
 	name = "ergonomic plasmacaster"
 	icon = 'icons/fallout/objects/melee/twohanded.dmi'

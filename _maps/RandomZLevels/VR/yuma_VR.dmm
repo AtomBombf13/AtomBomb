@@ -1721,7 +1721,6 @@
 /obj/item/gun/energy/laser/plasma/glock,
 /obj/item/gun/energy/laser/plasma/glock/extended,
 /obj/item/gun/energy/laser/plasma/pistol,
-/obj/item/gun/energy/laser/plasma/carbine,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/den/programs/armory)
 "kS" = (

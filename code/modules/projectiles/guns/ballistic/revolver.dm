@@ -146,8 +146,8 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/revolver/revolver45
-	name = "S&W .45 ACP revolver"
-	desc = "Smith and Wesson revolver firing .45 ACP from a seven round cylinder."
+	name = "Casull .45 ACP revolver"
+	desc = "A well made and forged Casull revolver, firing .45 ACP from a six round cylinder."
 	item_state = "45revolver"
 	icon_state = "45revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
@@ -193,57 +193,6 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
 	fire_sound = 'sound/f13weapons/357magnum.ogg'
-
-/* * * * * * * * * * *
- * Mateba revolver
- * Cool? heavy revolver
- * .357 magnum
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/colt357/mateba //this is a skin that rigbe wanted
-	name = "\improper Unica 6 auto-revolver"
-	desc = "A pre-war high-power autorevolver commonly used by people who think they look cool."
-	icon_state = "mateba"
-	item_state = "mateba"
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = HANDGUN_RECOIL(1.2)
-
-	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
-
-/* * * * * * * * * * *
- * Lucky revolver
- * Blocking heavy revolver
- * .357 magnum
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/colt357/lucky
-	name = "Lucky"
-	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often."
-	icon_state = "lucky37"
-	item_state = "lucky"
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-
-	block_chance = 20
 
 /* * * * * * * * * * *
  * Police revolver
@@ -312,63 +261,6 @@
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 
 /* * * * * * * * * * *
- * Pearly .44 magnum revolver
- * Cute heavier revolver
- * .44 magnum
- * Scope!
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/m29/alt
-	desc = "Powerful handgun with a bit of a kick. This one has nickled finish and pearly grip, and has been kept in good condition by its owner."
-	item_state = "44magnum"
-	icon_state = "mysterious_m29"
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-
-
-/* * * * * * * * * * *
- * Peacekeeper revolver
- * Quickfire heavier revolver
- * .44 magnum
- * Scope!
- * Quick fire
- * Heavy recoil
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/m29/peacekeeper
-	name = "Peacekeeper"
-	desc = "When you don't just need excessive force, but crave it. This .44 has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
-	item_state = "m29peace"
-	icon_state = "m29peace"
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-
-	automatic = 0
-	autofire_shot_delay = 0
-	actions_types = list(/datum/action/item_action/toggle_firemode)
-	can_scope = FALSE
-
-/* * * * * * * * * * *
  * Snubnose .44 revolver
  * Smol heavier revolver
  * .44 magnum
@@ -435,34 +327,6 @@
 	fire_sound = 'sound/f13weapons/44revolver.ogg'
 
 /* * * * * * * * * * *
- * Desert ranger revolver
- * Cool heavier revolver
- * .44 magnum
- * Scope!
- * Accurate
- * Slow to fire
- * More damage
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/revolver44/desert_ranger
-	name = "desert ranger revolver"
-	desc = "I hadn't noticed, but there on his hip, was a really spiffy looking iron..."
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-
-/* * * * * * * * * * *
  * Hunting revolver
  * Super heavy revolver
  * .45-70
@@ -514,34 +378,6 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
-
-/* * * * * * * * * * *
- * Single Action Army revolvers
- * Bouncy revolver
- * .45LC
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/revolver45/gunslinger
-	name = "\improper Colt Single Action Army"
-	desc = "A Colt Single Action Army, chambered in the archaic .45 long colt cartridge."
-	item_state = "coltwalker"
-	icon_state = "peacemaker"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = HANDGUN_RECOIL(0.8)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	fire_sound = 'sound/f13weapons/45revolver.ogg'
 
 /* * * * * * * * * * *
  * .223 revolver
@@ -820,3 +656,84 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+
+/* * * * * * * * * * *
+ * Lucky revolver
+ * Blocking heavy revolver
+ * .357 magnum
+ * Unique
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/revolver/colt357/lucky
+	name = "Lucky"
+	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often."
+	icon_state = "lucky37"
+	item_state = "lucky"
+
+	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+
+	block_chance = 20
+
+/* * * * * * * * * * *
+ * Peacekeeper revolver
+ * Quickfire heavier revolver
+ * .44 magnum
+ * Scope!
+ * Quick fire
+ * Heavy recoil
+ * Unique - Loot rotation
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/revolver/m29/peacekeeper
+	name = "Peacekeeper"
+	desc = "When you don't just need excessive force, but crave it. This .44 has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
+	item_state = "m29peace"
+	icon_state = "m29peace"
+
+	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+
+	automatic = 0
+	autofire_shot_delay = 0
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	can_scope = FALSE
+
+/* * * * * * * * * * *
+ * Pearly .44 magnum revolver
+ * Cute heavier revolver
+ * .44 magnum
+ * Scope!
+ * Unique - Loot roation
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/revolver/m29/alt
+	desc = "Powerful handgun with a bit of a kick. This one has nickled finish and pearly grip, and has been kept in good condition by its owner."
+	item_state = "44magnum"
+	icon_state = "mysterious_m29"
+
+	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	gun_tags = list(GUN_SCOPE)
+	can_scope = TRUE

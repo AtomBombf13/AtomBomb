@@ -127,7 +127,7 @@
 	exp_requirements = 1400
 
 	loadout_options = list(
-		/datum/outfit/loadout/gysgt_ballistics, // LSW and MK23
+		/datum/outfit/loadout/gysgt_ballistics, // Unique M2A1 .50 cal MG
 		/datum/outfit/loadout/gysgt_laser, // AER12
 		/datum/outfit/loadout/gysgt_minigun, // Laser gatling
 		)
@@ -149,11 +149,9 @@
 
 /datum/outfit/loadout/gysgt_ballistics
 	name = "Assault Kit"
-	suit_store = /obj/item/gun/ballistic/automatic/lsw
+	suit_store = /obj/item/gun/ballistic/automatic/m1919/m2a1
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 3,
-		/obj/item/ammo_box/magazine/m45/socom = 2,
-		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
+		/obj/item/ammo_box/magazine/cal50 = 3,
 		)
 
 /datum/outfit/loadout/gysgt_laser
