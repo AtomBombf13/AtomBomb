@@ -677,7 +677,7 @@
  * M1A1 Carbine
  * 10mm
  * Folds up!
- * Common
+ * Uncommon
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/m1carbine/compact
@@ -764,14 +764,14 @@
 
 
 /* * * * * * * * * * *
- * Combat Carbine
+ * Combat Rifle
  * Baseline .45 carbine
  * Common
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/combat
-	name = "Combat Carbine"
-	desc = "A .45 semi-automatic combat carbine, produced pre-war for National Guard forces."
+	name = "Combat Rifle"
+	desc = "A .45 semi-automatic combat rifle, produced pre-war for National Guard forces."
 	icon_state = "combat_rifle"
 	item_state = "combatrifle"
 	icon_prefix = "combatrifle"
@@ -1011,38 +1011,6 @@
 	fire_sound = 'sound/f13weapons/marksman_rifle.ogg'
 
 /* * * * * * * * * * *
- * Police Assault Rifle
- * Baseline 5mm autorifle
- * 5mm
- * Uncommon
- * * * * * * * * * * */
- 
-/obj/item/gun/ballistic/automatic/assault_carbine/policerifle
-	name = "Police Assault Rifle"
-	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Nash Police Department. Held together by duct tape and prayers, it somehow still shoots."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "rifle-police"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
-	init_firemodes = list(
-		FULL_AUTO_400,
-		SEMI_AUTO_NODELAY
-	)
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-
-/* * * * * * * * * * *
  * Rangemaster Rifle
  * Baseline semi-auto 7.62mm rifle
  * .308 / 7.62mm
@@ -1186,32 +1154,6 @@
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	zoom_factor = 2
-
-/* * * * * * * * * * *
- * Compact Sniper Rifle
- * Sniper semi-auto 7.62mm rifle
- * .308 / 7.62mm
- * Less damage
- * Less slowdown
- * Scope!
- * Bayonet!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
-	name = "compact sniper rifle"
-	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert. This particular model is lighter and faster."
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *
  * Automatic Rifles  *
@@ -1446,9 +1388,11 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/assault_carbine/worn
-	name = "worn assault carbine"
-	desc = "The U.S. army carbine version of the R91, made by Colt and issued to special forces. This one is beat-up and falling apart."
-	icon_state = "assault_carbine"
+	name = "ak112 assault carbine"
+	desc = "An AK-112 5mm Assault Rifle. An old military model bearing Colt markings along its stamped-metal receiver, out of use around the time of the Great War."
+	icon = 'icons/fallout/objects/guns/ballistic/ak112.dmi'
+	icon_state = "ak112"
+	item_state = "fnfal"
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
@@ -1464,6 +1408,82 @@
 		BURST_5_ROUND,
 		SEMI_AUTO_NODELAY
 	)
+	can_scope = FALSE
+	can_suppress = FALSE
+	can_flashlight = FALSE
+
+/* * * * * * * * * * *
+ * Police Assault Rifle
+ * Baseline 5mm autorifle
+ * 5mm
+ * Uncommon
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/assault_carbine/policerifle
+	name = "Police Assault Rifle"
+	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Nash Police Department. Held together by duct tape and prayers, it somehow still shoots."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "rifle-police"
+
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	cock_delay = GUN_COCK_RIFLE_BASE
+	init_recoil = RIFLE_RECOIL(1)
+	init_firemodes = list(
+		FULL_AUTO_400,
+		SEMI_AUTO_NODELAY
+	)
+	gun_tags = list(GUN_SCOPE)
+	can_scope = TRUE
+
+/* * * * * * * * * * *
+ * M14 Battle Rifle
+ * Baseline 7.62 autorifle
+ * .308 / 7.62
+ * Uncommon
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/m14
+	name = "m14 battle rifle"
+	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
+	icon = 'icons/fallout/objects/guns/bar.dmi'
+	slot_flags = ITEM_SLOT_BACK
+	icon_state = "m14"
+	item_state = "308"
+	icon_prefix = "rifle"
+	mag_type = /obj/item/ammo_box/magazine/m762
+	init_mag_type = /obj/item/ammo_box/magazine/m762/ext
+
+	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	burst_size = 1
+	damage_multiplier = GUN_LESS_DAMAGE_T1
+	cock_delay = GUN_COCK_RIFLE_BASE
+	init_recoil = RIFLE_RECOIL(1.3)
+	init_firemodes = list(
+		FULL_AUTO_400,
+		SEMI_AUTO_NODELAY
+	)
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+	gun_tags = list(GUN_SCOPE)
+	can_scope = TRUE
+	scope_state = "scope_short"
+	scope_x_offset = 4
+	scope_y_offset = 15
+	automatic = 1
+	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 
 /* * * * * * * * * * *
  * Browning Automatic BAR Rifle
@@ -1989,3 +2009,25 @@
 	can_scope = FALSE
 	zoom_factor = 1.5
 	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
+
+
+/* * * * * * * * * * *
+ * Browning M2A1 HMG
+ * BIIIIG .50 cal MG
+ * .50 cal
+ * The big gun
+ * holy shit
+ * Unique - Enclave elite (Spawn - head gun)
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/m1919/m2a1
+	name = "John 'Moses' Browning M2A1"
+	desc = "This ancient heavy machine gun has been directly pulled off of some once combat vehicle and modified to be fired while being carried. It is adorned by symbols of the US Government and the Encalve."
+	icon_state = "M2A1"
+	slot_flags = 0
+	slowdown = 1.25
+	mag_type = /obj/item/ammo_box/magazine/cal50
+	init_mag_type = /obj/item/ammo_box/magazine/cal50
+	init_firemodes = list(
+		FULL_AUTO_300
+	)

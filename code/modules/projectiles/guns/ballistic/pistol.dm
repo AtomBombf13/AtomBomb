@@ -210,7 +210,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
 	mag_type = /obj/item/ammo_box/magazine/m9mm // load any 9mm pistol ammos	
-	extra_mag_types = list(/obj/item/ammo_box/magazine/greasegun) // let it take smg mags
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -357,6 +356,7 @@
  * Faster to shoot
  * Uncommon
  * * * * * * * * * * */
+ 
 /obj/item/gun/ballistic/automatic/pistol/autoloader
 	name = ".45 Autoloader"
 	desc = "A sleek looking handgun chambered in .45 ACP for all your operating needs. Don't let the slide catch your finger though."
