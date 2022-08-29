@@ -190,12 +190,7 @@
 
 #define KHAN		(1<<12)
 
-#define F13NOYAN (1<<0)
-#define F13STEWARD (1<<1)
-#define F13KHESHIG (1<<2)
-#define F13KHORCHIN (1<<3)
-#define F13KIPCHAK (1<<4)
-#define F13MANGUDAI (1<<5)
+#define F13GREATKHAN (1<<0)
 
 
 #define JOB_AVAILABLE 0

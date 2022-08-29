@@ -141,6 +141,21 @@
 	icon_state = "sec_cypherkey"
 	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1)
 
+/obj/item/encryptionkey/headset_vault_science
+	name = "\proper the Science encryption key"
+	icon_state = "sci_cypherkey"
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SCIENCE = 1)
+
+/obj/item/encryptionkey/headset_vault_preacher
+	name = "\proper the Preacher encryption key"
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SERVICE = 1)
+
+/obj/item/encryptionkey/headset_vault_merchant
+	name = "\proper the Merchant encryption key"
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SUPPLY = 1)
+
 /obj/item/encryptionkey/headset_overseer
 	name = "\proper the Overseer's encryption key"
 	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :c - command, :s - security, :e - engineering, :m - medical, :n - science."

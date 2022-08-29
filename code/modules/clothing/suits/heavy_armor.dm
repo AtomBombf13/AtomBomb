@@ -1,67 +1,293 @@
-/* // In this document: Heavy armor (not powerarmor)
+///////////
+// HEAVY //
+///////////
+
+/*
+ * Stats
+ * Big slowdown, high protection
+ * 40% DR for general armor - ???% effective HP
+ * 50-60% for specialist armor (most everything else is butt)
+ *
+ * Types:
+ * Tribal Raider (basically the same at this point)
+ * metal (-bullet , ++melee, ++laser)
+ * Polished (--bullet , +melee, +++laser)
+ * riot (special, +++melee , -bullet, --laser)
+ * Vest - bulletproof (special, +++bullet, --everything else)
+ * Salvaged PA (partway to PA, but super sloooow and bulky)
+ */
+
+/obj/item/clothing/suit/armor/heavy
+	name = "heavy armor template"
+	//icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	//mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
+	slowdown = 1
+	strip_delay = 50
+	equip_delay_other = 50
+	max_integrity = 300
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	stiffness = HEAVY_STIFFNESS
+
+/////////////////////
+//// BULLET VEST //// ...?
+/////////////////////
+
+/obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	name = "heavy bulletproof armor"
+	desc = "A heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry."
+	icon_state = "bulletproof"
+	item_state = "armor"
+	blood_overlay_type = "armor"
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
+
+//////////////////////
+//// TRIBAL ARMOR ////
+//////////////////////
+
+/obj/item/clothing/suit/armor/heavy/tribal
+	name = "tribal heavy carapace"
+	desc = "Thick layers of leather and bone, with metal reinforcements, surely this will make the wearer tough and uncaring for claws and blades."
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
+	icon_state = "tribal_heavy"
+	item_state = "tribal_heavy"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 
-///////////////
-// WASTELAND //
-///////////////
+/obj/item/clothing/suit/armor/heavy/tribal/bone
+	name = "Heavy Bone armor"
+	desc = "A tribal full armor plate, crafted from animal bone, metal and leather. Usually worn by the Bone Dancers"
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
+	icon_state = "bone_dancer_armor_heavy"
+	item_state = "bone_dancer_armor_heavy"
+	blood_overlay_type = "armor"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1)
 
-// Recipe Firesuit + metal chestplate + 50 welding fuel + 1 HQ + 1 plasteel
-/obj/item/clothing/suit/armor/heavy/metal/sulphite
-	name = "sulphite raider suit"
-	desc = "There are still some old asbestos fireman suits laying around from before the war. How about adding a ton of metal, plasteel and a combustion engine to one? The resulting armor is surprisingly effective at dissipating energy."
-	icon_state = "sulphite"
-	item_state = "sulphite"
-	armor = list("melee" = 55, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 25, "rad" = 30, "fire" = 95, "acid" = 15)
-	resistance_flags = FIRE_PROOF
 
-/obj/item/clothing/suit/armor/heavy/metal
+/obj/item/clothing/suit/armor/heavy/tribal/metal
 	name = "metal armor suit"
 	desc = "A suit of welded, fused metal plates. Bulky, but with great protection."
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
 	icon_state = "raider_metal"
 	item_state = "raider_metal"
-	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 20, "bomb" = 30, "bio" = 10, "rad" = 25, "fire" = 20, "acid" = 20)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1)
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/recycled
-	name = "recycled power armor"
-	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
-	icon_state = "recycled_power"
-	armor = list("melee" = 50, "bullet" = 45, "laser" = 30, "energy" = 25, "bomb" = 35, "bio" = 5, "rad" = 15, "fire" = 15, "acid" = 5)
+/obj/item/clothing/suit/armor/heavy/tribal/rustwalkers
+	name = "Rustwalkers heavy armor"
+	desc = "A car seat leather duster, a timing belt bandolier, and armour plating made from various parts of a car, it surely would weigh the wearer down. Commonly worn by members of the Rustwalkers tribe."
+	icon_state = "rustwalkers_armour_heavy"
+	item_state = "rustwalkers_armour_heavy"
 
-/obj/item/clothing/suit/armor/heavy/metal/raider
-	name = "iron raider suit"
-	desc = "More rust than metal, with gaping holes in it, this armor looks like a pile of junk. Under the rust some quality steel still remains however."
-	icon_state = "raider_metal"
-	item_state = "raider_metal"
-	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 15, "fire" = 20, "acid" = 0)
+/obj/item/clothing/suit/armor/heavy/tribal/whitelegs
+	name = "White Legs heavy armour"
+	desc = "A series of tan and khaki armour plates, held in place with a considerable amount of strapping and possibly duct tape. Commonly worn by members of the White Legs tribe."
+	icon_state = "white_legs_armour_heavy"
+	item_state = "white_legs_armour_heavy"
 
-/obj/item/clothing/suit/armor/heavy/wardenplate
-	name = "warden plates"
-	desc = "Thick metal breastplate with a decorative skull on the shoulder."
-	icon_state = "wardenplate"
-	armor = list("melee" = 55, "bullet" = 50, "laser" = 35, "energy" = 25, "bomb" = 30, "bio" = 0, "rad" = 15, "fire" = 10, "acid" = 10)
+/obj/item/clothing/suit/armor/heavy/tribal/eighties
+	name = "80s heavy armour"
+	desc = "A ballistic duster with the number 80 stitched onto the back worn over a breastplate made from a motorcycle's engine housing, with kneepads made from stirrups. Worn by the members of the 80s tribe."
+	icon_state = "80s_armour_heavy"
+	item_state = "80s_armour_heavy"
 
-/obj/item/clothing/suit/armor/heavy/bosexile
-	name = "modified Brotherhood armor"
-	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and lots of scrap metal."
-	icon_state = "exile_bos"
-	item_state = "exile_bos"
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 40, "energy" = 20, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
+/obj/item/clothing/suit/armor/heavy/tribal/deadhorses
+	name = "Dead Horses heavy armour"
+	desc = "A simple leather bandolier and gecko hide chest covering, with an engraved metal pauldron and a set of black leather straps, one holding a shinpad in place. Commonly worn by the members of the Dead Horses tribe."
+	icon_state = "dead_horses_armour_heavy"
+	item_state = "dead_horses_armour_heavy"
+
+/obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
+	name = "Western Wayfarer heavy armor"
+	desc = "A Suit of armor crafted by Tribals using pieces of scrap metals and the armor of fallen foes, a bighorner's skull sits on the right pauldron along with bighorner fur lining the collar of the leather bound chest. Along the leather straps adoring it are multiple bone charms with odd markings on them."
+	icon_state = "western_wayfarer_armor_heavy"
+	item_state = "western_wayfarer_armor_heavy"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+
+/obj/item/clothing/suit/armor/heavy/tribal/bone
+	name = "Heavy Bone armor"
+	desc = "A tribal full armor plate, crafted from animal bone, metal and leather. Usually worn by the Bone Dancers"
+	icon_state = "bone_dancer_armor_heavy"
+	item_state = "bone_dancer_armor_heavy"
+	blood_overlay_type = "armor"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+
+/////////////////////
+//// METAL ARMOR ////
+/////////////////////
+
+/obj/item/clothing/suit/armor/heavy/metal
+	name = "metal armor"
+	desc = "A set of plates formed together to form a crude chestplate."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "metal_chestplate"
+	item_state = "metal_chestplate"
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	mutantrace_variation = STYLE_PAW_TAURIC
+
+/obj/item/clothing/suit/armor/heavy/metal/polished
+	name = "polished metal armor"
+	desc = "A set of plates formed together to form a crude chestplate. These have been waxed and buffed to a mirror finish, but it looks a bit thinner."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "armor_enclave_peacekeeper"
+	item_state = "armor_enclave_peacekeeper"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_ENV_T1)
+	mutantrace_variation = NONE
+
+/obj/item/clothing/suit/armor/heavy/metal/polished/actually_laserproof // also actually_unobtainable
+	name = "reflector vest"
+	desc = "A vest that excels in protecting the wearer against energy projectiles, as well as occasionally reflecting them."
+	icon = 'icons/obj/clothing/suits.dmi'
+	icon_state = "armor_reflec"
+	item_state = "armor_reflec"
+	blood_overlay_type = "armor"
+	mob_overlay_icon = null
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	var/hit_reflect_chance = 40
+	protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN)
+	mutantrace_variation = NONE
+	armor = list(
+		"melee" = 0,
+		"bullet" = 0,
+		"laser" = 90,
+		"energy" = 30,
+		"bomb" = 10,
+		"bio" = 10,
+		"rad" = 10,
+		"fire" = 10,
+		"acid" = 50)
+
+/obj/item/clothing/suit/armor/heavy/metal/polished/actually_laserproof/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	if(def_zone in protected_zones)
+		if(prob(hit_reflect_chance))
+			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+	return ..()
+
+/obj/item/clothing/suit/armor/heavy/metal/tesla //changed from armor/laserproof
+	name = "tesla armor"
+	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Has a chance to deflect energy projectiles."
+	icon = 'icons/obj/clothing/suits.dmi'
+	icon_state = "tesla_armor"
+	item_state = "tesla_armor"
+	blood_overlay_type = "armor"
+	mob_overlay_icon = null
+	resistance_flags = FIRE_PROOF
+	var/hit_reflect_chance = 20
+	protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+	mutantrace_variation = NONE
+	armor = list(
+		"melee" = 5,
+		"bullet" = 5,
+		"laser" = 65,
+		"energy" = 50,
+		"bomb" = 0,
+		"bio" = 0,
+		"rad" = 0,
+		"fire" = 0,
+		"acid" = 0)
+
+/obj/item/clothing/suit/armor/heavy/metal/tesla/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	if(is_energy_reflectable_projectile(object) && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+		if(prob(hit_reflect_chance))
+			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
+			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+	return ..()
+
+/obj/item/clothing/suit/armor/heavy/metal/reinforced
+	name = "reinforced metal armor"
+	desc = "A set of well-fitted plates formed together to provide effective protection."
+	icon_state = "metal_chestplate2"
+	item_state = "metal_chestplate2"
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
+	mutantrace_variation = STYLE_PAW_TAURIC
+
+/obj/item/clothing/suit/armor/heavy/metal/mutant
+	name = "mutant armour"
+	desc = "An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon = 'icons/obj/clothing/suits.dmi'
+	icon_state = "mutie_metal_armour"
+	item_state = "mutie_metal_armour"
+	mutantrace_variation = NONE
+
+/obj/item/clothing/suit/armor/heavy/metal/mutant/reinforced
+	name = "mutant armour"
+	desc = "An oversized boiler plate, hammered to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon_state = "mutie_metal_armour_mk2"
+	item_state = "mutie_metal_armour_mk2"
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
+	mutantrace_variation = NONE
+
+/obj/item/clothing/suit/armor/heavy/metal/sulphite
+	name = "sulphite armor"
+	desc = "A combination of what seems to be raider metal armor with a jerry-rigged flame-exhaust system and ceramic plating."
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
+	resistance_flags = FIRE_PROOF
+	icon_state = "sulphite"
+	item_state = "sulphite"
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_FIRE_T3)
+	mutantrace_variation = NONE
+
+////////////////////
+//// RIOT ARMOR ////
+////////////////////
 
 /obj/item/clothing/suit/armor/heavy/riot
+	name = "riot suit"
+	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters."
+	icon_state = "riot"
+	item_state = "swat_suit"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
+	blocks_shove_knockdown = TRUE
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T3, ARMOR_MODIFIER_UP_DT_T2)
+
+/obj/item/clothing/suit/armor/heavy/riot/combat
+	name = "combat riot armor"
+	icon_state = "combat_coat"
+	item_state = "combat_coat"
+	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
+
+/obj/item/clothing/suit/armor/heavy/riot/police
 	name = "riot police armor"
 	icon_state = "bulletproof_heavy"
 	item_state = "bulletproof_heavy"
 	desc = "Heavy armor with ballistic inserts, sewn into a padded riot police coat."
-	armor = list("melee" = 70, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 45, "bio" = 35, "rad" = 10, "fire" = 50, "acid" = 10)
 
-//Recipe bone armor + metal and leather
-/obj/item/clothing/suit/armor/heavy/tribal
-	name = "tribal heavy carapace"
-	desc = "Thick layers of leather and bone, with metal reinforcements, surely this will make the wearer tough and uncaring for claws and blades."
-	icon_state = "tribal_heavy"
-	item_state = "tribal_heavy"
-	armor = list("melee" = 55, "bullet" = 20, "laser" = 25, "energy" = 20, "bomb" = 45, "bio" = 5, "rad" = 10, "fire" = 30, "acid" = 10)
-	allowed = list(/obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+/obj/item/clothing/suit/armor/heavy/riot/vault
+	name = "VTCC riot armour"
+	desc = "(VII) A suit of riot armour adapted from the design of the pre-war U.S.M.C. armour, painted blue and white."
+	icon_state = "vtcc_riot_gear"
+	item_state = "vtcc_riot_gear"
+
+/obj/item/clothing/suit/armor/heavy/riot/marine
+	name = "old United States Marine Corp riot suit"
+	desc = "A pre-war riot suit helmet used by the USCM For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
+	icon_state = "usmc_riot_gear"
+	item_state = "usmc_riot_gear"
+
+/obj/item/clothing/suit/armor/heavy/riot/elite
+	name = "elite riot gear"
+	desc = "A heavily reinforced set of military grade armor."
+	icon_state = "elite_riot"
+	item_state = "elite_riot"
+	icon = 'icons/obj/clothing/suits.dmi'
 
 //////////////////////////
 // Salvaged Power Armor //
@@ -75,7 +301,12 @@
 	If you still don't understand - it's a 'master' item, basically main type/parent object or something. \
 	It isn't meant to be used, it just dictates procs and all that stuff to the subtypes, such as t45b and so on. \
 	Now begone, report this to coders. NOW!"
-	slowdown = 1
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_SALVAGE
+	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
@@ -83,44 +314,37 @@
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
 	icon_state = "t45b_salvaged"
 	item_state = "t45b_salvaged"
-	armor = list("melee" = 65, "bullet" = 65, "laser" = 55, "energy" = 15, "bomb" = 45, "bio" = 60, "rad" = 30, "fire" = 60, "acid" = 20, "wound" = 30)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider
 	name = "salvaged raider power armor"
 	desc = "A destroyed T-45b power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
-	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 15, "bomb" = 40, "bio" = 55, "rad" = 25, "fire" = 55, "acid" = 15, "wound" = 25)
-
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
-	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
-	icon_state = "ncr_salvaged"
-	item_state = "ncr_salvaged"
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod
 	name = "salvaged hotrod T-45b power armor"
 	desc = " It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
-	armor = list("melee" = 55, "bullet" = 55, "laser" = 55, "energy" = 10, "bomb" = 40, "bio" = 50, "rad" = 30, "fire" = 80, "acid" = 10, "wound" = 30)
+	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
+
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal
 	name = "salvaged tribal T45-b power armor"
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list("melee" = 65, "bullet" = 55, "laser" = 55, "energy" = 10, "bomb" = 30, "bio" = 40, "rad" = 20, "fire" = 40, "acid" = 0, "wound" = 25)
+	// body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 
-// T-45D
+
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
 	name = "salvaged T-45d power armor"
 	desc = "T-45d power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t45d_salvaged"
 	item_state = "t45d_salvaged"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 65, "rad" = 40, "fire" = 70, "acid" = 25, "wound" = 40)
-	slowdown = 0.85
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 // T-51B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
@@ -128,35 +352,8 @@
 	desc = "T-51b power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t51b_salvaged"
 	item_state = "t51b_salvaged"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
-	slowdown = 0.85
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
 
-// Midwest
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/midwest
-	name = "Salvaged midwestern T-51b power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. Its servomotors and valauble components have been stripped out of it."
-	icon_state = "midwestgrey_pa_salvaged"
-	item_state = "midwestgrey_pa_salvaged"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
-	slowdown = 0.85
-
-// Hardened Midwest
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/midwest/hardened
-	name = "Salvaged hardened midwestern T-51b power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities. Its servomotors and valuable components have been stripped out of it."
-	icon_state = "midwestpa_salvaged"
-	item_state = "midwestpa_salvaged"
-	armor = list("melee" = 70, "bullet" = 70, "laser" = 65, "energy" = 20, "bomb" = 50, "bio" = 80, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 50)
-	slowdown = 0.85
-
-// T-60A
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t60
-	name = "salvaged T-60a power armor"
-	desc = "T-60a power armor with servomotors and all valuable components stripped out of it."
-	icon_state = "t60_salvaged"
-	item_state = "t60_salvaged"
-	armor = list("melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
-	slowdown = 0.8
 
 // X-02
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/x02
@@ -164,99 +361,69 @@
 	desc = "X-02 power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 70, "energy" = 35, "bomb" = 60, "bio" = 70, "rad" = 65, "fire" = 85, "acid" = 45, "wound" = 50)
-	slowdown = 0.85
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+
+
+// Just generic PA I guess??
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/recycled
+	name = "recycled power armor"
+	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
+	icon_state = "recycled_power"
+
+
+///////////////////////////
+// !!!FACTION SECTION!!! //
+///////////////////////////
+
+
+/////////
+// NCR //
+///////// 
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
+	name = "salvaged NCR power armor"
+	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
+	icon_state = "ncr_salvaged"
+	item_state = "ncr_salvaged"
+
+/obj/item/clothing/suit/armor/heavy/ncr/vetranger
+	name = "veteran ranger combat armor"
+	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
+	icon_state = "ranger"
+	item_state = "ranger"
 
 ////////////
-// LEGION //
+// Legion //
 ////////////
 
-// Recipe combine veteran armor with a kevlar vest
-/obj/item/clothing/suit/armor/heavy/legion/breacher
-	name = "legion breacher armor"
-	desc = "A suit with the standard metal reinforcements of a veteran and a patched bulletproof vest worn over it."
-	icon_state = "legion_heavy"
-	item_state = "legion_heavy"
-	armor = list("melee" = 65, "bullet" = 45, "laser" = 30, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 25, "fire" = 30, "acid" = 5)
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion
+	name = "salvaged Legion power armor"
+	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and bull painted onto the chestplate shows it belongs to the Legion."
+	icon_state = "legion_salvaged"
+	item_state = "legion_salvaged"
 
-/obj/item/clothing/suit/armor/heavy/legion/centurion
+/obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
-	desc = "The Legion centurion armor is by far the strongest suit of armor available to Caesar's Legion. The armor is composed from other pieces of armor taken from that of the wearer's defeated opponents in combat."
+	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "legion_centurion"
-	armor = list("melee" = 70, "bullet" = 50, "laser" = 35, "energy" = 35, "bomb" = 40, "bio" = 30, "rad" = 25, "fire" = 40, "acid" = 10)
+	item_state = "legion_centurion"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
 
-/obj/item/clothing/suit/armor/heavy/legion/palacent
+/obj/item/clothing/suit/armor/heavy/legion/palacent //laser resist spec
 	name = "paladin-slayer centurion armor"
-	desc = "The armor of a Centurion who has bested one or more Brotherhood Paladins, adding pieces of his prizes to his own defense. The symbol of the Legion is crudely painted on this once-marvelous suit of armor."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi' // Inconsistent naming, clean all of the sprites and code up sometime
+	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "legion_palacent"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 50, "energy" = 40, "bomb" = 45, "bio" = 30, "rad" = 30, "fire" = 50, "acid" = 20)
-
-/obj/item/clothing/suit/armor/heavy/legion/rangercent
-	name = "ranger-hunter centurion armor"
-	desc = "A suit of armor collected over the years by the deaths of countless NCR rangers."
-	icon_state = "legion_rangercent"
-	item_state = "legion_rangercent"
-	armor = list("melee" = 65, "bullet" = 50, "laser" = 30, "energy" = 30, "bomb" = 35, "bio" = 30, "rad" = 25, "fire" = 50, "acid" = 10)
-	slowdown = 0.05
+	item_state = "legion_palacent"
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
-	desc = "The armor appears to be a full suit of heavy gauge steel and offers full body protection. It also has a cloak in excellent condition, but the armor itself bears numerous battle scars and the helmet is missing half of the left horn. The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
+	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "legion_legate"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 45, "energy" = 45, "bomb" = 45, "bio" = 50, "rad" = 30, "fire" = 70, "acid" = 20)
-
-
-/*
-
-/obj/item/clothing/suit/armor/heavy/eliteriot
-	name = "elite riot gear"
-	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide now repurposed and reissued to Chief Rangers."
-	icon_state = "elite_riot"
-	item_state = "elite_riot"
-	armor = list("melee" = 70, "bullet" = 60, "laser" = 40, "energy" = 35, "bomb" = 45, "bio" = 40, "rad" = 30, "fire" = 50, "acid" = 0)
-
-/obj/item/clothing/suit/armor/heavy/tesla
-	name = "tesla armor"
-	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Has a chance to deflect energy projectiles."
-	icon_state = "tesla_armor"
-	item_state = "tesla_armor"
-	blood_overlay_type = "armor"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 60, "energy" = 60, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 90)
-	resistance_flags = FIRE_PROOF
-	var/hit_reflect_chance = 40
-	protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
-
-/obj/item/clothing/suit/armor/heavy/tesla/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	if(is_energy_reflectable_projectile(object) && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
-		if(prob(hit_reflect_chance))
-			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
-			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
-	return ..()
-
-/obj/item/clothing/suit/armor/heavy/salvagedpowerarmor
-	name = "tribal full plate armor"
-	desc = "A set of power armor, now reborn in the paints of the Wayfarers, it serves its new owners as an idol to Kwer, as well as being a piece of heavy covering, with removed parts to allow for quick nimble speed, its hardly what it used to be long ago."
-	icon_state = "tribal_power_armor"
-	item_state = "tribal_power_armor"
-	armor = list("melee" = 65, "bullet" = 65, "laser" = 45, "energy" = 40, "bomb" = 45, "bio" = 30, "rad" = 30, "fire" = 60, "acid" = 10)
-	allowed = list(/obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
-
-
-/obj/item/clothing/suit/armor/heavy/environmental
-	name = "environmental armor"
-	desc = "Developed for use in heavily contaminated environments, this suit is prized in the Wasteland for its ability to protect against biological threats."
-	icon_state = "environmental_armor"
-	item_state = "environmental_armor"
-	w_class = WEIGHT_CLASS_BULKY
-	gas_transfer_coefficient = 0.9
-	permeability_coefficient = 0.5
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list("melee" = 35, "bullet" = 30, "laser" = 20, "energy" = 15, "energy" = 45, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
-	equip_delay_other = 60
-	flags_inv = HIDEJUMPSUIT
-
-/obj/item/clothing/suit/armor/medium/environmental/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
-*/
- */
+	item_state = "legion_legate"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?

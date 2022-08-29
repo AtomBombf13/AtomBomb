@@ -266,54 +266,6 @@
 	suppressor_y_offset = 15
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 
-/* * * * * * * * * * *
- * Executive Pistol Burst Only
- * Burst Medium pistol
- * 10mm
- * Burst
- * +10% damage
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/pistol/n99/executive
-	name = "the Executive"
-	desc = "A modified N99 pistol with an accurate two-round-burst and a blue Vault-Tec finish, a status symbol for some Overseers."
-	icon_state = "executive"
-
-	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 2
-	semi_auto = FALSE
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-
-/* * * * * * * * * * *
- * Crusader Pistol Semi-Auto
- * Cool Medium pistol
- * 10mm
- * Flavorful
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/pistol/n99/crusader
-	name = "\improper Crusader pistol"
-	desc = "A large-framed N99 pistol emblazoned with the colors and insignia of the Brotherhood of Steel. It feels heavy in your hand."
-	icon_state = "crusader"
-	item_state = "crusader"
-
-	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	init_recoil = HANDGUN_RECOIL(0.8)
-
 
 /* * * * * * * * * * *
  * Type 17 Semi-Auto
@@ -396,7 +348,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 
 /* * * * * * * * * * *
- * Mk. 23 Semi-Auto
+ * .45 Autoloader
  * Tacticool Medium pistol
  * .45ACP
  * More accurate
@@ -405,10 +357,9 @@
  * Faster to shoot
  * Uncommon
  * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/pistol/mk23
-	name = "Mk. 23"
-	desc = "A very tactical pistol chambered in .45 ACP with a built in laser sight and attachment point for a seclite."
+/obj/item/gun/ballistic/automatic/pistol/autoloader
+	name = ".45 Autoloader"
+	desc = "A sleek looking handgun chambered in .45 ACP for all your operating needs. Don't let the slide catch your finger though."
 	icon_state = "mk23"
 	init_mag_type = /obj/item/ammo_box/magazine/m45/socom
 	mag_type = /obj/item/ammo_box/magazine/m45 // load any .45 pistol ammos	
@@ -468,34 +419,6 @@
 	can_suppress = FALSE
 	automatic_burst_overlay = FALSE
 	fire_sound = 'sound/f13weapons/44mag.ogg'
-
-/* * * * * * * * * * *
- * El Capitan Semi-Auto
- * Big Heavy pistol
- * 14mm
- * More damage
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan
-	name = "El Capitan"
-	desc = "The Captain loves his gun, despite some silly gunsmith adding some gas venting to the barrel after his second visit to the surgeon for recoil-related wrist injuries."
-	icon_state = "elcapitan"
-	item_state = "deagle"
-	mag_type = /obj/item/ammo_box/magazine/m14mm
-	w_class = WEIGHT_CLASS_NORMAL
-
-	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // POW
-
-	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 
 /* * * * * * * * * * *
  * Automag Semi-Auto
@@ -587,6 +510,88 @@
 	burst_size = 1
 	init_recoil = HANDGUN_RECOIL(1.2)
 
+//////////////////
+//UNIQUE SECTION//
+//////////////////
+
+//This section is dedicated to unique items; be it leadership unique items OR loot spawn unique items. Each shall be specified in the gun's information.
+
+/* * * * * * * * * * *
+ * Crusader Pistol Semi-Auto
+ * Cool Medium pistol
+ * 10mm
+ * Flavorful
+ * Unique - Brotherhood (Spawn - Head pistol)
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/pistol/n99/crusader
+	name = "\improper Crusader pistol"
+	desc = "A large-framed N99 pistol emblazoned with the colors and insignia of the Brotherhood of Steel. It feels heavy in your hand."
+	icon_state = "crusader"
+	item_state = "crusader"
+
+	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_NORMAL
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	init_recoil = HANDGUN_RECOIL(0.8)
+
+/* * * * * * * * * * *
+ * Executive Pistol Burst Only
+ * Burst Medium pistol
+ * 10mm
+ * Burst
+ * +10% damage
+ * Unique - Cog City (Spawn - Head pistol)
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/pistol/n99/executive
+	name = "the Executive"
+	desc = "A modified N99 pistol with an accurate two-round-burst and a blue Vault-Tec finish, a status symbol for some Overseers."
+	icon_state = "executive"
+
+	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_NORMAL
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 2
+	semi_auto = FALSE
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+
+/* * * * * * * * * * *
+ * El Capitan Semi-Auto
+ * Big Heavy pistol
+ * 14mm
+ * More damage
+ * Unique - Khan (Spawn - Head pistol)
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan
+	name = "El Capitan"
+	desc = "The Captain loves his gun, despite some silly gunsmith adding some gas venting to the barrel after his second visit to the surgeon for recoil-related wrist injuries."
+	icon_state = "elcapitan"
+	item_state = "deagle"
+	mag_type = /obj/item/ammo_box/magazine/m14mm
+	w_class = WEIGHT_CLASS_NORMAL
+
+	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_ONLY
+	draw_time = GUN_DRAW_NORMAL
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // POW
+
+	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
+
 /* * * * * * * * * * *
  * Little Devil Semi-Auto
  * Super Duper Heavy pistol
@@ -595,7 +600,7 @@
  * Shoots slower
  * More damage
  * Less recoil
- * Unique
+ * Unique - Loot spawn
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
@@ -613,12 +618,3 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_recoil = HANDGUN_RECOIL(0.8)
-
-/////////////////////////////////
-// TEMPORARY REMOVE AFTER BETA //
-/////////////////////////////////obsolete
-
-/obj/item/gun/ballistic/automatic/pistol/pistoltesting
-	name = "pistol"
-	damage_multiplier = 18
-	mag_type = /obj/item/ammo_box/magazine/testbullet

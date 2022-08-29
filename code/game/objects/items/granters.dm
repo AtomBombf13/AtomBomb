@@ -659,11 +659,6 @@
 	oneuse = TRUE
 	remarks = list()
 
-/obj/item/book/granter/crafting_recipe/blueprint/r82
-	name = "r82 heavy service rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/R82)
-
 /obj/item/book/granter/crafting_recipe/blueprint/marksman
 	name = "marksman carbine blueprint"
 	icon_state = "blueprint2"
@@ -881,17 +876,17 @@
 	traitname = "chemistry"
 	remarks = list("Always ensure a safe working environment, promptly clean any chemical mess.", "Improperly stored chemicals can quickly lead to safety hazards.", "Do not abuse chemicals for recreational use in the laboratory!", "Labcoats and goggles not only protect you from burns, but give an aura of authority.", "Keep your laboratory clean and organized, utilize cabinets and shelves.", "Potassium and water should not be mixed, or they will react violently.")
 	crafting_recipe_types = list(
-		/datum/crafting_recipe/jet, 
-		/datum/crafting_recipe/turbo, 
-		/datum/crafting_recipe/psycho, 
-		/datum/crafting_recipe/medx, 
-		/datum/crafting_recipe/medx/chemistry, 
-		/datum/crafting_recipe/stimpak, 
-		/datum/crafting_recipe/stimpak/chemistry, 
-		/datum/crafting_recipe/stimpak5, 
-		/datum/crafting_recipe/stimpak5/chemistry, 
-		/datum/crafting_recipe/superstimpak, 
-		/datum/crafting_recipe/superstimpak5, 
+		/datum/crafting_recipe/jet,
+		/datum/crafting_recipe/turbo,
+		/datum/crafting_recipe/psycho,
+		/datum/crafting_recipe/medx,
+		/datum/crafting_recipe/medx/chemistry,
+		/datum/crafting_recipe/stimpak,
+		/datum/crafting_recipe/stimpak/chemistry,
+		/datum/crafting_recipe/stimpak5,
+		/datum/crafting_recipe/stimpak5/chemistry,
+		/datum/crafting_recipe/superstimpak,
+		/datum/crafting_recipe/superstimpak5,
 		/datum/crafting_recipe/buffout,
 		/datum/crafting_recipe/steady)
 
@@ -1133,10 +1128,10 @@
 	name = "Tribal traditions"
 	desc = "A book of traditions passed down through generations within the tribe."
 	crafting_recipe_types = list(
-		/datum/crafting_recipe/tribalwar/lighttribe, 
-		/datum/crafting_recipe/tribalwar/heavytribe, 
-		/datum/crafting_recipe/healpoultice, 
-		/datum/crafting_recipe/healpoultice5, 
+		/datum/crafting_recipe/tribalwar/lighttribe,
+		/datum/crafting_recipe/tribalwar/heavytribe,
+		/datum/crafting_recipe/healpoultice,
+		/datum/crafting_recipe/healpoultice5,
 		/datum/crafting_recipe/warmace)
 
 /obj/item/book/granter/trait/tribaltraditions
@@ -1232,7 +1227,7 @@
 	desc = "An old book written by a missionary studying the postwar tribes of the midwest."
 	remarks = list("Grind into a fine paste...", "Dilute in just enough water...", "Filter out the fibers...", "Do not boil for too long...")
 	crafting_recipe_types = list(
-		/datum/crafting_recipe/bitterdrink, 
-		/datum/crafting_recipe/bitterdrink5, 
-		/datum/crafting_recipe/healpoultice, 
+		/datum/crafting_recipe/bitterdrink,
+		/datum/crafting_recipe/bitterdrink5,
+		/datum/crafting_recipe/healpoultice,
 		/datum/crafting_recipe/healpoultice5)

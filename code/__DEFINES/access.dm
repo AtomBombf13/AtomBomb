@@ -102,6 +102,17 @@ also be like that but I can't be arsed to go back and change them all*/
 #define ACCESS_NCROFFDUTY	132 //general NCR access
 #define ACCESS_CLINIC		133 //Oasis clinic access
 #define ACCESS_ENCLAVE 		134 //enclave minibunker
+
+	// DR2 VTCC Access, names should be self-explanatory
+
+#define ACCESS_VTCC					135 //General VTCC access
+#define ACCESS_VTCC_COMMAND			136
+#define ACCESS_VTCC_SEC				137
+#define ACCESS_VTCC_BAR				138
+#define ACCESS_VTCC_SHOP			139
+#define ACCESS_VTCC_RESEARCH		140
+#define ACCESS_VTCC_ROADIE			141
+
 	//The Syndicate
 #define ACCESS_SYNDICATE 150//General Syndicate Access. Includes Syndicate mechs and ruins.
 #define ACCESS_SYNDICATE_LEADER 151//Nuke Op Leader Access

@@ -111,7 +111,7 @@
 
 /datum/gear/suit/ncrcfjacket
 	name = "NCRCF jacket"
-	path = /obj/item/clothing/suit/armor/ncrcfjacket
+	path = /obj/item/clothing/suit/armor/outfit/overalls/ncrcfjacket
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 1
 
@@ -124,28 +124,9 @@
 /// 	Beginning of Coats/Armor section
 // 	Below are one points as they are cosmetics
 
-/datum/gear/suit/coat/marlow
-	name = "Marlow gang overcoat"
-	path = /obj/item/clothing/suit/armor/marlowsuit
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-	cost = 1
-
-/datum/gear/suit/coat/marlow/ikesuit
-	name = "Gunfighter's overcoat"
-	path = /obj/item/clothing/suit/armor/marlowsuit/ikesuit
-
-/datum/gear/suit/coat/marlow/masonsuit
-	name = "Vagabond's vest"
-	path = /obj/item/clothing/suit/armor/marlowsuit/masonsuit
-
-/datum/gear/suit/coat/marlow/blackformaljacket
-	name = "Black Formal Jacket"
-	path = /obj/item/clothing/suit/armor/outfit/jacket/blackformaljacket
-/// End of Coats/Armor section
-
 /datum/gear/suit/NCRutilityvest
 	name = "Utility Vest"
-	path = /obj/item/clothing/suit/armor/utilityvest
+	path = /obj/item/clothing/suit/armor/light/utilityvest
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
 	cost = 1  /// Has no armor so its cosmetic as heck.
 /*	restricted_desc = "NCR"
