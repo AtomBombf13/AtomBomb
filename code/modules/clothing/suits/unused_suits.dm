@@ -234,12 +234,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	item_state = "ncr_captain_armour"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Le captain
 
-/obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack
-	name = "NCR dress jacket"
-	desc = "A brown dress uniform jacket intended for enlisted NCRA personnel."
-	icon_state = "ncr_dressjack"
-	item_state = "ncr_dressjack"
-
 /obj/item/clothing/suit/armor/ncrarmor/ncr_codressjack
 	name = "NCR dress jacket"
 	desc = "A brown dress uniform jacket for commissioned NCRA personnel."

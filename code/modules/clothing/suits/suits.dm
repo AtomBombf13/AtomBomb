@@ -298,6 +298,11 @@
 	item_state = "police_chief"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
+/obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack
+	name = "NCR dress jacket"
+	desc = "A brown dress uniform jacket intended for enlisted NCRA personnel."
+	icon_state = "ncr_dressjack"
+	item_state = "ncr_dressjack"
 
 // until togglesuits are made into normal suits, treat these as jackets
 

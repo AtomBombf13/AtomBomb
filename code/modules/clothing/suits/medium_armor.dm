@@ -937,6 +937,10 @@
 	icon_state = "ncr_reinforced_mantle"
 	item_state = "ncr_reinforced_mantle"
 
+/obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
+	name = "NCR blast-padded reinforced patrol vest"
+	desc = "A standard issue NCR Engineer vest reinforced with a groinpad."
+
 /obj/item/clothing/suit/armor/medium/vest/ncr/officer
 	name = "NCR officer armor vest"
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
@@ -982,12 +986,6 @@
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "legion-orator"
 	item_state = "legion-orator"
-
-/obj/item/clothing/suit/armor/medium/legion/combat
-	name = "Legion combat armor"
-	desc = "An old military grade pre war combat armor and, repainted to the colour scheme of Caesar's Legion."
-	icon_state = "legion_combat"
-	item_state = "legion_combat"
 
 /obj/item/clothing/suit/armor/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "ranger-hunter centurion armor"
@@ -1067,14 +1065,8 @@
 /obj/item/clothing/suit/armor/medium/vault
 	name = "cog city combat armor"
 	desc = "A combat armor set with post-war modifications, done by the local town of Cog City. Its Vault-Tec markings have been seemingly incorporated into its new markings."
-	icon_state = "vault_armor"
-	item_state = "vault_armor"
-
-/obj/item/clothing/suit/armor/medium/vault/mk2
-	name = "cog city mk2 combat armor"
-	desc = "A mk2 combat armor set with post war modifications, done by the local town of Cog City. Its Vault-Tec markings have been seemingly incorporated into its new markings."
-	icon_state = "vault_armor_mk2"
-	item_state = "vault_armor_mk2"
+	icon_state = "vest_armor"
+	item_state = "vest_armor"
 
 /obj/item/clothing/suit/armor/medium/vault/marshal
 	name = "Marhsal's battlecoat"

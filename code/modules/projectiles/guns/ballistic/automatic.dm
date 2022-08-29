@@ -815,7 +815,6 @@
  * Light semi-auto rifle
  * .223 / 5.56mm
  * Slow to fire
- *
  * Common
  * * * * * * * * * * */
 
@@ -856,39 +855,6 @@
 	suppressor_y_offset = 31
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	can_scope = TRUE
-
-/* * * * * * * * * * *
- * Ratslayer Rifle
- * Tricked out semi-auto rifle
- * .223 / 5.56mm
- * Scoped
- * Silent
- * More damage
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/varmint/ratslayer
-	name = "Ratslayer"
-	desc = "A modified varmint rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
-	icon_state = "ratslayer"
-	item_state = "ratslayer"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-	gun_tags = list()
-
-	silenced = TRUE
-	can_scope = FALSE
-	zoom_factor = 1.5
-	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 /* * * * * * * * * * *
  * Service Rifle
@@ -1048,7 +1014,7 @@
  * Police Assault Rifle
  * Baseline 5mm autorifle
  * 5mm
- * Vault City - Uncommon
+ * Uncommon
  * * * * * * * * * * */
  
 /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
@@ -1506,7 +1472,7 @@
  * Uncommon
  * * * * * * * * * * */
 
-obj/item/gun/ballistic/automatic/bar
+/obj/item/gun/ballistic/automatic/bar
 	name = "automatic rifle (.308)"
 	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
 	icon = 'icons/fallout/objects/guns/bar.dmi'
@@ -1989,4 +1955,37 @@ obj/item/gun/ballistic/automatic/bar
 	can_scope = FALSE
 	zoom_factor = 1.5
 	suppressor_state = "none"
+	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
+
+/* * * * * * * * * * *
+ * Ratslayer Rifle
+ * Tricked out semi-auto rifle
+ * .223 / 5.56mm
+ * Scoped
+ * Silent
+ * More damage
+ * Unique
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/varmint/ratslayer
+	name = "Ratslayer"
+	desc = "A modified varmint rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
+	icon_state = "ratslayer"
+	item_state = "ratslayer"
+
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
+	force = GUN_MELEE_FORCE_RIFLE_LIGHT
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	cock_delay = GUN_COCK_RIFLE_BASE
+
+	gun_tags = list()
+
+	silenced = TRUE
+	can_scope = FALSE
+	zoom_factor = 1.5
 	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'

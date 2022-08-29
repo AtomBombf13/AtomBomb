@@ -123,3 +123,9 @@
 	new /obj/item/stack/f13Cash/random/low(src)
 	//mob boss, reasonably wealthy
 
+//Larger Settler money bag. Not too wealthy, but enough to basically buy a loadout.
+/obj/item/storage/bag/money/small/vaultcity/PopulateContents()
+	new /obj/item/stack/f13Cash/random/med(src)
+	new /obj/item/stack/f13Cash/random/med(src)
+	new /obj/item/stack/f13Cash/random/ncr/low(src)
+	new /obj/item/stack/f13Cash/random/aureus/low(src)

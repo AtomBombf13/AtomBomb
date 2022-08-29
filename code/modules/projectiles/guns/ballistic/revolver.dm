@@ -795,7 +795,7 @@
  * Heavy revolver rifle
  * Scoped
  * .308
- * Unique - Legion Centurion (Spawn - Head pistol)
+ * Unique - Legion Vet Decan (Spawn - Head pistol)
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/revolver/m2405

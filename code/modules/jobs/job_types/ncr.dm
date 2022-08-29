@@ -84,7 +84,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	belt = /obj/item/storage/belt/legholster
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	gloves = /obj/item/clothing/gloves/f13/leather
-	suit = /obj/item/clothing/suit/armor/power_armor/t45d/sierra
 	r_pocket = /obj/item/binoculars
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	backpack_contents = list(
@@ -122,7 +121,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head = /obj/item/clothing/head/f13/ncr
 	belt = /obj/item/storage/belt/legholster
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	suit = /obj/item/clothing/suit/armor/ncrarmor/captain
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/officer
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/deagle
 	r_hand = /obj/item/melee/onehanded/club/ncrflag
 	backpack_contents = list(
@@ -153,7 +152,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list(
 		/datum/outfit/loadout/captainbackline,	// Infiltrator, El Capitan
-		/datum/outfit/loadout/captainfrontline, // Pancor Jackhammer, The Court Martial, Desert Eagle
+		/datum/outfit/loadout/captainfrontline, // Pancor Jackhammer, Desert Eagle
 		)
 
 /datum/outfit/job/ncr/f13captain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -177,6 +176,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ears = /obj/item/radio/headset/headset_ncr_com
 	glasses = /obj/item/clothing/glasses/night/ncr
 	gloves = /obj/item/clothing/gloves/f13/leather
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/officer
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	accessory = /obj/item/clothing/accessory/ncr/CPT
 	mask = /obj/item/clothing/mask/cigarette/pipe
@@ -196,7 +196,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "El Capitan"
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 	backpack_contents = list(
-		/obj/item/clothing/suit/armor/ncrarmor/captain/ncr_officer_coat = 1,
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 1,
 		/obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan = 1,
 		/obj/item/ammo_box/magazine/m14mm = 3,
@@ -205,13 +204,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		)
 
 /datum/outfit/loadout/captainfrontline
-	name = "The Court Martial"
+	name = "The Frontliner"
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/pancor
 	backpack_contents = list(
-		/obj/item/clothing/suit/armor/ncrarmor/captain = 1,
 		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
 		/obj/item/ammo_box/magazine/d12g = 3,
-		/obj/item/twohanded/sledgehammer/rockethammer/courtmartial = 1,
 		/obj/item/storage/box/ration/menu_eight = 1,
 		)
 
@@ -252,7 +249,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	glasses = /obj/item/clothing/glasses/night/ncr
 	gloves = /obj/item/clothing/gloves/f13/leather
 	ears = /obj/item/radio/headset/headset_ncr_com
-	suit = /obj/item/clothing/suit/armor/ncrarmor/lieutenant
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/officer
 	r_pocket = /obj/item/binoculars
 	suit_store = /obj/item/gun/ballistic/automatic/m1garand/republicspride
 	backpack_contents = list(
@@ -281,8 +278,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Sergeant First Class and Above"
 	selection_color = "#fff5cc"
@@ -322,7 +319,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	id = /obj/item/card/id/dogtag/ncrsergeant
 	accessory = /obj/item/clothing/accessory/ncr/SGT
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle/reinforced
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mantreinf
 	belt = /obj/item/storage/belt/legholster
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
@@ -364,7 +361,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/clothing/mask/gas = 1,
 		/obj/item/grenade/smokebomb = 2,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
-		/obj/item/clothing/suit/armor/ncrarmor/mantle/reinforced/trenchraider = 1,
 		)
 
 // DRILL SERGEANT
@@ -384,7 +380,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list( // ALL: Bayonet
 		/datum/outfit/loadout/seatechnical,
-		/datum/outfit/loadout/seacommand,
 		/datum/outfit/loadout/seastaff,
 		)
 
@@ -416,22 +411,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		)
 
 /datum/outfit/loadout/seatechnical
-	name = "Technical Senior Advisor"
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle/reinforced
+	name = "Military Police Provost"
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mantreinf
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/assault_carbine = 1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
+		/obj/item/ammo_box/magazine/m45 = 2,
+		/obj/item/melee/classic_baton/militarypolice = 1,
 		/obj/item/ammo_box/magazine/m5mm = 1,
-		/obj/item/clothing/accessory/ncr/FSGT = 1
-		)
-
-/datum/outfit/loadout/seacommand
-	name = "Command Senior Advisor"
-	suit = /obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack
-	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/revolver45/gunslinger = 1,
-		/obj/item/ammo_box/a45lcbox = 1,
-		/obj/item/binoculars = 1,
 		/obj/item/clothing/accessory/ncr/FSGT = 1
 		)
 
@@ -544,7 +530,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/datum/outfit/loadout/vrclassic, // AMR, Sequoia
 		/datum/outfit/loadout/vrlite, // Brush, Sequoia
 		/datum/outfit/loadout/vrshotgunner, // Winchester City-Killer, Sequoia
-		/datum/outfit/loadout/vrcqc // 2 x .45 Long colt revolvers
 		)
 
 /datum/outfit/job/ncr/f13vetranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -564,7 +549,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	jobtype	= /datum/job/ncr/f13vetranger
 	id = /obj/item/card/id/dogtag/ncrvetranger
 	uniform	= /obj/item/clothing/under/f13/ranger/vet
-	suit = /obj/item/clothing/suit/armor/rangercombat
+	suit = /obj/item/clothing/suit/armor/heavy/ncr/vetranger
 	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat
 	gloves = /obj/item/clothing/gloves/rifleman
 	shoes =	/obj/item/clothing/shoes/f13/military/leather
@@ -612,16 +597,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/c4570box/knockback = 1,
 		)
 
-/datum/outfit/loadout/vrcqc
-	name = "Gunslinger"
-	mask = /obj/item/clothing/mask/cigarette/cigar/havana
-	backpack_contents = list(
-		/obj/item/book/granter/trait/gunslinger = 1,
-		/obj/item/gun/ballistic/revolver/revolver45/gunslinger = 2,
-		/obj/item/ammo_box/a45lcbox = 1,
-		/obj/item/lighter = 1,
-		)
-
 
 // NCR Ranger
 
@@ -639,9 +614,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 	/datum/outfit/loadout/rangerrecon, // DKS Sniper rifle, .45 Revolver
-	/datum/outfit/loadout/rangertrail, // Rangermaster, 2 x .357 Revolvers
+	/datum/outfit/loadout/rangertrail, // Trail Carbine, .357 Revolvers
 	/datum/outfit/loadout/rangerpatrol, // R91 Assault Rifle, .44 SA Revolver
-	/datum/outfit/loadout/rangerpatrolcqb, // 10mm SMG, .44 Snubnose revolver
+	/datum/outfit/loadout/rangerpatrolcqb, // Lever shotgun, .44 Snubnose revolver
 	)
 
 /datum/outfit/job/ncr/f13ranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -695,13 +670,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/armor/trailranger
 	belt = /obj/item/storage/belt/military/NCR_Bandolier
 	neck = /obj/item/clothing/neck/mantle/ranger
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
+	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 3,
+		/obj/item/ammo_box/magazine/internal/shot/tube44 = 2,
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
-		/obj/item/gun/ballistic/revolver/colt357 = 2,
-		/obj/item/ammo_box/a357=4,
+		/obj/item/gun/ballistic/revolver/colt357 = 1,
+		/obj/item/ammo_box/a357=2,
 		)
 
 /datum/outfit/loadout/rangerpatrol
@@ -724,9 +699,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head = /obj/item/clothing/head/f13/ranger
 	uniform	= /obj/item/clothing/under/f13/ranger/patrol
 	belt = /obj/item/storage/belt/army/assault/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm/adv = 2,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1,
 		/obj/item/ammo_box/m44box = 1,
@@ -765,7 +740,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
-/datum/outfit/job/ncr/f13heavytrooper	// Mk. 23, Bayonet, Heavy armor
+/datum/outfit/job/ncr/f13heavytrooper	// Autoloader, Bayonet, Heavy armor
 	name = "NCR Heavy Trooper"
 	jobtype	= /datum/job/ncr/f13heavytrooper
 	id = /obj/item/card/id/dogtag/ncrsergeant
@@ -793,7 +768,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/r84 = 1,
 		/obj/item/ammo_box/magazine/lmg = 1,
-		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/melee/onehanded/knife/bayonet = 1
 		)
 
 
@@ -870,11 +845,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Construction Specialist"
 	belt = /obj/item/storage/belt/army/assault/ncr/engineer
 	glasses = /obj/item/clothing/glasses/welding
-	suit_store = /obj/item/gun/ballistic/automatic/service/r82
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
-		/obj/item/book/granter/trait/explosives = 1,
-		/obj/item/grenade/plastic/x4 = 1,
+		/obj/item/ammo_box/magazine/m5mm = 1,
+		/obj/item/grenade/plastic/c4 = 2,
 		/obj/item/stack/sheet/metal/fifty = 1,
 		/obj/item/stack/sheet/glass/fifty = 1,
 		/obj/item/stack/ore/blackpowder/twenty = 1,
@@ -895,19 +869,19 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Combat Sapper"
 	belt = /obj/item/storage/belt/army/assault/ncr
 	glasses	= /obj/item/clothing/glasses/sunglasses
-	suit_store =  /obj/item/gun/ballistic/automatic/service/r82
+	suit_store =  /obj/item/m2flamethrowertank
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
-		/obj/item/m2flamethrowertank = 1,
+		/obj/item/ammo_box/magazine/m44/automag = 2,
+		/obj/item/gun/ballistic/automatic/pistol/automag
 		)
 
 /datum/outfit/loadout/combatengineerrocketeer
 	name = "Rocket Engineer"
 	suit_store = /obj/item/gun/ballistic/rocketlauncher
 	backpack_contents = list(
-		/obj/item/ammo_casing/caseless/rocket = 4,
-		/obj/item/ammo_casing/caseless/rocket/big = 1,
+		/obj/item/ammo_casing/caseless/rocket = 3,
 		/obj/item/book/granter/trait/explosives = 1,
+		/obj/item/kitchen/rollingpin //fuck u
 		)
 
 // MILITARY POLICE
@@ -932,7 +906,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	accessory = /obj/item/clothing/accessory/armband/black
 	glasses	= /obj/item/clothing/glasses/sunglasses/big
 	head = /obj/item/clothing/head/f13/ncr/steelpot_mp
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle/reinforced
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	backpack = /obj/item/storage/backpack/satchel/trekker
 	suit_store = /obj/item/gun/ballistic/shotgun/police
@@ -1040,7 +1014,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list(
 		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Marksman Carbine, 9mm sidearm
-		/datum/outfit/loadout/corporalrifleman,				 // R82, Large magazines
 		/datum/outfit/loadout/corporalcqc,					 // Hunting Shotgun
 		/datum/outfit/loadout/corporalcommand,				 // Intel and backline support
 		)
@@ -1075,7 +1048,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/corporaldesignatedmarksman
 	name = "Squad Ranged Support"
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	head = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
 	belt = /obj/item/storage/belt/legholster
 	suit_store = /obj/item/gun/ballistic/automatic/marksman
@@ -1086,30 +1059,21 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_two = 1,
 		)
 
-/datum/outfit/loadout/corporalrifleman		//Name changed for better flavor
-	name = "Master Corporal"
-	head = /obj/item/clothing/head/f13/ncr
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle
-	suit_store = /obj/item/gun/ballistic/automatic/service/r82
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
-		/obj/item/storage/box/ration/menu_one = 1,
-		/obj/item/clothing/accessory/ncr/MCPL = 1 //Same rank, mostly for flavor and RP. - Kitsunemitsu
-		)
-
 /datum/outfit/loadout/corporalcqc		//I think this one sucks, personally.
 	name = "Squad Pointman"
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/storage/box/ration/menu_one = 1,
+		/obj/item/shovel/trench = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 6
 		)
 
 /datum/outfit/loadout/corporalcommand	//Has a fold out gun. It serves it's purpose in being a support role but it is primarily for RP.
 	name = "Squad Pathfinder"
-	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
 	belt = /obj/item/storage/belt/legholster
 	head = /obj/item/clothing/head/f13/ncr/steelpot_goggles
@@ -1161,7 +1125,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	accessory = /obj/item/clothing/accessory/ncr/TPR
 	head = /obj/item/clothing/head/f13/ncr
-	suit = /obj/item/clothing/suit/armor/ncrarmor
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr
 	glasses	= null
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
@@ -1224,7 +1188,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	accessory = /obj/item/clothing/accessory/ncr/REC
 	head = /obj/item/clothing/head/f13/ncr/standard/conscript
 	uniform = /obj/item/clothing/under/f13/ncr/conscript
-	suit = /obj/item/clothing/suit/armor/ncrarmor/conscript
+	suit = /obj/item/clothing/suit/armor/light/utilityvest
 	glasses	= null
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
@@ -1232,9 +1196,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/conscriptvarmint
 	name = "Assault"
-	suit_store = /obj/item/gun/ballistic/automatic/service
+	suit_store = /obj/item/gun/ballistic/automatic/m1carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 1,
+		/obj/item/ammo_box/magazine/m10mm = 2,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/menu_two = 1,
 		)
@@ -1289,7 +1253,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	glasses = /obj/item/clothing/glasses/hud/health/f13
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	ears = /obj/item/radio/headset/headset_ncr_com
-	suit = /obj/item/clothing/suit/armor/ncrarmor/labcoat
+	suit = /obj/item/clothing/suit/armor/light/labcoat
 	belt = /obj/item/storage/belt/army/assault/ncr
 	r_hand = /obj/item/storage/backpack/duffelbag/med/surgery
 	mask = /obj/item/clothing/mask/surgical
@@ -1380,7 +1344,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	accessory = /obj/item/clothing/accessory/ncr/LT2
 	head = /obj/item/clothing/head/beret/ncr/ncr_sapper
 	l_pocket = /obj/item/storage/belt/legholster
-	suit = /obj/item/clothing/suit/armor/utilityvest/logisticsofficer
+	suit = /obj/item/clothing/suit/armor/light/utilityvest/logisticsofficer
 	glasses	= /obj/item/clothing/glasses/welding
 	belt = /obj/item/storage/belt/army/assault/ncr/engineer
 	gloves = /obj/item/clothing/gloves/color/yellow
@@ -1444,7 +1408,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 // Logistics soldier
 /datum/outfit/loadout/rearlog
 	name = "Logistics"
-	suit = /obj/item/clothing/suit/armor/utilityvest
+	suit = /obj/item/clothing/suit/armor/light/utilityvest
 	belt = /obj/item/storage/belt/military/NCR_Bandolier
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/varmint = 1,
@@ -1456,12 +1420,12 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 // Technician	Salvaging
 /datum/outfit/loadout/reartech
 	name = "Technician"
-	suit = /obj/item/clothing/suit/armor/utilityvest
+	suit = /obj/item/clothing/suit/armor/light/utilityvest
 	belt = /obj/item/storage/belt/utility/full
 	gloves = /obj/item/clothing/gloves/color/yellow
 	backpack_contents = list(
 		/obj/item/book/granter/trait/techno = 1,
-		/obj/item/clothing/suit/armor/utilityvest = 1,
+		/obj/item/clothing/suit/armor/light/utilityvest = 1,
 		/obj/item/gun/ballistic/shotgun/hunting = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
@@ -1473,7 +1437,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 // Corpsman		Chemistry, simple medical
 /datum/outfit/loadout/rearcorps
 	name = "Corpsman"
-	suit = /obj/item/clothing/suit/armor/utilityvest
+	suit = /obj/item/clothing/suit/armor/light/utilityvest
 	belt = /obj/item/storage/belt/medical
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	belt = /obj/item/storage/belt/legholster

@@ -45,14 +45,14 @@
 	name = "Alderman"
 	jobtype =		/datum/job/vtcc/f13alderman
 	ears = 			/obj/item/radio/headset/headset_vault/cogcity/overseer
-	neck = 			/obj/item/storage/belt/holster
+	neck = 			/obj/item/storage/belt/legholster
 	id =            /obj/item/card/id/silver
-	r_pocket = 		/obj/item/reagent_containers/hypospray/medipen/f13/stimpak/super
+	r_pocket = 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super
 	l_pocket =		/obj/item/storage/bag/money/small/vaultcity
 	belt = 			/obj/item/gun/ballistic/automatic/pistol/n99/executive
 	backpack_contents = list(
 		/obj/item/storage/box/citizenship_permits = 1, \
-		/obj/item/ammo_box/magazine/m10mm_adv = 3 )
+		/obj/item/ammo_box/magazine/m10mm = 3 )
 
 /datum/outfit/loadout/treasurer
 	name = "Treasurer"
@@ -106,7 +106,6 @@
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_armor)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_helmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/sniper)
 
@@ -144,74 +143,6 @@
 	/obj/item/attachments/scope=2
 	)
 
-/* Chief Researcher */
-
-/*datum/job/vtcc/f13chresearcher
-	title = "Chief Researcher"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Alderman and the Overseer"
-	description = "Doctor, Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. To be a Roboticist is to uphold a tradition in the Vault that bears itself a marred reputation, so don't lose your head. The Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right. As the Chief of Development, the actions of the Followers are your responsibility."
-	req_admin_notify = 1
-
-	outfit = /datum/outfit/job/vtcc/f13chresearcher
-	loadout_options = list(
-		/datum/outfit/loadout/qadmin,
-		/datum/outfit/loadout/neurosurgeon,
-		)
-
-	access = list(ACCESS_VTCC, ACCESS_VTCC_COMMAND, ACCESS_VTCC_RESEARCH, ACCESS_ROBOTICS)
-	minimal_access = list(ACCESS_VTCC, ACCESS_VTCC_COMMAND, ACCESS_VTCC_RESEARCH, ACCESS_ROBOTICS)
-
-
-/datum/outfit/job/vtcc/f13chresearcher/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
-
-/datum/outfit/job/vtcc/f13chresearcher
-	name = "Chief Researcher"
-	jobtype = /datum/job/vtcc/f13chresearcher
-
-	ears = /obj/item/radio/headset/headset_vault/cogcity/sci_lead
-	glasses =		/obj/item/clothing/glasses/hud/health
-	id =            /obj/item/card/id/silver
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket =		/obj/item/storage/bag/money/small/vaultcity
-	r_pocket = /obj/item/clipboard
-	suit = /obj/item/clothing/suit/toggle/labcoat
-	backpack_contents = list(
-		/obj/item/pen/fountain=1,
-		/obj/item/paper_bin=1,
-		/obj/item/gun/ballistic/revolver/needler=1,
-		/obj/item/ammo_box/needleap = 2,
-		/obj/item/reagent_containers/hypospray/medipen/f13/stimpak/super = 3
-		)
-
-/datum/outfit/loadout/qadmin
-	name = "Quarantine Admin"
-	backpack_contents = list(
-	/obj/item/clothing/head/bio_hood=1,
-	/obj/item/clothing/suit/bio_suit=1,
-	/obj/item/storage/briefcase/medical=1,
-	/obj/item/ammo_box/needleap = 2
-	)
-
-/datum/outfit/loadout/neurosurgeon
-	name = "Neurosurgeon"
-	backpack_contents = list(
-	/obj/item/autosurgeon/surgery=1,
-	/obj/item/mmi=1,
-	/obj/item/storage/pill_bottle/mannitol=1,
-	/obj/item/storage/firstaid/brute=1
-	)*/
-
 /* Marshal */
 
 /datum/job/vtcc/f13marshal
@@ -244,18 +175,18 @@
 	jobtype = 		/datum/job/vtcc/f13marshal
 	id =            /obj/item/card/id/silver
 	ears = 			/obj/item/radio/headset/headset_vault/cogcity/sec_lead
-	r_pocket = 		/obj/item/reagent_containers/hypospray/medipen/f13/stimpak/super
+	r_pocket = 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super
 	l_pocket =		/obj/item/storage/bag/money/small/vaultcity
 	glasses = 		/obj/item/clothing/glasses/sunglasses/big
-	belt = 			/obj/item/storage/belt/military/assault
-	neck = 			/obj/item/storage/belt/holster
+	belt = 			/obj/item/storage/belt/military
+	neck = 			/obj/item/storage/belt/shoulderholster
 	r_hand =		/obj/item/gun/ballistic/automatic/pistol/n99
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs=1,
 		/obj/item/melee/classic_baton=1,
-		/obj/item/kitchen/knife/combat=1,
+		/obj/item/kitchen/knife=1,
 		/obj/item/pda/warden=1,
-		/obj/item/ammo_box/magazine/m10mm_adv=3
+		/obj/item/ammo_box/magazine/m10mm=3
 		)
 
 /datum/outfit/loadout/secchief
@@ -286,13 +217,6 @@
 	/obj/item/clothing/suit/armor/f13/riot/vault/provost/marshal=1,
 	/obj/item/clothing/head/helmet/riot/vaultsec/vc/marshal/provost/helmet=1
 	)
-
-/datum/outfit/job/vtcc/f13provostmarshal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/vaultheavyarmor)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/vaultheavyhelm)
 
 /* Sheriff */
 /datum/job/vtcc/f13provost
@@ -335,7 +259,7 @@
 	l_pocket =		/obj/item/storage/bag/money/small/vaultcity
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 1,
-		/obj/item/kitchen/knife/combat=1,
+		/obj/item/kitchen/knife=1,
 		/obj/item/pda/security=1,
 		/obj/item/storage/survivalkit_aid=1,
 		/obj/item/clothing/mask/gas/sechailer=1,
