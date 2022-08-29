@@ -69,8 +69,6 @@
 /obj/structure/closet/thunderdome/tdred/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
-		new /obj/item/clothing/suit/armor/tdome/red(src)
-	for(var/i in 1 to 3)
 		new /obj/item/melee/transforming/energy/sword/saber(src)
 	for(var/i in 1 to 3)
 		new /obj/item/gun/energy/laser(src)
@@ -87,8 +85,6 @@
 
 /obj/structure/closet/thunderdome/tdgreen/PopulateContents()
 	..()
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/suit/armor/tdome/green(src)
 	for(var/i in 1 to 3)
 		new /obj/item/melee/transforming/energy/sword/saber(src)
 	for(var/i in 1 to 3)

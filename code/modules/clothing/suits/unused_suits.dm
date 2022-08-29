@@ -115,26 +115,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	name = "legion prime decanus armor"
 	desc = "Legion prime decanus armor-an extra reinforced baseball uniform."
 
-/obj/item/clothing/suit/armor/legion/orator
-	name = "Legion Orator armor"
-	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
-	icon_state = "legion-orator"
-	item_state = "legion-orator"
-
 /obj/item/clothing/suit/armor/legion/prime/slavemaster
 	name = "slavemaster armor"
 	desc = "Issued to slave masters to keep them cool during long hours of watching the slaves work in the sun."
 	icon_state = "legion-master"
 	item_state = "legion-master"
-
-/obj/item/clothing/suit/armor/legion/vet
-	name = "legion veteran armor"
-	desc = "Armor worn by veterans, salvaged bits of enemy armor and scrap metal often reinforcing the armor."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "legion_veteran"
-	item_state = "legion_veteran"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4) // Slightly better armor
 
 /obj/item/clothing/suit/armor/legion/heavy
 	name = "legion veteran decan armor"
@@ -144,14 +129,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
-
-/obj/item/clothing/suit/armor/legion/vet/explorer
-	name = "legion scout armor"
-	desc = "Armor based on layered strips of laminated linen and leather, the technique giving it surprising resilience for low weight."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "legion_explorer"
-	item_state = "legion_explorer"
 
 /obj/item/clothing/suit/armor/legion/vet/vexil
 	name = "legion vexillarius armor"
@@ -166,57 +143,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion-venator"
 	item_state = "legion-venator"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
-
-/obj/item/clothing/suit/armor/legion/centurion //good all around
-	name = "legion centurion armor"
-	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
-	icon = 'icons/fallout/clothing/armored_heavy.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
-	icon_state = "legion_centurion"
-	item_state = "legion_centurion"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
-
-/obj/item/clothing/suit/armor/legion/palacent //laser resist spec
-	name = "paladin-slayer centurion armor"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi' // Inconsistent naming, clean all of the sprites and code up sometime
-	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
-	icon_state = "legion_palacent"
-	item_state = "legion_palacent"
-
-
-/obj/item/clothing/suit/armor/legion/rangercent //speed and bullet resist, sacrifices all else
-	name = "ranger-hunter centurion armor"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
-	icon_state = "legion_rangercent"
-	item_state = "legion_rangercent"
-
-/obj/item/clothing/suit/armor/legion/legate
-	name = "legion legate armor"
-	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
-	icon = 'icons/fallout/clothing/armored_heavy.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
-	icon_state = "legion_legate"
-	item_state = "legion_legate"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?
-
-/obj/item/clothing/suit/armor/medium/combat/legion
-	name = "Legion combat armor"
-	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "legion_combat"
-	item_state = "legion_combat"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/legion
-	name = "reinforced Legion combat armor"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "legion_combat2"
-	item_state = "legion_combat2"
 
 /obj/item/clothing/suit/armor/legion/vet/explorercanada
 	name = "custom explorer armor"
@@ -288,12 +214,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	name = "NCR reinforced trench mantle vest"
 	desc = "A standard issue NCR Infantry vest with a really long name and extra melee plating."
 
-/obj/item/clothing/suit/armor/ncrarmor/labcoat
-	name = "NCR medical labcoat"
-	desc = "An armored labcoat typically issued to NCR Medical Officers. It's a standard white labcoat with the Medical Officer's name stitched into the breast and a two headed bear sewn into the shoulder."
-	icon_state = "ncr_labcoat"
-	item_state = "ncr_labcoat"
-
 /obj/item/clothing/suit/armor/ncrarmor/lieutenant
 	name = "NCR officer vest"
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
@@ -357,12 +277,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	item_state = "ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 
-/obj/item/clothing/suit/armor/ncrcfjacket
-	name = "NCRCF jacket"
-	icon_state = "ncrcfjacket"
-	item_state = "ncrcfjacket"
-	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system."
-
 
 //Great Khan
 /obj/item/clothing/suit/armor/khan_jacket
@@ -388,18 +302,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
 
 //*shrug
-/obj/item/clothing/suit/armor/heavy/old
-	name = "heavy armor"
-	desc = "A heavily armored suit that protects against moderate damage."
-	icon_state = "heavy"
-	item_state = "swat_suit"
-	w_class = WEIGHT_CLASS_BULKY
-	gas_transfer_coefficient = 0.9
-	clothing_flags = THICKMATERIAL
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	slowdown = 3
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
 /obj/item/clothing/suit/armor/tdome
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
@@ -609,170 +511,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "ghostechoe"
 	item_state = "ghostechoe"
 
-/obj/item/clothing/suit/armor/medium/combat/vetranger
-	name = "veteran ranger combat armor"
-	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
-	icon_state = "ranger"
-	item_state = "ranger"
 
-/////////
-// NCR //
-/////////
-
-/obj/item/clothing/suit/armor/medium/vest/ncr
-	name = "NCR armor vest"
-	desc = "A standard issue NCR Infantry armor vest."
-	icon_state = "ncr_infantry_vest"
-	item_state = "ncr_infantry_vest"
-
-/obj/item/clothing/suit/armor/medium/vest/ncr/mant
-	name = "NCR mantle vest"
-	desc = "A standard issue NCR Infantry vest with a mantle on the shoulder."
-	icon_state = "ncr_standard_mantle"
-	item_state = "ncr_standard_mantle"
-
-/obj/item/clothing/suit/armor/medium/vest/ncr/reinf
-	name = "NCR reinforced armor vest"
-	desc = "A standard issue NCR Infantry vest reinforced with a groinpad."
-	icon_state = "ncr_reinforced_vest"
-	item_state = "ncr_reinforced_vest"
-
-/obj/item/clothing/suit/armor/medium/vest/ncr/mantreinf
-	name = "NCR reinforced mantle vest"
-	desc = "A standard issue NCR Infantry vest reinforced with a groinpad and a mantle."
-	icon_state = "ncr_reinforced_mantle"
-	item_state = "ncr_reinforced_mantle"
-
-/obj/item/clothing/suit/armor/medium/vest/ncr/officer
-	name = "NCR officer armor vest"
-	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
-	icon_state = "ncr_lt_armour"
-	item_state = "ncr_lt_armour"
-
-
-
-//// LIGHT LEGION ARMOR //// unused =3
-/obj/item/clothing/suit/armor/light/tribal/legion
-
-
-/obj/item/clothing/suit/armor/light/tribal/legion/recruit
-	name = "legion recruit armor"
-	desc = "Legion recruit armor is a common light armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
-	icon_state = "legion_recruit"
-
-/obj/item/clothing/suit/armor/light/tribal/legion/prime
-	name = "legion prime armor"
-	desc = "It's a legion prime armor, the warrior has been granted some additional protective pieces to add to his suit."
-	icon_state = "legion_prime"
-
-/obj/item/clothing/suit/armor/light/tribal/legion/recruit/slavemaster
-	name = "slavemaster armor"
-	desc = "Issued to slave masters to keep them cool during long hours of watching the slaves work in the sun."
-	icon_state = "legion_master"
-
-/obj/item/clothing/suit/armor/light/tribal/legion/explorer
-	name = "legion explorer armor"
-	desc = "Light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
-	icon_state = "legion_explorer"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-
-////////////
-// LEGION //
-////////////
-
-/obj/item/clothing/suit/armor/medium/tribal/legion/legexile
-	name = "modified Legion armor"
-	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
-	icon_state = "legexile"
-	item_state = "legexile"
-
-/obj/item/clothing/suit/armor/medium/tribal/legion/forgemaster
-	name = "forgemaster armor"
-	desc = "Legion armor reinforced with metal, worn with a Forgemaster apron with the bull insignia over it."
-	icon_state = "opifex_apron"
-	item_state = "opifex_apron"
-	blood_overlay_type = "armor"
-
-/obj/item/clothing/suit/armor/medium/tribal/legion/vet
-	name = "legion veteran armor"
-	desc = "Armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
-	icon_state = "legion_veteran"
-
-/obj/item/clothing/suit/armor/medium/tribal/legion/vexil
-	name = "legion vexillarius armor"
-	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the flag of the Legion worn on the back."
-	icon_state = "legion_vex"
-
-/obj/item/clothing/suit/armor/medium/tribal/legion/combat
-	name = "Legion combat armor"
-	desc = "An old military grade pre war combat armor and, repainted to the colour scheme of Caesar's Legion."
-	icon_state = "legion_combat"
-	item_state = "legion_combat"
-
-/// Brotherhood of steel -- unused
-/obj/item/clothing/suit/armor/medium/combat/bos
-	name = "initiate armor"
-	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
-	icon_state = "brotherhood_armor"
-	item_state = "brotherhood_armor"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/bos
-	name = "reinforced initiate armor"
-	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design This one is kitted with additional plates and, repainted to the colour scheme of the Brotherhood of Steel."
-	icon_state = "brotherhood_armor_mk2"
-	item_state = "brotherhood_armor_mk2"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/knight
-	name = "brotherhood armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
-	icon_state = "brotherhood_armor_knight"
-	item_state = "brotherhood_armor_knight"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/senknight
-	name = "brotherhood senior knight armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knight. It bears a silver stripe."
-	icon_state = "brotherhood_armor_senior"
-	item_state = "brotherhood_armor_senior"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/headknight
-	name = "brotherhood knight-captain armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knight-Captains. It bears golden embroidery."
-	icon_state = "brotherhood_armor_captain"
-	item_state = "brotherhood_armor_captain"
-
-///////////////////////
-// GREAT KHANS ARMOR //
-///////////////////////
-
-//Basic Jacket
-/obj/item/clothing/suit/toggle/labcoat/khan_jacket
-	name = "Great Khan jacket"
-	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
-	icon = 'icons/fallout/clothing/khans.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
-	icon_state = "khan_jacket"
-	item_state = "khan_jacket"
-
-//Armored jacket
-/obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
-	name = "Great Khan armored jacket"
-	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
-	icon_state = "khan_jacket_armored"
-	item_state = "khan_jacket_armored"
-
-//Battlecoat
-/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
-	name = "Great Khan battle coat"
-	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
-	icon_state = "khan_heavy"
-	item_state = "khan_heavy"
-
-//Battlecoat/Goji
-/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat/goji
-	name = "Golden Geckoskin jacket"
-	desc = "Heavy Geckoskin jacket lined with a bulletproof lining on the inside. On the back the symbol of the Great Khans is displayed proudly."
-	icon_state = "GojiSuit"
-	item_state = "GojiSuit"
 
 //Special Biosuit
 
@@ -947,111 +686,6 @@ Just leaving this here for quick copy-pasting, for future contributors.
 /obj/item/clothing/suit/armor/fluff/metalarmor/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..() */
-
-	
-/obj/item/clothing/suit/armor/medium/duster/khancoat
-	name = "khan battlecoat"
-	desc = "Affluent pushers can affort fancy coats with a lot of metal and ceramic plates stuffed inside."
-	icon_state = "khanbattle"
-	item_state = "khanbattle"
-
-// Outlaw
-/obj/item/clothing/suit/toggle/armored/khanlight
-	name = "great khan jacket"
-	desc = "With small lead plate inserts giving some defense, the jackets and vests popular with the Great Khans show off their emblem on the back."
-	icon_state = "khanjacket"
-	item_state = "khanjacket"
-
-/obj/item/clothing/suit/armor/light/tribal/ncr
-	name = "tribalized NCR armor vest"
-	desc = "A suit of worn dated NCR armor, it seems to have seen better days."
-	icon_state = "ncr_tribal_armor"
-	item_state = "ncr_tribal_armor"
-	
-/obj/item/clothing/suit/armor/light/rangerrig
-	name = "chest gear harness"
-	desc = "A handmade tactical rig made of black cloth, attached to a dusty desert-colored belt. A flask and two ammo pouches hang from the belt. Very cool to move about in."
-	icon_state = "r_gear_rig"
-	item_state = "r_gear_rig"
-
-/obj/item/clothing/suit/armor/light/trailranger
-	name = "ranger vest"
-	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
-	icon_state = "cowboyrang"
-	item_state = "cowboyrang"
-
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
-	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
-	icon_state = "ncr_salvaged"
-	item_state = "ncr_salvaged"
-
-/obj/item/clothing/suit/armor/power_armor/t45d/sierra
-	name = "Scorched Sierra power armor"
-	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
-	icon_state = "sierra"
-	item_state = "sierra"
-
-// Recipe Firesuit + metal chestplate + 50 welding fuel + 1 HQ + 1 plasteel
-/obj/item/clothing/suit/armor/heavy/metal/sulphite/old
-	name = "sulphite raider suit"
-	desc = "There are still some old asbestos fireman suits laying around from before the war. How about adding a ton of metal, plasteel and a combustion engine to one? The resulting armor is surprisingly effective at dissipating energy."
-	icon_state = "sulphite"
-	item_state = "sulphite"
-
-/obj/item/clothing/suit/armor/heavy/tribal/metal/old
-	name = "iron raider suit"
-	desc = "More rust than metal, with gaping holes in it, this armor looks like a pile of junk. Under the rust some quality steel still remains however."
-	icon_state = "raider_metal"
-	item_state = "raider_metal"
-
-// Midwest
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/midwest
-	name = "Salvaged midwestern T-51b power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. Its servomotors and valauble components have been stripped out of it."
-	icon_state = "midwestgrey_pa_salvaged"
-	item_state = "midwestgrey_pa_salvaged"
-
-// Hardened Midwest
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/midwest/hardened
-	name = "Salvaged hardened midwestern T-51b power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities. Its servomotors and valuable components have been stripped out of it."
-	icon_state = "midwestpa_salvaged"
-	item_state = "midwestpa_salvaged"
-
-// T-60A
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t60
-	name = "salvaged T-60a power armor"
-	desc = "T-60a power armor with servomotors and all valuable components stripped out of it."
-	icon_state = "t60_salvaged"
-	item_state = "t60_salvaged"
-
-/obj/item/clothing/suit/armor/power_armor/midwest
-	name = "Midwestern T-51b power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel."
-	icon_state = "midwestgrey_pa"
-	item_state = "midwestgrey_pa"
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/midwest
-
-/obj/item/clothing/suit/armor/power_armor/midwest/hardened
-	name = "Hardened midwestern  T-51b power armor"
-	desc = "This set of power armor belongs to the Midwestern branch of the Brotherhood of Steel. This particular one has gone through a chemical hardening process, increasing its armor capabilities."
-	icon_state = "midwestpa"
-	item_state = "midwestpa"
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/midwest/hardened
-
-
-/obj/item/clothing/suit/armor/power_armor/t60
-	name = "T-60a power armor"
-	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
-	icon_state = "t60powerarmor"
-	item_state = "t60powerarmor"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t60
-
-/obj/item/clothing/suit/armor/power_armor/t60/pineapple
-	name = "degraded T-60a power armor"
-	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal. This suit is heavily degraded." //reskin of head knight armor
 
 /* /obj/item/clothing/suit/armor/medium/tribal/chitinarmor/old
 	name = "insect chitin armor"

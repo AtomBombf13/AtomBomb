@@ -101,10 +101,6 @@
 	. = ..()
 	. += "[get_ammo(0,0)] of those are live rounds."
 
-/obj/item/gun/ballistic/revolver/detective/Initialize()
-	. = ..()
-	safe_calibers = magazine.caliber
-
 /obj/item/gun/ballistic/revolver/detective/screwdriver_act(mob/living/user, obj/item/I)
 	if(..())
 		return TRUE
@@ -141,37 +137,6 @@
 /* * * * * * * * * *
  * LIGHT REVOLVERS *
  * * * * * * * * * */
-
-/* * * * * * * * * * *
- * .38 detective
- * Extra light revolver
- * .38 Special
- * Tiny
- * Fits in a boot
- * Renamable?
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/detective
-	name = ".38 Detective Special"
-	desc = "A small revolver thats easily concealable."
-	icon_state = "detective"
-	w_class = WEIGHT_CLASS_TINY
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = HANDGUN_RECOIL(0.8)
-
-	obj_flags = UNIQUE_RENAME
-	var/list/safe_calibers
 
 /* * * * * * * * * * *
  * .45 ACP Revolver
@@ -498,37 +463,6 @@
 	can_scope = TRUE
 
 /* * * * * * * * * * *
- * M2045 Magnum Revolver Rifle
- * Heavy revolver rifle
- * Scoped
- * .308
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/m2405
-	name = "M2045 Magnum Revolver Rifle"
-	desc = "A relic from before the Great War returns to the wasteland. This rifle uses .308 ammunition and has considerable recoil."
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev308
-	icon = 'icons/fallout/objects/guns/longguns.dmi'
-	item_state = "m2405"
-	icon_state = "m2405"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	init_recoil = RIFLE_RECOIL(2.2)
-
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-
-/* * * * * * * * * * *
  * Hunting revolver
  * Super heavy revolver
  * .45-70
@@ -580,71 +514,6 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
-
-/* * * * * * * * * * *
- * Sequoia revolvers
- * Super heavy revolver
- * .45-70
- * Accurate
- * Slow to fire
- * More damage
- * They're all the same gun really
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/sequoia
-	name = "ranger sequoia"
-	desc = "This large, double-action revolver is a trademark weapon of the New California Republic Rangers. It features a dark finish with intricate engravings etched all around the weapon. Engraved along the barrel are the words 'For Honorable Service,' and 'Against All Tyrants.' The hand grip bears the symbol of the NCR Rangers, a bear, and a brass plate attached to the bottom that reads '20 Years.' "
-	icon_state = "sequoia"
-	item_state = "sequoia"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	init_recoil = HANDGUN_RECOIL(1.2)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	fire_sound = 'sound/f13weapons/sequoia.ogg'
-
-/obj/item/gun/ballistic/revolver/sequoia/bayonet
-	name = "bladed ranger sequoia"
-	desc = "This heavy revolver is a trademark weapon of the New California Republic Rangers. This one has a blade attached to the handle for a painful pistolwhip."
-	icon_state = "sequoia_b"
-	item_state = "sequoia"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-
-	fire_sound = 'sound/f13weapons/sequoia.ogg'
-
-/obj/item/gun/ballistic/revolver/sequoia/death
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570/death
-	fire_sound = 'sound/f13weapons/sequoia.ogg'
-
-	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 
 /* * * * * * * * * * *
  * Single Action Army revolvers
@@ -851,177 +720,103 @@
 
 
 //////////////////
-// CODE ARCHIVE //
+//UNIQUE SECTION//
 //////////////////
 
-/*SLING CODE
-/obj/item/gun/ballistic/revolver/doublebarrel/improvised/attackby(obj/item/A, mob/user, params)
-	..()
-	if(istype(A, /obj/item/stack/cable_coil) && !sawn_off)
-		if(A.use_tool(src, user, 0, 10, skill_gain_mult = EASY_USE_TOOL_MULT))
-			slot_flags = ITEM_SLOT_BACK
-			to_chat(user, span_notice("You tie the lengths of cable to the shotgun, making a sling."))
-			slung = TRUE
-			update_icon()
-		else
-			to_chat(user, span_warning("You need at least ten lengths of cable if you want to make a sling!"))
+//This section is dedicated to unique items; be it leadership unique items OR loot spawn unique items. Each shall be specified in the gun's information.
 
-/obj/item/gun/ballistic/revolver/doublebarrel/improvised/update_overlays()
-	. = ..()
-	if(slung)
-		. += "[icon_state]sling"
+/* * * * * * * * * * *
+ * Sequoia revolvers
+ * Super heavy revolver
+ * .45-70
+ * Accurate
+ * Slow to fire
+ * More damage
+ * They're all the same gun really
+ * Unique - NCR Head Ranger (Spawn - Head pistol)
+ * * * * * * * * * * */
 
-/obj/item/gun/ballistic/revolver/doublebarrel/improvised/sawoff(mob/user)
-	. = ..()
-	if(. && slung) //sawing off the gun removes the sling
-		new /obj/item/stack/cable_coil(get_turf(src), 10)
-		slung = 0
-		update_icon()
+/obj/item/gun/ballistic/revolver/sequoia
+	name = "ranger sequoia"
+	desc = "This large, double-action revolver is a trademark weapon of the New California Republic Rangers. It features a dark finish with intricate engravings etched all around the weapon. Engraved along the barrel are the words 'For Honorable Service,' and 'Against All Tyrants.' The hand grip bears the symbol of the NCR Rangers, a bear, and a brass plate attached to the bottom that reads '20 Years.' "
+	icon_state = "sequoia"
+	item_state = "sequoia"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 
-//BREAK ACTION CODE
-/obj/item/gun/ballistic/revolver/doublebarrel/attack_self(mob/living/user)
-	var/num_unloaded = 0
-	while (get_ammo() > 0)
-		var/obj/item/ammo_casing/CB
-		CB = magazine.get_round(0)
-		chambered = null
-		CB.forceMove(drop_location())
-		CB.update_icon()
-		num_unloaded++
-	if (num_unloaded)
-		to_chat(user, span_notice("You break open \the [src] and unload [num_unloaded] shell\s."))
-	else
-		to_chat(user, span_warning("[src] is empty!"))
+	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_recoil = HANDGUN_RECOIL(1.2)
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-//DODGE CODE
-/obj/item/gun/ballistic/revolver/colt357/lucky/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(attack_type == PROJECTILE_ATTACK)
-		if(prob(block_chance))
-			owner.visible_message(span_danger("[owner] seems to dodge [attack_text] entirely thanks to [src]!"))
-			playsound(src, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), 75, 1)
-			return 1
-	return 0
+	fire_sound = 'sound/f13weapons/sequoia.ogg'
 
+/obj/item/gun/ballistic/revolver/sequoia/bayonet
+	name = "bladed ranger sequoia"
+	desc = "This heavy revolver is a trademark weapon of the New California Republic Rangers. This one has a blade attached to the handle for a painful pistolwhip."
+	icon_state = "sequoia_b"
+	item_state = "sequoia"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 
-// -------------- HoS Modular Weapon System -------------
-// ---------- Code originally from VoreStation ----------
-/obj/item/gun/ballistic/revolver/mws
-	name = "MWS-01 'Big Iron'"
-	desc = "Modular Weapons System"
+	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 
-	icon = 'icons/obj/guns/projectile.dmi'
-	icon_state = "mws"
+	fire_sound = 'sound/f13weapons/sequoia.ogg'
 
-	fire_sound = 'sound/weapons/Taser.ogg'
+/obj/item/gun/ballistic/revolver/sequoia/death
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570/death
+	fire_sound = 'sound/f13weapons/sequoia.ogg'
 
-	mag_type = /obj/item/ammo_box/magazine/mws_mag
-	spawnwithmagazine = FALSE
+	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 
-	recoil = 0
+/* * * * * * * * * * *
+ * M2045 Magnum Revolver Rifle
+ * Heavy revolver rifle
+ * Scoped
+ * .308
+ * Unique - Legion Centurion (Spawn - Head pistol)
+ * * * * * * * * * * */
 
-	var/charge_sections = 6
+/obj/item/gun/ballistic/revolver/m2405
+	name = "M2045 Magnum Revolver Rifle"
+	desc = "A relic from before the Great War returns to the wasteland. This rifle uses .308 ammunition and has considerable recoil."
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev308
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	item_state = "m2405"
+	icon_state = "m2405"
 
-/obj/item/gun/ballistic/revolver/mws/examine(mob/user)
-	. = ..()
-	. += span_notice("Alt-click to remove the magazine.")
+	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_recoil = RIFLE_RECOIL(2.2)
 
-/obj/item/gun/ballistic/revolver/mws/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	process_chamber(user)
-	if(!chambered || !chambered.BB)
-		to_chat(user, span_danger("*click*"))
-		playsound(src, "gun_dry_fire", 30, 1)
-
-
-/obj/item/gun/ballistic/revolver/mws/process_chamber(mob/living/user)
-	if(chambered && !chambered.BB) //if BB is null, i.e the shot has been fired...
-		var/obj/item/ammo_casing/mws_batt/shot = chambered
-		if(shot.cell.charge >= shot.e_cost)
-			shot.chargeshot()
-		else
-			for(var/B in magazine.stored_ammo)
-				var/obj/item/ammo_casing/mws_batt/other_batt = B
-				if(istype(other_batt,shot) && other_batt.cell.charge >= other_batt.e_cost)
-					switch_to(other_batt, user)
-					break
-	update_icon()
-
-/obj/item/gun/ballistic/revolver/mws/proc/switch_to(obj/item/ammo_casing/mws_batt/new_batt, mob/living/user)
-	if(ishuman(user))
-		if(chambered && new_batt.type == chambered.type)
-			to_chat(user,span_warning("[src] is now using the next [new_batt.type_name] power cell."))
-		else
-			to_chat(user,span_warning("[src] is now firing [new_batt.type_name]."))
-
-	chambered = new_batt
-	update_icon()
-
-/obj/item/gun/ballistic/revolver/mws/attack_self(mob/living/user)
-	if(!chambered)
-		return
-
-	var/list/stored_ammo = magazine.stored_ammo
-
-	if(stored_ammo.len == 1)
-		return //silly you.
-
-	//Find an ammotype that ISN'T the same, or exhaust the list and don't change.
-	var/our_slot = stored_ammo.Find(chambered)
-
-	for(var/index in 1 to stored_ammo.len)
-		var/true_index = ((our_slot + index - 1) % stored_ammo.len) + 1 // Stupid ONE BASED lists!
-		var/obj/item/ammo_casing/mws_batt/next_batt = stored_ammo[true_index]
-		if(chambered != next_batt && !istype(next_batt, chambered.type) && next_batt.cell.charge >= next_batt.e_cost)
-			switch_to(next_batt, user)
-			break
-
-/obj/item/gun/ballistic/revolver/mws/AltClick(mob/living/user)
-	.=..()
-	if(magazine)
-		user.put_in_hands(magazine)
-		magazine.update_icon()
-		if(magazine.ammo_count())
-			playsound(src, 'sound/weapons/gun_magazine_remove_full.ogg', 70, 1)
-		else
-			playsound(src, "gun_remove_empty_magazine", 70, 1)
-		magazine = null
-		to_chat(user, span_notice("You pull the magazine out of [src]."))
-		if(chambered)
-			chambered = null
-		update_icon()
-
-/obj/item/gun/ballistic/revolver/mws/update_overlays()
-	.=..()
-	if(!chambered)
-		return
-
-	var/obj/item/ammo_casing/mws_batt/batt = chambered
-	var/batt_color = batt.type_color //Used many times
-
-	//Mode bar
-	var/image/mode_bar = image(icon, icon_state = "[initial(icon_state)]_type")
-	mode_bar.color = batt_color
-	. += mode_bar
-
-	//Barrel color
-	var/mutable_appearance/barrel_color = mutable_appearance(icon, "[initial(icon_state)]_barrel", color = batt_color)
-	barrel_color.alpha = 150
-	. += barrel_color
-
-	//Charge bar
-	var/ratio = can_shoot() ? CEILING(clamp(batt.cell.charge / batt.cell.maxcharge, 0, 1) * charge_sections, 1) : 0
-	for(var/i = 0, i < ratio, i++)
-		var/mutable_appearance/charge_bar = mutable_appearance(icon,  "[initial(icon_state)]_charge", color = batt_color)
-		charge_bar.pixel_x = i
-		. += charge_bar
-
-
-//ACCIDENTALLY SHOOT YOURSELF IN THE FACE CODE
-/obj/item/gun/ballistic/revolver/reverse/can_trigger_gun(mob/living/user)
-	if((HAS_TRAIT(user, TRAIT_CLUMSY)) || (user.mind && HAS_TRAIT(user.mind, TRAIT_CLOWN_MENTALITY)))
-		return ..()
-	if(process_fire(user, user, FALSE, null, BODY_ZONE_HEAD))
-		user.visible_message(span_warning("[user] somehow manages to shoot [user.p_them()]self in the face!"), span_userdanger("You somehow shoot yourself in the face! How the hell?!"))
-		user.emote("scream")
-		user.drop_all_held_items()
-		user.DefaultCombatKnockdown(80)
-*/
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13

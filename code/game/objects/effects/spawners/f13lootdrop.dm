@@ -886,7 +886,6 @@
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 1,
-				/obj/effect/spawner/bundle/f13/fnfal = 1,
 				/obj/item/gun/ballistic/automatic/bozar = 1
 				)
 
@@ -896,7 +895,6 @@
 				/obj/effect/spawner/bundle/f13/amr = 10,
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/rangemaster = 15,
-				/obj/effect/spawner/bundle/f13/fnfal = 10,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 10
 				)
@@ -1121,9 +1119,9 @@
 	)
 
 /obj/effect/spawner/bundle/f13/mk23
-	name = "mk23 and ammo spawner"
+	name = "autoloader and ammo spawner"
 	items = list(
-				/obj/item/gun/ballistic/automatic/pistol/mk23,
+				/obj/item/gun/ballistic/automatic/pistol/autoloader,
 				/obj/item/ammo_box/magazine/m45/socom/
 	)
 
@@ -1483,13 +1481,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	items = list(
 				/obj/item/gun/ballistic/automatic/m72,
 				/obj/item/ammo_box/magazine/m2mm
-	)
-
-/obj/effect/spawner/bundle/f13/fnfal
-	name = "fn fal and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/fnfal,
-				/obj/item/ammo_box/magazine/m762/ext
 	)
 
 /obj/effect/spawner/bundle/f13/bar
@@ -2111,7 +2102,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/r82,
 		/obj/item/book/granter/crafting_recipe/blueprint/service,
 		/obj/item/book/granter/crafting_recipe/blueprint/trailcarbine,
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,

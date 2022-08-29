@@ -1330,7 +1330,6 @@ Raider
 	outfit = /datum/outfit/job/wasteland/f13preacher
 
 	loadout_options = list(
-	/datum/outfit/loadout/crusader, 	//This is kinda a given. You bet.
 	/datum/outfit/loadout/samaritan, 	//Water and food to share with the wastes.
 	/datum/outfit/loadout/cleanser		//Just some bombs.
 	)
@@ -1356,16 +1355,6 @@ Raider
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/wasteland/f13wastelander,
 		),
-	)
-
-
-
-/datum/outfit/loadout/crusader
-	name = "Crusader"
-	backpack_contents = list(
-		/obj/item/clothing/suit/armor/knight = 1,
-		/obj/item/clothing/head/helmet/knight/red = 1,
-		/obj/item/melee/onehanded/machete = 1,
 	)
 
 /datum/outfit/loadout/samaritan

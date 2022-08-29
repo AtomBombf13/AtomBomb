@@ -185,7 +185,7 @@
 	health = 650
 	melee_damage_lower = 20
 	melee_damage_upper = 47
-	extra_projectiles = 2 
+	extra_projectiles = 2
 	retreat_distance = 3
 	minimum_distance = 5
 	ranged_cooldown_time = 12
@@ -350,7 +350,7 @@
 /obj/effect/mob_spawn/human/corpse/ncr
 	name = "NCR Trooper"
 	uniform = /obj/item/clothing/under/f13/ncr
-	suit = /obj/item/clothing/suit/armor/ncrarmor
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	belt = /obj/item/storage/belt/army/assault/ncr
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
 	head = /obj/item/clothing/head/f13/ncr
@@ -436,7 +436,7 @@
 /obj/effect/mob_spawn/human/corpse/legion
 	name = "Legion Prime"
 	uniform = /obj/item/clothing/under/f13/legskirt
-	suit = /obj/item/clothing/suit/armor/legion/prime
+	suit = /obj/item/clothing/suit/armor/light/legion/prime
 	shoes = /obj/item/clothing/shoes/f13/military/legion
 	head = /obj/item/clothing/head/helmet/f13/legion/prime
 
@@ -477,7 +477,7 @@
 /obj/effect/mob_spawn/human/corpse/legion/decan
 	name = "Legion Decanus"
 	uniform = /obj/item/clothing/under/f13/legskirt
-	suit = /obj/item/clothing/suit/armor/legion/vet
+	suit = /obj/item/clothing/suit/armor/medium/legion/vet
 	shoes = /obj/item/clothing/shoes/f13/military/legion
 	gloves = /obj/item/clothing/gloves/legion
 	head = /obj/item/clothing/head/helmet/f13/legion/prime/decan

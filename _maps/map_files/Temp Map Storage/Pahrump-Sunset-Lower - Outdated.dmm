@@ -15332,8 +15332,8 @@
 /obj/effect/decal/fakelattice{
 	pixel_x = -17
 	},
-/obj/item/gun/ballistic/automatic/assault_carbine/policerifle,
-/obj/item/gun/ballistic/automatic/assault_carbine/policerifle,
+/obj/item/gun/ballistic/automatic/service/policerifle,
+/obj/item/gun/ballistic/automatic/service/policerifle,
 /turf/open/floor/plasteel/f13/vault_floor/dark{
 	icon_state = "darkrusty"
 	},

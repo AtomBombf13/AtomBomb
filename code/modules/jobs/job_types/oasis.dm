@@ -138,7 +138,7 @@ Mayor
 		/obj/item/clothing/under/f13/sleazeball = 1,
 		/obj/item/clothing/shoes/laceup = 1,
 		/obj/item/toy/cards/deck/unum = 1,
-		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
 		/obj/item/ammo_box/magazine/m45/socom = 2
 	)
 
@@ -423,10 +423,10 @@ Mayor
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
 	gloves = /obj/item/clothing/gloves/f13/military
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
+	suit_store = /obj/item/gun/ballistic/automatic/service/policerifle
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m45/socom=2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23=1,
+		/obj/item/gun/ballistic/automatic/pistol/autoloader=1,
 		/obj/item/ammo_box/magazine/m5mm=1,
 		/obj/item/flashlight/seclite = 1
 		)

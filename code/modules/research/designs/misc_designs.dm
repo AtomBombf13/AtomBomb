@@ -560,15 +560,6 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
 
-/datum/design/knight_armour
-	name = "Knight Armour"
-	desc = "A royal knight's favorite garments. Can be trimmed by any friendly person."
-	id = "knight_armour"
-	build_type = AUTOLATHE
-	materials = list(MAT_CATEGORY_RIGID = 10000)
-	build_path = /obj/item/clothing/suit/armor/heavy/riot/knight/greyscale
-	category = list("Imported")
-
 /datum/design/knight_helmet
 	name = "Knight Helmet"
 	desc = "A royal knight's favorite hat. If you hold it upside down it's actually a bucket."
