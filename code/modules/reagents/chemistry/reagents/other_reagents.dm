@@ -2834,6 +2834,8 @@ datum/reagent/eldritch
 	M.adjust_nutrition(-5)
 	..()
 
+//fuck off you horny idiots
+/*
 /datum/reagent/breast_enlarger
 	name = "Succubus milk"
 	description = "A volatile collodial mixture derived from milk that encourages mammary production via a potent estrogen mix."
@@ -3024,3 +3026,4 @@ datum/reagent/eldritch
 
 	P.modify_size(-0.1)
 	..()
+*/
