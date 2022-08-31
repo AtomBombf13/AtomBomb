@@ -396,12 +396,6 @@
 // Legion //
 ////////////
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion
-	name = "salvaged Legion power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and bull painted onto the chestplate shows it belongs to the Legion."
-	icon_state = "legion_salvaged"
-	item_state = "legion_salvaged"
-
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
