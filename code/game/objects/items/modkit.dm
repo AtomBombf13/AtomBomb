@@ -32,7 +32,8 @@
 //Mariya Sankinova - custom PA set
 /obj/item/modkit/mariarmor
 	name = "Modified Wid-west BoS Body modkit"
-	target_items = list(/obj/item/clothing/suit/armor/f13/power_armor/t45d,
+	target_items = list(/obj/item/clothing/suit/armor/power_armor/t45b,
+						/obj/item/clothing/suit/armor/power_armor/t45d,
 						/obj/item/clothing/suit/armor/power_armor/t51b)
 	result_item = /obj/item/clothing/suit/armor/f13/power_armor/t45d/mari
 
