@@ -646,34 +646,6 @@
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
 
-/obj/item/clothing/suit/armor/light/duster/bos/scribe
-	name = "Brotherhood Scribe's robe"
-	desc = "A red cloth robe worn by the Brotherhood of Steel Scribes."
-	icon_state = "scribe"
-	item_state = "scribe"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
-
-/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
-	name = "brotherhood head scribe robe"
-	desc = " A red cloth robe with gold trimmings, worn eclusively by the Head Scribe of a chapter."
-	icon_state = "headscribe"
-	item_state = "headscribe"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
-
-/obj/item/clothing/suit/armor/light/duster/bos/scribe/seniorscribe
-	name = "Brotherhood Senior Scribe's robe"
-	desc = "A red cloth robe with silver gildings worn by the Brotherhood of Steel Senior Scribes."
-	icon_state = "seniorscribe"
-	item_state = "seniorscribe"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
-
-/obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
-	name = "Brotherhood Elder's robe"
-	desc = "A blue cloth robe with some scarlet red parts, traditionally worn by the Brotherhood of Steel Elder."
-	icon_state = "elder"
-	item_state = "elder"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
-
 /obj/item/clothing/suit/armor/light/duster/town
 	name = "town trenchcoat"
 	desc = "A non-descript black trenchcoat."
@@ -857,6 +829,7 @@
 	desc = "An armored labcoat typically issued to NCR Medical Officers. It's a standard white labcoat with the Medical Officer's name stitched into the breast and a two headed bear sewn into the shoulder."
 	icon_state = "ncr_labcoat"
 	item_state = "ncr_labcoat"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
 
 /obj/item/clothing/suit/armor/light/utilityvest
 	name = "utility vest"
@@ -902,8 +875,8 @@
 	icon_state = "legion_prime"
 
 /obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
-	name = "slavemaster armor"
-	desc = "Issued to slave masters to keep them cool during long hours of watching the slaves work in the sun."
+	name = "prefect armor"
+	desc = "Issued to prefects to keep them cool during long hours of watching the slaves work in the sun."
 	icon_state = "legion_master"
 
 /obj/item/clothing/suit/armor/light/legion/explorer
@@ -916,6 +889,34 @@
 //////////////////////////
 // Brotherhood of Steel //
 ////////////////////////// 
+
+/obj/item/clothing/suit/armor/light/duster/bos/scribe
+	name = "Brotherhood Scribe's robe"
+	desc = "A red cloth robe worn by the Brotherhood of Steel Scribes."
+	icon_state = "scribe"
+	item_state = "scribe"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
+	name = "brotherhood head scribe robe"
+	desc = " A red cloth robe with gold trimmings, worn eclusively by the Head Scribe of a chapter."
+	icon_state = "headscribe"
+	item_state = "headscribe"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/light/duster/bos/scribe/seniorscribe
+	name = "Brotherhood Senior Scribe's robe"
+	desc = "A red cloth robe with silver gildings worn by the Brotherhood of Steel Senior Scribes."
+	icon_state = "seniorscribe"
+	item_state = "seniorscribe"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
+	name = "Brotherhood Elder's robe"
+	desc = "A blue cloth robe with some scarlet red parts, traditionally worn by the Brotherhood of Steel Elder."
+	icon_state = "elder"
+	item_state = "elder"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
 	name = "initiate armor"
