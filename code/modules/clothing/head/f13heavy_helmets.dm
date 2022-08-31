@@ -27,12 +27,6 @@
 	icon_state = "t45bhelmet_ncr"
 	item_state = "t45bhelmet_ncr"
 
-/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/legion
-	name = "legion salvaged T-45b helmet"
-	desc = "It's a legion salvaged T-45b power armor helmet, better repaired than regular salvaged PA, and decorated with the Legion banner and other markings of the Legion."
-	icon_state = "t45bhelmet_legion"
-	item_state = "t45bhelmet_legion"
-
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod
 	name = "hotrod T-45b power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
@@ -80,14 +74,6 @@
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
-
-// T-60A
-/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t60
-	name = "salvaged T-60a helmet"
-	desc = "It's a salvaged T-60a power armor helmet."
-	icon_state = "t60helmet0"
-	item_state = "t60helmet0"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2)
 
 // X-02
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02
