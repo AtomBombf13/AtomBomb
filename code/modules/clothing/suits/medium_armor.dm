@@ -590,18 +590,6 @@
 	icon_state = "remnant"
 	item_state = "remnant"
 
-/obj/item/clothing/suit/armor/medium/combat/mk2/desert_ranger
-	name = "reinforced desert ranger armor"
-	desc = "A suit of armor styled after those used by the Desert Rangers, with extra plates strapped to it to boot."
-	icon_state = "ncr_patrol"
-	item_state = "ncr_patrol"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/desert_ranger/pro
-	name = "reinforced desert ranger suit"
-	desc = "A set of armor styled after those used by the Desert Rangers, with extra plates strapped to it to boot."
-	icon_state = "ncr_armor_mk2"
-	item_state = "ncr_armor_mk2"
-
 /obj/item/clothing/suit/armor/medium/combat/mk2/raider
 	name = "raider combat armor"
 	desc = "An old set of reinforced combat armor with some parts supplanted with painspike armor. It seems less protective than a mint-condition set of combat armor."
@@ -626,66 +614,6 @@
 	desc = "(An uncommon suit of pre-war Chinese combat armor. It's a very basic and straightforward piece of armor that covers the front of the user."
 	icon_state = "chicom_armor"
 	item_state = "chicom_armor"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger
-	name = "desert ranger combat armor"
-	desc = "A suit of combat armor styled after those used by the Desert Rangers. It smells like red mist."
-	icon_state = "desert_ranger"
-	item_state = "desert_ranger"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/combat
-	name = "desert ranger combat suit"
-	desc = "A suit of combat armor styled after those used by the Desert Rangers. It smells like red mist."
-	icon_state = "ncr_armor"
-	item_state = "ncr_armor"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/scout
-	name = "desert ranger scout armor"
-	desc = "A refurbished set of desert ranger scout armor, refitted for use in the swamps. A few shiny platinum shards stick out of the webbing."
-	icon_state = "refurb_scout"
-	item_state = "refurb_scout"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer
-	name = "desert ranger officer armor"
-	desc = "A suit of desert ranger styled armor, now with a fancy-looking coat to boot. Very official."
-	icon_state = "ncr_officer_coat"
-	item_state = "ncr_officer_coat"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer/colonel
-	name = "NCR colonels armor"
-	desc = "A suit of desert ranger styled armor, decorated to look more official. Very, very official."
-	icon_state = "ncr_captain_armour"
-	item_state = "ncr_captain_armour"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/outlaw
-	name = "desert outlaw armor"
-	desc = "A modified detoriated armor kit consisting of Desert Ranger style combat armor and scrap metal."
-	icon_state = "ncrexile"
-	item_state = "ncrexile"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/mutant
-	name = "NCR mutant armor"
-	desc = "Multiple sets of NCR patrol vests that have been fused, stitched and welded together in order to fit the frame of a Super Mutant."
-	icon_state = "mutie_ncr"
-	item_state = "mutie_ncr"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
-	name = "desert ranger patrol armor"
-	desc = "A set of desert ranger patrol armor, modified to be light and breezy here in the swamps, perfect for making blood sausage."
-	icon_state = "ncr_patrol"
-	item_state = "ncr_patrol"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol/mutant
-	name = "mutant desert ranger armor"
-	desc = "Multiple sets of desert ranger patrol armor made to protect a massive humanoid, modified to be light and breezy here in the swamps, and smelling like blood sausage."
-	icon_state = "mutie_ranger_armour"
-	item_state = "mutie_ranger_armour"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol/thax
-	name = "desert ranger patrol duster"
-	desc = "A customized and moderately-worn suit of desert ranger armor. A sun-worn thick olive duster is worn over the armor."
-	icon_state = "thaxarmor"
-	item_state = "thaxarmor"
 
 /obj/item/clothing/suit/armor/medium/combat/rusted
 	name = "rusted combat armor"
@@ -721,40 +649,6 @@
 	permeability_coefficient = 0.9
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
 
-///brotherhood of steel
-/obj/item/clothing/suit/armor/medium/combat/brotherhood
-	name = "brotherhood armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
-	icon_state = "brotherhood_armor_knight"
-	item_state = "brotherhood_armor_knight"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
-
-
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
-	name = "brotherhood senior knight armor"
-	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
-	icon_state = "brotherhood_armor_senior"
-	item_state = "brotherhood_armor_senior"
-
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
-	name = "brotherhood head knight armor"
-	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Head Knights. It bears golden embroidery."
-	icon_state = "brotherhood_armor_captain"
-	item_state = "brotherhood_armor_captain"
-
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
-	name = "initiate armor"
-	desc = "An old degraded pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
-	icon_state = "brotherhood_armor"
-	item_state = "brotherhood_armor"
-
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
-	name = "reinforced knight armor"
-	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design This one is kitted with additional plates and, repainted to the colour scheme of the Brotherhood of Steel."
-	icon_state = "brotherhood_armor_mk2"
-	item_state = "brotherhood_armor_mk2"
-
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/outcast
 	name = "brotherhood armor" //unused?
 	desc = "A superior combat armor set made by the Brotherhood of Steel, bearing a series of red markings."
@@ -771,6 +665,12 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/outlaw
+	name = "desert outlaw armor"
+	desc = "A modified detoriated armor kit consisting of Desert Ranger style combat armor and scrap metal."
+	icon_state = "ncrexile"
+	item_state = "ncrexile"
+
 /obj/item/clothing/suit/armor/medium/combat/tribal
 	name = "tribal combat armor"
 	desc = "An old military grade pre war combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
@@ -785,12 +685,6 @@
 	desc = "An advanced model of combat armor worn by marines aboard the USS Democracy, second only to power armor in protection used by the USCM For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
 	icon_state = "enclave_marine"
 	item_state = "enclave_marine"
-
-/obj/item/clothing/suit/armor/medium/combat/enclave
-	name = "enclave combat armor"
-	desc = "An old set of pre-war combat armor, painted black."
-	icon_state = "enclave_new"
-	item_state = "enclave_new"
 
 ///////////////////
 // MEDIUM RAIDER //
@@ -953,6 +847,47 @@
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
 
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger
+	name = "desert ranger combat armor"
+	desc = "A suit of combat armor styled after those used by the Desert Rangers. It smells like red mist."
+	icon_state = "desert_ranger"
+	item_state = "desert_ranger"
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/combat
+	name = "desert ranger combat suit"
+	desc = "A suit of combat armor styled after those used by the Desert Rangers. It smells like red mist."
+	icon_state = "ncr_armor"
+	item_state = "ncr_armor"
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer
+	name = "desert ranger officer armor"
+	desc = "A suit of desert ranger styled armor, now with a fancy-looking coat to boot. Very official."
+	icon_state = "ncr_officer_coat"
+	item_state = "ncr_officer_coat"
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer/colonel
+	name = "NCR colonels armor"
+	desc = "A suit of desert ranger styled armor, decorated to look more official. Very, very official."
+	icon_state = "ncr_captain_armour"
+	item_state = "ncr_captain_armour"
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/mutant
+	name = "NCR mutant armor"
+	desc = "Multiple sets of NCR patrol vests that have been fused, stitched and welded together in order to fit the frame of a Super Mutant."
+	icon_state = "mutie_ncr"
+	item_state = "mutie_ncr"
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
+	name = "desert ranger patrol armor"
+	desc = "A set of desert ranger patrol armor, modified to be light and breezy here in the swamps, perfect for making blood sausage."
+	icon_state = "ncr_patrol"
+	item_state = "ncr_patrol"
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol/mutant
+	name = "mutant desert ranger armor"
+	desc = "Multiple sets of desert ranger patrol armor made to protect a massive humanoid, modified to be light and breezy here in the swamps, and smelling like blood sausage."
+	icon_state = "mutie_ranger_armour"
+	item_state = "mutie_ranger_armour"
 
 ////////////
 // LEGION //
@@ -1016,29 +951,37 @@
 // Brotherhood of Steel //
 ////////////////////////// 
 
+/obj/item/clothing/suit/armor/medium/combat/brotherhood
+	name = "brotherhood armor"
+	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
+	icon_state = "brotherhood_armor_knight"
+	item_state = "brotherhood_armor_knight"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
+	name = "reinforced initiate armor"
+	desc = "A combat armor set made and updated by the Brotherhood of Steel. This varient appears to be a refurbished set based on its welding marks."
+	icon_state = "brotherhood_armor_mk2"
+	item_state = "brotherhood_armor_mk2"
+
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
+	name = "brotherhood senior knight armor"
+	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
+	icon_state = "brotherhood_armor_senior"
+	item_state = "brotherhood_armor_senior"
+
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
+	name = "brotherhood head knight armor"
+	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Head Knights. It bears golden embroidery."
+	icon_state = "brotherhood_armor_captain"
+	item_state = "brotherhood_armor_captain"
+
 /obj/item/clothing/suit/armor/medium/combat/mk2/bos
 	name = "reinforced initiate armor"
 	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design This one is kitted with additional plates and, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_armor_mk2"
 	item_state = "brotherhood_armor_mk2"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/knight
-	name = "brotherhood armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
-	icon_state = "brotherhood_armor_knight"
-	item_state = "brotherhood_armor_knight"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/senknight
-	name = "brotherhood senior knight armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knight. It bears a silver stripe."
-	icon_state = "brotherhood_armor_senior"
-	item_state = "brotherhood_armor_senior"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/headknight
-	name = "brotherhood knight-captain armor"
-	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knight-Captains. It bears golden embroidery."
-	icon_state = "brotherhood_armor_captain"
-	item_state = "brotherhood_armor_captain"
 
 
 /////////////////
@@ -1073,3 +1016,13 @@
 	desc = "A heavy pre-war bomber coat, dyed blue with the insignia of the Vault-Tec City Coalition embroidered on the back. This one is worn by the Marshals of the Coalition."
 	icon_state = "marshal_commandcoat"
 	item_state = "marshal_commandcoat"
+
+/////////////
+// Enclave //
+/////////////
+
+/obj/item/clothing/suit/armor/medium/combat/enclave
+	name = "enclave combat armor"
+	desc = "An old set of pre-war combat armor, painted black."
+	icon_state = "enclave_new"
+	item_state = "enclave_new"

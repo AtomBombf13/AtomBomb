@@ -187,8 +187,8 @@ Head Paladin
 
 /datum/outfit/loadout/sentstand
 	name = "Shock Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b/hardened
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
@@ -196,8 +196,8 @@ Head Paladin
 
 /datum/outfit/loadout/sentheavy
 	name = "Heavy Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b/hardened
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72 = 1,
 		/obj/item/ammo_box/magazine/m2mm = 3,
@@ -207,8 +207,8 @@ Head Paladin
 
 /datum/outfit/loadout/sentgat
 	name = "Laser Gatling Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b/hardened
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
 	)
@@ -444,8 +444,8 @@ Star Paladin
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit =	/obj/item/clothing/suit/armor/power_armor/t51b
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
@@ -534,8 +534,8 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/army/assault
@@ -748,7 +748,7 @@ Senior Knight
 	loadout_options = list(
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Browning Auto-5
-	/datum/outfit/loadout/sknightc, //R93 PDW
+	/datum/outfit/loadout/sknightc, //R91
 	/datum/outfit/loadout/sknightd,
 	)
 
@@ -779,7 +779,6 @@ Senior Knight
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
 	jobtype = /datum/job/bos/f13seniorknight
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	accessory = 	/obj/item/clothing/accessory/bos/seniorknight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	glasses =       /obj/item/clothing/glasses/night
@@ -801,6 +800,7 @@ Senior Knight
 
 /datum/outfit/loadout/sknighta
 	name = "Footknight"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/aer9=1,
 		/obj/item/stock_parts/cell/ammo/mfc=2,
@@ -811,6 +811,7 @@ Senior Knight
 
 /datum/outfit/loadout/sknightb
 	name = "Knight-Defender"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/police=1,
 		/obj/item/ammo_box/shotgun/buck=2,
@@ -820,7 +821,9 @@ Senior Knight
 
 /datum/outfit/loadout/sknightc
 	name = "Recon"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	backpack_contents = list(
+		/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior=1,
 		/obj/item/gun/ballistic/automatic/assault_rifle=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -829,6 +832,7 @@ Senior Knight
 
 /datum/outfit/loadout/sknightd
 	name = "Senior Knight-Cavalry"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/melee/powered/ripper/prewar=1,
@@ -853,9 +857,9 @@ Knight
 
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9
-	/datum/outfit/loadout/knightb, //R82
+	/datum/outfit/loadout/knightb, //R91
 	/datum/outfit/loadout/knightc, //AER9S
-	/datum/outfit/loadout/knightd, //R82 J
+	/datum/outfit/loadout/knightd, //R91 J
 	/datum/outfit/loadout/knighte, //Ripper J
 	/datum/outfit/loadout/knightf, //Ripper S
 	)
@@ -890,7 +894,6 @@ Knight
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
 	jobtype = /datum/job/bos/f13knight
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	belt = 			/obj/item/storage/belt/army/assault
@@ -910,6 +913,7 @@ Knight
 
 /datum/outfit/loadout/knighta
 	name = "Junior Footknight"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/gun/energy/laser/aer9=1,
@@ -920,6 +924,7 @@ Knight
 
 /datum/outfit/loadout/knightb
 	name = "Junior Knight-Defender"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/gun/ballistic/automatic/assault_rifle=1,
@@ -930,6 +935,7 @@ Knight
 
 /datum/outfit/loadout/knightc
 	name = "Junior Knight-Cavalry"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/melee/powered/ripper=1,
@@ -939,6 +945,7 @@ Knight
 
 /datum/outfit/loadout/knightd
 	name = "Footknight"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/energy/laser/aer9=1,
@@ -949,6 +956,7 @@ Knight
 
 /datum/outfit/loadout/knighte
 	name = "Knight-Defender"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/ballistic/automatic/smg/mp5=1,
@@ -959,6 +967,7 @@ Knight
 
 /datum/outfit/loadout/knightf
 	name = "Knight-Cavalry"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/melee/powered/ripper=1,
