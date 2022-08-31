@@ -156,9 +156,37 @@
 	name = "trophy rack"
 	path = /obj/item/storage/backpack/cultpack
 
-/datum/gear/hands/backpack/old
+/datum/gear/backpack/backpack/old
 	name = "old satchel"
 	path = /obj/item/storage/backpack/satchel/old
+
+/datum/gear/backpack/backpack/legionr
+	name = "legion red cape backpack"
+	path = /obj/item/storage/backpack/legionr
+	cost = 3
+	restricted_desc = "Legion Veteran+"
+	restricted_roles = list("Legion Orator",
+							"Legion Centurion",
+							"Legion Veteran Decanus",
+							"Legion Prime Decanus",
+							"Legion Recruit Decanus",
+							"Legion Vexillarius",
+							"Veteran Legionnaire"
+						)
+
+/datum/gear/backpack/backpack/legionb
+	name = "legion black cape backpack"
+	path = /obj/item/storage/backpack/legionb
+	cost = 3
+	restricted_desc = "Legion Veteran+"
+	restricted_roles = list("Legion Orator",
+							"Legion Centurion",
+							"Legion Veteran Decanus",
+							"Legion Prime Decanus",
+							"Legion Recruit Decanus",
+							"Legion Vexillarius",
+							"Veteran Legionnaire"
+						)
 
 /////////////////////
 //Coyote Additions//
