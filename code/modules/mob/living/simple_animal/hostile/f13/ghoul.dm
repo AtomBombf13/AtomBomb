@@ -10,7 +10,7 @@
 	icon_state = "feralghoul"
 	icon_living = "feralghoul"
 	icon_dead = "feralghoul_dead"
-	var/rare_icon = "feralghoul_h"
+
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	robust_searching = 1
 	turns_per_move = 5
@@ -37,7 +37,7 @@
 
 	emote_taunt_sound = list('sound/f13npc/ghoul/taunt.ogg')
 	emote_taunt = list(
-		"gurgles", 
+		"gurgles",
 		"stares",
 		"foams at the mouth",
 		"groans",
@@ -54,13 +54,6 @@
 	loot = list(/obj/item/stack/f13Cash/random/low/lowchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 
-/mob/living/simple_animal/hostile/ghoul/Initialize()
-	. = ..()
-	if(prob(50))
-		icon_state = rare_icon
-		icon_living = rare_icon
-		icon_dead = "[rare_icon]_dead"
-
 // Ghoul Reaver
 /mob/living/simple_animal/hostile/ghoul/reaver
 	name = "feral ghoul reaver"
@@ -68,7 +61,6 @@
 	icon_state = "ghoulreaver"
 	icon_living = "ghoulreaver"
 	icon_dead = "ghoulreaver_dead"
-	rare_icon = "ghoulreaver_h"
 	speed = 2
 	maxHealth = 96
 	health = 96
@@ -132,7 +124,7 @@
 	melee_damage_upper = 15
 	loot = list(/obj/item/stack/f13Cash/random/low/medchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Legendary Ghoul
 /mob/living/simple_animal/hostile/ghoul/legendary
 	name = "legendary ghoul"
@@ -152,7 +144,7 @@
 	bare_wound_bonus = 0
 	loot = list(/obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Glowing Ghoul
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing feral ghoul"
@@ -160,7 +152,6 @@
 	icon_state = "glowinghoul"
 	icon_living = "glowinghoul"
 	icon_dead = "glowinghoul_dead"
-	rare_icon = "glowinghoul_h"
 	maxHealth = 80
 	health = 80
 	speed = 2
@@ -170,7 +161,7 @@
 	light_system = MOVABLE_LIGHT
 	light_range = 2
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 /mob/living/simple_animal/hostile/ghoul/glowing/Initialize(mapload)
 	. = ..()
 	// we only heal BRUTELOSS because each type directly heals a simplemob's health
@@ -209,7 +200,7 @@
 	health = 72
 	loot = list(/obj/item/stack/f13Cash/random/low/medchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Alive Ghoul
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
 	name = "armored ghoul soldier"
@@ -221,7 +212,7 @@
 	maxHealth = 80
 	health = 80
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Alive Ghoul
 /mob/living/simple_animal/hostile/ghoul/scorched
 	name = "scorched ghoul soldier"
@@ -243,7 +234,7 @@
 	attack_verb_simple = "punches"
 	attack_sound = "punch"
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Alive Ghoul Ranged
 /mob/living/simple_animal/hostile/ghoul/scorched/ranged
 	name = "Ranged Ghoul Solder"
@@ -270,7 +261,7 @@
 	attack_verb_simple = "shoots"
 	attack_sound = "punch"
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Sunset mob of some sort?
 /mob/living/simple_animal/hostile/ghoul/wyomingghost
 	name = "ghost soldier"
@@ -299,7 +290,7 @@
 	decompose = FALSE
 	sharpness = SHARP_EDGED //They need to cut their finger nails
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Halloween Event Ghouls
 /mob/living/simple_animal/hostile/ghoul/zombie
 	name = "ravenous feral ghoul"
@@ -309,7 +300,7 @@
 	maxHealth = 200
 	health = 200
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 /mob/living/simple_animal/hostile/ghoul/zombie/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
@@ -329,7 +320,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 /mob/living/simple_animal/hostile/ghoul/zombie/glowing
 	name = "ravenous glowing feral ghoul"
 	desc = "A ferocious feral ghoul, hungry for human meat. This one has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
@@ -345,7 +336,7 @@
 	light_system = MOVABLE_LIGHT
 	light_range = 2
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 /mob/living/simple_animal/hostile/ghoul/zombie/glowing/Initialize(mapload)
 	. = ..()
 	// we only heal BRUTELOSS because each type directly heals a simplemob's health
