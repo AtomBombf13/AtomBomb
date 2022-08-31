@@ -129,7 +129,7 @@
 	path = /obj/item/clothing/suit/armor/light/utilityvest
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
 	cost = 1  /// Has no armor so its cosmetic as heck.
-/*	restricted_desc = "NCR"
+	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
 							"NCR Medical Officer",
@@ -145,32 +145,30 @@
 							"NCR Rear Echelon",
 							"NCR Off-Duty",
 							"NCR Ranger"
-						)
-*/
-
+							)
 
 /datum/gear/suit/fieldscribe
 	name = "Fieldscribe suit"
 	path = /obj/item/clothing/suit/toggle/labcoat/fieldscribe
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
-/*	restricted_desc = "Scribes"
+	restricted_desc = "Scribes"
 	restricted_roles = list("Head Scribe",
 							"Senior Scribe",
 							"Scribe",
 							)
-*/
+
 /datum/gear/suit/scribecoat
 	name = "Fieldscribe coat"
 	path = /obj/item/clothing/suit/toggle/labcoat/scribecoat
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
-/*	restricted_desc = "Scribes"
+	restricted_desc = "Scribes"
 	restricted_roles = list("Head Scribe",
 							"Senior Scribe",
 							"Scribe",
 							)
-*/
+
 /datum/gear/suit/town
 	name = "Town Trenchcoat"
 	path = /obj/item/clothing/suit/armor/light/duster/town
@@ -213,23 +211,6 @@
 							"Prospector",
 							)
 
-//These should be left commented out until the holidays or special events.
-/*
-/datum/gear/suit/christmascoatr
-	name = "Red Christmas Coat"
-	path = /obj/item/clothing/suit/hooded/wintercoat/christmascoatr
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-
-/datum/gear/suit/christmascoatg
-	name = "Green Christmas Coat"
-	path = /obj/item/clothing/suit/hooded/wintercoat/christmascoatg
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-
-/datum/gear/suit/christmascoatrg
-	name = "Red and Green Christmas Coat"
-	path = /obj/item/clothing/suit/hooded/wintercoat/christmascoatrg
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-*/
 
 // BEGIN_INTERNALS
 // END_INTERNALS

@@ -46,7 +46,8 @@ GLOBAL_LIST_INIT(tribal_job_recipes, list(
 	/datum/crafting_recipe/healpoultice,
 	/datum/crafting_recipe/healpoultice5,
 	/datum/crafting_recipe/food/pemmican,
-	/datum/crafting_recipe/tribal/bonebag))
+	/datum/crafting_recipe/tribal/bonebag,
+	/datum/crafting_recipe/gate_wayfareroor))
 
 /datum/outfit/job/tribal/
 	name = "Tribal"

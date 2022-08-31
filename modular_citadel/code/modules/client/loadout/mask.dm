@@ -105,6 +105,11 @@
 	path = /obj/item/clothing/mask/bandana/skull
 	cost = 1
 
+/datum/gear/mask/bandana/momento
+	name = "momento bandana"
+	path = /obj/item/clothing/mask/bandana/momentobandana
+	cost = 2
+
 /// Misc
 
 /datum/gear/mask/moustache
