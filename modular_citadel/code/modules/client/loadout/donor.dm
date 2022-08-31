@@ -1,28 +1,6 @@
-/datum/gear/donator/kits/mrmannstealthsuit
-	name = "Stealth Suit Bundle"
-	path = /obj/item/storage/box/large/custom_kit/mrmannstealthsuit
-	category = LOADOUT_CATEGORY_UNIFORM
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
-	ckeywhitelist = list("plaugewalker")
+//Master file for donator/custom items. Use kit.dm, modkit.dm and whatever custom armor/helmet.dm that is applicable as well for all files found here.
 
-/obj/item/storage/box/large/custom_kit/mrmannstealthsuit
-	name = "Stealth Suit Bundle"
-	desc = "An old chinese stealth suit and helmet rendered inoperable."
-	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/storage/box/large/custom_kit/mrmannstealthsuit/PopulateContents()
-	new /obj/item/clothing/under/f13/chinasuitcosmetic(src)
-	new /obj/item/clothing/head/f13/chinahelmetcosmetic(src)
-
-/datum/gear/donator/kits/midgetdragonvest
-	name = "Great Beat Vest Bundle"
-	path = /obj/item/clothing/under/f13/bearvest
-	category = LOADOUT_CATEGORY_UNIFORM
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
-	ckeywhitelist = list("midgetdragon")
-
-// SUNSET EDIT
-
+//Holdover from Sunset - funny food crafting. Why? Don't know, just leaving though.
 /datum/gear/donator/exoticjazz
 	name = "Happy Sharky Company Cuisine Book"
 	slot = SLOT_IN_BACKPACK
@@ -30,3 +8,15 @@
 	category = LOADOUT_CATEGORY_BACKPACK
 	ckeywhitelist = list ("ExoticJazz")
 	cost = 0
+
+//Talon Company custom comat armor
+/datum/gear/donator/kits/talon
+	name = "Talon Company gearset"
+	path = /obj/item/storage/box/large/custom_kit/talon
+	ckeywhitelist = list()
+
+//Custom Mid-West PA for Mariya Sankinova / Rebel0
+/datum/gear/donator/kits/mariyasankinova
+	name = "Mariya Sankinova's belongings"
+	path = /obj/item/storage/box/large/custom_kit/mariya
+	ckeywhitelist = list("rebel0")

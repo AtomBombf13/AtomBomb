@@ -19,7 +19,26 @@
 	else
 		return ..()
 
-/obj/item/modkit/example
-	name = "name"
-	target_items = /obj/item/clothing/suit/armor/medium/vest/ncr/mant //put targeted item path here
-	result_item = /obj/item/clothing/suit/armor/medium/vest/ncr/mant //put custom item path here path here
+////////////////////////////////
+// ! Player / Donar Modkits ! //
+////////////////////////////////
+
+//Talon Company - da bad guys
+/obj/item/modkit/talon
+	name = "Talon Company Body modkit"
+	target_items = list(/obj/item/clothing/suit/armor/medium/combat)
+	result_item = /obj/item/clothing/suit/armor/medium/combat/talon
+
+//Mariya Sankinova - custom PA set
+/obj/item/modkit/mariarmor
+	name = "Modified Wid-west BoS Body modkit"
+	target_items = list(/obj/item/clothing/suit/armor/f13/power_armor/t45d,
+						/obj/item/clothing/suit/armor/power_armor/t51b)
+	result_item = /obj/item/clothing/suit/armor/f13/power_armor/t45d/mari
+
+//Mariya Sankinova - custom PA set
+/obj/item/modkit/marihelmet
+	name = "Modified Wid-west BOS Helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/power_armor/t45d,
+						/obj/item/clothing/head/helmet/f13/power_armor/t51b)
+	result_item = /obj/item/clothing/head/helmet/f13/power_armor/t45d/mari
