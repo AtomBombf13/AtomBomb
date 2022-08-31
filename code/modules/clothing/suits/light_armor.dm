@@ -917,19 +917,19 @@
 // Brotherhood of Steel //
 ////////////////////////// 
 
-/obj/item/clothing/suit/armor/light/combat/bos
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
 	name = "initiate armor"
 	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
 
-/obj/item/clothing/suit/armor/light/combat/scout
+/obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	name = "brotherhood scout armor"
 	desc = "A pre-war set of combat armor with stripped armor plating, allowing for better mobility over their heavier combat armor mk 2 armor counterparts."
 	icon_state = "brotherhood_scout"
 	item_state = "brotherhood_scout"
 
-/obj/item/clothing/suit/armor/light/combat/scout/senior
+/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	name = "brotherhood senior scout armor"
 	desc = "A pre-war set of combat armor with stripped armor plating, allowing for better mobility over their heavier combat armor mk 2 armor counterparts. It bears a silver stripe."
 	icon_state = "brotherhood_senior_scout"
