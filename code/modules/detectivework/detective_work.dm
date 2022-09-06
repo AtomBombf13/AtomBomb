@@ -42,7 +42,11 @@
 
 
 /atom/proc/add_hiddenprint(mob/living/M)
-	if(!M || !M.key)
+	if(!M)
+		return
+	if(!ismob(M))
+		return
+	if(!M.key)
 		return
 
 	if(!fingerprintshidden) //Add the list if it does not exist
