@@ -1496,6 +1496,7 @@
 /area/f13/building)
 "ddz" = (
 /obj/structure/bed/mattress,
+/obj/effect/landmark/start/f13/venator,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
 	},
@@ -1803,6 +1804,7 @@
 /area/f13/building)
 "dTO" = (
 /obj/structure/bed/mattress,
+/obj/effect/landmark/start/f13/venator,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "dTZ" = (
@@ -3312,6 +3314,10 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"hOl" = (
+/obj/effect/landmark/start/f13/vexillarius,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "hSQ" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -3910,6 +3916,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/leisure)
+"jmZ" = (
+/obj/effect/landmark/start/f13/ncrmp,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/ncr)
 "jnb" = (
 /obj/machinery/vending/cola/red,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -4063,6 +4073,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/wasteland)
+"jzp" = (
+/obj/effect/landmark/start/f13/ncrmedofficer,
+/turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
+/area/f13/ncr)
 "jzy" = (
 /obj/effect/overlay/junk/curtain{
 	layer = 4
@@ -5754,6 +5768,7 @@
 	dir = 4;
 	name = "prewar lounge chair"
 	},
+/obj/effect/landmark/start/f13/knightcap,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -6259,6 +6274,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"oIa" = (
+/obj/effect/landmark/start/f13/decanvet,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "oIp" = (
 /obj/structure/decoration/rag,
 /obj/structure/decoration/rag{
@@ -7092,6 +7111,7 @@
 	dir = 8;
 	name = "prewar lounge chair"
 	},
+/obj/effect/landmark/start/f13/sentinel,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -8074,6 +8094,10 @@
 	},
 /turf/closed/wall/f13/wood,
 /area/f13/building)
+"sPe" = (
+/obj/effect/landmark/start/f13/ncrlogisticsofficer,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/ncr)
 "sPE" = (
 /turf/closed/indestructible/riveted,
 /area/f13/wasteland/ncr)
@@ -9157,6 +9181,10 @@
 	dir = 9
 	},
 /area/f13/building/hospital)
+"vGo" = (
+/obj/effect/landmark/start/f13/elder,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/offices1st)
 "vIH" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building/hospital)
@@ -9803,6 +9831,7 @@
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
+/obj/effect/landmark/start/f13/centurion,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "xdJ" = (
@@ -12334,10 +12363,10 @@ dDq
 dDq
 bem
 kur
+jmZ
 cqK
 cqK
-cqK
-cqK
+jmZ
 cqK
 cqK
 cqK
@@ -15917,7 +15946,7 @@ rLB
 rLB
 dTc
 tfg
-cqK
+sPe
 cqK
 joZ
 cqK
@@ -17441,7 +17470,7 @@ cqK
 vSp
 sjM
 dDq
-dDq
+jzp
 wse
 iqu
 rLB
@@ -17698,7 +17727,7 @@ cqK
 fPJ
 cVo
 dDq
-dDq
+jzp
 wse
 iqu
 rLB
@@ -44935,11 +44964,11 @@ rvM
 ayH
 dcJ
 uxL
+vGo
 rvM
 rvM
 rvM
-rvM
-rvM
+vGo
 mLh
 dcJ
 oEC
@@ -68547,7 +68576,7 @@ bSK
 pGD
 fxn
 iEW
-iEW
+oIa
 wZn
 rCg
 dtb
@@ -69308,7 +69337,7 @@ oez
 oez
 fxn
 jvX
-iEW
+hOl
 iEW
 iEW
 iEW
