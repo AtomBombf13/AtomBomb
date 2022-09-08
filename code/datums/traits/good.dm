@@ -339,7 +339,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_TRAPPER
 	gain_text = span_notice("You learn the secrets of butchering!")
 	lose_text = span_danger("You forget how to slaughter animals.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/bigleagues
 	name = "Big Leagues"
@@ -348,7 +348,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_BIG_LEAGUES
 	gain_text = span_notice("You feel like swinging for the fences!")
 	lose_text = span_danger("You feel like bunting.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/chemwhiz
 	name = "Chem Whiz"
@@ -357,7 +357,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_CHEMWHIZ
 	gain_text = span_notice("The mysteries of chemistry are revealed to you.")
 	lose_text = span_danger("You forget how the periodic table works.")
-	locked =  FALSE
+	locked =  TRUE
 
 /datum/quirk/chemwhiz/add()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -379,7 +379,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_PA_WEAR
 	gain_text = span_notice("You realize how to use Power Armor.")
 	lose_text = span_danger("You forget how Power Armor works.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/hard_yards
 	name = "Hard Yards"
@@ -388,7 +388,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_HARD_YARDS
 	gain_text = span_notice("Rain or shine, nothing slows you down.")
 	lose_text = span_danger("You walk with a less sure gait, the ground seeming less firm somehow.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/lifegiver
 	name = "Lifegiver"
@@ -397,7 +397,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_LIFEGIVER
 	gain_text = span_notice("You feel more healthy than usual.")
 	lose_text = span_danger("You feel less healthy than usual.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/lifegiver/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
@@ -411,7 +411,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_IRONFIST
 	gain_text = span_notice("Your fists feel furious!")
 	lose_text = span_danger("Your fists feel calm again.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
@@ -433,7 +433,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_SURGERY_LOW
 	gain_text = span_notice("You feel yourself discovering the basics of the human body.")
 	lose_text = span_danger("You forget how to perform even the simplest surgery.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/surgerymid
 	name = "Intermediate Surgery"
@@ -442,7 +442,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_SURGERY_MID
 	gain_text = span_notice("You feel yourself discovering most of the details of the human body.")
 	lose_text = span_danger("You forget how to perform surgery.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/surgeryhigh
 	name = "Complex Surgery"
@@ -451,7 +451,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_SURGERY_HIGH
 	gain_text = span_notice("You feel yourself discovering the most intricate secrets of the human body.")
 	lose_text = span_danger("You forget your advanced surgical knowledge.")
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/explosive_crafting
 	name = "Explosives Crafting"
@@ -460,7 +460,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	mob_trait = TRAIT_EXPLOSIVE_CRAFTING
 	gain_text = span_notice("You feel like you can make a bomb out of anything.")
 	lose_text = "<span class='danger'You feel okay with the advancement of technology.</span>"
-	locked = FALSE
+	locked = TRUE
 
 /datum/quirk/explosive_crafting/add()
 	var/mob/living/carbon/human/H = quirk_holder
