@@ -395,8 +395,15 @@
 
 /obj/item/clothing/shoes/cowboyboots/black
 	name = "black cowboy boots"
-	desc = "A pair of black cowboy boots, pretty easy to scuff up."
+	desc = "A pair of black cowboy boots produced in Eastwood."
 	icon_state = "cowboyboots_black"
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1)
+	strip_delay = 70
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
+	lace_time = 12 SECONDS
 
 /obj/item/clothing/shoes/wallwalkers
 	name = "wall walking boots"
