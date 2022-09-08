@@ -63,6 +63,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Noyan",
 	"Steward",
+
+	"Alderman",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -136,6 +138,8 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Scientist",
 "Vault-tec Security",
 "Vault-tec Engineer",
+
+
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
@@ -240,6 +244,19 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
 ))
 
+GLOBAL_LIST_INIT(vtcc_positions, list(
+	"Alderman",
+	"Marshal",
+	"Detective",
+	"Deputy",
+	"Roadie",
+	"Merchant",
+	"Innkeeper",
+	"Researcher",
+	"Preacher",
+	"Citizen",
+))
+
 GLOBAL_LIST_INIT(redwater_positions, list(
 	"Redwater Slave",
 	"Outlaw",
@@ -336,6 +353,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
+	EXP_TYPE_VTCC = list("titles" = vtcc_positions),
 
 	EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
 	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Followers Administrator")),
