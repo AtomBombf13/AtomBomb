@@ -18,7 +18,8 @@
 		/datum/reagent/consumable/sodiumchloride = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/sunset/happyshark/jerky
-	subcategory = CAT_WASTEFOOD
+	subcategory = CAT_MISCFOOD
+	always_available = FALSE
 
 
 /datum/crafting_recipe/food/sunset/happyshark/candybar
@@ -30,7 +31,8 @@
 		/obj/item/reagent_containers/food/snacks/grown/yucca = 2
 	)
 	result = /obj/item/reagent_containers/food/snacks/sunset/happyshark/candybar
-	subcategory = CAT_WASTEFOOD
+	subcategory = CAT_MISCFOOD
+	always_available = FALSE
 
 
 /datum/crafting_recipe/food/sunset/happyshark/bittercola
@@ -44,7 +46,8 @@
 		/datum/reagent/consumable/sugar = 5
 	)
 	result = /obj/item/reagent_containers/food/drinks/sunset/happyshark/bittercola
-	subcategory = CAT_WASTEFOOD
+	subcategory = CAT_MISCFOOD
+	always_available = FALSE
 
 /datum/crafting_recipe/food/sunset/happyshark/bittercola/alt
 	reqs = list(
