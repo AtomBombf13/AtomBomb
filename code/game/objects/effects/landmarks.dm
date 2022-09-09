@@ -915,42 +915,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/followersscientist
 	name = "Followers Scientist"
 
-//VTCC
-/obj/effect/landmark/start/f13/alderman
-	name = "Alderman"
-	icon_state = "Overseer"
 
-/obj/effect/landmark/start/f13/merchant
-	name = "Merchant"
-	icon_state = "Vault Dweller"
 
-/obj/effect/landmark/start/f13/marshal
-	name = "Marshal"
-	icon_state = "Vault-tec Security"
-
-/obj/effect/landmark/start/f13/det
-	name = "Detective"
-	icon_state = "Detective"
-
-/obj/effect/landmark/start/f13/deputy
-	name = "Deputy"
-	icon_state = "Vault-tec Security"
-
-/obj/effect/landmark/start/f13/roadie
-	name = "Roadie"
-	icon_state = "Vault Dweller"
-
-/obj/effect/landmark/start/f13/researcher
-	name = "Researcher"
-	icon_state = "Vault Dweller"
-
-/obj/effect/landmark/start/f13/innkeeper
-	name = "Innkeeper"
-	icon_state = "Vault Dweller"
-
-/obj/effect/landmark/start/f13/citizen
-	name = "Citizen"
-	icon_state = "Vault Dweller"
 
 
 
