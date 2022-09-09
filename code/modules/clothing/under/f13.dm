@@ -288,7 +288,7 @@
 	item_color = "rustictown"
 
 /obj/item/clothing/under/f13/sheriff
-	name = "Detective's outfit"
+	name = "sheriff outfit"
 	desc = "The symbol of law and civilization, a black vest over a well starched white shirt."
 	icon_state = "vest_and_slacks"
 	item_state = "vest_and_slacks"
@@ -486,14 +486,6 @@
 	icon_state = "shiny"
 	item_state = "shiny"
 	item_color = "shiny"
-
-/obj/item/clothing/under/f13/pioneer
-	name = "Merchant's outfit"
-	desc = "A stylist western suit perfect for haggling"
-	icon_state = "pioneer"
-	item_state = "pioneer"
-	item_color = "pioneer"
-
 
 /obj/item/clothing/under/f13/merca
 	name = "merc outfit"
