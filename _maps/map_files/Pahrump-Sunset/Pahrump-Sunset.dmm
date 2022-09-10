@@ -14377,10 +14377,6 @@
 /mob/living/simple_animal/cow/brahmin,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"bbd" = (
-/obj/structure/dresser,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland/khans)
 "bbi" = (
 /obj/structure/bed,
 /obj/item/bedsheet{
@@ -22950,11 +22946,6 @@
 	icon_state = "yellowrustysolid"
 	},
 /area/f13/building/massfusion)
-"dlq" = (
-/obj/structure/bed/old,
-/obj/item/bedsheet/brown,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland/khans)
 "dlI" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/effect/decal/cleanable/dirt,
@@ -44165,15 +44156,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/village)
-"nMw" = (
-/obj/structure/barricade/tentclothcorner{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirtcorner"
-	},
-/area/f13/wasteland/khans)
 "nMB" = (
 /obj/structure/fence,
 /obj/effect/decal/cleanable/dirt,
@@ -45207,14 +45189,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"oou" = (
-/obj/structure/barricade/tentclothcorner{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirtcorner"
-	},
-/area/f13/caves)
 "ooA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -48967,15 +48941,6 @@
 /obj/structure/decoration/rag,
 /turf/closed/wall/f13/wood/house,
 /area/f13/building/khanfort)
-"qit" = (
-/obj/structure/barricade/tentclothedge{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 4;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland/khans)
 "qiy" = (
 /obj/structure/tires/five,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -53603,15 +53568,6 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/building)
-"sGn" = (
-/obj/structure/barricade/tentclothedge{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland/khans)
 "sGq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
@@ -63477,15 +63433,6 @@
 	icon_state = "verticalrightborderright0"
 	},
 /area/f13/wasteland)
-"xKB" = (
-/obj/structure/barricade/tentclothedge{
-	dir = 1;
-	pixel_y = -3
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
-	},
-/area/f13/caves)
 "xKL" = (
 /obj/structure/rack,
 /obj/item/melee/onehanded/knife/hunting,
@@ -71028,8 +70975,8 @@ aak
 aak
 aak
 aak
-oou
-qit
+bcA
+fMc
 fMc
 fMc
 fMc
@@ -71285,8 +71232,8 @@ aak
 aak
 aak
 aak
-xKB
-dlq
+kUK
+cPR
 jUg
 qQl
 jUg
@@ -71542,8 +71489,8 @@ aak
 aak
 aak
 aak
-xKB
-bbd
+kUK
+eXt
 qQl
 wGL
 qQl
@@ -71799,8 +71746,8 @@ aak
 aak
 aak
 aak
-xKB
-dlq
+kUK
+cPR
 qQl
 qQl
 qQl
@@ -72056,8 +72003,8 @@ aak
 aak
 aak
 aak
-nMw
-sGn
+hDO
+dvy
 dvy
 dvy
 dvy
