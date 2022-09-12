@@ -148,13 +148,6 @@
 	item_state = "bandana"
 	dynamic_hair_suffix = ""
 
-/obj/item/clothing/head/bowler
-	name = "bowler-hat"
-	desc = "Gentleman, elite aboard!"
-	icon_state = "bowler"
-	item_state = "bowler"
-	dynamic_hair_suffix = ""
-
 /obj/item/clothing/head/witchwig
 	name = "witch costume wig"
 	desc = "Eeeee~heheheheheheh!"

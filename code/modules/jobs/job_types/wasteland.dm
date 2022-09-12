@@ -143,7 +143,7 @@ Raider
 			/obj/item/clothing/head/chefhat,\
 			/obj/item/clothing/head/beret/headband,\
 			/obj/item/clothing/head/fedora,\
-			/obj/item/clothing/head/bowler,\
+			/obj/item/clothing/head/helmet/f13/bowler,\
 		)
 	shoes = pick(
 			/obj/item/clothing/shoes/jackboots,\
@@ -471,7 +471,7 @@ Raider
 			/obj/item/clothing/head/chefhat,\
 			/obj/item/clothing/head/beret/headband,\
 			/obj/item/clothing/head/fedora,\
-			/obj/item/clothing/head/bowler,\
+			/obj/item/clothing/head/helmet/f13/bowler,\
 			/obj/item/clothing/head/sombrero,\
 			/obj/item/clothing/head/helmet/f13/raider,\
 			/obj/item/clothing/head/helmet/f13/raider/eyebot,\
@@ -745,7 +745,7 @@ Raider
 			/obj/item/clothing/head/chefhat,\
 			/obj/item/clothing/head/beret/headband,\
 			/obj/item/clothing/head/fedora,\
-			/obj/item/clothing/head/bowler)
+			/obj/item/clothing/head/helmet/f13/bowler)
 	shoes = pick(
 			/obj/item/clothing/shoes/sneakers/brown,\
 			/obj/item/clothing/shoes/f13/rag,\
@@ -811,7 +811,7 @@ Raider
 		/obj/item/reagent_containers/spray/cleaner = 1,
 		/obj/item/storage/belt/legholster/police = 1,
 		/obj/item/clothing/under/f13/sleazeball = 1,
-		/obj/item/clothing/head/bowler = 1,
+		/obj/item/clothing/head/helmet/f13/bowler = 1,
 		/obj/item/clothing/shoes/laceup = 1,
 		/obj/item/clothing/gloves/rifleman = 1,
 		/obj/item/lighter/gold = 1,

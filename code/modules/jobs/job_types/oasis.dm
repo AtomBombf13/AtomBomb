@@ -12,14 +12,14 @@ here's a tip, go search DEFINES/access.dm
 
 // Headsets for everyone!!
 /datum/outfit/job/den
-	name = "Nash Default Template"
+	name = "Eastwood Default Template"
 	ears = /obj/item/radio/headset/headset_town
 	belt = null
 	id = /obj/item/card/id/dogtag/town
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/jackboots
+	uniform = /obj/item/clothing/under/f13/vault
+	shoes = /obj/item/clothing/shoes/cowboyboots/black
 	backpack = /obj/item/storage/backpack/satchel/explorer
-	r_pocket = /obj/item/flashlight/flare
+	r_pocket = /obj/item/flashlight/seclite
 	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx,
@@ -36,14 +36,13 @@ Mayor
 	faction = FACTION_OASIS
 
 /datum/job/oasis/f13mayor
-	title = "Mayor"
+	title = "Alderman"
 	flag = F13MAYOR
 	department_flag = DEP_OASIS
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nash"
-	description = "You are the civil leader of the Town of Nash. You were chosen by the people to represent and lead them from your manor. Your town is in a terse situation with the slaver town to the south, Redwater. While not at war, you will have to work to keep your people safe from their predations. The Tribals to the south east are also a nuisance but it's best not to provoke them needlessly. Do what's best for the town, and it's people. All while lining your pockets occasionally, of course."
-	enforces = "The Secretary is your stand-in replacement, and under this the Sheriff."
+	supervisors = "Overseer"
+	description = "A subordinate of the Overseer, you are the primary face of the town. Handling the day to day dealings of the denizens of our fair city falls to you. Those wasters outside the walls are an unknown factor, so it falls to you to maintain relations with the Wastelands many players. Be wary of the Machine down below, as with the trades and treaties in place. Balance the budget, but don't step on the Merchant's toes. Organise defences, but do not encroach on the Marshal's office. Most of all: don't lose your head."
 	selection_color = "#d7b088"
 
 	exp_requirements = 750
@@ -60,13 +59,6 @@ Mayor
 		)
 	)
 
-	loadout_options = list(
-		/datum/outfit/loadout/mayoral,
-		/datum/outfit/loadout/dictator,
-		/datum/outfit/loadout/firstcitizen,
-		/datum/outfit/loadout/highroller
-		)
-
 
 /datum/outfit/job/den/f13mayor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -78,73 +70,30 @@ Mayor
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/job/den/f13mayor
-	name = "Mayor"
+	name = "Alderman"
 	jobtype = /datum/job/oasis/f13mayor
 	id = /obj/item/card/id/silver/mayor
+	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_town/mayor
+	head =/obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/oasis
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/f13/tan
 	uniform = /obj/item/clothing/under/f13/gentlesuit
+	suit = /obj/item/clothing/suit/armor/light/duster/battlecoat
 	head = /obj/item/clothing/head/f13/town/big
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/storage/box/citizenship_permits = 1, 
-		/obj/item/pen/fountain/captain = 1
+		/obj/item/storage/box/citizenship_permits = 1,
+		/obj/item/pen/fountain/captain = 1,
+		/obj/item/clothing/mask/cigarette/cigar = 1,
+		/obj/item/toy/cards/deck/unum = 1
 		)
-
-
-
-/datum/outfit/loadout/dictator
-	name = "Mayor for Life"
-	backpack_contents = list(
-	/obj/item/clothing/under/f13/general/oasis = 1,
-	/obj/item/clothing/head/f13/army/general = 1,
-	/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
-	/obj/item/ammo_box/magazine/m45 = 2,
-	/obj/item/clothing/shoes/jackboots = 1,
-	/obj/item/clothing/mask/cigarette/pipe/cobpipe = 1
-	)
-
-/datum/outfit/loadout/mayoral
-	name = "Frontier Leader"
-	backpack_contents = list(
-		/obj/item/clothing/suit/armor/medium/duster/town/mayor = 1,
-		/obj/item/clothing/head/f13/town/mayor = 1,
-		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1,
-		/obj/item/ammo_box/m44 = 2,
-		/obj/item/clothing/shoes/f13/cowboy = 1,
-		/obj/item/clothing/mask/cigarette/cigar = 1
-		)
-
-/datum/outfit/loadout/firstcitizen
-	name = "First Citizen"
-	backpack_contents = list(
-		/obj/item/clothing/under/f13/vault = 1,
-		/obj/item/clothing/shoes/jackboots = 1,
-		/obj/item/clothing/suit/armor/light/duster/battlecoat/vault/overseer = 1,
-		/obj/item/reagent_containers/food/drinks/flask/vault113,
-		/obj/item/gun/ballistic/automatic/pistol/beretta/automatic = 1,
-		/obj/item/ammo_box/magazine/m9mm/doublestack = 1
-		)
-
-/datum/outfit/loadout/highroller
-	name = "High Roller"
-	backpack_contents = list(
-		/obj/item/clothing/glasses/orange = 1,
-		/obj/item/clothing/suit/armor/outfit/vest = 1,
-		/obj/item/clothing/under/f13/sleazeball = 1,
-		/obj/item/clothing/shoes/laceup = 1,
-		/obj/item/toy/cards/deck/unum = 1,
-		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
-		/obj/item/ammo_box/magazine/m45/socom = 2
-	)
-
 
 /*--------------------------------------------------------------*/
-
+/*
 /datum/job/oasis/f13secretary
 	title = "Secretary"
 	flag = F13SECRETARY
@@ -231,21 +180,19 @@ Mayor
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
-
+*/
 
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13sheriff
-	title = "Sheriff"
+	title = "Marshal"
 	flag = F13SHERIFF
 	department_flag = DEP_OASIS
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Mayor"
-	description = "You are the civil enforcer of Nash, keeping the settlement within firm control under the authority of the Mayor. With your loyal patrolmen, you maintain your claim to authority by keeping the peace, managing disputes, and protecting the citizens from threats within and without. Never leave Nash undefended, and don't let its people die out. If this town falls, new conquerors don't tend to look kindly upon the old law."
-	enforces = "You are the stand-in leader of Nash if a Mayor or Secretary does not exist."
-	selection_color = "#d7b088"
+	supervisors = "The Alderman and Overseer"
+	description = "As the head of the security forces, you are the face of justice in the town. Uphold the law, or bend it to suit your needs, you set the precedent for how justice is doled out in the town, so bear that in mind when you sentence that pickpocket to death. Maintain the armoury and keep that watchful eye on the elevator to the Vault below. Whatever you do, don't lose your head."
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/den/f13sheriff
@@ -267,7 +214,7 @@ Mayor
 	)
 
 /datum/outfit/job/den/f13sheriff
-	name = "Sheriff"
+	name = "Marshal"
 	jobtype = /datum/job/oasis/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff
 	belt = null
@@ -293,9 +240,8 @@ Mayor
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
 	uniform = /obj/item/clothing/under/f13/police/formal
-	neck = /obj/item/storage/belt/shoulderholster/ranger45
+	neck = /obj/item/storage/belt/shoulderholster
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
-	shoes = /obj/item/clothing/shoes/f13/military/plated
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/c4570 = 3,
 		/obj/item/gun_upgrade/scope/watchman = 1
@@ -306,10 +252,9 @@ Mayor
 	uniform = /obj/item/clothing/under/f13/police/chief
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/chief
 	head = /obj/item/clothing/head/f13/town/chief
-	neck = /obj/item/storage/belt/shoulderholster/ranger45
-	shoes = /obj/item/clothing/shoes/combat
+	neck = /obj/item/storage/belt/shoulderholster
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
-	backpack_contents = list(/obj/item/ammo_box/shotgun/slug = 1, 
+	backpack_contents = list(/obj/item/ammo_box/shotgun/slug = 1,
 		/obj/item/ammo_box/shotgun/buck = 2
 		)
 
@@ -327,15 +272,65 @@ Mayor
 
 /*--------------------------------------------------------------*/
 
+/datum/job/oasis/f13detective
+	title = "Detective"
+	flag = F13DETECTIVE
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "The Marshal"
+	description  = "Investigating crimes and disappearences in the town, you are the marshal's infromation gathering expert."
+	selection_color = "#dcba97"
+	outfit = /datum/outfit/job/oasis/f13detective
+
+	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/oasis/f13detective
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13wastelander,
+			/datum/job/oasis/f13detective
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/wasteland/f13wastelander
+		)
+	)
+
+
+/datum/outfit/job/oasis/f13detective
+	name = "Detective"
+	jobtype = /datum/job/oasis/f13detective
+	suit = /obj/item/clothing/suit/armor/medium/duster/town
+	head = /obj/item/clothing/head/helmet/f13/bowler
+	ears = /obj/item/radio/headset/headset_town/lawman
+	id = /obj/item/card/id/silver
+	l_pocket = /obj/item/storage/bag/money/small/settler
+	r_pocket = /obj/item/flashlight/flare
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	satchel = /obj/item/storage/backpack/satchel/explorer
+	suit_store = /obj/item/gun/ballistic/revolver/police
+	backpack_contents = list(
+		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/pda/detective=1,
+		/obj/item/camera/detective=1,
+		/obj/item/toy/crayon/white=1,
+		/obj/item/detective_scanner=1,
+		/obj/item/storage/box/gloves=1,
+		/obj/item/storage/box/evidence=1,
+		/obj/item/ammo_box/a357=2)
+
+/*--------------------------------------------------------------*/
+
 /datum/job/oasis/f13deputy
 	title = "Deputy"
 	flag = F13DEPUTY
 	department_flag = DEP_OASIS
-	total_positions = 4
+	total_positions = 5
 	spawn_positions = 4
-	supervisors = "The Sheriff"
-	description = "You are a loyal protector of Nash, keeping the settlement within firm control under the authority of the Mayor. The sheriff is your direct superior, and you should expect to take your day-to-day orders from them. Maintain your claim to authority by keeping the peace, managing disputes, and protecting the citizens from threats within and without. Never leave Nash undefended, and don't let its people die out."
-	enforces = "You may be elected temporary Sheriff if one does not exist. This may make you the stand-in leader of Nash if a Mayor or Secretary does not exist."
+	supervisors = "The Marshal"
+	description = "Day or night, you watch the walls with diligence. The wastes outside are lawless."
 	selection_color = "#dcba97"
 	exp_type = EXP_TYPE_OASIS
 	exp_requirements = 300
@@ -378,7 +373,7 @@ Mayor
 		)
 
 /datum/outfit/loadout/frontierjustice
-	name = "Frontier Justice"
+	name = "The Good"
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/deputy
 	head = /obj/item/clothing/head/f13/town/deputy
 	neck = /obj/item/storage/belt/shoulderholster
@@ -390,7 +385,7 @@ Mayor
 		)
 
 /datum/outfit/loadout/police
-	name = "Nash PD"
+	name = "Vault Security Heavy"
 	uniform = /obj/item/clothing/under/f13/police/officer
 	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
 	head = /obj/item/clothing/head/f13/town/officer
@@ -406,13 +401,12 @@ Mayor
 		)
 
 /datum/outfit/loadout/swat
-	name = "S.W.A.T. Officer"
+	name = "Vault Security Classic"
 	uniform = /obj/item/clothing/under/f13/police/swat
 	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
 	gloves = /obj/item/clothing/gloves/f13/military
-	suit_store = /obj/item/gun/ballistic/automatic/service/policerifle
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m45/socom=2,
 		/obj/item/gun/ballistic/automatic/pistol/autoloader=1,
@@ -510,22 +504,22 @@ Mayor
 		)
 */
 /*--------------------------------------------------------------*/
-/*
+
 /datum/job/oasis/f13prospector
-	title = "Prospector"
+	title = "Roadie"
 	flag = F13PROSPECTOR
 	department_flag = DEP_OASIS
-	total_positions = 4
+	total_positions = 2
 	spawn_positions = 4
-	supervisors = "The Mayor"
-	description = "Prospecting is a complicated business. Some call it scrounging or looting, but there is more to it than sifting through rubble - few can boast the valuable skills of mining and scavenging the ruins of fallen empires. The settlement of Nash understands the value of this, and you've found purpose within their mines. Sell the materials you find to the highest bidder - the local store may be particularly interested in metals."
-	enforces = "Mining is a public service, and you are under control of local governance - but by default you are expected to work with private businesses and individual clients."
+	supervisors = "The Alderman and Merchant"
+	description = "Operate the shop when the Merchant's asleep or just isn't there, push and pull those crates to and fro like your life depends on it (and when your paycheck is based on performance, well, it certainly does). If there are no crates to pick up, head out into the wastes and start scavenging for anything you could sell at an extortionate price."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13prospector
 
-	access = list(ACCESS_BAR, ACCESS_MINING)
-	minimal_access = list(ACCESS_BAR, ACCESS_MINING)
+	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis,
@@ -544,6 +538,7 @@ Mayor
 	jobtype = /datum/job/oasis/f13prospector
 
 	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town/commerce
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -598,19 +593,18 @@ Mayor
 		/obj/item/pickaxe/silver = 1,
 		/obj/item/shovel = 1,
 		)
-*/
+
 
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13dendoc
-	title = "Doctor"
+	title = "Researcher"
 	flag = F13DENDOC
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "The Mayor"
-	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the settlement of Nash. Just remember that you're no Follower - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
-	enforces = "Medicine is a public service, and you are under control of local governance - but remember public doesn't equate to free."
+	supervisors = "The Alderman"
+	description = "Doctor, Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files.The Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right.Just remember that you're no Follower - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Alderman might reconsider your position!"
 	selection_color = "#dcba97"
 
 	loadout_options = list(
@@ -682,21 +676,21 @@ Mayor
 		/obj/item/healthanalyzer/advanced = 1,
 		/obj/item/storage/belt/legholster/police = 1
 		)
-	
+
 /datum/outfit/loadout/mixer
 	name = "Mixer"
 	backpack_contents = list(/obj/item/clothing/head/beret/chem = 1,
 		/obj/item/melee/classic_baton/police = 1,
 		/obj/item/pen/sleepy = 1,
 		/obj/item/reagent_containers/glass/beaker/plastic = 1,
-		/obj/item/reagent_containers/glass/beaker/meta = 1, 
+		/obj/item/reagent_containers/glass/beaker/meta = 1,
 		/obj/item/reagent_containers/hypospray = 1,
 		/obj/item/circuitboard/machine/bloodbankgen = 1
 		)
 
 /datum/outfit/loadout/holidaydoc
 	name = "Holiday Doc"
-	backpack_contents = list(/obj/item/vending_refill/medical = 1, 
+	backpack_contents = list(/obj/item/vending_refill/medical = 1,
 		/obj/item/pda/medical = 1,
 		/obj/item/clothing/suit/hooded/surgical = 1,
 		/obj/item/storage/medical/ancientfirstaid = 1,
@@ -706,14 +700,14 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13barkeep
-	title = "Barkeep"
+	title = "Barkeeper"
 	flag = F13BARKEEP
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the free market and Nash's Laws"
-	description = "As a proprietor of Heavens Night, you are responsible for ensuring both citizens and travellers in Nash can get some food, drink and rest. Speak to the farmers for fresh produce!"
-	enforces = "Heaven's Night is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Nash."
+	supervisors = "the free market and Alderman"
+	description = "As proprietor of the inn, you are responsible for ensuring both citizens and travellers in Eastwood can get some food, drink and rest. Speak to the farmers for fresh produce!"
+	enforces = "Your inn is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13barkeep
@@ -737,7 +731,7 @@ Mayor
 
 
 /datum/outfit/job/den/f13barkeep
-	name = "Barkeep"
+	name = "Barkeeper"
 	jobtype = /datum/job/oasis/f13barkeep
 	uniform = /obj/item/clothing/under/f13/bartenderalt
 	id = /obj/item/card/id/dogtag/town
@@ -764,7 +758,7 @@ Mayor
 
 /datum/outfit/loadout/frontier
 	name = "Frontier"
-	head = /obj/item/clothing/head/bowler
+	head = /obj/item/clothing/head/helmet/f13/bowler
 	mask = /obj/item/clothing/mask/fakemoustache
 	uniform = /obj/item/clothing/under/f13/westender
 	suit = /obj/item/clothing/suit/armor/outfit/vest/bartender
@@ -794,10 +788,10 @@ Mayor
 	title = "Citizen"
 	flag = F13SETTLER
 	department_flag = DEP_OASIS
-	total_positions = 8
+	total_positions = 10
 	spawn_positions = 8
-	supervisors = "Nash's laws"
-	description = "You are a citizen living in Nash. Treat your town with respect and make sure to follow the laws in place, as your premium status may be revoked if you are considered a danger to the populace. One of the local businesses may have work if you require funds."
+	supervisors = "Eastwood's laws"
+	description = "You are a citizen living in Eastwood. Treat your town and vault with respect and make sure to follow the laws in place, as your premium status may be revoked if you are considered a danger to the populace. One of the local businesses may have work if you require funds."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
@@ -855,7 +849,7 @@ Mayor
 		/obj/item/clothing/head/f13/police/trooper,
 		/obj/item/clothing/head/fedora/curator,
 		/obj/item/clothing/head/fedora/det_hat,
-		/obj/item/clothing/head/bowler)
+		/obj/item/clothing/head/helmet/f13/bowler,)
 	uniform = pick(
 		/obj/item/clothing/under/f13/gentlesuit,
 		/obj/item/clothing/under/f13/formal,
@@ -895,7 +889,7 @@ Mayor
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/sneakers/noslip
 	neck = /obj/item/storage/belt/shoulderholster/ranger44
-	backpack_contents = list(/obj/item/storage/bag/trash = 1, 
+	backpack_contents = list(/obj/item/storage/bag/trash = 1,
 	/obj/item/reagent_containers/spray/cleaner = 1,
 	/obj/item/mop = 1,
 	/obj/item/reagent_containers/glass/bucket/plastic = 1,
@@ -911,7 +905,7 @@ Mayor
 	belt = /obj/item/storage/belt/utility/mining/alt
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	shoes = /obj/item/clothing/shoes/f13/military/leather
-	neck = /obj/item/storage/belt/shoulderholster/ranger357 
+	neck = /obj/item/storage/belt/shoulderholster/ranger357
 	backpack_contents = list(/obj/item/twohanded/sledgehammer/simple = 1,
 	/obj/item/book/granter/crafting_recipe/ODF = 1,
 	/obj/item/clothing/glasses/welding = 1,
@@ -1001,64 +995,10 @@ Mayor
 	/obj/item/clothing/glasses/welding = 1,
 	/obj/item/t_scanner/adv_mining_scanner = 1,
 	/obj/item/ammo_box/m44 = 2,
-	/obj/item/gun/ballistic/revolver/m29/snub 
-	)
-/*----------------------------------------------------------------
---							Detective							--
-----------------------------------------------------------------*/
-
-/datum/job/oasis/f13detective
-	title = "Detective"
-	flag = F13DETECTIVE
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "paying clients and Nash's laws"
-	selection_color = "#dcba97"
-	outfit = /datum/outfit/job/oasis/f13detective
-
-	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/wasteland/f13wastelander,
-			/datum/job/oasis/f13detective
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/wasteland/f13wastelander,
-			/datum/job/oasis/f13detective
-		),
-		/datum/matchmaking_pref/mentor = list(
-			/datum/job/wasteland/f13wastelander
-		)
+	/obj/item/gun/ballistic/revolver/m29/snub
 	)
 
-
-/datum/outfit/job/oasis/f13detective
-	name = "Detective"
-	jobtype = /datum/job/oasis/f13detective
-	suit = /obj/item/clothing/suit/det_suit/grey
-	uniform = /obj/item/clothing/under/f13/detectivealt
-	head = /obj/item/clothing/head/f13/det_hat_alt
-	ears = /obj/item/radio/headset/headset_town/lawman
-	shoes = /obj/item/clothing/shoes/laceup
-	id = /obj/item/card/id/silver
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	suit_store = /obj/item/gun/ballistic/revolver/police
-	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/pda/detective=1,
-		/obj/item/camera/detective=1,
-		/obj/item/toy/crayon/white=1,
-		/obj/item/detective_scanner=1,
-		/obj/item/storage/box/gloves=1,
-		/obj/item/storage/box/evidence=1,
-		/obj/item/ammo_box/a357=2)
-
-/*--------------------------------------------------------------*/
-
+/*
 /datum/job/oasis/f13banker
 	title = "Banker"
 	flag = F13BANKER
@@ -1135,17 +1075,18 @@ Mayor
 		/obj/item/ingot/gold = 1,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1
 		)
+*/
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13shopkeeper
-	title = "Shopkeeper"
+	title = "Merchant"
 	flag = F13SHOPKEEPER
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the free market and Nash's laws"
-	description = "The big trading caravan companies have often neglected humble Nash. This leaves one thing for certain - opportunities for local business! Your store allows you to sell all kinds of merchandise, from dandy boy apples to laser rifles. Ensure you make a profit and retain enough capital for your day-to-day operations."
-	enforces = "Your store is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Nash."
+	supervisors = "the free market and Overseer"
+	description = "Trade deals fall upon your shoulders to negotiate with those around the town, so ensure you never give more than you've got. Of course, selling the town is the worst thing you could do, so it should go without saying that you can't do that. Negotiate with the traders of the wastes, extort them for the shirt on their back, or set them up for life, it's up to you to decide."
+	enforces = "Your store is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
 	exp_requirements = 300
 
@@ -1162,7 +1103,7 @@ Mayor
 	)
 
 /datum/outfit/job/den/f13shopkeeper
-	name = "Shopkeeper"
+	name = "Merchant"
 	jobtype = /datum/job/oasis/f13shopkeeper
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town/commerce

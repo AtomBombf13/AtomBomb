@@ -392,11 +392,29 @@
 	desc = "A standard pair of brown cowboy boots."
 	icon_state = "cowboyboots"
 	can_be_tied = FALSE
+	permeability_coefficient = 0.05
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1)
+	strip_delay = 40
+	resistance_flags = NONE
+	can_be_tied = FALSE
+	cold_protection = FEET
+	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 
 /obj/item/clothing/shoes/cowboyboots/black
 	name = "black cowboy boots"
-	desc = "A pair of black cowboy boots, pretty easy to scuff up."
+	desc = "A pair of black cowboy boots, Produced in Eastwood."
 	icon_state = "cowboyboots_black"
+	permeability_coefficient = 0.05
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1)
+	strip_delay = 40
+	resistance_flags = NONE
+	can_be_tied = FALSE
+	cold_protection = FEET
+	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 
 /obj/item/clothing/shoes/wallwalkers
 	name = "wall walking boots"

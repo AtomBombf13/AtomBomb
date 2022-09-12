@@ -454,7 +454,7 @@
 	item_state = "duster-renegade"
 
 /obj/item/clothing/suit/armor/medium/duster/town
-	name = "deputy trenchcoat"
+	name = "detective's trenchcoat"
 	desc = "An armored trench coat with added shoulderpads, a chestplate, and leg guards."
 	icon_state = "towntrench_medium"
 	item_state = "hostrench"
@@ -471,7 +471,7 @@
 	icon_state = "towntrench_medium"
 
 /obj/item/clothing/suit/armor/medium/duster/town/sheriff
-	name = "sheriff trenchcoat"
+	name = "marshal's trenchcoat"
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon_state = "towntrench_heavy"
 
@@ -837,7 +837,7 @@
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad and a mantle."
 	icon_state = "ncr_reinforced_mantle"
 	item_state = "ncr_reinforced_mantle"
-	
+
 
 /obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
 	name = "NCR blast-padded reinforced patrol vest"
@@ -981,7 +981,7 @@
 
 //////////////////////////
 // Brotherhood of Steel //
-////////////////////////// 
+//////////////////////////
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	name = "brotherhood armor"
