@@ -2402,6 +2402,7 @@
 #include "code\modules\jobs\job_types\khan.dm"
 #include "code\modules\jobs\job_types\legion.dm"
 #include "code\modules\jobs\job_types\ncr.dm"
+#include "code\modules\jobs\job_types\oasis.dm"
 #include "code\modules\jobs\job_types\silicon.dm"
 #include "code\modules\jobs\job_types\tribals.dm"
 #include "code\modules\jobs\job_types\wasteland.dm"

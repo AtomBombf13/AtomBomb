@@ -512,7 +512,7 @@
 	total_positions = 2
 	spawn_positions = 1
 	supervisors = "the Alderman, Chief of Development and the Overseer"
-	description = "Doctor, Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. To be a Roboticist is to uphold a tradition in the Vault that bears itself a marred reputation, so don't lose your head. The Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right."
+	description = "Doctor, Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files.The Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right."
 
 	outfit = /datum/outfit/job/vtcc/f13researcher
 	exp_requirements = 3000

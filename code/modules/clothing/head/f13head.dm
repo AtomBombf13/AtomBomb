@@ -382,12 +382,26 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/bowler
+	name = "bowler-hat"
+	desc = "Gentleman, elite aboard!"
+	icon_state = "bowler"
+	item_state = "bowler"
+	dynamic_hair_suffix = ""
+	flags_inv = HIDEEARS|HIDEHAIR
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	slowdown = 0
+
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	name = "brahmin leather cowboy hat"
 	desc = "A cowboy hat made from brahmin hides."
 	icon_state = "brahmin_leather_cowboy_hat"
 	item_state = "brahmin_leather_cowboy_hat"
 	flags_inv = HIDEEARS|HIDEHAIR
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	slowdown = 0
 
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat/Initialize()
 	. = ..()

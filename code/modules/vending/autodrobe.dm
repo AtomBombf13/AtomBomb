@@ -27,7 +27,7 @@
 						/obj/item/clothing/head/beret = 1,
 						/obj/item/clothing/accessory/waistcoat = 1,
 						/obj/item/clothing/glasses/monocle =1,
-						/obj/item/clothing/head/bowler = 1,
+						/obj/item/clothing/head/helmet/f13/bowler = 1,
 						/obj/item/cane = 1,
 						/obj/item/clothing/under/rank/civilian/victorian_redsleeves = 1,
 						/obj/item/clothing/under/rank/civilian/victorian_redvest = 1,
