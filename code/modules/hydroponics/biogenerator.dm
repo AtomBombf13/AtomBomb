@@ -1,3 +1,4 @@
+
 /obj/machinery/biogenerator
 	name = "biogenerator"
 	desc = "Converts plants into biomass, which can be used to construct useful items."
@@ -300,6 +301,7 @@
 			var/datum/design/D = item
 			cat["items"] += list(list(
 				"id" = D.id,
+				"asset" = D.get_asset_path(),
 				"name" = D.name,
 				"cost" = D.materials[SSmaterials.GetMaterialRef(/datum/material/biomass)]/efficiency,
 			))
