@@ -11,7 +11,7 @@
 /datum/outfit/job/khan
 	name = "Khan"
 	jobtype = /datum/job/khan
-	suit = /obj/item/clothing/suit/armor/light/khan
+	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	id = /obj/item/card/id/khantattoo
 	ears = /obj/item/radio/headset/headset_khans
 	head = /obj/item/clothing/head/helmet/f13/khan/bandana
