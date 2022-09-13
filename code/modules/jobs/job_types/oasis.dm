@@ -373,7 +373,7 @@ Mayor
 		)
 
 /datum/outfit/loadout/frontierjustice
-	name = "The Good"
+	name = "Rugged Frontiersman"
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/deputy
 	head = /obj/item/clothing/head/f13/town/deputy
 	neck = /obj/item/storage/belt/shoulderholster
@@ -626,7 +626,7 @@ Mayor
 	)
 
 /datum/outfit/job/den/f13dendoc
-	name = "Doctor"
+	name = "Researcher"
 	jobtype = /datum/job/oasis/f13dendoc
 	chemwhiz = TRUE
 	ears = /obj/item/radio/headset/headset_town/commerce
@@ -801,10 +801,8 @@ Mayor
 		/datum/outfit/loadout/groundskeeper,
 		/datum/outfit/loadout/artisan,
 		/datum/outfit/loadout/outdoorsman,
-		/datum/outfit/loadout/militia,
 		/datum/outfit/loadout/singer,
 		/datum/outfit/loadout/farmer,
-		/datum/outfit/loadout/prospector
 	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
@@ -932,22 +930,6 @@ Mayor
 	/obj/item/storage/fancy/rollingpapers/makeshift = 1
 	)
 
-/datum/outfit/loadout/militia
-	name = "Militia"
-	head = /obj/item/clothing/head/helmet/armyhelmet
-	suit = /obj/item/clothing/suit/armor/medium/vest/breastplate
-	uniform = /obj/item/clothing/under/f13/combat/militia
-	r_hand = /obj/item/gun/ballistic/rifle/hunting
-	gloves = /obj/item/clothing/gloves/f13/leather
-	shoes = /obj/item/clothing/shoes/f13/military
-	belt = /obj/item/storage/belt/bandolier
-	backpack_contents = list(/obj/item/ammo_box/a308 = 2,
-	/obj/item/shovel/trench =1,
-	/obj/item/binoculars = 1,
-	/obj/item/gun/ballistic/rifle/hunting = 1,
-	/obj/item/gun_upgrade/scope/watchman = 1
-	)
-
 /datum/outfit/loadout/singer
 	name = "Singer"
 	shoes = /obj/item/clothing/shoes/laceup
@@ -980,22 +962,6 @@ Mayor
 	/obj/item/seeds/bamboo = 1,
 	/obj/item/seeds/apple/gold = 1,
 	/obj/item/seeds/cannabis = 1
-	)
-
-/datum/outfit/loadout/prospector
-	name = "Prospector"
-	backpack_contents = list(/obj/item/clothing/head/hardhat = 1,
-	/obj/item/clothing/under/overalls = 1,
-	/obj/item/clothing/suit/armor/light/leather/rig = 1,
-	/obj/item/clothing/gloves/patrol = 1,
-	/obj/item/clothing/shoes/workboots = 1,
-	/obj/item/storage/belt/utility/waster = 1,
-	/obj/item/shovel/spade = 1,
-	/obj/item/pickaxe/silver = 1,
-	/obj/item/clothing/glasses/welding = 1,
-	/obj/item/t_scanner/adv_mining_scanner = 1,
-	/obj/item/ammo_box/m44 = 2,
-	/obj/item/gun/ballistic/revolver/m29/snub
 	)
 
 /*
@@ -1148,3 +1114,164 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
+
+
+
+/////////////////////
+// Oasis Mob Roles //
+/////////////////////
+
+/*Internal-antags for Town. The purpose of these roles is to provide some internal issues for the town, add roleplay, and overall act as the Den used to without many of the same issues.
+Hopefully. 
+
+Roles should be limited and low since they should attempt to work within town rather than take it over. Loadouts should be weak for the same reason.*/
+
+// Enforcer = Base role. Intended to be 2-3 slots only.
+/datum/job/wasteland/f13enforcer
+	title = "Desperado Enforcer"
+	flag = F13ENFORCER
+	faction = FACTION_WASTELAND
+	social_faction = FACTION_RAIDERS
+	total_positions = 3
+	spawn_positions = 3
+	description = "You're a member of the local desperado gang, a group of chem-dealers, loan-sharkers and hitman from across the civilized wastes."
+	supervisors = "The Boss."
+	selection_color = "#ff4747"
+	exp_requirements = 300
+	exp_type = EXP_TYPE_WASTELAND
+
+	outfit = /datum/outfit/job/wasteland/f13enforcer
+
+	access = list(ACCESS_DEN)
+	minimal_access = list(ACCESS_DEN)
+
+	loadout_options = list(
+		/datum/outfit/loadout/hitman,
+		/datum/outfit/loadout/bodyguard,
+		)
+
+/datum/outfit/job/wasteland/f13enforcer
+	name = "Desperado Enforcer"
+	jobtype = /datum/job/wasteland/f13enforcer
+
+	id = /obj/item/card/id/denid
+	belt = /obj/item/storage/belt/army/assault
+	shoes = /obj/item/clothing/shoes/laceup
+	ears = /obj/item/radio/headset/headset_den
+	l_pocket = /obj/item/melee/onehanded/knife/switchblade
+	r_pocket = /obj/item/flashlight/seclite
+	uniform = /obj/item/clothing/under/f13/densuit
+	backpack =	/obj/item/storage/backpack/satchel
+	satchel =  /obj/item/storage/backpack/satchel
+	gloves =  /obj/item/clothing/gloves/color/white
+	head = /obj/item/clothing/head/beret/durathread
+	mask =  /obj/item/clothing/mask/bandana/durathread
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/storage/bag/money/small/wastelander)
+
+/datum/outfit/job/wasteland/f13enforcer/pre_equip(mob/living/carbon/human/H)
+	..()
+	r_hand = /obj/item/book/granter/trait/selection
+
+/datum/outfit/job/wasteland/f13enforcer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	if(!H.gang)
+		var/datum/gang/denmob/DM = GLOB.denmob
+		GLOB.all_gangs |= DM
+		DM.add_member(H)
+		H.gang = DM
+
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
+
+/datum/outfit/loadout/hitman
+	name = "Hitman"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/american180
+	suit = /obj/item/clothing/suit/armor/medium/vest
+	backpack_contents = list(
+						/obj/item/ammo_box/magazine/m22smg=2,
+						)
+
+/datum/outfit/loadout/bodyguard
+	name = "Bodyguard"
+	r_hand = /obj/item/gun/ballistic/shotgun/police
+	suit = /obj/item/clothing/suit/armor/medium/vest
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		)
+
+/datum/job/wasteland/f13mobboss
+	title = "Desperado Leader"
+	flag = F13MOBBOSS
+	faction = FACTION_WASTELAND
+	social_faction = FACTION_RAIDERS
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the leader of the local desperado gang, a gang of bandits, cattle-rustlers, hitmen, loan-sharkers and various other criminal activities. Luckily for you, you own the casino in town with your fellow 'buisness partners'. Make use of it, keep your men in line, and turn a profit. Be it working with the locals or against them."
+	supervisors = "Whatever god you pray to. Sky's the limit!"
+	selection_color = "#ff4747"
+	exp_requirements = 500
+	exp_type = EXP_TYPE_OUTLAW
+
+	outfit = /datum/outfit/job/wasteland/f13mobboss
+
+	access = list(ACCESS_DEN)
+	minimal_access = list(ACCESS_DEN)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis/f13mayor,
+			/datum/job/oasis/f13sheriff,
+			/datum/job/oasis/f13detective,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+	)
+
+
+/datum/outfit/job/wasteland/f13mobboss
+	name = "Den Mob Boss"
+	jobtype = /datum/job/wasteland/f13mobboss
+
+	id = /obj/item/card/id/denid
+	belt = /obj/item/storage/belt/army/assault
+	ears = /obj/item/radio/headset/headset_den
+	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/melee/onehanded/knife/switchblade
+	r_pocket = /obj/item/flashlight/seclite
+	uniform = /obj/item/clothing/under/f13/densuit
+	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/raider
+	backpack =	/obj/item/storage/backpack/satchel
+	satchel = 	/obj/item/storage/backpack/satchel
+	gloves = /obj/item/clothing/gloves/color/white
+	head = /obj/item/clothing/head/caphat/beret/white
+	mask = /obj/item/clothing/mask/bandana/durathread
+	suit_store = /obj/item/gun/ballistic/automatic/smg/greasegun
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
+		/obj/item/restraints/handcuffs=1, \
+		/obj/item/ammo_box/magazine/greasegun=2, \
+		/obj/item/storage/bag/money/small/raider/mobboss, \
+		/obj/item/book/granter/crafting_recipe/manual/denvr)
+
+/datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+
+
+/datum/outfit/job/wasteland/f13mobboss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	if(!H.gang)
+		var/datum/gang/denmob/DM = GLOB.denmob
+		GLOB.all_gangs |= DM
+		DM.add_member(H)
+		H.gang = DM

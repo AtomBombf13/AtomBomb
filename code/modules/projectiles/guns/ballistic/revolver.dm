@@ -631,7 +631,7 @@
  * Heavy revolver rifle
  * Scoped
  * .308
- * Unique - Legion Vet Decan (Spawn - Head pistol)
+ * Unique / Craftable - Explorer Loadout (Spawn - Explo 'sniper' rifle)
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/revolver/m2405
