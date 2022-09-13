@@ -1015,24 +1015,6 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
-
-/////////////////
-// Great Khans //
-/////////////////
-
-/obj/item/clothing/suit/armor/medium/duster/khancoat
-	name = "khan battlecoat"
-	desc = "Affluent pushers can affort fancy coats with a lot of metal and ceramic plates stuffed inside."
-	icon_state = "khanbattle"
-	item_state = "khanbattle"
-
-/obj/item/clothing/suit/armor/medium/khan
-	name = "Great Khan armored jacket"
-	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
-	icon_state = "khan_jacket_armored"
-	item_state = "khan_jacket_armored"
-
-
 //////////////
 // Cog City //
 //////////////
@@ -1058,3 +1040,43 @@
 	desc = "An old set of pre-war combat armor, painted black."
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
+
+/////////////////
+// Great Khans //
+/////////////////
+
+//takes from medium armor
+/obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
+	name = "Great Khan armored jacket"
+	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
+	icon_state = "khan_jacket_armored"
+	item_state = "khan_jacket_armored"
+	slowdown = 0.5
+	cold_protection = CHEST|GROIN
+	heat_protection = CHEST|GROIN
+	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	strip_delay = 30
+	equip_delay_other = 50
+	max_integrity = 200
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	stiffness = MEDIUM_STIFFNESS
+
+//takes from duster
+/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
+	name = "Great Khan battle coat"
+	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
+	icon_state = "khan_heavy"
+	item_state = "khan_heavy"
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	strip_delay = 80
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	equip_delay_other = 50
+	max_integrity = 200
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)

@@ -936,24 +936,6 @@
 	icon_state = "brotherhood_senior_scout"
 	item_state = "brotherhood_senior_scout"
 
-
-/////////////////
-// Great Khans //
-////////////////
-
-/obj/item/clothing/suit/armor/light/khan
-	name = "great khan jacket"
-	desc = "With small lead plate inserts giving some defense, the jackets and vests popular with the Great Khans show off their emblem on the back."
-	icon_state = "khanjacket"
-	item_state = "khanjacket"
-
-/obj/item/clothing/suit/armor/light/khan
-	name = "Golden Geckoskin jacket"
-	desc = "Heavy Geckoskin jacket lined with a bulletproof lining on the inside. On the back the symbol of the Great Khans is displayed proudly."
-	icon_state = "GojiSuit"
-	item_state = "GojiSuit"
-
-
 //////////////
 // Cog City //
 ////////////// 
@@ -963,3 +945,31 @@
 	desc = "A heavy padded duster with the insignia of the Vault-Tec City Coalition embroidered on the back. This one is often worn by the various employed Roadies in the cities."
 	icon_state = "roadie_battlecoat"
 	item_state = "roadie_battlecoat"
+
+
+
+/////////////////
+// Great Khans //
+////////////////
+
+//These are from light jackets 
+/obj/item/clothing/suit/toggle/labcoat/khan_jacket
+	name = "Great Khan jacket"
+	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
+	cold_protection = CHEST|GROIN
+	heat_protection = CHEST|GROIN
+	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	strip_delay = 10
+	equip_delay_other = 10
+	max_integrity = 100
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets
