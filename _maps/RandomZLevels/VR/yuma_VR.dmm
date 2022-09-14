@@ -1991,7 +1991,6 @@
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/pistol/beretta,
 /obj/item/gun/ballistic/automatic/pistol/deagle,
 /obj/item/gun/ballistic/automatic/pistol/m1911,
 /obj/item/gun/ballistic/automatic/pistol/m1911,

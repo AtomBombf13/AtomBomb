@@ -165,37 +165,6 @@
 	suppressor_y_offset = 20
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 
-
-/* * * * * * * * * * *
- * Beretta M9FS Semi-Auto
- * Another Light pistol
- * 9mm
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/pistol/beretta
-	name = "Beretta M9FS"
-	desc = "One of the more common 9mm pistols, the Beretta is popular due to its reliability, 15 round magazine and good looks."
-	icon_state = "beretta"
-	w_class = WEIGHT_CLASS_SMALL
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
-	mag_type = /obj/item/ammo_box/magazine/m9mm // load any 9mm pistol ammos	
-
-	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	init_recoil = HANDGUN_RECOIL(0.8)
-
-	can_suppress = "pistol_suppressor"
-	suppressor_x_offset = 30
-	suppressor_y_offset = 20
-	fire_sound = 'sound/f13weapons/9mm.ogg'
-
 /* * * * * * * * * * *
  * Beretta M9R Burst
  * Burst Light pistol
@@ -227,6 +196,10 @@
 
 	automatic_burst_overlay = TRUE
 	semi_auto = FALSE
+	can_suppress = "pistol_suppressor"
+	suppressor_x_offset = 30
+	suppressor_y_offset = 20
+	fire_sound = 'sound/f13weapons/9mm.ogg'
 
 /* * * * * * * * * *
  * MEDIUM PISTOLS  *

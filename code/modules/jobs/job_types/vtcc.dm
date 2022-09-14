@@ -469,7 +469,7 @@
 	ears = 		/obj/item/radio/headset/headset_vault/cogcity/merch
 	shoes = 	/obj/item/clothing/shoes/jackboots
 	uniform = 	/obj/item/clothing/under/f13/merca
-	l_hand =	/obj/item/gun/ballistic/automatic/pistol/beretta
+	l_hand =	/obj/item/gun/ballistic/automatic/pistol/sig
 	r_pocket = /obj/item/card/data/wpermit
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m9mmds = 2
