@@ -411,6 +411,37 @@
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 
 /* * * * * * * * * * *
+ * M2045 Magnum Revolver Rifle
+ * Heavy revolver rifle
+ * Scoped
+ * .308
+ * Craftable - Revolver rifle made of .44 revolvers in .308 / 7.62
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/revolver/m2405
+	name = "M2045 Magnum Revolver Rifle"
+	desc = "A relic from before the Great War returns to the wasteland. This rifle uses .308 ammunition and has considerable recoil."
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev308
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	item_state = "m2405"
+	icon_state = "m2405"
+
+	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_recoil = RIFLE_RECOIL(2.2)
+
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+
+/* * * * * * * * * * *
  * Needler 'revolver'
  * Wounding revolver
  * Needles
@@ -625,37 +656,6 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-
-/* * * * * * * * * * *
- * M2045 Magnum Revolver Rifle
- * Heavy revolver rifle
- * Scoped
- * .308
- * Unique / Craftable - Explorer Loadout (Spawn - Explo 'sniper' rifle)
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/revolver/m2405
-	name = "M2045 Magnum Revolver Rifle"
-	desc = "A relic from before the Great War returns to the wasteland. This rifle uses .308 ammunition and has considerable recoil."
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev308
-	icon = 'icons/fallout/objects/guns/longguns.dmi'
-	item_state = "m2405"
-	icon_state = "m2405"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	init_recoil = RIFLE_RECOIL(2.2)
-
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
 
 /* * * * * * * * * * *
  * Lucky revolver

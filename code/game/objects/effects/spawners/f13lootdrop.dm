@@ -998,13 +998,6 @@
 				/obj/item/ammo_box/magazine/m22
 				)
 
-/obj/effect/spawner/bundle/f13/beretta
-	name = "beretta pistol and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/pistol/beretta,
-				/obj/item/ammo_box/magazine/m9mm/doublestack/
-				)
-
 /obj/effect/spawner/bundle/f13/sig
 	name = " p220 pistol and ammo spawner"
 	items = list(
@@ -2199,7 +2192,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
-		/obj/effect/spawner/bundle/f13/beretta,
 		/obj/effect/spawner/bundle/f13/ninemil
 	)
 
