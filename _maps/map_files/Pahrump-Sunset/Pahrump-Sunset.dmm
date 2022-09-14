@@ -24426,7 +24426,8 @@
 "dPQ" = (
 /obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -4
+	pixel_x = -4;
+	density = 0
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -28864,7 +28865,8 @@
 "fTS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/fence/handrail{
-	pixel_y = 18
+	pixel_y = 18;
+	density = 0
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -29005,7 +29007,7 @@
 /area/f13/building/hospital)
 "fWM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/f13chair2{
+/obj/structure/chair/f13foldupchair{
 	dir = 8
 	},
 /turf/open/floor/f13{
@@ -30217,7 +30219,7 @@
 /area/f13/building/hospital)
 "gCh" = (
 /obj/structure/simple_door/metal/store,
-/turf/closed/wall/f13/wood/house,
+/turf/open/floor/f13/wood,
 /area/f13/city)
 "gCs" = (
 /obj/structure/window/fulltile/house{
@@ -31118,7 +31120,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "gWV" = (
-/obj/structure/chair/f13chair2,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/simple_door/glass,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -31907,6 +31910,9 @@
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12
+	},
+/obj/structure/mirror{
+	pixel_x = -32
 	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -36915,11 +36921,8 @@
 /obj/structure/stairs/north,
 /obj/structure/fence/handrail{
 	dir = 8;
-	pixel_x = -14
-	},
-/obj/structure/fence/handrail{
-	dir = 8;
-	pixel_x = 14
+	pixel_x = 14;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -37743,10 +37746,10 @@
 	},
 /area/f13/building/massfusion)
 "kjE" = (
-/obj/structure/chair/f13chair2{
+/obj/machinery/light,
+/obj/structure/chair/f13foldupchair{
 	dir = 1
 	},
-/obj/machinery/light,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -39274,9 +39277,12 @@
 	},
 /area/f13/wasteland)
 "kTu" = (
-/obj/structure/spacevine,
-/turf/closed/wall/f13/store,
-/area/f13/wasteland)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/overlay/junk/toilet{
+	pixel_y = 12
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "kTD" = (
 /obj/effect/spawner/lootdrop/low_tools,
 /obj/structure/rack/shelf_metal{
@@ -40767,8 +40773,9 @@
 "lFp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/toilet{
-	dir = 4
+/obj/effect/overlay/junk/toilet{
+	dir = 4;
+	layer = 2.9
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -46069,13 +46076,11 @@
 	},
 /area/f13/wasteland)
 "obz" = (
-/obj/structure/railing/handrail/rusty{
-	pixel_y = 25
+/obj/structure/simple_door/bunker,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
 	},
-/turf/open/indestructible/ground/outside/roaddirt{
-	icon_state = "innerpavement"
-	},
-/area/f13/wasteland)
+/area/f13/ncr)
 "obM" = (
 /obj/structure/table/booth,
 /obj/item/reagent_containers/food/snacks/meat/steak/plain/human{
@@ -47603,6 +47608,10 @@
 	pixel_y = 25
 	},
 /obj/structure/flora/grass/jungle/b,
+/obj/structure/fence/wooden{
+	dir = 4;
+	icon_state = "post_wood"
+	},
 /turf/open/indestructible/ground/outside/roaddirt{
 	dir = 8;
 	icon_state = "innerpavementcorner"
@@ -48402,7 +48411,8 @@
 "pfM" = (
 /obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -4
+	pixel_x = -4;
+	density = 0
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
@@ -51731,17 +51741,17 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
 "qMh" = (
-/obj/structure/toilet{
-	desc = "A porcelain seat of many burdens, placed over a chasm of putrid stink, or maybe it's just a toilet.";
-	name = "Makchasm";
-	pixel_y = 13
-	},
 /obj/structure/mirror{
 	pixel_x = -29
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/prewar/poster61{
 	pixel_x = 29
+	},
+/obj/structure/toilet{
+	desc = "A porcelain seat of many burdens, placed over a chasm of putrid stink, or maybe it's just a toilet.";
+	name = "Makchasm";
+	pixel_y = 13
 	},
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
@@ -52616,7 +52626,8 @@
 "rkt" = (
 /obj/structure/railing/handrail{
 	dir = 8;
-	pixel_x = -4
+	pixel_x = -4;
+	density = 0
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
@@ -54001,7 +54012,7 @@
 /area/f13/wasteland/khans)
 "rVR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/f13chair2{
+/obj/structure/chair/f13foldupchair{
 	dir = 4
 	},
 /turf/open/floor/f13{
@@ -56140,7 +56151,10 @@
 /obj/structure/railing/handrail/rusty{
 	pixel_y = 25
 	},
-/obj/structure/fence/corner/wooden,
+/obj/structure/fence/wooden{
+	dir = 4;
+	icon_state = "post_wood"
+	},
 /turf/open/indestructible/ground/outside/roaddirt{
 	icon_state = "innerpavement"
 	},
@@ -57880,13 +57894,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/village)
 "tNJ" = (
-/obj/structure/chair/f13chair2{
-	dir = 1
+/obj/effect/overlay/junk/toilet{
+	dir = 4;
+	layer = 2.9
 	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/ncr)
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "tOd" = (
 /obj/structure/simple_door/room,
 /obj/structure/nest/ghoul{
@@ -59329,6 +59342,7 @@
 	pixel_x = -10
 	},
 /obj/structure/flora/grass/jungle,
+/obj/structure/fence/corner/wooden,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "uxG" = (
@@ -61073,11 +61087,11 @@
 	},
 /area/f13/city)
 "voS" = (
-/obj/structure/chair/f13chair2,
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#e8eaff"
 	},
+/obj/structure/chair/f13foldupchair,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -64302,7 +64316,8 @@
 /area/f13/wasteland)
 "wWs" = (
 /obj/structure/fence/handrail{
-	pixel_y = 18
+	pixel_y = 18;
+	density = 0
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -65065,7 +65080,8 @@
 /obj/structure/stairs/north,
 /obj/structure/fence/handrail{
 	dir = 8;
-	pixel_x = -14
+	pixel_x = -14;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -67752,7 +67768,7 @@ aae
 aae
 aae
 aae
-aae
+aak
 aae
 aae
 aae
@@ -68370,7 +68386,7 @@ cmi
 cmi
 jcW
 uDh
-cmi
+gWV
 kGV
 wHN
 wHN
@@ -68595,7 +68611,7 @@ oAw
 nqg
 xLa
 aOk
-aOk
+tNJ
 aae
 aae
 iuw
@@ -68619,7 +68635,7 @@ bcy
 cjh
 cjh
 cjh
-cjh
+obz
 cjh
 ieS
 ieS
@@ -68876,7 +68892,7 @@ otl
 otl
 cmi
 cmi
-cjh
+obz
 cjh
 bsj
 bsj
@@ -69134,11 +69150,11 @@ aon
 byt
 dSW
 aoo
-gWV
+maO
 cld
 cld
 bsj
-tNJ
+hwV
 qRw
 cjh
 cjh
@@ -69648,11 +69664,11 @@ dcy
 kGV
 pxI
 aoo
-gWV
+maO
 bsj
 ieS
 bsj
-tNJ
+hwV
 kGV
 pxI
 pxI
@@ -72678,7 +72694,7 @@ aae
 aae
 aae
 aae
-aae
+aak
 aae
 aae
 aae
@@ -73169,7 +73185,7 @@ qeC
 qqO
 arF
 aae
-aae
+aak
 aae
 aae
 aae
@@ -73195,9 +73211,9 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
+aak
+aak
+aak
 aae
 aaa
 "}
@@ -73447,14 +73463,14 @@ qqO
 qqO
 aae
 aae
-aae
-aae
+aak
+aak
 aae
 qqO
 aae
 aae
 aae
-aae
+aak
 aae
 aaa
 "}
@@ -73703,15 +73719,15 @@ vNL
 qqO
 aae
 aae
-aae
-aae
+aak
+aak
 aae
 aae
 qqO
 aae
 aae
 aae
-aae
+aak
 aae
 aaa
 "}
@@ -73960,7 +73976,7 @@ vNL
 vGl
 aae
 aae
-aae
+aak
 aae
 aae
 qqO
@@ -73968,7 +73984,7 @@ qqO
 qqO
 qqO
 aae
-aae
+aak
 aae
 aaa
 "}
@@ -74992,8 +75008,8 @@ qqO
 qqO
 asS
 aae
-asS
-aae
+qeC
+aak
 aae
 qqO
 aae
@@ -76281,7 +76297,7 @@ vGl
 qqO
 qqO
 aae
-asS
+qeC
 aae
 aaa
 "}
@@ -76538,8 +76554,8 @@ aae
 qqO
 aae
 asS
-aae
-aae
+aak
+aak
 aaa
 "}
 (38,1,1) = {"
@@ -77563,7 +77579,7 @@ qqO
 asS
 aak
 aae
-asS
+qeC
 aae
 qqO
 aae
@@ -78081,7 +78097,7 @@ aae
 vNL
 qqO
 aae
-aae
+aak
 aaa
 "}
 (44,1,1) = {"
@@ -78338,7 +78354,7 @@ qqO
 ian
 jNE
 aae
-aae
+aak
 aaa
 "}
 (45,1,1) = {"
@@ -78595,7 +78611,7 @@ vNL
 jNE
 icR
 aae
-aae
+aak
 aaa
 "}
 (46,1,1) = {"
@@ -78852,7 +78868,7 @@ qqO
 ian
 jNE
 aae
-aae
+aak
 aaa
 "}
 (47,1,1) = {"
@@ -79879,7 +79895,7 @@ aae
 nJB
 qqO
 qqO
-aae
+aak
 aae
 aaa
 "}
@@ -80101,10 +80117,10 @@ vGl
 aae
 aae
 aae
+aak
 aae
 aae
-aae
-asS
+qeC
 aae
 aae
 aae
@@ -80137,7 +80153,7 @@ qeC
 qqO
 aae
 aae
-aae
+aak
 aaa
 "}
 (52,1,1) = {"
@@ -83186,9 +83202,9 @@ gvR
 aae
 aae
 aae
+aak
 aae
-aae
-aae
+aak
 aae
 aae
 asS
@@ -87165,7 +87181,7 @@ azh
 azh
 azh
 azh
-ozv
+azh
 aOk
 aOk
 aOk
@@ -87422,7 +87438,7 @@ lVF
 bax
 sHP
 ahi
-kTu
+paD
 aOk
 aOk
 aOk
@@ -87679,7 +87695,7 @@ aim
 ajz
 sHP
 amu
-kTu
+paD
 aOk
 aOk
 aOk
@@ -92102,7 +92118,7 @@ abn
 aVt
 hzS
 hzS
-obz
+sYE
 aQZ
 mHp
 bMM
@@ -92359,7 +92375,7 @@ abn
 aVt
 fVC
 vyo
-obz
+sYE
 aQZ
 mHp
 ajb
@@ -92616,7 +92632,7 @@ jGz
 oaU
 hzS
 hzS
-obz
+sYE
 aQZ
 mHp
 aer
@@ -92873,7 +92889,7 @@ abn
 mEq
 hzS
 hzS
-obz
+sYE
 aQZ
 mHp
 sXv
@@ -93130,7 +93146,7 @@ abn
 mEq
 hzS
 hzS
-obz
+sYE
 aQZ
 mHp
 sXv
@@ -93387,7 +93403,7 @@ ccR
 wpK
 hzS
 hzS
-obz
+sYE
 aQZ
 mHp
 sXv
@@ -93644,7 +93660,7 @@ ceR
 aVt
 fVC
 hzS
-obz
+sYE
 aQZ
 mHp
 sXv
@@ -93751,7 +93767,7 @@ mkA
 cFK
 aOk
 aae
-aae
+aak
 aae
 aae
 aae
@@ -93901,7 +93917,7 @@ ioK
 kDO
 hzS
 hzS
-obz
+sYE
 aQZ
 mHp
 sXv
@@ -94158,7 +94174,7 @@ aez
 aVt
 hzS
 fVC
-obz
+sYE
 aQZ
 pCf
 sXv
@@ -94267,7 +94283,7 @@ rkl
 rkl
 aae
 aae
-aae
+aak
 aae
 aae
 aae
@@ -94415,7 +94431,7 @@ ceR
 aVt
 hCe
 hzS
-obz
+sYE
 bFF
 rFj
 wDX
@@ -117136,8 +117152,8 @@ tCT
 cFK
 aOk
 wqe
-tCT
-aJN
+kTu
+aaB
 aae
 aak
 aak
@@ -117394,7 +117410,7 @@ bjb
 tCj
 aOk
 aOk
-tCT
+mIb
 aae
 aak
 aak
