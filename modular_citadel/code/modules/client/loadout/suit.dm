@@ -174,7 +174,7 @@
 	path = /obj/item/clothing/suit/armor/light/duster/town
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
-	restricted_desc = "Nash"
+	restricted_desc = "Eastwood"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Sheriff",
@@ -193,7 +193,7 @@
 	path = /obj/item/clothing/suit/armor/medium/vest/oasis
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 3
-	restricted_desc = "Nash Police, Nash Officials"
+	restricted_desc = "Eastwood Security, Eastwood Officials"
 	restricted_roles = list("Chief of Police",
 							"Officer",
 							"Mayor",

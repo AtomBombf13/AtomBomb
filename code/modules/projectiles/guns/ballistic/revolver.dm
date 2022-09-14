@@ -161,8 +161,37 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
+
+
+/* * * * * * * * * * *
+ * 10mm revolver
+ * Special revolver
+ * 10mm
+ * Uncommon
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/revolver/colt6520
+	name = "Colt 6520"
+	desc = "The Colt 6520 10mm double action revolver is a highly durable weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction.This revolver has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "10rev"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6520
+	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
+	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
+	force = GUN_MELEE_FORCE_PISTOL_LIGHT
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	init_firemodes = list(
+		SEMI_AUTO_NODELAY,
+		BURST_3_ROUND,
+	)
+
 
 /* * * * * * * * * *
  * HEAVY REVOLVERS *
@@ -712,6 +741,27 @@
 	autofire_shot_delay = 0
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = FALSE
+
+/obj/item/gun/ballistic/revolver/colt6520/Bigiron
+	name = "Big Iron"
+	desc = "The Colt 6520 10mm double action revolver is a highly durable weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction.This revolver has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots. This one seems to be embellished with Vault-tec symbols"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "executive"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6520
+	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
+	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
+	force = GUN_MELEE_FORCE_PISTOL_LIGHT
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_firemodes = list(
+		SEMI_AUTO_NODELAY,
+		BURST_3_ROUND,
+	)
 
 /* * * * * * * * * * *
  * Pearly .44 magnum revolver

@@ -2372,7 +2372,7 @@ Records disabled until a use for them is found
 						custom_tongue = selected_custom_tongue
 */
 				if("speech_verb")
-					var/selected_custom_speech_verb = input(user, "Choose your desired speech verb (none means your species speech verb)", "Character Preference") as null|anything in GLOB.speech_verbs
+					var/selected_custom_speech_verb = input(user, "Choose your desired speech verb", "Character Preference") as null|anything in GLOB.speech_verbs
 					if(selected_custom_speech_verb)
 						custom_speech_verb = selected_custom_speech_verb
 /*

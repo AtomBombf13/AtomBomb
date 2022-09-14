@@ -394,41 +394,41 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/headset_khans
 	name = "khan radio headset"
 	desc = "This is used by the Khans.\nTo access the Khan channel, use :h."
-	icon_state = "syndie_headset" 
+	icon_state = "syndie_headset"
 	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_khans
 
 /obj/item/radio/headset/headset_town
-	name = "Nash radio headset"
-	desc = "This is used by the town of Nash.\
-		\nTo access the Nash channel, use :f."
+	name = "Eastwood radio headset"
+	desc = "This is used by the town of Eastwood.\
+		\nTo access the Eastwood channel, use :f."
 	icon_state = "mine_headset"
 	keyslot = new /obj/item/encryptionkey/headset_town
 
 /obj/item/radio/headset/headset_town/lawman
-	name = "Nash sheriff radio headset"
-	desc = "This is used by Nash's local sheriff force. Protects ears from flashbangs.\
-		\nTo access the Nash channel, use :f.\
-		\nTo access the Nash sheriff channel, use :l."
+	name = "Eastwood security radio headset"
+	desc = "This is used by Eastwood's local security force. Protects ears from flashbangs.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood security channel, use :l."
 	icon_state = "sec_headset_alt"
 	item_state = "sec_headset_alt"
 	bowman = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/lawman
 
 /obj/item/radio/headset/headset_town/commerce
-	name = "Nash commerce radio headset"
-	desc = "This is used by Nash's small business owners.\
-		\nTo access the Nash channel, use :f.\
-		\nTo access the Nash commerce channel, use :j."
+	name = "Eastwood commerce radio headset"
+	desc = "This is used by Eastwood's small business owners.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood commerce channel, use :j."
 	keyslot = new /obj/item/encryptionkey/headset_town/commerce
 
 /obj/item/radio/headset/headset_town/mayor
-	name = "Nash mayoral radio headset"
-	desc = "This is used by Nash's mayor (and secretary). Protects ears from flashbangs.\
-		\nTo access the Nash channel, use :f.\
-		\nTo access the Nash mayor channel, use :y.\
-		\nTo access the Nash sheriff channel, use :l.\
-		\nTo access the Nash commerce channel, use :j."
+	name = "Eastwood alderman radio headset"
+	desc = "This is used by Eastwood's alderman (and Head of research). Protects ears from flashbangs.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood alderman channel, use :y.\
+		\nTo access the Eastwood security channel, use :l.\
+		\nTo access the Eastwood commerce channel, use :j."
 	bowman = TRUE
 	command = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/mayor

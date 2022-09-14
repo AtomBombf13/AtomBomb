@@ -83,6 +83,22 @@
 	flags_cover = HEADCOVERSEYES
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
+/obj/item/clothing/head/helmet/f13/combat/mk2/vault
+	name = "Vault Security helmet"
+	desc = "It's a helmet used by vault-tec security personel."
+	icon_state = "riot"
+	item_state = "helmet"
+	toggle_message = "You pull the visor down on"
+	alt_toggle_message = "You push the visor up on"
+	can_toggle = 1
+	flags_inv = HIDEEARS|HIDEFACE
+	strip_delay = 80
+	actions_types = list(/datum/action/item_action/toggle)
+	visor_flags_inv = HIDEFACE
+	toggle_cooldown = 0
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
@@ -388,9 +404,8 @@
 	icon_state = "bowler"
 	item_state = "bowler"
 	dynamic_hair_suffix = ""
-	flags_inv = HIDEEARS|HIDEHAIR
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEEARS
+	armor = ARMOR_VALUE_MEDIUM
 	slowdown = 0
 
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat
