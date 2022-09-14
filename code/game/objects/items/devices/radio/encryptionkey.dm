@@ -193,35 +193,35 @@
 	channels = list(RADIO_CHANNEL_ENCLAVE = 1)
 
 /obj/item/encryptionkey/headset_town
-	name = "Nash radio encryption key"
+	name = "Eastwood radio encryption key"
 	desc = "An encryption key for a radio headset.\
-		\nTo access the Nash channel, use :f."
+		\nTo access the Eastwood channel, use :f."
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1)
 
 /obj/item/encryptionkey/headset_town/lawman
-	name = "Nash Sheriff radio encryption key"
+	name = "Eastwood security radio encryption key"
 	desc = "An encryption key for a radio headset.\
-		\nTo access the Nash channel, use :f.\
-		\nTo access the Nash sheriff channel, use :l"
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood security channel, use :l"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_TOWN_PD = 1)
 
 /obj/item/encryptionkey/headset_town/commerce
-	name = "Nash commercial radio encryption key"
+	name = "Eastwood commercial radio encryption key"
 	desc = "An encryption key for a radio headset.\
-		\nTo access the Nash channel, use :f.\
-		\nTo access the Nash commerce channel, use :j"
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood commerce channel, use :j"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1)
 
 /obj/item/encryptionkey/headset_town/mayor
-	name = "Nash mayor radio encryption key"
+	name = "Eastwood alderman radio encryption key"
 	desc = "An encryption key for a radio headset.\
-		\nTo access the Nash channel, use :f.\
-		\nTo access the Nash mayor, use :y.\
-		\nTo access the Nash sheriff, use :l.\
-		\nTo access the Nash commerce channel, use :j"
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood alderman, use :y.\
+		\nTo access the Eastwood security, use :l.\
+		\nTo access the Eastwood commerce channel, use :j"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_TOWN_PD = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1, RADIO_CHANNEL_TOWN_MAYOR = 1)
 

@@ -172,7 +172,7 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[enclave[name]]</td></tr>"
 			even = !even
 	if(length(oasis))
-		dat += "<tr><th colspan=3>Nash</th></tr>"
+		dat += "<tr><th colspan=3>Eastwood</th></tr>"
 		for(var/name in oasis)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[oasis[name]]</td></tr>"
 			even = !even

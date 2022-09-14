@@ -786,27 +786,28 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "tricorn"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
+	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/f13/town/mayor
 	name = "mayoral tricorn"
 	desc = "A tricorn in the desert.  Stranger things have happened."
 
 /obj/item/clothing/head/f13/town/big
-	name = "big hat"
+	name = "big hat, big iron."
 	desc = "It's a big hat."
 	icon_state = "bigcowboyhat"
 
 /obj/item/clothing/head/f13/town/deputy
 	name = "deputy hat"
-	desc = "A black cowboy hat."
-	icon_state = "deputyhat"
+	desc = "Leather Cowboy hat, worn by eastwood deputies."
+	icon_state = "The_good"
 
 /obj/item/clothing/head/f13/town/deputy/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/f13/town/officer
-	name = "Nash officer's cap"
+	name = "Eastwood officer's cap"
 	desc = "A simple dark navy peaked cap, worn by police."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
@@ -827,7 +828,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	AddComponent(/datum/component/armor_plate)
  */
 /obj/item/clothing/head/f13/town/chief
-	name = "NPD Chief's hat"
+	name = "Eastwood Chief's hat"
 	desc = "A blue hat with a silver badge."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'

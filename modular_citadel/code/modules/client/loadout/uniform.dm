@@ -146,7 +146,7 @@
 	name = "torn rags"
 	path = /obj/item/clothing/under/f13/rag
 
-//suits 
+//suits
 
 /datum/gear/uniform/suit
 	name = "black suit"
@@ -664,7 +664,7 @@
 	path = /obj/item/clothing/under/rank/security/officer/blueshirt
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "Nash"
+	restricted_desc = "Eastwood"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Chief of Police",
@@ -678,7 +678,7 @@
 							"Barkeep",
 							)
 
-//Khans 
+//Khans
 
 /datum/gear/uniform/khans
 	name = "great khans jorts"
@@ -1076,7 +1076,7 @@
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
-/// Vault stuff in wasteland tab below 
+/// Vault stuff in wasteland tab below
 
 /datum/gear/uniform/wasteland/vault
 	name = "vault jumpsuit"

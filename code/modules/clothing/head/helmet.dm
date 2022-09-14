@@ -133,8 +133,6 @@
 	toggle_cooldown = 0
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	dog_fashion = null
-	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/head/helmet/attack_self(mob/user)
 	if(can_toggle && !user.incapacitated())
@@ -332,7 +330,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	strip_delay = 80
-	mutantrace_variation = STYLE_MUZZLE
+
 
 //LightToggle
 
@@ -461,7 +459,7 @@
 
 /obj/item/clothing/head/helmet/armyhelmet/heavy
 	name = "heavy steel helmet"
-	desc = "a steel helmet, inspired by several pre-war designs. This one has been modified by Nash citizens to provide more protection to the face and neck."
+	desc = "a steel helmet, inspired by several pre-war designs. This one has been modified by Eastwood roadies to provide more protection to the face and neck."
 	icon_state = "armyhelmetheavy"
 	item_state = "armyhelmetheavy"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T3)

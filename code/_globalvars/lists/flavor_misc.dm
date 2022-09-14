@@ -270,7 +270,7 @@ GLOBAL_LIST_INIT(redacted_strings, list("\[REDACTED\]", "\[CLASSIFIED\]", "\[ARC
 
 GLOBAL_LIST_INIT(wisdoms, world.file2list("strings/wisdoms.txt"))
 
-GLOBAL_LIST_INIT(speech_verbs, list("default", "says", "rasps", "states", "bellows", "chirps", "hisses", "mumbles", "squeals", "barks", "meows", "growls", "drawls", "chitters", "declares", "mutters", "howls", "bleats", "cries", "murmurs"))
+GLOBAL_LIST_INIT(speech_verbs, list("default", "says", "rasps", "states", "bellows", "chirps", "hisses", "mumbles", "growls", "drawls", "chitters", "declares", "mutters", "cries", "murmurs"))
 
 GLOBAL_LIST_INIT(roundstart_tongues, list("default","human tongue" = /obj/item/organ/tongue/*, "lizard tongue" = /obj/item/organ/tongue/lizard, "skeleton tongue" = /obj/item/organ/tongue/bone, "fly tongue" = /obj/item/organ/tongue/fly, "ipc tongue" = /obj/item/organ/tongue/robot/ipc*/))
 
@@ -292,7 +292,7 @@ GLOBAL_LIST_INIT(prosthetic_limb_types, list("xion","bishop","cybersolutions","g
 GLOBAL_LIST_INIT(nongendered_limb_types, list(/*"fly", "zombie" ,"synth", "shadow", "cultgolem", "agent", "plasmaman", "clockgolem", "clothgolem",*/"smutant"))
 
 //list of eye types, corresponding to a respective left and right icon state for the set of eyes
-GLOBAL_LIST_INIT(eye_types, list("normal"/* "insect", "moth", "double", "double2", "double3", "cyclops", "shadekin"*/))
+GLOBAL_LIST_INIT(eye_types, list("normal"))
 
 //list linking bodypart bitflags to their actual names
 GLOBAL_LIST_INIT(bodypart_names, list(num2text(HEAD) = "Head", num2text(CHEST) = "Chest", num2text(LEG_LEFT) = "Left Leg", num2text(LEG_RIGHT) = "Right Leg", num2text(ARM_LEFT) = "Left Arm", num2text(ARM_RIGHT) = "Right Arm"))
