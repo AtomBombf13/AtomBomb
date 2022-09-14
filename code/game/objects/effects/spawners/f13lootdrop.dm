@@ -871,14 +871,15 @@
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
 				/obj/effect/spawner/bundle/f13/shotgunlever,
-				/obj/effect/spawner/bundle/f13/infiltrator,
 				/obj/effect/spawner/bundle/f13/brushgun,
+				/obj/effect/spawner/bundle/f13/m14,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high
 	name = "high tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 20,
 				/obj/effect/spawner/bundle/f13/r84 = 10,
+				/obj/effect/spawner/bundle/f13/bar = 5,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
@@ -886,6 +887,7 @@
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 1,
+				/obj/item/gun/ballistic/automatic/lsw = 1,
 				/obj/item/gun/ballistic/automatic/bozar = 1
 				)
 
@@ -896,7 +898,9 @@
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/rangemaster = 15,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
-				/obj/item/gun/ballistic/automatic/bozar = 10
+				/obj/item/gun/ballistic/automatic/bozar = 10,
+				/obj/item/gun/ballistic/automatic/m1919 = 5,
+				/obj/item/gun/ballistic/automatic/g11 = 5,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique
@@ -911,7 +915,8 @@
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
 				/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
-				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
+				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil,
+				/obj/item/gun/ballistic/automatic/m1919/m2a1,
 				)
 
 
@@ -1301,13 +1306,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/stock_parts/cell/ammo/mfc
 				)
 
-/obj/effect/spawner/bundle/f13/infiltrator
-	name = "infiltrator rifle and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
-				/obj/item/ammo_box/magazine/m556/rifle/
-				)
-
 /obj/effect/spawner/bundle/f13/brushgun
 	name = "brush gun and ammo spawner"
 	items = list(
@@ -1481,6 +1479,13 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	items = list(
 			/obj/item/gun/ballistic/automatic/bar,
 			/obj/item/ammo_box/magazine/m762/ext,
+	)
+
+/obj/effect/spawner/bundle/f13/m14
+	name = "m14 battle rifle and ammo spawner"
+	items = list(
+		/obj/item/gun/ballistic/automatic/m14,
+		/obj/item/ammo_box/magazine/m762/ext,
 	)
 
 /obj/effect/spawner/bundle/f13/rocketlauncher

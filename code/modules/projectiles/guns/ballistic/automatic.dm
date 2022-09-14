@@ -1420,7 +1420,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
-	name = "Police Assault Rifle"
+	name = "police assault rifle"
 	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Nash Police Department. Held together by duct tape and prayers, it somehow still shoots."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
@@ -1453,8 +1453,8 @@
 
 /obj/item/gun/ballistic/automatic/m14
 	name = "m14 battle rifle"
-	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
-	icon = 'icons/fallout/objects/guns/bar.dmi'
+	desc = "An ancient battle rifle that looks like outdated even by pre-war standards. It has 'Springfield Armory' etched on one-side. It is alarmingly heavy for a rifle."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	icon_state = "m14"
 	item_state = "308"
@@ -1493,9 +1493,9 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/bar
-	name = "automatic rifle (.308)"
+	name = "Browning automatic rifle"
 	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
-	icon = 'icons/fallout/objects/guns/bar.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/bar.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	icon_state = "BAR"
 	item_state = "BAR"
@@ -1620,7 +1620,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/lsw
-	name = "Light Support Weapon"
+	name = "light support weapon"
 	desc = "This squad-level support weapon has a bullpup design. The bullpup design makes it difficult to use while lying down. Because of this it was remanded to National Guard units. It, however, earned a reputation as a reliable weapon that packs a lot of punch for its size."
 	icon = 'icons/obj/guns/projectile.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
@@ -1753,7 +1753,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/m72
-	name = "\improper M72 gauss rifle"
+	name = "M72 gauss rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."
 	icon_state = "m72"
 	item_state = "sniper"
@@ -1795,7 +1795,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
-	name = "infiltrator"
+	name = "Infiltrator"
 	desc = "A customized R91 assault rifle, with an integrated suppressor, small scope, cut down stock and polymer furniture."
 	icon_state = "infiltrator"
 	item_state = "fnfal"
