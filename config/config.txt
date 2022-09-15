@@ -21,7 +21,7 @@ $include policy.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME Coyote Bayou
+# SERVERNAME Atom Bomb
 
 ## Server tagline: This will appear right below the server's title.
 SERVERTAGLINE [18+] Furry Friend Fallout, set between FO1 & FO2, with East Texas flair!
@@ -30,7 +30,7 @@ SERVERTAGLINE [18+] Furry Friend Fallout, set between FO1 & FO2, with East Texas
 # SERVERSQLNAME fo13sql
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Coyote Bayou
+STATIONNAME Atom Bomb
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
