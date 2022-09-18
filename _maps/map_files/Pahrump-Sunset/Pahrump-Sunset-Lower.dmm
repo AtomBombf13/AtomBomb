@@ -377,6 +377,13 @@
 "alc" = (
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"alH" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "mine2"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "alI" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -2040,10 +2047,6 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bBR" = (
-/obj/structure/ladder/unbreakable{
-	height = 1;
-	id = "mine"
-	},
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -34762,7 +34765,7 @@ aae
 aae
 aae
 aae
-aaB
+alH
 aaB
 aaB
 fXa

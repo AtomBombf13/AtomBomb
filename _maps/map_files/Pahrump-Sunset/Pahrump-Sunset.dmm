@@ -18990,7 +18990,7 @@
 	icon_state = "twindowold"
 	},
 /obj/structure/ladder/unbreakable{
-	height = 1;
+	height = 2;
 	id = "BoSLadder"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -21315,6 +21315,14 @@
 "crO" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building)
+"crQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "mine"
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/caves)
 "csf" = (
 /obj/structure/decoration/rag,
 /turf/closed/wall/mineral/wood,
@@ -60657,6 +60665,13 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"vef" = (
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "mine2"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/ncr)
 "veo" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_6"
@@ -68092,7 +68107,7 @@ aae
 aae
 aae
 piD
-oAw
+vef
 oAw
 dWD
 xLa
@@ -69313,7 +69328,7 @@ aae
 aae
 aae
 aae
-tCT
+crQ
 qqO
 aae
 aae
