@@ -8934,13 +8934,6 @@
 /obj/structure/simple_door/metal/ventilation,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
-"hvH" = (
-/obj/structure/ladder/unbreakable{
-	height = 1;
-	id = "Vault1"
-	},
-/turf/open/floor/plating/tunnel,
-/area/f13/tunnel)
 "hvX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -26452,13 +26445,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
 /turf/open/floor/mineral/plastitanium,
 /area/f13/enclave)
-"wtN" = (
-/obj/structure/ladder/unbreakable{
-	height = 1;
-	id = "BoSLadder"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/mining)
 "wum" = (
 /obj/structure/dresser,
 /turf/open/floor/f13/wood,
@@ -51147,7 +51133,7 @@ iba
 hrZ
 hrZ
 vXu
-hvH
+sUw
 sUw
 vXu
 hrZ
@@ -91268,7 +91254,7 @@ xPT
 lBB
 opF
 opF
-wtN
+opF
 plO
 shC
 shC
