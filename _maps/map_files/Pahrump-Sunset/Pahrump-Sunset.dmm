@@ -33640,11 +33640,15 @@
 /turf/open/floor/wood_common,
 /area/f13/city)
 "ilL" = (
-/obj/structure/chair/wood{
-	dir = 1
+/obj/structure/railing/handrail{
+	dir = 8;
+	pixel_x = -4;
+	density = 0
 	},
-/turf/open/floor/f13/wood,
-/area/f13/city)
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "ilS" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/trash,
@@ -35145,10 +35149,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"iSD" = (
-/obj/structure/table/wood,
-/turf/open/floor/f13/wood,
-/area/f13/city)
 "iTe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/trash,
@@ -44216,7 +44216,8 @@
 "neY" = (
 /obj/machinery/light,
 /turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom2left"
+	dir = 4;
+	icon_state = "outerborder"
 	},
 /area/f13/wasteland)
 "nfd" = (
@@ -93684,8 +93685,8 @@ hEG
 ean
 agD
 fvg
-skm
-skm
+ilL
+ilL
 skm
 skm
 skm
@@ -94717,7 +94718,7 @@ aQi
 aQi
 doB
 doB
-ksk
+uNJ
 lYC
 rJw
 brm
@@ -105499,8 +105500,8 @@ aiO
 iht
 jeh
 jeh
-bNY
-kcv
+jmf
+jmf
 iht
 jeh
 jeh
@@ -105756,8 +105757,8 @@ aiO
 iht
 kXU
 jeh
-jeh
-jeh
+dPQ
+dPQ
 iht
 bLf
 jeh
@@ -106011,8 +106012,8 @@ aCN
 aaQ
 aiO
 iht
-iSD
-ilL
+bNY
+kcv
 hXB
 mkT
 iht
