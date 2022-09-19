@@ -2962,8 +2962,6 @@ Records disabled until a use for them is found
 
 	if(DIGITIGRADE in pref_species.species_traits)
 		character.Digitigrade_Leg_Swap(FALSE)
-	else
-		character.Digitigrade_Leg_Swap(TRUE)
 
 	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 
