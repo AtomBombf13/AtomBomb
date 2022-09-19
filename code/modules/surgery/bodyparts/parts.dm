@@ -208,10 +208,6 @@
 		if(BODYPART_DISABLED_PARALYSIS)
 			to_chat(owner, span_userdanger("You can't feel your [name]!"))
 
-/obj/item/bodypart/l_leg/digitigrade
-	name = "left digitigrade leg"
-	use_digitigrade = FULL_DIGITIGRADE
-
 /obj/item/bodypart/l_leg/monkey
 	icon = 'icons/mob/animal_parts.dmi'
 	icon_state = "default_monkey_l_leg"
@@ -264,10 +260,6 @@
 			to_chat(owner, span_userdanger("Your [name] is too damaged to function!"))
 		if(BODYPART_DISABLED_PARALYSIS)
 			to_chat(owner, span_userdanger("You can't feel your [name]!"))
-
-/obj/item/bodypart/r_leg/digitigrade
-	name = "right digitigrade leg"
-	use_digitigrade = FULL_DIGITIGRADE
 
 /obj/item/bodypart/r_leg/monkey
 	icon = 'icons/mob/animal_parts.dmi'
