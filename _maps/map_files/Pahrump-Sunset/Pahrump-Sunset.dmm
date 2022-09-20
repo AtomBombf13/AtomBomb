@@ -35629,9 +35629,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/village)
 "jbE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/f13/wood/house,
-/area/f13/wasteland)
+/obj/structure/chair/f13foldupchair,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/legion)
 "jbN" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
@@ -59988,6 +59993,14 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"uMg" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/legion)
 "uMi" = (
 /turf/open/floor/wood_common,
 /area/f13/ncr)
@@ -62639,6 +62652,15 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland)
+"wfg" = (
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "red"
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/legion)
 "wfq" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbroken"
@@ -65185,6 +65207,14 @@
 /obj/structure/flora/wasteplant/wild_punga,
 /turf/open/water,
 /area/f13/caves)
+"xsw" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/legion)
 "xsF" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -67623,7 +67653,7 @@ aoo
 aoo
 xGe
 opk
-cjh
+obz
 cjh
 cjh
 cmi
@@ -118962,7 +118992,7 @@ huu
 huu
 huu
 mOr
-aUE
+uMg
 aUE
 mOr
 mOr
@@ -119479,7 +119509,7 @@ mOr
 vdC
 kQY
 mOr
-kQY
+xsw
 kQY
 mOr
 deN
@@ -119990,7 +120020,7 @@ huu
 huu
 xPd
 mOr
-biW
+jbE
 kQY
 mOr
 uoW
@@ -121021,7 +121051,7 @@ sjz
 iMo
 aEr
 ntb
-kQY
+wfg
 sWw
 mOr
 biO
@@ -127680,7 +127710,7 @@ huu
 huu
 aOk
 vzT
-jbE
+qya
 hrE
 hrE
 hrE
