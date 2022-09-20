@@ -2027,13 +2027,6 @@
 /obj/structure/simple_door/bunker,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
-"bBs" = (
-/obj/structure/ladder/unbreakable{
-	height = 2;
-	id = "Vault1"
-	},
-/turf/open/floor/plating/tunnel,
-/area/f13/tunnel)
 "bBt" = (
 /obj/item/pickaxe,
 /obj/item/clothing/head/hardhat,
@@ -5258,10 +5251,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/sewer)
 "bRH" = (
-/obj/structure/ladder/unbreakable{
-	height = 2;
-	id = "funclaw"
-	},
+/obj/item/paper/bitterdrink,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bRQ" = (
@@ -35470,7 +35460,7 @@ aae
 aae
 aae
 aab
-bBs
+bAY
 bAY
 aab
 aae

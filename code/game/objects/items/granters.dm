@@ -1143,16 +1143,18 @@
 	time_per_page = 0
 
 /obj/item/book/granter/trait/tribaltraditions/attack_self(mob/user)
-	var/list/choices = list("Dead Horses traditions","White Legs traditions","Rustwalkers traditions","Eighties traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")
+	var/list/choices = list("Dead Horses traditions","Rustwalkers traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)
 			if(null)
 				return 0
+			/*
 			if("White Legs traditions")
 				traitname = "White Legs traditions"
 				granted_trait = TRAIT_WHITELEGS_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb, /datum/crafting_recipe/tribalwar/whitelegs/femalegarb, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour)
+			*/
 			if("Dead Horses traditions")
 				traitname = "Dead Horses traditions"
 				granted_trait = TRAIT_DEADHORSES_TRAD
@@ -1163,11 +1165,13 @@
 				granted_trait = TRAIT_RUSTWALKERS_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/rustwalkers/garb,
 								/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb, /datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour)
+			/*
 			if("Eighties traditions")
 				traitname = "Eighties traditions"
 				granted_trait = TRAIT_EIGHTIES_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/eighties/lightarmour, /datum/crafting_recipe/tribalwar/eighties/armour, /datum/crafting_recipe/tribalwar/eighties/garb,
 								/datum/crafting_recipe/tribalwar/eighties/femalegarb, /datum/crafting_recipe/tribalwar/eighties/heavyarmour)
+			*/
 			if("Sorrows traditions")
 				traitname = "Sorrows traditions"
 				granted_trait = TRAIT_SORROWS_TRAD
