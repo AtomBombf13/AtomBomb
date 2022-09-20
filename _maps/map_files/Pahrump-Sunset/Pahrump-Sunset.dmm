@@ -29181,6 +29181,9 @@
 "gct" = (
 /obj/effect/decal/cleanable/glass,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 1
+	},
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
 	},
@@ -48148,6 +48151,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/structure/bedsheetbin,
+/obj/structure/railing{
+	dir = 9
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building/khanfort)
 "oYE" = (
@@ -57433,19 +57439,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "tDz" = (
-/obj/structure/stairs/north,
-/obj/structure/stairs/north{
-	color = "#A47449"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 1
 	},
-/obj/structure/stairs/north{
-	color = "#A47449";
-	dir = 2
-	},
-/obj/structure/stairs/north{
-	color = "#A47449"
-	},
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland)
+/turf/open/floor/f13/wood,
+/area/f13/building/khanfort)
 "tDB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -75227,7 +75226,7 @@ aae
 aae
 aae
 aae
-tDz
+aCj
 huu
 huu
 huu
@@ -76984,7 +76983,7 @@ aaa
 uMR
 qnk
 oYD
-dPe
+tDz
 dPe
 dPe
 lbN
