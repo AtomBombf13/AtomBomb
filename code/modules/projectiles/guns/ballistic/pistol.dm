@@ -333,7 +333,7 @@
 /obj/item/gun/ballistic/automatic/pistol/autoloader
 	name = ".45 Autoloader"
 	desc = "A sleek looking handgun chambered in .45 ACP for all your operating needs. Don't let the slide catch your finger though."
-	icon_state = "mk23"
+	icon_state = "autoloader"
 	init_mag_type = /obj/item/ammo_box/magazine/m45/socom
 	mag_type = /obj/item/ammo_box/magazine/m45 // load any .45 pistol ammos	
 	w_class = WEIGHT_CLASS_NORMAL

@@ -436,8 +436,8 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_NAKED_WOUND_MULT 0.75
 
 /// Bullet speed defines
-#define BULLET_SPEED_BASE (TILES_TO_PIXELS(30)) //960 (30 tiles per second, 32 pixels per tile)
-// No less than 25 tiles per second (x * 0.83ish), please
+#define BULLET_SPEED_BASE (TILES_TO_PIXELS(20)) //640 (20 tiles per second, 32 pixels per tile)
+// No less than 20 tiles per second (x * 0.83ish), please
 #define BULLET_SPEED_PISTOL_LIGHT (BULLET_SPEED_BASE * 0.85)
 #define BULLET_SPEED_PISTOL_MEDIUM (BULLET_SPEED_BASE * 0.90)
 #define BULLET_SPEED_PISTOL_HEAVY (BULLET_SPEED_BASE * 0.90)

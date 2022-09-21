@@ -204,7 +204,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 	loadout_options = list(
 		/datum/outfit/loadout/palacent,		// 10mm SMG, Goliath, CQC
-		/datum/outfit/loadout/rangerhunter,	// Hunting Revolver, AMR, Spatha
+		/datum/outfit/loadout/rangerhunter,	// Hunting Revolver, DKS, Spatha
 		/datum/outfit/loadout/centurion,	// M1919, Hunting Revolver
 		)
 
@@ -259,9 +259,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Ranger-Hunter Centurion"
 	suit = /obj/item/clothing/suit/armor/legion/rangercent
 	head = /obj/item/clothing/head/helmet/f13/legion/rangercent
-	suit_store = /obj/item/gun/ballistic/rifle/mag/antimateriel
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/amr = 2,
+		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/ammo_box/c4570 = 3,
 		/obj/item/gun/ballistic/revolver/hunting = 1,
 		/obj/item/melee/onehanded/machete/spatha = 1,
@@ -296,7 +296,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 	loadout_options = list(
 		/datum/outfit/loadout/decvetbull,	// Supersledge, 10mm SMG, Smokebomb
-		/datum/outfit/loadout/decvetwolf,	// Thermic lance, M2045 Unique, Extra Bitter
+		/datum/outfit/loadout/decvetwolf,	// Thermic lance, .45 revoler, Extra Bitter
 		/datum/outfit/loadout/decvetsnake, // Brush gun, Ripper, Extra Bitters
 		/datum/outfit/loadout/decvetbrave, // trench shotgun, 44 revolver, ballistic fist
 		)
@@ -349,7 +349,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/twohanded/thermic_lance
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
-		/obj/item/gun/ballistic/revolver/m2405 = 1,
+		/obj/item/gun/ballistic/revolver/revolver45 = 1,
 		/obj/item/reagent_containers/pill/bitterdrink = 2,
 		)
 
