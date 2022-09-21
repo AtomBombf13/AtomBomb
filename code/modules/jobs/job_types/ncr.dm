@@ -527,7 +527,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 1750
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
-		/datum/outfit/loadout/vrclassic, // AMR, Sequoia
+		/datum/outfit/loadout/vrclassic, // DKS, Sequoia
 		/datum/outfit/loadout/vrlite, // Brush, Sequoia
 		/datum/outfit/loadout/vrshotgunner, // Winchester City-Killer, Sequoia
 		)
@@ -568,13 +568,12 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		)
 
 /datum/outfit/loadout/vrclassic
-	name = "Classic Veteran Ranger"
-	suit_store = /obj/item/gun/ballistic/rifle/mag/antimateriel
+	name = "Sniper Veteran Ranger"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/amr = 2,
+		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
 		/obj/item/ammo_box/c4570box/knockback = 1,
-		/obj/item/ammo_box/magazine/amr/penetrator = 1,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
 
@@ -613,7 +612,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 500
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
-	/datum/outfit/loadout/rangerrecon, // DKS Sniper rifle, .45 Revolver
+	/datum/outfit/loadout/rangerrecon, // Marksman carbine, .45 Revolver
 	/datum/outfit/loadout/rangertrail, // Trail Carbine, .357 Revolvers
 	/datum/outfit/loadout/rangerpatrol, // R91 Assault Rifle, .44 SA Revolver
 	/datum/outfit/loadout/rangerpatrolcqb, // Lever shotgun, .44 Snubnose revolver
@@ -658,9 +657,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	belt = /obj/item/storage/belt/military/reconbandolier
 	head = /obj/item/clothing/head/beret/ncr_recon_ranger
 	neck = /obj/item/clothing/neck/mantle/ranger
-	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308 = 3,
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
 		/obj/item/ammo_box/c45rev = 2,
 		)
@@ -788,9 +787,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 60
 
 	loadout_options = list( // ALL: Trench tool, Limited blueprints
-		/datum/outfit/loadout/combatengineerbuilder, // R82, X4 explosive, Extra materials
+		/datum/outfit/loadout/combatengineerbuilder, // Police Carbine, X4 explosive, Extra materials
 		/datum/outfit/loadout/combatengineertrapper, // 10mm SMG, Minelaying, Explosive Crafting
-		/datum/outfit/loadout/combatengineerflamethrower, // Flamer, R82
+		/datum/outfit/loadout/combatengineerflamethrower, // Flamer, Automag
 		/datum/outfit/loadout/combatengineerrocketeer, // Rocket launcher, Explosive Crafting
 		)
 
@@ -1013,7 +1012,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 90
 
 	loadout_options = list(
-		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Marksman Carbine, 9mm sidearm
+		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Scout carbine, 9mm sidearm
 		/datum/outfit/loadout/corporalcqc,					 // Hunting Shotgun
 		/datum/outfit/loadout/corporalcommand,				 // Intel and backline support
 		)
@@ -1051,7 +1050,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	head = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
 	belt = /obj/item/storage/belt/legholster
-	suit_store = /obj/item/gun/ballistic/automatic/marksman
+	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
