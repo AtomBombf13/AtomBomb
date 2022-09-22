@@ -1143,7 +1143,7 @@
 	time_per_page = 0
 
 /obj/item/book/granter/trait/tribaltraditions/attack_self(mob/user)
-	var/list/choices = list("Dead Horses traditions","Rustwalkers traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")
+	var/list/choices = list("Dead Horses traditions","Rustwalkers traditions","Sorrows traditions","Bone Dancer traditions")
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)
@@ -1177,10 +1177,6 @@
 				granted_trait = TRAIT_SORROWS_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/sorrows/armour, /datum/crafting_recipe/tribalwar/sorrows/garb, /datum/crafting_recipe/tribalwar/sorrows/femalegarb,
 								/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
-			if("Wayfarer traditions")
-				traitname = "Wayfarer traditions"
-				granted_trait = TRAIT_WAYFARER_TRAD
-				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
 			if("Bone Dancer traditions")
 				traitname = "Bone Dancer traditions"
 				granted_trait = TRAIT_BONEDANCER_TRAD
