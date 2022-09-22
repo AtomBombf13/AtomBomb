@@ -982,8 +982,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/job/CaesarsLegion/Legionnaire/f13immune
 	title = "Legion Immune"
 	flag = F13IMMUNE
-	total_positions = 4
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
 	supervisors = "the Centurion."
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
@@ -1016,8 +1016,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/job/CaesarsLegion/Legionnaire/f13campfollower	// Extra materials, Blueprints
 	title = "Legion Forgemaster"
 	flag = F13CAMPFOLLOWER
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "The Forgemaster makes weapons of all sorts and upgrades them, keeping order in the Forge and makes sure the camp is defended."
 	supervisors = "the Centurion."
 	display_order = JOB_DISPLAY_ORDER_CAMPFOLLOWER
@@ -1150,6 +1150,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/clothing/under/f13/legauxilia = 1,
 		)
+
 /datum/outfit/loadout/auxopifex
 	name = "Opifex (Artisan)"
 	neck = /obj/item/clothing/neck/apron/labor/forge
@@ -1211,7 +1212,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	neck = /obj/item/electropack/shockcollar
 	shoes =	null
 	l_pocket = /obj/item/radio
-
 
 //Servants cook, clean, help with medical tasks.
 /datum/outfit/loadout/slaveservant

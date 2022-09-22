@@ -54,8 +54,7 @@ Administrator
 	outfit = /datum/outfit/job/followers/f13leadpractitioner
 	loadout_options = list(
 	/datum/outfit/loadout/surgical_specialist,
-	/datum/outfit/loadout/chemical_specialist,
-	/datum/outfit/loadout/research_specialist
+	/datum/outfit/loadout/chemical_specialist
 	)
 
 	access = list(ACCESS_FOLLOWER, ACCESS_COMMAND, ACCESS_MILITARY, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
@@ -122,22 +121,16 @@ Administrator
 		/obj/item/reagent_containers/glass/beaker/bluespace = 1,
 	)
 
-/datum/outfit/loadout/research_specialist
-	name =	"Research Specialist"
-	backpack_contents = list(
-		/obj/item/circuitboard/machine/ore_redemption = 1,
-		/obj/item/blueprint/research = 1,
-	)
-
 //Professor
 
+/* Not needed - town runs research now.
 /datum/job/followers/f13Professor
 	title = "Followers Scientist"
 	flag = F13PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance."
 	description = "You are a Follower Scientist. As a Scientist it is your job to teach the wastes- be it teaching them how to make medicine, grow crops or treat toxic water. You are a learned individual in your chosen field, you know how to do research and have all the basic tools to teach others how to handle the technology they will come across. You are free to expand upon what projects you wish to accomplish as long as they align with the principles of the Followers."
 	forbids = "Causing harm to others except in times of self-defense. Leaving the hospital without a plan or being accompanied by a guard. Treating raiders or slavers without a good reason."
@@ -210,7 +203,7 @@ Administrator
 		/obj/item/gun/syringe/dart = 1,
 		/obj/item/reagent_containers/syringe/dart = 3,
 	)
-
+*/
 /*
 Practitioner
 */
@@ -219,8 +212,8 @@ Practitioner
 	flag = F13PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance."
 	description = "You are a Followers Doctor. As a Followers Doctor it is your responsibility to maintain working order in the hospital and to manage its staff and to treat patients who come in regardless of whether or not they can afford care. Some Doctors are known for leaving the hospital with a guard to look for injured or those who need help who may not come to a health facility, however it is key that those who do travel around to give aid keep in touch with the rest of staff and if there are no other able physicans or chemist that they stay to offer the best aid possible."
 	forbids = "Causing harm to others except in times of self-defense. Leaving the hospital without a plan or being accompanied by a guard. Treating raiders or slavers without a good reason."
@@ -344,8 +337,8 @@ Follower Volunteer
 	flag = F13FOLLOWERVOLUNTEER
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "Followers having no strict command structure, don't report to anyone- though they will look to the Administrator for guidance and the other Doctors as well."
 	description = "You are a Follower Volunteer. As a Volunteer, you make sure they get connected to the right people to find treatment, assist in the functions of the hospital, learn from senior Followers, and utilize first aid to the best of your capacity when Doctors are not present."
 	forbids = "Causing harm to others except in times of self-defense. Leaving the hospital without a plan or being accompanied by a guard. Treating raiders or slavers without a good reason."
