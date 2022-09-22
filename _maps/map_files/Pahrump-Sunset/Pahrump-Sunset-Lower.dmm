@@ -8840,6 +8840,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
+"ede" = (
+/obj/structure/closet/crate/wicker,
+/turf/open/floor/f13/wood,
+/area/f13/city)
 "edg" = (
 /obj/machinery/vending/tool,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -10873,6 +10877,14 @@
 	dir = 4
 	},
 /area/f13/caves)
+"fNM" = (
+/obj/machinery/computer/card/enclave{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/enclave)
 "fNV" = (
 /mob/living/simple_animal/hostile/supermutant/legendary,
 /turf/open/indestructible/ground/inside/subway,
@@ -14925,6 +14937,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/table/wood,
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "joy" = (
@@ -24320,7 +24333,8 @@
 /obj/structure/guncase,
 /obj/item/gun/ballistic/revolver/caravan_shotgun,
 /obj/item/gun/ballistic/revolver/caravan_shotgun,
-/obj/item/gun/ballistic/automatic/smg/american180,
+/obj/item/gun/ballistic/automatic/pistol/ninemil,
+/obj/item/gun/ballistic/automatic/pistol/ninemil,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -62375,7 +62389,7 @@ dQU
 dQU
 ajU
 qBr
-qBr
+fNM
 qBr
 rzI
 ajU
@@ -71537,7 +71551,7 @@ brV
 brV
 ykm
 ykm
-brV
+uus
 brV
 brV
 agg
@@ -72563,7 +72577,7 @@ bsC
 iCR
 uus
 qpW
-brV
+ede
 ykm
 hDt
 hDt

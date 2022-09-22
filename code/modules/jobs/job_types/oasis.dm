@@ -48,8 +48,8 @@ Mayor
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/den/f13mayor
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -200,8 +200,8 @@ Mayor
 	/datum/outfit/loadout/thechief
 	)
 
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -279,8 +279,8 @@ Mayor
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/oasis/f13detective
 
-	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
@@ -337,8 +337,8 @@ Mayor
 	/datum/outfit/loadout/swat,)
 
 	outfit = /datum/outfit/job/den/f13deputy
-	access = list(ACCESS_BAR, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -496,19 +496,19 @@ Mayor
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13prospector
-	title = "Roadie"
+	title = "Prospector"
 	flag = F13PROSPECTOR
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 4
 	supervisors = "The Alderman and Merchant"
-	description = "Operate the shop when the Merchant's asleep or just isn't there, push and pull those crates to and fro like your life depends on it (and when your paycheck is based on performance, well, it certainly does). If there are no crates to pick up, head out into the wastes and start scavenging for anything you could sell at an extortionate price."
+	description = "You are employeed by the local town merchant to bring in gear, supplies, and materials in exchange for caps. Pay varies depending on what you bring in so.. sometimes it's not great work, but it's honest work."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13prospector
 
-	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+	access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
 
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -604,8 +604,8 @@ Mayor
 	/datum/outfit/loadout/holidaydoc)
 
 	outfit = /datum/outfit/job/den/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
+	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -698,8 +698,8 @@ Mayor
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the free market and Alderman"
-	description = "As proprietor of the inn, you are responsible for ensuring both citizens and travellers in Eastwood can get some food, drink and rest. Speak to the farmers for fresh produce!"
-	enforces = "Your inn is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
+	description = "As proprietor of the town saloon, you are responsible for ensuring both citizens and travellers in Eastwood can get some food, drink and rest. Speak to the farmers for fresh produce!"
+	enforces = "Your saloon is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13barkeep
@@ -1029,17 +1029,17 @@ Mayor
 	title = "Merchant"
 	flag = F13SHOPKEEPER
 	department_flag = DEP_OASIS
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the free market and Overseer"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the free market and the Alderman"
 	description = "Trade deals fall upon your shoulders to negotiate with those around the town, so ensure you never give more than you've got. Of course, selling the town is the worst thing you could do, so it should go without saying that you can't do that. Negotiate with the traders of the wastes, extort them for the shirt on their back, or set them up for life, it's up to you to decide."
 	enforces = "Your store is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
 	exp_requirements = 300
 
 	outfit = /datum/outfit/job/den/f13shopkeeper
-	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
+	access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -1194,7 +1194,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the leader of the local desperado gang, a gang of bandits, cattle-rustlers, hitmen, loan-sharkers and various other criminal activities. Luckily for you, you own the casino in town with your fellow 'buisness partners'. Make use of it, keep your men in line, and turn a profit. Be it working with the locals or against them."
-	supervisors = "Whatever god you pray to. Sky's the limit!"
+	supervisors = "Whatever god you pray to. The sky's the limit!"
 	selection_color = "#ff4747"
 	exp_requirements = 500
 	exp_type = EXP_TYPE_OUTLAW

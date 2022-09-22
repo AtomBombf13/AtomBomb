@@ -142,7 +142,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the commanding officer of your company and direct superior to the Veteran Ranger and Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
+	description = "You are the commanding officer of your company and direct superior to the MPs, the SEA, and the Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
 	supervisors = "Colonel"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_CHANGE_IDS, ACCESS_NCRREP, ACCESS_NCR_COMMAND)
 	req_admin_notify = 1
@@ -370,7 +370,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	flag = F13DRILLSERGEANT
 	total_positions = 1
 	spawn_positions = 1
-	description = "The direct superior to all enlisted, you are to provide training exercises, maintain military discipline, and instill orderliness within the ranks. You may also manage the NCOs. You are the pinnacle of the NCR's enlisted ranks, and are to advise the commissioned officers. You are not a frontline trooper, you are camp support."
+	description = "The direct superior to all enlisted, you are to provide training exercises, maintain military discipline, and instill orderliness within the ranks. You may also manage the military police. You are the pinnacle of the NCR's enlisted ranks, and are to advise the commissioned officers. You are not a frontline trooper, you are camp support."
 	supervisors = "Lieutenant and Above"
 	selection_color = "#fff5cc"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
@@ -438,7 +438,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13representative
 	title = "NCR Representative"
 	flag = F13REP
-	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCRREP)
+	access = list(ACCESS_NCR, ACCESS_NCRREP)
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are an influential representative for the NCR and experienced bureaucrat. You are here to further the objective and ensure the interests of the NCR, your company or own enterprise are met through thick and thin, and have been supplied with ample amounts of money to do so."
@@ -890,8 +890,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	flag = F13MP
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are NOT allowed to participate in front-line combat outside the base/embassy. You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening."
-	supervisors = "NCRA Officers"
+	description = "You are NOT allowed to participate in front-line combat outside the base/embassy. You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening. Orders of arrests or diciplinary measures may be given to you from the Senior Enlisted Advisor or Officers unless they are in violation of COMJ."
+	supervisors = "NCRA Officers and the Senior Enlisted Advisor"
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_TROOPER
 	outfit = /datum/outfit/job/ncr/f13mp
@@ -1290,7 +1290,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 
 // LOGISTICS OFFICER
-
+/* Coded out for now - reason being there's no reason for an LO if there is no cargo system for NCR. Armory 'RP' isn't attractive and is rolebloat.
 /datum/job/ncr/f13logisticsofficer
 	title = "NCR Logistics Officer"
 	flag = F13LOGISTICSOFFICER
@@ -1361,15 +1361,17 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/book/granter/trait/explosives_advanced = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
 		)
-
+*/
 
 // REAR ECHELON
+
+// Basically off-duty and civilian-tier roles. May removed civilian-tier roles at a later date. Allows RP value for now. - Rebel0
 
 /datum/job/ncr/f13rearechelon
 	title = "NCR Rear Echelon"
 	flag = F13REARECHELON
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 5
+	spawn_positions = 5
 	description = "You are the support element sent to assist the Camp Miller garrison. You are essential specialized support staff to help sustain the base via supply or specialized skills. You are not allowed to leave base unless given an explicit order by the CO or the current acting CO."
 	supervisors = "Logistics/Medical officer first, regular chain of command after that."
 	selection_color = "#fff5cc"
@@ -1381,7 +1383,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	loadout_options = list( // ALL: Very limited blueprints
 		/datum/outfit/loadout/rearlog, // Varmint rifle, Trench tool
 		/datum/outfit/loadout/reartech, // Hunting shotgun, Survival knife, Toolbelt, Metal detector, Salvaging
-		/datum/outfit/loadout/rearcorps, // 9mm sidearm, Survival knife, Chemistry
 		/datum/outfit/loadout/offduty, // 9mm sidearm, Bayonet
 		)
 
@@ -1430,23 +1431,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/metaldetector = 1,
 		/obj/item/weldingtool/largetank = 1,
-		/obj/item/storage/bag/money/small/ncrenlisted = 1,
-		)
-
-// Corpsman		Chemistry, simple medical
-/datum/outfit/loadout/rearcorps
-	name = "Corpsman"
-	suit = /obj/item/clothing/suit/armor/light/utilityvest
-	belt = /obj/item/storage/belt/medical
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	belt = /obj/item/storage/belt/legholster
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
-		/obj/item/ammo_box/magazine/m9mm/doublestack = 2,
-		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/book/granter/trait/chemistry = 1,
-		/obj/item/book/granter/trait/lowsurgery = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		)
 
