@@ -819,8 +819,10 @@
 	loot = list(/obj/effect/spawner/bundle/f13/ninemil,
 				/obj/effect/spawner/bundle/f13/caravan_shotgun,
 				/obj/item/gun/ballistic/rifle/hunting, //No. More. Mosin.
+				/obj/effect/spawner/bundle/f13/rockwell,
 				/obj/effect/spawner/bundle/f13/remington,
 				/obj/effect/spawner/bundle/f13/widowmaker,
+				/obj/effect/spawner/bundle/f13/sportcarbine,
 				/obj/effect/spawner/bundle/f13/varmint
 				)
 
@@ -1151,6 +1153,20 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/mini_uzi,
 				/obj/item/ammo_box/magazine/uzim9mm/
+				)
+
+/obj/effect/spawner/bundle/f13/rockwell
+	name = ".22 rockwell and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/smg/rockwell,
+				/obj/item/ammo_box/magazine/m22/extended
+				)
+
+/obj/effect/spawner/bundle/f13/sportcarbine
+	name = "sport carbine and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/sportcarbine,
+				/obj/item/ammo_box/magazine/m22/extended
 				)
 
 /obj/effect/spawner/bundle/f13/smg10mm
