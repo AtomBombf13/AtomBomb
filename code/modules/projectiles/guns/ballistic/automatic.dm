@@ -187,6 +187,48 @@
 	fire_sound_silenced = 'sound/f13weapons/american180.ogg'
 
 /* * * * * * * * * * *
+ * Rockwell .22 SMG
+ * Lighter .22 SMG
+ * .22
+ * Faster firing
+ * Less damage
+ * One-handed
+ * Akimbo!
+ * Common
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/smg/rockwell
+	name = "Rockwell SMG"
+	desc = "A crude, very lightweight submachine gun. For when you really want to politely ask someone to be dead. Uses .22LR rounds."
+	icon_state = "rockwell"
+	item_state = "uzi"
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/m22/extended
+	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
+
+	slowdown = GUN_SLOWDOWN_SMG_LIGHT
+	force = GUN_MELEE_FORCE_PISTOL_LIGHT
+	weapon_weight = GUN_ONE_HAND_AKIMBO
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_FASTER
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	cock_delay = GUN_COCK_RIFLE_BASE
+	init_firemodes = list(
+		SEMI_AUTO_NODELAY,
+		FULL_AUTO_800
+	)
+	automatic = 1
+	is_automatic = TRUE
+	can_suppress = TRUE
+	suppressor_state = "uzi_suppressor"
+	suppressor_x_offset = 30
+	suppressor_y_offset = 18
+	//actions_types = list(/datum/action/item_action/toggle_firemode)
+
+/* * * * * * * * * * *
  * Uzi 9mm SMG
  * Light 9mm SMG
  * 9mm
@@ -797,6 +839,55 @@
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	fire_sound = 'sound/f13weapons/combatrifle.ogg'
+
+/* * * * * * * * * * *
+ * 10/22ish carbine
+ * .22 LR
+ * Higher damage
+ * Found all over the place
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/sportcarbine
+	name = "sport carbine"
+	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
+	icon_state = "varmint"
+	item_state = "varmintrifle"
+	mag_type = /obj/item/ammo_box/magazine/m22
+	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
+
+	slowdown = GUN_SLOWDOWN_CARBINE
+	force = GUN_MELEE_FORCE_RIFLE_LIGHT
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_FAST
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // its a weakass cartridge
+	cock_delay = GUN_COCK_RIFLE_BASE
+	init_recoil = CARBINE_RECOIL(0.5)
+	init_firemodes = list(
+		SEMI_AUTO_NODELAY
+	)
+	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+
+	max_upgrades = 5 // moddable to fuck and fack
+
+	automatic_burst_overlay = FALSE
+	can_bayonet = TRUE
+	bayonet_state = "bayonetstraight"
+	knife_x_offset = 27
+	knife_y_offset = 29
+	can_scope = TRUE
+	scope_state = "scope_short"
+	scope_x_offset = 4
+	scope_y_offset = 12
+	semi_auto = TRUE
+	can_suppress = TRUE
+	suppressor_state = "rifle_suppressor"
+	suppressor_x_offset = 27
+	suppressor_y_offset = 31
+	fire_sound = 'sound/weapons/Gunshot2.ogg'
 
 /* * * * * * * * * * *
  * Semi-auto Rifles  *
