@@ -16,36 +16,6 @@
 	cost = 800
 	contains = list(/obj/item/clothing/gloves/color/yellow)
 
-/datum/supply_pack/goody/firstaidbruises_single
-	name = "Bruise Treatment Kit Single-Pack"
-	desc = "A single brute first-aid kit, perfect for recovering from being crushed in an airlock. Did you know people get crushed in airlocks all the time? Interesting..."
-	cost = 330
-	contains = list(/obj/item/storage/firstaid/brute)
-
-/datum/supply_pack/goody/firstaidburns_single
-	name = "Burn Treatment Kit Single-Pack"
-	desc = "A single burn first-aid kit. The advertisement displays a winking atmospheric technician giving a thumbs up, saying \"Mistakes happen!\""
-	cost = 330
-	contains = list(/obj/item/storage/firstaid/fire)
-
-/datum/supply_pack/goody/firstaid_single
-	name = "First Aid Kit Single-Pack"
-	desc = "A single first-aid kit, fit for healing most types of bodily harm."
-	cost = 250
-	contains = list(/obj/item/storage/firstaid/regular)
-
-/datum/supply_pack/goody/firstaidoxygen_single
-	name = "Oxygen Deprivation Kit Single-Pack"
-	desc = "A single oxygen deprivation first-aid kit, marketed heavily to those with crippling fears of asphyxiation."
-	cost = 330
-	contains = list(/obj/item/storage/firstaid/o2)
-
-/datum/supply_pack/goody/firstaidtoxins_single
-	name = "Toxin Treatment Kit Single-Pack"
-	desc = "A single first aid kit focused on healing damage dealt by heavy toxins."
-	cost = 330
-	contains = list(/obj/item/storage/firstaid/toxin)
-
 /datum/supply_pack/goody/toolbox // mostly just to water down coupon probability
 	name = "Mechanical Toolbox"
 	desc = "A fully stocked mechanical toolbox, for when you're too lazy to just print them out."

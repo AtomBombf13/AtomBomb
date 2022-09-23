@@ -1378,7 +1378,7 @@
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 
 /* * * * * * * * * * *
- * Police Assault Rifle
+ * AK-112 Assault Rifle
  * Baseline 5mm autorifle
  * 5mm
  * Less damage

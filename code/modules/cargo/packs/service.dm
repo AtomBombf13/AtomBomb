@@ -42,7 +42,7 @@
 					/obj/item/stack/packageWrap,
 					/obj/item/stack/packageWrap)
 	crate_name = "cargo supplies crate"
-
+/*
 /datum/supply_pack/service/mule
 	name = "MULEbot Crate"
 	desc = "Pink-haired Quartermaster not doing her job? Replace her with this tireless worker, today!"
@@ -75,7 +75,7 @@
 			/obj/item/clothing/mask/gas/explorer = 1)
 	crate_name = "Snowmobile kit"
 	crate_type = /obj/structure/closet/crate/large
-
+*/
 //////////////////////////////////////////////////////////////////////////////
 /////////////////////// Chef, Botanist, Bartender ////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -146,7 +146,7 @@
 /datum/supply_pack/service/cutlery
 	name = "Kitchen Cutlery Deluxe Set"
 	desc = "Need to slice and dice away those \"Tomatoes\"? Well we got what you need! From a nice set of knifes, forks, plates, glasses, and a whetstone for when you got some grizzle that is a bit harder to slice then normal."
-	cost = 10000
+	cost = 7500
 	contraband = TRUE
 	contains = list(/obj/item/sharpener, //Deluxe for a reason
 					/obj/item/trash/plate,
@@ -177,7 +177,7 @@
 /datum/supply_pack/service/advlighting
 	name = "Advanced Lighting crate"
 	desc = "Thanks to advanced lighting tech we here at the Lamp Factory have be able to produce more lamps and lamp items! This crate has three lamps, a box of lights and a state of the art rapid-light-device!"
-	cost = 2750
+	cost = 1800
 	contains = list(/obj/item/construction/rld,
 					/obj/item/flashlight/lamp,
 					/obj/item/flashlight/lamp,
@@ -195,7 +195,7 @@
 					/obj/item/storage/box/lights/mixed,
 					/obj/item/lightreplacer)
 	crate_name = "replacement lights"
-
+/*
 /datum/supply_pack/service/janitor/advanced
 	name = "Advanced Sanitation Crate"
 	desc = "Contains all the essentials for an advanced spacefaring cleanup crew. This kit includes a trashbag, an advanced mop, a bottle of space cleaner, a floor buffer, and a holosign projector. Requires Janitorial Access to Open"
@@ -272,4 +272,4 @@
 					/obj/item/clothing/shoes/galoshes)
 	crate_name = "janitorial cart crate"
 	crate_type = /obj/structure/closet/crate/large
-
+*/

@@ -154,6 +154,9 @@
 	//Mob may be offset randomly on both axes by this much
 	var/randpixel = 0
 
+	/// Sets up mob diversity
+	var/list/variation_list = list()
+
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	GLOB.simple_animals[AIStatus] += src
@@ -181,7 +184,7 @@
 	var/turf/T = get_turf(src)
 	if (T && AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[T.z] -= src
-	
+
 	QDEL_NULL(access_card)
 
 	return ..()
@@ -667,3 +670,90 @@
 				if(nest.resolve(maybe_us) == src)
 					our_nest.spawned_mobs -= maybe_us
 	nest = null
+
+/mob/living/simple_animal/proc/setup_variations()
+	if(!LAZYLEN(variation_list))
+		return FALSE // we're good here
+	if(LAZYLEN(variation_list[MOB_VARIED_NAME_GLOBAL_LIST]))
+		vary_mob_name_from_global_lists()
+	else if(LAZYLEN(variation_list[MOB_VARIED_NAME_LIST]))
+		vary_mob_name_from_local_list()
+	if(LAZYLEN(variation_list[MOB_VARIED_COLOR]))
+		vary_mob_color()
+	if(LAZYLEN(variation_list[MOB_VARIED_HEALTH]))
+		var/our_health = vary_from_list(variation_list[MOB_VARIED_HEALTH])
+		maxHealth = our_health
+		health = our_health
+	return TRUE
+
+/mob/living/simple_animal/proc/vary_from_list(which_list, weighted_list = FALSE)
+	if(isnum(which_list))
+		return which_list
+	if(islist(which_list))
+		if(weighted_list)
+			return(pickweight(which_list))
+		return(pick(which_list))
+
+/mob/living/simple_animal/proc/vary_mob_name_from_global_lists()
+	var/list/our_mob_random_name_list = variation_list[MOB_VARIED_NAME_GLOBAL_LIST]
+	var/our_new_name = ""
+	var/number_of_name_tokens_left = LAZYLEN(variation_list[MOB_VARIED_NAME_GLOBAL_LIST])
+	for(var/name_token in our_mob_random_name_list)
+		for(var/num_names in 1 to our_mob_random_name_list[name_token])
+			switch(name_token)
+				if(MOB_NAME_RANDOM_MALE)
+					our_new_name += capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+				if(MOB_NAME_RANDOM_FEMALE)
+					our_new_name += capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+				if(MOB_NAME_RANDOM_LIZARD_MALE)
+					our_new_name += capitalize(lizard_name(MALE))
+				if(MOB_NAME_RANDOM_LIZARD_FEMALE)
+					our_new_name += capitalize(lizard_name(FEMALE))
+				if(MOB_NAME_RANDOM_PLASMAMAN)
+					our_new_name += capitalize(plasmaman_name())
+				if(MOB_NAME_RANDOM_ETHERIAL)
+					our_new_name += capitalize(ethereal_name())
+				if(MOB_NAME_RANDOM_MOTH)
+					our_new_name += capitalize(pick(GLOB.moth_first)) + " " + capitalize(pick(GLOB.moth_last))
+			if(num_names < our_mob_random_name_list[name_token])
+				our_new_name += " "
+		if(number_of_name_tokens_left-- > 0)
+			our_new_name += " "
+	if(our_new_name != "")
+		name = our_new_name
+
+/mob/living/simple_animal/proc/vary_mob_name_from_local_list()
+	name = pick(variation_list[MOB_VARIED_NAME_LIST])
+
+/mob/living/simple_animal/proc/vary_mob_color()
+	if(LAZYLEN(variation_list[MOB_VARIED_COLOR][MOB_VARIED_COLOR_MIN]) != 3)
+		return
+	if(LAZYLEN(variation_list[MOB_VARIED_COLOR][MOB_VARIED_COLOR_MAX]) != 3)
+		return
+
+	var/list/our_mob_random_color_list = variation_list[MOB_VARIED_COLOR]
+	var/list/colors = list()
+
+	if(our_mob_random_color_list[MOB_VARIED_COLOR_MIN][1] < 1 && our_mob_random_color_list[MOB_VARIED_COLOR_MAX][1] < 1)
+		colors["red"] = 255
+	else
+		var/list/red_numbers = put_numbers_in_order(our_mob_random_color_list[MOB_VARIED_COLOR_MIN][1], our_mob_random_color_list[MOB_VARIED_COLOR_MAX][1])
+		colors["red"] = rand(red_numbers[1], red_numbers[2])
+
+	if(our_mob_random_color_list[MOB_VARIED_COLOR_MIN][2] < 1 && our_mob_random_color_list[MOB_VARIED_COLOR_MAX][2] < 1)
+		colors["green"] = 255
+	else
+		var/list/green_numbers = put_numbers_in_order(our_mob_random_color_list[MOB_VARIED_COLOR_MIN][2], our_mob_random_color_list[MOB_VARIED_COLOR_MAX][2])
+		colors["green"] = rand(green_numbers[1], green_numbers[2])
+
+	if(our_mob_random_color_list[MOB_VARIED_COLOR_MIN][3] < 1 && our_mob_random_color_list[MOB_VARIED_COLOR_MAX][3] < 1)
+		colors["blue"] = 255
+	else
+		var/list/blue_numbers = put_numbers_in_order(our_mob_random_color_list[MOB_VARIED_COLOR_MIN][3], our_mob_random_color_list[MOB_VARIED_COLOR_MAX][3])
+		colors["blue"] = rand(blue_numbers[1], blue_numbers[2])
+	color = rgb(clamp(colors["red"], 0, 255), clamp(colors["green"], 0, 255), clamp(colors["blue"], 0, 255))
+
+/mob/living/simple_animal/proc/put_numbers_in_order(num_1, num_2)
+	if(num_1 < num_2)
+		return list(num_1, num_2)
+	return list(num_2, num_1)

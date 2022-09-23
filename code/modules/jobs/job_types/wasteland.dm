@@ -379,7 +379,7 @@ Raider
 		/obj/item/reagent_containers/food/drinks/shaker = 1,
 		/obj/item/book/granter/action/drink_fling = 1,
 		/obj/item/reagent_containers/spray/cleaner = 1,
-		/obj/item/storage/belt/legholster/police = 1,
+		/obj/item/storage/belt/legholster = 1,
 		/obj/item/clothing/under/f13/sleazeball = 1,
 		/obj/item/clothing/head/helmet/f13/bowler = 1,
 		/obj/item/clothing/shoes/laceup = 1,

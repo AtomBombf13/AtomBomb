@@ -9,7 +9,7 @@
 /datum/supply_pack/engineering
 	group = "Engineering"
 	crate_type = /obj/structure/closet/crate/engineering
-
+/*
 /datum/supply_pack/engineering/shieldgen
 	name = "Anti-breach Shield Projector Crate"
 	desc = "Hull breaches again? Say no more with the Nanotrasen Anti-Breach Shield Projector! Uses forcefield technology to keep the air in, and the space out. Contains two shield projectors."
@@ -17,7 +17,7 @@
 	contains = list(/obj/machinery/shieldgen,
 					/obj/machinery/shieldgen)
 	crate_name = "anti-breach shield projector crate"
-
+*/
 /datum/supply_pack/engineering/conveyor
 	name = "Conveyor Assembly Crate"
 	desc = "Keep production moving along with fifteen conveyor belts. Conveyor switch included. If you have any questions, check out the enclosed instruction book."
@@ -80,7 +80,7 @@
 					/obj/item/clothing/head/helmet/space/rad)
 	crate_name = "radiation hardsuit"
 	crate_type = /obj/structure/closet/crate/secure/engineering
-*/
+
 /datum/supply_pack/engineering/industrialrcd
 	name = "Industrial RCD"
 	desc = "An industrial RCD in case the station has gone through more then one meteor storm and the CE needs to bring out the somthing a bit more reliable. Does not contain spare ammo for the industrial RCD or any other RCD models."
@@ -88,8 +88,8 @@
 	access = ACCESS_CE
 	contains = list(/obj/item/construction/rcd/industrial)
 	crate_name = "industrial rcd"
-	crate_type = /obj/structure/closet/crate/secure/engineering
-
+	crate_type = /obj/structure/closet/crate/secure/engineering*/
+/*
 /datum/supply_pack/engineering/inducers
 	name = "NT-75 Electromagnetic Power Inducers Crate"
 	desc = "No rechargers? No problem, with the NT-75 EPI, you can recharge any standard cell-based equipment anytime, anywhere. Contains two Inducers."
@@ -121,7 +121,7 @@
 	contains = list(/obj/machinery/portable_atmospherics/scrubber,
 					/obj/machinery/portable_atmospherics/scrubber)
 	crate_name = "portable scrubber crate"
-
+*/
 /datum/supply_pack/engineering/power
 	name = "Power Cell Crate"
 	desc = "Looking for power overwhelming? Look no further. Contains three high-voltage power cells."
@@ -155,9 +155,9 @@
 	special = TRUE //Department resupply shuttle loan event.
 
 /datum/supply_pack/engineering/bsa
-	name = "Bluespace Artillery Parts"
-	desc = "The pride of Nanotrasen Naval Command. The legendary Bluespace Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
-	cost = 45000
+	name = "Long-Tom Artillery Parts"
+	desc = "The pride of the United States Army. The legendary Long Tom Nuclear Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
+	cost = 900000
 	special = TRUE
 	contains = list(/obj/item/circuitboard/machine/bsa/front,
 					/obj/item/circuitboard/machine/bsa/middle,

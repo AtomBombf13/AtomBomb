@@ -23,7 +23,7 @@
 	var/locked = FALSE								//when locked nothing can see inside or use it.
 
 	/// Storage flags, including what kinds of limiters we use for how many items we can hold
-	var/storage_flags = STORAGE_FLAGS_LEGACY_DEFAULT
+	var/storage_flags = STORAGE_FLAGS_VOLUME_AND_NUMBER
 	/// Max w_class we can hold. Applies to [STORAGE_LIMIT_COMBINED_W_CLASS] and [STORAGE_LIMIT_VOLUME]
 	var/max_w_class = WEIGHT_CLASS_SMALL
 	/// Max combined w_class. Applies to [STORAGE_LIMIT_COMBINED_W_CLASS]
@@ -76,6 +76,9 @@
 	var/screen_start_x = 4								//These two are where the storage starts being rendered, screen_loc wise.
 	var/screen_start_y = 2
 	//End
+
+	/// How many rows of inventory are shown by default. Only useful for volumetric storage!
+	var/number_of_rows = STORAGE_ROWS_DEFAULT
 
 	var/limited_random_access = FALSE					//Quick if statement in accessible_items to determine if we care at all about what people can access at once.
 	var/limited_random_access_stack_position = 0					//If >0, can only access top <x> items

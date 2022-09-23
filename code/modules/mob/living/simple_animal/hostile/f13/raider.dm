@@ -97,6 +97,7 @@
 	speed = 1.2
 	obj_damage = 300
 	aggro_vision_range = 15
+	rapid_melee = 1
 	loot = list(/obj/item/melee/onehanded/knife/survival, /obj/item/reagent_containers/food/snacks/kebab/human, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -113,6 +114,7 @@
 	projectilesound = 'sound/f13weapons/44mag.ogg'
 	extra_projectiles = 1
 	aggro_vision_range = 15
+	rapid_melee = 1
 	obj_damage = 300
 	loot = list(/obj/item/gun/ballistic/revolver/m29, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
@@ -126,6 +128,7 @@
 	maxHealth = 137
 	health = 136
 	extra_projectiles = 3
+	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
 	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/medium/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
@@ -142,6 +145,7 @@
 	icon_dead = "metal_raider_dead"
 	maxHealth = 144
 	health = 144
+	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
 	projectilesound = 'sound/weapons/gunshot.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/heavy/metal/reinforced, /obj/item/clothing/head/helmet/f13/metalmask/mk2, /obj/item/stack/f13Cash/random/med)
@@ -152,6 +156,7 @@
 	icon_state = "firefighter_raider"
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider_dead"
+	rapid_melee = 1
 	loot = list(/obj/item/twohanded/fireaxe, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -191,6 +196,7 @@
 	melee_damage_upper = 40
 	maxHealth = 160
 	health = 160
+	rapid_melee = 1
 	loot = list(/obj/item/twohanded/baseball, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -211,6 +217,7 @@
 	icon_dead = "tribal_raider_dead"
 	melee_damage_lower = 15
 	melee_damage_upper = 47
+	rapid_melee = 1
 	loot = list(/obj/item/twohanded/spear)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -236,6 +243,7 @@
 	health = 176
 	melee_damage_lower = 20
 	melee_damage_upper = 47
+	rapid_melee = 1
 	loot = list(/obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -254,6 +262,7 @@
 	health = 176
 	melee_damage_lower = 20
 	melee_damage_upper = 55
+	rapid_melee = 1
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/junker
@@ -268,6 +277,7 @@
 	damage_coeff = list(BRUTE = 1, BURN = 0.75, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	melee_damage_lower = 25
 	melee_damage_upper = 50
+	rapid_melee = 1
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/raider/junker/creator
@@ -281,6 +291,7 @@
 	ranged = TRUE
 	retreat_distance = 6
 	minimum_distance = 8
+	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
 	projectilesound = 'sound/weapons/gunshot.ogg'
 	var/list/spawned_mobs = list()
@@ -320,6 +331,7 @@
 	minimum_distance = 6
 	extra_projectiles = 2
 	ranged_cooldown_time = 15
+	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/shrapnel
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	loot = list(/obj/item/stack/f13Cash/random/high)

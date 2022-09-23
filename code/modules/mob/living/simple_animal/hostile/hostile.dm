@@ -446,7 +446,7 @@
 /mob/living/simple_animal/hostile/proc/OpenFire(atom/A)
 	if(CheckFriendlyFire(A))
 		return
-	visible_message("<span class='danger'><b>[src]</b> [ranged_message] at [A]!</span>")
+	visible_message("<span class='danger'><b>[src]</b> [islist(ranged_message) ? pick(ranged_message) : ranged_message] at [A]!</span>")
 
 
 	if(rapid > 1)
@@ -458,6 +458,8 @@
 		for(var/i in 1 to extra_projectiles)
 			addtimer(CALLBACK(src, .proc/Shoot, A), i * auto_fire_delay)
 	ranged_cooldown = world.time + ranged_cooldown_time
+	if(LAZYLEN(variation_list[MOB_PROJECTILE]) >= 2) // Gotta have multiple different projectiles to cycle through
+		projectiletype = vary_from_list(variation_list[MOB_PROJECTILE], TRUE)
 
 
 /mob/living/simple_animal/hostile/proc/Shoot(atom/targeted_atom)
