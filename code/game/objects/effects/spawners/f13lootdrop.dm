@@ -847,7 +847,8 @@
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
 				/obj/effect/spawner/bundle/f13/m1carbine,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
-				/obj/effect/spawner/bundle/f13/revolver45
+				/obj/effect/spawner/bundle/f13/revolver45,
+				/obj/effect/spawner/bundle/f13/beretta/select
 		)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid
@@ -872,7 +873,7 @@
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
 				/obj/effect/spawner/bundle/f13/shotgunlever,
 				/obj/effect/spawner/bundle/f13/brushgun,
-				/obj/effect/spawner/bundle/f13/m14,
+				/obj/effect/spawner/bundle/f13/ak112
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high
@@ -880,20 +881,22 @@
 	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 20,
 				/obj/effect/spawner/bundle/f13/r84 = 10,
 				/obj/effect/spawner/bundle/f13/bar = 5,
+				/obj/effect/spawner/bundle/f13/m14 = 5,
+				/obj/effect/spawner/bundle/f13/assault_carbine = 5,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				/obj/item/gun/ballistic/rocketlauncher = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 1,
-				/obj/item/gun/ballistic/automatic/lsw = 1,
-				/obj/item/gun/ballistic/automatic/bozar = 1
+				/obj/effect/spawner/bundle/f13/guns/p90 = 5,
+				/obj/item/gun/ballistic/automatic/lsw = 5,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
 	name = "superhigh tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/riotshotgun = 5,
+				/obj/item/gun/ballistic/automatic/bozar = 10,
 				/obj/effect/spawner/bundle/f13/amr = 10,
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/rangemaster = 15,
@@ -1268,6 +1271,13 @@
 	name = "assault carbine and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/assault_carbine,
+				/obj/item/ammo_box/magazine/m5mm
+				)
+
+/obj/effect/spawner/bundle/f13/ak112
+	name = "ak-112 assault rifle and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/assault_carbine/worn,
 				/obj/item/ammo_box/magazine/m5mm
 				)
 

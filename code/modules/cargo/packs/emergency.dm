@@ -12,8 +12,7 @@
 /datum/supply_pack/emergency/vehicle
 	name = "Biker Gang Kit" //TUNNEL SNAKES OWN THIS TOWN
 	desc = "TUNNEL SNAKES OWN THIS TOWN. Contains an unbranded All Terrain Vehicle, two cans of spraypaint, and a complete gang outfit -- consists of black gloves, a menacing skull bandanna, and a SWEET leather overcoat!"
-	cost = 2500
-	contraband = TRUE
+	cost = 5500
 	contains = list(/obj/vehicle/ridden/atv,
 					/obj/item/key,
 					/obj/item/toy/crayon/spraycan,
@@ -25,6 +24,7 @@
 	crate_name = "Biker Kit"
 	crate_type = /obj/structure/closet/crate/large
 
+/* Bio outbreaks are disabled so - this is pointless for F13.
 /datum/supply_pack/emergency/bio
 	name = "Biological Emergency Crate"
 	desc = "This crate holds 2 full bio suits which will protect you from viruses, along with a bio bag and two penicillin syringes."
@@ -39,6 +39,7 @@
 					/obj/item/clothing/gloves/color/latex/nitrile,
 					/obj/item/clothing/gloves/color/latex/nitrile)
 	crate_name = "bio suit crate"
+*/
 
 /* //atmospherics ain't a thing, here. why was it even so expensive
 /datum/supply_pack/emergency/equipment

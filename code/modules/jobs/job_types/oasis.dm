@@ -356,7 +356,7 @@ Mayor
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	belt = /obj/item/storage/belt/army/assault
-	suit_store = /obj/item/storage/belt/legholster/police
+	suit_store = /obj/item/storage/belt/legholster
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
@@ -666,7 +666,7 @@ Mayor
 		/obj/item/storage/medical/ancientfirstaid = 1,
 		/obj/item/circuitboard/machine/limbgrower = 1,
 		/obj/item/healthanalyzer/advanced = 1,
-		/obj/item/storage/belt/legholster/police = 1
+		/obj/item/storage/belt/legholster = 1
 		)
 
 /datum/outfit/loadout/mixer

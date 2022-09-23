@@ -269,7 +269,7 @@
 	desc = "Rule the underworld like the Den Mob of old."
 
 /obj/item/storage/box/bundledenboss/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/assault_carbine/worn(src)
+	new /obj/item/gun/ballistic/automatic/assault_carbine/policerifle(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)

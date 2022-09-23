@@ -13,25 +13,36 @@
 
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	robust_searching = 1
+	move_to_delay = 3.1
 	turns_per_move = 5
 	speak_emote = list("growls")
 	emote_see = list("screeches")
 	a_intent = INTENT_HARM
-	maxHealth = 48
-	health = 48
+	maxHealth = 40
+	health = 40
 	speed = 3
 	harm_intent_damage = 8
 	melee_damage_lower = 5
 	melee_damage_upper = 15
 	attack_verb_simple = "claw"
 	attack_sound = 'sound/hallucinations/growl1.ogg'
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	atmos_requirements = list(
+		"min_oxy" = 5,
+		"max_oxy" = 0,
+		"min_tox" = 0,
+		"max_tox" = 1,
+		"min_co2" = 0,
+		"max_co2" = 5,
+		"min_n2" = 0,
+		"max_n2" = 0
+		)
 	unsuitable_atmos_damage = 20
 	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("hostile")
 	decompose = TRUE
 	sharpness = SHARP_EDGED //They need to cut their finger nails
-	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
+	guaranteed_butcher_results = list(
+							/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul = 2,
 							/obj/item/stack/sheet/animalhide/human = 1,
 							/obj/item/stack/sheet/bone = 1)
 
@@ -62,13 +73,29 @@
 	icon_living = "ghoulreaver"
 	icon_dead = "ghoulreaver_dead"
 	speed = 2
-	maxHealth = 96
-	health = 96
+	maxHealth = 80
+	health = 80
+	rapid_melee = 2
+	retreat_distance = 3
+	minimum_distance = 1
+	ranged = TRUE
+	ranged_message = "throws a rock"
+	projectiletype = /obj/item/projectile/bullet/ghoul_rock
+	projectilesound = 'sound/weapons/punchmiss.ogg'
 	harm_intent_damage = 8
 	melee_damage_lower = 9
 	melee_damage_upper = 20
 	loot = list(/obj/item/stack/f13Cash/random/low/medchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
+
+	variation_list = list(
+		MOB_COLOR_VARIATION(200, 200, 200, 255, 255, 255),
+		MOB_PROJECTILE_LIST(\
+			MOB_PROJECTILE_ENTRY(/obj/item/projectile/bullet/ghoul_rock, 10),\
+			MOB_PROJECTILE_ENTRY(/obj/item/projectile/bullet/ghoul_rock/blunt_rock, 10),\
+			MOB_PROJECTILE_ENTRY(/obj/item/projectile/bullet/ghoul_rock/jagged_scrap, 1)\
+		)
+	)
 
 /mob/living/simple_animal/hostile/ghoul/reaver/Initialize()
 	. = ..()

@@ -48,6 +48,7 @@
 	light_range = 2 //luminosity when on
 	flags_cover = HEADCOVERSEYES
 	heat = 1000
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 
 	beepsky_fashion = /datum/beepsky_fashion/cake
 
@@ -92,6 +93,7 @@
 	var/earflaps = 1
 	cold_protection = HEAD
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 
 	dog_fashion = /datum/dog_fashion/head/ushanka
 
@@ -120,6 +122,7 @@
 	light_system = MOVABLE_LIGHT
 	light_range = 2
 	flags_cover = HEADCOVERSEYES
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 
 /obj/item/clothing/head/hardhat/pumpkinhead/blumpkin
 	name = "carved blumpkin"
@@ -320,9 +323,4 @@
 	desc = "A dilapidated helmet, obsolete even by pre-war standards. An ace of spades is tucked into the band around the outer shell."
 	icon_state = "m1helm"
 	item_state = "helmet"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/tiny/spacenam	//So you can stuff other things in the elastic band instead of it simply being a fluff thing.
-
-//The "pocket" for the M1 helmet so you can tuck things into the elastic band
-
-/datum/component/storage/concrete/pockets/tiny/spacenam
-	attack_hand_interact = TRUE		//So you can actually see what you stuff in there
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
