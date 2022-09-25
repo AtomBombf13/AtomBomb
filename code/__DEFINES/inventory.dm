@@ -207,6 +207,11 @@ GLOBAL_LIST_INIT(small_ammo_types, typecacheof(list(
 	/obj/item/ammo_box/foambox
 	)))
 
+/// Not so little bitty ammo thingies
+GLOBAL_LIST_INIT(holster_disallowed, typecacheof(list(
+	/obj/item/ammo_box/magazine/m22/extended
+	)))
+
 GLOBAL_LIST_INIT(advanced_hardsuit_allowed, typecacheof(list(
 	/obj/item/ammo_box,
 	/obj/item/ammo_casing,
@@ -486,6 +491,7 @@ GLOBAL_LIST_INIT(gunbelt_allowed, GLOB.small_ammo_types + typecacheof(list(
 	/obj/item/reagent_containers/spray/pepper,
 	/obj/item/reagent_containers/glass/beaker,
 	/obj/item/reagent_containers/glass/bottle,
+	/obj/item/reagent_containers/hypospray/medipen/stimpack,
 	/obj/item/reagent_containers/spray,
 	/obj/item/melee/onehanded/knife,
 	/obj/item/melee/baton,
@@ -501,7 +507,7 @@ GLOBAL_LIST_INIT(gunbelt_allowed, GLOB.small_ammo_types + typecacheof(list(
 	/obj/item/multitool,
 	/obj/item/reagent_containers/food/drinks/bottle/molotov,
 	/obj/item/grenade/plastic/c4
-	)))
+	)) - GLOB.holster_disallowed) // woo
 
 /// Things allowed in a bandolier
 GLOBAL_LIST_INIT(ammobelt_allowed, typecacheof(list(
@@ -511,6 +517,7 @@ GLOBAL_LIST_INIT(ammobelt_allowed, typecacheof(list(
 	/obj/item/ammo_casing,
 	/obj/item/grenade,
 	/obj/item/reagent_containers/spray/pepper,
+	/obj/item/reagent_containers/hypospray/medipen/stimpack,
 	/obj/item/restraints/handcuffs,
 	/obj/item/tank/internals,
 	/obj/item/restraints/legcuffs/bola,
