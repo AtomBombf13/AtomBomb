@@ -53,6 +53,13 @@
 
 	log_message("Client [key_name(src)] has taken ownership of mob [src]([src.type])", LOG_OWNERSHIP)
 	SEND_SIGNAL(src, COMSIG_MOB_CLIENT_LOGIN, client)
+	client.init_verbs()
+
+	AddElement(/datum/element/weather_listener, /datum/weather/rain, ZTRAIT_SURFACE, GLOB.rain_sounds)
+	AddElement(/datum/element/weather_listener, /datum/weather/rain/eventarea, ZTRAIT_SURFACE, GLOB.rain_sounds)
+	AddElement(/datum/element/weather_listener, /datum/weather/ash_storm, ZTRAIT_ASHSTORM, GLOB.ash_storm_sounds)
+	AddElement(/datum/element/weather_listener, /datum/weather/ash_storm/sandstorm, ZTRAIT_SURFACE, GLOB.ash_storm_sounds)
+	AddElement(/datum/element/weather_listener, /datum/weather/ash_storm/dust_event, ZTRAIT_SURFACE, GLOB.ash_storm_sounds)
 
 	if(has_field_of_vision && CONFIG_GET(flag/use_field_of_vision))
 		LoadComponent(/datum/component/field_of_vision, field_of_vision_type)
