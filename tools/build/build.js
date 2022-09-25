@@ -34,7 +34,8 @@ const Juke = require('./juke');
 const { yarn } = require('./cbt/yarn');
 const { dm } = require('./cbt/dm');
 
-const DME_NAME = 'fortune13';
+//Change THIS according to your project <name>
+const DME_NAME = 'atombomb'; 
 
 const YarnTarget = Juke.createTarget({
   name: 'yarn',
