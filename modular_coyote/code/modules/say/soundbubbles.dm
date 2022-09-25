@@ -69,9 +69,9 @@ GLOBAL_LIST_INIT(typing_indicator_sounds, list(
 	mid_length = 30
 	volume = 10
 
-/datum/looping_sound/typing_indicator/start(atom/add_thing)
-	output_atoms = get_hearers_in_view(7,usr)
-	output_atoms -= usr
+/datum/looping_sound/typing_indicator/start(on_behalf_of)
+	on_behalf_of = get_hearers_in_view(7,usr)
+	on_behalf_of -= usr
 
 	return ..()
 
@@ -122,10 +122,10 @@ GLOBAL_LIST_INIT(typing_indicator_sounds, list(
 /mob/clear_typing_indicator()
 //	if(typing_sound)
 //		typing_sound.stop()
-	
+
 	if(stat != CONSCIOUS)
 		return ..()
-	
+
 	if(get_typing_indicator_pref() == GLOB.play_methods[PLAY_FINISHED])
 		playsound_local(src, get_typing_indicator_sound(), 15, FALSE)
 

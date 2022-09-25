@@ -23,6 +23,7 @@
 	var/list/autogrant_actions_controller	//assoc list "[bitflag]" = list(typepaths)
 	var/list/mob/occupant_actions			//assoc list mob = list(type = action datum assigned to mob)
 	var/obj/vehicle/trailer
+	var/datum/looping_sound/motorcycle/soundloop //Given we only use motorbikes, for now, we'll just use this.
 
 /obj/vehicle/Initialize(mapload)
 	. = ..()
