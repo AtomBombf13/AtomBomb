@@ -166,7 +166,7 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/update_overlays()
 	. = ..()
-	var/mutable_appearance/stimpak_overlay = mutable_appearance('icons/obj/reagentfillings.dmi', "stimfilling", color = mix_color_from_reagents(reagents.reagent_list))
+	var/mutable_appearance/stimpak_overlay = mutable_appearance('icons/obj/reagentfillings.dmi', "stim", color = mix_color_from_reagents(reagents.reagent_list))
 	if(reagents.total_volume)
 		. += stimpak_overlay
 
@@ -212,6 +212,15 @@
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/medicine/medx = 10)
 
+/obj/item/reagent_containers/hypospray/medipen/medx/on_reagent_change(changetype)
+	update_icon()
+
+/obj/item/reagent_containers/hypospray/medipen/medx/update_overlays()
+	. = ..()
+	var/mutable_appearance/stimpak_overlay = mutable_appearance('icons/obj/reagentfillings.dmi', "medx", color = mix_color_from_reagents(reagents.reagent_list))
+	if(reagents.total_volume)
+		. += stimpak_overlay
+
 // ---------------------------------
 // PSYCHO
 
@@ -223,6 +232,15 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/drug/psycho = 10)
+
+/obj/item/reagent_containers/hypospray/medipen/psycho/on_reagent_change(changetype)
+	update_icon()
+
+/obj/item/reagent_containers/hypospray/medipen/psycho/update_overlays()
+	. = ..()
+	var/mutable_appearance/stimpak_overlay = mutable_appearance('icons/obj/reagentfillings.dmi', "psycho", color = mix_color_from_reagents(reagents.reagent_list))
+	if(reagents.total_volume)
+		. += stimpak_overlay
 
 // ---------------------------------
 // STEADY
