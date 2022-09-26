@@ -20,10 +20,9 @@
 
 	allowed_limb_ids = list("human","mammal","aquatic","avian")
 	use_skintones = 0
-	speedmod = 0.3 //slightly slower than humans
+	//Regular ghouls can keep up with humans most of the time
 	sexes = 1
-	sharp_blunt_mod = 2
-	sharp_edged_mod = 2
+	//How about not making them a glass cannon
 	disliked_food = NONE
 	liked_food = NONE
 	var/info_text = "You are a <span class='danger'>Ghoul.</span>. As pre-war zombified relic, or an unluckily recently made post-necrotic, you cannot bleed, cannot breathe, and heal from radiation. On surface examination, you are indistinguishable from a corpse. \
@@ -32,29 +31,28 @@
 					<span class='nicegreen'>Radiation heals you slowly.</span> \
 					<span class='warning'>You are terrible at melee</span> and innately slower than humans. You also cannot go into critical condition-ever. You will keep shambling forward until you are <span class='danger'>dead.</span>"
 
-//Ghouls have weak limbs.
+//Ghouls have weak limbs. // DR edit, weaker but not to a point you sneeze on them and then they die.
 /datum/species/ghoul/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	to_chat(C, "[info_text]")
 	for(var/obj/item/bodypart/r_arm/b in C.bodyparts)
-		b.max_damage -= 20
-		b.wound_resistance = -35
+		b.max_damage -= 10
+		b.wound_resistance = -10
 	for(var/obj/item/bodypart/l_arm/b in C.bodyparts)
-		b.max_damage -= 20
-		b.wound_resistance = -35
+		b.max_damage -= 10
+		b.wound_resistance = -10
 	for(var/obj/item/bodypart/r_leg/b in C.bodyparts)
-		b.max_damage -= 20
-		b.wound_resistance = -35
+		b.max_damage -= 10
+		b.wound_resistance = -10
 	for(var/obj/item/bodypart/l_leg/b in C.bodyparts)
-		b.max_damage -= 20
-		b.wound_resistance = -35
+		b.max_damage -= 10
+		b.wound_resistance = -10
 	for(var/obj/item/bodypart/head/b in C.bodyparts)
-		b.max_damage -= 20
-		b.wound_resistance = -35
-	C.faction |= "ghoul"
+		b.max_damage -= 10
+		b.wound_resistance = -10
+
 /datum/species/ghoul/on_species_loss(mob/living/carbon/C)
 	..()
-	C.faction -= "ghoul"
 	for(var/obj/item/bodypart/r_arm/b in C.bodyparts)
 		b.max_damage = initial(b.max_damage)
 		b.wound_resistance = initial(b.wound_resistance)
@@ -91,11 +89,7 @@
 		if(prob(5))
 			to_chat(H, span_warning("You feel sick..."))
 		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM)
-	if(chem.type == /datum/reagent/medicine/stimpak)
-		H.adjustBruteLoss(1.5) //this is a very shitty way of making it so that they heal at a reduced rate for the emergency fix, i'll make the code cleaner tomorrow
-	if(chem.type == /datum/reagent/medicine/super_stimpak)
-		H.adjustBruteLoss(2.5)
-	return ..()
+	return ..() //Why would ghouls heal slower
 
 /datum/species/ghoul/spec_life(mob/living/carbon/human/H)
 	..()
@@ -110,7 +104,7 @@
 			is_healing = FALSE
 			H.set_light(0)
 		else
-			healpwr = 3
+			healpwr = 0.5
 			is_healing = TRUE
 			H.set_light(2, 15, LIGHT_COLOR_GREEN)
 	H.adjustCloneLoss(-healpwr)
