@@ -73,7 +73,6 @@
 		{
 			"Gravity": true,
 			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
-			"Station": 1,
 			"Surface": true,
 			"Up": 1,
 			"Down": -1,
@@ -85,7 +84,6 @@
 					{
 			"Gravity": true,
 			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
-			"Station": 1,
 			"Surface": true,
 			"Up": 1,
 			"Down": -1,

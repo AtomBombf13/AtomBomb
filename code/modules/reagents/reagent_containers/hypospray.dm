@@ -121,9 +121,9 @@
 	if(!iscyborg(user))
 		reagents.maximum_volume = 0 //Makes them useless afterwards
 		reagent_flags = NONE
-		if(!reagents.total_volume)
+/*		if(!reagents.total_volume)
 			qdel(src)
-			return
+			return*/
 	update_icon()
 	addtimer(CALLBACK(src, .proc/cyborg_recharge, user), 80)
 
@@ -159,7 +159,7 @@
 	volume = 26
 	amount_per_transfer_from_this = 26
 	reagent_flags = DRAWABLE
-	list_reagents = list(/datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 2, /datum/reagent/medicine/bicaridine = 2, /datum/reagent/medicine/kelotane = 2)
+	list_reagents = list(/datum/reagent/medicine/stimpak = 15)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/on_reagent_change(changetype)
 	update_icon()
@@ -192,7 +192,7 @@
 	icon_state = "hypo_superstimpak"
 	volume = 62
 	amount_per_transfer_from_this = 62
-	list_reagents = list(/datum/reagent/medicine/super_stimpak = 30, /datum/reagent/medicine/stimpak = 20, /datum/reagent/medicine/healing_powder = 4, /datum/reagent/medicine/bicaridine = 4, /datum/reagent/medicine/kelotane = 4)
+	list_reagents = list(/datum/reagent/medicine/super_stimpak = 30, /datum/reagent/medicine/stimpak = 20)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom
 	desc = "The super version comes in a hypodermic, but with an additional vial to inject more drugs than the basic model and a leather belt to strap the needle to a limb. This particular one will deliver a tailored cocktail."
