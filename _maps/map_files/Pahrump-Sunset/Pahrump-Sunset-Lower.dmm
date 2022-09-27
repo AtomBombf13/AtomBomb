@@ -25088,6 +25088,10 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/tunnel)
+"rTi" = (
+/obj/item/reagent_containers/food/snacks/meat/slab/molerat,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "rTn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -43378,7 +43382,7 @@ aak
 aaB
 aaB
 aaB
-aaB
+rTi
 aak
 aaa
 xwF
