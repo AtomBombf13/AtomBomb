@@ -8601,8 +8601,8 @@
 	dir = 4
 	},
 /obj/machinery/door/window{
-	req_access_txt = "140";
-	dir = 1
+	dir = 1;
+	req_access_txt = "140"
 	},
 /obj/item/am_containment,
 /obj/item/am_containment,
@@ -9350,9 +9350,9 @@
 	dir = 2
 	},
 /obj/structure/fence/handrail{
+	density = 0;
 	dir = 8;
-	pixel_x = -14;
-	density = 0
+	pixel_x = -14
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
@@ -13311,9 +13311,9 @@
 /area/f13/caves)
 "hYW" = (
 /obj/structure/fence/handrail{
+	density = 0;
 	dir = 4;
-	pixel_x = -15;
-	density = 0
+	pixel_x = -15
 	},
 /turf/open/floor/f13{
 	color = "#f7e8e1";
@@ -14225,8 +14225,8 @@
 "iHV" = (
 /obj/machinery/computer/rdconsole/core/bos{
 	desc = "The Head Scribe's terminal. Better not touch it, i'll get chewed out.";
-	name = "Head Scribe's Archive Terminal";
-	dir = 8
+	dir = 8;
+	name = "Head Scribe's Archive Terminal"
 	},
 /obj/machinery/light{
 	dir = 4
@@ -25247,9 +25247,9 @@
 	dir = 2
 	},
 /obj/structure/fence/handrail{
+	density = 0;
 	dir = 8;
-	pixel_x = 14;
-	density = 0
+	pixel_x = 14
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
@@ -26972,8 +26972,8 @@
 /area/f13/building/massfusion)
 "tnT" = (
 /obj/machinery/door/airlock/grunge{
-	req_access_txt = "139";
-	name = "shop airlock"
+	name = "shop airlock";
+	req_access_txt = "139"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
@@ -29401,8 +29401,8 @@
 /area/f13/caves)
 "vpk" = (
 /obj/machinery/door/airlock/grunge{
-	req_access_txt = "139";
-	name = "shop airlock"
+	name = "shop airlock";
+	req_access_txt = "139"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)

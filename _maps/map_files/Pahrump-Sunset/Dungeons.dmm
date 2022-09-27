@@ -316,9 +316,9 @@
 	icon_state = "warn_end"
 	},
 /obj/effect/turf_decal/vg_decals/numbers/one{
+	icon_state = "2";
 	pixel_x = 5;
-	pixel_y = 31;
-	icon_state = "2"
+	pixel_y = 31
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)

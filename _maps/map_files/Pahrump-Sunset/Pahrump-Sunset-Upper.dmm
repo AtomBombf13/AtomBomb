@@ -2693,8 +2693,8 @@
 /area/f13/building/massfusion)
 "eZk" = (
 /obj/machinery/door/airlock/grunge{
-	req_access = 137;
-	name = "security airlock"
+	name = "security airlock";
+	req_access = 137
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -4940,12 +4940,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/dogbed,
 /mob/living/simple_animal/hostile/wolf/alpha{
+	desc = "Sheepdogs are known for their intelligence and have worked alongside humans for thousands of years. This one has a dopey smile and smells of barbecue sauce.";
+	faction = list("neutral");
+	health = 200;
+	icon_dead = "tippen_dead";
 	icon_living = "tippen";
 	icon_state = "tippen";
-	icon_dead = "tippen_dead";
-	faction = list("neutral");
-	desc = "Sheepdogs are known for their intelligence and have worked alongside humans for thousands of years. This one has a dopey smile and smells of barbecue sauce.";
-	health = 200;
 	name = "Dreams-of-Moonlight"
 	},
 /turf/open/floor/f13/wood,
@@ -5875,8 +5875,8 @@
 /turf/open/floor/plasteel/stairs{
 	barefootstep = "woodbarefoot";
 	color = "#A47449";
-	footstep = "wood";
-	dir = 1
+	dir = 1;
+	footstep = "wood"
 	},
 /area/f13/city)
 "lXP" = (
@@ -7737,8 +7737,8 @@
 /area/f13/legion)
 "pua" = (
 /obj/machinery/door/airlock/grunge{
-	req_access_txt = "139";
-	name = "shop airlock"
+	name = "shop airlock";
+	req_access_txt = "139"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -9831,9 +9831,9 @@
 /area/f13/building/hospital)
 "tnO" = (
 /obj/structure/fence/handrail{
+	density = 0;
 	dir = 4;
-	pixel_x = -15;
-	density = 0
+	pixel_x = -15
 	},
 /turf/open/transparent/openspace,
 /area/f13/city)
@@ -9852,8 +9852,8 @@
 /area/f13/wasteland)
 "trp" = (
 /obj/machinery/door/airlock/grunge{
-	req_access = 137;
-	name = "security airlock"
+	name = "security airlock";
+	req_access = 137
 	},
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
@@ -10714,9 +10714,9 @@
 /area/f13/wasteland)
 "vvS" = (
 /obj/structure/fence/handrail{
+	density = 0;
 	dir = 4;
-	pixel_x = -15;
-	density = 0
+	pixel_x = -15
 	},
 /obj/structure/railing{
 	dir = 1
@@ -11495,15 +11495,15 @@
 /area/f13/brotherhood/leisure)
 "wUx" = (
 /obj/structure/fence/handrail{
+	density = 0;
 	dir = 4;
-	pixel_x = -15;
-	density = 0
+	pixel_x = -15
 	},
 /turf/open/floor/plasteel/stairs{
 	barefootstep = "woodbarefoot";
 	color = "#A47449";
-	footstep = "wood";
-	dir = 1
+	dir = 1;
+	footstep = "wood"
 	},
 /area/f13/city)
 "wUC" = (
