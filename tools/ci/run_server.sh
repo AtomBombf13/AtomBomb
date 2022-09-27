@@ -9,7 +9,7 @@ mkdir ci_test/data
 cp tools/ci/ci_config.txt ci_test/config/config.txt
 
 cd ci_test
-DreamDaemon fortune13.dmb -close -trusted -verbose -params "log-directory=ci"
+DreamDaemon atombomb.dmb -close -trusted -verbose -params "log-directory=ci"
 
 cd ..
 
