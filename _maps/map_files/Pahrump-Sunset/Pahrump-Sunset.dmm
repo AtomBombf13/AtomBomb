@@ -298,7 +298,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "abk" = (
@@ -452,7 +452,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/wasteland)
 "abU" = (
@@ -1988,7 +1988,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/caves)
 "ait" = (
@@ -3245,7 +3245,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "amN" = (
@@ -4003,7 +4003,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "aqi" = (
@@ -4553,7 +4553,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "asr" = (
@@ -5926,7 +5926,7 @@
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "awW" = (
@@ -7605,7 +7605,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "aCK" = (
@@ -9083,7 +9083,7 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
 	icon_state = "outerbordercorner";
-	tag = "icon-outerbordercorner (EAST)"
+	
 	},
 /area/f13/wasteland)
 "aHx" = (
@@ -14383,7 +14383,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 6;
 	icon_state = "dirt";
-	tag = "icon-dirt (SOUTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "baJ" = (
@@ -14817,7 +14817,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "bcM" = (
@@ -14833,7 +14833,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "bcP" = (
@@ -15068,7 +15068,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/wasteland)
 "bdY" = (
@@ -16061,7 +16061,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 6;
 	icon_state = "dirt";
-	tag = "icon-dirt (SOUTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "bhT" = (
@@ -16662,7 +16662,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "bkJ" = (
@@ -17990,7 +17990,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "bux" = (
@@ -18455,7 +18455,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "bzp" = (
@@ -19450,7 +19450,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "bSj" = (
@@ -21866,7 +21866,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "czg" = (
@@ -21936,7 +21936,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "cBn" = (
@@ -22518,7 +22518,7 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "cRs" = (
@@ -23979,7 +23979,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "dBg" = (
@@ -24694,7 +24694,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "dTG" = (
@@ -25180,7 +25180,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (EAST)"
+	
 	},
 /area/f13/wasteland)
 "ehj" = (
@@ -26032,7 +26032,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "eDz" = (
@@ -26072,7 +26072,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/wasteland)
 "eES" = (
@@ -26774,7 +26774,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "eTH" = (
@@ -28425,7 +28425,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (EAST)"
+	
 	},
 /area/f13/caves)
 "fGb" = (
@@ -28885,7 +28885,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "fRF" = (
@@ -29947,7 +29947,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "gvf" = (
@@ -30152,7 +30152,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 6;
 	icon_state = "dirt";
-	tag = "icon-dirt (SOUTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "gyP" = (
@@ -30714,7 +30714,7 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
 	icon_state = "outerbordercorner";
-	tag = "icon-outerbordercorner (EAST)"
+	
 	},
 /area/f13/wasteland)
 "gKt" = (
@@ -31158,7 +31158,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/caves)
 "gUB" = (
@@ -31793,7 +31793,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "hlD" = (
@@ -31814,7 +31814,7 @@
 "hlS" = (
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "hmp" = (
@@ -32174,7 +32174,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland/khans)
 "hvO" = (
@@ -32763,7 +32763,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "hMv" = (
@@ -33378,7 +33378,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "ibk" = (
@@ -33907,7 +33907,7 @@
 "iod" = (
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "iof" = (
@@ -35021,7 +35021,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "iLK" = (
@@ -35257,7 +35257,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "iQL" = (
@@ -36459,7 +36459,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "jsw" = (
@@ -36948,7 +36948,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/wasteland)
 "jGn" = (
@@ -37547,7 +37547,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/wasteland/khans)
 "jVJ" = (
@@ -38704,7 +38704,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "kCA" = (
@@ -38728,7 +38728,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "kDp" = (
@@ -39694,7 +39694,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/caves)
 "kYA" = (
@@ -40675,7 +40675,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 6;
 	icon_state = "dirt";
-	tag = "icon-dirt (SOUTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "lyG" = (
@@ -40703,7 +40703,7 @@
 	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/caves)
 "lzb" = (
@@ -43246,7 +43246,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "mDx" = (
@@ -43520,7 +43520,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "mIj" = (
@@ -44014,7 +44014,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "mUI" = (
@@ -44093,7 +44093,7 @@
 	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "mWt" = (
@@ -44178,7 +44178,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/wasteland)
 "mXB" = (
@@ -44652,7 +44652,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "niT" = (
@@ -44858,7 +44858,7 @@
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "npa" = (
@@ -45840,7 +45840,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "nNS" = (
@@ -47338,7 +47338,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "oxy" = (
@@ -47857,7 +47857,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "oMm" = (
@@ -49109,7 +49109,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "pqk" = (
@@ -49289,7 +49289,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "ptD" = (
@@ -49319,7 +49319,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "ptN" = (
@@ -49506,7 +49506,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "pyf" = (
@@ -50243,7 +50243,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "pOR" = (
@@ -50267,7 +50267,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/caves)
 "pPf" = (
@@ -50474,7 +50474,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "pVG" = (
@@ -50923,7 +50923,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "qhP" = (
@@ -51795,7 +51795,7 @@
 	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "qEh" = (
@@ -51967,7 +51967,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "qIz" = (
@@ -52626,7 +52626,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "qYY" = (
@@ -54791,7 +54791,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/caves)
 "sdD" = (
@@ -55288,7 +55288,7 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "spS" = (
@@ -55368,7 +55368,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "sqP" = (
@@ -55442,7 +55442,7 @@
 /obj/structure/flora/grass/coyote/twentyone,
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "ssz" = (
@@ -55787,7 +55787,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "sCz" = (
@@ -56737,7 +56737,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "tbW" = (
@@ -57481,7 +57481,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "tuQ" = (
@@ -57573,7 +57573,7 @@
 "txw" = (
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/caves)
 "txy" = (
@@ -58018,7 +58018,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTH)"
+	
 	},
 /area/f13/wasteland)
 "tFZ" = (
@@ -58031,7 +58031,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "tGq" = (
@@ -58139,7 +58139,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHWEST)"
+	
 	},
 /area/f13/caves)
 "tIM" = (
@@ -58202,7 +58202,7 @@
 	},
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "tJV" = (
@@ -58520,7 +58520,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "tQO" = (
@@ -60710,7 +60710,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt";
-	tag = "icon-dirt (WEST)"
+	
 	},
 /area/f13/wasteland)
 "uTL" = (
@@ -61139,7 +61139,7 @@
 	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/wasteland)
 "vdC" = (
@@ -61192,7 +61192,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (EAST)"
+	
 	},
 /area/f13/wasteland)
 "veu" = (
@@ -61246,7 +61246,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (WEST)"
+	
 	},
 /area/f13/wasteland)
 "vgJ" = (
@@ -62475,7 +62475,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "vMv" = (
@@ -63101,7 +63101,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt";
-	tag = "icon-dirt"
+	
 	},
 /area/f13/wasteland)
 "wdv" = (
@@ -63940,7 +63940,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirtcorner";
-	tag = "icon-dirtcorner (EAST)"
+	
 	},
 /area/f13/caves)
 "wzI" = (
@@ -64040,7 +64040,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/caves)
 "wCJ" = (
@@ -65295,7 +65295,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirt";
-	tag = "icon-dirt (EAST)"
+	
 	},
 /area/f13/wasteland)
 "xgr" = (
@@ -67106,7 +67106,7 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt";
-	tag = "icon-dirt (NORTHEAST)"
+	
 	},
 /area/f13/wasteland)
 "xWX" = (
@@ -67427,7 +67427,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland32";
-	tag = "icon-wasteland32"
+	
 	},
 /area/f13/caves)
 "ygV" = (
