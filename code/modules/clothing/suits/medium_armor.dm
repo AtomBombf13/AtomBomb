@@ -942,7 +942,7 @@
 /obj/item/clothing/suit/armor/medium/legion/vet
 	name = "legion veteran armor"
 	desc = "Armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
-	icon_state = "legion_veteran"
+	icon_state = "legvet"
 	flags_inv = HIDEJUMPSUIT
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
@@ -950,7 +950,7 @@
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the flag of the Legion worn on the back."
-	icon_state = "legion_vex"
+	icon_state = "legvexil"
 	flags_inv = HIDEJUMPSUIT
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
@@ -958,16 +958,13 @@
 /obj/item/clothing/suit/armor/medium/legion/orator
 	name = "Legion Orator armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
-	icon_state = "legion-orator"
-	item_state = "legion-orator"
+	icon_state = "legvet" //Placeholder until someone finds the actual sprite
 
 /obj/item/clothing/suit/armor/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "ranger-hunter centurion armor"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
-	icon_state = "legion_rangercent"
-	item_state = "legion_rangercent"
+	icon_state = "rangercent"
+	item_state = "rangercent"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -976,18 +973,14 @@
 /obj/item/clothing/suit/armor/medium/combat/legion
 	name = "Legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "legion_combat"
-	item_state = "legion_combat"
+	icon_state = "legion_armor"
+	item_state = "legion_armor"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
 	name = "reinforced Legion combat armor"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "legion_combat2"
-	item_state = "legion_combat2"
+	icon_state = "legion_armor_mk2"
+	item_state = "legion_armor_mk2"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)

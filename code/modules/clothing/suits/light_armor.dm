@@ -859,30 +859,28 @@
 /obj/item/clothing/suit/armor/light/legion/recruit
 	name = "legion recruit armor"
 	desc = "Legion recruit armor is a common light armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
-	icon_state = "legion_recruit"
+	icon_state = "legrecruit"
 
 /obj/item/clothing/suit/armor/light/legion/scout
 	name = "legion scout armor"
 	desc = "Armor based on layered strips of laminated linen and leather, the technique giving it surprising resilience for low weight."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "legion_explorer"
-	item_state = "legion_explorer"
+	icon_state = "legexplorer"
+	item_state = "legexplorer"
 
 /obj/item/clothing/suit/armor/light/legion/prime
 	name = "legion prime armor"
 	desc = "It's a legion prime armor, the warrior has been granted some additional protective pieces to add to his suit."
-	icon_state = "legion_prime"
+	icon_state = "legprime"
 
 /obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
 	name = "prefect armor"
 	desc = "Issued to prefects to keep them cool during long hours of watching the slaves work in the sun."
-	icon_state = "legion_master"
+	icon_state = "legslavemaster"
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
 	desc = "Light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
-	icon_state = "legion_explorer"
+	icon_state = "legexplorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
 
 
