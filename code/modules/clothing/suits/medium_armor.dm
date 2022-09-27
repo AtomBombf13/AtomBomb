@@ -958,8 +958,7 @@
 /obj/item/clothing/suit/armor/medium/legion/orator
 	name = "Legion Orator armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
-	icon_state = "legion-orator"
-	item_state = "legion-orator"
+	icon_state = "legvet" //Placeholder until someone finds the actual sprite
 
 /obj/item/clothing/suit/armor/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "ranger-hunter centurion armor"
