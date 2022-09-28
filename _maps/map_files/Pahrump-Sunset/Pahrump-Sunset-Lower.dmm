@@ -30872,7 +30872,6 @@
 "wBb" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
-/obj/item/toy/plush/beeplushie,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/caves)
 "wBu" = (

@@ -52,12 +52,6 @@ GLOBAL_LIST_EMPTY(xeno_dorsal_list)
 GLOBAL_LIST_EMPTY(ipc_screens_list)
 GLOBAL_LIST_EMPTY(ipc_antennas_list)
 
-	//Genitals and Arousal Lists
-GLOBAL_LIST_EMPTY(genitals_list)
-GLOBAL_LIST_EMPTY(cock_shapes_list)
-GLOBAL_LIST_EMPTY(balls_shapes_list)
-GLOBAL_LIST_EMPTY(breasts_shapes_list)
-GLOBAL_LIST_EMPTY(vagina_shapes_list)
 //longcat memes.
 GLOBAL_LIST_INIT(dick_nouns, list("phallus", "willy", "dick", "prick", "member", "tool", "gentleman's organ", "cock", "wang", "knob", "dong", "joystick", "pecker", "johnson", "weenie", "tadger", "schlong", "thirsty ferret", "One eyed trouser trout", "Ding dong", "ankle spanker", "Pork sword", "engine cranker", "Harry hot dog", "Davy Crockett", "Kidney cracker", "Heat seeking moisture missile", "Giggle stick", "love whistle", "Tube steak", "Uncle Dick", "Purple helmet warrior"))
 
@@ -101,63 +95,3 @@ GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 		set category = "Admin"
 		if(!src.holder)	return
 		message_admins("[key_name_admin(usr)] manually reloaded mentors")
-
-/mob/living/carbon/proc/has_penis()
-	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_PENIS)
-	if(G && istype(G, /obj/item/organ/genital/penis))
-		return TRUE
-	return FALSE
-
-/mob/living/carbon/proc/has_balls()
-	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_TESTICLES)
-	if(G && istype(G, /obj/item/organ/genital/testicles))
-		return TRUE
-	return FALSE
-
-/mob/living/carbon/proc/has_vagina()
-	if(getorganslot(ORGAN_SLOT_VAGINA))
-		return TRUE
-	return FALSE
-
-/mob/living/carbon/proc/has_breasts()
-	if(getorganslot(ORGAN_SLOT_BREASTS))
-		return TRUE
-	return FALSE
-
-/mob/living/carbon/proc/is_groin_exposed(list/L)
-	if(!L)
-		L = get_equipped_items()
-	for(var/A in L)
-		var/obj/item/I = A
-		if(I.body_parts_hidden & GROIN)
-			return FALSE
-	return TRUE
-
-/mob/living/carbon/proc/is_chest_exposed(list/L)
-	if(!L)
-		L = get_equipped_items()
-	for(var/A in L)
-		var/obj/item/I = A
-		if(I.body_parts_hidden & CHEST)
-			return FALSE
-	return TRUE
-
-////////////////////////
-//DANGER | DEBUG PROCS//
-////////////////////////
-
-/client/proc/give_humans_genitals()
-	set name = "Mass Give Genitals"
-	set category = "Dangerous"
-	set desc = "Gives every human mob genitals for testing purposes. WARNING: NOT FOR LIVE SERVER USAGE!!"
-
-	log_admin("[src] gave everyone genitals.")
-	message_admins("[src] gave everyone genitals.")
-	for(var/mob/living/carbon/human/H in GLOB.mob_list)
-		if(H.gender == MALE)
-			H.give_genital(/obj/item/organ/genital/penis)
-			H.give_genital(/obj/item/organ/genital/testicles)
-		else
-			H.give_genital(/obj/item/organ/genital/vagina)
-			H.give_genital(/obj/item/organ/genital/womb)
-			H.give_genital(/obj/item/organ/genital/breasts)

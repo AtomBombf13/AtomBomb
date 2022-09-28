@@ -7347,7 +7347,6 @@
 /area/f13/wasteland)
 "fnu" = (
 /obj/structure/closet/crate,
-/obj/item/toy/plush/beeplushie,
 /obj/item/toy/plush/lizardplushie/kobold,
 /obj/item/toy/plush/lizardplushie,
 /obj/item/toy/gun,

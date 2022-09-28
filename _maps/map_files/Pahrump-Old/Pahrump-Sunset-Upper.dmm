@@ -8261,9 +8261,6 @@
 	dir = 1;
 	icon_state = "bench_center"
 	},
-/obj/item/toy/plush/beeplushie{
-	name = "A-Little-Salty"
-	},
 /obj/item/clothing/mask/cigarette/rollie/cannabis{
 	pixel_x = -10;
 	pixel_y = -1

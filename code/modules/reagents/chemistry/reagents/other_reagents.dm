@@ -2584,66 +2584,7 @@
 /datum/reagent/gravitum/on_mob_end_metabolize(mob/living/L)
 	L.RemoveElement(/datum/element/forced_gravity, 0)
 
-
-//body bluids
-/datum/reagent/consumable/semen
-	name = "Semen"
-	description = "Sperm from some animal. Useless for anything but insemination, really."
-	taste_description = "something salty"
-	taste_mult = 2 //Not very overpowering flavor
-	data = list("donor"=null,"viruses"=null,"donor_DNA"=null,"blood_type"=null,"resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null)
-	reagent_state = LIQUID
-	color = "#FFFFFF" // rgb: 255, 255, 255
-	can_synth = FALSE
-	nutriment_factor = 0.5 * REAGENTS_METABOLISM
-	var/decal_path = /obj/effect/decal/cleanable/semen
-
-/datum/reagent/consumable/semen/reaction_turf(turf/T, reac_volume)
-	if(!istype(T))
-		return
-	if(reac_volume < 10)
-		return
-
-	var/obj/effect/decal/cleanable/semen/S = locate() in T
-	if(!S)
-		S = new decal_path(T)
-	if(data["blood_DNA"])
-		S.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
-
-/obj/effect/decal/cleanable/semen
-	name = "semen"
-	desc = null
-	gender = PLURAL
-	density = 0
-	layer = ABOVE_NORMAL_TURF_LAYER
-	icon = 'icons/obj/genitals/effects.dmi'
-	icon_state = "semen1"
-	random_icon_states = list("semen1", "semen2", "semen3", "semen4")
-
-/obj/effect/decal/cleanable/semen/Initialize(mapload)
-	. = ..()
-	dir = GLOB.cardinals
-	add_blood_DNA(list("Non-human DNA" = "A+"))
-
-/obj/effect/decal/cleanable/semen/replace_decal(obj/effect/decal/cleanable/semen/S)
-	if(S.blood_DNA)
-		blood_DNA |= S.blood_DNA
-	return ..()
-
-/datum/reagent/consumable/semen/femcum
-	name = "Female Ejaculate"
-	description = "Vaginal lubricant found in most mammals and other animals of similar nature. Where you found this is your own business."
-	taste_description = "something with a tang" // wew coders who haven't eaten out a girl.
-	color = "#AAAAAA"
-	alpha = 77
-	decal_path = /obj/effect/decal/cleanable/semen/femcum
-
-/obj/effect/decal/cleanable/semen/femcum
-	name = "female ejaculate"
-	icon_state = "fem1"
-	random_icon_states = list("fem1", "fem2", "fem3", "fem4")
-	blood_state = null
-	bloodiness = null
+//Go touch grass you weirdos by Allah
 
 /datum/reagent/determination
 	name = "Determination"
@@ -2719,54 +2660,6 @@ datum/reagent/eldritch
 	description = "A plastic formed from esterized cellulose fibers. Organic!"
 	reagent_state = SOLID
 	color = "#E6E6DA"
-
-/datum/reagent/hairball
-	name = "Hairball"
-	description = "A bundle of keratinous bits and fibers, not easily digestible."
-	reagent_state = SOLID
-	can_synth = FALSE
-	metabolization_rate = 0.05 * REAGENTS_METABOLISM
-	taste_description = "wet hair"
-	var/amount = 0
-	var/knotted = FALSE
-
-/datum/reagent/hairball/on_mob_life(mob/living/carbon/M)
-	amount = M.reagents.get_reagent_amount(/datum/reagent/hairball)
-
-	if(amount < 10)
-		if(prob(10))
-			M.losebreath += 1
-			M.emote("cough")
-			to_chat(M, span_notice("You clear your throat."))
-	else
-		if(!knotted)
-			to_chat(M, span_notice("You feel a knot in your stomach."))
-			knotted = TRUE
-
-		if(prob(5 + amount * 0.5)) // don't want this to cause too much damage
-			M.losebreath += 2
-			to_chat(M, span_notice("You feel a knot in your throat."))
-			M.emote("cough")
-
-		else if(prob(amount - 4))
-			to_chat(M, span_warning("Your stomach feels awfully bloated."))
-			playsound(M,'sound/voice/catpeople/distressed.ogg', 50, FALSE)
-			M.visible_message(span_warning("[M] seems distressed!."), ignored_mobs=M)
-
-		else if(prob(amount - 8))
-			knotted = FALSE
-			playsound(M,'sound/voice/catpeople/puking.ogg', 110, FALSE)
-			M.Immobilize(30)
-			sleep(30) //snowflake but it works, don't wanna proc this
-			if(QDELETED(M) || QDELETED(src)) //this handles race conditions about m or src not existing.
-				return
-			M.visible_message(span_warning("[M] throws up a hairball! Disgusting!"), ignored_mobs=M)
-			new /obj/item/toy/plush/hairball(get_turf(M))
-			to_chat(M, span_notice("Aaaah that's better!"))
-			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "cleared_stomach", /datum/mood_event/cleared_stomach, name)
-			M.reagents.del_reagent(/datum/reagent/hairball)
-			return
-	..()
 
 /datum/reagent/red_ichor
 	name = "Red Ichor"

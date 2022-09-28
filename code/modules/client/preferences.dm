@@ -2133,118 +2133,6 @@ Records disabled until a use for them is found
 					else
 						features["color_scheme"] = ADVANCED_CHARACTER_COLORING
 
-				//Genital code
-				if("cock_color")
-					var/new_cockcolor = input(user, "Penis color:", "Character Preference","#"+features["cock_color"]) as color|null
-					if(new_cockcolor)
-						var/temp_hsv = RGBtoHSV(new_cockcolor)
-						if(new_cockcolor == "#000000")
-							features["cock_color"] = pref_species.default_color
-						else if(ReadHSV(temp_hsv)[3] >= ReadHSV(MINIMUM_MUTANT_COLOR)[3])
-							features["cock_color"] = sanitize_hexcolor(new_cockcolor, 6)
-						else
-							to_chat(user,span_danger("Invalid color. Your color is not bright enough."))
-
-				if("cock_length")
-					var/min_D = CONFIG_GET(number/penis_min_inches_prefs)
-					var/max_D = CONFIG_GET(number/penis_max_inches_prefs)
-					var/new_length = input(user, "Penis length in inches:\n([min_D]-[max_D])", "Character Preference") as num|null
-					if(new_length)
-						features["cock_length"] = clamp(round(new_length), min_D, max_D)
-
-				if("cock_shape")
-					var/new_shape
-					var/list/hockeys = list()
-					if(parent.can_have_part("taur"))
-						var/datum/sprite_accessory/taur/T = GLOB.taur_list[features["taur"]]
-						for(var/A in GLOB.cock_shapes_list)
-							var/datum/sprite_accessory/penis/P = GLOB.cock_shapes_list[A]
-							if(P.taur_icon && T.taur_mode & P.accepted_taurs)
-								LAZYSET(hockeys, "[A] (Taur)", A)
-					new_shape = input(user, "Penis shape:", "Character Preference") as null|anything in (GLOB.cock_shapes_list + hockeys)
-					if(new_shape)
-						features["cock_taur"] = FALSE
-						if(hockeys[new_shape])
-							new_shape = hockeys[new_shape]
-							features["cock_taur"] = TRUE
-						features["cock_shape"] = new_shape
-
-				if("cock_visibility")
-					var/n_vis = input(user, "Penis Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
-					if(n_vis)
-						features["cock_visibility"] = n_vis
-
-				if("balls_color")
-					var/new_ballscolor = input(user, "Testicles Color:", "Character Preference","#"+features["balls_color"]) as color|null
-					if(new_ballscolor)
-						var/temp_hsv = RGBtoHSV(new_ballscolor)
-						if(new_ballscolor == "#000000")
-							features["balls_color"] = pref_species.default_color
-						else if(ReadHSV(temp_hsv)[3] >= ReadHSV(MINIMUM_MUTANT_COLOR)[3])
-							features["balls_color"] = sanitize_hexcolor(new_ballscolor, 6)
-						else
-							to_chat(user,span_danger("Invalid color. Your color is not bright enough."))
-
-				if("balls_shape")
-					var/new_shape
-					new_shape = input(user, "Balls Shape", "Character Preference") as null|anything in GLOB.balls_shapes_list
-					if(new_shape)
-						features["balls_shape"] = new_shape
-
-				if("balls_visibility")
-					var/n_vis = input(user, "Testicles Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
-					if(n_vis)
-						features["balls_visibility"] = n_vis
-
-				if("breasts_size")
-					var/new_size = input(user, "Breast Size", "Character Preference") as null|anything in CONFIG_GET(keyed_list/breasts_cups_prefs)
-					if(new_size)
-						features["breasts_size"] = new_size
-
-				if("breasts_shape")
-					var/new_shape
-					new_shape = input(user, "Breast Shape", "Character Preference") as null|anything in GLOB.breasts_shapes_list
-					if(new_shape)
-						features["breasts_shape"] = new_shape
-
-				if("breasts_color")
-					var/new_breasts_color = input(user, "Breast Color:", "Character Preference","#"+features["breasts_color"]) as color|null
-					if(new_breasts_color)
-						var/temp_hsv = RGBtoHSV(new_breasts_color)
-						if(new_breasts_color == "#000000")
-							features["breasts_color"] = pref_species.default_color
-						else if(ReadHSV(temp_hsv)[3] >= ReadHSV(MINIMUM_MUTANT_COLOR)[3])
-							features["breasts_color"] = sanitize_hexcolor(new_breasts_color, 6)
-						else
-							to_chat(user,span_danger("Invalid color. Your color is not bright enough."))
-
-				if("breasts_visibility")
-					var/n_vis = input(user, "Breasts Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
-					if(n_vis)
-						features["breasts_visibility"] = n_vis
-
-				if("vag_shape")
-					var/new_shape
-					new_shape = input(user, "Vagina Type", "Character Preference") as null|anything in GLOB.vagina_shapes_list
-					if(new_shape)
-						features["vag_shape"] = new_shape
-
-				if("vag_color")
-					var/new_vagcolor = input(user, "Vagina color:", "Character Preference","#"+features["vag_color"]) as color|null
-					if(new_vagcolor)
-						var/temp_hsv = RGBtoHSV(new_vagcolor)
-						if(new_vagcolor == "#000000")
-							features["vag_color"] = pref_species.default_color
-						else if(ReadHSV(temp_hsv)[3] >= ReadHSV(MINIMUM_MUTANT_COLOR)[3])
-							features["vag_color"] = sanitize_hexcolor(new_vagcolor, 6)
-						else
-							to_chat(user,span_danger("Invalid color. Your color is not bright enough."))
-
-				if("vag_visibility")
-					var/n_vis = input(user, "Vagina Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
-					if(n_vis)
-						features["vag_visibility"] = n_vis
-
 				if("ooccolor")
 					var/new_ooccolor = input(user, "Choose your OOC colour:", "Game Preference",ooccolor) as color|null
 					if(new_ooccolor)
@@ -2963,7 +2851,6 @@ Records disabled until a use for them is found
 	if(DIGITIGRADE in pref_species.species_traits)
 		character.Digitigrade_Leg_Swap(FALSE)
 
-	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 
 	character.dna.update_body_size(old_size)
 

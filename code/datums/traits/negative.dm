@@ -70,7 +70,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 		if("Den Doctor")
 			heirloom_type = /obj/item/card/id/dogtag/MDfakepermit
 		if("Farmer")
-			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
+			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade)
 		if("Janitor")
 			heirloom_type = /obj/item/mop
 		if("Security Officer")

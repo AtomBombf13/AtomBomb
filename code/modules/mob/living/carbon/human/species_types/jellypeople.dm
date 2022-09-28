@@ -518,27 +518,6 @@
 		if(new_style)
 			H.hair_style = new_style
 			H.update_hair()
-	else if (select_alteration == "Genitals")
-		var/operation = input("Select organ operation.", "Organ Manipulation", "cancel") in list("add sexual organ", "remove sexual organ", "cancel")
-		switch(operation)
-			if("add sexual organ")
-				var/new_organ = input("Select sexual organ:", "Organ Manipulation") as null|anything in GLOB.genitals_list
-				if(!new_organ)
-					return
-				H.give_genital(GLOB.genitals_list[new_organ])
-
-			if("remove sexual organ")
-				var/list/organs = list()
-				for(var/obj/item/organ/genital/X in H.internal_organs)
-					var/obj/item/organ/I = X
-					organs["[I.name] ([I.type])"] = I
-				var/obj/item/O = input("Select sexual organ:", "Organ Manipulation", null) as null|anything in organs
-				var/obj/item/organ/genital/G = organs[O]
-				if(!G)
-					return
-				G.forceMove(get_turf(H))
-				qdel(G)
-				H.update_genitals()
 
 	else if (select_alteration == "Ears")
 		var/list/snowflake_ears_list = list("Normal" = null)
@@ -616,69 +595,6 @@
 			if(new_taur != "None")
 				H.dna.features["mam_tail"] = "None"
 		H.update_body()
-
-	else if (select_alteration == "Penis")
-		for(var/obj/item/organ/genital/penis/X in H.internal_organs)
-			qdel(X)
-		var/new_shape
-		new_shape = input(owner, "Choose your character's dong", "Genital Alteration") as null|anything in GLOB.cock_shapes_list
-		if(new_shape)
-			H.dna.features["cock_shape"] = new_shape
-		H.update_genitals()
-		H.give_genital(/obj/item/organ/genital/testicles)
-		H.give_genital(/obj/item/organ/genital/penis)
-		H.apply_overlay()
-
-
-	else if (select_alteration == "Vagina")
-		for(var/obj/item/organ/genital/vagina/X in H.internal_organs)
-			qdel(X)
-		var/new_shape
-		new_shape = input(owner, "Choose your character's pussy", "Genital Alteration") as null|anything in GLOB.vagina_shapes_list
-		if(new_shape)
-			H.dna.features["vag_shape"] = new_shape
-		H.update_genitals()
-		H.give_genital(/obj/item/organ/genital/womb)
-		H.give_genital(/obj/item/organ/genital/vagina)
-		H.apply_overlay()
-
-	else if (select_alteration == "Penis Length")
-		for(var/obj/item/organ/genital/penis/X in H.internal_organs)
-			qdel(X)
-		var/min_D = CONFIG_GET(number/penis_min_inches_prefs)
-		var/max_D = CONFIG_GET(number/penis_max_inches_prefs)
-		var/new_length = input(owner, "Penis length in inches:\n([min_D]-[max_D])", "Genital Alteration") as num|null
-		if(new_length)
-			H.dna.features["cock_length"] = clamp(round(new_length), min_D, max_D)
-		H.update_genitals()
-		H.apply_overlay()
-		H.give_genital(/obj/item/organ/genital/testicles)
-		H.give_genital(/obj/item/organ/genital/penis)
-
-	else if (select_alteration == "Breast Size")
-		for(var/obj/item/organ/genital/breasts/X in H.internal_organs)
-			qdel(X)
-		var/new_size = input(owner, "Breast Size", "Genital Alteration") as null|anything in CONFIG_GET(keyed_list/breasts_cups_prefs)
-		if(new_size)
-			H.dna.features["breasts_size"] = new_size
-		H.update_genitals()
-		H.apply_overlay()
-		H.give_genital(/obj/item/organ/genital/breasts)
-
-	else if (select_alteration == "Breast Shape")
-		for(var/obj/item/organ/genital/breasts/X in H.internal_organs)
-			qdel(X)
-		var/new_shape
-		new_shape = input(owner, "Breast Shape", "Genital Alteration") as null|anything in GLOB.breasts_shapes_list
-		if(new_shape)
-			H.dna.features["breasts_shape"] = new_shape
-		H.update_genitals()
-		H.apply_overlay()
-		H.give_genital(/obj/item/organ/genital/breasts)
-
-	else
-		return
-
 
 ///////////////////////////////////LUMINESCENTS//////////////////////////////////////////
 

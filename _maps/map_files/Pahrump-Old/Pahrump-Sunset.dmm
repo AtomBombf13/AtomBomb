@@ -14155,7 +14155,6 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building)
 "fTN" = (
-/obj/item/toy/plush/beeplushie,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/f13/building)
@@ -18383,7 +18382,6 @@
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
 "hDd" = (
-/obj/effect/decal/cleanable/semen,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},
