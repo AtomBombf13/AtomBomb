@@ -32,7 +32,7 @@ RUN . ./dependencies.sh \
 
 # build = byond + tgstation compiled and deployed to /deploy
 FROM byond AS build
-WORKDIR /fortune13
+WORKDIR /atombomb
 
 RUN apt-get install -y --no-install-recommends \
         curl
@@ -70,7 +70,7 @@ RUN . ./dependencies.sh \
 
 # final = byond + runtime deps + rust_g + build
 FROM byond
-WORKDIR /fortune13
+WORKDIR /atombomb
 
 RUN apt-get install -y --no-install-recommends \
         libssl1.0.0:i386 \
@@ -79,6 +79,6 @@ RUN apt-get install -y --no-install-recommends \
 COPY --from=build /deploy ./
 COPY --from=rust_g /rust_g/target/i686-unknown-linux-gnu/release/librust_g.so ./librust_g.so
 
-VOLUME [ "/fortune13/config", "/fortune13/data" ]
-ENTRYPOINT [ "DreamDaemon", "fortune13.dmb", "-port", "54321", "-trusted", "-close", "-verbose" ]
+VOLUME [ "/atombomb/config", "/atombomb/data" ]
+ENTRYPOINT [ "DreamDaemon", "atombomb.dmb", "-port", "54321", "-trusted", "-close", "-verbose" ]
 EXPOSE 54321

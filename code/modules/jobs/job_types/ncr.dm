@@ -748,7 +748,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
 		/obj/item/ammo_box/magazine/m45/socom = 2,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
-		)
+		) //E
 
 /datum/outfit/loadout/shockht
 	name = "Shock Heavy Trooper"
