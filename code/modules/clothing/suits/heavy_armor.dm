@@ -399,25 +399,19 @@
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
-	icon = 'icons/fallout/clothing/armored_heavy.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
-	icon_state = "legion_centurion"
-	item_state = "legion_centurion"
+	icon_state = "leg_centurion"
+	item_state = "leg_centurion"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
 
 /obj/item/clothing/suit/armor/heavy/legion/palacent //laser resist spec
 	name = "paladin-slayer centurion armor"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi' // Inconsistent naming, clean all of the sprites and code up sometime
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
-	icon_state = "legion_palacent"
-	item_state = "legion_palacent"
+	icon_state = "palacent"
+	item_state = "palacent"
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
 	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
-	icon = 'icons/fallout/clothing/armored_heavy.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "legion_legate"
 	item_state = "legion_legate"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?
