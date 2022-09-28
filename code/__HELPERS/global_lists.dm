@@ -48,17 +48,7 @@
 	//ipcs
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/screen, GLOB.ipc_screens_list, roundstart = TRUE)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/antenna, GLOB.ipc_antennas_list, roundstart = TRUE)
-	//genitals
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/penis, GLOB.cock_shapes_list)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/vagina, GLOB.vagina_shapes_list)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/breasts, GLOB.breasts_shapes_list)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/testicles, GLOB.balls_shapes_list)
-
-	for(var/gpath in subtypesof(/obj/item/organ/genital))
-		var/obj/item/organ/genital/G = gpath
-		if(!CHECK_BITFIELD(initial(G.genital_flags), GENITAL_BLACKLISTED))
-			GLOB.genitals_list[initial(G.name)] = gpath
-//END OF CIT CHANGES
+//END Yourself
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))

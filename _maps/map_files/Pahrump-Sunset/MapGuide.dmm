@@ -2091,7 +2091,6 @@
 /turf/open/indestructible/ground/outside/savannah,
 /area/f13/wasteland)
 "xl" = (
-/obj/effect/decal/cleanable/semen,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},

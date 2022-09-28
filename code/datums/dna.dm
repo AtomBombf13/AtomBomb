@@ -55,7 +55,6 @@
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
 	if(ishuman(destination))
 		var/mob/living/carbon/human/H = destination
-		H.give_genitals(TRUE)//This gives the body the genitals of this DNA. Used for any transformations based on DNA
 	if(transfer_SE)
 		destination.dna.mutation_index = mutation_index
 		destination.dna.default_mutation_genes = default_mutation_genes

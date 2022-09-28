@@ -14376,7 +14376,6 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building)
 "fTN" = (
-/obj/item/toy/plush/beeplushie,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/f13/building)

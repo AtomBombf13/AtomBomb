@@ -202,7 +202,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/obj/item/organ/tongue/tongue = C.getorganslot(ORGAN_SLOT_TONGUE)
 	var/obj/item/organ/liver/liver = C.getorganslot(ORGAN_SLOT_LIVER)
 	var/obj/item/organ/stomach/stomach = C.getorganslot(ORGAN_SLOT_STOMACH)
-	var/obj/item/organ/tail/tail = C.getorganslot(ORGAN_SLOT_TAIL)
 
 	var/should_have_brain = TRUE
 	var/should_have_heart = TRUE
@@ -213,7 +212,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/should_have_tongue = TRUE
 	var/should_have_liver = !(NOLIVER in species_traits)
 	var/should_have_stomach = !(NOSTOMACH in species_traits)
-	var/should_have_tail = mutanttail
 
 	if(brain && (replace_current || !should_have_brain))
 		if(!brain.decoy_override)//Just keep it if it's fake
@@ -266,13 +264,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(should_have_appendix && !appendix)
 		appendix = new()
 		appendix.Insert(C)
-
-	if(tail && (!should_have_tail || replace_current))
-		tail.Remove(TRUE)
-		QDEL_NULL(tail)
-	if(should_have_tail && !tail)
-		tail = new mutanttail()
-		tail.Insert(C)
 
 	if(C.get_bodypart(BODY_ZONE_HEAD))
 		if(eyes && (replace_current || !should_have_eyes))
@@ -353,8 +344,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	if(ishuman(C))
 		var/mob/living/carbon/human/H = C
-		if(NOGENITALS in H.dna.species.species_traits)
-			H.give_genitals(TRUE) //call the clean up proc to delete anything on the mob then return.
 		if(mutant_bodyparts["meat_type"]) //I can't believe it's come to the meat
 			H.type_of_meat = GLOB.meat_types[H.dna.features["meat_type"]]
 
@@ -1559,8 +1548,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			"You hear a slap.", target = user, target_message = span_notice("You slap [user == target ? "yourself" : "\the [target]"] in the face! "))
 		user.do_attack_animation(target, ATTACK_EFFECT_FACE_SLAP)
 		user.adjustStaminaLossBuffered(3)
-		if (!HAS_TRAIT(target, TRAIT_PERMABONER))
-			stop_wagging_tail(target)
 		return FALSE
 	else if(aim_for_groin && (target == user || target.lying || same_dir) && (target_on_help || target_restrained || target_aiming_for_groin))
 		if(target.client?.prefs.cit_toggles & NO_ASS_SLAP)
@@ -1568,11 +1555,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			return FALSE
 		user.do_attack_animation(target, ATTACK_EFFECT_ASS_SLAP)
 		user.adjustStaminaLossBuffered(3)
-		target.adjust_arousal(20,maso = TRUE)
-		if (ishuman(target) && HAS_TRAIT(target, TRAIT_MASO) && target.has_dna() && prob(10))
-			target.mob_climax(forced_climax=TRUE)
-		if (!HAS_TRAIT(target, TRAIT_PERMABONER))
-			stop_wagging_tail(target)
 		playsound(target.loc, 'sound/weapons/slap.ogg', 50, 1, -1)
 		target.visible_message(\
 			span_danger("\The [user] slaps [user == target ? "[user.p_their()] own" : "\the [target]'s"] ass!"),\
@@ -1965,8 +1947,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			if(BP)
 				if(BP.receive_damage(damage_amount, 0, wound_bonus = wound_bonus, bare_wound_bonus = bare_wound_bonus, sharpness = sharpness))
 					H.update_damage_overlays()
-					if(damage_amount < 20)
-						H.adjust_arousal(damage_amount, maso = TRUE)
 
 			else//no bodypart, we deal damage with a more general method.
 				H.adjustBruteLoss(damage_amount)

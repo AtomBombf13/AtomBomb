@@ -42763,7 +42763,6 @@
 	},
 /area/f13/building)
 "mxi" = (
-/obj/item/toy/plush/beeplushie,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/f13/building/mall)
@@ -60047,7 +60046,6 @@
 /area/f13/wasteland)
 "uKF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/semen/femcum,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowrustychess"
 	},

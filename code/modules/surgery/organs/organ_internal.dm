@@ -340,14 +340,6 @@
 		if(only_one)
 			return TRUE
 
-	if(!getorganslot(ORGAN_SLOT_TAIL))
-		var/obj/item/organ/tail/tail
-		if(dna && dna.species && dna.species.mutanttail)
-			tail = new dna.species.mutanttail
-			tail.Insert(src)
-			if(only_one)
-				return TRUE
-
 
 /obj/item/organ/random
 	name = "Illegal organ"

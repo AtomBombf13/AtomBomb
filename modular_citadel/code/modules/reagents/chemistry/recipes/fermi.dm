@@ -406,7 +406,7 @@ datum/chemical_reaction/fermi/eigenstate
 
 /datum/chemical_reaction/fermi/plushmium/FermiExplode(datum/reagents, var/atom/my_atom, volume, temp, pH)
 	if(volume < 20) //It creates a normal plush at low volume.. at higher amounts, things get slightly more interesting.
-		new /obj/item/toy/plush/beeplushie(get_turf(my_atom))
+		new /obj/item/toy/plush/plushling(get_turf(my_atom))
 	else
 		new /obj/item/toy/plush/plushling(get_turf(my_atom))
 	my_atom.visible_message("<span class='warning'>The reaction suddenly zaps, creating a plushie!</b></span>")
@@ -417,25 +417,3 @@ datum/chemical_reaction/fermi/eigenstate
 	if(!Fb)
 		return
 	Fb.data = 14
-	
-/datum/chemical_reaction/fermi/furranium
-	name = "Furranium"
-	id = /datum/reagent/fermi/furranium
-	results = list(/datum/reagent/fermi/furranium = 5)
-	required_reagents = list(/datum/reagent/drug/aphrodisiac = 1, /datum/reagent/moonsugar = 1, /datum/reagent/silver = 2, /datum/reagent/medicine/salglu_solution = 1)
-	mix_message = "You think you can hear a howl come from the beaker."
-	//FermiChem vars:
-	OptimalTempMin 	= 350
-	OptimalTempMax 	= 600
-	ExplodeTemp 	= 700
-	OptimalpHMin 	= 8
-	OptimalpHMax 	= 10
-	ReactpHLim 		= 2
-	//CatalystFact 	= 0 //To do 1
-	CurveSharpT 	= 2
-	CurveSharppH 	= 0.5
-	ThermicConstant = -10
-	HIonRelease 	= -0.1
-	RateUpLim 		= 2
-	FermiChem 		= TRUE
-	PurityMin		= 0.3

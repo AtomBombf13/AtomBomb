@@ -33597,7 +33597,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood,
 /obj/structure/table/optable,
-/obj/item/organ/genital/penis,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
