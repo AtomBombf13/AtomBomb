@@ -35203,8 +35203,8 @@
 	},
 /obj/item/gun/ballistic/rifle/hunting,
 /obj/item/gun_upgrade/scope/killer,
-/obj/item/ammo_box/stripper/308,
-/obj/item/ammo_box/stripper/308,
+/obj/item/ammo_box/stripper/a308,
+/obj/item/ammo_box/stripper/a308,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "oOm" = (

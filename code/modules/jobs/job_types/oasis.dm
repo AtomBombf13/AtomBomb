@@ -904,7 +904,7 @@ Mayor
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/f13/peltboots
 	backpack_contents = list(/obj/item/gun/ballistic/revolver/winchesterrebored = 1,
-	/obj/item/ammo_box/stripper/762/doublestacked = 2,
+	/obj/item/ammo_box/stripper/a762/doublestacked = 2,
 	/obj/item/fishingrod = 1,
 	/obj/item/binoculars = 1,
 	/obj/item/crafting/campfirekit = 1,

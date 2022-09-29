@@ -622,14 +622,14 @@
 	start_empty = TRUE
 
 //10mm
-/obj/item/ammo_box/loader/10mm
+/obj/item/ammo_box/loader/a10mm
 	name = "speed loader (10mm)"
 	icon_state = "10mm2"
 	caliber = list(CALIBER_10MM)
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 12
 
-/obj/item/ammo_box/loader/10mm/empty
+/obj/item/ammo_box/loader/a10mm/empty
 	start_empty = TRUE
 
 
@@ -686,7 +686,7 @@
 
 
 //.45 ACP
-/obj/item/ammo_box/loader/45ACP
+/obj/item/ammo_box/loader/acp45
 	name = "speed loader (.45 ACP)"
 	desc = "Designed to quickly reload revolvers."
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -695,17 +695,17 @@
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 7
 
-/obj/item/ammo_box/loader/45ACP/empty
+/obj/item/ammo_box/loader/acp45/empty
 	start_empty = TRUE
 
-/obj/item/ammo_box/loader/45longcolt
+/obj/item/ammo_box/loader/longcolt45
 	name = "speed loader (.45 LC)"
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "44"
 	caliber = list(CALIBER_45LC)
 	ammo_type = /obj/item/ammo_casing/a45lc
 
-/obj/item/ammo_box/loader/45longcolt/empty
+/obj/item/ammo_box/loader/longcolt45/empty
 	start_empty = TRUE
 
 // 308
@@ -794,26 +794,26 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 //7.62x51, .308 Winchester
-/obj/item/ammo_box/stripper/762
+/obj/item/ammo_box/stripper/a762
 	name = "stripper clip (7.62 Match)"
-		icon_state = "762"
+	icon_state = "762"
 	caliber = list(CALIBER_762)
 	ammo_type = /obj/item/ammo_casing/a762
 
-/obj/item/ammo_box/stripper/308
+/obj/item/ammo_box/stripper/a308
 	name = "stripper clip (.308 Sport)"
 	icon_state = "308"
 	caliber = list(CALIBER_762)
 	ammo_type = /obj/item/ammo_casing/a762/sport
 
-/obj/item/ammo_box/stripper/762/doublestacked
+/obj/item/ammo_box/stripper/a762/doublestacked
 	name = "double stack stripper clip (.308 Sport)"
 	icon_state = "762a"
 	ammo_type = /obj/item/ammo_casing/a762/sport
 	max_ammo = 10
 
 //5.56x45mm
-/obj/item/ammo_box/stripper/556
+/obj/item/ammo_box/stripper/a556
 	name = "stripper clip (5.56x45mm)"
 	icon_state = "762"
 	ammo_type = /obj/item/ammo_casing/a556

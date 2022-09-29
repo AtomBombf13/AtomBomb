@@ -4,7 +4,7 @@
 	id = "bolt_clip"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 8000)
-	build_path = /obj/item/ammo_box/stripper/762
+	build_path = /obj/item/ammo_box/stripper/a762
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

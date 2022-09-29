@@ -1366,7 +1366,7 @@
 "KY" = (/obj/effect/decal/cleanable/dirt,/obj/structure/sign/poster/contraband/smoke{pixel_x = -32},/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/space)
 "KZ" = (/obj/structure/simple_door/bunker,/turf/open/floor/f13{icon_state = "yellowdirtyfull"},/area/space)
 "Lb" = (/obj/effect/decal/cleanable/dirt,/obj/item/flashlight/lamp,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/space)
-"Lc" = (/obj/item/gun/ballistic/automatic/marksman/sniper/gold,/obj/structure/rack,/obj/item/ammo_box/stripper/308,/obj/item/ammo_box/stripper/308,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/space)
+"Lc" = (/obj/item/gun/ballistic/automatic/marksman/sniper/gold,/obj/structure/rack,/obj/item/ammo_box/stripper/a308,/obj/item/ammo_box/stripper/a308,/obj/effect/decal/cleanable/dirt,/turf/open/floor/f13/wood,/area/space)
 "Ld" = (/obj/structure/barricade/wooden,/obj/structure/decoration/rag{icon_state = "skin"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/space)
 "Lf" = (/obj/effect/decal/cleanable/dirt,/obj/structure/handrail/g_central{dir = 8; pixel_x = -20},/turf/open/floor/f13{icon_state = "greenrustyfull"},/area/space)
 "Lh" = (/obj/machinery/door/unpowered/securedoor{autoclose = 1; max_integrity = 500; name = "Store Backroom"; req_one_access_txt = "34"},/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,/area/space)

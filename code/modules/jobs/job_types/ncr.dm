@@ -467,7 +467,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/loader/45ACP = 2,
+		/obj/item/ammo_box/loader/acp45 = 2,
 		/obj/item/storage/bag/money/small/ncr = 2,
 		)
 
@@ -656,7 +656,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/loader/45ACP = 2,
+		/obj/item/ammo_box/loader/acp45 = 2,
 		)
 
 /datum/outfit/loadout/rangertrail
@@ -1196,7 +1196,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Reservist"
 	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
-		/obj/item/ammo_box/stripper/308 = 2,
+		/obj/item/ammo_box/stripper/a308 = 2,
 		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 7,
 		/obj/item/storage/box/ration/menu_eight = 1,

@@ -53,8 +53,6 @@
 	destination.dna.real_name = real_name
 	destination.dna.custom_species = custom_species
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
-	if(ishuman(destination))
-		var/mob/living/carbon/human/H = destination
 	if(transfer_SE)
 		destination.dna.mutation_index = mutation_index
 		destination.dna.default_mutation_genes = default_mutation_genes

@@ -686,7 +686,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	l_pocket = /obj/item/binoculars
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/loader/45ACP = 1,
+		/obj/item/ammo_box/loader/acp45 = 1,
 		/obj/item/reagent_containers/pill/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/machete = 1,
@@ -1304,7 +1304,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 3,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/loader/45ACP = 3,
+		/obj/item/ammo_box/loader/acp45 = 3,
 		)
 
 // Slavemaster

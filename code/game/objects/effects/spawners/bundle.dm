@@ -174,7 +174,7 @@
 	name = "Mosin-Nagant spawner"
 	items = list(
 		/obj/item/gun/ballistic/rifle/mosin,
-		/obj/item/ammo_box/stripper/762
+		/obj/item/ammo_box/stripper/a762
 	)
 
 /obj/effect/spawner/bundle/crate/surplusrifle

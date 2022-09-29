@@ -963,14 +963,14 @@
 	name = "mosin nagant and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/rifle/mosin,
-				/obj/item/ammo_box/stripper/762
+				/obj/item/ammo_box/stripper/a762
 				)
 
 /obj/effect/spawner/bundle/f13/remington
 	name = "hunting rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/rifle/hunting,
-				/obj/item/ammo_box/stripper/308
+				/obj/item/ammo_box/stripper/a308
 				)
 
 /obj/effect/spawner/bundle/f13/n99
@@ -1069,7 +1069,7 @@
 	name = "s&w revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/revolver45,
-				/obj/item/ammo_box/loader/45ACP
+				/obj/item/ammo_box/loader/acp45
 	)
 
 /obj/effect/spawner/bundle/f13/cowboy
@@ -1558,8 +1558,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 	loot = list(
 				/obj/item/ammo_box/magazine/m45,
-				/obj/item/ammo_box/stripper/762,
-				/obj/item/ammo_box/stripper/308,
+				/obj/item/ammo_box/stripper/a762,
+				/obj/item/ammo_box/stripper/a308,
 				/obj/item/ammo_box/magazine/m10mm/adv/simple,
 				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/loader/c38,
@@ -1605,7 +1605,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/loader/c4570,
 				/obj/item/ammo_box/tube/c4570,
 				/obj/item/ammo_box/a50MG,
-				/obj/item/ammo_box/stripper/762/doublestacked,
+				/obj/item/ammo_box/stripper/a762/doublestacked,
 				/obj/item/stock_parts/cell/ammo/mfc,
 				/obj/item/ammo_casing/caseless/rocket,
 				/obj/item/ammo_box/a40mm

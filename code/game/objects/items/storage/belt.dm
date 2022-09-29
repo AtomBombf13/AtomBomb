@@ -450,9 +450,9 @@
 
 /obj/item/storage/belt/shoulderholster/ranger45/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/revolver45(src)
-	new /obj/item/ammo_box/loader/45ACP(src)
-	new /obj/item/ammo_box/loader/45ACP(src)
-	new /obj/item/ammo_box/loader/45ACP(src)
+	new /obj/item/ammo_box/loader/acp45(src)
+	new /obj/item/ammo_box/loader/acp45(src)
+	new /obj/item/ammo_box/loader/acp45(src)
 
 /obj/item/storage/belt/shoulderholster/ranger4570/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/sequoia(src)

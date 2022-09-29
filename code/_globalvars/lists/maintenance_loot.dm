@@ -512,12 +512,12 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/gun/ballistic/revolver/caravan_shotgun,
 	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/gun/ballistic/rifle/mosin,
-	/obj/item/ammo_box/stripper/762,
+	/obj/item/ammo_box/stripper/a762,
 	/obj/item/gun/ballistic/revolver/police,
 	/obj/item/ammo_box/loader/c38,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox,
 	/obj/item/gun/ballistic/rifle/hunting,
-	/obj/item/ammo_box/stripper/308,
+	/obj/item/ammo_box/stripper/a308,
 	/obj/item/gun/ballistic/automatic/pistol/n99,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
 	/obj/item/gun/ballistic/automatic/pistol/m1911,
@@ -540,7 +540,7 @@ GLOBAL_LIST_INIT(loot_t2_range, list(
 	/obj/item/ammo_box/magazine/m22/extended,
 	/obj/item/gun/ballistic/revolver/m29,
 	/obj/item/ammo_box/loader/m44,
-	/obj/item/ammo_box/stripper/308,
+	/obj/item/ammo_box/stripper/a308,
 	/obj/item/ammo_box/loader/m44,
 	/obj/item/gun/ballistic/rifle/repeater/cowboy,
 	/obj/item/ammo_box/loader/a357,
@@ -641,8 +641,8 @@ GLOBAL_LIST_INIT(loot_t1_ammo, list(
 
 GLOBAL_LIST_INIT(loot_t2_ammo, list(
 	/obj/item/ammo_box/magazine/m45,
-	/obj/item/ammo_box/stripper/762,
-	/obj/item/ammo_box/stripper/308,
+	/obj/item/ammo_box/stripper/a762,
+	/obj/item/ammo_box/stripper/a308,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
 	/obj/item/ammo_box/magazine/m556/rifle,
 	/obj/item/ammo_box/loader/c38,
@@ -672,7 +672,7 @@ GLOBAL_LIST_INIT(loot_t4_ammo, list(
 	/obj/item/ammo_box/loader/c4570,
 	/obj/item/ammo_box/tube/c4570,
 	/obj/item/ammo_box/a50MG,
-	/obj/item/ammo_box/stripper/762/doublestacked,
+	/obj/item/ammo_box/stripper/a762/doublestacked,
 	/obj/item/stock_parts/cell/ammo/mfc
 ))
 
