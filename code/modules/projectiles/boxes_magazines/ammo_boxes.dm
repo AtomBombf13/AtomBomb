@@ -1,5 +1,6 @@
-//In this document: Ammo boxes, speed loaders, stripper clips.
+//In this document: Ammo boxes, speed loaders, stripper clips
 
+// Ammo boxes base should be medium objects and reload a couple bullets at a time or such. Not just to make mags/loaders more worthwhile, part of the whole inventory managment systems, oversimplified superconvenience isn't a good thing IMO.
 // Speed Loader template
 /obj/item/ammo_box/loader
 	name = "speed loader"
@@ -12,7 +13,6 @@
 // Ammo tube template. Should reload 1 bullet at a time really
 /obj/item/ammo_box/tube
 	desc = "Designed to quickly reload repeaters."
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	multiple_sprites = 1
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_TUBE)
@@ -32,7 +32,6 @@
 
 //Shotguns
 /obj/item/ammo_box/shotgun
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	max_ammo = 12
 	custom_materials = list(/datum/material/iron = MATS_SHOTGUN_BOX)
 	ammo_type = /obj/item/ammo_casing/shotgun
@@ -87,7 +86,6 @@
 //.22 LR
 /obj/item/ammo_box/m22
 	name = "ammo box (.22lr)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "22rd"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a22
@@ -111,7 +109,6 @@
 //9mm and .38
 /obj/item/ammo_box/c9mm
 	name = "ammo box (9mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "9mmbox"
 	multiple_sprites = 2
 	caliber = list(CALIBER_9MM)
@@ -122,7 +119,6 @@
 
 /obj/item/ammo_box/c9mm/rubber
 	name = "ammo box (9mm rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "9mmbox"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/c9mm/rubber
@@ -141,7 +137,6 @@
 
 /obj/item/ammo_box/c38box
 	name = "ammo box (.38)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "38box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_38)
@@ -152,7 +147,6 @@
 
 /obj/item/ammo_box/c38box/rubber
 	name = "ammo box (.38 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "38box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/c38/rubber
@@ -173,7 +167,6 @@
 //10mm
 /obj/item/ammo_box/c10mm
 	name = "ammo box (10mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "10mmbox"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/c10mm
@@ -185,7 +178,6 @@
 /obj/item/ammo_box/c10mm/fire
 	name = "ammo box (10mm incendiary-tipped)"
 	desc = "A box of 10mm incendiary-tipped rounds. This'll burn."
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/c10mm/incendiary
 
 /obj/item/ammo_box/c10mm/rubber
@@ -202,7 +194,6 @@
 //.357 Magnum
 /obj/item/ammo_box/a357box
 	name = "ammo box (.357 Magnum FMJ)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "357box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_357, CALIBER_38)
@@ -232,7 +223,6 @@
 //.44 Magnum
 /obj/item/ammo_box/m44box
 	name = "ammo box (.44 Magnum FMJ)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "44box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_44)
@@ -244,7 +234,6 @@
 /obj/item/ammo_box/m44box/incendiary
 	name = "ammo box (.44 magnum incendiary-tipped)"
 	desc = "A box of .44 (not 10mm) incendiary-tipped rounds. Filled with a safe homemade naplam made from phosphorus, welding fuel, thickened with abraxo cleaner."
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/m44/incendiary
 
 /obj/item/ammo_box/m44box/improvised
@@ -256,7 +245,6 @@
 
 /obj/item/ammo_box/a45lcbox
 	name = "ammo box (.45 Long Colt)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "ammobox"
 	caliber = list(CALIBER_45LC)
 	ammo_type = /obj/item/ammo_casing/a45lc
@@ -274,7 +262,6 @@
 // .45 ACP
 /obj/item/ammo_box/c45
 	name = "ammo box (.45 ACP)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	caliber = list(CALIBER_45ACP)
 	multiple_sprites = 2
 	icon_state = "45box"
@@ -285,7 +272,6 @@
 
 /obj/item/ammo_box/c45/rubber
 	name = "ammo box (.45 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	multiple_sprites = 2
 	icon_state = "45box"
 	ammo_type = /obj/item/ammo_casing/c45/rubber
@@ -306,7 +292,6 @@
 //.45-70 Gov't
 /obj/item/ammo_box/c4570box
 	name = "ammo box (.45-70 FMJ)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "4570box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_4570)
@@ -337,7 +322,6 @@
 
 /obj/item/ammo_box/m5mmbox
 	name = "ammo box (5mm FMJ)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "5mmbox"
 	multiple_sprites = 2
 	caliber = list(CALIBER_5MM)
@@ -361,7 +345,6 @@
 //5.56x45
 /obj/item/ammo_box/a556
 	name = "ammo box (5.56 FMJ)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "556box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_556)
@@ -376,7 +359,6 @@
 
 /obj/item/ammo_box/a556/rubber
 	name = "ammo box (5.56 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "556box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a556/rubber
@@ -413,7 +395,6 @@
 //7.62x51, .308 Winchester
 /obj/item/ammo_box/a308box
 	name = "ammo box (.308)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "308box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_762)
@@ -431,7 +412,6 @@
 
 /obj/item/ammo_box/a762box
 	name = "ammo box (7.62x51 FMJ Match)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "762box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_762)
@@ -463,7 +443,6 @@
 
 /obj/item/ammo_box/a762box/rubber
 	name = "ammo box (7.62x51 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "762box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a762/rubber
@@ -472,7 +451,6 @@
 //.50 MG and 14mm
 /obj/item/ammo_box/a50MGbox
 	name = "ammo box (.50 MG)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50box"
 	multiple_sprites = 2
 	caliber = list(CALIBER_50MG)
@@ -483,7 +461,6 @@
 
 /obj/item/ammo_box/a50MGbox/rubber
 	name = "ammo box (.50 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a50MG/rubber
@@ -511,7 +488,6 @@
 
 /obj/item/ammo_box/m14mm
 	name = "ammo box (14mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "14mmbox"
 	multiple_sprites = 2
 	caliber = list(CALIBER_14MM)
@@ -533,7 +509,6 @@
 //Misc.
 /obj/item/ammo_box/m473
 	name = "ammo box (4.73mm caseless)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "ammobox"
 	caliber = list(CALIBER_CASELESS)
 	multiple_sprites = 2
@@ -575,7 +550,6 @@
 
 /obj/item/ammo_box/lasmusket
 	name = "Battery box (Laser musket)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "lasmusketbox"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
@@ -586,7 +560,6 @@
 
 /obj/item/ammo_box/plasmamusket
 	name = "Canister box (Plasma musket)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "plasmusketbox"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
@@ -689,7 +662,6 @@
 /obj/item/ammo_box/loader/acp45
 	name = "speed loader (.45 ACP)"
 	desc = "Designed to quickly reload revolvers."
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "10mm"
 	caliber = list(CALIBER_45ACP)
 	ammo_type = /obj/item/ammo_casing/c45
@@ -879,7 +851,6 @@
 /obj/item/ammo_box/jerrycan
 	name = "jerry can"
 	desc = "A jerry can full of napalm and diesel fuel, meant for flamethrowers"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "jerrycan"
 	caliber = list(CALIBER_FUEL)
 	unloadable = TRUE
