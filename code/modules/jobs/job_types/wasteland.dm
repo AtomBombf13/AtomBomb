@@ -187,7 +187,7 @@ Raider
 		/obj/item/gun/ballistic/automatic/varmint = 1,
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
-		/obj/item/ammo_box/c45rev = 2,
+		/obj/item/ammo_box/loader/45ACP = 2,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive = 1,
 		/obj/item/grenade/smokebomb = 2,
@@ -366,7 +366,7 @@ Raider
 		/obj/item/fishingrod = 1,
 		/obj/item/crowbar/smithedunitool = 1,
 		/obj/item/gun/ballistic/revolver/winchesterrebored = 1,
-		/obj/item/ammo_box/a762/doublestacked = 2,
+		/obj/item/ammo_box/stripper/762/doublestacked = 2,
 		/obj/item/clothing/under/f13/worn = 1,
 		/obj/item/clothing/head/f13/gambler = 1,
 		/obj/item/clothing/shoes/galoshes  = 1,
@@ -654,7 +654,7 @@ Raider
 		/obj/item/toy/cards/deck=1,
 		/obj/item/storage/box/dice=1,
 		/obj/item/stack/tile/carpet/blackred/fifty=1,
-		/obj/item/ammo_box/m44=2)
+		/obj/item/ammo_box/loader/m44=2)
 
 //end new
 
@@ -697,7 +697,7 @@ Raider
 		/obj/item/toy/cards/deck=1,
 		/obj/item/storage/box/dice=1,
 		/obj/item/stack/tile/carpet/blackred/fifty=1,
-		/obj/item/ammo_box/m44=2)
+		/obj/item/ammo_box/loader/m44=2)
 
 /datum/outfit/loadout/vaquero
 	name = "Vaquero"
@@ -705,7 +705,7 @@ Raider
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	head = /obj/item/clothing/head/helmet/f13/vaquerohat
-	l_hand = /obj/item/ammo_box/a357
+	l_hand = /obj/item/ammo_box/loader/a357
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/colt357=2,
 		/obj/item/melee/onehanded/club/tireiron=1,
@@ -736,7 +736,7 @@ Raider
 	l_hand = /obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
 		/obj/item/storage/fancy/rollingpapers=1,
-		/obj/item/ammo_box/a357=2,
+		/obj/item/ammo_box/loader/a357=2,
 		/obj/item/binoculars=1,
 		/obj/item/radio=1,)
 
@@ -876,7 +876,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/grenade/homemade/coffeepotbomb = 2,	//This is funny. I swear guys.
 		/obj/item/gun/ballistic/revolver/m29 = 1,		//Moved here for more *variety*
-		/obj/item/ammo_box/m44 = 2
+		/obj/item/ammo_box/loader/m44 = 2
 	)
 
 
@@ -1024,7 +1024,7 @@ Raider
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=4, \
 		/obj/item/reagent_containers/pill/radx=1, \
 		/obj/item/restraints/handcuffs=2, \
-		/obj/item/ammo_box/c4570/explosive=6)
+		/obj/item/ammo_box/loader/c4570/explosive=6)
 
 /datum/outfit/job/wasteland/f13adminboos/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -1401,7 +1401,7 @@ Raider
 		/obj/item/clothing/under/f13/rustwalkers = 1,
 		/obj/item/clothing/under/f13/female/rustwalkers = 1,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
-		/obj/item/ammo_box/c45rev = 2,
+		/obj/item/ammo_box/loader/45ACP = 2,
 		/obj/item/circular_saw = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/storage/belt/utility/full = 1,

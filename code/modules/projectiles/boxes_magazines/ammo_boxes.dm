@@ -1,5 +1,29 @@
 //In this document: Ammo boxes, speed loaders, stripper clips.
 
+// Speed Loader template
+/obj/item/ammo_box/loader
+	name = "speed loader"
+	desc = "Designed to quickly reload revolvers."
+	multiple_sprites = 1
+	max_ammo = 6
+	w_class = WEIGHT_CLASS_TINY
+	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
+
+// Ammo tube template. Should reload 1 bullet at a time really
+/obj/item/ammo_box/tube
+	desc = "Designed to quickly reload repeaters."
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	multiple_sprites = 1
+	w_class = WEIGHT_CLASS_SMALL
+	custom_materials = list(/datum/material/iron = MATS_TUBE)
+
+// Stripper clip template. Basically speed loader for rifles?
+/obj/item/ammo_box/stripper
+	desc = "A stripper clip."
+	max_ammo = 5
+	multiple_sprites = 1
+	w_class = WEIGHT_CLASS_TINY
+	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 
 ////////////////////
 //AMMUNITION BOXES//
@@ -586,63 +610,45 @@
 //SPEEDLOADERS//
 ////////////////
 
-/obj/item/ammo_box/tube
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	custom_materials = list(/datum/material/iron = MATS_TUBE)
-	w_class = WEIGHT_CLASS_SMALL
-	multiple_sprites = 1
 
 //.38
-/obj/item/ammo_box/c38
+/obj/item/ammo_box/loader/c38
 	name = "speed loader (.38)"
-	desc = "Designed to quickly reload revolvers."
 	icon_state = "38"
 	caliber = list(CALIBER_38)
 	ammo_type = /obj/item/ammo_casing/c38
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
-/obj/item/ammo_box/c38/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/c38/empty
+	start_empty = TRUE
 
 //10mm
-/obj/item/ammo_box/l10mm
+/obj/item/ammo_box/loader/10mm
 	name = "speed loader (10mm)"
-	desc = "Designed to quickly reload revolvers."
 	icon_state = "10mm2"
 	caliber = list(CALIBER_10MM)
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 12
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = 2000)
 
-/obj/item/ammo_box/l10mm/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/10mm/empty
+	start_empty = TRUE
 
 
 //.357
-/obj/item/ammo_box/a357
+/obj/item/ammo_box/loader/a357
 	name = "speed loader (.357)"
 	desc = "Designed to quickly reload revolvers. Also accepts .38!"
 	icon_state = "357"
 	ammo_type = /obj/item/ammo_casing/a357
 	caliber = list(CALIBER_357, CALIBER_38)
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
-/obj/item/ammo_box/a357/match
+/obj/item/ammo_box/loader/a357/match
 	name = "speed loader (.357 Match)"
 	desc = "Designed to quickly reload revolvers. These rounds are manufactured within extremely tight tolerances, making them easy to show off trickshots with."
 
-/obj/item/ammo_box/a357/ap
+/obj/item/ammo_box/loader/a357/ap
 	name = "speed loader (.357 AP)"
 
-/obj/item/ammo_box/a357/dumdum
+/obj/item/ammo_box/loader/a357/dumdum
 	name = "speed loader (.357 DumDum)"
 	desc = "Designed to quickly reload revolvers. Usage of these rounds will constitute a war crime in your area."
 
@@ -655,38 +661,32 @@
 	max_ammo = 12
 
 /obj/item/ammo_box/tube/a357/empty
-	start_empty = 1
+	start_empty = TRUE
 
 
 //.44 Magnum
-/obj/item/ammo_box/m44
+/obj/item/ammo_box/loader/m44
 	name = "speed loader (.44)"
-	desc = "Designed to quickly reload revolvers."
 	icon_state = "44"
 	ammo_type = /obj/item/ammo_casing/m44
-	max_ammo = 6
 	caliber = list(CALIBER_44)
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
-/obj/item/ammo_box/m44/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/m44/empty
+	start_empty = TRUE
 
 /obj/item/ammo_box/tube/m44
 	name = "speed loader tube (.44)"
-	desc = "Designed to quickly reload repeaters."
 	icon_state = "44tube"
 	caliber = list(CALIBER_44)
 	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 12
 
 /obj/item/ammo_box/tube/m44/empty
-	start_empty = 1
+	start_empty = TRUE
 
 
 //.45 ACP
-/obj/item/ammo_box/c45rev
+/obj/item/ammo_box/loader/45ACP
 	name = "speed loader (.45 ACP)"
 	desc = "Designed to quickly reload revolvers."
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -694,73 +694,57 @@
 	caliber = list(CALIBER_45ACP)
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 7
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
-/obj/item/ammo_box/c45rev/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/45ACP/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/a45lcrev
+/obj/item/ammo_box/loader/45longcolt
 	name = "speed loader (.45 LC)"
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "44"
 	caliber = list(CALIBER_45LC)
 	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
-/obj/item/ammo_box/a45lcrev/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/45longcolt/empty
+	start_empty = TRUE
 
 // 308
 
-/obj/item/ammo_box/rev308
+/obj/item/ammo_box/loader/rev308
 	name = "speed loader (.308)"
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "rev308"
 	caliber = list(CALIBER_762)
 	ammo_type = /obj/item/ammo_casing/a762/sport
 	max_ammo = 10
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 	
-/obj/item/ammo_box/rev308/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/rev308/empty
+	start_empty = TRUE
 
 //.45-70 Gov't
-/obj/item/ammo_box/c4570
+/obj/item/ammo_box/loader/c4570
 	name = "speed loader (.45-70)"
-	desc = "Designed to quickly reload revolvers."
 	icon_state = "4570"
 	caliber = list(CALIBER_4570)
 	ammo_type = /obj/item/ammo_casing/c4570
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
-/obj/item/ammo_box/c4570/empty
-	start_empty = 1
+/obj/item/ammo_box/loader/c4570/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/c4570/explosive
+/obj/item/ammo_box/loader/c4570/explosive
 	name = "speed loader (.45-70 explosive)"
 	icon_state = "4570"
 	ammo_type = /obj/item/ammo_casing/c4570/explosive
 
 /obj/item/ammo_box/tube/c4570
 	name = "speed loader tube (.45-70)"
-	desc = "Designed to quickly reload repeaters."
 	icon_state = "4570tube"
 	caliber = list(CALIBER_4570)
 	ammo_type = /obj/item/ammo_casing/c4570
 	max_ammo = 10
 
 /obj/item/ammo_box/tube/c4570/empty
-	start_empty = 1
+	start_empty = TRUE
 
 
 
@@ -810,62 +794,39 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 //7.62x51, .308 Winchester
-/obj/item/ammo_box/a762
+/obj/item/ammo_box/stripper/762
 	name = "stripper clip (7.62 Match)"
-	desc = "A stripper clip."
-	icon_state = "762"
+		icon_state = "762"
 	caliber = list(CALIBER_762)
 	ammo_type = /obj/item/ammo_casing/a762
-	max_ammo = 5
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 
-/obj/item/ammo_box/a308
+/obj/item/ammo_box/stripper/308
 	name = "stripper clip (.308 Sport)"
-	desc = "A stripper clip."
 	icon_state = "308"
 	caliber = list(CALIBER_762)
 	ammo_type = /obj/item/ammo_casing/a762/sport
-	max_ammo = 5
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 
-/obj/item/ammo_box/a762/doublestacked
+/obj/item/ammo_box/stripper/762/doublestacked
 	name = "double stack stripper clip (.308 Sport)"
-	desc = "A stripper clip."
 	icon_state = "762a"
 	ammo_type = /obj/item/ammo_casing/a762/sport
 	max_ammo = 10
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 
 //5.56x45mm
-/obj/item/ammo_box/a556/stripper
+/obj/item/ammo_box/stripper/556
 	name = "stripper clip (5.56x45mm)"
-	desc = "A stripper clip."
 	icon_state = "762"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = list(CALIBER_556)
-	max_ammo = 5
-	multiple_sprites = 1
-	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
-	w_class = WEIGHT_CLASS_TINY
 
 
 //Needler
-/obj/item/ammo_box/needle
+/obj/item/ammo_box/stripper/needle
 	name = "needler stripper clip (needle darts)"
 	icon_state = "needler"
 	caliber = "needle"
 	ammo_type = /obj/item/ammo_casing/caseless/needle
 	caliber = list(CALIBER_NEEDLE)
-	max_ammo = 5
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 
 //.50 BMG
 /obj/item/ammo_box/a50MG

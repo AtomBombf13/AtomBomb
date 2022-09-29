@@ -160,7 +160,7 @@
 		SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/stack/spacecash/c1000, null, TRUE, TRUE)
 	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/gun/energy/kinetic_accelerator/crossbow, null, TRUE, TRUE)
 	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/gun/ballistic/revolver/m29/snub, null, TRUE, TRUE)
-	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/ammo_box/a357, null, TRUE, TRUE)
+	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/ammo_box/loader/a357, null, TRUE, TRUE)
 	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/grenade/plastic/x4, null, TRUE, TRUE)
 
 	var/obj/item/pda/heads/pda = H.belt
@@ -187,7 +187,7 @@
 	head = /obj/item/clothing/head/centhat
 	belt = /obj/item/gun/ballistic/revolver/m29/snub
 	r_pocket = /obj/item/lighter
-	l_pocket = /obj/item/ammo_box/a357
+	l_pocket = /obj/item/ammo_box/loader/a357
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id
 
@@ -359,7 +359,7 @@
 	ears = /obj/item/radio/headset/headset_cent/alt
 
 	backpack_contents = list(/obj/item/storage/box=1,\
-		/obj/item/ammo_box/a357=1,\
+		/obj/item/ammo_box/loader/a357=1,\
 		/obj/item/storage/firstaid/regular=1,\
 		/obj/item/storage/box/flashbangs=1,\
 		/obj/item/flashlight=1,\

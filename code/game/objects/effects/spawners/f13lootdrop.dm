@@ -963,14 +963,14 @@
 	name = "mosin nagant and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/rifle/mosin,
-				/obj/item/ammo_box/a762
+				/obj/item/ammo_box/stripper/762
 				)
 
 /obj/effect/spawner/bundle/f13/remington
 	name = "hunting rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/rifle/hunting,
-				/obj/item/ammo_box/a308
+				/obj/item/ammo_box/stripper/308
 				)
 
 /obj/effect/spawner/bundle/f13/n99
@@ -1040,21 +1040,21 @@
 	name = "m29 revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/m29,
-				/obj/item/ammo_box/m44/
+				/obj/item/ammo_box/loader/m44/
 				)
 
 /obj/effect/spawner/bundle/f13/revolverm29alt
 	name = "alt m29 revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/m29/alt,
-				/obj/item/ammo_box/m44
+				/obj/item/ammo_box/loader/m44
 	)
 
 /obj/effect/spawner/bundle/f13/revolverm29snub
 	name = "m29 snub-nose revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/m29/snub,
-				/obj/item/ammo_box/m44/
+				/obj/item/ammo_box/loader/m44/
 				)
 
 
@@ -1069,7 +1069,7 @@
 	name = "s&w revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/revolver45,
-				/obj/item/ammo_box/c45rev
+				/obj/item/ammo_box/loader/45ACP
 	)
 
 /obj/effect/spawner/bundle/f13/cowboy
@@ -1083,7 +1083,7 @@
 	name = "colt 357 and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/colt357,
-				/obj/item/ammo_box/a357
+				/obj/item/ammo_box/loader/a357
 				)
 
 /obj/effect/spawner/bundle/f13/service
@@ -1097,7 +1097,7 @@
 	name = "police revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/police,
-				/obj/item/ammo_box/a357
+				/obj/item/ammo_box/loader/a357
 	)
 
 /obj/effect/spawner/bundle/f13/laserpistol
@@ -1215,7 +1215,7 @@
 	name = "needler and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/needler,
-				/obj/item/ammo_box/needle
+				/obj/item/ammo_box/stripper/needle
 				)
 
 /obj/effect/spawner/bundle/f13/trail
@@ -1229,7 +1229,7 @@
 	name = ".44 revolver and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/revolver44,
-				/obj/item/ammo_box/m44/
+				/obj/item/ammo_box/loader/m44/
 				)
 
 /obj/effect/spawner/bundle/f13/beretta/select
@@ -1420,7 +1420,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	name = "hunting revolver spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/hunting,
-				/obj/item/ammo_box/c4570/
+				/obj/item/ammo_box/loader/c4570/
 	)
 
 /obj/effect/spawner/bundle/f13/riotshotgun
@@ -1547,7 +1547,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/m9mm,
 				/obj/item/ammo_box/shotgun/buck,
 				/obj/item/ammo_box/shotgun/slug,
-				/obj/item/ammo_box/c38,
+				/obj/item/ammo_box/loader/c38,
 				/obj/item/ammo_box/magazine/m10mm/adv/simple,
 				/obj/item/ammo_box/magazine/m556/rifle/small
 				)
@@ -1558,15 +1558,15 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 	loot = list(
 				/obj/item/ammo_box/magazine/m45,
-				/obj/item/ammo_box/a762,
-				/obj/item/ammo_box/a308,
+				/obj/item/ammo_box/stripper/762,
+				/obj/item/ammo_box/stripper/308,
 				/obj/item/ammo_box/magazine/m10mm/adv/simple,
 				/obj/item/ammo_box/magazine/m556/rifle,
-				/obj/item/ammo_box/c38,
+				/obj/item/ammo_box/loader/c38,
 				/obj/item/ammo_box/magazine/m9mm,
-				/obj/item/ammo_box/m44,
+				/obj/item/ammo_box/loader/m44,
 				/obj/item/ammo_box/tube/a357,
-				/obj/item/ammo_box/a357,
+				/obj/item/ammo_box/loader/a357,
 				/obj/item/ammo_box/magazine/m556/rifle/small
 				)
 
@@ -1583,7 +1583,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/uzim9mm,
 				/obj/item/ammo_box/magazine/m10mm/adv/simple,
 				/obj/item/ammo_box/magazine/greasegun,
-				/obj/item/ammo_box/needle,
+				/obj/item/ammo_box/stripper/needle,
 				/obj/item/ammo_box/magazine/tommygunm45,
 				/obj/item/ammo_box/tube/m44,
 				/obj/item/ammo_box/magazine/m10mm/adv/ext,
@@ -1602,10 +1602,10 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/d12g,
 				/obj/item/ammo_box/magazine/m44,
 				/obj/item/ammo_box/magazine/m556/rifle,
-				/obj/item/ammo_box/c4570,
+				/obj/item/ammo_box/loader/c4570,
 				/obj/item/ammo_box/tube/c4570,
 				/obj/item/ammo_box/a50MG,
-				/obj/item/ammo_box/a762/doublestacked,
+				/obj/item/ammo_box/stripper/762/doublestacked,
 				/obj/item/stock_parts/cell/ammo/mfc,
 				/obj/item/ammo_casing/caseless/rocket,
 				/obj/item/ammo_box/a40mm

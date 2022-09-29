@@ -38,8 +38,8 @@
 
 		if("guns") // 30 tc now
 			new /obj/item/gun/ballistic/revolver(src)
-			new /obj/item/ammo_box/a357(src)
-			new /obj/item/ammo_box/a357(src)
+			new /obj/item/ammo_box/loader/a357(src)
+			new /obj/item/ammo_box/loader/a357(src)
 			new /obj/item/card/emag(src)
 			new /obj/item/grenade/plastic/c4(src)
 			new /obj/item/clothing/gloves/color/latex/nitrile(src)
@@ -395,7 +395,7 @@
 /obj/item/storage/box/syndie_kit/revolver
 
 /obj/item/storage/box/syndie_kit/revolver/PopulateContents()
-	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/loader/a357(src)
 
 /obj/item/storage/box/syndie_kit/pistol
 

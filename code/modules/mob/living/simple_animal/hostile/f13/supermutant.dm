@@ -134,7 +134,7 @@
 	minimum_distance = 6
 	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
 	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
-	loot = list(/obj/item/ammo_box/a308, /obj/item/gun/ballistic/rifle/hunting)
+	loot = list(/obj/item/ammo_box/stripper/308, /obj/item/gun/ballistic/rifle/hunting)
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),

@@ -98,14 +98,14 @@
 	name = "empty speed loader (.38)"
 	id = "speedloader38"
 	materials = list(/datum/material/iron = 2000)
-	build_path = /obj/item/ammo_box/c38/empty
+	build_path = /obj/item/ammo_box/loader/c38/empty
 	category = list("initial", "Simple Magazines", "Handmade Magazines")
 
 /datum/design/ammolathe/speedloader44
 	name = "empty speed loader (.44)"
 	id = "speedloader44"
 	materials = list(/datum/material/iron = 2000)
-	build_path = /obj/item/ammo_box/m44/empty
+	build_path = /obj/item/ammo_box/loader/m44/empty
 	category = list("initial", "Simple Magazines", "Handmade Magazines")
 
 /datum/design/ammolathe/automag44
@@ -405,7 +405,7 @@
 	name = "empty speed loader (.45-70)"
 	id = "speedloader4570"
 	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/c4570/empty
+	build_path = /obj/item/ammo_box/loader/c4570/empty
 	category = list("initial", "Intermediate Magazines", "Handmade Magazines")
 
 /datum/design/ammolathe/tube4570
@@ -419,7 +419,7 @@
 	name = "empty speed loader (.45 LC)"
 	id = "speedloader45lc"
 	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/a45lcrev/empty
+	build_path = /obj/item/ammo_box/loader/45longcolt/empty
 	category = list("initial", "Intermediate Magazines")
 
 /datum/design/ammolathe/d12g
@@ -489,7 +489,7 @@
 	name = "Empty 7.62mm/.308 Speedloader"
 	id = "rev308"	
 	materials = list(/datum/material/iron = 6000)
-	build_path = /obj/item/ammo_box/rev308/empty
+	build_path = /obj/item/ammo_box/loader/rev308/empty
 	category = list("initial", "Intermediate Magazines", "Handmade Magazines")	
 
 /datum/design/ammolathe/amrmag
@@ -504,7 +504,7 @@
 	name = ".45-70 FMJ ammo box"
 	id = "c4570"
 	materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 2000)
-	build_path = /obj/item/ammo_box/c4570box
+	build_path = /obj/item/ammo_box/loader/c4570box
 	category = list("initial", "Intermediate Ammo")
 
 /datum/design/ammolathe/lc45
@@ -789,7 +789,7 @@
 	name = ".45-70 bag"
 	id = "handloader_c4570"
 	materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 2000)
-	build_path = /obj/item/ammo_box/c4570box/improvised
+	build_path = /obj/item/ammo_box/loader/c4570box/improvised
 	category = list("initial", "Handloaded Ammo")
 
 /datum/design/ammolathe/improvised/lc45

@@ -182,7 +182,7 @@
 	hidden = TRUE
 	cost = 4000
 	var/num_contained = 3
-	contains = list(/obj/item/ammo_box/a357)
+	contains = list(/obj/item/ammo_box/loader/a357)
 	crate_name = "crate"
 
 /datum/supply_pack/misc/dirtymags/fill(obj/structure/closet/crate/C)
