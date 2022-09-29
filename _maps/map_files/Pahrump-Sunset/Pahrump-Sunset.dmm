@@ -9081,9 +9081,9 @@
 	},
 /area/f13/village)
 "aHD" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/f13/building/mall)
+/obj/effect/landmark/start/f13/dendoctor,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "aHE" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/closed/mineral/random/low_chance,
@@ -12393,7 +12393,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "aSA" = (
-/obj/effect/landmark/start/f13/followersdoctor,
+/obj/effect/landmark/start/f13/dendoc,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "aSB" = (
@@ -46953,12 +46953,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/city)
-"ovE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13{
-	icon_state = "whiteyellowrustychess"
-	},
-/area/f13/city)
 "ovI" = (
 /obj/structure/flora/tree/jungle{
 	color = "#d9b51c"
@@ -48448,10 +48442,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/khans)
 "phB" = (
-/obj/item/flag/followers,
 /obj/structure/railing/corner{
 	dir = 4
 	},
+/obj/item/flag/followers,
 /turf/open/floor/grass,
 /area/f13/wasteland)
 "phP" = (
@@ -48830,13 +48824,6 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/ncr)
-"prl" = (
-/obj/effect/landmark/start/f13/followersdoctor,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "pro" = (
 /obj/effect/spawner/lootdrop/f13/medical/rnd/mid,
 /obj/effect/spawner/lootdrop/trash,
@@ -65341,13 +65328,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/mall)
 "xrb" = (
-/obj/item/flag/followers,
 /obj/structure/railing/corner{
 	dir = 4
 	},
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/flag/vtcc,
 /turf/open/indestructible/ground/outside/gravel{
 	color = "#B7ABAB";
 	footstep = "dirt";
@@ -92877,8 +92864,8 @@ hEG
 ean
 aSp
 kLP
-ovE
-ovE
+uKF
+uKF
 tdl
 tdl
 oeE
@@ -99540,8 +99527,8 @@ qNu
 aiO
 abY
 vku
-aSo
-aSo
+aHD
+aHD
 qWE
 abY
 jKb
@@ -99797,8 +99784,8 @@ oHM
 aiO
 abY
 vFF
-aSo
-aSo
+aSA
+aSA
 aRA
 abY
 abY
@@ -100059,7 +100046,7 @@ omS
 aSz
 abY
 lLS
-aSA
+aSo
 aSo
 dqz
 aUL
@@ -100827,7 +100814,7 @@ abY
 iiL
 aSo
 aSo
-aSA
+aSo
 aSo
 aSo
 aSo
@@ -101344,7 +101331,7 @@ aSo
 aSo
 aSQ
 sAv
-prl
+nuf
 aSo
 abY
 tWQ
@@ -122129,7 +122116,7 @@ jIe
 qUn
 kqt
 xfq
-aHD
+mxi
 rGG
 aGN
 sYJ
@@ -122896,7 +122883,7 @@ uSc
 gtt
 gIM
 rcf
-aHD
+mxi
 nmN
 aMU
 wDH
@@ -123153,7 +123140,7 @@ uSc
 rOI
 aGM
 aGM
-aHD
+mxi
 aGM
 eQt
 wDH
@@ -123665,7 +123652,7 @@ iFU
 iFU
 uSc
 inS
-aHD
+mxi
 nTY
 sRF
 mxi
@@ -123924,7 +123911,7 @@ uSc
 gkW
 aGM
 aGM
-aHD
+mxi
 aGM
 snW
 wDH
@@ -124179,7 +124166,7 @@ wDH
 iQD
 uSc
 ifO
-aHD
+mxi
 oMW
 wPE
 sRH
@@ -124436,10 +124423,10 @@ aOy
 arS
 uSc
 tNE
-aHD
-aHD
+mxi
+mxi
 uOK
-aHD
+mxi
 xaK
 dRh
 aMw

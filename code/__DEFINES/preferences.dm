@@ -75,8 +75,8 @@
 #define EXP_TYPE_VTCCSEC        "Vault-Tec Security"
 #define EXP_TYPE_VTCC           "Vault-Tec Coalition"
 #define EXP_TYPE_BROTHERHOOD	"Bos"
-#define EXP_TYPE_NCR			"Ncr"
-#define EXP_TYPE_OASIS "Oasis"
+#define EXP_TYPE_NCR			"NCR"
+#define EXP_TYPE_OASIS 			"Oasis"
 #define EXP_TYPE_LEGION			"Legion"
 #define EXP_TYPE_WASTELAND		"Wasteland"
 #define EXP_TYPE_ENCLAVE		"Enclave"
@@ -88,6 +88,8 @@
 #define EXP_TYPE_FOLLOWERS		"FoA"
 #define EXP_TYPE_OUTLAW			"Outlaw"
 #define EXP_TYPE_KHAN			"Great Khans"
+#define EXP_TYPE_EASTWOOD		"Eastwood"
+#define EXP_TYPE_RAIDER			"Raiders"
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)
 #define DB_FLAG_AGE_CONFIRMATION_INCOMPLETE		(1<<1)

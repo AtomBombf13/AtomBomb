@@ -74,7 +74,7 @@ GLOBAL_LIST_INIT(tribal_job_recipes, list(
 	H.grant_language(/datum/language/tribal)
 	for(var/datum/crafting_recipe/recipe as() in GLOB.tribal_job_recipes)
 		H.mind.teach_crafting_recipe(recipe)
-
+/*
 /*
 Tribal Chief
 */
@@ -647,3 +647,4 @@ Guardian
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/restraints/legcuffs/bola/tactical=1
 	)
+*/
