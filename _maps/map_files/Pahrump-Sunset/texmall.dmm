@@ -132,8 +132,8 @@
 "ba" = (
 /obj/structure/table/wood/bar,
 /obj/item/gun/ballistic/revolver/revolver45,
-/obj/item/ammo_box/c45rev,
-/obj/item/ammo_box/c45rev,
+/obj/item/ammo_box/loader/acp45,
+/obj/item/ammo_box/loader/acp45,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/clothing/head/warden,

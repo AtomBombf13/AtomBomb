@@ -25312,7 +25312,7 @@
 "sDJ" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/gloves/botanic_leather,
-/obj/item/ammo_box/a357,
+/obj/item/ammo_box/loader/a357,
 /obj/item/gun/ballistic/revolver/colt357,
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat,
 /obj/item/stack/medical/bruise_pack,

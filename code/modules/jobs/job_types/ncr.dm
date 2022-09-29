@@ -467,7 +467,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/c45rev = 2,
+		/obj/item/ammo_box/loader/acp45 = 2,
 		/obj/item/storage/bag/money/small/ncr = 2,
 		)
 
@@ -577,7 +577,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Rifler Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
-		/obj/item/ammo_box/c4570 = 3,
+		/obj/item/ammo_box/loader/c4570 = 3,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
@@ -656,7 +656,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/c45rev = 2,
+		/obj/item/ammo_box/loader/acp45 = 2,
 		)
 
 /datum/outfit/loadout/rangertrail
@@ -670,7 +670,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/ammo_box/a357=2,
+		/obj/item/ammo_box/loader/a357=2,
 		)
 
 /datum/outfit/loadout/rangerpatrol
@@ -684,7 +684,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 1,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/gun/ballistic/revolver/revolver44 = 1,
-		/obj/item/ammo_box/m44 = 2,
+		/obj/item/ammo_box/loader/m44 = 2,
 		)
 
 /datum/outfit/loadout/rangerpatrolcqb
@@ -1196,7 +1196,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Reservist"
 	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
-		/obj/item/ammo_box/a308 = 2,
+		/obj/item/ammo_box/stripper/a308 = 2,
 		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 7,
 		/obj/item/storage/box/ration/menu_eight = 1,

@@ -167,7 +167,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	l_hand = /obj/item/melee/onehanded/machete/spatha
 	backpack_contents = list(
 		/obj/item/binoculars = 1,
-		/obj/item/ammo_box/a357 = 2,
+		/obj/item/ammo_box/loader/a357 = 2,
 		/obj/item/reagent_containers/pill/bitterdrink = 2,
 		)
 
@@ -238,7 +238,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
 		/obj/item/warpaint_bowl = 1,
-		/obj/item/ammo_box/a357 = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/binoculars = 1,
 		)
@@ -262,7 +262,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308 = 2,
-		/obj/item/ammo_box/c4570 = 3,
+		/obj/item/ammo_box/loader/c4570 = 3,
 		/obj/item/gun/ballistic/revolver/hunting = 1,
 		/obj/item/melee/onehanded/machete/spatha = 1,
 		)
@@ -326,7 +326,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	box = /obj/item/storage/survivalkit/tribal/chief
 	box_two = /obj/item/storage/survivalkit/medical/tribal
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/storage/bag/money/small/legofficers = 1,
@@ -442,7 +442,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
-		/obj/item/ammo_box/m44 = 3,
+		/obj/item/ammo_box/loader/m44 = 3,
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/melee/onehanded/knife/throwing = 2,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1
@@ -463,7 +463,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/ammo_box/a40mm = 2,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
-		/obj/item/ammo_box/m44 = 3,
+		/obj/item/ammo_box/loader/m44 = 3,
 		/obj/item/grenade/f13/frag = 2,
 		/obj/item/grenade/homemade/coffeepotbomb = 1,
 		)
@@ -686,7 +686,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	l_pocket = /obj/item/binoculars
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/c45rev = 1,
+		/obj/item/ammo_box/loader/acp45 = 1,
 		/obj/item/reagent_containers/pill/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/machete = 1,
@@ -797,7 +797,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/twohanded/spear/lance = 1,
 		/obj/item/ammo_box/magazine/m10mm = 2,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/ammo_box/a357 = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		)
 
@@ -818,7 +818,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44/ = 3,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/ammo_box/a357 = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/melee/onehanded/knife/throwing = 2,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
 		/obj/item/restraints/legcuffs/beartrap = 1,
@@ -881,7 +881,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/revolver/colt357
 	r_hand = /obj/item/shield/riot/legion
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 3,
+		/obj/item/ammo_box/loader/a357 = 3,
 		/obj/item/restraints/legcuffs/bola = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		)
@@ -890,7 +890,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Gunner"
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 3,
+		/obj/item/ammo_box/loader/a357 = 3,
 		/obj/item/grenade/homemade/firebomb = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		)
@@ -1304,7 +1304,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 3,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/c45rev = 3,
+		/obj/item/ammo_box/loader/acp45 = 3,
 		)
 
 // Slavemaster

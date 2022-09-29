@@ -204,7 +204,7 @@
 	backpack_contents = list(
 	/obj/item/ammo_box/tube/c4570=3,
 	/obj/item/gun/ballistic/revolver/m29/peacekeeper=1,
-	/obj/item/ammo_box/m44=3,
+	/obj/item/ammo_box/loader/m44=3,
 	/obj/item/clothing/head/helmet/riot/vaultsec/vc/marshal/provost=1,
 	/obj/item/clothing/suit/armor/f13/battlecoat/vault/marshal=1
 	)
@@ -547,7 +547,7 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/needler=1,
-		/obj/item/ammo_box/needleap = 2,
+		/obj/item/ammo_box/stripper/needle = 2,
 		/obj/item/reagent_containers/hypospray/medipen/f13/stimpak = 3,
 		/obj/item/pda=1
 		)
@@ -558,7 +558,7 @@
 	/obj/item/autosurgeon/surgery=1,
 	/obj/item/clothing/suit/hooded/parka/medical=1,
 	/obj/item/storage/firstaid/brute=1,
-	/obj/item/ammo_box/needleap = 2
+	/obj/item/ammo_box/stripper/needle = 2
 	)
 
 /datum/outfit/loadout/robotocist

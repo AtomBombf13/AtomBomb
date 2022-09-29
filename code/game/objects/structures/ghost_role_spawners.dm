@@ -755,7 +755,7 @@
 		/obj/item/storage/survivalkit/medical = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/gun/ballistic/revolver/revolver44 = 1,
-		/obj/item/ammo_box/m44 = 2,
+		/obj/item/ammo_box/loader/m44 = 2,
 		/obj/item/clothing/mask/gas/ranger = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
@@ -775,7 +775,7 @@
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 3,
+		/obj/item/ammo_box/loader/a357 = 3,
 		/obj/item/melee/onehanded/machete = 1,
 		/obj/item/grenade/homemade/firebomb = 1,
 		)

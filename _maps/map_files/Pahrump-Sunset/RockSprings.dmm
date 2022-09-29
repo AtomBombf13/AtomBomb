@@ -17699,7 +17699,7 @@
 	},
 /obj/structure/junk/small/table,
 /obj/item/gun/ballistic/rifle/mosin,
-/obj/item/ammo_box/a762,
+/obj/item/ammo_box/stripper/a762,
 /turf/open/floor/wood_common,
 /area/f13/building)
 "kLE" = (

@@ -381,7 +381,7 @@ Mayor
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
-		/obj/item/ammo_box/m44 = 2,
+		/obj/item/ammo_box/loader/m44 = 2,
 		)
 
 /datum/outfit/loadout/police
@@ -694,7 +694,7 @@ Mayor
 		/obj/item/pda/medical = 1,
 		/obj/item/clothing/suit/hooded/surgical = 1,
 		/obj/item/storage/medical/ancientfirstaid = 1,
-		/obj/item/ammo_box/m44 = 1,
+		/obj/item/ammo_box/loader/m44 = 1,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1
 		)
 /*--------------------------------------------------------------*/
@@ -914,7 +914,7 @@ Mayor
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/f13/peltboots
 	backpack_contents = list(/obj/item/gun/ballistic/revolver/winchesterrebored = 1,
-	/obj/item/ammo_box/a762/doublestacked = 2,
+	/obj/item/ammo_box/stripper/a762/doublestacked = 2,
 	/obj/item/fishingrod = 1,
 	/obj/item/binoculars = 1,
 	/obj/item/crafting/campfirekit = 1,
