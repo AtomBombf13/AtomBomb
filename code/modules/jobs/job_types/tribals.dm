@@ -1,6 +1,6 @@
 /datum/job/tribal
 	department_flag = TRIBAL
-	selection_color = "#ffeeaa"
+	selection_color = "#049b9b"
 	exp_type = EXP_TYPE_TRIBAL
 	forbids = "The use of pre-collapse technology, especially pre-collapse weapons of war."
 	enforces = "The tribe operate as if they are a part of a singular clan. Any harm dealt upon another member is likened to harm placed upon your brother or sister. Above all things, the tribe comes first."
@@ -82,6 +82,7 @@ Tribal Chief
 /datum/job/tribal/f13chief
 	title = "Chief"
 	flag = F13CHIEF
+	display_order = JOB_DISPLAY_ORDER_CHIEF
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 1
@@ -129,6 +130,7 @@ Tribal Shaman
 /datum/job/tribal/f13shaman
 	title = "Shaman"
 	flag = F13SHAMAN
+	display_order = JOB_DISPLAY_ORDER_SHAMAN
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 1
@@ -209,6 +211,7 @@ Tribal Head Hunter
 /datum/job/tribal/f13Hhunter
 	title = "Head Hunter"
 	flag = F13HHUNTER
+	display_order = JOB_DISPLAY_ORDER_HHUNTER
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 1
@@ -266,6 +269,7 @@ Druid
 /datum/job/tribal/f13druid
 	title = "Druid"
 	flag = F13DRUID
+	display_order = JOB_DISPLAY_ORDER_DRUID
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 2
@@ -275,7 +279,6 @@ Druid
 	enforces = "The ways of the Machine spirits."
 	forbids = "Abusing technology and using Pre-War weapons."
 	description = "You are a Druid in the tribe; you perform rituals, and bless pre-war relics and other artifacts for the tribe to use. You also are the spiritual guides of the tribe, and work with the Shaman during rituals or other spiritual matters."
-	selection_color = "#006666"
 	exp_requirements = 300
 
 	loadout_options = list(
@@ -359,6 +362,7 @@ Villager
 /datum/job/tribal/f13villager
 	title = "Villager"
 	flag = F13VILLAGER
+	display_order = JOB_DISPLAY_ORDER_VILLAGER
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 6
@@ -366,7 +370,6 @@ Villager
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "Tribal Chief, Shaman and Headhunter"
 	description = "A proud member of the Wayfarer tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe."
-	selection_color = "#006666"
 	exp_requirements = 0
 
 	outfit = /datum/outfit/job/tribal/f13villager
@@ -462,6 +465,7 @@ Hunter
 /datum/job/tribal/f13hunter
 	title = "Hunter"
 	flag = F13HUNTER
+	display_order = JOB_DISPLAY_ORDER_HUNTER
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 2
@@ -471,7 +475,6 @@ Hunter
 	enforces = "The ways of the Machine spirits."
 	forbids = "Abusing technology and using Pre-War weapons."
 	description = "You are a Hunter for the tribe; you bring back food and relics, anything that may house a machine spirit that can be purified by the shaman. You also are the protectors of the tribe, and work with the Head Hunter during Great Hunts or times of War."
-	selection_color = "#006666"
 	exp_requirements = 450
 
 	outfit = /datum/outfit/job/tribal/f13hunter
@@ -547,6 +550,7 @@ Spirit-Pledged
 /datum/job/tribal/f13spiritpledged
 	title = "Spirit-Pledged"
 	flag = F13SPIRITPLEDGED
+	display_order = JOB_DISPLAY_ORDER_SPIRITPLEDGED
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 0
@@ -554,7 +558,6 @@ Spirit-Pledged
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "All other tribals."
 	description = "An outsider to the tribe, you have been welcomed to learn their ways and grow closer to their culture and lifestyle, do NOT run off alone into the wasteland without the supervision of another higher ranking tribal."
-	selection_color = "#006666"
 
 	outfit = /datum/outfit/job/tribal/f13spiritpledged
 
@@ -606,6 +609,7 @@ Guardian
 /datum/job/tribal/f13guardian
 	title = "Guardian"
 	flag = F13GUARDIAN
+	display_order = JOB_DISPLAY_ORDER_GUARDIAN
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
 	total_positions = 1
@@ -613,7 +617,6 @@ Guardian
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "All leadership, but the Chief is priority"
 	description = "A hand chosen Hunter with much promise, you are one of the village Guardians. An elite Hunter given the duty to protect the village, your duty is to ensure your kin are safe at all costs, as well as follow any orders from your superiors and enforce the law of the tribe. Do not leave the village unless circumstances allow it."
-	selection_color = "#006666"
 	exp_requirements = 450
 
 	outfit = /datum/outfit/job/tribal/f13guardian

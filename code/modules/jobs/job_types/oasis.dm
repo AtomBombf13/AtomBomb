@@ -34,16 +34,18 @@ Mayor
 /datum/job/oasis
 	exp_type = EXP_TYPE_OASIS
 	faction = FACTION_OASIS
+	selection_color = "#dcba97"
 
 /datum/job/oasis/f13mayor
 	title = "Alderman"
 	flag = F13MAYOR
+	display_order = JOB_DISPLAY_ORDER_MAYOR
 	department_flag = DEP_OASIS
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Overseer"
 	description = "A subordinate of the Overseer, you are the primary face of the town. Handling the day to day dealings of the denizens of our fair city falls to you. Those wasters outside the walls are an unknown factor, so it falls to you to maintain relations with the Wastelands many players. Be wary of the Machine down below, as with the trades and treaties in place. Balance the budget, but don't step on the Merchant's toes. Organise defences, but do not encroach on the Marshal's office. Most of all: don't lose your head."
-	selection_color = "#d7b088"
+	selection_color = "#af9172"
 
 	exp_requirements = 750
 
@@ -185,7 +187,9 @@ Mayor
 /datum/job/oasis/f13sheriff
 	title = "Marshal"
 	flag = F13SHERIFF
+	display_order = JOB_DISPLAY_ORDER_SHERIFF
 	department_flag = DEP_OASIS
+	selection_color = "#af9172"
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
@@ -272,6 +276,7 @@ Mayor
 /datum/job/oasis/f13detective
 	title = "Detective"
 	flag = F13DETECTIVE
+	display_order = JOB_DISPLAY_ORDER_DETECTIVE
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Marshal"
@@ -322,6 +327,7 @@ Mayor
 /datum/job/oasis/f13deputy
 	title = "Deputy"
 	flag = F13DEPUTY
+	display_order = JOB_DISPLAY_ORDER_DEPUTY
 	department_flag = DEP_OASIS
 	total_positions = 5
 	spawn_positions = 4
@@ -498,6 +504,7 @@ Mayor
 /datum/job/oasis/f13prospector
 	title = "Prospector"
 	flag = F13PROSPECTOR
+	display_order = JOB_DISPLAY_ORDER_PROSPECTOR
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 4
@@ -590,6 +597,7 @@ Mayor
 /datum/job/oasis/f13dendoc
 	title = "Researcher"
 	flag = F13DENDOC
+	display_order = JOB_DISPLAY_ORDER_DENDOC
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
@@ -694,6 +702,7 @@ Mayor
 /datum/job/oasis/f13barkeep
 	title = "Barkeeper"
 	flag = F13BARKEEP
+	display_order = JOB_DISPLAY_ORDER_BARKEEP
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
@@ -779,6 +788,7 @@ Mayor
 /datum/job/oasis/f13settler
 	title = "Citizen"
 	flag = F13SETTLER
+	display_order = JOB_DISPLAY_ORDER_SETTLER
 	department_flag = DEP_OASIS
 	total_positions = 10
 	spawn_positions = 8
@@ -1028,6 +1038,7 @@ Mayor
 /datum/job/oasis/f13shopkeeper
 	title = "Merchant"
 	flag = F13SHOPKEEPER
+	display_order = JOB_DISPLAY_ORDER_SHOPKEEPER
 	department_flag = DEP_OASIS
 	total_positions = 1
 	spawn_positions = 1
@@ -1111,6 +1122,7 @@ Roles should be limited and low since they should attempt to work within town ra
 /datum/job/wasteland/f13enforcer
 	title = "Desperado Enforcer"
 	flag = F13ENFORCER
+	display_order = JOB_DISPLAY_ORDER_MOB_ENFORCER
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
 	total_positions = 3
@@ -1189,6 +1201,7 @@ Roles should be limited and low since they should attempt to work within town ra
 /datum/job/wasteland/f13mobboss
 	title = "Desperado Leader"
 	flag = F13MOBBOSS
+	display_order = JOB_DISPLAY_ORDER_MOB_BOSS
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
 	total_positions = 1
