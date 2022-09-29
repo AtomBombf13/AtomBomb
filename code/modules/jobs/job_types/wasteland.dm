@@ -8,6 +8,7 @@ Raider
 /datum/job/wasteland/f13raider
 	title = "Outlaw"
 	flag = F13RAIDER
+	display_order = JOB_DISPLAY_ORDER_RAIDER
 	department_head = list("Captain")
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
@@ -486,6 +487,7 @@ Raider
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
 	flag = F13WASTELANDER
+	display_order = JOB_DISPLAY_ORDER_WASTELANDER
 	faction = FACTION_WASTELAND
 	total_positions = -1
 	spawn_positions = -1
@@ -825,12 +827,13 @@ Raider
 /datum/job/wasteland/f13preacher
 	title = "Preacher"
 	flag = F13PREACHER
+	display_order = JOB_DISPLAY_ORDER_WASTELANDER
 	faction = FACTION_WASTELAND
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "your faith"
 	description = "You are the last bastion of your faith in this forsaken Wasteland - whatever that faith may be. Spread your word and preach to the faithless in whatever manner you see fit, but remember that the divine cannot always protect you from harsh realities."
-	selection_color = "#dcba97"
+	selection_color = "#e2d6ca"
 
 	outfit = /datum/outfit/job/wasteland/f13preacher
 
@@ -1041,6 +1044,7 @@ Raider
 /datum/job/wasteland/f13tribal
 	title = "Far-Lands Tribals"
 	flag = F13TRIBAL
+	display_order = JOB_DISPLAY_ORDER_TRIBAL
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_TRIBE
 	total_positions = -1

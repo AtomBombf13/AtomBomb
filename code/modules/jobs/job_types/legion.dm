@@ -15,7 +15,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/job/CaesarsLegion
 	department_flag = LEGION
-	selection_color = "#ffeeee"
+	selection_color = "#fdb8b8"
 	faction = FACTION_LEGION
 
 	forbids = "The Legion forbids: Using drugs such as stimpacks and alcohol. Ghouls joining. Women fighting (self defense and suicide allowed). Slaves carrying weapons. Using robots and advanced machines. Killing Legion members in secret, only if according to law and in public is it acceptable."
@@ -96,7 +96,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	flag = F13LEGATE
 	head_announce = list("Security")
 	supervisors = "Caesar"
-	selection_color = "#ffdddd"
+	selection_color = "#ff8f8f"
 	req_admin_notify = 1
 	total_positions = 0
 	spawn_positions = 0
@@ -141,7 +141,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	title = "Legion Orator"
 	flag = F13ORATOR
 	supervisors = "Centurion"
-	selection_color = "#ffdddd"
+	selection_color = "#ff8f8f"
 	total_positions = 1
 	spawn_positions = 1
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
@@ -193,7 +193,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	spawn_positions = 1
 	description = "You are the camp commander and strongest soldier. Use your officers, the Decanii, to delegate tasks, make sure you lead and give orders. Take no disrespect, you are the dominus. If you prove a fool or weak, expect to be dispatched by a stronger subordinate."
 	supervisors = "the Legate"
-	selection_color = "#ffdddd"
+	selection_color = "#ff8f8f"
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CENTURION
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
@@ -1273,7 +1273,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	spawn_positions = 1
 	description = "You are the Venator -- the Hunter. With your powerful rifle and your many years of experience, you are a formidable killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
 	supervisors = "the Centurion"
-	selection_color = "#ffdddd"
+	selection_color = "#ff8f8f"
 	display_order = JOB_DISPLAY_ORDER_VENATOR
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	exp_requirements = 750
@@ -1312,6 +1312,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	title = "Camp Prefect"
 	flag = F13SLAVEMASTER
+	display_order = JOB_DISPLAY_ORDER_SLAVEMASTER
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."

@@ -1,6 +1,6 @@
 /datum/job/followers //do NOT use this for anything, it's just to store faction datums
 	department_flag = FOLLOWERS
-	selection_color = "#ffeeaa"
+	selection_color = "#e270e2"
 	exp_type = EXP_TYPE_FOLLOWERS
 	access = list(ACCESS_FOLLOWER)
 	minimal_access = list(ACCESS_FOLLOWER)
@@ -39,6 +39,7 @@ Administrator
 /datum/job/followers/f13leadpractitioner
 	title = "Followers Administrator"
 	flag = F13LEADPRACTITIONER
+	display_order = JOB_DISPLAY_ORDER_LEADPRACTITIONER
 	department_flag = FOLLOWERS
 	head_announce = list("Security")
 	faction = "Followers"
@@ -48,7 +49,7 @@ Administrator
 	description = "You are the Followers Administrator. You are the administrator, supervisor and director for the on-site followers and the facility. While there is no tradtional chain of command that is used, you have been chosen to lead due to your expert knowledge in the field of medicine and other general knowledges. Make sure that the supplies donated are being put to use, help secure more donations, and fill in as needed whenever short staffed or if the clinic is busy."
 	forbids = "Causing harm to others except in times of self-defense. Leaving the hospital without a plan or being accompanied by a guard. Treating raiders or slavers without a good reason."
 	enforces = "Preach the values of the Followers of Apocolypse. Assist and provide medical services to those in need. Provide free education for all those who are willing to learn."
-	selection_color = "#FF95FF"
+	selection_color = "#f551f5"
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/followers/f13leadpractitioner
@@ -210,6 +211,7 @@ Practitioner
 /datum/job/followers/f13practitioner
 	title = "Followers Doctor"
 	flag = F13PRACTITIONER
+	display_order = JOB_DISPLAY_ORDER_PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 0
@@ -335,6 +337,7 @@ Follower Volunteer
 /datum/job/followers/f13followervolunteer
 	title = "Followers Volunteer"
 	flag = F13FOLLOWERVOLUNTEER
+	display_order = JOB_DISPLAY_ORDER_FOLLOWERVOLUNTEER
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 2
@@ -425,6 +428,7 @@ Follower Volunteer
 /datum/job/followers/f13followerguard
 	title = "Followers Guard"
 	flag = F13FOLLOWERGUARD
+	display_order = JOB_DISPLAY_ORDER_FOLLOWERGUARD
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 2

@@ -58,6 +58,7 @@
 /datum/job/khan/greatkhan
 	title = "Great Khan"
 	flag = F13GREATKHAN
+	display_order = JOB_DISPLAY_ORDER_PUSHER
 	faction = FACTION_KHAN
 	total_positions = 8
 	spawn_positions = 8

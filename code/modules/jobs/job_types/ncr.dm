@@ -887,7 +887,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	description = "You are NOT allowed to participate in front-line combat outside the base/embassy. You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening. Orders of arrests or diciplinary measures may be given to you from the Senior Enlisted Advisor or Officers unless they are in violation of COMJ."
 	supervisors = "NCRA Officers and the Senior Enlisted Advisor"
 	selection_color = "#fff5cc"
-	display_order = JOB_DISPLAY_ORDER_TROOPER
+	display_order = JOB_DISPLAY_ORDER_MILITARY_POLICE
 	outfit = /datum/outfit/job/ncr/f13mp
 	exp_requirements = 150
 
@@ -1153,7 +1153,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	description = "You are the recent bulk of the NCR Army. You have been recently conscripted, given little to no training and were issued a gun. Obey your the NCOs and officers, no matter what you are expected to follow military discipline."
 	supervisors = "The Drill Sergeant, Corporals and Above"
 	selection_color = "#fff5cc"
-	display_order = JOB_DISPLAY_ORDER_TROOPER
+	display_order = JOB_DISPLAY_ORDER_CONSCRIPT
 	outfit = /datum/outfit/job/ncr/f13conscript
 
 	loadout_options = list(
