@@ -240,9 +240,6 @@ GLOBAL_LIST_INIT(raider_positions, list(
 	"Outlaw",
 	"Desperado Enforcer",
 	"Desperado Leader",
-))
-
-GLOBAL_LIST_INIT(khan_positions, list(
 	"Great Khan",
 ))
 
@@ -286,11 +283,10 @@ GLOBAL_LIST_INIT(followers_positions, list(
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
-	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
-	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
+	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#4d4848"),
-	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#ff915e"),
+	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	EXP_TYPE_EASTWOOD = list("jobs" = oasis_positions, "color" = "#d7b088"),
 	EXP_TYPE_RAIDER = list("jobs" = raider_positions, "color" = "#a11111"),
 ))
@@ -315,7 +311,6 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_LEGION = list("titles" = legion_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
-	EXP_TYPE_KHAN = list("titles" = khan_positions),
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
 	EXP_TYPE_TRIBAL = list("titles" = tribal_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),

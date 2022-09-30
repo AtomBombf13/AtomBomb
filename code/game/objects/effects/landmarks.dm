@@ -744,7 +744,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Oasis
 
 /obj/effect/landmark/start/f13/mayor
-	name = "Mayor"
+	name = "Alderman"
 	icon_state = "Banker"
 
 /obj/effect/landmark/start/f13/secretary
@@ -752,7 +752,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/f13/sheriff
-	name = "Sheriff"
+	name = "Marshal"
 	icon_state = "Chief of Police"
 
 /obj/effect/landmark/start/f13/deputy
