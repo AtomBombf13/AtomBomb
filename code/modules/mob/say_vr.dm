@@ -81,7 +81,7 @@ proc/get_top_level_mob(mob/S)
 		message = message,
 		blind_message = message,
 		self_message = message,
-		vision_distance = 1,
+		vision_distance = 7,
 		ignored_mobs = non_admin_ghosts)
 
 	//broadcast to ghosts, if they have a client, are dead, arent in the lobby, allow ghostsight, and, if subtler, are admemes
@@ -89,6 +89,7 @@ proc/get_top_level_mob(mob/S)
 
 
 ///////////////// VERB CODE
+/*
 /mob/living/proc/subtle_keybind()
 	var/message = input(src, "", "subtle") as text|null
 	if(!length(message))
@@ -102,10 +103,10 @@ proc/get_top_level_mob(mob/S)
 		to_chat(usr, span_danger("Speech is currently admin-disabled."))
 		return
 	usr.emote("subtle")
-
+*/
 ///////////////// VERB CODE 2
 /mob/living/verb/subtler()
-	set name = "Subtler Anti-Ghost"
+	set name = "Anti-Ghost Emote"
 	set category = "IC"
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, span_danger("Speech is currently admin-disabled."))
