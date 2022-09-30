@@ -585,7 +585,7 @@
 		dat += jointext(dept_dat, "")
 		dat += "</fieldset><br>"
 		column_counter++
-		if(column_counter > 0 && (column_counter % 3 == 0))
+		if(column_counter > 0 && (column_counter % 2 == 0))
 			dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"
 	dat += "</div></div>"
