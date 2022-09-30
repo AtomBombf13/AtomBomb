@@ -9081,9 +9081,9 @@
 	},
 /area/f13/village)
 "aHD" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/f13/building/mall)
+/obj/effect/landmark/start/f13/dendoctor,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "aHE" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/closed/mineral/random/low_chance,
@@ -12393,7 +12393,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "aSA" = (
-/obj/effect/landmark/start/f13/followersdoctor,
+/obj/effect/landmark/start/f13/dendoc,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "aSB" = (
@@ -22151,11 +22151,9 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "cLQ" = (
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 6;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland/khans)
+/obj/effect/landmark/start/f13/greatkhan,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/building/khanfort)
 "cMG" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbroken"
@@ -22315,10 +22313,6 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "cQh" = (
-/obj/effect/landmark/start/f13/khorchin,
-/obj/effect/landmark/start/f13/mangudai,
-/obj/effect/landmark/start/f13/kipchak,
-/obj/effect/landmark/start/f13/noyan,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 6;
 	icon_state = "dirt"
@@ -26406,6 +26400,7 @@
 	},
 /area/f13/village)
 "eQf" = (
+/obj/effect/landmark/start/f13/greatkhan,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/khans)
 "eQt" = (
@@ -37214,6 +37209,7 @@
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
 	},
+/obj/effect/landmark/start/f13/greatkhan,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/khanfort)
 "jUi" = (
@@ -46953,12 +46949,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/city)
-"ovE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13{
-	icon_state = "whiteyellowrustychess"
-	},
-/area/f13/city)
 "ovI" = (
 /obj/structure/flora/tree/jungle{
 	color = "#d9b51c"
@@ -48441,17 +48431,13 @@
 	},
 /area/f13/wasteland)
 "phv" = (
-/obj/effect/landmark/start/f13/khorchin,
-/obj/effect/landmark/start/f13/mangudai,
-/obj/effect/landmark/start/f13/kipchak,
-/obj/effect/landmark/start/f13/noyan,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/khans)
 "phB" = (
-/obj/item/flag/followers,
 /obj/structure/railing/corner{
 	dir = 4
 	},
+/obj/item/flag/followers,
 /turf/open/floor/grass,
 /area/f13/wasteland)
 "phP" = (
@@ -48830,13 +48816,6 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/ncr)
-"prl" = (
-/obj/effect/landmark/start/f13/followersdoctor,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "pro" = (
 /obj/effect/spawner/lootdrop/f13/medical/rnd/mid,
 /obj/effect/spawner/lootdrop/trash,
@@ -65341,13 +65320,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/mall)
 "xrb" = (
-/obj/item/flag/followers,
 /obj/structure/railing/corner{
 	dir = 4
 	},
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/flag/vtcc,
 /turf/open/indestructible/ground/outside/gravel{
 	color = "#B7ABAB";
 	footstep = "dirt";
@@ -72825,7 +72804,7 @@ eFD
 euI
 kWW
 snU
-eQf
+phv
 dyd
 lZY
 lZY
@@ -73081,8 +73060,8 @@ tHt
 tHt
 euI
 vBO
-cLQ
-eQf
+cQh
+phv
 dyd
 euI
 euI
@@ -73339,7 +73318,7 @@ jQu
 ahH
 dtG
 kWi
-eQf
+phv
 kZy
 fOT
 diX
@@ -73596,7 +73575,7 @@ sov
 aXk
 gJl
 bjZ
-phv
+eQf
 dyd
 esW
 euI
@@ -73853,7 +73832,7 @@ bcR
 qCv
 ufD
 pln
-eQf
+phv
 dyd
 euI
 euI
@@ -74110,7 +74089,7 @@ aZy
 mzU
 wNL
 oKz
-eQf
+phv
 efT
 xvx
 ivZ
@@ -74360,22 +74339,22 @@ wGL
 qQl
 qQl
 xUK
-eQf
+phv
 dyd
 jqJ
 dMQ
 rgz
 cnA
 aej
-eQf
-eQf
-eQf
+phv
+phv
+phv
 dyd
 iAl
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
 dyd
 euI
 bcq
@@ -74612,9 +74591,9 @@ aak
 aak
 kUK
 cPR
+cLQ
 qQl
-qQl
-qQl
+cLQ
 cPR
 blm
 jVt
@@ -74624,14 +74603,14 @@ jRC
 bhd
 bkT
 btt
-eQf
-eQf
-eQf
+phv
+phv
+phv
 dyd
 iAl
-eQf
+phv
 vWh
-eQf
+phv
 hBn
 dyd
 euI
@@ -75138,15 +75117,15 @@ euI
 euI
 euI
 iAl
-eQf
+phv
 dyd
 euI
 euI
 wiK
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
 oJV
 euI
 euI
@@ -75394,16 +75373,16 @@ sua
 hqE
 vBO
 lhf
-cLQ
-eQf
+cQh
+phv
 sOS
 cxo
 euI
 pxM
-eQf
-eQf
+phv
+phv
 lxH
-eQf
+phv
 oJV
 euI
 euI
@@ -75651,16 +75630,16 @@ iDs
 xTd
 cQh
 kNW
-eQf
-eQf
+phv
+phv
 efT
 jjw
 ivZ
 nxE
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
 oJV
 euI
 euI
@@ -75905,19 +75884,19 @@ eXt
 ajy
 qQl
 xUK
-eQf
-eQf
+phv
+phv
 dYT
 eQf
 kGH
-eQf
+phv
 ljA
 dyd
 gbX
 lxH
-eQf
-eQf
-eQf
+phv
+phv
+phv
 oJV
 vBO
 piI
@@ -76159,15 +76138,15 @@ rwn
 lZY
 kUK
 cPR
-qQl
+cLQ
 cPR
 kPi
 xGK
 phv
 kyf
-eQf
-eQf
-eQf
+phv
+phv
+phv
 izK
 dyd
 lHK
@@ -76420,12 +76399,12 @@ dvy
 dvy
 rWA
 iAl
-eQf
-eQf
+phv
+phv
 aNp
-eQf
+phv
 ihN
-eQf
+phv
 efT
 xvx
 xvx
@@ -76677,15 +76656,15 @@ oSN
 oSN
 oSN
 iAl
-eQf
-eQf
-eQf
-eQf
-eQf
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
+phv
+phv
+phv
+phv
+phv
 efT
 xvx
 xvx
@@ -76933,19 +76912,19 @@ euI
 euI
 vBO
 xvx
-cLQ
-eQf
+cQh
+phv
 nOz
 aPn
-eQf
-eQf
+phv
+phv
 sTk
 bEm
-eQf
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
+phv
 dyd
 euI
 euI
@@ -77189,8 +77168,8 @@ nqE
 tfH
 euI
 iAl
-eQf
-eQf
+phv
+phv
 uZT
 axz
 anJ
@@ -77198,7 +77177,7 @@ qQl
 qQl
 ryN
 max
-eQf
+phv
 uZT
 gKY
 jVt
@@ -77445,8 +77424,8 @@ gIZ
 xtt
 xvx
 xvx
-cLQ
-eQf
+cQh
+phv
 bGl
 nNa
 kUK
@@ -77455,13 +77434,13 @@ qQl
 qQl
 lpi
 bre
-eQf
+phv
 dyd
 euI
 rAV
 iAl
-eQf
-eQf
+phv
+phv
 dyd
 wSC
 dkN
@@ -77695,14 +77674,14 @@ usp
 ixp
 qiq
 rgQ
-eQf
-eQf
+phv
+phv
 dyd
 rjm
 iAl
-eQf
-eQf
-eQf
+phv
+phv
+phv
 bGl
 moB
 euI
@@ -77712,7 +77691,7 @@ qQl
 qQl
 iXS
 bre
-eQf
+phv
 iOd
 ahu
 euI
@@ -77953,13 +77932,13 @@ mkj
 nHm
 jVt
 xGK
-eQf
+phv
 efT
 xvx
-cLQ
-eQf
-eQf
-eQf
+cQh
+phv
+phv
+phv
 dyd
 hqE
 euI
@@ -77969,15 +77948,15 @@ qQl
 ier
 wJr
 bre
-eQf
+phv
 dyd
 lZY
 xfv
 gIZ
 wSC
 wzF
-eQf
-eQf
+phv
+phv
 trx
 mGY
 jQm
@@ -78210,12 +78189,12 @@ aZR
 sSw
 euI
 iAl
-eQf
-eQf
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
+phv
+phv
 gbK
 rVO
 beQ
@@ -78233,8 +78212,8 @@ dkN
 hJm
 ptK
 wzF
-eQf
-eQf
+phv
+phv
 efT
 bfD
 euI
@@ -78467,9 +78446,9 @@ fMX
 lCS
 rAV
 iAl
-eQf
-eQf
-eQf
+phv
+phv
+phv
 lnz
 lnz
 lnz
@@ -78492,7 +78471,7 @@ euI
 agc
 jVt
 xGK
-eQf
+phv
 dyd
 qlx
 baa
@@ -78724,9 +78703,9 @@ euI
 hqE
 euI
 iAl
-eQf
-eQf
-eQf
+phv
+phv
+phv
 lnz
 lnz
 lnz
@@ -78980,10 +78959,10 @@ vvQ
 byL
 aDP
 xvx
-cLQ
-eQf
-eQf
-eQf
+cQh
+phv
+phv
+phv
 lnz
 lnz
 lnz
@@ -79006,7 +78985,7 @@ aae
 mGY
 qlx
 nNt
-eQf
+phv
 dyd
 euI
 iAl
@@ -79235,11 +79214,11 @@ aaa
 vvQ
 qMh
 poX
-eQf
-eQf
-eQf
-eQf
-eQf
+phv
+phv
+phv
+phv
+phv
 usp
 usp
 qHb
@@ -79263,7 +79242,7 @@ aae
 mVl
 ihO
 wzF
-eQf
+phv
 dyd
 euI
 omb
@@ -79492,11 +79471,11 @@ aaa
 vvQ
 vvQ
 aJO
-eQf
+phv
 bGl
 jVt
 xGK
-eQf
+phv
 adJ
 bgw
 iXI
@@ -79520,7 +79499,7 @@ euI
 jBS
 ihO
 awT
-eQf
+phv
 dyd
 esW
 euI
@@ -79749,7 +79728,7 @@ aae
 aaa
 qlx
 iAl
-eQf
+phv
 dyd
 euI
 omb
@@ -79777,7 +79756,7 @@ aQA
 bSv
 qlx
 awT
-eQf
+phv
 dyd
 euI
 euI
@@ -80006,7 +79985,7 @@ aae
 aaa
 bkm
 ouK
-eQf
+phv
 dyd
 cct
 euI
@@ -80520,7 +80499,7 @@ xLC
 aae
 aaa
 aYn
-eQf
+phv
 dyd
 aaa
 aaa
@@ -80777,7 +80756,7 @@ xLC
 aae
 aae
 nNt
-eQf
+phv
 dyd
 aae
 aae
@@ -81034,7 +81013,7 @@ xLC
 bcs
 eNJ
 lQR
-eQf
+phv
 rrO
 aae
 xLC
@@ -92877,8 +92856,8 @@ hEG
 ean
 aSp
 kLP
-ovE
-ovE
+uKF
+uKF
 tdl
 tdl
 oeE
@@ -99540,8 +99519,8 @@ qNu
 aiO
 abY
 vku
-aSo
-aSo
+aHD
+aHD
 qWE
 abY
 jKb
@@ -99797,8 +99776,8 @@ oHM
 aiO
 abY
 vFF
-aSo
-aSo
+aSA
+aSA
 aRA
 abY
 abY
@@ -100059,7 +100038,7 @@ omS
 aSz
 abY
 lLS
-aSA
+aSo
 aSo
 dqz
 aUL
@@ -100827,7 +100806,7 @@ abY
 iiL
 aSo
 aSo
-aSA
+aSo
 aSo
 aSo
 aSo
@@ -101344,7 +101323,7 @@ aSo
 aSo
 aSQ
 sAv
-prl
+nuf
 aSo
 abY
 tWQ
@@ -122129,7 +122108,7 @@ jIe
 qUn
 kqt
 xfq
-aHD
+mxi
 rGG
 aGN
 sYJ
@@ -122896,7 +122875,7 @@ uSc
 gtt
 gIM
 rcf
-aHD
+mxi
 nmN
 aMU
 wDH
@@ -123153,7 +123132,7 @@ uSc
 rOI
 aGM
 aGM
-aHD
+mxi
 aGM
 eQt
 wDH
@@ -123665,7 +123644,7 @@ iFU
 iFU
 uSc
 inS
-aHD
+mxi
 nTY
 sRF
 mxi
@@ -123924,7 +123903,7 @@ uSc
 gkW
 aGM
 aGM
-aHD
+mxi
 aGM
 snW
 wDH
@@ -124179,7 +124158,7 @@ wDH
 iQD
 uSc
 ifO
-aHD
+mxi
 oMW
 wPE
 sRH
@@ -124436,10 +124415,10 @@ aOy
 arS
 uSc
 tNE
-aHD
-aHD
+mxi
+mxi
 uOK
-aHD
+mxi
 xaK
 dRh
 aMw

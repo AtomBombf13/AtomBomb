@@ -18072,11 +18072,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/brotherhood/operations)
-"lUb" = (
-/obj/structure/bed,
-/obj/item/bedsheet/blue,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/caves)
 "lUi" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/f13{
@@ -21942,13 +21937,6 @@
 	icon_state = "darkrustysolid"
 	},
 /area/f13/building/massfusion)
-"prI" = (
-/obj/effect/landmark/start/f13/dendoc,
-/obj/effect/landmark/start/f13/dendoctor,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
-	icon_state = "darkdirtysolid"
-	},
-/area/f13/vault)
 "prT" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
@@ -25938,8 +25926,7 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
-/obj/effect/landmark/start/f13/dendoctor,
-/obj/effect/landmark/start/f13/dendoc,
+/obj/effect/landmark/start/f13/denres,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -28751,8 +28738,7 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/dendoctor,
-/obj/effect/landmark/start/f13/dendoc,
+/obj/effect/landmark/start/f13/denres,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -66656,7 +66642,7 @@ dHk
 bPR
 kXe
 tih
-prI
+tVo
 iHF
 tVo
 tVo
@@ -92854,7 +92840,7 @@ eGA
 fap
 iuc
 wOp
-lUb
+wBb
 fap
 aaa
 aaa
@@ -93102,7 +93088,7 @@ bIg
 bIg
 vDJ
 lYT
-lUb
+wBb
 fXl
 uPp
 lYS
@@ -93616,7 +93602,7 @@ aaB
 lYT
 sbY
 fap
-lUb
+wBb
 xfI
 fXl
 bbV
@@ -94139,7 +94125,7 @@ vDJ
 aFk
 jRC
 jRC
-lUb
+wBb
 fap
 aaa
 xwF
@@ -94653,7 +94639,7 @@ bwl
 aFk
 jRC
 egj
-lUb
+wBb
 fap
 aaa
 xwF
@@ -95167,7 +95153,7 @@ haR
 tDX
 jRC
 lDP
-lUb
+wBb
 bHT
 gTg
 wYE
@@ -95672,7 +95658,7 @@ bwl
 hZN
 rMI
 fap
-lUb
+wBb
 egj
 uYm
 cQH

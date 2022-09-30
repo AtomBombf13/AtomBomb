@@ -1,3 +1,4 @@
+/*
 /datum/job/followers //do NOT use this for anything, it's just to store faction datums
 	department_flag = FOLLOWERS
 	selection_color = "#e270e2"
@@ -485,3 +486,4 @@ Follower Volunteer
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/slug = 1,
 	)
+*/

@@ -63,7 +63,7 @@
 	total_positions = 8
 	spawn_positions = 8
 	description = "You are a Great Khan, a warrior of the Khans who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
-	supervisors = "the Noyan and Khanate"
+	supervisors = "Your tribe"
 	selection_color = "#ff915e"
 	exp_type = EXP_TYPE_KHAN
 	outfit = /datum/outfit/job/khan/greatkhan

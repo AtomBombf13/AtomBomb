@@ -591,18 +591,18 @@ Mayor
 		/obj/item/shovel = 1,
 		)
 
-
+//Researcher
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13dendoc
+/datum/job/oasis/f13denres
 	title = "Researcher"
-	flag = F13DENDOC
-	display_order = JOB_DISPLAY_ORDER_DENDOC
+	flag = F13DENRES
+	display_order = JOB_DISPLAY_ORDER_RESEARCHER
 	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "The Alderman"
-	description = "Doctor, Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files.The Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right.Just remember that you're no Follower - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Alderman might reconsider your position!"
+	description =  "Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. Make sure to turn a profit on your services, or the Alderman might reconsider your position!"
 	selection_color = "#dcba97"
 
 	loadout_options = list(
@@ -611,9 +611,9 @@ Mayor
 	/datum/outfit/loadout/mixer,
 	/datum/outfit/loadout/holidaydoc)
 
-	outfit = /datum/outfit/job/den/f13dendoc
-	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
-	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	outfit = /datum/outfit/job/den/f13denres
+	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
+	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -623,9 +623,9 @@ Mayor
 		)
 	)
 
-/datum/outfit/job/den/f13dendoc
+/datum/outfit/job/den/f13denres
 	name = "Researcher"
-	jobtype = /datum/job/oasis/f13dendoc
+	jobtype = /datum/job/oasis/f13denres
 	chemwhiz = TRUE
 	ears = /obj/item/radio/headset/headset_town/commerce
 	uniform = /obj/item/clothing/under/f13/medic
@@ -645,7 +645,7 @@ Mayor
 		/obj/item/clothing/accessory/armband/medblue = 1,
 		/obj/item/gun/ballistic/revolver/colt6520 = 1,
 		)
-/datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/den/f13denres/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -697,6 +697,117 @@ Mayor
 		/obj/item/ammo_box/loader/m44 = 1,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1
 		)
+
+/*--------------------------------------------------------------*/
+//Town Doctor
+/*--------------------------------------------------------------*/
+
+/datum/job/oasis/f13dendoc
+	title = "Town Doctor"
+	flag = F13DENDOC
+	display_order = JOB_DISPLAY_ORDER_DENDOC
+	department_flag = DEP_OASIS
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "The Alderman"
+	description = "Doctor, the Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right. Just remember that you're no Follower (unless you somehow are) - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Alderman might reconsider your position!"
+	selection_color = "#dcba97"
+
+	loadout_options = list(
+	/datum/outfit/loadout/stitcher,
+	/datum/outfit/loadout/mixer,
+	/datum/outfit/loadout/follower)
+
+	outfit = /datum/outfit/job/den/f13dendoc
+	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis
+		)
+	)
+
+/datum/outfit/job/den/f13dendoc
+	name = "Town Doctor"
+	jobtype = /datum/job/oasis/f13dendoc
+	chemwhiz = TRUE
+	ears = /obj/item/radio/headset/headset_town/commerce
+	uniform = /obj/item/clothing/under/f13/medic
+	glasses = /obj/item/clothing/glasses/hud/health
+	neck = /obj/item/clothing/neck/stethoscope
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	backpack = /obj/item/storage/backpack/medic
+	satchel = /obj/item/storage/backpack/satchel/med
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	id = /obj/item/card/id/dendoctor
+	l_pocket = /obj/item/storage/bag/money/small/settler
+	r_pocket = /obj/item/flashlight/flare
+	backpack_contents = list(
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/clothing/accessory/armband/medblue = 1,
+		/obj/item/gun/ballistic/revolver/colt6520 = 1,
+		)
+/datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
+
+/datum/outfit/loadout/stitcher
+	name = "Stitcher"
+	backpack_contents = list(/obj/item/clothing/head/hardhat/white = 1,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/clothing/glasses/welding = 1,
+		/obj/item/storage/belt/medical/primitive = 1,
+		/obj/item/storage/medical/ancientfirstaid = 1,
+		/obj/item/circuitboard/machine/limbgrower = 1,
+		/obj/item/healthanalyzer/advanced = 1,
+		/obj/item/storage/belt/legholster = 1
+		)
+
+/datum/outfit/loadout/mixer
+	name = "Mixer"
+	backpack_contents = list(/obj/item/clothing/head/beret/chem = 1,
+		/obj/item/melee/classic_baton/police = 1,
+		/obj/item/pen/sleepy = 1,
+		/obj/item/reagent_containers/glass/beaker/plastic = 1,
+		/obj/item/reagent_containers/glass/beaker/meta = 1,
+		/obj/item/reagent_containers/hypospray = 1,
+		/obj/item/circuitboard/machine/bloodbankgen = 1
+		)
+
+/datum/outfit/loadout/follower
+	name = "Follower"
+	suit =	/obj/item/clothing/suit/toggle/labcoat/chemist
+	gloves =	/obj/item/clothing/gloves/color/latex
+	glasses =	/obj/item/clothing/glasses/science
+	backpack_contents = list(
+		/obj/item/flashlight/pen = 1,
+		/obj/item/pda/chemist = 1
+	)
+
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13barkeep

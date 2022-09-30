@@ -770,7 +770,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Settler"
 
 /obj/effect/landmark/start/f13/dendoc
-	name = "Doctor"
+	name = "Town Doctor"
+
+/obj/effect/landmark/start/f13/denres
+	name = "Researcher"
 
 /obj/effect/landmark/start/f13/shopkeeper
 	name = "Shopkeeper"
@@ -915,46 +918,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/followersscientist
 	name = "Followers Scientist"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/obj/effect/landmark/start/f13/noyan
-	name = "Noyan"
-	icon_state = "Pusher"
-
-/obj/effect/landmark/start/f13/steward
-	name = "Steward"
-	icon_state = "Pusher"
-
-/obj/effect/landmark/start/f13/kheshig
-	name = "Kheshig"
-	icon_state = "Pusher"
-
-/obj/effect/landmark/start/f13/khorchin
-	name = "Khorchin"
-	icon_state = "Pusher"
-
-/obj/effect/landmark/start/f13/kipchak
-	name = "Kipchak"
-	icon_state = "Pusher"
-
-/obj/effect/landmark/start/f13/mangudai
-	name = "Mangudai"
+//Khan
+/obj/effect/landmark/start/f13/greatkhan
+	name = "Great Khan"
 	icon_state = "Pusher"
