@@ -443,6 +443,24 @@
 	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/cracker))
 
 /*
+ * Jar of pickles
+ */
+
+/obj/item/storage/fancy/pickles_jar
+	icon = 'icons/obj/food/containers.dmi'
+	icon_state = "pickles"
+	icon_type = "pickles"
+	name = "pickles"
+	desc = "A jar for containing pickles."
+	spawn_type = /obj/item/reagent_containers/food/snacks/pickle
+
+/obj/item/storage/fancy/pickle_jar/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 5
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/pickle))
+
+/*
  * Ring Box
  */
 
