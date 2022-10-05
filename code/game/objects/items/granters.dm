@@ -962,24 +962,22 @@
 	remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
 
 /obj/item/book/granter/trait/explosives
-	name = "Industrial Society and Its Future"
-	desc = "This lengthy manifesto happens to contain a variety of valuable knowledge on how to craft explosives of all kinds."
+	name = "Anarchist Cookbook"
+	desc = "An old manual for underground terrorist groups and liberation armies on how to leave their mark on their favorite regime."
 	oneuse = TRUE
 	granted_trait = TRAIT_EXPLOSIVE_CRAFTING
 	traitname = "explosive crafting"
 	remarks = list("If you want to get started making bombs, you're going to need a lot of igniters and black powder.", "Did a Follower write this book, or something?", "All thermite takes is some aluminum and iron.", "Coconut shells make acceptable grenade casings in a pinch.")
-	crafting_recipe_types = list(/datum/crafting_recipe/frag_shrapnel, /datum/crafting_recipe/stinger, /datum/crafting_recipe/flashbang,
-/datum/crafting_recipe/smokebomb, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket)
+	crafting_recipe_types = list(/datum/crafting_recipe/dynamite, /datum/crafting_recipe/pipebomb, /datum/crafting_recipe/smokebomb, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/flashbang, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket)
 
 /obj/item/book/granter/trait/explosives_advanced
-	name = "Advanced Techniques for Winning at Postal Chess"
-	desc = "Author: Ted Kaczynski."
+	name = "US Army: Ordnance Manual"
+	desc = "A pre-war military manual for infantry on how to make their own destructive weapons in the field."
 	oneuse = TRUE
 	granted_trait = TRAIT_ADVANCED_EXPLOSIVE_CRAFTING
 	traitname = "advanced explosive crafting"
 	remarks = list("Is this actually a legal chess move...?", "If you hook electronic parts up to a flux capacitor-oh, that makes a lot of sense, actually.", "Radium? What would you use radium f-oh no.", "Why would anyone actually publish this?")
-	crafting_recipe_types = list(/datum/crafting_recipe/incendiary, /datum/crafting_recipe/concussion, /datum/crafting_recipe/radgrenade, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/incendiaryrocket, /datum/crafting_recipe/strongrocket, /datum/crafting_recipe/frag_shrapnel, /datum/crafting_recipe/stinger, /datum/crafting_recipe/flashbang,
-/datum/crafting_recipe/smokebomb, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket)
+	crafting_recipe_types = list(/datum/crafting_recipe/high_explosive, /datum/crafting_recipe/frag_shrapnel, /datum/crafting_recipe/incendiary, /datum/crafting_recipe/smokebomb, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/explosive/explomine, /datum/crafting_recipe/explosive/shrapnelmine, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/strongrocket)
 
 /obj/item/book/granter/trait/gunslinger
 	name = "Tycho: Life of a Lawman"

@@ -1,7 +1,7 @@
 /obj/item/grenade/empgrenade
 	name = "pulse grenade"
-	desc = "It is designed to wreak havoc on electronic systems."
-	icon_state = "emp"
+	desc = "A pre-war Chinese made response to mechanized infantry of USA. Wrecks havoc on anything running on electricity."
+	icon_state = "pulse"
 	item_state = "emp"
 
 /obj/item/grenade/empgrenade/prime(mob/living/lanced_by)

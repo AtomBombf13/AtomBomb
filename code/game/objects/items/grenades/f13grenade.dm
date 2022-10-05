@@ -14,6 +14,21 @@
 	update_mob()
 	qdel(src)
 
+//Explosive
+
+/obj/item/grenade/f13/explosive
+	name = "high-explosive grenade"
+	desc = "A prewar military-grade explosive grenade with short fuse, remember to unpin and throw."
+	icon_state = "he"
+	throw_speed = 4
+	throw_range = 7
+	ex_dev = 0
+	ex_heavy = 3
+	ex_light = 5
+	ex_flame = 0
+
+//Shrapnel
+
 /obj/item/grenade/f13/stinger
 	name = "stinger grenade"
 	desc = "A nonlethal sting-pellet grenade used for riot suppression pre-war."
@@ -61,6 +76,8 @@
 	radiation_pulse(src, 300)
 	qdel(src)
 
+//Specilized
+
 /obj/item/grenade/f13/incendiary
 	name = "incendinary grenade"
 	desc = "A prewar police supression grenade designed to cause as much agony as possible against large crowds of protestors, very hot."
@@ -106,12 +123,30 @@
 	playsound(loc, 'sound/effects/empulse.ogg', 50, 1)
 	radiation_pulse(src, rad_damage)
 
-/obj/item/grenade/f13/dynamite
-	name = "stick of dynamite"
-	desc = "I'll hold it down, you light the fuse!"
+//Ghetto
+/obj/item/grenade/f13/anarchist
 	icon = 'icons/fallout/objects/guns/explosives.dmi'
+	activation_sound = 'sound/items/Welder2.ogg'
+	throw_speed = 3
+	throw_range = 4
+
+/obj/item/grenade/f13/anarchist/dynamite
+	name = "stick of dynamite"
+	desc = "An old and reliable mining tool."
 	icon_state = "dynamite"
 	ex_dev = 0
 	ex_heavy = 2
 	ex_light = 3
 	ex_flame = 0
+
+/obj/item/grenade/f13/anarchist/pipebomb
+	name = "pipe bomb"
+	desc = "Responsible for most mail related deaths."
+	icon_state = "pipebomb"
+	det_time = 60
+	ex_dev = 0
+	ex_heavy = 0
+	ex_light = 2
+	ex_flame = 0
+	shrapnel_type = /obj/item/projectile/bullet/shrapnel
+	shrapnel_radius = 4

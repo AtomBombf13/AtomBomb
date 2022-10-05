@@ -1664,7 +1664,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier3
 	loot = list(
-				/obj/item/grenade/syndieminibomb/concussion,
+				/obj/item/grenade/f13/explosive,
 				/obj/item/grenade/plastic/c4,
 				/obj/item/grenade/empgrenade,
 				/obj/item/grenade/f13/radiation,
