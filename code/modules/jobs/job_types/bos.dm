@@ -267,6 +267,9 @@ Head Scribe
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
@@ -347,9 +350,9 @@ Head Knight
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lightplasmapistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 
 
 /datum/outfit/job/bos/f13knightcap
@@ -621,6 +624,9 @@ Senior Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
@@ -692,7 +698,7 @@ Scribe
 	chemwhiz = TRUE
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
-	belt = 			/obj/item/storage/belt/utility/full/engi
+	belt = 			/obj/item/storage/belt/utility/full
 	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
@@ -720,6 +726,7 @@ Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
@@ -780,9 +787,9 @@ Senior Knight
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -842,7 +849,6 @@ Senior Knight
 	name = "Senior Knight-Cavalry"
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorknight=1,
 		/obj/item/melee/powered/ripper/prewar=1,
 		/obj/item/shield/riot/bullet_proof=1,
 		)
@@ -865,12 +871,10 @@ Knight
 	exp_requirements = 300
 
 	loadout_options = list(
-	/datum/outfit/loadout/knighta, //AER9
-	/datum/outfit/loadout/knightb, //R91
-	/datum/outfit/loadout/knightc, //AER9S
-	/datum/outfit/loadout/knightd, //R91 J
-	/datum/outfit/loadout/knighte, //Ripper J
-	/datum/outfit/loadout/knightf, //Ripper S
+	/datum/outfit/loadout/knighta, //AER9 J
+	/datum/outfit/loadout/knightc, //AER9 S
+	/datum/outfit/loadout/knightb, //Ripper J
+	/datum/outfit/loadout/knightd, //Ripper S
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -896,9 +900,8 @@ Knight
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
@@ -932,17 +935,6 @@ Knight
 		)
 
 /datum/outfit/loadout/knightb
-	name = "Junior Knight-Defender"
-	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
-	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorknight=1,
-		/obj/item/gun/ballistic/automatic/assault_rifle=1,
-		/obj/item/ammo_box/magazine/m556/rifle=2,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		)
-
-/datum/outfit/loadout/knightc
 	name = "Junior Knight-Cavalry"
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
@@ -952,7 +944,7 @@ Knight
 		)
 
 
-/datum/outfit/loadout/knightd
+/datum/outfit/loadout/knightc
 	name = "Footknight"
 	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	backpack_contents = list(
@@ -963,18 +955,7 @@ Knight
 		/obj/item/ammo_box/magazine/m45/socom = 2,
 		)
 
-/datum/outfit/loadout/knighte
-	name = "Knight-Defender"
-	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
-	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/knight=1,
-		/obj/item/gun/ballistic/automatic/smg/mp5=1,
-		/obj/item/ammo_box/magazine/uzim9mm=2,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		)
-
-/datum/outfit/loadout/knightf
+/datum/outfit/loadout/knightd
 	name = "Knight-Cavalry"
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
@@ -1044,7 +1025,7 @@ Initiate
 
 /datum/outfit/loadout/initiatek
 	name = "Knight-Aspirant"
-	belt = 			/obj/item/storage/belt/utility/full/engi
+	belt = 			/obj/item/storage/belt/utility/full
 	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	backpack_contents = list(
