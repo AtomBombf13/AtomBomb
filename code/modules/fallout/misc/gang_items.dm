@@ -246,7 +246,7 @@
 /datum/gang_item/equipment/he
 	name = "High Explosive Grenade"
 	cost = 100
-	item_path = /datum/crafting_recipe/concussion
+	item_path = /obj/item/grenade/f13/explosive
 
 
 ///////////////////
@@ -293,7 +293,7 @@
 	new /obj/item/grenade/frag(src)
 	new /obj/item/grenade/plastic/c4(src)
 	new /obj/item/grenade/plastic/c4(src)
-	new /obj/item/grenade/syndieminibomb/concussion(src)
+	new /obj/item/grenade/f13/explosive(src)
 	new /obj/item/clothing/suit/bomb_suit(src)
 
 /datum/gang_item/equipment/bundlegunner

@@ -16,6 +16,7 @@
 	var/active = 0
 	var/det_time = 50
 	var/display_timer = 1
+	var/activation_sound = 'sound/f13weapons/garand_ping.ogg'
 	var/clumsy_check = GRENADE_CLUMSY_FUMBLE
 	var/sticky = FALSE
 	// I moved the explosion vars and behavior to base grenades because we want all grenades to call [/obj/item/grenade/proc/prime] so we can send COMSIG_GRENADE_PRIME
@@ -108,7 +109,7 @@
 			C.throw_mode_on()
 		if(msg)
 			to_chat(user, span_warning("You prime [src]! [DisplayTimeText(det_time)]!"))
-	playsound(src, 'sound/f13weapons/garand_ping.ogg', volume, 1)
+	playsound(src, activation_sound, volume, 1)
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	item_state = initial(item_state) + "_active"

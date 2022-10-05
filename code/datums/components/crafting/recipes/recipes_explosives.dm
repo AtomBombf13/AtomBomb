@@ -26,6 +26,7 @@
 	parts = list(/obj/item/stock_parts/matter_bin = 1, /obj/item/grenade/chem_grenade = 2)
 	time = 30
 	category = CAT_EXPLOSIVE
+	always_available = FALSE
 
 /datum/crafting_recipe/explosive/molotov
 	name = "Molotov Cocktail (empty)"
@@ -66,6 +67,7 @@
 			/obj/item/stack/f13Cash/caps = 200)
 	time = 15
 	category = CAT_EXPLOSIVE
+
 /datum/crafting_recipe/explosive/shrapnelmine
 	name = "Shrapnel Mine"
 	result = /obj/item/mine/shrapnel/random
@@ -147,9 +149,43 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 
-/datum/crafting_recipe/concussion
+/datum/crafting_recipe/dynamite
+	name = "Dynamite"
+	result = /obj/item/grenade/f13/anarchist/dynamite
+	category = CAT_EXPLOSIVE
+	reqs = list(
+			/obj/item/stack/sheet/metal = 10,
+			/obj/item/stack/crafting/metalparts = 2,
+			/obj/item/stack/crafting/goodparts = 1,
+			/obj/item/stack/crafting/electronicparts = 1,
+			/obj/item/stack/ore/blackpowder = 1,
+			/obj/item/assembly/prox_sensor = 1,
+			/obj/item/stack/cable_coil = 5
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	always_available = FALSE
+
+/datum/crafting_recipe/pipebomb
+	name = "Pipebomb"
+	result = /obj/item/grenade/f13/anarchist/pipebomb
+	category = CAT_EXPLOSIVE
+	reqs = list(
+			/obj/item/stack/sheet/metal = 10,
+			/obj/item/stack/crafting/metalparts = 2,
+			/obj/item/stack/crafting/goodparts = 1,
+			/obj/item/stack/crafting/electronicparts = 1,
+			/obj/item/stack/ore/blackpowder = 1,
+			/obj/item/assembly/prox_sensor = 1,
+			/obj/item/stack/cable_coil = 5
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	always_available = FALSE
+
+/datum/crafting_recipe/high_explosive
 	name = "High Explosive Grenade" //this one has no shrapnel
-	result = /obj/item/grenade/syndieminibomb/concussion
+	result = /obj/item/grenade/f13/explosive
 	category = CAT_EXPLOSIVE
 	reqs = list(
 			/obj/item/stack/sheet/metal = 10,
