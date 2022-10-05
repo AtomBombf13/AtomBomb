@@ -1233,7 +1233,7 @@
 
 /obj/item/card/id/silver/mayor
 	name = "Mayor's mayoral permit"
-	desc = "A silver encrusted identification permit reserved for the Mayor of Oasis."
+	desc = "A silver encrusted identification permit reserved for the Mayor of Eastwood."
 	icon_state = "silver"
 	item_state = "silver_id"
 	assignment = "mayoral permit"

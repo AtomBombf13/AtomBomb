@@ -741,15 +741,11 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-// Oasis
+// Town of Eastwood
 
 /obj/effect/landmark/start/f13/mayor
-	name = "Alderman"
+	name = "Mayor"
 	icon_state = "Banker"
-
-/obj/effect/landmark/start/f13/secretary
-	name = "Secretary"
-	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/f13/sheriff
 	name = "Marshal"
@@ -758,9 +754,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/deputy
 	name = "Deputy"
 	icon_state = "Officer"
-
-/obj/effect/landmark/start/f13/farmer
-	name = "Farmer"
 
 /obj/effect/landmark/start/f13/prospector
 	name = "Prospector"
@@ -776,12 +769,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Researcher"
 
 /obj/effect/landmark/start/f13/shopkeeper
-	name = "Shopkeeper"
+	name = "Merchant"
 	icon_state = "Shopkeeper"
-
-/obj/effect/landmark/start/f13/banker
-	name = "Banker"
-	icon_state = "Banker"
 
 /obj/effect/landmark/start/f13/barkeep
 	name = "Barkeep"

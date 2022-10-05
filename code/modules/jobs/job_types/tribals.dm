@@ -1,7 +1,7 @@
 /datum/job/tribal
 	department_flag = TRIBAL
 	selection_color = "#049b9b"
-	exp_type = EXP_TYPE_TRIBAL
+	exp_type = EXP_TYPE_WASTELAND
 	forbids = "The use of pre-collapse technology, especially pre-collapse weapons of war."
 	enforces = "The tribe operate as if they are a part of a singular clan. Any harm dealt upon another member is likened to harm placed upon your brother or sister. Above all things, the tribe comes first."
 	objectivesList = list(

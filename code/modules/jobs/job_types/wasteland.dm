@@ -6,7 +6,7 @@ Raider
 */
 
 /datum/job/wasteland/f13raider
-	title = "Outlaw"
+	title = "Raider"
 	flag = F13RAIDER
 	display_order = JOB_DISPLAY_ORDER_RAIDER
 	department_head = list("Captain")
@@ -15,11 +15,11 @@ Raider
 	social_faction = FACTION_RAIDERS
 	total_positions = 16
 	spawn_positions = 16
-	description = "You are an Outlaw - the choice of why is up to you. You are responsible for making the wasteland unsafe and today is another day to antagonize it. You may be varied in your approaches, but you must have motives that are realistic for your job."
+	description = "You are a Raider - the choice of why is up to you. You are responsible for making the wasteland unsafe and today is another day to antagonize it. You may be varied in your approaches, but you must have motives that are realistic for your job."
 	supervisors = "your conscious if you have one"
 	selection_color = "#df80af"
 	exp_requirements = 0
-	exp_type = EXP_TYPE_WASTELAND
+	exp_type = EXP_TYPE_OUTLAW
 
 	outfit = /datum/outfit/job/wasteland/f13raider
 
@@ -1046,7 +1046,6 @@ Raider
 	flag = F13TRIBAL
 	display_order = JOB_DISPLAY_ORDER_TRIBAL
 	faction = FACTION_WASTELAND
-	social_faction = FACTION_TRIBE
 	total_positions = -1
 	spawn_positions = -1
 	description = "You are a member of the of a tribe who has wandered to this area, but does not belong to the Sulphur Bottom tribe.  From where you came is up to you, why you are here is your own, and it is up to you to survive on your own and attempt to thrive."

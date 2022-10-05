@@ -10,6 +10,12 @@ Detective : 4 ACCESS_FORENSICS_LOCKERS
 here's a tip, go search DEFINES/access.dm
 */
 
+/datum/job/oasis
+	exp_type = EXP_TYPE_EASTWOOD
+	faction = FACTION_EASTWOOD
+	department_flag = DEP_EASTWOOD
+	selection_color = "#dcba97"
+
 // Headsets for everyone!!
 /datum/outfit/job/den
 	name = "Eastwood Default Template"
@@ -27,26 +33,20 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/melee/onehanded/knife/hunting = 1
 		)
 
-/*
-Mayor
-*/
+/*--------------------------------------------------------------*/
+//Mayor
+/*--------------------------------------------------------------*/
 
-/datum/job/oasis
-	exp_type = EXP_TYPE_OASIS
-	faction = FACTION_OASIS
-	selection_color = "#dcba97"
 
 /datum/job/oasis/f13mayor
-	title = "Alderman"
+	title = "Mayor"
 	flag = F13MAYOR
 	display_order = JOB_DISPLAY_ORDER_MAYOR
-	department_flag = DEP_OASIS
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Overseer"
 	description = "A subordinate of the Overseer, you are the primary face of the town. Handling the day to day dealings of the denizens of our fair city falls to you. Those wasters outside the walls are an unknown factor, so it falls to you to maintain relations with the Wastelands many players. Be wary of the Machine down below, as with the trades and treaties in place. Balance the budget, but don't step on the Merchant's toes. Organise defences, but do not encroach on the Marshal's office. Most of all: don't lose your head."
 	selection_color = "#af9172"
-
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/den/f13mayor
@@ -72,7 +72,7 @@ Mayor
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/job/den/f13mayor
-	name = "Alderman"
+	name = "Mayor"
 	jobtype = /datum/job/oasis/f13mayor
 	id = /obj/item/card/id/silver/mayor
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -93,107 +93,18 @@ Mayor
 		)
 
 /*--------------------------------------------------------------*/
-/*
-/datum/job/oasis/f13secretary
-	title = "Secretary"
-	flag = F13SECRETARY
-	department_flag = DEP_OASIS
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "The Mayor"
-	description = "The settlement of Nash is a busy place, and the Mayor often can't handle everything by themselves. You are here to help them with anything and everything they require, and make sure the more trivial problems do not concern them. You handle clerical work, hear complaints, and set meetings within the manor. An efficient and smooth running town means a happy Mayor - just remember that if things go wrong, you're a convenient scapegoat."
-	enforces = "You are the stand-in leader of Nash if a Mayor does not exist."
-	selection_color = "#d7b088"
-	exp_requirements = 400
-
-	outfit = /datum/outfit/job/den/f13secretary
-
-	loadout_options = list(
-	/datum/outfit/loadout/pr,
-	/datum/outfit/loadout/pw
-	)
-
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
-		)
-	)
-
-/datum/outfit/job/den/f13secretary
-	name = "Secretary"
-	jobtype = /datum/job/oasis/f13secretary
-	id = /obj/item/card/id/silver
-	ears = /obj/item/radio/headset/headset_town/mayor
-	glasses = /obj/item/clothing/glasses/regular/hipster
-	gloves = /obj/item/clothing/gloves/color/white
-	backpack = /obj/item/storage/backpack/satchel/leather
-	satchel = /obj/item/storage/backpack/satchel/leather
-	r_hand = /obj/item/storage/briefcase/secretary
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/seclite
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	uniform = /obj/item/clothing/under/suit/black
-	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/ammo_box/magazine/m9mm = 1,
-		/obj/item/melee/onehanded/knife/switchblade = 1,
-		/obj/item/pda = 1
-		)
-
-/datum/outfit/loadout/pr
-	name = "Public Relations"
-	backpack_contents = list(
-		/obj/item/megaphone = 1,
-		/obj/item/reagent_containers/food/snacks/store/cake/birthday = 1,
-		/obj/item/clothing/accessory/medal/ribbon = 1,
-		/obj/item/clothing/gloves/color/latex/nitrile = 1,
-		/obj/item/camera = 1,
-		/obj/item/storage/crayons = 1,
-		/obj/item/choice_beacon/box/carpet = 1
-		)
-
-/datum/outfit/loadout/pw
-	name = "Public Works"
-	backpack_contents = list(
-		/obj/item/clothing/head/hardhat = 1,
-		/obj/item/clothing/suit/hazardvest = 1,
-		/obj/item/stack/sheet/metal/twenty = 2,
-		/obj/item/stack/sheet/glass/ten = 2,
-		/obj/item/stack/sheet/mineral/concrete/ten = 2
-		)
-
-/datum/outfit/job/den/f13secretary/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
-*/
-
+//Marshal
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13sheriff
 	title = "Marshal"
 	flag = F13SHERIFF
 	display_order = JOB_DISPLAY_ORDER_SHERIFF
-	department_flag = DEP_OASIS
 	selection_color = "#af9172"
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Alderman and Overseer"
+	supervisors = "The Mayor and Overseer"
 	description = "As the head of the security forces, you are the face of justice in the town. Uphold the law, or bend it to suit your needs, you set the precedent for how justice is doled out in the town, so bear that in mind when you sentence that pickpocket to death. Maintain the armoury and keep that watchful eye on the elevator to the Vault below. Whatever you do, don't lose your head."
 	exp_requirements = 750
 
@@ -272,6 +183,8 @@ Mayor
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
 
 /*--------------------------------------------------------------*/
+//Detective
+/*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13detective
 	title = "Detective"
@@ -323,18 +236,18 @@ Mayor
 		/obj/item/storage/box/evidence=1)
 
 /*--------------------------------------------------------------*/
+//Deputy
+/*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13deputy
 	title = "Deputy"
 	flag = F13DEPUTY
 	display_order = JOB_DISPLAY_ORDER_DEPUTY
-	department_flag = DEP_OASIS
 	total_positions = 5
 	spawn_positions = 4
 	supervisors = "The Marshal"
 	description = "Day or night, you watch the walls with diligence. The wastes outside are lawless."
 	selection_color = "#dcba97"
-	exp_type = EXP_TYPE_OASIS
 	exp_requirements = 300
 
 	loadout_options = list(
@@ -416,99 +329,18 @@ Mayor
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
+
 /*--------------------------------------------------------------*/
-/*
-/datum/job/oasis/f13farmer
-	title = "Farmer"
-	flag = F13FARMER
-	department_flag = DEP_OASIS
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "Nash laws"
-	description = "You are a farmer living in Nash. Treat your town with respect and make sure to follow the laws in place, as your premium status may be revoked if you are considered a danger to the populace."
-	enforces = "Farming is a public service, and you are under control of local governance - and you are expected to produce food."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13farmer
-
-	access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-	loadout_options = list(
-	/datum/outfit/loadout/abiotic,
-	/datum/outfit/loadout/pomologist,
-	/datum/outfit/loadout/zany,)
-
-/datum/outfit/job/den/f13farmer
-	name = "Farmer"
-	jobtype = /datum/job/oasis/f13farmer
-
-	id = /obj/item/card/id/dogtag/town
-
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
-	belt = /obj/item/storage/bag/plants
-	backpack_contents = list(
-		/obj/item/cultivator=1, \
-		/obj/item/hatchet=1,
-		/obj/item/shovel/spade=1, \
-		/obj/item/gun/ballistic/automatic/pistol/n99, \
-		/obj/item/ammo_box/magazine/m10mm/adv/simple=2)
-	shoes = 		/obj/item/clothing/shoes/workboots
-
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/settler, \
-		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
-
-/datum/outfit/loadout/abiotic
-	name = "Abiotic"
-	backpack_contents = list(
-		/obj/item/seeds/bamboo = 1,
-		/obj/item/seeds/glowshroom = 1,
-		/obj/item/seeds/tower = 1,
-		)
-
-/datum/outfit/loadout/pomologist
-	name = "Pomologist"
-	backpack_contents = list(
-		/obj/item/seeds/grape/green = 1,
-		/obj/item/seeds/apple/gold = 1,
-		/obj/item/seeds/cherry/blue = 1,
-		)
-
-/datum/outfit/loadout/zany
-	name = "Zany"
-	backpack_contents = list(
-		/obj/item/clothing/mask/cigarette/pipe = 1,
-		/obj/item/seeds/cannabis = 1,
-		/obj/item/seeds/tea/catnip = 1,
-		)
-*/
+//Prospector
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13prospector
 	title = "Prospector"
 	flag = F13PROSPECTOR
 	display_order = JOB_DISPLAY_ORDER_PROSPECTOR
-	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 4
-	supervisors = "The Alderman and Merchant"
+	supervisors = "The Mayor and Merchant"
 	description = "You are employeed by the local town merchant to bring in gear, supplies, and materials in exchange for caps. Pay varies depending on what you bring in so.. sometimes it's not great work, but it's honest work."
 	selection_color = "#dcba97"
 
@@ -591,6 +423,7 @@ Mayor
 		/obj/item/shovel = 1,
 		)
 
+/*--------------------------------------------------------------*/
 //Researcher
 /*--------------------------------------------------------------*/
 
@@ -598,11 +431,10 @@ Mayor
 	title = "Researcher"
 	flag = F13DENRES
 	display_order = JOB_DISPLAY_ORDER_RESEARCHER
-	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "The Alderman"
-	description =  "Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. Make sure to turn a profit on your services, or the Alderman might reconsider your position!"
+	supervisors = "The Mayor"
+	description =  "Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 
 	loadout_options = list(
@@ -706,11 +538,10 @@ Mayor
 	title = "Town Doctor"
 	flag = F13DENDOC
 	display_order = JOB_DISPLAY_ORDER_DENDOC
-	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "The Alderman"
-	description = "Doctor, the Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right. Just remember that you're no Follower (unless you somehow are) - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Alderman might reconsider your position!"
+	supervisors = "The Mayor"
+	description = "Doctor, the Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right. Just remember that you're no Follower (unless you somehow are) - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 
 	loadout_options = list(
@@ -800,7 +631,9 @@ Mayor
 
 /datum/outfit/loadout/follower
 	name = "Follower"
-	suit =	/obj/item/clothing/suit/toggle/labcoat/chemist
+	uniform =	/obj/item/clothing/under/f13/followers
+	suit=	/obj/item/clothing/suit/toggle/labcoat/followers
+	shoes =	/obj/item/clothing/shoes/f13/brownie
 	gloves =	/obj/item/clothing/gloves/color/latex
 	glasses =	/obj/item/clothing/glasses/science
 	backpack_contents = list(
@@ -808,16 +641,95 @@ Mayor
 		/obj/item/pda/chemist = 1
 	)
 
+
+/*--------------------------------------------------------------*/
+//Mechant
+/*--------------------------------------------------------------*/
+
+/datum/job/oasis/f13shopkeeper
+	title = "Merchant"
+	flag = F13SHOPKEEPER
+	display_order = JOB_DISPLAY_ORDER_SHOPKEEPER
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the free market and the Mayor"
+	description = "Trade deals fall upon your shoulders to negotiate with those around the town, so ensure you never give more than you've got. Of course, selling the town is the worst thing you could do, so it should go without saying that you can't do that. Negotiate with the traders of the wastes, extort them for the shirt on their back, or set them up for life, it's up to you to decide."
+	enforces = "Your store is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
+	selection_color = "#dcba97"
+	exp_requirements = 300
+
+	outfit = /datum/outfit/job/den/f13shopkeeper
+	access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis
+		)
+	)
+
+/datum/outfit/job/den/f13shopkeeper
+	name = "Merchant"
+	jobtype = /datum/job/oasis/f13shopkeeper
+	id = /obj/item/card/id/dogtag/town
+	ears = /obj/item/radio/headset/headset_town/commerce
+	uniform = /obj/item/clothing/under/f13/roving
+	backpack = /obj/item/storage/backpack
+	satchel = /obj/item/storage/backpack/satchel
+	duffelbag = /obj/item/storage/backpack/duffelbag
+	gloves = /obj/item/clothing/gloves/fingerless
+	l_pocket = /obj/item/storage/bag/money/small/den
+	r_pocket = /obj/item/flashlight/glowstick
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	backpack_contents = list(
+		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/box/shopkeeper = 1)
+
+/datum/outfit/job/den/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
+
+/datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+
+
+/*--------------------------------------------------------------*/
+//Barkeeper
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13barkeep
 	title = "Barkeeper"
 	flag = F13BARKEEP
 	display_order = JOB_DISPLAY_ORDER_BARKEEP
-	department_flag = DEP_OASIS
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the free market and Alderman"
+	supervisors = "the free market and Mayor"
 	description = "As proprietor of the town saloon, you are responsible for ensuring both citizens and travellers in Eastwood can get some food, drink and rest. Speak to the farmers for fresh produce!"
 	enforces = "Your saloon is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
@@ -896,11 +808,13 @@ Mayor
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
 
 /*--------------------------------------------------------------*/
+//Citizen
+/*--------------------------------------------------------------*/
+
 /datum/job/oasis/f13settler
 	title = "Citizen"
 	flag = F13SETTLER
 	display_order = JOB_DISPLAY_ORDER_SETTLER
-	department_flag = DEP_OASIS
 	total_positions = 10
 	spawn_positions = 8
 	supervisors = "Eastwood's laws"
@@ -1048,7 +962,6 @@ Mayor
 	)
 
 // if we ever add back the loadout display you'll have to put the items in places you want it to appear on the display model
-
 /datum/outfit/loadout/farmer
 	name = "Farmer"
 	backpack_contents = list(/obj/item/clothing/head/helmet/f13/brahmincowboyhat = 1,
@@ -1065,159 +978,6 @@ Mayor
 	/obj/item/seeds/apple/gold = 1,
 	/obj/item/seeds/cannabis = 1
 	)
-
-/*
-/datum/job/oasis/f13banker
-	title = "Banker"
-	flag = F13BANKER
-	department_flag = DEP_OASIS
-	total_positions = 1
-	spawn_positions = 2
-	supervisors = "The Mayor"
-	description = "No matter the nature of society, fortune and profit are there to be made! It is up to you to make deals, distribute caps and earn interest - an easy first venture might be safekeeping possessions in the strongboxes of your vault within the First Bank of Nash. Ensure you make a profit and retain enough capital for your day-to-day operations. You are under the governance of Nash, but perhaps deal-making will take you into other alliances."
-	enforces = "Your bank is a private business and you are not under direct control of local governance, but are subject to their laws."
-	selection_color = "#dcba97"
-	outfit = /datum/outfit/job/den/f13banker
-
-	loadout_options = list(
-	/datum/outfit/loadout/classy,
-	/datum/outfit/loadout/loanshark,
-	/datum/outfit/loadout/investor
-	)
-
-	access = list(ACCESS_BAR, ACCESS_MINT_VAULT)
-	minimal_access = list(ACCESS_BAR, ACCESS_MINT_VAULT)
-
-/datum/outfit/job/den/f13banker
-	name = "Banker"
-	jobtype = /datum/job/oasis/f13banker
-
-	uniform = /obj/item/clothing/under/lawyer/blacksuit
-	id = /obj/item/card/id/silver
-	ears = /obj/item/radio/headset/headset_town/commerce
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack = /obj/item/storage/backpack/satchel/leather
-	satchel = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/storage/bag/money/small = 1)
-
-/datum/outfit/loadout/classy
-	name = "Classy"
-	head = /obj/item/clothing/head/collectable/tophat
-	glasses = /obj/item/clothing/glasses/monocle
-	uniform = /obj/item/clothing/under/suit_jacket/charcoal
-	suit = /obj/item/clothing/suit/armor/outfit/jacket/banker
-	gloves = /obj/item/clothing/gloves/color/white
-	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(/obj/item/cane=1,
-		/obj/item/storage/belt/shoulderholster/ranger45 =1,
-		/obj/item/storage/fancy/cigarettes/cigpack_bigboss=1,
-		/obj/item/reagent_containers/food/drinks/bottle/whiskey=1,
-		/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass=1,
-		/obj/item/lighter/gold = 1
-		)
-
-/datum/outfit/loadout/loanshark
-	name = "Loanshark"
-	glasses = /obj/item/clothing/glasses/orange
-	mask = /obj/item/clothing/mask/cigarette/cigar
-	suit = /obj/item/clothing/suit/armor/outfit/vest
-	uniform = /obj/item/clothing/under/f13/sleazeball
-	shoes = /obj/item/clothing/shoes/sandal
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/whiskey=1,
-		/obj/item/storage/box/matches=1,
-		/obj/item/gun/ballistic/automatic/smg/mini_uzi=1,
-		/obj/item/instrument/violin/golden = 1
-		)
-
-/datum/outfit/loadout/investor
-	name = "Investor"
-	glasses = /obj/item/clothing/glasses/sunglasses
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	uniform = /obj/item/clothing/under/f13/bennys
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(/obj/item/storage/fancy/cigarettes/cigpack_bigboss=1,
-		/obj/item/storage/box/matches=1,
-		/obj/item/ingot/gold = 1,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1
-		)
-*/
-/*--------------------------------------------------------------*/
-
-/datum/job/oasis/f13shopkeeper
-	title = "Merchant"
-	flag = F13SHOPKEEPER
-	display_order = JOB_DISPLAY_ORDER_SHOPKEEPER
-	department_flag = DEP_OASIS
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the free market and the Alderman"
-	description = "Trade deals fall upon your shoulders to negotiate with those around the town, so ensure you never give more than you've got. Of course, selling the town is the worst thing you could do, so it should go without saying that you can't do that. Negotiate with the traders of the wastes, extort them for the shirt on their back, or set them up for life, it's up to you to decide."
-	enforces = "Your store is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
-	selection_color = "#dcba97"
-	exp_requirements = 300
-
-	outfit = /datum/outfit/job/den/f13shopkeeper
-	access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
-		)
-	)
-
-/datum/outfit/job/den/f13shopkeeper
-	name = "Merchant"
-	jobtype = /datum/job/oasis/f13shopkeeper
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town/commerce
-	uniform = /obj/item/clothing/under/f13/roving
-	backpack = /obj/item/storage/backpack
-	satchel = /obj/item/storage/backpack/satchel
-	duffelbag = /obj/item/storage/backpack/duffelbag
-	gloves = /obj/item/clothing/gloves/fingerless
-	l_pocket = /obj/item/storage/bag/money/small/den
-	r_pocket = /obj/item/flashlight/glowstick
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/storage/box/shopkeeper = 1)
-
-/datum/outfit/job/den/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
-
-/datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-
 
 
 /////////////////////

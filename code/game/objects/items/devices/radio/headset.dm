@@ -423,10 +423,10 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = new /obj/item/encryptionkey/headset_town/commerce
 
 /obj/item/radio/headset/headset_town/mayor
-	name = "Eastwood alderman radio headset"
-	desc = "This is used by Eastwood's alderman (and Head of research). Protects ears from flashbangs.\
+	name = "Eastwood mayor radio headset"
+	desc = "This is used by Eastwood's mayor (and Head of research). Protects ears from flashbangs.\
 		\nTo access the Eastwood channel, use :f.\
-		\nTo access the Eastwood alderman channel, use :y.\
+		\nTo access the Eastwood mayor channel, use :y.\
 		\nTo access the Eastwood security channel, use :l.\
 		\nTo access the Eastwood commerce channel, use :j."
 	bowman = TRUE

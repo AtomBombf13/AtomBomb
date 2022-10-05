@@ -4,13 +4,10 @@
 #define FACTION_NCR "NCR"
 #define FACTION_LEGION "Legion"
 #define FACTION_BROTHERHOOD "BOS"
-#define FACTION_OASIS "Town"
+#define FACTION_EASTWOOD "Town"
 #define FACTION_ENCLAVE "Enclave"
 #define FACTION_WASTELAND "Wastelander"
 #define FACTION_RAIDERS "Raiders"
-#define FACTION_TRIBE "Tribe"
-#define FACTION_VAULT "Vault"
-#define FACTION_FOLLOWERS "Followers"
 #define FACTION_KHAN "Great Khans"
 
 #define ENGSEC			(1<<0)
@@ -116,7 +113,7 @@
 #define F13INITIATE		(1<<10)
 #define F13OFFDUTYBOS	(1<<11)
 
-#define DEP_OASIS (1<<6)
+#define DEP_EASTWOOD (1<<6)
 
 #define F13SHERIFF		(1<<0)
 #define F13DENDOC       (1<<1)
@@ -302,7 +299,7 @@
 #define JOB_DISPLAY_ORDER_F13USSPECIALIST 89
 #define JOB_DISPLAY_ORDER_F13USPRIVATE 90
 #define JOB_DISPLAY_ORDER_F13USSCIENTIST 91
-//Oasis
+//Eastwood
 #define JOB_DISPLAY_ORDER_MAYOR 92
 #define JOB_DISPLAY_ORDER_SHOPKEEPER 93
 #define JOB_DISPLAY_ORDER_SHERIFF 94

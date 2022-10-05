@@ -113,22 +113,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Enclave Private",
 "Enclave Bunker Duty",
 
-"Chief",
-"Shaman",
-"Head Hunter",
-"Druid",
-"Hunter",
-
-"Noyan",
-"Steward",
-"Kheshig",
-"Khorchin",
-"Kipchak",
-
-"Followers Administrator",
-"Followers Doctor",
-"Followers Guard",
-
 "Cyborg",
 "Overseer",
 "Chief of Security",
@@ -151,18 +135,16 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Initiate",
 ))
 
-GLOBAL_LIST_INIT(oasis_positions, list(
-	"Alderman",
+GLOBAL_LIST_INIT(eastwood_positions, list(
+	"Mayor",
 	"Marshal",
+	"Detective",
 	"Deputy",
-//	"Farmer",
+	"Merchant",
 	"Prospector",
+	"Barkeep",
 	"Town Doctor",
 	"Researcher",
-	"Detective",
-	"Banker",
-	"Shopkeeper",
-	"Barkeep",
 	"Citizen",
 ))
 
@@ -217,27 +199,14 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Rear Echelon",
 ))
 
-GLOBAL_LIST_INIT(vault_positions, list(
-	"Overseer",
-	"Chief of Security",
-	"Vault-tec Doctor",
-	"Vault-tec Scientist",
-	"Vault-tec Security",
-	"Vault-tec Engineer",
-	"Vault Dweller",
-	"Cyborg",
-))
-
 GLOBAL_LIST_INIT(wasteland_positions, list(
-	"Faithful",
-	"Vigilante",
+	"Wastelander",
 	"Preacher",
 	"Far-Lands Tribals",
-	"Wastelander",
 ))
 
-GLOBAL_LIST_INIT(raider_positions, list(
-	"Outlaw",
+GLOBAL_LIST_INIT(outlaw_positions, list(
+	"Raider",
 	"Desperado Enforcer",
 	"Desperado Leader",
 	"Great Khan",
@@ -254,30 +223,9 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Bunker Duty",
 ))
 
-GLOBAL_LIST_INIT(security_positions, list(
-	"Vault-tec Security",
-	"Officer",
-))
 GLOBAL_LIST_INIT(silicon_positions, list(
 	"Mr. Handy",
-))
-
-GLOBAL_LIST_INIT(tribal_positions, list(
-	"Chief",
-	"Shaman",
-	"Head Hunter",
-	"Druid",
-	"Villager",
-	"Hunter",
-	"Spirit-Pledged",
-	"Guardian",
-))
-GLOBAL_LIST_INIT(followers_positions, list(
-	"Followers Administrator",
-	"Followers Doctor",
-	"Followers Guard",
-	"Followers Volunteer",
-	"Followers Scientist",
+	"Cyborg",
 ))
 
 // job categories for rendering the late join menu
@@ -287,38 +235,33 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#4d4848"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
-	EXP_TYPE_EASTWOOD = list("jobs" = oasis_positions, "color" = "#d7b088"),
-	EXP_TYPE_RAIDER = list("jobs" = raider_positions, "color" = "#a11111"),
+	EXP_TYPE_EASTWOOD = list("jobs" = eastwood_positions, "color" = "#d7b088"),
+	EXP_TYPE_OUTLAW	 = list("jobs" = outlaw_positions, "color" = "#a11111"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
-	EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
+	EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | civilian_positions | list("AI","Cyborg")), // crew positions
 	EXP_TYPE_COMMAND = list("titles" = command_positions),
 	EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),
 	EXP_TYPE_MEDICAL = list("titles" = medical_positions),
 	EXP_TYPE_SCIENCE = list("titles" = science_positions),
 	EXP_TYPE_SUPPLY = list("titles" = supply_positions),
-	EXP_TYPE_SECURITY = list("titles" = security_positions),
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | ncr_positions | wasteland_positions | tribal_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | eastwood_positions | legion_positions | ncr_positions | wasteland_positions | outlaw_positions | enclave_positions),
 
-	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw","Den Mob Boss","Den Mob Enforcer","Den Doctor",)),
 	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
-	EXP_TYPE_EASTWOOD = list("titles" = oasis_positions ),
-	EXP_TYPE_RAIDER = list("titles" = raider_positions),
+	EXP_TYPE_EASTWOOD = list("titles" = eastwood_positions ),
+	EXP_TYPE_OUTLAW	 = list("titles" = outlaw_positions),
 	EXP_TYPE_LEGION = list("titles" = legion_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
-	EXP_TYPE_TRIBAL = list("titles" = tribal_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
 
-	EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
-	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Followers Administrator")),
 	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain", "NCR Veteran Ranger"))
 ))
 
@@ -332,7 +275,7 @@ GLOBAL_PROTECT(exp_jobsmap)
 GLOBAL_PROTECT(exp_specialmap)
 
 /proc/guest_jobbans(job)
-	return ((job in GLOB.command_positions) || (job in GLOB.nonhuman_positions) || (job in GLOB.security_positions))
+	return ((job in GLOB.command_positions) || (job in GLOB.nonhuman_positions))
 
 
 

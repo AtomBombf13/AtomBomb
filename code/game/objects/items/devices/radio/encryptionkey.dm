@@ -216,10 +216,10 @@
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1)
 
 /obj/item/encryptionkey/headset_town/mayor
-	name = "Eastwood alderman radio encryption key"
+	name = "Eastwood mayor radio encryption key"
 	desc = "An encryption key for a radio headset.\
 		\nTo access the Eastwood channel, use :f.\
-		\nTo access the Eastwood alderman, use :y.\
+		\nTo access the Eastwood mayor, use :y.\
 		\nTo access the Eastwood security, use :l.\
 		\nTo access the Eastwood commerce channel, use :j"
 	icon_state = "cypherkey"
