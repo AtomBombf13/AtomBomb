@@ -751,6 +751,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Marshal"
 	icon_state = "Chief of Police"
 
+/obj/effect/landmark/start/f13/detective
+	name = "Detective"
+	icon_state = "Detective"
+
 /obj/effect/landmark/start/f13/deputy
 	name = "Deputy"
 	icon_state = "Officer"
@@ -776,47 +780,34 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Barkeep"
 	icon_state = "Barkeep"
 
+/obj/effect/landmark/start/f13/preacher
+	name = "Preacher"
+	icon_state = "Preacher"
+
 // Wasteland
-
-/obj/effect/landmark/start/f13/cultleader
-	name = "Cult Leader"
-
-/obj/effect/landmark/start/f13/vigilante
-	name = "Vigilante"
-	icon_state = "Wastelander"
 
 /obj/effect/landmark/start/f13/wastelander
 	name = "Wastelander"
 	icon_state = "Wastelander"
 
 /obj/effect/landmark/start/f13/raider
-	name = "Outlaw"
+	name = "Raider"
 	icon_state = "Raider"
 
+/obj/effect/landmark/start/f13/greatkhan
+	name = "Great Khan"
+	icon_state = "Pusher"
+
 /obj/effect/landmark/start/f13/enforcer
-	name = "Den Mob Enforcer"
+	name = "Desperado Enforcer"
 	icon_state = "Enforcer"
 
-/obj/effect/landmark/start/f13/dendoctor
-	name = "Doctor"
-
 /obj/effect/landmark/start/f13/mobboss
-	name = "Den Mob Boss"
+	name = "Desperado Leader"
 	icon_state = "Boss"
 
-/obj/effect/landmark/start/f13/preacher
-	name = "Preacher"
-	icon_state = "Preacher"
-
-/obj/effect/landmark/start/f13/faithful
-	name = "Faithful"
-	icon_state = "Preacher"
-
-/obj/effect/landmark/start/f13/detective
-	name = "Detective"
-	icon_state = "Detective"
-
 // Enclave
+
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Private"
 	icon_state = "uspvt"
@@ -849,65 +840,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/uslightduty
 	name = "Enclave Bunker Duty"
 	icon_state = "usoffduty"
-//Tribal
 
+//Tribal
 /obj/effect/landmark/start/f13/tribal
 	name = "Tribal"
 	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/chief
-	name = "Chief"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/shaman
-	name = "Shaman"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/villager
-	name = "Villager"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/hunter
-	name = "Hunter"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/Hhunter
-	name = "Head Hunter"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/druid
-	name = "Druid"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/spiritpledged
-	name = "Spirit-Pledged"
-	icon_state = "Tribal"
-
-/obj/effect/landmark/start/f13/guardian
-	name = "Guardian"
-	icon_state = "Tribal"
-
-//Followers of the Apocalypse
-/obj/effect/landmark/start/f13/followersadministrator
-	name = "Followers Administrator"
-	icon_state = "Chief Medical Officer"
-
-/obj/effect/landmark/start/f13/followersdoctor
-	name = "Followers Doctor"
-	icon_state = "Medical Doctor"
-
-/obj/effect/landmark/start/f13/followersguard
-	name = "Followers Guard"
-	icon_state = "Security Officer"
-
-/obj/effect/landmark/start/f13/followersvolunteer
-	name = "Followers Volunteer"
-	icon_state = "Medical Doctor"
-
-/obj/effect/landmark/start/f13/followersscientist
-	name = "Followers Scientist"
-
-//Khan
-/obj/effect/landmark/start/f13/greatkhan
-	name = "Great Khan"
-	icon_state = "Pusher"

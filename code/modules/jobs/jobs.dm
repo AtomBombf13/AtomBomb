@@ -145,6 +145,7 @@ GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Barkeep",
 	"Town Doctor",
 	"Researcher",
+	"Preacher",
 	"Citizen",
 ))
 
@@ -201,7 +202,6 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
-	"Preacher",
 	"Far-Lands Tribals",
 ))
 
