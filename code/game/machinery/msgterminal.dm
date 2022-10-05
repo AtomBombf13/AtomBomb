@@ -429,13 +429,13 @@ GLOBAL_LIST_EMPTY(allTerminals)
 	terminalType = 2
 */
 /obj/machinery/msgterminal/oasis
-	terminalid = "oasis"
-	terminal = "Oasis Terminal"
+	terminalid = "eastwood"
+	terminal = "Town of Eastwood Terminal"
 	terminalType = 2
 
 /obj/machinery/msgterminal/oasis/followers
 	terminalid = "follower"
-	terminal = "Oasis Followers Terminal"
+	terminal = "Town of Eastwood Followers Terminal"
 	terminalType = 2
 
 /obj/machinery/msgterminal/brotherhood

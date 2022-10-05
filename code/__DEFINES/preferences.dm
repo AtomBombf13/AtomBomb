@@ -71,12 +71,9 @@
 #define EXP_TYPE_ADMIN			"Admin"
 //f13 stuff
 #define EXP_TYPE_FALLOUT		"Fallout"
-#define EXP_TYPE_VAULT			"Vault"
-#define EXP_TYPE_VTCCSEC        "Vault-Tec Security"
-#define EXP_TYPE_VTCC           "Vault-Tec Coalition"
 #define EXP_TYPE_BROTHERHOOD	"Bos"
 #define EXP_TYPE_NCR			"NCR"
-#define EXP_TYPE_OASIS 			"Oasis"
+#define EXP_TYPE_EASTWOOD		"Eastwood"
 #define EXP_TYPE_LEGION			"Legion"
 #define EXP_TYPE_WASTELAND		"Wasteland"
 #define EXP_TYPE_ENCLAVE		"Enclave"
@@ -84,12 +81,8 @@
 #define EXP_TYPE_RANGER         "Ranger"
 #define EXP_TYPE_SCRIBE         "Scribe"
 #define EXP_TYPE_DECANUS        "Decanus"
-#define EXP_TYPE_TRIBAL			"Tribal"
-#define EXP_TYPE_FOLLOWERS		"FoA"
-#define EXP_TYPE_OUTLAW			"Outlaw"
+#define EXP_TYPE_OUTLAW			"Outlaws"
 #define EXP_TYPE_KHAN			"Great Khans"
-#define EXP_TYPE_EASTWOOD		"Eastwood"
-#define EXP_TYPE_RAIDER			"Raiders"
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)
 #define DB_FLAG_AGE_CONFIRMATION_INCOMPLETE		(1<<1)

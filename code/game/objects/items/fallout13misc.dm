@@ -188,13 +188,6 @@
 	icon_state = "oasisflag"
 	item_state = "oasisflag"
 
-/obj/item/flag/followers
-	name = "Followers of the Apocalypse flag"
-	desc = "A white flag with the black Follower's of the Apocalpyse cross on it."
-	icon_state = "followersflag"
-	item_state = "followersflag"
-	faction = FACTION_FOLLOWERS
-
 /// Locust flag but renamed to bandit.
 
 /obj/item/flag/locust
@@ -264,19 +257,13 @@
 						desc = "A banner depicting three rivers meeting at its center, overlaid with an ear of corn."
 						icon_state = "cornflag"
 						item_state = "cornflag"
-						faction = FACTION_OASIS
+						faction = FACTION_EASTWOOD
 					if(FACTION_BROTHERHOOD)
 						name = "BOS flag"
 						desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
 						icon_state = "bosflag"
 						item_state = "bosflag"
 						faction = FACTION_BROTHERHOOD
-					if("Followers")
-						name = "Followers of the Apocalypse flag"
-						desc = "A white flag with the black Follower's of the Apocalpyse cross on it."
-						icon_state = "followersflag"
-						item_state = "followersflag"
-						faction = FACTION_FOLLOWERS
 					if("Great Khans")
 						name = "Great Khans flag"
 						desc = "A flag worn and weathered from a long cherished history. A decorated smiling skull smiles mockingly upon those who challenge it."

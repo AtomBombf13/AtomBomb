@@ -71,8 +71,6 @@
 		return 0
 	if(rank in GLOB.brotherhood_positions) //don't hate them, just tolorate.
 		return 0
-	if(rank in GLOB.vault_positions) //purest humans left in america. supposedly.
-		return 0
 	return ..()
 
 /datum/species/ghoul/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)

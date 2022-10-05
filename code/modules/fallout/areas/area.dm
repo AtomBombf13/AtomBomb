@@ -383,11 +383,11 @@
 	icon_state = "tunnelsw"
 
 /area/f13/tunnel/southeastoasis
-	name = "Oasis Eastern Sewers"
+	name = "Eastwood Eastern Sewers"
 	icon_state = "tunnelse"
 
 /area/f13/tunnel/southwestoasis
-	name = "Oasis Western Sewers"
+	name = "Eastwood Western Sewers"
 	icon_state = "tunnelsw"
 
 /area/f13/tunnel/sub
