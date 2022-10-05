@@ -24,7 +24,7 @@ $include policy.txt
 # SERVERNAME Atom Bomb
 
 ## Server tagline: This will appear right below the server's title.
-SERVERTAGLINE [18+] Furry Friend Fallout, set between FO1 & FO2, with East Texas flair!
+SERVERTAGLINE [18+] Non-furry Fallout server, inspired Fallout 1 / 2 / NV. Come join our little Enclave!
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME fo13sql
