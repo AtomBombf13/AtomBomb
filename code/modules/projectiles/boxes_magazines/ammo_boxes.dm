@@ -35,7 +35,7 @@
 	max_ammo = 12
 	custom_materials = list(/datum/material/iron = MATS_SHOTGUN_BOX)
 	ammo_type = /obj/item/ammo_casing/shotgun
-	multiple_sprites = 1
+	multiple_sprites = 2
 	caliber = list(CALIBER_SHOTGUN)
 	w_class = WEIGHT_CLASS_SMALL
 

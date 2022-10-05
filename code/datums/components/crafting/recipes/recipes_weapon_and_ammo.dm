@@ -1315,7 +1315,7 @@
 	always_available = FALSE
 
 //wattz2000
-/datum/crafting_recipe/gun/energy/wattz2k
+/datum/crafting_recipe/wattz2k
 	name = "Wattz 2000 Laser Rifle"
 	result = /obj/item/gun/energy/laser/wattz2k
 	reqs = list(/obj/item/stack/sheet/metal = 15,

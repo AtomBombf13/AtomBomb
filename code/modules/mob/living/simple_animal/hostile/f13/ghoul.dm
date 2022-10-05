@@ -76,7 +76,7 @@
 	maxHealth = 80
 	health = 80
 	rapid_melee = 2
-	retreat_distance = 3
+	retreat_distance = 0
 	minimum_distance = 1
 	ranged = TRUE
 	ranged_message = "throws a rock"

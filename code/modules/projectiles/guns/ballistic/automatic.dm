@@ -652,7 +652,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_600,
+		FULL_AUTO_400,
 		BURST_5_ROUND
 	)
 
@@ -992,7 +992,7 @@
 /obj/item/gun/ballistic/automatic/sportcarbine
 	name = "sport carbine"
 	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
-	icon_state = "varmint"
+	icon_state = "svarmint"
 	item_state = "varmintrifle"
 	mag_type = /obj/item/ammo_box/magazine/m22
 	init_mag_type = /obj/item/ammo_box/magazine/m22/extended

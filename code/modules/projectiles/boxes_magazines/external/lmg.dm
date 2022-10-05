@@ -31,7 +31,7 @@
 	icon_state = "sniper_mag"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = list(CALIBER_762)
-	max_ammo = 7
+	max_ammo = 10
 	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_SMALL_RIFLE_MAGAZINE)
 	w_class = WEIGHT_CLASS_SMALL
