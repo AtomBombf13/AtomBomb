@@ -4453,7 +4453,7 @@
 "bOP" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "87"
+	req_access_txt = "137"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
@@ -14345,7 +14345,7 @@
 	obj_integrity = 800
 	},
 /obj/machinery/door/poddoor/shutters/radiation{
-	id = "bosengineaccess"
+	id = "townengineaccess"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/radiation)
@@ -14842,9 +14842,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/caves)
 "jkA" = (
-/obj/machinery/telecomms/server/presets/town_pd,
-/turf/open/floor/circuit/telecomms/mainframe,
-/area/f13/tcoms)
+/obj/machinery/door/airlock/hatch{
+	req_access_txt = "68"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/vault)
 "jkW" = (
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/lootdrop/maintenance{
@@ -15117,7 +15119,7 @@
 "jvS" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "87"
+	req_access_txt = "137"
 	},
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
@@ -16587,9 +16589,7 @@
 	},
 /area/f13/enclave)
 "kGg" = (
-/obj/machinery/door/airlock/hatch{
-	req_access = 140
-	},
+/obj/machinery/door/airlock/hatch,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -17015,7 +17015,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/hatch{
-	req_access = 140
+	req_access_txt = "68"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/vault)
@@ -22143,6 +22143,12 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/caves)
+"pAo" = (
+/obj/machinery/mineral/wasteland_vendor/followerterminal,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "pAU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -26471,14 +26477,14 @@
 	name = "Engine Access";
 	req_access_txt = "140"
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /obj/machinery/door/poddoor/shutters/radiation{
-	id = "bosengineaccess"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
+	id = "townengineaccess"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/vault)
@@ -31436,7 +31442,7 @@
 /area/f13/caves)
 "xgj" = (
 /obj/machinery/door/airlock/hatch{
-	req_access = 140
+	req_access_txt = "68"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
@@ -65355,7 +65361,7 @@ kXe
 tih
 tih
 tih
-ltr
+jkA
 wGY
 tih
 tih
@@ -65614,7 +65620,7 @@ qES
 kKt
 tVo
 rXC
-tVo
+iHF
 iIN
 exv
 lrO
@@ -66638,7 +66644,7 @@ dHk
 bPR
 kXe
 tih
-tVo
+pAo
 iHF
 tVo
 tVo
@@ -95535,7 +95541,7 @@ cho
 chJ
 cih
 jeL
-jkA
+cie
 cie
 cie
 cie
