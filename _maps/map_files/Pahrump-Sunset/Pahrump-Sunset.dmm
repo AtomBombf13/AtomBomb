@@ -1725,7 +1725,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/khans)
 "ahw" = (
-/obj/machinery/smartfridge/bottlerack/lootshelf/books,
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -1845,10 +1845,9 @@
 /area/f13/wasteland)
 "ahX" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/smartfridge/bottlerack/lootshelf/cans{
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment{
 	dir = 1
 	},
-/obj/item/stack/sheet/metal/five,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -4843,9 +4842,21 @@
 	},
 /area/f13/building)
 "atA" = (
+/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/vinegar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/saltshaker,
+/obj/item/reagent_containers/food/condiment/quality_oil,
+/obj/item/reagent_containers/food/condiment/mustard,
+/obj/item/reagent_containers/food/condiment/mayonnaise,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/cherryjelly,
+/obj/item/reagent_containers/food/condiment/bbqsauce,
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/honey,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/khanfort)
 "atB" = (
@@ -18948,10 +18959,10 @@
 /area/f13/ncr)
 "bJC" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/smartfridge/bottlerack/lootshelf/brews{
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -20927,6 +20938,23 @@
 	icon_state = "rubbleplate"
 	},
 /area/f13/wasteland)
+"cpn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table,
+/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/vinegar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/saltshaker,
+/obj/item/reagent_containers/food/condiment/quality_oil,
+/obj/item/reagent_containers/food/condiment/mustard,
+/obj/item/reagent_containers/food/condiment/mayonnaise,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/cherryjelly,
+/obj/item/reagent_containers/food/condiment/bbqsauce,
+/obj/item/reagent_containers/food/condiment/honey,
+/turf/open/floor/plasteel/f13/vault_floor/red/white/whiteredchess/whiteredchess2,
+/area/f13/ncr)
 "cpo" = (
 /obj/structure/flora/tree/cactus,
 /turf/open/indestructible/ground/outside/desert,
@@ -21846,6 +21874,18 @@
 	},
 /area/f13/wasteland)
 "cDe" = (
+/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/vinegar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/saltshaker,
+/obj/item/reagent_containers/food/condiment/quality_oil,
+/obj/item/reagent_containers/food/condiment/mustard,
+/obj/item/reagent_containers/food/condiment/mayonnaise,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/cherryjelly,
+/obj/item/reagent_containers/food/condiment/bbqsauce,
+/obj/item/reagent_containers/food/condiment/honey,
 /obj/structure/closet/fridge/meat,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -28031,6 +28071,13 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/building/museum)
+"fAI" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/building)
 "fAT" = (
 /obj/structure/bed/mattress{
 	icon_state = "mattress4"
@@ -33760,6 +33807,13 @@
 	icon_state = "verticalleftborderright2top"
 	},
 /area/f13/building/hospital)
+"ipl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/village)
 "ipY" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_2";
@@ -63908,6 +63962,23 @@
 	icon_state = "innermaincornerinner"
 	},
 /area/f13/wasteland)
+"wHl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/food/condiment/yeast,
+/obj/item/reagent_containers/food/condiment/vinegar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/saltshaker,
+/obj/item/reagent_containers/food/condiment/quality_oil,
+/obj/item/reagent_containers/food/condiment/mustard,
+/obj/item/reagent_containers/food/condiment/mayonnaise,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/cherryjelly,
+/obj/item/reagent_containers/food/condiment/bbqsauce,
+/obj/item/reagent_containers/food/condiment/honey,
+/obj/structure/table/wood,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/legion)
 "wHm" = (
 /obj/structure/lamp_post/doubles/bent,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -77816,7 +77887,7 @@ tMN
 xLa
 aqS
 aZd
-bln
+cpn
 xLa
 bqB
 bfL
@@ -88670,12 +88741,12 @@ oHM
 bZf
 aOk
 azh
-adR
+ipl
 lVF
 ahX
 mnW
 bJC
-sHP
+ipl
 amG
 aob
 arB
@@ -112953,7 +113024,7 @@ akK
 agk
 bZS
 acR
-xFk
+fAI
 xFk
 fTL
 ajI
@@ -123535,7 +123606,7 @@ wXT
 kpn
 wXT
 wXT
-trP
+wHl
 aqx
 aae
 vGl
