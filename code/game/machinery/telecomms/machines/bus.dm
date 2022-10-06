@@ -62,7 +62,7 @@
 	id = "Bus 3"
 	network = "tcommsat"
 	freq_listening = list(FREQ_SECURITY, FREQ_COMMAND, FREQ_VAULT, FREQ_NCR, FREQ_BOS, FREQ_ENCLAVE, FREQ_TOWN_MAYOR, FREQ_TOWN, FREQ_TOWN_PD, FREQ_RANGER, FREQ_TOWN_COMMERCE, FREQ_LEGION)
-	autolinkers = list("processor3", "security", "command", "den","vault", "ncr", "bos", "enclave", "town", "legion", "ranger", "khans", "sheriff")
+	autolinkers = list("processor3", "security", "command", "den","vault", "ncr", "bos", "enclave", "town", "sheriff", "ranger", "khans", "legion")
 
 /obj/machinery/telecomms/bus/preset_four
 	id = "Bus 4"
