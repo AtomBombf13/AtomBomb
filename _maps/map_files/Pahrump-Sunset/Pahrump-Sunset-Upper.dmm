@@ -11616,10 +11616,6 @@
 	dir = 4
 	},
 /area/f13/building/hospital)
-"xaJ" = (
-/obj/effect/landmark/start/f13/secretary,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/city)
 "xaY" = (
 /obj/effect/overlay/junk/toilet{
 	dir = 8
@@ -46025,7 +46021,7 @@ oez
 fbK
 nFw
 jkw
-xaJ
+uNh
 uNh
 uNh
 uNh
@@ -46796,7 +46792,7 @@ oez
 fbK
 nFw
 fdj
-xaJ
+uNh
 uNh
 rqa
 uNh
