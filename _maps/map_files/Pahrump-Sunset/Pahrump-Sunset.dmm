@@ -44275,7 +44275,7 @@
 "nfR" = (
 /obj/machinery/door/airlock/medical{
 	name = null;
-	req_one_access_txt = "124"
+	req_one_access_txt = "124,140"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -59189,7 +59189,7 @@
 	},
 /obj/machinery/door/airlock/medical{
 	name = null;
-	req_one_access_txt = "124"
+	req_one_access_txt = "124,140"
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/followers)
