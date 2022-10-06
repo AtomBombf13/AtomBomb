@@ -44210,8 +44210,7 @@
 	},
 /area/f13/building/hospital)
 "nfR" = (
-/obj/machinery/door/airlock/medical{
-	name = null;
+/obj/machinery/door/airlock/medical/glass{
 	req_one_access_txt = "124,140"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
@@ -59133,8 +59132,7 @@
 	id = "followersdeskshutters";
 	name = "followers shutters"
 	},
-/obj/machinery/door/airlock/medical{
-	name = null;
+/obj/machinery/door/airlock/medical/glass{
 	req_one_access_txt = "124,140"
 	},
 /turf/open/indestructible/ground/outside/desert,
