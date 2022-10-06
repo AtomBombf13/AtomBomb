@@ -1,7 +1,7 @@
 /datum/weather/snow_storm
 	name = "snow storm"
 	desc = "Harsh snowstorms roam the topside of this arctic planet, burying any area unfortunate enough to be in its path."
-	probability = 90
+	probability = 10
 
 	telegraph_message = span_warning("Drifting particles of snow begin to dust the surrounding area..")
 	telegraph_duration = 300

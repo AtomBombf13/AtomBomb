@@ -20,7 +20,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_TOWN_MAYOR = RADIO_TOKEN_TOWN_MAYOR,
 	RADIO_CHANNEL_TOWN_PD = RADIO_TOKEN_TOWN_PD,
 	RADIO_CHANNEL_RANGER = RADIO_TOKEN_RANGER,
-	RADIO_CHANNEL_TOWN_COMMERCE = RADIO_TOKEN_TOWN_COMMERCE
+	RADIO_CHANNEL_TOWN_COMMERCE = RADIO_TOKEN_TOWN_COMMERCE,
+	RADIO_CHANNEL_LEGION = RADIO_TOKEN_LEGION
 ))
 
 /obj/item/radio/headset
@@ -427,7 +428,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "This is used by Eastwood's mayor (and Head of research). Protects ears from flashbangs.\
 		\nTo access the Eastwood channel, use :f.\
 		\nTo access the Eastwood mayor channel, use :y.\
-		\nTo access the Eastwood security channel, use :l.\
+		\nTo access the Eastwood security channel, use :g.\
 		\nTo access the Eastwood commerce channel, use :j."
 	bowman = TRUE
 	command = TRUE

@@ -60,7 +60,7 @@
 	id = "Receiver B"
 	network = "tcommsat"
 	autolinkers = list("receiverB") // link to relay
-	freq_listening = list(FREQ_COMMAND, FREQ_ENGINEERING, FREQ_SECURITY, FREQ_VAULT, FREQ_NCR, FREQ_BOS, FREQ_ENCLAVE, FREQ_TOWN_MAYOR, FREQ_TOWN, FREQ_TOWN_PD, FREQ_RANGER, FREQ_TOWN_COMMERCE)
+	freq_listening = list(FREQ_COMMAND, FREQ_ENGINEERING, FREQ_SECURITY, FREQ_VAULT, FREQ_NCR, FREQ_BOS, FREQ_ENCLAVE, FREQ_TOWN_MAYOR, FREQ_TOWN, FREQ_TOWN_PD, FREQ_RANGER, FREQ_TOWN_COMMERCE, FREQ_LEGION)
 
 	//Common and other radio frequencies for people to freely use
 /obj/machinery/telecomms/receiver/preset_right/Initialize()

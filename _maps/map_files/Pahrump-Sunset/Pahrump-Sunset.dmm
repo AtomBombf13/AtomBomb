@@ -9081,9 +9081,11 @@
 	},
 /area/f13/village)
 "aHD" = (
-/obj/effect/landmark/start/f13/dendoctor,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
+/obj/effect/landmark/observer_start,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "aHE" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/closed/mineral/random/low_chance,
@@ -20928,11 +20930,6 @@
 	icon_state = "rubbleplate"
 	},
 /area/f13/wasteland)
-"cpn" = (
-/obj/effect/landmark/start/f13/shaman,
-/obj/effect/landmark/start/f13/druid,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "cpo" = (
 /obj/structure/flora/tree/cactus,
 /turf/open/indestructible/ground/outside/desert,
@@ -24756,10 +24753,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"ebf" = (
-/obj/effect/landmark/start/f13/guardian,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/village)
 "ebg" = (
 /obj/structure/wreck/trash/machinepiletwo{
 	pixel_x = 12;
@@ -28031,10 +28024,6 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/building/museum)
-"fAI" = (
-/obj/effect/landmark/start/f13/chief,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/village)
 "fAT" = (
 /obj/structure/bed/mattress{
 	icon_state = "mattress4"
@@ -32716,7 +32705,6 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/effect/landmark/start/f13/guardian,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/village)
 "hQS" = (
@@ -33756,10 +33744,6 @@
 	icon_state = "verticalleftborderright2top"
 	},
 /area/f13/building/hospital)
-"ipl" = (
-/obj/effect/landmark/start/f13/farmer,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "ipY" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_2";
@@ -45103,12 +45087,6 @@
 	dir = 8
 	},
 /area/f13/building/hospital)
-"nBq" = (
-/obj/effect/landmark/start/f13/vigilante,
-/turf/open/floor/plasteel/f13/vault_floor/blue/side{
-	icon_state = "bluedirty"
-	},
-/area/f13/building)
 "nBN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -48437,7 +48415,6 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
-/obj/item/flag/followers,
 /turf/open/floor/grass,
 /area/f13/wasteland)
 "phP" = (
@@ -54880,7 +54857,6 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/legion)
 "soN" = (
-/obj/effect/landmark/start/f13/farmer,
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#e8eaff"
@@ -58706,7 +58682,6 @@
 	},
 /area/f13/wasteland)
 "uef" = (
-/obj/effect/landmark/start/f13/farmer,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -61354,7 +61329,6 @@
 /turf/open/floor/carpet,
 /area/f13/building)
 "vsb" = (
-/obj/effect/landmark/start/f13/vigilante,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 6
 	},
@@ -63908,10 +63882,6 @@
 	icon_state = "innermaincornerinner"
 	},
 /area/f13/wasteland)
-"wHl" = (
-/obj/effect/landmark/start/f13/Hhunter,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/village)
 "wHm" = (
 /obj/structure/lamp_post/doubles/bent,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -73349,7 +73319,7 @@ sRZ
 mPa
 vbX
 sFY
-fAI
+vva
 jqC
 xti
 huu
@@ -74120,7 +74090,7 @@ sRZ
 mPa
 mlH
 sFY
-wHl
+vva
 rbt
 gAz
 hkV
@@ -77970,7 +77940,7 @@ hEl
 lbR
 oll
 lbR
-cpn
+oUj
 cvp
 nxY
 sWj
@@ -78741,7 +78711,7 @@ rdh
 mcx
 oUj
 oGR
-cpn
+oUj
 cvp
 sqb
 lGJ
@@ -78757,7 +78727,7 @@ tsH
 cRE
 cvp
 fye
-ebf
+vva
 vva
 vva
 plK
@@ -87963,7 +87933,7 @@ aOk
 xaI
 mtQ
 huu
-ipl
+aOk
 btD
 dzA
 fef
@@ -88475,7 +88445,7 @@ gaX
 aOk
 biO
 ong
-ipl
+aOk
 huu
 huu
 btD
@@ -97482,7 +97452,7 @@ pKY
 skm
 lIY
 skm
-skm
+aHD
 mHp
 nvn
 nvn
@@ -99519,8 +99489,8 @@ qNu
 aiO
 abY
 vku
-aHD
-aHD
+aSo
+aSo
 qWE
 abY
 jKb
@@ -100083,7 +100053,7 @@ cyJ
 cyJ
 cyJ
 xnn
-nBq
+jsw
 pVH
 mgn
 eoi

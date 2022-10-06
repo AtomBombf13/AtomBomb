@@ -909,8 +909,8 @@
 	return ..()
 
 /obj/item/card/id/dogtag/sheriff
-	name = "sheriff's badge"
-	desc = "A golden Sheriff's badge."
+	name = "marshal's badge"
+	desc = "A golden Marshal's badge."
 	assignment = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
@@ -924,7 +924,7 @@
 	access = list(ACCESS_BAR)
 
 /obj/item/card/id/dogtag/vaultiecard
-	name = "Vault Citizenship"
+	name = "vault Citizenship"
 	desc = "Proof of citizenship to a vault."
 	icon_state = "doctor"
 	item_state = "card-doctor"
@@ -943,13 +943,13 @@
 	access = list()
 
 /obj/item/card/id/dogtag/town/legion
-	name = "Legion citizenship permit"
+	name = "legion citizenship permit"
 	desc = "A permit identifying the holder as a citizen of Caesar's Legion."
 	assignment = "Legion Citizen"
 	access = list()
 
 /obj/item/card/id/dogtag/town/enclave
-	name = "American citizenship permit"
+	name = "american citizenship permit"
 	desc = "A permit identifying the holder as a citizen of United States of America."
 	assignment = "American Citizen"
 	access = list()
@@ -980,7 +980,7 @@
 	assignment = "ambassador's permit"
 
 /obj/item/card/id/dogtag/ncradmin
-	name = "Administrators ID"
+	name = "administrators ID"
 	desc = "An silver encrusted admins ID in a plastic holder."
 	icon_state = "silver"
 	item_state = "silver"

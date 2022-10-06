@@ -14841,6 +14841,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/caves)
+"jkA" = (
+/obj/machinery/telecomms/server/presets/town_pd,
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "jkW" = (
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/lootdrop/maintenance{
@@ -27241,7 +27245,6 @@
 /obj/structure/chair/f13foldupchair{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/dendoctor,
 /obj/effect/landmark/start/f13/dendoc,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
@@ -95539,7 +95542,7 @@ cho
 chJ
 cih
 jeL
-cie
+jkA
 cie
 cie
 cie

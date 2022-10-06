@@ -203,7 +203,7 @@
 	name = "Eastwood security radio encryption key"
 	desc = "An encryption key for a radio headset.\
 		\nTo access the Eastwood channel, use :f.\
-		\nTo access the Eastwood security channel, use :l"
+		\nTo access the Eastwood security channel, use :g"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_TOWN_PD = 1)
 
@@ -220,7 +220,7 @@
 	desc = "An encryption key for a radio headset.\
 		\nTo access the Eastwood channel, use :f.\
 		\nTo access the Eastwood mayor, use :y.\
-		\nTo access the Eastwood security, use :l.\
+		\nTo access the Eastwood security, use :g.\
 		\nTo access the Eastwood commerce channel, use :j"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_TOWN_PD = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1, RADIO_CHANNEL_TOWN_MAYOR = 1)
@@ -235,7 +235,7 @@
 	name = "Legion radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the Legion channel, use :l."
 	icon_state = "cypherkey"
-	channels = list(RADIO_CHANNEL_TOWN_PD = 1)
+	channels = list(RADIO_CHANNEL_LEGION = 1)
 
 /obj/item/encryptionkey/headset_cent
 	name = "\improper CentCom radio encryption key"
