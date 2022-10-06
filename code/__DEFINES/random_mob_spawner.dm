@@ -47,13 +47,13 @@
 #define MOB_SPAWNER_GLOBAL_LIST_DIFFICULTY "mob_list_difficulty"
 
 /// Mob spawner times
-#define MOB_SPAWNER_TIME_LONGEST 1800
-#define MOB_SPAWNER_TIME_LONGER 600
-#define MOB_SPAWNER_TIME_LONG 400
-#define MOB_SPAWNER_TIME_DEFAULT 200
-#define MOB_SPAWNER_TIME_QUICK 150
-#define MOB_SPAWNER_TIME_QUICKER 100
-#define MOB_SPAWNER_TIME_QUICKEST 50
+#define MOB_SPAWNER_TIME_LONGEST 3000
+#define MOB_SPAWNER_TIME_LONGER 1500
+#define MOB_SPAWNER_TIME_LONG 1000
+#define MOB_SPAWNER_TIME_DEFAULT 500
+#define MOB_SPAWNER_TIME_QUICK 350
+#define MOB_SPAWNER_TIME_QUICKER 250
+#define MOB_SPAWNER_TIME_QUICKEST 150 //Too ridicilous
 
 /// Mob spawner icon_states
 #define MOB_SPAWNER_ICONSTATE_DEFAULT "hole"
@@ -854,17 +854,14 @@ GLOBAL_LIST_EMPTY(random_mob_nest_spawner_datums)
 	mob_respawn_time_medium = MOB_SPAWNER_TIME_DEFAULT
 	mob_list_medium = list(
 		/mob/living/simple_animal/hostile/handy/protectron = 10,
-		/mob/living/simple_animal/hostile/securitron = 3,
-		/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot = 1
+		/mob/living/simple_animal/hostile/securitron = 3
 		)
 	num_mobs_to_spawn_hard = 2
 	mob_respawn_time_hard = MOB_SPAWNER_TIME_DEFAULT
 	mob_list_hard = list(
 		/mob/living/simple_animal/hostile/handy/robobrain = 10,
-		/mob/living/simple_animal/hostile/securitron = 5,
-		/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot = 5,
-		/mob/living/simple_animal/hostile/securitron/sentrybot = 4
-		)
+		/mob/living/simple_animal/hostile/securitron = 5
+		)//No sentries on surface for love of god
 
 /// Military robots (Securitrons, protectrons, eyebots, and the odd robobrain)
 /datum/random_mob_spawner/robot_military
