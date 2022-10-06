@@ -270,7 +270,7 @@ CHECK_RANDOMIZER
 # WIKIURL https://f13wiki.herma.moe/index.php/Main_Page
 
 ## Rules address
-RULESURL https://discord.gg/Xj5r7ZTWs7
+RULESURL https://discord.gg/4THz47rUnM
 
 ## Github address
 GITHUBURL https://github.com/ARF-SS13/coyote-bayou
