@@ -194,13 +194,8 @@
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_firemodes = list(
-		SEMI_AUTO_NODELAY,
-		BURST_3_ROUND,
-	)
+
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
@@ -211,7 +206,6 @@
 		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
 	)
-
 
 /* * * * * * * * * *
  * HEAVY REVOLVERS *
@@ -826,12 +820,12 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_firemodes = list(
+		SEMI_AUTO_NODELAY,
+		BURST_2_ROUND,
+	)
 
-	automatic = 0
-	autofire_shot_delay = 0
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = FALSE
 
 /* * * * * * * * * * *
@@ -856,7 +850,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY,

@@ -1247,6 +1247,14 @@
 	assignment = "name badge"
 	uses_overlays = FALSE
 
+/obj/item/card/id/denresearcher
+	name = "researcher's name badge"
+	desc = "A plastic-sealed name badge certifying the expertise of its holder."
+	icon_state = "doctor"
+	item_state = "card-doctor"
+	assignment = "name badge"
+	uses_overlays = FALSE
+
 /obj/item/card/id/chief
 	name = "crimson identification card"
 	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
