@@ -10090,8 +10090,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/machinery/cell_charger,
-/obj/structure/table/glass,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -14842,10 +14841,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/caves)
 "jkA" = (
-/obj/machinery/door/airlock/hatch{
-	req_access_txt = "68"
+/obj/machinery/mineral/wasteland_vendor/followerterminal,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/vault)
 "jkW" = (
 /obj/effect/turf_decal/box,
@@ -15245,11 +15244,11 @@
 	},
 /area/f13/radiation)
 "jBB" = (
-/obj/machinery/rnd/destructive_analyzer,
 /obj/machinery/light{
 	dir = 8;
 	pixel_y = -15
 	},
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -22143,12 +22142,6 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/caves)
-"pAo" = (
-/obj/machinery/mineral/wasteland_vendor/followerterminal,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
-	icon_state = "darkdirtysolid"
-	},
-/area/f13/vault)
 "pAU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -22221,6 +22214,12 @@
 	icon_state = "bluerustyfull"
 	},
 /area/f13/caves)
+"pDq" = (
+/obj/machinery/door/airlock/hatch{
+	req_access_txt = "68"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/vault)
 "pDv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -22270,6 +22269,23 @@
 	icon_state = "neutralrustyfull"
 	},
 /area/f13/brotherhood/mining)
+"pFS" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = -16
+	},
+/obj/structure/table/glass,
+/obj/item/storage/part_replacer,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/machinery/cell_charger,
+/obj/item/integrated_circuit_printer,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "pFY" = (
 /obj/structure/sign/poster/prewar/poster94{
 	icon_state = "poster70";
@@ -22534,12 +22550,6 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/storage/part_replacer,
-/obj/structure/table/glass,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -24831,7 +24841,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/operations)
 "rGr" = (
-/obj/structure/table/glass,
+/obj/machinery/rnd/server/vault,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -65361,7 +65371,7 @@ kXe
 tih
 tih
 tih
-jkA
+pDq
 wGY
 tih
 tih
@@ -66644,7 +66654,7 @@ dHk
 bPR
 kXe
 tih
-pAo
+jkA
 iHF
 tVo
 tVo
@@ -67165,7 +67175,7 @@ szv
 sbr
 tih
 jsN
-vQo
+pFS
 sbr
 sxA
 tih
