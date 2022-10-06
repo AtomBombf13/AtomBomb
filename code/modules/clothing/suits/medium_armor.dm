@@ -906,13 +906,13 @@
 
 /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
 	name = "desert ranger patrol armor"
-	desc = "A set of desert ranger patrol armor, modified to be light and breezy here in the swamps, perfect for making blood sausage."
+	desc = "A set of desert ranger patrol armor, perfect for making blood sausage."
 	icon_state = "ncr_patrol"
 	item_state = "ncr_patrol"
 
 /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol/mutant
 	name = "mutant desert ranger armor"
-	desc = "Multiple sets of desert ranger patrol armor made to protect a massive humanoid, modified to be light and breezy here in the swamps, and smelling like blood sausage."
+	desc = "Multiple sets of desert ranger patrol armor made to protect a massive humanoid, and smelling like blood sausage."
 	icon_state = "mutie_ranger_armour"
 	item_state = "mutie_ranger_armour"
 
