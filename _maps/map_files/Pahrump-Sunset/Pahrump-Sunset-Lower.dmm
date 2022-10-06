@@ -25641,7 +25641,7 @@
 "soY" = (
 /obj/machinery/door/airlock/medical{
 	name = null;
-	req_one_access_txt = "124"
+	req_one_access_txt = "124,140"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/vault)
