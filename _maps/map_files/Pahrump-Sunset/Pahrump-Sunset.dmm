@@ -15129,7 +15129,10 @@
 	},
 /area/f13/building)
 "bev" = (
-/obj/machinery/door/poddoor/gate/preopen,
+/obj/machinery/door/poddoor/gate/preopen{
+	name = "eastwood south gate";
+	id = "EastwoodSouthGate"
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright2"
 	},
@@ -23727,6 +23730,16 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
+"dyz" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	name = "eastwood gate north";
+	id = "EastwoodNorthGate"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/city)
 "dyG" = (
 /obj/machinery/light/broken{
 	dir = 8
@@ -29690,6 +29703,15 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
+"gua" = (
+/obj/machinery/door/poddoor/gate/preopen{
+	name = "eastwood north gate";
+	id = "EastwoodNorthGate"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright2"
+	},
+/area/f13/wasteland)
 "gud" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/nest/ghoul{
@@ -63641,6 +63663,16 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/building/mall)
+"wBX" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	id = "EastwoodSouthGate";
+	name = "eastwood gate south"
+	},
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/city)
 "wCs" = (
 /obj/effect/turf_decal/arrows{
 	dir = 4
@@ -96692,7 +96724,7 @@ nke
 aky
 ijL
 ijL
-iZh
+dyz
 ijL
 ijL
 aky
@@ -97720,7 +97752,7 @@ guY
 mOZ
 fcB
 fcB
-bev
+gua
 jYk
 iZS
 iZS
@@ -99299,7 +99331,7 @@ uuZ
 kls
 aYj
 aYj
-voM
+wBX
 aYj
 aYj
 kls

@@ -2694,7 +2694,7 @@
 "eZk" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access = 137
+	req_access_txt = "137"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -5440,6 +5440,15 @@
 /obj/structure/simple_door/room,
 /turf/open/floor/wood_fancy,
 /area/f13/ncr)
+"kYu" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/button/door{
+	id = "EastwoodSouthGate";
+	name = "eastwood gate south";
+	pixel_x = 24
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "kYM" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/corner{
 	dir = 1
@@ -5543,6 +5552,15 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
+"lnA" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/button/door{
+	name = "eastwood gate north";
+	id = "EastwoodNorthGate";
+	pixel_x = -22
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "lon" = (
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
@@ -9853,7 +9871,7 @@
 "trp" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access = 137
+	req_access_txt = "137"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
@@ -42386,7 +42404,7 @@ uKh
 vOe
 uKh
 uKh
-uKh
+lnA
 wOl
 jqW
 tEW
@@ -43448,13 +43466,13 @@ oez
 oez
 oez
 fbK
-uKh
+kYu
 uKh
 jqW
 bgI
 jqW
 uKh
-uKh
+kYu
 tEW
 oez
 oez
