@@ -1551,6 +1551,14 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"agC" = (
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay";
+	req_access_txt = "68"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "agD" = (
 /obj/machinery/light{
 	dir = 8
@@ -20834,6 +20842,16 @@
 /obj/structure/stairs,
 /turf/open/floor/f13/wood,
 /area/f13/city)
+"cob" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "followersdeskshutters";
+	name = "followers shutters"
+	},
+/obj/machinery/door/airlock/glass_large{
+	req_access_txt = "68"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "coc" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -28722,6 +28740,11 @@
 /obj/structure/pondlily_small,
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
+"fQO" = (
+/obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/blue/side,
+/area/f13/followers)
 "fRF" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/floor/f13/wood,
@@ -100613,7 +100636,7 @@ aiO
 abY
 efA
 bya
-aSo
+agC
 aNb
 abY
 sAv
@@ -101393,7 +101416,7 @@ aSo
 abY
 tWQ
 bBd
-uXO
+fQO
 abY
 tmC
 huu
@@ -101647,7 +101670,7 @@ aSo
 aSo
 aSo
 aSo
-uoS
+cob
 aUL
 bBd
 aTB
@@ -102417,7 +102440,7 @@ lfg
 xvy
 abY
 abY
-aSo
+agC
 abY
 abY
 abY
