@@ -44272,13 +44272,6 @@
 	dir = 6
 	},
 /area/f13/building/hospital)
-"nfR" = (
-/obj/machinery/door/airlock/medical/glass{
-	req_one_access_txt = "124,140";
-	req_access_txt = "124,140"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "nfW" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
@@ -59186,10 +59179,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "followersdeskshutters";
 	name = "followers shutters"
-	},
-/obj/machinery/door/airlock/medical/glass{
-	req_one_access_txt = "124,140";
-	req_access_txt = "124,140"
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/followers)
@@ -100624,7 +100613,7 @@ aiO
 abY
 efA
 bya
-nfR
+aSo
 aNb
 abY
 sAv
@@ -102428,7 +102417,7 @@ lfg
 xvy
 abY
 abY
-nfR
+aSo
 abY
 abY
 abY
