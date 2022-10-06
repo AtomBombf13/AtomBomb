@@ -59126,7 +59126,7 @@
 	id = "followersdeskshutters";
 	name = "followers shutters"
 	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "uoU" = (
 /obj/structure/barricade/wooden,
