@@ -281,8 +281,6 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet template"
 	desc = "should not exist."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
 	flags_inv = HIDEEARS|HIDEHAIR
@@ -306,22 +304,22 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/helmet/f13/legion/recruit
 	name = "legion recruit helmet"
 	desc = "It's a leather skullcap issued to recruits."
-	icon_state = "legion-recruit"
-	item_state = "legion-recruit"
+	icon_state = "legrecruit"
+	item_state = "legrecruit"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/prime
 	name = "legion prime helmet"
 	desc = "A helmet from reinforced leather with a red peak."
-	item_state = "legion-prime"
-	icon_state = "legion-prime"
+	item_state = "legprime"
+	icon_state = "legprime"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
 	name = "slavemaster helmet"
 	desc = "The distinct helmet used by slavemasters."
-	icon_state = "legion-slavemaster"
-	item_state = "legion-slavemaster"
+	icon_state = "legslavemaster"
+	item_state = "legslavemaster"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	dog_fashion = null
@@ -329,60 +327,61 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/helmet/f13/legion/vet
 	name = "legion veteran helmet"
 	desc = "It's a metal legion veteran helmet, clearly inspired by old world sports uniforms."
-	icon_state = "legion-veteran"
-	item_state = "legion-veteran"
+	icon_state = "legveteran"
+	item_state = "legveteran"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 
 /obj/item/clothing/head/helmet/f13/legion/vet/explorer
 	name = "legion scout hood"
 	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
-	icon_state = "legion-explorer"
-	item_state = "legion-explorer"
+	icon_state = "legexplorer"
+	item_state = "legexplorer"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	name = "legion bear vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a ashland bear."
-	icon_state = "legion-vex"
-	item_state = "legion-vex"
+	icon_state = "legvexil_bear"
+	item_state = "legvexil_bear"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	name = "legion fox vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a desert fox."
-	icon_state = "legion-vex-alt"
-	item_state = "legion-vex-alt"
+	icon_state = "legvexil"
+	item_state = "legvexil"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
 	name = "legion nightstalker vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a nightstalker."
-	icon_state = "legion-vex-night"
-	item_state = "legion-vex-night"
+	icon_state = "legvex_night"
+	item_state = "legvex_night"
 
 /obj/item/clothing/head/helmet/f13/legion/venator
-	name = "legion explorer hood"
+	name = "legion venator hood"
 	desc = "A leather hood with a sturdy metal skullcap and a gold bull insignia in the front."
-	icon_state = "legion-venator"
-	item_state = "legion-venator"
+	icon_state = "legvenator"
+	item_state = "legvenator"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-
+/*
 /obj/item/clothing/head/helmet/f13/legion/orator
 	name = "laurel wreath"
 	desc = "A laurel wreath is made of branches and leaves of the laurel, a type of evergreen shrub or small tree. This one appears to be out of metal,however. In Ancient Rome, it was worn on the head as a symbol of triumph."
 	icon_state = "legion-orator"
 	item_state = "legion-orator"
 	flags_inv = null
-
+*/
 /obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	name = "legion recruit decanus helmet"
 	desc = "This reinforced leather helmet has a plume of black and dark red feathers."
-	icon_state = "legion-decrec"
-	item_state = "legion-decrec"
+	icon_state = "legdecan"
+	item_state = "legdecan"
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
 	desc = "This reinforced leather helmet with a red peak has a plume of black feathers."
-	item_state = "legion-decprime"
-	icon_state = "legion-decprime"
+	icon_state = "legdecanprime"
+	item_state = "legdecanprime"
 
+/*
 /obj/item/clothing/head/helmet/f13/legion/heavy
 	name = "reinforced legion veteran decanus helmet"
 	desc = "A metal helmet with ballistic visor and a plume, denoting veteran Decanus status."
@@ -395,42 +394,42 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	weldingvisortoggle(user)
 	icon_state = "legion-decvetup"
 	item_state = "legion-decvetup"
-
+*/
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
 	desc = "It's a metal helmet with an array of red, white and black feathers, unmistakably a Veteran Decanus."
-	icon_state = "legion-decvet-alt"
-	item_state = "legion-decvet-alt"
+	icon_state = "legdecanvet"
+	item_state = "legdecanvet"
 
 /obj/item/clothing/head/helmet/f13/legion/centurion
 	name = "legion centurion helmet"
 	desc = "A sturdy helmet from steel and brass with a red horizontal plume."
-	icon_state = "legion-centurion"
-	item_state = "legion-centurion"
+	icon_state = "legcenturion"
+	item_state = "legcenturion"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "ranger-hunter centurion helmet"
 	desc = "The helmet of an NCR ranger, refit to serve as a Centurions helmet."
-	icon_state = "legion-rangercent"
-	item_state = "legion-rangercent"
+	icon_state = "rangercent"
+	item_state = "rangercent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "paladin-slayer centurion helmet"
 	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
-	icon_state = "legion-palacent"
-	item_state = "legion-palacent"
+	icon_state = "palacent"
+	item_state = "palacent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
 
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
-	icon_state = "legion-legate"
-	item_state = "legion-legate"
+	icon_state = "leglegate"
+	item_state = "leglegate"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -439,20 +438,16 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
 	desc = "A simple uncoloured linen cloth wrapped around the head, the mark of a servant slave trained in household work."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-servant"
-	item_state = "legion-servant"
+	icon_state = "legslaveservant"
+	item_state = "legslaveservant"
 	flags_inv = HIDEEARS
 	flags_cover = null
 
 /obj/item/clothing/head/f13/auxilia
 	name = "auxilia headwear"
 	desc = "A soft red cap with a black band, used by female Auxilia outside camp."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-aux"
-	item_state = "legion-aux"
+	icon_state = "legaux"
+	item_state = "legaux"
 	flags_inv = HIDEEARS
 	flags_cover = null
 

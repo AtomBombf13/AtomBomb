@@ -399,8 +399,8 @@
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
-	icon_state = "leg_centurion"
-	item_state = "leg_centurion"
+	icon_state = "legcenturion"
+	item_state = "legcenturion"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
 
 /obj/item/clothing/suit/armor/heavy/legion/palacent //laser resist spec
