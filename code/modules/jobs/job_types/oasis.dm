@@ -25,18 +25,18 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/vault
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	backpack = /obj/item/storage/backpack/satchel/explorer
+	satchel = /obj/item/storage/backpack/satchel/explorer
 	r_pocket = /obj/item/flashlight/seclite
 	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/melee/onehanded/knife/hunting = 1
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 		)
 
 /*--------------------------------------------------------------*/
 //Mayor
 /*--------------------------------------------------------------*/
-
+//Executive with 3 mags
 
 /datum/job/oasis/f13mayor
 	title = "Mayor"
@@ -78,23 +78,24 @@ here's a tip, go search DEFINES/access.dm
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_town/mayor
 	head =/obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/oasis
 	r_pocket = /obj/item/flashlight/seclite
 	suit = /obj/item/clothing/suit/armor/light/duster/battlecoat
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx =1,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/storage/box/citizenship_permits = 1,
 		/obj/item/pen/fountain/captain = 1,
 		/obj/item/clothing/mask/cigarette/cigar = 1,
 		/obj/item/toy/cards/deck/unum = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
+		/obj/item/ammo_box/magazine/m10mm/adv/simple = 3
 		)
 
 /*--------------------------------------------------------------*/
 //Marshal
 /*--------------------------------------------------------------*/
+//Brush gun, peacekeeper - Sheriff Coat
+//Citykiller, big 10mm revolver - NPD Coat
 
 /datum/job/oasis/f13sheriff
 	title = "Marshal"
@@ -130,21 +131,18 @@ here's a tip, go search DEFINES/access.dm
 	name = "Marshal"
 	jobtype = /datum/job/oasis/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff
-	belt = null
 	ears = /obj/item/radio/headset/headset_town/lawman
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	belt = /obj/item/storage/belt/army
-	glasses = /obj/item/clothing/glasses/sunglasses
+	glasses  = /obj/item/clothing/glasses/hud/security/sunglasses
+	belt = /obj/item/storage/belt/army/assault
+	neck = /obj/item/storage/belt/shoulderholster
 	l_pocket = /obj/item/storage/bag/money/small/den
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/storage/box/deputy_badges = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/grenade/flashbang = 1,
-		/obj/item/gun/ballistic/revolver/colt6520/Bigiron=1,
 		)
 
 /datum/outfit/loadout/thelaw
@@ -152,11 +150,11 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/sheriff
 	head = /obj/item/clothing/head/f13/town/big
 	uniform = /obj/item/clothing/under/f13/police/formal
-	neck = /obj/item/storage/belt/shoulderholster
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/c4570 = 3,
-		/obj/item/gun_upgrade/scope/watchman = 1
+		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1
 		)
 
 /datum/outfit/loadout/thechief
@@ -164,10 +162,11 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/police/chief
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/chief
 	head = /obj/item/clothing/head/f13/town/chief
-	neck = /obj/item/storage/belt/shoulderholster
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
-	backpack_contents = list(/obj/item/ammo_box/shotgun/slug = 1,
-		/obj/item/ammo_box/shotgun/buck = 2
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/slug = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/colt6520/Bigiron = 1
 		)
 
 /datum/outfit/job/den/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -185,6 +184,7 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Detective
 /*--------------------------------------------------------------*/
+//.44 Magnum Snub - Duster
 
 /datum/job/oasis/f13detective
 	title = "Detective"
@@ -223,11 +223,9 @@ here's a tip, go search DEFINES/access.dm
 	id = /obj/item/card/id/silver
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/flare
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
-	suit_store = /obj/item/gun/ballistic/revolver/colt6520
+	suit_store = /obj/item/gun/ballistic/revolver/m29/snub
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/pda/detective=1,
 		/obj/item/camera/detective=1,
 		/obj/item/toy/crayon/white=1,
@@ -238,6 +236,9 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Deputy
 /*--------------------------------------------------------------*/
+//Trail carbine, .357 revolver - Deputy Coat (OG DR loadout)
+//Police shotgun, 10mm revolver - Vault Security Armor
+//Police carbine, 10mm revolver - Vault Security Armor
 
 /datum/job/oasis/f13deputy
 	title = "Deputy"
@@ -272,55 +273,51 @@ here's a tip, go search DEFINES/access.dm
 	jobtype = /datum/job/oasis/f13deputy
 	id = /obj/item/card/id/dogtag/deputy
 	ears = /obj/item/radio/headset/headset_town/lawman
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
+	neck = /obj/item/storage/belt/shoulderholster
 	belt = /obj/item/storage/belt/army/assault
-	suit_store = /obj/item/storage/belt/legholster
+	gloves = /obj/item/clothing/gloves/f13/military
+	glasses  = /obj/item/clothing/glasses/hud/security/sunglasses
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
+	r_pocket = /obj/item/flashlight/seclite
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/grenade/flashbang = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
 		)
 
 /datum/outfit/loadout/frontierjustice
 	name = "Rugged Frontiersman"
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/deputy
 	head = /obj/item/clothing/head/f13/town/deputy
-	neck = /obj/item/storage/belt/shoulderholster
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
-		/obj/item/ammo_box/loader/m44 = 2,
+		/obj/item/ammo_box/loader/a357 = 2,
+		/obj/item/gun/ballistic/revolver/colt357 = 1
 		)
 
 /datum/outfit/loadout/police
 	name = "Vault Security Heavy"
 	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/Vault
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/vault
-	belt = /obj/item/storage/belt/legholster
 	r_hand = /obj/item/gun/ballistic/shotgun/police
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/flashlight/seclite = 1,
+		/obj/item/gun/ballistic/revolver/colt6520 = 1
 		)
 
 /datum/outfit/loadout/swat
 	name = "Vault Security Classic"
 	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/Vault
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/vault
-	mask = /obj/item/clothing/mask/balaclava
-	gloves = /obj/item/clothing/gloves/f13/military
 	shoes = /obj/item/clothing/shoes/jackboots
 	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m5mm=1,
-		/obj/item/flashlight/seclite = 1
+		/obj/item/gun/ballistic/revolver/colt6520 = 1
 		)
 
 /datum/outfit/job/den/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -333,6 +330,7 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Prospector
 /*--------------------------------------------------------------*/
+//10mm Revolver - Leather armor / just overalls
 
 /datum/job/oasis/f13prospector
 	title = "Prospector"
@@ -368,24 +366,13 @@ here's a tip, go search DEFINES/access.dm
 
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town/commerce
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/lantern
-	belt = /obj/item/storage/bag/ore
+	belt = null
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
-		/obj/item/mining_scanner = 1,
-		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
+		/obj/item/gun/ballistic/revolver/colt6520 = 1
 		)
-
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(
-		/obj/item/clothing/under/f13/machinist, \
-		/obj/item/clothing/under/f13/roving, \
-		/obj/item/clothing/under/f13/cowboyt)
 
 /datum/outfit/job/den/f13prospector/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -426,6 +413,7 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Researcher
 /*--------------------------------------------------------------*/
+//Needler - Labcoat
 
 /datum/job/oasis/f13denres
 	title = "Researcher"
@@ -436,12 +424,6 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "The Mayor"
 	description =  "Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
-
-	loadout_options = list(
-	/datum/outfit/loadout/rescueranger,
-	/datum/outfit/loadout/stitcher,
-	/datum/outfit/loadout/mixer,
-	/datum/outfit/loadout/holidaydoc)
 
 	outfit = /datum/outfit/job/den/f13denres
 	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
@@ -460,23 +442,23 @@ here's a tip, go search DEFINES/access.dm
 	jobtype = /datum/job/oasis/f13denres
 	chemwhiz = TRUE
 	ears = /obj/item/radio/headset/headset_town/commerce
-	uniform = /obj/item/clothing/under/f13/medic
-	glasses = /obj/item/clothing/glasses/hud/health
-	neck = /obj/item/clothing/neck/stethoscope
-	suit = /obj/item/clothing/suit/toggle/labcoat
-	backpack = /obj/item/storage/backpack/medic
-	satchel = /obj/item/storage/backpack/satchel/med
+	uniform = /obj/item/clothing/under/rank/rnd/scientist
+	glasses = /obj/item/clothing/glasses/science
+	neck = /obj/item/clothing/neck/tie/black
+	suit = /obj/item/clothing/suit/toggle/labcoat/science
+	suit_store = /obj/item/gun/ballistic/revolver/needler
+	backpack = /obj/item/storage/backpack/science
+	satchel = /obj/item/storage/backpack/satchel/tox
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	id = /obj/item/card/id/dendoctor
+	id = /obj/item/card/id/denresearcher
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
-		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/clothing/accessory/armband/medblue = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
+		/obj/item/clothing/accessory/armband/science = 1,
+		/obj/item/ammo_box/stripper/needle = 1
 		)
+
 /datum/outfit/job/den/f13denres/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -484,55 +466,13 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-
-/datum/outfit/loadout/rescueranger
-	name = "Search and Rescue"
-	backpack_contents = list(/obj/item/clothing/head/f13/police/sergeant = 1,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/auto5 = 1,
-		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/clothing/suit/toggle/labcoat/paramedic = 1,
-		/obj/item/folder/white = 1,
-		/obj/item/flashlight/pen/paramedic = 1
-		)
-
-/datum/outfit/loadout/stitcher
-	name = "Stitcher"
-	backpack_contents = list(/obj/item/clothing/head/hardhat/white = 1,
-		/obj/item/grenade/flashbang = 1,
-		/obj/item/clothing/glasses/welding = 1,
-		/obj/item/storage/belt/medical/primitive = 1,
-		/obj/item/storage/medical/ancientfirstaid = 1,
-		/obj/item/circuitboard/machine/limbgrower = 1,
-		/obj/item/healthanalyzer/advanced = 1,
-		/obj/item/storage/belt/legholster = 1
-		)
-
-/datum/outfit/loadout/mixer
-	name = "Mixer"
-	backpack_contents = list(/obj/item/clothing/head/beret/chem = 1,
-		/obj/item/melee/classic_baton/police = 1,
-		/obj/item/pen/sleepy = 1,
-		/obj/item/reagent_containers/glass/beaker/plastic = 1,
-		/obj/item/reagent_containers/glass/beaker/meta = 1,
-		/obj/item/reagent_containers/hypospray = 1,
-		/obj/item/circuitboard/machine/bloodbankgen = 1
-		)
-
-/datum/outfit/loadout/holidaydoc
-	name = "Holiday Doc"
-	backpack_contents = list(/obj/item/vending_refill/medical = 1,
-		/obj/item/pda/medical = 1,
-		/obj/item/clothing/suit/hooded/surgical = 1,
-		/obj/item/storage/medical/ancientfirstaid = 1,
-		/obj/item/ammo_box/loader/m44 = 1,
-		/obj/item/gun/ballistic/revolver/m29/snub = 1
-		)
 
 /*--------------------------------------------------------------*/
 //Town Doctor
 /*--------------------------------------------------------------*/
+//Regular Labcoat or Follower
 
 /datum/job/oasis/f13dendoc
 	title = "Town Doctor"
@@ -545,9 +485,9 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	loadout_options = list(
-	/datum/outfit/loadout/stitcher,
-	/datum/outfit/loadout/mixer,
-	/datum/outfit/loadout/follower)
+	/datum/outfit/loadout/barber,
+	/datum/outfit/loadout/follower
+	)
 
 	outfit = /datum/outfit/job/den/f13dendoc
 	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
@@ -568,21 +508,22 @@ here's a tip, go search DEFINES/access.dm
 	ears = /obj/item/radio/headset/headset_town/commerce
 	uniform = /obj/item/clothing/under/f13/medic
 	glasses = /obj/item/clothing/glasses/hud/health
+	gloves =/obj/item/clothing/gloves/color/latex
 	neck = /obj/item/clothing/neck/stethoscope
-	suit = /obj/item/clothing/suit/toggle/labcoat
 	backpack = /obj/item/storage/backpack/medic
 	satchel = /obj/item/storage/backpack/satchel/med
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	id = /obj/item/card/id/dendoctor
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/clothing/accessory/armband/medblue = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
+		/obj/item/pda/medical = 1,
+		/obj/item/flashlight/pen = 1
 		)
+
 /datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -604,47 +545,22 @@ here's a tip, go search DEFINES/access.dm
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
 
-/datum/outfit/loadout/stitcher
-	name = "Stitcher"
-	backpack_contents = list(/obj/item/clothing/head/hardhat/white = 1,
-		/obj/item/grenade/flashbang = 1,
-		/obj/item/clothing/glasses/welding = 1,
-		/obj/item/storage/belt/medical/primitive = 1,
-		/obj/item/storage/medical/ancientfirstaid = 1,
-		/obj/item/circuitboard/machine/limbgrower = 1,
-		/obj/item/healthanalyzer/advanced = 1,
-		/obj/item/storage/belt/legholster = 1
-		)
-
-/datum/outfit/loadout/mixer
-	name = "Mixer"
-	backpack_contents = list(/obj/item/clothing/head/beret/chem = 1,
-		/obj/item/melee/classic_baton/police = 1,
-		/obj/item/pen/sleepy = 1,
-		/obj/item/reagent_containers/glass/beaker/plastic = 1,
-		/obj/item/reagent_containers/glass/beaker/meta = 1,
-		/obj/item/reagent_containers/hypospray = 1,
-		/obj/item/circuitboard/machine/bloodbankgen = 1
-		)
+/datum/outfit/loadout/barber
+	name = "Barber Surgeon"
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	belt = /obj/item/storage/belt/medical/primitive
 
 /datum/outfit/loadout/follower
 	name = "Follower"
 	uniform =	/obj/item/clothing/under/f13/followers
-	suit=	/obj/item/clothing/suit/toggle/labcoat/followers
-	shoes =	/obj/item/clothing/shoes/f13/brownie
-	gloves =	/obj/item/clothing/gloves/color/latex
-	glasses =	/obj/item/clothing/glasses/science
-	backpack_contents = list(
-		/obj/item/flashlight/pen = 1,
-		/obj/item/pda/chemist = 1
-	)
-
+	suit	=	/obj/item/clothing/suit/toggle/labcoat/followers
+	shoes 	=	/obj/item/clothing/shoes/f13/brownie
 
 /*--------------------------------------------------------------*/
 //Mechant
 /*--------------------------------------------------------------*/
+//Gets nothing but can craft
 
 /datum/job/oasis/f13shopkeeper
 	title = "Merchant"
@@ -676,15 +592,11 @@ here's a tip, go search DEFINES/access.dm
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town/commerce
 	uniform = /obj/item/clothing/under/f13/roving
-	backpack = /obj/item/storage/backpack
-	satchel = /obj/item/storage/backpack/satchel
-	duffelbag = /obj/item/storage/backpack/duffelbag
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_pocket = /obj/item/storage/bag/money/small/den
-	r_pocket = /obj/item/flashlight/glowstick
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/radx =1,
 		/obj/item/storage/box/shopkeeper = 1)
 
 /datum/outfit/job/den/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -717,11 +629,10 @@ here's a tip, go search DEFINES/access.dm
 	if(visualsOnly)
 		return
 
-
-
 /*--------------------------------------------------------------*/
 //Barkeeper
 /*--------------------------------------------------------------*/
+//Starts with Shotgun and some alcohol - Otherwise outfits
 
 /datum/job/oasis/f13barkeep
 	title = "Barkeeper"
@@ -763,13 +674,12 @@ here's a tip, go search DEFINES/access.dm
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	backpack = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/storage/bag/money/small/settler = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/book/manual/nuka_recipes = 1,
 		/obj/item/stack/f13Cash/caps/onezerozero = 1,
-		/obj/item/reagent_containers/food/drinks/bottle/rotgut = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/rotgut = 1
 		)
 
 /datum/outfit/loadout/rugged
@@ -810,22 +720,22 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Preacher
 /*--------------------------------------------------------------*/
-/datum/job/wasteland/f13preacher
+//Bread or Shishkebab
+
+/datum/job/oasis/f13preacher
 	title = "Preacher"
 	flag = F13PREACHER
-	display_order = JOB_DISPLAY_ORDER_WASTELANDER
-	faction = FACTION_WASTELAND
+	display_order = JOB_DISPLAY_ORDER_PREACHER
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "your faith"
 	description = "You are the last bastion of your faith in this forsaken Wasteland - whatever that faith may be. Spread your word and preach to the faithless in whatever manner you see fit, but remember that the divine cannot always protect you from harsh realities."
-	selection_color = "#e2d6ca"
 
-	outfit = /datum/outfit/job/wasteland/f13preacher
+	outfit = /datum/outfit/job/oasis/f13preacher
 
 	loadout_options = list(
 	/datum/outfit/loadout/samaritan, 	//Water and food to share with the wastes.
-	/datum/outfit/loadout/cleanser		//Just some bombs.
+	/datum/outfit/loadout/cleanser		//Shishkebab
 	)
 
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
@@ -851,23 +761,34 @@ here's a tip, go search DEFINES/access.dm
 		),
 	)
 
+/datum/outfit/job/oasis/f13preacher
+	name = "Preacher"
+	jobtype = /datum/job/oasis/f13preacher
+
+	id = /obj/item/card/id/dogtag/town
+	belt = null
+	uniform = 		/obj/item/clothing/under/f13/chaplain
+	gloves =		/obj/item/clothing/gloves/fingerless
+	shoes = 		/obj/item/clothing/shoes/jackboots
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/drinks/flask=1,
+		/obj/item/storage/fancy/candle_box = 1,
+		/obj/item/storage/bag/money/small/settler = 1
+		)
+
+
 /datum/outfit/loadout/samaritan
 	name = "Samaritan"
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/snacks/store/bread/plain = 5,
 		/obj/item/reagent_containers/food/snacks/fishmeat/salmon = 2,
-		/obj/item/reagent_containers/glass/beaker/waterbottle = 2,
-		/obj/item/nullrod = 1,
-	)	//Matthew 14:17 RSVCE and KJV - Kitsunemitsu
+		/obj/item/reagent_containers/glass/beaker/waterbottle = 2
+	)
 
 /datum/outfit/loadout/cleanser
 	name = "Cleanser"
-	backpack_contents = list(
-		/obj/item/grenade/homemade/coffeepotbomb = 2,	//This is funny. I swear guys.
-		/obj/item/gun/ballistic/revolver/m29 = 1,		//Moved here for more *variety*
-		/obj/item/ammo_box/loader/m44 = 2
-	)
-
+	backpack_contents = list(/obj/item/shishkebabpack = 1)
 
 /datum/job/wasteland/f13preacher/after_spawn(mob/living/H, mob/M)
 	. = ..()
@@ -924,7 +845,7 @@ here's a tip, go search DEFINES/access.dm
 			B.name = "Fluorescent Incandescence"
 		if("lol", "wtf", "gay", "penis", "ass", "poo", "badmin", "shitmin", "deadmin", "cock", "cocks", "meme", "memes")
 			B.name = pick("Woodys Got Wood: The Aftermath", "War of the Cocks", "Sweet Bro and Hella Jef: Expanded Edition", "F.A.T.A.L. Rulebook")
-			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 100) // starts off dumb as fuck
+			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 150) // starts off dumb as fuck
 		if("monkeyism","apism","gorillism","primatism")
 			B.name = pick("Going Bananas", "Bananas Out For Harambe")
 		if("mormonism")
@@ -949,6 +870,9 @@ here's a tip, go search DEFINES/access.dm
 			B.name = pick("Toolbox Manifesto","iGlove Assistants")
 		if("weeaboo","kawaii")
 			B.name = pick("Fanfiction Compendium","Japanese for Dummies","The Manganomicon","Establishing Your O.T.P")
+		if("amongus")
+			B.name = pick("The Melody of Venting", "Tragedy of Electrical", "Emergency Vote")
+			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 150) // starts off dumb as fuck
 		else
 			B.name = "The Holy Book of [new_religion]"
 
@@ -960,27 +884,6 @@ here's a tip, go search DEFINES/access.dm
 
 	SSblackbox.record_feedback("text", "religion_name", 1, "[new_religion]", 1)
 	SSblackbox.record_feedback("text", "religion_deity", 1, "[new_deity]", 1)
-
-
-/datum/outfit/job/wasteland/f13preacher
-	name = "Preacher"
-	jobtype = /datum/job/wasteland/f13preacher
-
-	id = /obj/item/card/id/dogtag/town
-	belt = null
-	uniform = 		/obj/item/clothing/under/f13/chaplain
-	gloves =		/obj/item/clothing/gloves/fingerless
-	shoes = 		/obj/item/clothing/shoes/jackboots
-	r_pocket = 		/obj/item/flashlight/flare
-
-	backpack =		/obj/item/storage/backpack/cultpack
-	satchel = 		/obj/item/storage/backpack/cultpack
-	backpack_contents = list(
-		/obj/item/camera/spooky = 1, \
-		/obj/item/reagent_containers/food/drinks/flask=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=2, \
-		/obj/item/storage/fancy/candle_box, \
-		/obj/item/storage/bag/money/small/settler)
 
 /*--------------------------------------------------------------*/
 //Citizen
@@ -1025,33 +928,13 @@ here's a tip, go search DEFINES/access.dm
 	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/jackboots
-	backpack = /obj/item/storage/backpack/satchel/explorer
-	r_pocket = /obj/item/flashlight/flare
-	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
-		/obj/item/storage/bag/money/small/settler = 1,
-		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 		)
 
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	head = pick(/obj/item/clothing/head/f13/ranger_hat/tan,
-		/obj/item/clothing/head/soft/mime,
-		/obj/item/clothing/head/soft/black,
-		/obj/item/clothing/head/soft/grey,
-		/obj/item/clothing/head/f13/gambler,
-		/obj/item/clothing/head/f13/cowboy,
-		/obj/item/clothing/head/f13/ranger_hat/banded,
-		/obj/item/clothing/head/cowboyhat/white,
-		/obj/item/clothing/head/beret/headband,
-		/obj/item/clothing/head/cowboyhat/pink,
-		/obj/item/clothing/head/f13/police/trooper,
-		/obj/item/clothing/head/fedora/curator,
-		/obj/item/clothing/head/fedora/det_hat,
-		/obj/item/clothing/head/helmet/f13/bowler,)
-	uniform = pick(
-		/obj/item/clothing/under/f13/vault)
 
 /datum/outfit/loadout/provisioner
 	name = "Provisioner"
@@ -1066,8 +949,7 @@ here's a tip, go search DEFINES/access.dm
 	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
 	/obj/item/gun/ballistic/revolver/colt6520 = 1,
 	/obj/item/storage/medical/ancientfirstaid = 1,
-	/obj/item/reagent_containers/food/drinks/flask/survival = 1,
-	/obj/item/book/granter/trait/trekking = 1,
+	/obj/item/reagent_containers/food/drinks/flask/survival = 1
 	)
 
 /datum/outfit/loadout/groundskeeper
@@ -1124,7 +1006,8 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/singer
 	name = "Singer"
 	shoes = /obj/item/clothing/shoes/laceup
-	backpack_contents = list(/obj/item/clothing/under/f13/classdress = 1,
+	backpack_contents = list(
+	/obj/item/clothing/under/f13/classdress = 1,
 	/obj/item/clothing/under/suit/black_really = 1,
 	/obj/item/clothing/gloves/evening = 1,
 	/obj/item/clothing/gloves/color/white = 1,
@@ -1136,10 +1019,10 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/stock_parts/cell/ammo/ec = 1
 	)
 
-// if we ever add back the loadout display you'll have to put the items in places you want it to appear on the display model
 /datum/outfit/loadout/farmer
 	name = "Farmer"
-	backpack_contents = list(/obj/item/clothing/head/helmet/f13/brahmincowboyhat = 1,
+	backpack_contents = list(
+	/obj/item/clothing/head/helmet/f13/brahmincowboyhat = 1,
 	/obj/item/clothing/under/f13/rustic = 1,
 	/obj/item/clothing/suit/armor/light/duster/brahmin = 1,
 	/obj/item/clothing/gloves/botanic_leather = 1,
@@ -1165,6 +1048,10 @@ Hopefully.
 Roles should be limited and low since they should attempt to work within town rather than take it over. Loadouts should be weak for the same reason.*/
 
 // Enforcer = Base role. Intended to be 2-3 slots only.
+/*--------------------------------------------------------------*/
+//Desperado Enforcer
+/*--------------------------------------------------------------*/
+
 /datum/job/wasteland/f13enforcer
 	title = "Desperado Enforcer"
 	flag = F13ENFORCER
@@ -1186,7 +1073,7 @@ Roles should be limited and low since they should attempt to work within town ra
 
 	loadout_options = list(
 		/datum/outfit/loadout/hitman,
-		/datum/outfit/loadout/bodyguard,
+		/datum/outfit/loadout/bodyguard
 		)
 
 /datum/outfit/job/wasteland/f13enforcer
@@ -1208,7 +1095,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
-		/obj/item/storage/bag/money/small/wastelander)
+		/obj/item/storage/bag/money/small/wastelander = 1)
 
 /datum/outfit/job/wasteland/f13enforcer/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -1244,6 +1131,10 @@ Roles should be limited and low since they should attempt to work within town ra
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		)
 
+/*--------------------------------------------------------------*/
+//Desperado Leader
+/*--------------------------------------------------------------*/
+
 /datum/job/wasteland/f13mobboss
 	title = "Desperado Leader"
 	flag = F13MOBBOSS
@@ -1273,7 +1164,6 @@ Roles should be limited and low since they should attempt to work within town ra
 		),
 	)
 
-
 /datum/outfit/job/wasteland/f13mobboss
 	name = "Den Mob Boss"
 	jobtype = /datum/job/wasteland/f13mobboss
@@ -1296,8 +1186,8 @@ Roles should be limited and low since they should attempt to work within town ra
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/ammo_box/magazine/greasegun=2, \
-		/obj/item/storage/bag/money/small/raider/mobboss, \
-		/obj/item/book/granter/crafting_recipe/manual/denvr)
+		/obj/item/storage/bag/money/small/raider/mobboss = 1, \
+		/obj/item/book/granter/crafting_recipe/manual/denvr = 1)
 
 /datum/outfit/job/wasteland/f13mobboss/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
