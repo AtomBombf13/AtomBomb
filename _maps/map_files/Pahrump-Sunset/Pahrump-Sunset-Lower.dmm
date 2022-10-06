@@ -27241,7 +27241,6 @@
 /obj/structure/chair/f13foldupchair{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/dendoctor,
 /obj/effect/landmark/start/f13/dendoc,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"

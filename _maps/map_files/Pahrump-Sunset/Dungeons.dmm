@@ -2396,7 +2396,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "cif" = (
-/obj/effect/landmark/start/f13/seniorscribe,
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
@@ -4008,11 +4007,6 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/enclave)
-"dDn" = (
-/obj/effect/landmark/start/f13/scribe,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/rnd)
 "dDv" = (
 /obj/structure/necropolis_gate{
 	desc = "A massive stone gateway with a very heavy stone door.";
@@ -6383,7 +6377,6 @@
 /area/f13/brotherhood/rnd)
 "fxA" = (
 /obj/effect/landmark/start/f13/Knight,
-/obj/effect/landmark/start/f13/initiate,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7255,7 +7248,6 @@
 	layer = 2.7;
 	name = "prewar lounge chair"
 	},
-/obj/effect/landmark/start/f13/sentinel,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -9310,13 +9302,6 @@
 /obj/structure/sign/poster/prewar/poster71,
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/dorms)
-"hSv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/paladin,
-/turf/open/floor/plasteel/f13/vault_floor/red{
-	icon_state = "darkyellowfull"
-	},
-/area/f13/brotherhood/offices1st)
 "hSx" = (
 /obj/machinery/shower{
 	dir = 1
@@ -11283,7 +11268,6 @@
 /area/f13/vault)
 "jMQ" = (
 /obj/effect/landmark/start/f13/Knight,
-/obj/effect/landmark/start/f13/initiate,
 /obj/structure/chair/f13foldupchair{
 	dir = 4
 	},
@@ -11890,7 +11874,6 @@
 /area/f13/brotherhood/operations)
 "krp" = (
 /obj/effect/landmark/start/f13/Knight,
-/obj/effect/landmark/start/f13/initiate,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -14334,10 +14317,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/offices1st)
-"mya" = (
-/obj/effect/landmark/start/f13/scribe,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/rnd)
 "mys" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "casino"
@@ -14626,7 +14605,6 @@
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/leisure)
 "mHF" = (
-/obj/effect/landmark/start/f13/seniorknight,
 /obj/structure/chair/wood{
 	dir = 1
 	},
@@ -14884,7 +14862,6 @@
 	layer = 2.7;
 	name = "prewar lounge chair"
 	},
-/obj/effect/landmark/start/f13/knightcap,
 /turf/open/floor/wood_common,
 /area/f13/brotherhood/operations)
 "mRS" = (
@@ -15531,7 +15508,6 @@
 	},
 /area/f13/bunker)
 "nvg" = (
-/obj/effect/landmark/start/f13/elder,
 /obj/structure/chair/comfy/shuttle{
 	desc = "A comfortable, secure seat. It has a futuristic vouge feel.";
 	layer = 2.7;
@@ -16761,7 +16737,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/paladin,
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "darkyellowfull"
 	},
@@ -18842,7 +18817,6 @@
 	layer = 2.7;
 	name = "prewar lounge chair"
 	},
-/obj/effect/landmark/start/f13/headscribe,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices2nd)
@@ -21382,7 +21356,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "smd" = (
-/obj/effect/landmark/start/f13/initiate,
 /obj/structure/chair/f13foldupchair{
 	dir = 4
 	},
@@ -26324,7 +26297,6 @@
 /area/f13/bunker)
 "wvL" = (
 /obj/effect/landmark/start/f13/Knight,
-/obj/effect/landmark/start/f13/initiate,
 /obj/structure/chair/f13foldupchair{
 	dir = 4
 	},
@@ -26826,7 +26798,6 @@
 /area/f13/vault)
 "wWg" = (
 /obj/structure/chair/wood,
-/obj/effect/landmark/start/f13/seniorpaladin,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "darkyellowfull"
@@ -82051,7 +82022,7 @@ vto
 vBM
 rZq
 vBM
-hSv
+vBM
 dmB
 dmB
 tot
@@ -82565,7 +82536,7 @@ roa
 roa
 roa
 vBM
-hSv
+vBM
 owt
 pVz
 pVz
@@ -86185,7 +86156,7 @@ fbg
 gLf
 nSe
 pwG
-mya
+thi
 vzb
 nbc
 crX
@@ -86442,7 +86413,7 @@ hpH
 brn
 oqm
 cCK
-dDn
+nnp
 vfQ
 fcd
 fcd
@@ -86699,7 +86670,7 @@ nnp
 oqm
 iEA
 xHx
-dDn
+nnp
 cyA
 bNh
 bNh
@@ -86956,7 +86927,7 @@ hpH
 oCW
 mLt
 kGB
-dDn
+nnp
 vfQ
 tHt
 tHt
@@ -87213,7 +87184,7 @@ fbg
 hHG
 uLV
 pwG
-dDn
+nnp
 uuZ
 vxU
 gJA
