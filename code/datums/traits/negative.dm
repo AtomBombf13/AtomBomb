@@ -51,7 +51,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 			heirloom_type = /obj/item/gun/ballistic/automatic/toy/pistol
 		if("BoS Off-Duty")
 			heirloom_type = /obj/item/toy/figure/borg
-		if("Sheriff")
+		if("Marshal")
 			heirloom_type = /obj/item/clothing/accessory/medal/silver
 		if("Deputy")
 			heirloom_type = /obj/item/clothing/accessory/medal/bronze_heart

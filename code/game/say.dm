@@ -22,9 +22,10 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	"[FREQ_ENCLAVE]" = "enclaveradio",
 	"[FREQ_TOWN]" = "townradio",
 	"[FREQ_TOWN_COMMERCE]" = "servradio",
-	"[FREQ_TOWN_PD]" = "secradio",
+	"[FREQ_TOWN_PD]" = "sheriffradio",
 	"[FREQ_TOWN_MAYOR]" = "comradio",
-	"[FREQ_RANGER]" = "rangerradio"
+	"[FREQ_RANGER]" = "rangerradio",
+	"[FREQ_LEGION]" = "legionradio"
 	))
 
 /atom/movable/proc/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)

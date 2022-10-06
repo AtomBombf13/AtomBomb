@@ -14841,6 +14841,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/caves)
+"jkA" = (
+/obj/machinery/telecomms/server/presets/town_pd,
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "jkW" = (
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/lootdrop/maintenance{
@@ -95538,7 +95542,7 @@ cho
 chJ
 cih
 jeL
-cie
+jkA
 cie
 cie
 cie
