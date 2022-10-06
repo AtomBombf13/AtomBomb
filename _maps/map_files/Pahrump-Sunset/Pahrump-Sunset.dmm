@@ -15137,8 +15137,8 @@
 /area/f13/building)
 "bev" = (
 /obj/machinery/door/poddoor/gate/preopen{
-	name = "eastwood south gate";
-	id = "EastwoodSouthGate"
+	id = "EastwoodSouthGate";
+	name = "eastwood south gate"
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright2"
@@ -23764,8 +23764,8 @@
 "dyz" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/door{
-	name = "eastwood gate north";
-	id = "EastwoodNorthGate"
+	id = "EastwoodNorthGate";
+	name = "eastwood gate north"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -29735,8 +29735,8 @@
 /area/f13/caves)
 "gua" = (
 /obj/machinery/door/poddoor/gate/preopen{
-	name = "eastwood north gate";
-	id = "EastwoodNorthGate"
+	id = "EastwoodNorthGate";
+	name = "eastwood north gate"
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright2"
@@ -37478,6 +37478,15 @@
 /obj/structure/camera_assembly,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/museum)
+"kaj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/observer_start,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 8;
+	icon_state = "outerborder"
+	},
+/area/f13/wasteland)
 "kax" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -97292,7 +97301,7 @@ hEG
 lcr
 dOK
 dOK
-fxP
+kaj
 mHp
 nvn
 nvn
