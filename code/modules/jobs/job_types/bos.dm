@@ -173,16 +173,16 @@ Head Paladin
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
 	glasses =       /obj/item/clothing/glasses/sunglasses
-	belt =			/obj/item/storage/belt/army/assault
+	belt =			/obj/item/storage/belt/military/army
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	ears =			/obj/item/radio/headset/headset_bos/command
 	id = 			/obj/item/card/id/dogtag
-	neck = 			/obj/item/clothing/neck/mantle/bos/paladin
+	neck = 			/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/melee/powerfist/f13 = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/simple = 2,
+		/obj/item/ammo_box/magazine/m10mm/adv = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
 		)
 
@@ -366,8 +366,8 @@ Head Knight
 	glasses =		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
-	belt =			/obj/item/storage/belt/army/security/full
-	l_pocket =			/obj/item/storage/belt/shoulderholster
+	belt =			/obj/item/storage/belt/military/army
+	neck =			/obj/item/storage/belt/holster
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	id =			/obj/item/card/id/dogtag
@@ -456,8 +456,8 @@ Senior Paladin
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
-	belt =	/obj/item/storage/belt/army/assault
-	neck =	/obj/item/clothing/neck/mantle/bos/paladin
+	belt =	/obj/item/storage/belt/military/army
+	neck =	/obj/item/storage/belt/holster
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -546,8 +546,8 @@ Paladin
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
-	belt =	/obj/item/storage/belt/army/assault
-	neck =	/obj/item/clothing/neck/mantle/bos/paladin
+	belt =	/obj/item/storage/belt/military/army
+	neck =	/obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
@@ -798,8 +798,8 @@ Senior Knight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	glasses =       /obj/item/clothing/glasses/night
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	belt = 			/obj/item/storage/belt/army/assault
-	l_pocket =			/obj/item/storage/belt/shoulderholster
+	belt = 			/obj/item/storage/belt/military/army
+	neck =			/obj/item/storage/belt/holster
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	id = 			/obj/item/card/id/dogtag
 	gunsmith_one = TRUE
@@ -908,8 +908,8 @@ Knight
 	jobtype = /datum/job/bos/f13knight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	belt = 			/obj/item/storage/belt/army/assault
-	l_pocket =			/obj/item/storage/belt/shoulderholster
+	belt = 			/obj/item/storage/belt/military/army
+	neck =			/obj/item/storage/belt/holster
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id = 			/obj/item/card/id/dogtag
 	gunsmith_one = TRUE

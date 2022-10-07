@@ -173,7 +173,7 @@
 	name = "Psycho Fluid"
 	description = "Makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries a risk of addiction."
 	reagent_state = LIQUID
-	color = "#FF0000"
+	color = "#0d43da"
 	overdose_threshold = 15
 	addiction_threshold = 12.5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM

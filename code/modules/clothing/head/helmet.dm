@@ -15,7 +15,6 @@
 	resistance_flags = NONE
 	flags_cover = HEADCOVERSEYES
 	var/list/protected_zones = list(BODY_ZONE_HEAD)
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 
 	dog_fashion = /datum/dog_fashion/head/helmet
 

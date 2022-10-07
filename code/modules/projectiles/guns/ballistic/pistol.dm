@@ -17,7 +17,7 @@
 	item_state = "gun"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/m10mm/adv/simple
+	mag_type = /obj/item/ammo_box/magazine/m10mm/adv
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -228,7 +228,7 @@
 	desc = "A large, pre-war styled, gas-operated 10mm pistol."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "n99"
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv/simple
+	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv
 	mag_type = /obj/item/ammo_box/magazine/m10mm // load any 10mm pistol ammos
 	disallowed_mags = list(
 		/obj/item/ammo_box/magazine/m10mm/adv/ext, 
@@ -605,8 +605,8 @@
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	name = "the Executive"
 	desc = "A modified N99 pistol with an accurate two-round-burst and a blue Vault-Tec finish, a status symbol for some Overseers."
+	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "executive"
-
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO
@@ -614,9 +614,10 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 2
-	semi_auto = FALSE
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_firemodes = list(
+		BURST_2_ROUND
+	)
 
 /* * * * * * * * * * *
  * El Capitan Semi-Auto

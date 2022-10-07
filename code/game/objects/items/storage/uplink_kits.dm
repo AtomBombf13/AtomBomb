@@ -466,7 +466,6 @@
 	new /obj/item/modular_computer/tablet/syndicate_contract_uplink/preset/uplink(src)
 	new /obj/item/storage/box/syndicate/contractor_loadout(src)
 	var/list/item_list = list(	// All 4 TC or less - some nukeops only items, but fit nicely to the theme.
-		/obj/item/storage/backpack/duffelbag/syndie/x4,
 		/obj/item/storage/box/syndie_kit/throwing_weapons,
 		/obj/item/gun/syringe/syndicate,
 		/obj/item/pen/edagger,
@@ -475,14 +474,12 @@
 		/obj/item/reagent_containers/syringe/mulligan,
 		/obj/item/clothing/shoes/chameleon/noslip,
 		/obj/item/storage/firstaid/tactical,
-		/obj/item/storage/backpack/duffelbag/syndie/surgery,
 		/obj/item/encryptionkey/syndicate,
 		/obj/item/clothing/glasses/thermal/syndi,
 		/obj/item/storage/box/syndie_kit/imp_uplink,
 		/obj/item/clothing/gloves/krav_maga/combatglovesplus,
 		/obj/item/reagent_containers/hypospray/medipen/medx,
 		/obj/item/storage/box/syndie_kit/imp_freedom,
-		/obj/item/storage/toolbox/infiltrator
 	)
 	var/obj/item1 = pick_n_take(item_list)
 	var/obj/item2 = pick_n_take(item_list)

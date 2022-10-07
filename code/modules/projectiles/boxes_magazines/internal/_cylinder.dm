@@ -2,7 +2,7 @@
 	name = "revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/a357
 	caliber = list(CALIBER_357, CALIBER_38)
-	max_ammo = 7
+	max_ammo = 6 //Why is this even 7 ?
 	replace_spent_rounds = 1
 
 /obj/item/ammo_box/magazine/internal/cylinder/ammo_count(countempties = 1)

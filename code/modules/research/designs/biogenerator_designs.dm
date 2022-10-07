@@ -157,14 +157,6 @@
 	build_path = /obj/item/stack/sheet/leather
 	category = list("initial","Organic Materials")
 
-/datum/design/secbelt
-	name = "Security Belt"
-	id = "secbelt"
-	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 300)
-	build_path = /obj/item/storage/belt/army/security
-	category = list("initial","Organic Materials")
-
 /datum/design/medbelt
 	name = "Medical Belt"
 	id = "medbel"
@@ -186,7 +178,7 @@
 	id = "s_holster"
 	build_type = BIOGENERATOR
 	materials = list(/datum/material/biomass = 400)
-	build_path = /obj/item/storage/belt/shoulderholster
+	build_path = /obj/item/storage/belt/holster
 	category = list("initial","Organic Materials")
 
 /datum/design/rice_hat

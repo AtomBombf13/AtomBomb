@@ -68,7 +68,7 @@ Raider
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	r_pocket = /obj/item/flashlight/flare
-	box = /obj/item/storage/survivalkit/outlaw
+	box = /obj/item/storage/survivalkit
 	box_two = /obj/item/storage/survivalkit/medical
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 2,
@@ -267,7 +267,7 @@ Raider
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m1carbine = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/simple=2,
+		/obj/item/ammo_box/magazine/m10mm/adv=2,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/service = 1)
@@ -545,7 +545,7 @@ Raider
 	suit = /obj/item/clothing/suit/suspenders
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/m10mm/adv/simple=2,
+		/obj/item/ammo_box/magazine/m10mm/adv=2,
 		/obj/item/pda=1,)
 
 /datum/outfit/loadout/warrior
@@ -663,7 +663,7 @@ Raider
 	uniform = /obj/item/clothing/under/color/grey/glorf
 	shoes = /obj/item/clothing/shoes/f13/tan
 	glasses = /obj/item/clothing/glasses/legiongoggles
-	neck = /obj/item/storage/belt/shoulderholster/full
+	neck = /obj/item/storage/belt/holster
 	gloves = /obj/item/clothing/gloves/rifleman
 	backpack_contents = list(
 		/obj/item/lighter/fusion=1,
