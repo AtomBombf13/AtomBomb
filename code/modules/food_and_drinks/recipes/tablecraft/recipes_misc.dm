@@ -259,6 +259,7 @@
 	result = /obj/item/reagent_containers/food/snacks/stuffed_cabbage
 	subcategory = CAT_MISCFOOD
 
+/*   Coded out until it works properly
 /datum/crafting_recipe/food/pickles_jar
 	name = "Jar of pickles"
 	reqs = list(
@@ -269,6 +270,8 @@
 	)
 	result = /obj/item/storage/fancy/pickles_jar
 	subcategory = CAT_MISCFOOD
+
+*/
 
 /*
 /datum/crafting_recipe/food/melonkeg
