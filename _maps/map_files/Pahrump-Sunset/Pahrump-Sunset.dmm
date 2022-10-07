@@ -647,11 +647,12 @@
 	},
 /area/f13/city)
 "acP" = (
-/obj/structure/chair/wood,
-/obj/structure/destructible/tribal_torch/wall/lit{
+/obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/floor/f13/wood,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood3-broken"
+	},
 /area/f13/legion)
 "acQ" = (
 /obj/structure/fence/door/opened,
@@ -12235,7 +12236,7 @@
 	desc = "A pre-War wall made of solid concrete.";
 	name = "concrete wall"
 	},
-/area/f13/wasteland)
+/area/f13/legion)
 "aRX" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/decal/cleanable/dirt,
@@ -18461,10 +18462,10 @@
 	},
 /area/f13/building/massfusion)
 "bAf" = (
-/obj/machinery/computer/card/legion,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood1-broken"
+/obj/structure/stairs/east{
+	color = "#A47449"
 	},
+/turf/open/floor/f13/wood,
 /area/f13/legion)
 "bAh" = (
 /obj/structure/window/fulltile/house,
@@ -23925,10 +23926,9 @@
 	},
 /area/f13/radiation)
 "dCa" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/wood,
-/obj/item/card/id/rusted,
-/turf/open/floor/f13/wood,
+/obj/structure/flora/ausbushes/sparsegrass,
+/mob/living/simple_animal/cow/brahmin,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legion)
 "dCD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28059,7 +28059,7 @@
 	pixel_y = 12
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/caves)
+/area/f13/legion)
 "fAr" = (
 /obj/structure/closet/crate/bin/trashbin,
 /obj/effect/decal/cleanable/dirt,
@@ -33237,7 +33237,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
 "ibE" = (
-/obj/effect/landmark/start/f13/orator,
+/obj/structure/fluff/railing{
+	dir = 10
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "ibV" = (
@@ -51629,8 +51631,8 @@
 	desc = "A huge metal vat filled with.. - just don't eat it..";
 	name = "septic tank"
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/legion)
 "qHa" = (
 /obj/structure/flora/bush,
 /turf/open/indestructible/ground/outside/dirt,
@@ -55508,11 +55510,12 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legion)
 "sCJ" = (
-/obj/structure/window/fulltile/house{
-	dir = 2;
-	icon_state = "housewindowbrokenvertical"
+/obj/structure/railing/corner{
+	dir = 8
 	},
-/turf/closed/wall/f13/wood/house,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood4-broken"
+	},
 /area/f13/legion)
 "sCQ" = (
 /obj/effect/landmark/latejoin,
@@ -58425,10 +58428,7 @@
 	},
 /area/f13/building/trainstation)
 "tVi" = (
-/obj/structure/simple_door/glass{
-	name = "bar door";
-	req_access = "138"
-	},
+/obj/structure/simple_door/interior,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "tVk" = (
@@ -61837,7 +61837,7 @@
 /area/f13/wasteland)
 "vBU" = (
 /obj/structure/window/fulltile/house,
-/turf/closed/wall/f13/wood/house,
+/turf/open/floor/f13/wood,
 /area/f13/legion)
 "vCw" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -65754,11 +65754,12 @@
 	},
 /area/f13/wasteland)
 "xxP" = (
-/obj/structure/closet/anchored,
-/obj/item/melee/onehanded/slavewhip,
-/obj/item/reagent_containers/syringe/lethal/execution,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
+/obj/effect/overlay/junk/toilet{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/caves)
 "xyc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -66859,7 +66860,7 @@
 	},
 /mob/living/simple_animal/chicken,
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
+/area/f13/legion)
 "xZj" = (
 /obj/structure/barricade/wooden,
 /obj/effect/decal/cleanable/dirt,
@@ -118738,8 +118739,8 @@ aHI
 mOr
 mOr
 aHI
-cFK
-aOk
+kEg
+uvO
 aRW
 deN
 aOk
@@ -118996,8 +118997,8 @@ aRz
 htu
 mOr
 qGN
-aOk
-cFK
+uvO
+kEg
 aOk
 aOk
 aae
@@ -119514,7 +119515,7 @@ mof
 aHI
 aOk
 aOk
-aJN
+kja
 aae
 aae
 aae
@@ -120540,7 +120541,7 @@ mOr
 aHI
 mOr
 mOr
-deN
+eJO
 deN
 aOk
 vGl
@@ -121314,8 +121315,8 @@ mOr
 biO
 cFK
 aOk
-aOk
-aJN
+jMh
+xxP
 aae
 aae
 aae
@@ -121568,11 +121569,11 @@ mOr
 mOr
 mOr
 mOr
-cFK
-bZY
-cFK
-aOk
-aJN
+oMN
+mFl
+oMN
+huu
+urA
 aae
 aae
 aae
@@ -121824,12 +121825,12 @@ deN
 aOk
 aOk
 sRJ
-cFK
-elO
+oMN
+huu
 etg
 aOk
 cFK
-tCT
+uWZ
 vGl
 aae
 aae
@@ -122078,10 +122079,10 @@ etg
 deN
 eJO
 aOk
+mXB
 aOk
-aOk
-aOk
-aOk
+huu
+huu
 aqx
 aqx
 aqx
@@ -127185,7 +127186,7 @@ kvC
 uOf
 wsB
 tMw
-aOk
+kvC
 aqx
 gGe
 dEt
@@ -127442,7 +127443,7 @@ xRJ
 uOf
 kvC
 kvC
-aOk
+kvC
 aqx
 mEi
 eoo
@@ -127699,7 +127700,7 @@ fAi
 skZ
 kvC
 xYZ
-aOk
+kvC
 vdJ
 vdJ
 oSV
@@ -127955,8 +127956,8 @@ aae
 kvC
 kvC
 ahE
-aOk
-aOk
+kvC
+kvC
 xaI
 aXm
 qCa
@@ -128211,9 +128212,9 @@ aae
 aae
 dSO
 kvC
-aOk
-aOk
-aOk
+kvC
+kvC
+kvC
 nQb
 huu
 huu
@@ -128230,7 +128231,7 @@ dBL
 hrE
 hrE
 hrE
-sCJ
+xAa
 hrE
 hrE
 lHc
@@ -128466,11 +128467,11 @@ aae
 aaa
 aae
 aae
-aOk
-qxy
-aOk
-etg
-aOk
+kvC
+dCa
+kvC
+dFL
+kvC
 xaI
 aOk
 huu
@@ -128723,11 +128724,11 @@ aaa
 aae
 aae
 aae
-aOk
-gaX
-aOk
-aOk
-bba
+kvC
+dSO
+kvC
+kvC
+skZ
 xaI
 aOk
 huu
@@ -130280,10 +130281,10 @@ huu
 huu
 aOk
 hrE
-xxP
 gGe
-acP
-dCa
+gGe
+kRW
+gGe
 hrE
 aqx
 aqx
@@ -130536,11 +130537,11 @@ aOk
 huu
 huu
 aOk
-hrE
-bAf
+vBU
 gGe
+acP
 ibE
-mGx
+bAf
 hrE
 cnF
 uOf
@@ -130794,10 +130795,10 @@ urA
 urA
 aOk
 hrE
-xXC
-xXC
 gGe
-jjJ
+gGe
+sCJ
+hrE
 hrE
 oSV
 uOf
@@ -131052,8 +131053,8 @@ kAP
 aqz
 hrE
 hrE
-vBU
-vBU
+xAa
+hrE
 hrE
 hrE
 vdJ
