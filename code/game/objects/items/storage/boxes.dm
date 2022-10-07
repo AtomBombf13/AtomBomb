@@ -34,7 +34,6 @@
 	var/foldable = /obj/item/stack/sheet/cardboard
 	var/illustration = "writing"
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE //exploits ahoy
-	component_type = /datum/component/storage/concrete/box
 
 /obj/item/storage/box/Initialize(mapload)
 	. = ..()
@@ -43,12 +42,12 @@
 /obj/item/storage/box/suicide_act(mob/living/carbon/user)
 	var/obj/item/bodypart/head/myhead = user.get_bodypart(BODY_ZONE_HEAD)
 	if(myhead)
-		user.visible_message(span_suicide("[user] puts [user.p_their()] head into \the [src], and begins closing it! It looks like [user.p_theyre()] trying to commit suicide!"))
+		user.visible_message("<span class='suicide'>[user] puts [user.p_their()] head into \the [src], and begins closing it! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 		myhead.dismember()
 		myhead.forceMove(src)//force your enemies to kill themselves with your head collection box!
 		playsound(user,pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg') ,50, 1, -1)
 		return BRUTELOSS
-	user.visible_message(span_suicide("[user] beating [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message("<span class='suicide'>[user] beating [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return BRUTELOSS
 
 /obj/item/storage/box/update_overlays()
@@ -241,7 +240,7 @@
 		new /obj/item/reagent_containers/glass/beaker( src )
 
 /obj/item/storage/box/beakers/bluespace
-	name = "box of bluespace beakers"
+	name = "box of quantum beakers"
 	illustration = "beaker"
 
 /obj/item/storage/box/beakers/bluespace/PopulateContents()
@@ -276,7 +275,7 @@
 	for(var/i in 1 to 7)
 		new /obj/item/grenade/flashbang(src)
 
-obj/item/storage/box/stingbangs
+/obj/item/storage/box/stingbangs
 	name = "box of stingbangs (WARNING)"
 	desc = "<B>WARNING: These devices are extremely dangerous and can cause severe injuries or death in repeated use.</B>"
 	icon_state = "secbox"
@@ -333,8 +332,8 @@ obj/item/storage/box/stingbangs
 		new /obj/item/grenade/empgrenade(src)
 
 /obj/item/storage/box/minibombs
-	name = "box of syndicate minibombs"
-	desc = "A box containing 2 highly explosive syndicate minibombs."
+	name = "box of minibombs"
+	desc = "A box containing 2 highly explosive minibombs."
 	icon_state = "syndiebox"
 	illustration = "frag"
 
@@ -444,7 +443,11 @@ obj/item/storage/box/stingbangs
 	icon_state = "donkpocketbox"
 	illustration=null
 	custom_premium_price = PRICE_ABOVE_NORMAL // git gud
-	component_type = /datum/component/storage/concrete/box/donk
+
+/obj/item/storage/box/donkpockets/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/donkpocket))
 
 /obj/item/storage/box/donkpockets/PopulateContents()
 	for(var/i in 1 to 6)
@@ -455,7 +458,12 @@ obj/item/storage/box/stingbangs
 	desc = "Drymate brand monkey cubes. Just add water!"
 	icon_state = "monkeycubebox"
 	illustration = null
-	component_type = /datum/component/storage/concrete/box/monkey
+
+/obj/item/storage/box/monkeycubes/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/cube/monkey))
 
 /obj/item/storage/box/monkeycubes/PopulateContents()
 	for(var/i in 1 to 5)
@@ -584,7 +592,7 @@ obj/item/storage/box/stingbangs
 
 /obj/item/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"
-	desc = span_alert("Keep out of reach of children.")
+	desc = "<span class='alert'>Keep out of reach of children.</span>"
 	illustration = "mousetraps"
 
 /obj/item/storage/box/mousetraps/PopulateContents()
@@ -605,21 +613,31 @@ obj/item/storage/box/stingbangs
 	desc = "Eight wrappers of fun! Ages 8 and up. Not suitable for children."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
-	component_type = /datum/component/storage/concrete/box/big/snap_pop
+
+/obj/item/storage/box/snappops/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.can_hold = typecacheof(list(/obj/item/toy/snappop))
+	STR.max_items = 8
 
 /obj/item/storage/box/snappops/PopulateContents()
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_FILL_TYPE, /obj/item/toy/snappop)
 
 /obj/item/storage/box/matches
 	name = "matchbox"
-	desc = "A small box of dry matches, these fetch a good price in the cities."
+	desc = "A small box of Almost But Not Quite Plasma Premium Matches."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	item_state = "zippo"
 	w_class = WEIGHT_CLASS_TINY
 	slot_flags = ITEM_SLOT_BELT
 	custom_price = PRICE_REALLY_CHEAP
-	component_type = /datum/component/storage/concrete/box/big/match
+
+/obj/item/storage/box/matches/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 10
+	STR.can_hold = typecacheof(list(/obj/item/match))
 
 /obj/item/storage/box/matches/PopulateContents()
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_FILL_TYPE, /obj/item/match)
@@ -637,7 +655,14 @@ obj/item/storage/box/stingbangs
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	foldable = /obj/item/stack/sheet/cardboard //BubbleWrap
-	component_type = /datum/component/storage/concrete/box/huge/lights
+
+/obj/item/storage/box/lights/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 21
+	STR.can_hold = typecacheof(list(/obj/item/light/tube, /obj/item/light/bulb))
+	STR.max_combined_w_class = 21
+	STR.click_gather = TRUE
 
 /obj/item/storage/box/lights/bulbs/PopulateContents()
 	for(var/i in 1 to 21)
@@ -695,7 +720,7 @@ obj/item/storage/box/stingbangs
 	foldable = null
 
 /obj/item/storage/box/hug/suicide_act(mob/user)
-	user.visible_message(span_suicide("[user] clamps the box of hugs on [user.p_their()] jugular! Guess it wasn't such a hugbox after all.."))
+	user.visible_message("<span class='suicide'>[user] clamps the box of hugs on [user.p_their()] jugular! Guess it wasn't such a hugbox after all..</span>")
 	return (BRUTELOSS)
 
 /obj/item/storage/box/hug/attack_self(mob/user)
@@ -704,7 +729,6 @@ obj/item/storage/box/stingbangs
 	playsound(src, "rustle", 50, 1, -5)
 	user.visible_message(span_notice("[user] hugs \the [src]."),span_notice("You hug \the [src]."))
 	SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT,"hugbox", /datum/mood_event/hugbox)
-
 
 //////
 /obj/item/storage/box/hug/medical/PopulateContents()
@@ -799,8 +823,6 @@ obj/item/storage/box/stingbangs
 	. = ..()
 	papersack_designs = sortList(list(
 		"None" = image(icon = src.icon, icon_state = "paperbag_None"),
-		"NanotrasenStandard" = image(icon = src.icon, icon_state = "paperbag_NanotrasenStandard"),
-		"SyndiSnacks" = image(icon = src.icon, icon_state = "paperbag_SyndiSnacks"),
 		"Heart" = image(icon = src.icon, icon_state = "paperbag_Heart"),
 		"SmileyFace" = image(icon = src.icon, icon_state = "paperbag_SmileyFace")
 		))
@@ -822,10 +844,6 @@ obj/item/storage/box/stingbangs
 		switch(choice)
 			if("None")
 				desc = "A sack neatly crafted out of paper."
-			if("NanotrasenStandard")
-				desc = "A standard Nanotrasen paper lunch sack for loyal employees on the go."
-			if("SyndiSnacks")
-				desc = "The design on this paper sack is a remnant of the notorious 'SyndieSnacks' program."
 			if("Heart")
 				desc = "A paper sack with a heart etched onto the side."
 			if("SmileyFace")
@@ -1100,21 +1118,21 @@ obj/item/storage/box/stingbangs
 	desc = "Contains a variety of basic stock parts."
 
 /obj/item/storage/box/stockparts/basic/PopulateContents()
-	new /obj/item/stock_parts/capacitor/simple(src)
-	new /obj/item/stock_parts/capacitor/simple(src)
-	new /obj/item/stock_parts/capacitor/simple(src)
-	new /obj/item/stock_parts/scanning_module/simple(src)
-	new /obj/item/stock_parts/scanning_module/simple(src)
-	new /obj/item/stock_parts/scanning_module/simple(src)
-	new /obj/item/stock_parts/manipulator/simple(src)
-	new /obj/item/stock_parts/manipulator/simple(src)
-	new /obj/item/stock_parts/manipulator/simple(src)
-	new /obj/item/stock_parts/micro_laser/simple(src)
-	new /obj/item/stock_parts/micro_laser/simple(src)
-	new /obj/item/stock_parts/micro_laser/simple(src)
-	new /obj/item/stock_parts/matter_bin/simple(src)
-	new /obj/item/stock_parts/matter_bin/simple(src)
-	new /obj/item/stock_parts/matter_bin/simple(src)
+	new /obj/item/stock_parts/capacitor(src)
+	new /obj/item/stock_parts/capacitor(src)
+	new /obj/item/stock_parts/capacitor(src)
+	new /obj/item/stock_parts/scanning_module(src)
+	new /obj/item/stock_parts/scanning_module(src)
+	new /obj/item/stock_parts/scanning_module(src)
+	new /obj/item/stock_parts/manipulator(src)
+	new /obj/item/stock_parts/manipulator(src)
+	new /obj/item/stock_parts/manipulator(src)
+	new /obj/item/stock_parts/micro_laser(src)
+	new /obj/item/stock_parts/micro_laser(src)
+	new /obj/item/stock_parts/micro_laser(src)
+	new /obj/item/stock_parts/matter_bin(src)
+	new /obj/item/stock_parts/matter_bin(src)
+	new /obj/item/stock_parts/matter_bin(src)
 
 /obj/item/storage/box/stockparts/deluxe
 	name = "box of deluxe stock parts"
@@ -1137,18 +1155,6 @@ obj/item/storage/box/stingbangs
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
-
-/obj/item/storage/box/sparelimbs
-	name = "box of prosthethic limbs"
-	desc = "Contains superior prosthethic limbs, one of each type."
-	icon_state = "syndiebox"
-
-/obj/item/storage/box/sparelimbs/PopulateContents()
-	new /obj/item/bodypart/chest/robot(src)
-	new /obj/item/bodypart/l_arm/robot(src)
-	new /obj/item/bodypart/r_arm/robot(src)
-	new /obj/item/bodypart/l_leg/robot(src)
-	new /obj/item/bodypart/r_leg/robot(src)
 
 //Colored boxes.
 /obj/item/storage/box/green
@@ -1180,8 +1186,8 @@ obj/item/storage/box/stingbangs
 	illustration = null
 
 /obj/item/storage/box/mre //base MRE type.
-	name = "Enclave MRE Ration Kit Menu 0"
-	desc = "A package containing food suspended in an outdated preservation substance which lasts for centuries. If you're lucky you may even be able to enjoy the meal without getting food poisoning."
+	name = "Vault-Tec MRE Ration Kit Menu 0"
+	desc = "A package containing irradiated food which lasts for centuries. If you're lucky you may even be able to enjoy the meal without getting rad poisoning."
 	icon_state = "mre"
 	illustration = null
 	var/can_expire = TRUE
@@ -1206,10 +1212,10 @@ obj/item/storage/box/stingbangs
 					ENABLE_BITFIELD(S.foodtype, TOXIC)
 
 /obj/item/storage/box/mre/menu1
-	name = "\improper Enclave MRE Ration Kit Menu 1"
+	name = "\improper Vault-Tec MRE Ration Kit Menu 1"
 
 /obj/item/storage/box/mre/menu1/safe
-	desc = "A package containing food suspended in a preservation substance capable of lasting till the end of time."
+	desc = "A package containing preserved pre-war food capable of lasting till the end of time."
 	spawner_chance = 0
 	can_expire = FALSE
 
@@ -1221,11 +1227,11 @@ obj/item/storage/box/stingbangs
 	new /obj/item/tank/internals/emergency_oxygen(src)
 
 /obj/item/storage/box/mre/menu2
-	name = "\improper Enclave MRE Ration Kit Menu 2"
+	name = "\improper Vault-Tec MRE Ration Kit Menu 2"
 
 /obj/item/storage/box/mre/menu2/safe
 	spawner_chance = 0
-	desc = "A package containing food suspended in a preservation substance capable of lasting till the end of time."
+	desc = "A package containing preserved pre-war food capable of lasting till the end of time."
 	can_expire = FALSE
 
 /obj/item/storage/box/mre/menu2/PopulateContents()
@@ -1236,7 +1242,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/tank/internals/emergency_oxygen(src)
 
 /obj/item/storage/box/mre/menu3
-	name = "\improper Enclave MRE Ration Kit Menu 3"
+	name = "\improper Vault-Tec MRE Ration Kit Menu 3"
 	desc = "The holy grail of MREs. This item contains the fabled MRE pizza, spicy nachos and a sample of coffee instant type 2. Any NT employee lucky enough to get their hands on one of these is truly blessed."
 	icon_state = "menu3"
 	can_expire = FALSE //always fresh, never expired.
@@ -1251,11 +1257,11 @@ obj/item/storage/box/stingbangs
 	new /obj/item/tank/internals/emergency_oxygen(src)
 
 /obj/item/storage/box/mre/menu4
-	name = "\improper Enclave MRE Ration Kit Menu 4"
+	name = "\improper Vault-Tec MRE Ration Kit Menu 4"
 
 /obj/item/storage/box/mre/menu4/safe
 	spawner_chance = 0
-	desc = "A package containing food suspended in a preservation substance capable of lasting till the end of time."
+	desc = "A package containing preserved pre-war food capable of lasting till the end of time."
 	can_expire = FALSE
 
 /obj/item/storage/box/mre/menu4/PopulateContents()
@@ -1311,6 +1317,7 @@ obj/item/storage/box/stingbangs
 		/obj/item/stack/sheet/mineral/plasma=50,\
 		/obj/item/stack/sheet/mineral/uranium=50,\
 		/obj/item/stack/sheet/mineral/diamond=50,\
+		/obj/item/stack/sheet/bluespace_crystal=50,\
 		/obj/item/stack/sheet/mineral/wood=50,\
 		/obj/item/stack/sheet/plastic/fifty=1,\
 		/obj/item/stack/sheet/runed_metal/fifty=1
@@ -1328,6 +1335,7 @@ obj/item/storage/box/stingbangs
 		/obj/item/modular_computer/tablet/preset/advanced=1,\
 		/obj/item/geiger_counter=1,\
 		/obj/item/construction/rcd/combat/admin=1,\
+		/obj/item/pipe_dispenser=1,\
 		/obj/item/card/emag=1,\
 		/obj/item/healthanalyzer/advanced=1,\
 		/obj/item/disk/tech_disk/debug=1,\
@@ -1357,18 +1365,9 @@ obj/item/storage/box/stingbangs
 	for(var/i in 1 to 5)
 		new /obj/item/seeds/random(src)
 
-/obj/item/storage/box/ids/follower
-	name = "box of spare medallions"
-	desc = "Medallions for issue to recruits."
-	illustration = "legauxilia"
-
-/obj/item/storage/box/ids/follower/PopulateContents()
-	for(var/i in 1 to 7)
-		new /obj/item/card/id/dogtag/legrecruit
-
 /obj/item/storage/box/deputy_badges
 	name = "box of spare badges"
-	desc = "A box containing the spare badges for deputies. Use your marshal badge on a deputy badge to assign its owner."
+	desc = "A box containing the spare badges for deputies. Use your sheriff badge on a deputy badge to assign its owner."
 	illustration = "id"
 
 /obj/item/storage/box/deputy_badges/PopulateContents()
@@ -1377,7 +1376,7 @@ obj/item/storage/box/stingbangs
 
 /obj/item/storage/box/citizenship_permits
 	name = "box of citizenship permits"
-	desc = "A box containing spare citizenship permits for Eastwood. Use a mayor's ID on a citizenship permit to assign its owner."
+	desc = "A box containing spare citizenship permits for Oasis. Use a mayor's ID on a citizenship permit to assign its owner."
 	illustration = "id"
 
 /obj/item/storage/box/citizenship_permits/PopulateContents()
@@ -1406,8 +1405,6 @@ list(/obj/item/stack/sheet/metal = 20,
 	new /obj/item/stack/cable_coil/ten(src)
 	new /obj/item/screwdriver(src)
 	new /obj/item/weldingtool(src)
-	new /obj/item/stack/f13Cash/random/med(src)
-	new /obj/item/stack/f13Cash/random/med(src)
 
 /obj/item/storage/box/shopkeeper
 	name = "Shopkeeper's blueprints"
@@ -1428,6 +1425,3 @@ list(/obj/item/stack/sheet/metal = 20,
 							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 							)
 		new randomgun(src)
-
-
-

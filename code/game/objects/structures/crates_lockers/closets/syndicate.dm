@@ -23,7 +23,6 @@
 	for(var/i in 1 to 4)
 	new /obj/item/storage/box/flashbangs(src)
 	new /obj/item/storage/box/teargas(src)
-	new /obj/item/storage/backpack/duffelbag/syndie/med(src)
 	new /obj/item/pda/syndicate(src)
 
 /obj/structure/closet/syndicate/resources

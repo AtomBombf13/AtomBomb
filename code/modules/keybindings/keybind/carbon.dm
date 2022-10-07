@@ -72,3 +72,47 @@
 	var/mob/living/carbon/C = user.mob
 	C.do_wield()
 	return TRUE
+
+/datum/keybinding/carbon/quick_equip
+	hotkey_keys = list("E")
+	name = "quick_equip"
+	full_name = "Quick Equip"
+	description = "Quickly puts an item in the best slot available"
+
+/datum/keybinding/carbon/quick_equip/down(client/user)
+	var/mob/living/carbon/human/H = user.mob
+	H.quick_equip()
+	return TRUE
+
+/datum/keybinding/carbon/holster
+	hotkey_keys = list("H")
+	name = "holster"
+	full_name = "Quick holstering"
+	description = "Holster and unholster."
+
+/datum/keybinding/carbon/holster/down(client/user)
+	var/mob/living/carbon/human/H = user.mob
+	H.holster()
+	return TRUE
+
+/datum/keybinding/carbon/quick_equipbelt
+	hotkey_keys = list("ShiftE")
+	name = "quick_equipbelt"
+	full_name = "Quick equip belt"
+	description = "Put held thing in belt or take out most recent thing from belt"
+
+/datum/keybinding/carbon/quick_equipbelt/down(client/user)
+	var/mob/living/carbon/human/H = user.mob
+	H.smart_equipbelt()
+	return TRUE
+
+/datum/keybinding/carbon/bag_equip
+	hotkey_keys = list("AltE")
+	name = "bag_equip"
+	full_name = "Bag equip"
+	description = "Put held thing in backpack or take out most recent thing from backpack"
+
+/datum/keybinding/carbon/bag_equip/down(client/user)
+	var/mob/living/carbon/human/H = user.mob
+	H.smart_equipbag()
+	return TRUE

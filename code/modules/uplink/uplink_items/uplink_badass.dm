@@ -39,15 +39,6 @@
 	cant_discount = TRUE
 	illegal_tech = FALSE
 
-/datum/uplink_item/badass/syndiecash
-	name = "Syndicate Briefcase Full of Cash"
-	desc = "A secure briefcase containing 5000 space credits. Useful for bribing personnel, or purchasing goods \
-			and services at lucrative prices. The briefcase also feels a little heavier to hold; it has been \
-			manufactured to pack a little bit more of a punch if your client needs some convincing."
-	item = /obj/item/storage/secure/briefcase/syndie
-	cost = 1
-	restricted = TRUE
-
 /datum/uplink_item/badass/syndiecards
 	name = "Syndicate Playing Cards"
 	desc = "A special deck of space-grade playing cards with a mono-molecular edge and metal reinforcement, \

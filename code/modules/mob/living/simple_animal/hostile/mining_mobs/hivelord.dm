@@ -297,7 +297,7 @@
 			else
 				uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
 				if (prob(4))
-					belt = pickweight(list(/obj/item/storage/belt/utility/mining = 2, /obj/item/storage/belt/utility/mining/alt = 2))
+					belt = pickweight(list(/obj/item/storage/belt/utility/mining))
 				else if(prob(10))
 					belt = pickweight(list(/obj/item/pickaxe = 8, /obj/item/pickaxe/mini = 4, /obj/item/pickaxe/silver = 2, /obj/item/pickaxe/diamond = 1))
 				else

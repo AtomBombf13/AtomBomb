@@ -180,15 +180,6 @@ GLOBAL_LIST_INIT(leather_recipes, list (
 	new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/laceup, 2),
 	new/datum/stack_recipe("leather overcoat", /obj/item/clothing/suit/jacket/leather/overcoat, 10),
 	new/datum/stack_recipe("leather cloak", /obj/item/clothing/suit/hooded/cloak/desert, 3),
-	null,
-	new/datum/stack_recipe("survival pouch", /obj/item/storage/survivalkit/empty, 5),
-	new/datum/stack_recipe("rugged pouch", /obj/item/storage/survivalkit/outlaw/empty, 5),
-	new/datum/stack_recipe("tribal pouch", /obj/item/storage/survivalkit/tribal/empty, 5),
-	new/datum/stack_recipe("medical pouch", /obj/item/storage/survivalkit/medical/empty, 5),
-	new/datum/stack_recipe("combat pouch", /obj/item/storage/survivalkit/combat, 5),
-	new/datum/stack_recipe("tribal medicine pouch", /obj/item/storage/survivalkit/medical/tribal/empty, 5),
-	new/datum/stack_recipe("extra large pouch", /obj/item/storage/survivalkit/triple, 15),
-	new/datum/stack_recipe("sack", /obj/item/storage/bag/trash/sack, 15),
 ))
 
 /obj/item/stack/sheet/leather/get_main_recipes()
@@ -240,14 +231,14 @@ GLOBAL_LIST_INIT(sinew_recipes, list (
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_NORMAL
 	layer = MOB_LAYER
-	merge_type = /obj/item/stack/sheet/animalhide/goliath_hide
+	//merge_type = /obj/item/stack/sheet/animalhide/goliath_hide
 
 /obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide
 	name = "polar bear hides"
 	desc = "Pieces of a polar bear's fur, these might be able to make your suit a bit more durable to attack from the local fauna."
 	icon_state = "polar_bear_hide"
 	singular_name = "polar bear hide"
-	merge_type = /obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide
+	//merge_type = /obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide
 
 /obj/item/stack/sheet/animalhide/chitin
 	name = "insect chitin"

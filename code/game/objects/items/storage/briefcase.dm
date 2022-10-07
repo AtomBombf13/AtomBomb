@@ -59,31 +59,6 @@
 	new /obj/item/storage/box/evidence(src)
 	new /obj/item/storage/box/lawyer(src)
 
-/obj/item/storage/briefcase/secretary
-	name = "fancy briefcase"
-	desc = "a gecko-skin briefcase with nickel-plated hinges and carrying handle, the height of post-war business fashion."
-	force = 12 //oasis made it better
-
-/obj/item/storage/briefcase/secretary/PopulateContents()
-	new /obj/item/gun_upgrade/muzzle/silencer(src)
-	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
-	new /obj/item/paper_bin/bundlenatural(src)
-	new /obj/item/clothing/under/suit/black/skirt(src)
-	new /obj/item/pen(src)
-	new /obj/item/storage/box/funds(src)
-
-/obj/item/storage/box/funds
-	name = "Eastwood operating funds"
-	desc = "A box filled with both local and foreign currency, to cover unexpected purchases"
-
-// Secretary spawns with all 3 types of money for negotatiating with any side. ~325 caps worth
-/obj/item/storage/box/funds/PopulateContents()
-//		new /obj/item/stack/f13Cash/random/ncr/med(src)
-//		new /obj/item/stack/f13Cash/random/denarius/med(src)
-//		new /obj/item/stack/f13Cash/random/ncr/med(src)
-		new /obj/item/stack/f13Cash/random/high(src)
-		new /obj/item/stack/f13Cash/random/med(src) // Adding some extra caps for 'em
-
 /obj/item/storage/box/lawyer
 	name = "Box of lawyer tools"
 	desc = "A custom made box, full of items used by a Lawyer, all packed into one box!"
@@ -108,7 +83,6 @@
 	..() // in case you need any paperwork done after your rampage
 	new /obj/item/clothing/neck/tie/red(src)
 	new /obj/item/clothing/under/syndicate/sniper(src)
-	new /obj/item/gun_upgrade/muzzle/silencer(src)
 
 
 /obj/item/storage/briefcase/modularbundle
@@ -116,7 +90,7 @@
 	force = 10
 
 /obj/item/storage/briefcase/modularbundle/PopulateContents()
-	new /obj/item/gun_upgrade/muzzle/silencer(src)
+	new /obj/item/ammo_box/magazine/m10mm(src)
 	new /obj/item/clothing/under/suit/black(src)
 	new /obj/item/clothing/accessory/waistcoat(src)
 	new /obj/item/clothing/suit/toggle/lawyer/black/syndie(src)

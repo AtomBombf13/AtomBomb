@@ -36,4 +36,4 @@
 
 /datum/component/storage/concrete/neckpron/specialized/gun/Initialize()
 	. = ..()
-	can_hold = GLOB.gunbelt_allowed
+	can_hold = GLOB.holster_allowed

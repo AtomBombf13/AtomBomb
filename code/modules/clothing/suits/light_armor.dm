@@ -931,8 +931,8 @@
 /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	name = "brotherhood senior scout armor"
 	desc = "A pre-war set of combat armor with stripped armor plating, allowing for better mobility over their heavier combat armor mk 2 armor counterparts. It bears a silver stripe."
-	icon_state = "brotherhood_senior_scout"
-	item_state = "brotherhood_senior_scout"
+	icon_state = "brotherhood_scout_senior"
+	item_state = "brotherhood_scout_senior"
 
 //////////////
 // Cog City //

@@ -42,7 +42,7 @@
 				to_chat(user, span_notice("You [open ? "open" : "close"] the service panel."))
 			return
 		if (istype(W, /obj/item/wirecutters))
-			to_chat(user, "<span class='danger'>[src] is protected from this sort of tampering, yet it appears the internal memory wires can still be <b>pulsed</b>.</span>")
+			to_chat(user, span_danger("[src] is protected from this sort of tampering, yet it appears the internal memory wires can still be <b>pulsed</b>."))
 		if ((istype(W, /obj/item/multitool)) && (!l_hacking))
 			if(open == 1)
 				to_chat(user, span_danger("Now attempting to reset internal memory, please hold."))
@@ -54,7 +54,7 @@
 				else
 					l_hacking = 0
 			else
-				to_chat(user, "<span class='notice'>You must <b>unscrew</b> the service panel before you can pulse the wiring.</span>")
+				to_chat(user, span_notice("You must <b>unscrew</b> the service panel before you can pulse the wiring."))
 			return
 		//At this point you have exhausted all the special things to do when locked
 		// ... but it's still locked.
@@ -136,46 +136,6 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 21
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
-
-//Syndie variant of Secure Briefcase. Contains space cash, slightly more robust.
-/obj/item/storage/secure/briefcase/syndie
-	force = 15
-
-/obj/item/storage/secure/briefcase/syndie/PopulateContents()
-	..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	for(var/i = 0, i < STR.max_items - 2, i++)
-		new /obj/item/stack/spacecash/c1000(src)
-
-/obj/item/storage/secure/briefcase/mws_pack
-	name = "\improper \'MWS\' gun kit"
-	desc = "A storage case for a multi-purpose handgun. Variety hour!"
-
-/obj/item/storage/secure/briefcase/mws_pack/PopulateContents()
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/ammo_box/magazine/mws_mag(src)
-	for(var/path in subtypesof(/obj/item/ammo_casing/mws_batt))
-		new path(src)
-
-/obj/item/storage/secure/briefcase/hos/mws_pack_hos
-	name = "\improper \'MWS\' gun kit"
-	desc = "A storage case for a multi-purpose handgun. Variety hour!"
-
-/obj/item/storage/secure/briefcase/hos/mws_pack_hos/PopulateContents()
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/ammo_casing/mws_batt/lethal(src)
-	new /obj/item/ammo_casing/mws_batt/lethal(src)
-	new /obj/item/ammo_casing/mws_batt/stun(src)
-	new /obj/item/ammo_casing/mws_batt/stun(src)
-	new /obj/item/ammo_casing/mws_batt/ion(src)
-
-/obj/item/storage/secure/briefcase/hos/multiphase_box
-	name = "\improper X-01 Multiphase energy gun box"
-	desc = "A storage case for a high-tech energy firearm."
-
-/obj/item/storage/secure/briefcase/hos/multiphase_box/PopulateContents()
-	new /obj/item/gun/energy/e_gun/hos(src)
 
 // -----------------------------
 //        Secure Safe

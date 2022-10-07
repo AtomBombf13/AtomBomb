@@ -107,11 +107,6 @@
 /obj/item/ammo_box/magazine/m10mm/adv/empty
 	start_empty = 1
 
-/obj/item/ammo_box/magazine/m10mm/adv/simple
-
-/obj/item/ammo_box/magazine/m10mm/adv/simple/empty
-	start_empty = 1
-
 //10mm extended
 /obj/item/ammo_box/magazine/m10mm/adv/ext
 	name = "10mm extended magazine (10mm)"

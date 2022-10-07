@@ -20,7 +20,15 @@
 	slot_flags = ITEM_SLOT_BACK	//ERROOOOO
 	resistance_flags = NONE
 	max_integrity = 300
-	component_type = /datum/component/storage/concrete/backpack
+
+/obj/item/storage/backpack/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	//STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	STR.max_combined_w_class = 21
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_items = 21
+
 
 /*
  * Backpack Types
@@ -38,7 +46,7 @@
 	item_state = "holdingpack"
 	resistance_flags = FIRE_PROOF
 	item_flags = NO_MAT_REDEMPTION
-	armor = ARMOR_VALUE_GENERIC_ITEM
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 50)
 	component_type = /datum/component/storage/concrete/bluespace/bag_of_holding
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
@@ -52,12 +60,15 @@
 /obj/item/storage/backpack/spearquiver
 	name = "sturdy quiver"
 	desc = "A leather and iron quiver designed to hold throwing spears and bolas."
-	icon = 'icons/fallout/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	icon_state = "spearquiver"
 	item_state = "spearquiver"
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
-	component_type = /datum/component/storage/concrete/backpack/spear_quiver
+
+/obj/item/storage/backpack/spearquiver/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.can_hold = typecacheof(list(/obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola))
 
 /obj/item/storage/backpack/spearquiver/PopulateContents()
 	new /obj/item/throwing_star/spear(src)
@@ -65,9 +76,8 @@
 	new /obj/item/throwing_star/spear(src)
 	new /obj/item/throwing_star/spear(src)
 	new /obj/item/throwing_star/spear(src)
-
-/obj/item/storage/backpack/spearquiver/empty/PopulateContents()
-	return
+	new /obj/item/throwing_star/spear(src)
+	new /obj/item/throwing_star/spear(src)
 
 /obj/item/storage/backpack/spearquiver/AltClick(mob/living/carbon/user)
 	. = ..()
@@ -105,7 +115,7 @@
 	item_state = "holdingduffel"
 
 /obj/item/storage/backpack/holding/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] is jumping into [src]! It looks like [user.p_theyre()] trying to commit suicide."))
+	user.visible_message("<span class='suicide'>[user] is jumping into [src]! It looks like [user.p_theyre()] trying to commit suicide.</span>")
 	user.dropItemToGround(src, TRUE)
 	user.Stun(100, ignore_canstun = TRUE)
 	sleep(20)
@@ -125,10 +135,15 @@
 	item_state = "giftbag"
 	w_class = WEIGHT_CLASS_BULKY
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
-	component_type = /datum/component/storage/concrete/backpack/duffelbag/scav
+
+/obj/item/storage/backpack/santabag/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 60
 
 /obj/item/storage/backpack/santabag/suicide_act(mob/user)
-	user.visible_message(span_suicide("[user] places [src] over [user.p_their()] head and pulls it tight! It looks like [user.p_they()] [user.p_are()]n't in the Christmas spirit..."))
+	user.visible_message("<span class='suicide'>[user] places [src] over [user.p_their()] head and pulls it tight! It looks like [user.p_they()] [user.p_are()]n't in the Christmas spirit...</span>")
 	return (OXYLOSS)
 
 /obj/item/storage/backpack/cultpack
@@ -137,11 +152,23 @@
 	icon_state = "cultpack"
 	item_state = "backpack"
 
+/obj/item/storage/backpack/clown
+	name = "Giggles von Honkerton"
+	desc = "It's a backpack made by Honk! Co."
+	icon_state = "clownpack"
+	item_state = "clownpack"
+
 /obj/item/storage/backpack/explorer
 	name = "explorer bag"
 	desc = "A robust backpack for stashing your loot."
 	icon_state = "explorerpack"
 	item_state = "explorerpack"
+
+/obj/item/storage/backpack/mime
+	name = "Parcel Parceaux"
+	desc = "A silent backpack made for those silent workers. Silence Co."
+	icon_state = "mimepack"
+	item_state = "mimepack"
 
 /obj/item/storage/backpack/medic
 	name = "medical backpack"
@@ -201,8 +228,6 @@
 	icon_state = "viropack"
 	item_state = "viropack"
 
-
-
 /*
  * Satchel Types
  */
@@ -211,7 +236,6 @@
 	name = "satchel"
 	desc = "A trendy looking satchel."
 	icon_state = "satchel-norm"
-	species_exception = list(/datum/species/angel) //satchels can be equipped since they are on the side, not back
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"
@@ -354,18 +378,22 @@
 	desc = "A large duffel bag for holding extra things."
 	icon_state = "duffel"
 	item_state = "duffel"
-	slowdown = DUFFELBAG_SLOWDOWN
-	component_type = /datum/component/storage/concrete/backpack/duffelbag
-
-/obj/item/storage/backpack/duffelbag/equipment/update_icon_state()
-	if(contents.len == 0)
-		qdel(src)
+	slowdown = 0.5
 
 /obj/item/storage/backpack/duffelbag/scavengers
 	name = "scavenger's duffel bag"
 	desc = "An extra large duffel bag for holding extra things."
-	slowdown = DUFFELBAG_SCAV_SLOWDOWN
-	component_type = /datum/component/storage/concrete/backpack/duffelbag/scav
+	slowdown = 0.7
+
+/obj/item/storage/backpack/duffelbag/scavengers/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 40
+
+/obj/item/storage/backpack/duffelbag/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 30
 
 /obj/item/storage/backpack/duffelbag/captain
 	name = "captain's duffel bag"
@@ -436,7 +464,6 @@
 	icon_state = "duffel-durathread"
 	item_state = "duffel-durathread"
 	resistance_flags = FIRE_PROOF
-	slowdown = 0
 
 /obj/item/storage/backpack/duffelbag/drone
 	name = "drone duffel bag"
@@ -454,6 +481,17 @@
 	new /obj/item/stack/cable_coil/random(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/multitool(src)
+	new /obj/item/pipe_dispenser(src)
+
+/obj/item/storage/backpack/duffelbag/clown
+	name = "clown's duffel bag"
+	desc = "A large duffel bag for holding lots of funny gags!"
+	icon_state = "duffel-clown"
+	item_state = "duffel-clown"
+
+/obj/item/storage/backpack/duffelbag/clown/cream_pie/PopulateContents()
+	for(var/i in 1 to 10)
+		new /obj/item/reagent_containers/food/snacks/pie/cream(src)
 
 /obj/item/storage/backpack/duffelbag/syndie
 	name = "suspicious looking duffel bag"
@@ -464,172 +502,15 @@
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/backpack/duffelbag/syndie/ComponentInitialize()
-	component_type = /datum/component/storage/concrete/backpack/duffelbag/syndie
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.silent = TRUE
 
-/obj/item/storage/backpack/duffelbag/syndie/hitman
-	desc = "A large duffel bag for holding extra things. There is a Nanotrasen logo on the back."
-	icon_state = "duffel-syndieammo"
-	item_state = "duffel-syndieammo"
-
-/obj/item/storage/backpack/duffelbag/syndie/hitman/PopulateContents()
-	new /obj/item/clothing/under/suit/black(src)
-	new /obj/item/clothing/accessory/waistcoat(src)
-	new /obj/item/clothing/suit/toggle/lawyer/black(src)
-	new /obj/item/clothing/shoes/laceup(src)
-	new /obj/item/clothing/gloves/color/black(src)
-	new /obj/item/clothing/glasses/sunglasses(src)
-	new /obj/item/clothing/head/fedora(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/med
-	name = "medical duffel bag"
-	desc = "A large duffel bag for holding extra tactical medical supplies."
-	icon_state = "duffel-syndiemed"
-	item_state = "duffel-syndiemed"
-
-/obj/item/storage/backpack/duffelbag/syndie/surgery
-	name = "surgery duffel bag"
-	desc = "A suspicious looking duffel bag for holding surgery tools."
-	icon_state = "duffel-syndiemed"
-	item_state = "duffel-syndiemed"
-
-/obj/item/storage/backpack/duffelbag/syndie/surgery/PopulateContents()
-	new /obj/item/scalpel(src)
-	new /obj/item/hemostat(src)
-	new /obj/item/retractor(src)
-	new /obj/item/circular_saw(src)
-	new /obj/item/surgicaldrill(src)
-	new /obj/item/cautery(src)
-	new /obj/item/bonesetter(src)
-	new /obj/item/surgical_drapes(src)
-	new /obj/item/clothing/suit/straight_jacket(src)
-	new /obj/item/clothing/mask/muzzle(src)
-	new /obj/item/mmi/syndie(src)
-	new /obj/item/implantcase(src)
-	new /obj/item/implanter(src)
-	new /obj/item/reagent_containers/medspray/sterilizine(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/surgery_adv
-	name = "advanced surgery duffel bag"
-	desc = "A large duffel bag for holding surgical tools. Bears the logo of an advanced med-tech firm."
-
-/obj/item/storage/backpack/duffelbag/syndie/surgery_adv/PopulateContents()
-	new /obj/item/scalpel/advanced(src)
-	new /obj/item/retractor/advanced(src)
-	new /obj/item/surgicaldrill/advanced(src)
-	new /obj/item/bonesetter(src)
-	new /obj/item/surgical_drapes(src)
-	new /obj/item/clothing/suit/straight_jacket(src)
-	new /obj/item/clothing/mask/muzzle(src)
-	new /obj/item/mmi/syndie(src)
-	new /obj/item/implantcase(src)
-	new /obj/item/implanter(src)
-	new /obj/item/reagent_containers/medspray/sterilizine(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo
-	name = "ammunition duffel bag"
-	desc = "A large duffel bag for holding extra weapons ammunition and supplies."
-	icon_state = "duffel-syndieammo"
-	item_state = "duffel-syndieammo"
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/shotgun
-	desc = "A large duffel bag, packed to the brim with Bulldog shotgun drum magazines."
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/shotgun/PopulateContents()
-	for(var/i in 1 to 6)
-		new /obj/item/ammo_box/magazine/m12g(src)
-	new /obj/item/ammo_box/magazine/m12g/stun(src)
-	new /obj/item/ammo_box/magazine/m12g/slug(src)
-	new /obj/item/ammo_box/magazine/m12g/dragon(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/smg
-	desc = "A large duffel bag, packed to the brim with C-20r magazines."
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/smg/PopulateContents()
-	for(var/i in 1 to 9)
-		new /obj/item/ammo_box/magazine/tommygunm45/empty(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/dark_gygax
-	desc = "A large duffel bag, packed to the brim with various exosuit ammo."
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/dark_gygax/PopulateContents()
-	new /obj/item/mecha_ammo/incendiary(src)
-	new /obj/item/mecha_ammo/incendiary(src)
-	new /obj/item/mecha_ammo/incendiary(src)
-	new /obj/item/mecha_ammo/flashbang(src)
-	new /obj/item/mecha_ammo/flashbang(src)
-	new /obj/item/mecha_ammo/flashbang(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/mauler
-	desc = "A large duffel bag, packed to the brim with various exosuit ammo."
-
-/obj/item/storage/backpack/duffelbag/syndie/ammo/mauler/PopulateContents()
-	new /obj/item/mecha_ammo/lmg(src)
-	new /obj/item/mecha_ammo/lmg(src)
-	new /obj/item/mecha_ammo/lmg(src)
-	new /obj/item/mecha_ammo/scattershot(src)
-	new /obj/item/mecha_ammo/scattershot(src)
-	new /obj/item/mecha_ammo/scattershot(src)
-	new /obj/item/mecha_ammo/missiles_he(src)
-	new /obj/item/mecha_ammo/missiles_he(src)
-	new /obj/item/mecha_ammo/missiles_he(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/c20rbundle
-	desc = "A large duffel bag containing a C-20r, some magazines, and a cheap looking suppressor."
-
-/obj/item/storage/backpack/duffelbag/syndie/c20rbundle/PopulateContents()
-	new /obj/item/ammo_box/magazine/tommygunm45/empty(src)
-	new /obj/item/gun_upgrade/muzzle/silencer(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/bulldogbundle
-	desc = "A large duffel bag containing a Bulldog, some drums, and a pair of thermal imaging glasses."
-
-/obj/item/storage/backpack/duffelbag/syndie/bulldogbundle/PopulateContents()
-	new /obj/item/ammo_box/magazine/tommygunm45/empty(src)
-	new /obj/item/gun_upgrade/muzzle/silencer(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle
-	desc = "A large duffel bag containing a tactical medkit, a Donksoft machine gun, a big jumbo box of riot darts, and a knock-off pair of magboots."
-
-/obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle/PopulateContents()
-	new /obj/item/clothing/shoes/magboots/syndie(src)
-	new /obj/item/ammo_box/foambox/riot(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/med/bioterrorbundle
-	desc = "A large duffel bag containing deadly chemicals, a handheld chem sprayer, Bioterror foam grenade, a Donksoft assault rifle, box of riot grade darts, a dart pistol, and a box of syringes."
-
-/obj/item/storage/backpack/duffelbag/syndie/med/bioterrorbundle/PopulateContents()
-	new /obj/item/storage/box/syndie_kit/chemical(src)
-	new /obj/item/gun/syringe/syndicate(src)
-	new /obj/item/storage/box/syringes(src)
-	new /obj/item/ammo_box/foambox/riot(src)
-	if(prob(5))
-		new /obj/item/reagent_containers/food/snacks/pizza/pineapple(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/c4/PopulateContents()
-	for(var/i in 1 to 10)
-		new /obj/item/grenade/plastic/c4(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/x4/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/grenade/plastic/x4(src)
-
-/obj/item/storage/backpack/duffelbag/syndie/firestarter
-	desc = "A large duffel bag containing a New Russian pyro backpack sprayer, Elite hardsuit, a Stechkin APS pistol, minibomb, ammo, and other equipment."
-
-/obj/item/storage/backpack/duffelbag/syndie/firestarter/PopulateContents()
-	new /obj/item/watertank/op(src)
-	new /obj/item/scalpel(src)
-	new /obj/item/reagent_containers/food/drinks/bottle/vodka/badminka(src)
-	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
-	new /obj/item/grenade/syndieminibomb(src)
-
-obj/item/storage/backpack/duffelbag/syndie/shredderbundle
-	desc = "A large duffel bag containing two CX Shredders, some magazines, an elite hardsuit, and a chest rig."
-
-/obj/item/storage/backpack/duffelbag/syndie/shredderbundle/PopulateContents()
-	new /obj/item/storage/belt/military(src)
-	new /obj/item/clothing/suit/space/hardsuit/syndi/elite(src)
-
+/obj/item/storage/backpack/snail
+	name = "snail shell"
+	desc = "Worn by snails as armor and storage compartment."
+	icon_state = "snailshell"
+	item_state = "snailshell"
 ///FO13 Edit
 /obj/item/storage/backpack/trekker
 	name = "trekkers pack"
@@ -642,6 +523,8 @@ obj/item/storage/backpack/duffelbag/syndie/shredderbundle
 	desc = "A light and durable satchel often seen in use by those prone to wandering the wastes, often alone."
 	icon_state = "satchel-trekker"
 	item_state = "satchel-trekker"
+
+///Sunset Moment
 
 /obj/item/storage/backpack/satchel/old
 	name = "old satchel"
@@ -676,3 +559,27 @@ obj/item/storage/backpack/duffelbag/syndie/shredderbundle
 	desc = "Legion cape made from what looks like black piece of cloth, with a golden bull on the back. With a lot of pockets underneath"
 	icon_state = "legioncapeb"
 	item_state = "legioncapeb"
+
+/obj/item/storage/backpack/duffelbag/equipment/update_icon_state()
+	if(contents.len == 0)
+		qdel(src)
+
+/obj/item/storage/backpack/spearquiver
+	name = "sturdy quiver"
+	desc = "A leather and iron quiver designed to hold throwing spears and bolas."
+	icon = 'icons/fallout/clothing/belts.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	icon_state = "spearquiver"
+	item_state = "spearquiver"
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
+	component_type = /datum/component/storage/concrete/backpack/spear_quiver
+
+/obj/item/storage/backpack/spearquiver/PopulateContents()
+	new /obj/item/throwing_star/spear(src)
+	new /obj/item/throwing_star/spear(src)
+	new /obj/item/throwing_star/spear(src)
+	new /obj/item/throwing_star/spear(src)
+	new /obj/item/throwing_star/spear(src)
+
+/obj/item/storage/backpack/spearquiver/empty/PopulateContents()
+	return

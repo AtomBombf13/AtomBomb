@@ -50,7 +50,6 @@
 		/obj/item/stack/tile/fakepit/loaded = ARCADE_WEIGHT_TRICK,
 		/obj/item/restraints/handcuffs/fake = ARCADE_WEIGHT_TRICK,
 		/obj/item/clothing/shoes/kindleKicks = ARCADE_WEIGHT_RARE,
-		/obj/item/storage/belt/military/snack = ARCADE_WEIGHT_RARE,
 
 		/obj/item/clothing/mask/fakemoustache/italian = ARCADE_WEIGHT_RARE,
 		/obj/item/clothing/suit/hooded/wintercoat/ratvar/fake = ARCADE_WEIGHT_TRICK,

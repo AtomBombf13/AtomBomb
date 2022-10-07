@@ -88,7 +88,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/pen/fountain/captain = 1,
 		/obj/item/clothing/mask/cigarette/cigar = 1,
 		/obj/item/toy/cards/deck/unum = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/simple = 3
+		/obj/item/ammo_box/magazine/m10mm/adv = 3
 		)
 
 /*--------------------------------------------------------------*/
@@ -133,8 +133,8 @@ here's a tip, go search DEFINES/access.dm
 	id = /obj/item/card/id/dogtag/sheriff
 	ears = /obj/item/radio/headset/headset_town/lawman
 	glasses  = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/storage/belt/army/assault
-	neck = /obj/item/storage/belt/shoulderholster
+	belt = /obj/item/storage/belt/military/army
+	neck = /obj/item/storage/belt/holster
 	l_pocket = /obj/item/storage/bag/money/small/den
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
@@ -273,8 +273,8 @@ here's a tip, go search DEFINES/access.dm
 	jobtype = /datum/job/oasis/f13deputy
 	id = /obj/item/card/id/dogtag/deputy
 	ears = /obj/item/radio/headset/headset_town/lawman
-	neck = /obj/item/storage/belt/shoulderholster
-	belt = /obj/item/storage/belt/army/assault
+	neck = /obj/item/storage/belt/holster
+	belt = /obj/item/storage/belt/military/army
 	gloves = /obj/item/clothing/gloves/f13/military
 	glasses  = /obj/item/clothing/glasses/hud/security/sunglasses
 	l_pocket = /obj/item/storage/bag/money/small/settler
@@ -402,7 +402,7 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/armor/light/leather/rig
 	uniform = /obj/item/clothing/under/f13/lumberjack
 	head = /obj/item/clothing/head/hardhat
-	belt = /obj/item/storage/belt/utility/mining/alt
+	belt = /obj/item/storage/belt/utility/mining
 	shoes = /obj/item/clothing/shoes/f13/miner
 	backpack_contents = list(
 		/obj/item/t_scanner/adv_mining_scanner = 1,
@@ -442,7 +442,7 @@ here's a tip, go search DEFINES/access.dm
 	jobtype = /datum/job/oasis/f13denres
 	chemwhiz = TRUE
 	ears = /obj/item/radio/headset/headset_town/commerce
-	uniform = /obj/item/clothing/under/rank/rnd/scientist
+	uniform = /obj/item/clothing/under/f13/vault
 	glasses = /obj/item/clothing/glasses/science
 	neck = /obj/item/clothing/neck/tie/black
 	suit = /obj/item/clothing/suit/toggle/labcoat/science
@@ -959,7 +959,7 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/under/f13/mechanic
 	gloves = /obj/item/clothing/gloves/color/black
 	shoes = /obj/item/clothing/shoes/sneakers/noslip
-	neck = /obj/item/storage/belt/shoulderholster/ranger44
+	neck = /obj/item/storage/belt/holster/ranger44
 	backpack_contents = list(/obj/item/storage/bag/trash = 1,
 	/obj/item/reagent_containers/spray/cleaner = 1,
 	/obj/item/mop = 1,
@@ -973,14 +973,13 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/artisan
 	name = "Artisan"
 	uniform = /obj/item/clothing/under/f13/cowboyg
-	belt = /obj/item/storage/belt/utility/mining/alt
+	belt = /obj/item/storage/belt/utility/mining
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	shoes = /obj/item/clothing/shoes/f13/military/leather
-	neck = /obj/item/storage/belt/shoulderholster/ranger357
+	neck = /obj/item/storage/belt/holster/ranger357
 	backpack_contents = list(/obj/item/twohanded/sledgehammer/simple = 1,
 	/obj/item/book/granter/crafting_recipe/ODF = 1,
 	/obj/item/clothing/glasses/welding = 1,
-	/obj/item/storage/belt/utility/mining/alt = 1,
 	/obj/item/melee/smith/hammer/premade = 1,
 	/obj/item/stack/sheet/mineral/titanium = 15,
 	/obj/item/pickaxe/mini = 1,
@@ -1081,7 +1080,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	jobtype = /datum/job/wasteland/f13enforcer
 
 	id = /obj/item/card/id/denid
-	belt = /obj/item/storage/belt/army/assault
+	belt = /obj/item/storage/belt/military/army
 	shoes = /obj/item/clothing/shoes/laceup
 	ears = /obj/item/radio/headset/headset_den
 	l_pocket = /obj/item/melee/onehanded/knife/switchblade
@@ -1169,7 +1168,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	jobtype = /datum/job/wasteland/f13mobboss
 
 	id = /obj/item/card/id/denid
-	belt = /obj/item/storage/belt/army/assault
+	belt = /obj/item/storage/belt/military/army
 	ears = /obj/item/radio/headset/headset_den
 	shoes = /obj/item/clothing/shoes/laceup
 	l_pocket = /obj/item/melee/onehanded/knife/switchblade
