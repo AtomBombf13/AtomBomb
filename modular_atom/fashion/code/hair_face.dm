@@ -1,6 +1,8 @@
+/* Copied to sprite_accessories subtree for code reasons. This file is not actually used, included so all the data thats needed in the module is collected.
+
 /////////////////////////////
 // Facial Hair Definitions //
-/////////////////////////////
+///////////////////////////// 
 /datum/sprite_accessory/facial_hair
 	icon = 'modular_atom/fashion/icons/facial_hair.dmi'
 	gender = MALE
@@ -155,4 +157,4 @@
 /datum/sprite_accessory/facial_hair/eyebrows
 	name = "Eyebrows (Bushy)"
 	icon_state = "facial_eyebrows"
-
+*/

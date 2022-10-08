@@ -1,3 +1,4 @@
+/* Copied to sprite_accessories subtree for code reasons. This file is not actually used, included so all the data thats needed in the module is collected.
 //////////////////////
 // Hair Definitions //
 //////////////////////
@@ -804,3 +805,4 @@
 /datum/sprite_accessory/hair/wild_silly
 	name = "Wild (Silly)"
 	icon_state = "wild_silly"
+*/
