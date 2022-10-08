@@ -25,7 +25,6 @@
 	max_combined_w_class = STORAGE_BIG_BOX_DEFAULT_MAX_TOTAL_SPACE
 	max_volume = STORAGE_BIG_BOX_DEFAULT_MAX_TOTAL_SPACE
 	rustle_sound = TRUE
-	number_of_rows = STORAGE_ROWS_BIGBOX
 
 /datum/component/storage/concrete/box/big/snap_pop
 	quickdraw = TRUE
@@ -47,7 +46,6 @@
 	max_combined_w_class = STORAGE_HUGE_BOX_DEFAULT_MAX_TOTAL_SPACE
 	max_volume = STORAGE_HUGE_BOX_DEFAULT_MAX_TOTAL_SPACE
 	rustle_sound = TRUE
-	number_of_rows = STORAGE_ROWS_HUGEBOX
 
 /datum/component/storage/concrete/box/huge/lights
 	quickdraw = TRUE
