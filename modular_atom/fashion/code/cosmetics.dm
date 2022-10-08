@@ -4,8 +4,9 @@
 	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	gender = PLURAL
+	var/datum/sprite_accessory/hair/hair_style = null
 
-// ------------------------ LIPSTICK ------------------------------- // tiny colordot onmob -AffectedArc07
+// ------------------------ LIPSTICK ------------------------------- //  -AffectedArc07
 /obj/item/cosmetics/lipstick
 	name = "red lipstick"
 	desc = "A generic brand of lipstick."
@@ -105,18 +106,16 @@
 		..()
 
 // ------------------------ HANDHELD MIRROR ------------------------------- // for applying makeup and a little mood boost - Pebbles
-/obj/item/cosmetics/mirror
-	name = "handheld mirror"
+/obj/item/cosmetics/mirror_makeup
+	name = "makeup mirror"
 	desc = "Makes it easy to apply a tiny bit of makeup. Has a few tiny vials in the handle with powders and whatnot."
 	icon_state = "mirror"
 
-/obj/item/cosmetics/mirror/attack_self(mob/living/carbon/human/user)
-	if(!user.incapacitated())
-	else
-		user.visible_message("<span class='notice'>\The [user] checks for dirt in \the [src].</span>")
-		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "hug", /datum/mood_event/hug)
+/obj/item/cosmetics/mirror_makeup/attack_self(mob/living/carbon/human/user)
+	user.visible_message("<span class='notice'>\The [user] checks for dirt in \the [src]. Its comforting to know you don't have a piece of gecko on your forehead.</span>")
+	SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "hug", /datum/mood_event/hug)
 
-/obj/item/cosmetics/mirror/attack(mob/M, mob/user)
+/obj/item/cosmetics/mirror_makeup/attack(mob/M, mob/user)
 	if(!ismob(M))
 		return
 
@@ -238,26 +237,76 @@
 	else
 		..()
 
-// ------------------------ COMBS AND BRUSHES ------------------------------- //
-/obj/item/cosmetics/haircomb //sparklysheep's comb - I added some actual effects from the brushing, differing by hair length flag
+// ------------------------ COMBS AND BRUSHES ------------------------------ // - Pebbles
+/obj/item/cosmetics/haircomb //This was painful to make
 	name = "hair comb"
 	desc = "A worn comb made from old plastic."
 	slot_flags = SLOT_EARS
 	icon_state = "comb"
 	item_state = "comb"
 
-/obj/item/cosmetics/haircomb/attack_self(var/mob/living/carbon/human/user)
-	if(!user.incapacitated())
-		user.visible_message("<span class='notice'>\The [user] uses \the [src] to comb their hair with incredible style and sophistication. What a [user.gender == FEMALE ? "lady" : "guy"].</span>")
+
+// This code is meant to make the item comb a mob on clicking them with the item, giving a message in chat, and can't be done while wearing a hat.
+// Idea is to use hairstyle flags and give various mood boosts depending on hair length, and none to baldies. Some issue making this part work properly. Only paritally done, for working full section see bottom. 
+/obj/item/cosmetics/haircomb/attack(mob/M, mob/user) 
+	var/mob/living/carbon/human/H = M
+	if(!ismob(M))
+		return
+	if(istype(H.head, /obj/item/clothing/head))
+		to_chat(user, span_warning("Remove [ H == user ? "your" : "[H.p_their()]" ] headwear before you use your comb."))
+		return
+
+	if(ishuman(M))
+		if(H == user)
+//			var/datum/sprite_accessory/hair/hair_style = GLOB.hair_styles_list[H.hair_style]
+//			if(hair_style.flags & VERY_SHORT_HAIR)
+//				to_chat(user, span_warning("[user] scrapes the scalp in a futile attempt to comb the hair."))	
+			user.visible_message(span_notice("[user] combs [user.p_their()] hair with \the [src]. What a tidy[user.gender == FEMALE ? "gal" : "guy"]"), \
+			span_notice("You comb your hair for a moment, getting rid of dust and grime. Perfect!"))
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "combed", /datum/mood_event/combed)
+		else
+			user.visible_message(span_warning("[user] begins to comb [H]'s hair."), \
+								span_notice("You begin to comb [H]'s hair..."))
+			if(do_after(user, 30, target = H))
+				user.visible_message("[user] combs [H]'s hair.", \
+									span_notice("You groom [H]'s hair."))
+				SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "combed", /datum/mood_event/combed)
+	else
+		to_chat(user, span_warning("Where is the hair on that?"))
+
 
 /obj/item/cosmetics/haircomb/brush
 	name = "hairbrush"
-	desc = "A surprisingly decent hairbrush with a false wood handle and semi-soft bristles."
+	desc = "A surprisingly decent hairbrush with a wood handle and semi-soft bristles."
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = null
 	icon_state = "brush"
 	item_state = "brush"
 
+/obj/item/cosmetics/haircomb/brush/attack(mob/M, mob/user)
+	var/mob/living/carbon/human/H = M
+	if(!ismob(M))
+		return
+	if(istype(H.head, /obj/item/clothing/head))
+		to_chat(user, span_warning("Remove [ H == user ? "your" : "[H.p_their()]" ] headgear before you use your brush."))
+		return
+
+	if(ishuman(M))
+		if(H == user)
+			user.visible_message(span_notice("[user] brushes [user.p_their()] hair with \the [src]."), \
+								span_notice("You brush your hair for a moment, enjoying the feeling."))
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "brushed", /datum/mood_event/brushed)
+		else
+			user.visible_message(span_warning("[user] begins to brush [H]'s hair."), \
+								span_notice("You begin to brush [H]'s hair..."))
+			if(do_after(user, 40, target = H))
+				user.visible_message("[user] brushes [H]'s hair.", \
+									span_notice("You groom [H]'s hair."))
+			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "brushed", /datum/mood_event/brushed)
+	else
+		to_chat(user, span_warning("Where is the hair on that?"))
+
+/*
 /obj/item/cosmetics/haircomb/brush/attack_self(mob/living/carbon/human/user)
 	if(!user.incapacitated())
 		var/datum/sprite_accessory/hair/hair_style = GLOB.hair_styles_list[user.hair_style]
@@ -269,3 +318,4 @@
 		else
 			user.visible_message("<span class='notice'>\The [user] meticulously brushes their hair with \the [src].</span>")
 			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "hug", /datum/mood_event/hug)
+*/
