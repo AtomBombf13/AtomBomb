@@ -1362,7 +1362,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(QDELETED(H))	//may be called from a timer
 		return
 	H.facial_hair_style = "Shaved"
-	H.hair_style = "Bald"
+	H.hair_style = "Wild (Radiated)"
 	H.update_hair()
 
 //////////////////
