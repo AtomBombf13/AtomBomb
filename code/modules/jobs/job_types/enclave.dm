@@ -92,7 +92,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762 = 2,
 		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
-		/obj/item/ammo_box/magazine/m44 = 2,
+		/obj/item/ammo_box/magazine/pistol44 = 2,
 		)
 
 /datum/outfit/loadout/lt_plasma

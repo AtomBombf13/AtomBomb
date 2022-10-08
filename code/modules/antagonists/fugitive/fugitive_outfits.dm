@@ -74,7 +74,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer/swat/spacepol
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset
-	l_pocket = /obj/item/ammo_box/magazine/m45
+	l_pocket = /obj/item/ammo_box/magazine/pistol45
 	r_pocket = /obj/item/restraints/handcuffs
 	id = /obj/item/card/id
 

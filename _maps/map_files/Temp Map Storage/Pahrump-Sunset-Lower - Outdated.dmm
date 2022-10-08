@@ -3966,7 +3966,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/m10mm/adv/simple,
+/obj/item/ammo_box/magazine/pistol10mm,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
@@ -4310,8 +4310,8 @@
 "ctZ" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -24203,7 +24203,7 @@
 /obj/structure/sign/poster/prewar/vault_tec{
 	pixel_y = 30
 	},
-/obj/item/ammo_box/magazine/m10mm/adv/simple,
+/obj/item/ammo_box/magazine/pistol10mm,
 /turf/open/floor/carpet/vault,
 /area/f13/building)
 "omD" = (

@@ -223,8 +223,8 @@
 	icon_state = "rockwell"
 	item_state = "uzi"
 	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/m22/extended
-	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
+	mag_type = /obj/item/ammo_box/magazine/pistol22/extended
+	init_mag_type = /obj/item/ammo_box/magazine/pistol22/extended
 
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -430,7 +430,7 @@
 	icon_prefix = "smg10mm"
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/m10mm
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv/ext
+	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm/extended
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
@@ -747,8 +747,8 @@
 	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. Chambered in 9mm."
 	icon_state = "delisle"
 	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/m9mm
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm
+	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -793,7 +793,7 @@
 	icon_state = "m1carbine"
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/m10mm
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv
+	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -902,8 +902,8 @@
 	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. This modified version is often used by the Brotherhood of Steel. Its stock has been replaced by post-war polymer furniture, with space to mount a scope. Chambered in .45 ACP."
 	icon_state = "commando"
 	item_state = "commando"
-	mag_type = /obj/item/ammo_box/magazine/m45
-	init_mag_type = /obj/item/ammo_box/magazine/m45/socom
+	mag_type = /obj/item/ammo_box/magazine/pistol45
+	init_mag_type = /obj/item/ammo_box/magazine/pistol45/socom
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -994,8 +994,8 @@
 	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
 	icon_state = "svarmint"
 	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/m22
-	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
+	mag_type = /obj/item/ammo_box/magazine/pistol22
+	init_mag_type = /obj/item/ammo_box/magazine/pistol22/extended
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT

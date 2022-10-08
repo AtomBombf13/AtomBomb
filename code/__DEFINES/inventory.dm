@@ -182,13 +182,13 @@
 
 /// Little bitty ammo thingies
 GLOBAL_LIST_INIT(small_ammo_types, typecacheof(list(
-	/obj/item/ammo_box/magazine/m22,
+	/obj/item/ammo_box/magazine/pistol22,
 	/obj/item/ammo_box/magazine/zipgun,
-	/obj/item/ammo_box/magazine/m9mm,
+	/obj/item/ammo_box/magazine/pistol9mm,
 	/obj/item/ammo_box/magazine/m10mm,
-	/obj/item/ammo_box/magazine/m45,
-	/obj/item/ammo_box/magazine/m44,
-	/obj/item/ammo_box/magazine/m14mm,
+	/obj/item/ammo_box/magazine/pistol45,
+	/obj/item/ammo_box/magazine/pistol44,
+	/obj/item/ammo_box/magazine/pistol14mm,
 	/obj/item/ammo_box/magazine/m10mm/rifle,
 	/obj/item/ammo_box/magazine/autopipe,
 	/obj/item/ammo_box/magazine/m556/rifle/small,
@@ -213,7 +213,7 @@ GLOBAL_LIST_INIT(holster_allowed, typecacheof(list(
 
 /// Not so little bitty ammo thingies
 GLOBAL_LIST_INIT(holster_disallowed, typecacheof(list(
-	/obj/item/ammo_box/magazine/m22/extended
+	/obj/item/ammo_box/magazine/pistol22/extended
 	)))
 
 GLOBAL_LIST_INIT(advanced_hardsuit_allowed, typecacheof(list(

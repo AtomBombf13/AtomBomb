@@ -13,7 +13,7 @@
 	id = "m45"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 80000)
-	build_path = /obj/item/ammo_box/magazine/m45
+	build_path = /obj/item/ammo_box/magazine/pistol45
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

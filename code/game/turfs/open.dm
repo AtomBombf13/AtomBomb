@@ -296,6 +296,7 @@
 /turf/open/proc/ClearWet()//Nuclear option of immediately removing slipperyness from the tile instead of the natural drying over time
 	qdel(GetComponent(/datum/component/wet_floor))
 
+/* Commented out since it creates a ton of runtimes currently. I suppose atmos has been gutted too much? If anyone know how to fix, please do, gas impacting radiation strength is neat. RUNTIME
 /turf/open/rad_act(pulse_strength)
 	. = ..()
 	if (air.get_moles(GAS_CO2) && air.get_moles(GAS_O2))
@@ -303,3 +304,4 @@
 		air.set_moles(GAS_CO2, max(air.get_moles(GAS_CO2)-(pulse_strength/1000),0))
 		air.set_moles(GAS_O2, max(air.get_moles(GAS_O2)-(pulse_strength/2000),0))
 		air.adjust_moles(GAS_PLUOXIUM, pulse_strength/4000)
+*/

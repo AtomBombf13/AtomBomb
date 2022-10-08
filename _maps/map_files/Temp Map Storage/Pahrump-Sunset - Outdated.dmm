@@ -54260,7 +54260,7 @@
 	},
 /obj/structure/closet/cabinet,
 /obj/item/gun/ballistic/automatic/pistol/m1911,
-/obj/item/ammo_box/magazine/m45,
+/obj/item/ammo_box/magazine/pistol45,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "wXT" = (
