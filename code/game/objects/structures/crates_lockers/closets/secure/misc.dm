@@ -11,8 +11,8 @@
 	new /obj/item/aicard(src)
 	new /obj/item/assembly/flash/handheld(src)
 	if(prob(50))
-		new /obj/item/ammo_box/magazine/m44(src)
-		new /obj/item/ammo_box/magazine/m44(src)
+		new /obj/item/ammo_box/magazine/pistol44(src)
+		new /obj/item/ammo_box/magazine/pistol44(src)
 		new /obj/item/gun/ballistic/automatic/pistol/deagle(src)
 	else
 		new /obj/item/ammo_box/loader/a357(src)

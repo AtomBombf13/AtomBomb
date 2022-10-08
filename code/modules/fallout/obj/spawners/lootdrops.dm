@@ -64,12 +64,12 @@
 /obj/effect/spawner/lootdrop/ammo
 /*	color = "#FF00FF"
 	loot = list(
-	/obj/item/ammo_box/magazine/m10mm/adv = 1,
-	/obj/item/ammo_box/magazine/m10mm/adv/ext = 1,
+	/obj/item/ammo_box/magazine/pistol10mm = 1,
+	/obj/item/ammo_box/magazine/pistol10mm/extended = 1,
 	/obj/item/ammo_box/loader/m44 = 1,
 	/obj/item/ammo_box/magazine/m308 = 1,
 	/obj/item/ammo_box/m308 = 1,
-	/obj/item/ammo_box/magazine/m223 = 1,
+	/obj/item/ammo_box/magazine/pistol223 = 1,
 	/obj/item/ammo_box/m223 = 1,
 	/obj/item/ammo_casing/shotgun/buckshot = 1,
 	/obj/item/weapon/stock_parts/cell = 1)

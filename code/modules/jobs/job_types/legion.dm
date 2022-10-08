@@ -80,9 +80,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	. = ..()
 	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
 	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
-	new /obj/item/ammo_box/magazine/m14mm(src)
-	new /obj/item/ammo_box/magazine/m14mm(src)
-	new /obj/item/ammo_box/magazine/m14mm(src)
+	new /obj/item/ammo_box/magazine/pistol14mm(src)
+	new /obj/item/ammo_box/magazine/pistol14mm(src)
+	new /obj/item/ammo_box/magazine/pistol14mm(src)
 
 
 ///////////////////
@@ -273,7 +273,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/pancor
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
-		/obj/item/ammo_box/magazine/m14mm = 2,
+		/obj/item/ammo_box/magazine/pistol14mm = 2,
 		/obj/item/ammo_box/magazine/d12g = 2,
 		)
 
@@ -338,7 +338,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
+		/obj/item/ammo_box/magazine/pistol10mm/extended = 2,
 		/obj/item/grenade/smokebomb = 1,
 		)
 
@@ -705,7 +705,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	suit_store = /obj/item/gun/ballistic/automatic/delisle/commando
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m45/socom = 3,
+		/obj/item/ammo_box/magazine/pistol45/socom = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/grenade/plastic/c4 = 1
@@ -790,7 +790,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/twohanded/spear/lance = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
+		/obj/item/ammo_box/magazine/pistol10mm/extended = 2,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,

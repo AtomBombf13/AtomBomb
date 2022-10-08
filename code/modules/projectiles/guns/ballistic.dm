@@ -4,7 +4,7 @@
 	icon_state = "pistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	var/spawnwithmagazine = TRUE
-	var/mag_type = /obj/item/ammo_box/magazine/m10mm/adv //Removes the need for max_ammo and caliber 
+	var/mag_type = /obj/item/ammo_box/magazine/pistol10mm //Removes the need for max_ammo and caliber 
 	var/init_mag_type = null
 	var/list/extra_mag_types = list()
 	/// List of mags accepted by the gun
