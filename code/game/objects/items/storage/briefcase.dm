@@ -90,7 +90,7 @@
 	force = 10
 
 /obj/item/storage/briefcase/modularbundle/PopulateContents()
-	new /obj/item/ammo_box/magazine/m10mm(src)
+	new /obj/item/ammo_box/magazine/pistol10mm(src)
 	new /obj/item/clothing/under/suit/black(src)
 	new /obj/item/clothing/accessory/waistcoat(src)
 	new /obj/item/clothing/suit/toggle/lawyer/black/syndie(src)

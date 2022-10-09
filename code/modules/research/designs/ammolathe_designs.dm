@@ -82,7 +82,7 @@
 
 /datum/design/ammolathe/m45
 	name = "empty 10mm pistol magazine (10mm)"
-	id = "m10mm_adv"
+	id = "pistol10mm"
 	materials = list(/datum/material/iron = 2000)
 	build_path = /obj/item/ammo_box/magazine/pistol10mm/empty
 	category = list("initial", "Simple Magazines")
@@ -244,9 +244,9 @@
 	build_path = /obj/item/ammo_box/tube/a357/empty
 	category = list("initial", "Basic Magazines", "Handmade Magazines")
 
-/datum/design/ammolathe/m10mm_adv_ext
+/datum/design/ammolathe/smg10mm
 	name = "empty 10mm SMG magazine (10mm)"
-	id = "m10mm_adv_ext"
+	id = "pistol10mm_ext"
 	materials = list(/datum/material/iron = 4000)
 	build_path = /obj/item/ammo_box/magazine/pistol10mm/extended/empty
 	category = list("initial", "Basic Magazines")
@@ -537,11 +537,11 @@
 
 /* --Tier 4 Ammo and Magazines-- */
 //Tier 4 Magazines
-/datum/design/ammolathe/m10mm_p90
+/datum/design/ammolathe/smg_p90
 	name = "empty toploader magazine (10mm)"
-	id = "m10mm_p90"
+	id = "smg_p90"
 	materials = list(/datum/material/iron = 6000)
-	build_path = /obj/item/ammo_box/magazine/m10mm_p90/empty
+	build_path = /obj/item/ammo_box/magazine/smg_p90/empty
 	category = list("initial", "Advanced Magazines")
 
 /datum/design/ammolathe/smg14stacked

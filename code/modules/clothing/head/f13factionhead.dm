@@ -273,10 +273,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	item_state = "hat_enclave_officer"
 
 
-//////////
-//LEGION//
-//////////
 
+								////////////
+//------------------------------// LEGION //-----------------------------------
+								////////////
 
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet template"
@@ -352,8 +352,8 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
 	name = "legion nightstalker vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a nightstalker."
-	icon_state = "legvex_night"
-	item_state = "legvex_night"
+	icon_state = "legvexil_night"
+	item_state = "legvexil_night"
 
 /obj/item/clothing/head/helmet/f13/legion/venator
 	name = "legion venator hood"
@@ -452,7 +452,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	flags_cover = null
 
 
-//NCR
+
+									/////////
+//----------------------------------// NCR //-----------------------------------
+									/////////
 
 /obj/item/clothing/head/f13/ncr
 	name = "NCR trooper helmet"

@@ -251,7 +251,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/ammo_box/magazine/m762 = 3,
 		/obj/item/melee/powerfist/f13/goliath = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
-		/obj/item/ammo_box/magazine/m10mm = 2,
+		/obj/item/ammo_box/magazine/pistol10mm = 2,
 		)
 
 /datum/outfit/loadout/rangerhunter
