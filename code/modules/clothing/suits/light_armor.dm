@@ -812,77 +812,52 @@
 // NCR //
 /////////
 
-/obj/item/clothing/suit/armor/light/rangerrig
-	name = "chest gear harness"
-	desc = "A handmade tactical rig made of black cloth, attached to a dusty desert-colored belt. A flask and two ammo pouches hang from the belt. Very cool to move about in."
-	icon_state = "r_gear_rig"
-	item_state = "r_gear_rig"
-
-/obj/item/clothing/suit/armor/light/trailranger
-	name = "ranger vest"
-	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
-	icon_state = "cowboyrang"
-	item_state = "cowboyrang"
+//Army
 
 /obj/item/clothing/suit/armor/light/labcoat
 	name = "NCR medical labcoat"
 	desc = "An armored labcoat typically issued to NCR Medical Officers. It's a standard white labcoat with the Medical Officer's name stitched into the breast and a two headed bear sewn into the shoulder."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	icon_state = "ncr_labcoat"
-	item_state = "ncr_labcoat"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
 
-/obj/item/clothing/suit/armor/light/utilityvest
-	name = "utility vest"
-	desc = "A practical vest with pockets for tools and such."
-	icon_state = "vest_utility"
-	item_state = "vest_utility"
-	icon = 'icons/fallout/clothing/suits_utility.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/four
-
-/obj/item/clothing/suit/armor/light/utilityvest/logisticsofficer //same as his beret
-	name = "logistics officer utility vest"
-	desc = "A practical and armored vest with pockets for tools and such."
-
-/obj/item/clothing/suit/armor/light/ncrpatrol
-	name = "NCR patrol vest"
-	desc = "A standard issue NCR Infantry vest."
-	icon_state = "ncr_infantry_vest"
-	item_state = "ncr_infantry_vest"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-
+//Ranger
+/obj/item/clothing/suit/armor/light/trailranger
+	name = "NCR ranger vest"
+	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	icon_state = "ncr_ranger"
 
 ////////////
 // Legion //
 ////////////
 
+/obj/item/clothing/suit/armor/light/legion
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+
 /obj/item/clothing/suit/armor/light/legion/recruit
 	name = "legion recruit armor"
-	desc = "Legion recruit armor is a common light armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
-	icon_state = "legrecruit"
-
-/obj/item/clothing/suit/armor/light/legion/scout
-	name = "legion scout armor"
-	desc = "Armor based on layered strips of laminated linen and leather, the technique giving it surprising resilience for low weight."
-	icon_state = "legexplorer"
-	item_state = "legexplorer"
+	desc = "The most basic legion armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
+	icon_state = "leg_rec"
 
 /obj/item/clothing/suit/armor/light/legion/prime
 	name = "legion prime armor"
 	desc = "It's a legion prime armor, the warrior has been granted some additional protective pieces to add to his suit."
-	icon_state = "legprime"
-
-/obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
-	name = "prefect armor"
-	desc = "Issued to prefects to keep them cool during long hours of watching the slaves work in the sun."
-	icon_state = "legslavemaster"
+	icon_state = "leg_prime"
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
-	desc = "Light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
-	icon_state = "legexplorer"
+	desc = "A light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
+	icon_state = "leg_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
 
+/obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
+	name = "legion exactor armor"
+	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
+	icon_state = "leg_master"
 
 //////////////////////////
 // Brotherhood of Steel //

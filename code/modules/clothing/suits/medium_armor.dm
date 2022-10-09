@@ -827,11 +827,15 @@
 // NCR //
 /////////
 
+//Army
 /obj/item/clothing/suit/armor/medium/vest/ncr
-	name = "NCR armor vest"
-	desc = "A standard issue NCR Infantry armor vest."
+	name = "NCR patrol vest"
+	desc = "A standard issue NCR Infantry vest."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	name = "NCR mantle vest"
@@ -852,63 +856,33 @@
 	icon_state = "ncr_reinforced_mantle"
 	item_state = "ncr_reinforced_mantle"
 
-
-/obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
-	name = "NCR blast-padded reinforced patrol vest"
-	desc = "A standard issue NCR Engineer vest reinforced with a groinpad."
-
 /obj/item/clothing/suit/armor/medium/vest/ncr/officer
 	name = "NCR officer armor vest"
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
 
-/obj/item/clothing/suit/toggle/armor/rangerrecon
-	name = "ranger recon duster"
-	desc = "A thicker than average duster worn by NCR recon rangers out in the field. It's not heavily armored by any means, but is easy to move around in and provides excellent protection from the harsh desert environment."
-	icon_state = "duster_recon"
-	item_state = "duster_recon"
+//Rangers
+/obj/item/clothing/suit/armor/medium/ncr/patrol
+	name = "NCR patrol ranger combat armor"
+	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "ncr_ranger_patrol"
 
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger
-	name = "desert ranger combat armor"
-	desc = "A suit of combat armor styled after those used by the Desert Rangers. It smells like red mist."
-	icon_state = "desert_ranger"
-	item_state = "desert_ranger"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+/obj/item/clothing/suit/armor/medium/ncr/vetranger
+	name = "NCR veteran ranger combat armor"
+	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "ncr_ranger_veteran"
 
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/combat
-	name = "desert ranger combat suit"
-	desc = "A suit of combat armor styled after those used by the Desert Rangers. It smells like red mist."
-	icon_state = "ncr_armor"
-	item_state = "ncr_armor"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer
-	name = "desert ranger officer armor"
-	desc = "A suit of desert ranger styled armor, now with a fancy-looking coat to boot. Very official."
-	icon_state = "ncr_officer_coat"
-	item_state = "ncr_officer_coat"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer/colonel
-	name = "NCR colonels armor"
-	desc = "A suit of desert ranger styled armor, decorated to look more official. Very, very official."
-	icon_state = "ncr_captain_armour"
-	item_state = "ncr_captain_armour"
-
+//Mutants
 /obj/item/clothing/suit/armor/medium/combat/desert_ranger/mutant
 	name = "NCR mutant armor"
 	desc = "Multiple sets of NCR patrol vests that have been fused, stitched and welded together in order to fit the frame of a Super Mutant."
 	icon_state = "mutie_ncr"
 	item_state = "mutie_ncr"
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
-	name = "desert ranger patrol armor"
-	desc = "A set of desert ranger patrol armor, perfect for making blood sausage."
-	icon_state = "ncr_patrol"
-	item_state = "ncr_patrol"
 
 /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol/mutant
 	name = "mutant desert ranger armor"
@@ -916,12 +890,21 @@
 	icon_state = "mutie_ranger_armour"
 	item_state = "mutie_ranger_armour"
 
+//Event
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer/colonel
+	name = "NCR colonel armor"
+	desc = "A suit of desert ranger styled armor, decorated to look more official. Very, very official."
+	icon_state = "ncr_captain_armour"
+	item_state = "ncr_captain_armour"
+
 ////////////
 // LEGION //
 ////////////
 /obj/item/clothing/suit/armor/medium/legion
 	name = "modified Legion armor"
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	cold_protection = CHEST|GROIN
 	heat_protection = CHEST|GROIN
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
@@ -932,59 +915,52 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
-/obj/item/clothing/suit/armor/medium/legion/forgemaster
-	name = "forgemaster armor"
-	desc = "Legion armor reinforced with metal, worn with a Forgemaster apron with the bull insignia over it."
-	icon_state = "opifex_apron"
-	item_state = "opifex_apron"
-	blood_overlay_type = "armor"
-
 /obj/item/clothing/suit/armor/medium/legion/vet
 	name = "legion veteran armor"
-	desc = "Armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
-	icon_state = "legvet"
-	flags_inv = HIDEJUMPSUIT
+	desc = "An armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
+	icon_state = "leg_vet"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the flag of the Legion worn on the back."
-	icon_state = "legvexil"
-	flags_inv = HIDEJUMPSUIT
+	icon_state = "leg_vex"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/legion/orator
-	name = "Legion Orator armor"
+	name = "legion orator armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
-	icon_state = "legvet" //Placeholder until someone finds the actual sprite
+	icon_state = "leg_orator"
 
-/obj/item/clothing/suit/armor/legion/rangercent //speed and bullet resist, sacrifices all else
-	name = "ranger-hunter centurion armor"
+/obj/item/clothing/suit/armor/medium/legion/centurion //good all around
+	name = "legion centurion armor"
+	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
+	icon_state = "leg_cent"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
+
+/obj/item/clothing/suit/armor/medium/legion/rangercent //speed and bullet resist, sacrifices all else
+	name = "legion centurion ranger-hunter armor"
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
-	icon_state = "rangercent"
-	item_state = "rangercent"
+	icon_state = "leg_cent_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/combat/legion
-	name = "Legion combat armor"
+	name = "legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "legion_armor"
-	item_state = "legion_armor"
+	icon_state = "combat_armor_legion"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
-	name = "reinforced Legion combat armor"
+	name = "reinforced legion combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "legion_armor_mk2"
-	item_state = "legion_armor_mk2"
+	icon_state = "combat_armor_legion_mk2"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
-
 
 //////////////////////////
 // Brotherhood of Steel //

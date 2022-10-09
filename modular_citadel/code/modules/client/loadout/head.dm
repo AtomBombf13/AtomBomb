@@ -264,39 +264,9 @@
 
 //NCR
 
-/datum/gear/head/ncr_sapper
-	name = "NCR sapper beret"
-	path = /obj/item/clothing/head/beret/ncr/ncr_sapper
-	cost = 4
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Combat Engineer",
-							"NCR Off-Duty"
-						)
-
-/datum/gear/head/ncr_cap
-	name = "NCR garrison cap"
-	path = /obj/item/clothing/head/f13/ncr/ncr_cap
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty"
-						)
-
-/datum/gear/head/steelpot_goggles
+/datum/gear/head/ncr_storm
 	name = "NCR storm helmet"
-	path = /obj/item/clothing/head/f13/ncr/steelpot_goggles
+	path = /obj/item/clothing/head/f13/ncr/storm
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 2
 	restricted_desc = "NCR"
@@ -311,98 +281,6 @@
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
 							"NCR Trooper",
-						)
-
-/datum/gear/head/steelpot_gambler
-	name = "NCR gambler helmet"
-	path = /obj/item/clothing/head/f13/ncr/steelpot_gambler
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-						)
-
-datum/gear/head/steelpot_bandolier
-	name = "NCR bandolier helmet"
-	path = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-						)
-
-
-
-/datum/gear/head/ncr_slouch
-	name = "NCR slouch hat"
-	path = /obj/item/clothing/head/f13/ncr/ncr_slouch
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty"
-						)
-
-/datum/gear/head/ncr_flapcap
-	name = "NCR field cap"
-	path = /obj/item/clothing/head/f13/ncr/ncr_flapcap
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty"
-						)
-
-/datum/gear/head/ncr_campaign
-	name = "NCR campaign hat"
-	path = /obj/item/clothing/head/f13/ncr/ncr_campaign
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 4
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Sergeant",
-							"NCR Heavy Trooper"
 						)
 
 /datum/gear/head/oasishelmet

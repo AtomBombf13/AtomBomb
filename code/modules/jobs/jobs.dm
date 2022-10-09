@@ -93,7 +93,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
-"Legion Auxilia",
 "Legion Slave",
 
 "Mayor",
@@ -159,20 +158,18 @@ GLOBAL_LIST_INIT(legion_command_positions, list(
 GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Centurion",
 	"Legion Orator",
+	"Legion Vexillarius",
 	"Legion Veteran Decanus",
 	"Legion Prime Decanus",
 	"Legion Recruit Decanus",
-	"Legion Vexillarius",
+	"Legion Assassin",
 	"Legion Explorer",
-	"Legion Scout",
 	"Veteran Legionnaire",
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
-	"Legion Forgemaster",
+	"Camp Exactor",
 	"Legion Immune",
-	"Legion Auxilia",
-	"Legion Slave",
-	"Legion Slavemaster"
+	"Legion Slave"
 ))
 
 GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
