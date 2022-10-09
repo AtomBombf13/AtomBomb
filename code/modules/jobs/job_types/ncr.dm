@@ -1174,7 +1174,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Assault"
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm = 2,
+		/obj/item/ammo_box/magazine/pistol10mm = 2,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/menu_two = 1,
 		)

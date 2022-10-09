@@ -1413,7 +1413,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	name = "P90 SMG spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/p90,
-				/obj/item/ammo_box/magazine/m10mm_p90/
+				/obj/item/ammo_box/magazine/smg_p90/
 	)
 
 /obj/effect/spawner/bundle/f13/hunting

@@ -77,7 +77,7 @@
 /obj/item/ammo_box/magazine/pistol10mm
 	name = "10mm pistol magazine"
 	desc = "A small magazine (10mm)."
-	icon_state = "m10mm"
+	icon_state = "pistol10mm"
 	caliber = list(CALIBER_10MM)
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
 	ammo_type = /obj/item/ammo_casing/c10mm

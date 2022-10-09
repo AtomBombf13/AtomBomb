@@ -2614,12 +2614,6 @@ Records disabled until a use for them is found
 				if("genital_examine")
 					cit_toggles ^= GENITAL_EXAMINE
 
-				if("breast_enlargement")
-					cit_toggles ^= BREAST_ENLARGEMENT
-
-				if("penis_enlargement")
-					cit_toggles ^= PENIS_ENLARGEMENT
-
 				if("feminization")
 					cit_toggles ^= FORCED_FEM
 
@@ -2637,9 +2631,6 @@ Records disabled until a use for them is found
 
 				if("ass_slap")
 					cit_toggles ^= NO_ASS_SLAP
-
-				if("bimbo")
-					cit_toggles ^= BIMBOFICATION
 
 				if("auto_wag")
 					cit_toggles ^= NO_AUTO_WAG
