@@ -17,9 +17,9 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/tableanvil
+/datum/crafting_recipe/blacksmith/tableanvil
 	name = "Table Anvil"
-	result = /obj/structure/anvil/obtainable/table
+	result = /obj/structure/blacksmith/anvil/obtainable/table
 	time = 300
 	reqs = list(
 		/obj/item/stack/sheet/metal = 8,
@@ -29,9 +29,9 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/anvil
+/datum/crafting_recipe/blacksmith/anvil
 	name = "Anvil"
-	result = /obj/structure/anvil/obtainable/basic
+	result = /obj/structure/blacksmith/anvil/obtainable
 	time = 450
 	reqs = list(
 		/obj/item/stack/sheet/metal = 50,
@@ -41,28 +41,39 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/sandvil
+/datum/crafting_recipe/blacksmith/sandvil
 	name = "Sandstone Anvil"
-	result = /obj/structure/anvil/obtainable/sandstone
+	result = /obj/structure/blacksmith/anvil/obtainable/sandstone
 	time = 300
-	reqs = list(/obj/item/stack/sheet/mineral/sandstone = 16)
+	reqs = list(/obj/item/stack/sheet/mineral/sandstone = 50)
 	tools = list(TOOL_CROWBAR)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/furnace
+/datum/crafting_recipe/blacksmit/furnace
 	name = "Furnace"
-	result = /obj/structure/furnace
+	result = /obj/structure/blacksmith/furnace
 	time = 300
 	reqs = list(
-		/obj/item/stack/sheet/mineral/sandstone = 20,
+		/obj/item/stack/sheet/mineral/sandstone = 30,
 		/obj/item/stack/sheet/metal = 6,
 		)
 	tools = list(TOOL_CROWBAR)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/barrelfire
+/datum/crafting_recipe/blacksmith/quenching_trough
+	name = "Quenching trough"
+	result = /obj/structure/blacksmith/quenching
+	reqs = list(
+		/obj/item/stack/sheet/mineral/wood = 20,
+		/datum/reagent/water = 300,
+		)
+	time = 100
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
+/datum/crafting_recipe/barrelfire // needs to be a ore smelter thing
 	name = "Stoke barrel fire"
 	result = /obj/structure/campfire/barrel
 	reqs = list(
@@ -73,7 +84,7 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/tools/forged/sledge
+/datum/crafting_recipe/tools/forged/sledge // metalworking bench
 	name = "Sledgehammer"
 	result = /obj/item/twohanded/sledgehammer/simple
 	time = 700
@@ -81,22 +92,10 @@
 		/obj/item/stack/sheet/metal = 15,
 		/obj/item/stack/sheet/mineral/wood = 5,
 		)
-	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
+	tools = list(TOOL_FORGE)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/bone_ingot
-	name = "Processable bone"
-	result = /obj/item/ingot/bone
-	time = 100
-	reqs = list(
-		/obj/item/stack/sheet/bone = 2,
-		/obj/item/crafting/wonderglue = 1,
-		/obj/item/stack/rods = 2
-		)
-	tools = list(TOOL_WORKBENCH)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
 
 //KNIVES//
 
@@ -185,18 +184,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
-/datum/crafting_recipe/melee/forged/bowie_knife
-	name = "Bowie Knife"
-	result = /obj/item/melee/onehanded/knife/bowie
-	reqs = list(
-		/obj/item/stack/sheet/metal = 8,
-		/obj/item/blacksmith/swordhandle = 1,
-		)
-	time = 200
-	tools = list(TOOL_FORGE)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-
 /datum/crafting_recipe/melee/forged/trench_knife
 	name = "Trench Knife"
 	result = /obj/item/melee/onehanded/knife/trench
@@ -223,20 +210,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
-/datum/crafting_recipe/melee/forged/machete
-	name = "Machete"
-	result = /obj/item/melee/onehanded/machete/forgedmachete
-	reqs = list(
-		/obj/item/stack/sheet/metal = 10,
-		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/blacksmith/swordhandle = 1,
-		)
-	time = 180
-	tools = list(TOOL_FORGE)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-
-
 /datum/crafting_recipe/scrapsabre
 	name = "Scrap sabre"
 	result = /obj/item/melee/onehanded/machete/scrapsabre
@@ -251,52 +224,7 @@
 	subcategory = CAT_MELEE
 
 
-// LEGION SPECIFIC
-
-/datum/crafting_recipe/spatha
-	name = "Spatha"
-	result = /obj/item/melee/onehanded/machete/spatha
-	reqs = list(
-		/obj/item/stack/sheet/metal = 18,
-		/obj/item/stack/sheet/leather = 2,	//custom hilt -
-		/obj/item/stack/sheet/bronze = 2,	//made from scratch -
-		/obj/item/stack/sheet/bone = 2,	//see desc for more info.
-	    )
-	time = 380
-	tools = list(TOOL_FORGE)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-	always_available = FALSE
-
-/datum/crafting_recipe/gladius
-	name = "Gladius"
-	result = /obj/item/melee/onehanded/machete/gladius
-	reqs = list(
-		/obj/item/stack/sheet/metal = 15,
-		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/blacksmith/swordhandle = 1,
-		)
-	time = 280
-	tools = list(TOOL_FORGE)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-	always_available = FALSE
-
-/datum/crafting_recipe/legionlance
-	name = "Legion Lance"
-	result = /obj/item/twohanded/spear/lance
-	reqs = list(
-		/obj/item/stack/sheet/metal = 18,
-		/obj/item/stack/sheet/cloth = 1,
-		/obj/item/stack/sheet/mineral/wood = 6,
-		)
-	time = 180
-	tools = list(TOOL_FORGE)
-	category = CAT_WEAPONRY
-	subcategory = CAT_MELEE
-	always_available = FALSE
-
-
+// LEGION
 /datum/crafting_recipe/legionshield
 	name = "Legion Shield"
 	result = /obj/item/shield/riot/legion

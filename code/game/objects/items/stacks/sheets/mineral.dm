@@ -149,7 +149,7 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 	new/datum/stack_recipe("uranium tile", /obj/item/stack/tile/mineral/uranium, 1, 4, 20), \
 	new/datum/stack_recipe("Nuke Statue", /obj/structure/statue/uranium/nuke, 5, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Engineer Statue", /obj/structure/statue/uranium/eng, 5, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("uranium ingot", /obj/item/ingot/uranium, 6, time = 100), \
+	new/datum/stack_recipe("uranium ingot", /obj/item/blacksmith/ingot/uranium, 6, time = 100), \
 	))
 
 /obj/item/stack/sheet/mineral/uranium/get_main_recipes()
@@ -227,7 +227,7 @@ GLOBAL_LIST_INIT(gold_recipes, list ( \
 	new/datum/stack_recipe("RD Statue", /obj/structure/statue/gold/rd, 5, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Simple Crown", /obj/item/clothing/head/crown, 5), \
 	new/datum/stack_recipe("CMO Statue", /obj/structure/statue/gold/cmo, 5, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("gold ingot", /obj/item/ingot/gold, 6, time = 100), \
+	new/datum/stack_recipe("gold ingot", /obj/item/blacksmith/ingot/gold, 6, time = 100), \
 	))
 
 /obj/item/stack/sheet/mineral/gold/get_main_recipes()
@@ -259,7 +259,7 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
 	new/datum/stack_recipe("Sec Officer Statue", /obj/structure/statue/silver/sec, 5, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Sec Borg Statue", /obj/structure/statue/silver/secborg, 5, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Med Borg Statue", /obj/structure/statue/silver/medborg, 5, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("silver ingot", /obj/item/ingot/silver, 6, time = 100), \
+	new/datum/stack_recipe("silver ingot", /obj/item/blacksmith/ingot/silver, 6, time = 100), \
 	))
 
 /obj/item/stack/sheet/mineral/silver/get_main_recipes()
@@ -288,7 +288,7 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
 
 GLOBAL_LIST_INIT(titanium_recipes, list ( \
 	new/datum/stack_recipe("titanium tile", /obj/item/stack/tile/mineral/titanium, 1, 4, 20), \
-	new/datum/stack_recipe("titanic ingot", /obj/item/ingot/titanium, 6, time = 100), \
+	new/datum/stack_recipe("titanic ingot", /obj/item/blacksmith/ingot/titanium, 6, time = 100), \
 	new/datum/stack_recipe("bear trap", /obj/item/restraints/legcuffs/beartrap, 1, time = 50), \
 	new/datum/stack_recipe("high quality parts", /obj/item/stack/crafting/goodparts, 5, time = 50) \
 	))
@@ -338,7 +338,7 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
  */
 GLOBAL_LIST_INIT(adamantine_recipes, list(
 	new /datum/stack_recipe("incomplete servant golem shell", /obj/item/golem_shell/servant, req_amount=1, res_amount=1),
-	new/datum/stack_recipe("adamant ingot", /obj/item/ingot/adamantine, 6, time = 100), \
+	new/datum/stack_recipe("adamant ingot", /obj/item/blacksmith/ingot/adamantine, 6, time = 100), \
 	))
 
 /obj/item/stack/sheet/mineral/adamantine
