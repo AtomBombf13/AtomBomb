@@ -108,7 +108,7 @@
 // ------------------------ HANDHELD MIRROR ------------------------------- // for applying makeup and a little mood boost - Pebbles
 /obj/item/cosmetics/mirror_makeup
 	name = "makeup mirror"
-	desc = "Makes it easy to apply a tiny bit of makeup. Has a few tiny vials in the handle with powders and whatnot."
+	desc = "Makes it easy to apply a bit of makeup. Has a few tiny vials in the handle with powders and whatnot."
 	icon_state = "mirror"
 
 /obj/item/cosmetics/mirror_makeup/attack_self(mob/living/carbon/human/user)
@@ -277,7 +277,7 @@
 
 /obj/item/cosmetics/haircomb/brush
 	name = "hairbrush"
-	desc = "A surprisingly decent hairbrush with a wood handle and semi-soft bristles."
+	desc = "Well-used hairbrush with a wooden handle and semi-soft bristles."
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = null
 	icon_state = "brush"
@@ -306,7 +306,7 @@
 	else
 		to_chat(user, span_warning("Where is the hair on that?"))
 
-/*
+/* REASON THIS ISNT USED: works by clicking the brush itself, instead of slapping the mob with it. If the way stuff works isnt systematic I dont want it, so its just here for now, taunting me.
 /obj/item/cosmetics/haircomb/brush/attack_self(mob/living/carbon/human/user)
 	if(!user.incapacitated())
 		var/datum/sprite_accessory/hair/hair_style = GLOB.hair_styles_list[user.hair_style]
