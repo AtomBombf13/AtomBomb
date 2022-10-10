@@ -992,6 +992,7 @@
 /obj/item/gun/ballistic/automatic/sportcarbine
 	name = "sport carbine"
 	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "svarmint"
 	item_state = "varmintrifle"
 	mag_type = /obj/item/ammo_box/magazine/pistol22
