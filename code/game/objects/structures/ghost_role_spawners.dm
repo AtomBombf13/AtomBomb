@@ -742,7 +742,7 @@
 	flavour_text = "Rangers lead the way!"
 	assignedrole = "NCR Ranger"
 	outfit = /datum/outfit/job/ncr/f13ranger
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
+	suit = /obj/item/clothing/suit/armor/medium/combat/patrol
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	head = /obj/item/clothing/head/f13/ncr/patrol
 	backpack_contents = list(

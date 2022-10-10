@@ -301,20 +301,20 @@ Head Scribe
 		)
 
 /*
-Head Knight
+Knight-Captain
 */
 
 /datum/job/bos/f13knightcap
-	title = "Head Knight"
+	title = "Knight-Captain"
 	flag = F13KNIGHTCAPTAIN
 	display_order = JOB_DISPLAY_ORDER_KNIGHTCAPTAIN
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the Head Knight, leader of your respective division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
+	description = "You are the Knight-Captain, leader of your respective division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the elder"
+	supervisors = "the Elder and Head Paladin in external affairs"
 	selection_color = "#7f8c8d"
 
 	exp_requirements = 1500
@@ -356,7 +356,7 @@ Head Knight
 
 
 /datum/outfit/job/bos/f13knightcap
-	name = "Head Knight"
+	name = "Knight-Captain"
 	jobtype = /datum/job/bos/f13knightcap
 	gunsmith_one = TRUE
 	gunsmith_two = TRUE
@@ -753,10 +753,10 @@ Senior Knight
 	display_order = JOB_DISPLAY_ORDER_SENIORKNIGHT
 	total_positions = 2
 	spawn_positions = 2
-	description = "You report directly to the Head Knight. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
+	description = "You report directly to the Knight-Captain. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the Head Knight"
+	supervisors = "the Knight-Captain inside, Paladins outside"
 	selection_color = "#95a5a6"
 	exp_requirements = 900
 
@@ -865,7 +865,7 @@ Knight
 	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
 	forbids = "TheBrotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
-	supervisors = "the Senior Knight, and Head Knight"
+	supervisors = "the Senior Knight, and Knight-Captain"
 	selection_color = "#95a5a6"
 
 	exp_requirements = 300

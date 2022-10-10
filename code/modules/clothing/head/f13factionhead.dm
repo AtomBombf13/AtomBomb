@@ -537,39 +537,29 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Knights."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "brotherhood_helmet_knight"
-	item_state = "brotherhood_helmet_knight"
-
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
-	item_state = "brotherhood_helmet_senior"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
-	name = "brotherhood head knight helmet"
-	desc = "An improved combat helmet, bearing the symbol of the Head Knight."
+	name = "brotherhood knight-captain helmet"
+	desc = "An improved combat helmet, bearing the symbol of the Knight-Captain."
 	icon_state = "brotherhood_helmet_captain"
-	item_state = "brotherhood_helmet_captain"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
 	desc = "An old degraded pre-war combat helmet, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
-	item_state = "brotherhood_helmet"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate/mk2
 	name = "reinforced knight helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
-	item_state = "brotherhood_helmet"
-
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/outcast
-	name = "brotherhood helmet"
-	desc = " An improved combat helmet, bearing a series of red markings."
-	icon_state = "brotherhood_helmet_outcast"
-	item_state = "brotherhood_helmet_outcast"
 
 /obj/item/clothing/head/f13/boscap
 	name = "brotherhood formal cap"
@@ -591,47 +581,34 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/f13/town
 	name = "town tricorn"
 	desc = "Why are there tricorns in the desert again?"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "tricorn"
-	item_state = "dethat"
-	flags_inv = HIDEHAIR
-	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/f13/town/mayor
 	name = "mayoral tricorn"
-	desc = "A tricorn in the desert.  Stranger things have happened."
-
-/obj/item/clothing/head/f13/town/big
-	name = "big hat, big iron."
 	desc = "It's a big hat."
 	icon_state = "bigcowboyhat"
 
 /obj/item/clothing/head/f13/town/deputy
 	name = "deputy hat"
 	desc = "Leather Cowboy hat, worn by eastwood deputies."
-	icon_state = "The_good"
-
-/obj/item/clothing/head/f13/town/deputy/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-/obj/item/clothing/head/f13/town/officer
-	name = "Eastwood officer's cap"
-	desc = "A simple dark navy peaked cap, worn by police."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "police_officer"
-	item_state = "police_officer"
+	icon_state = "deputyhat"
 
 /obj/item/clothing/head/f13/town/sheriff
 	name = "sheriff hat"
 	desc = "A black cowboy hat with a snakeskin band."
 	icon_state = "sheriffhat"
 
+/obj/item/clothing/head/f13/town/officer
+	name = "eastwood officer's cap"
+	desc = "A simple dark navy peaked cap, worn by police."
+	icon_state = "police_officer"
+	item_state = "police_officer"
+
 /obj/item/clothing/head/f13/town/chief
-	name = "Eastwood Chief's hat"
+	name = "eastwood chief's hat"
 	desc = "A blue hat with a silver badge."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "police_chief"
 	item_state = "police_chief"
 

@@ -141,7 +141,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	title = "Legion Orator"
 	flag = F13ORATOR
 	supervisors = "Centurion"
-	selection_color = "#ff8f8f"
 	total_positions = 1
 	spawn_positions = 1
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator

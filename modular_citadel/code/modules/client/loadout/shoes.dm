@@ -128,8 +128,6 @@
 							"NCR Lieutenant",
 							"NCR Veteran Ranger", 
 							"NCR Ranger",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
 							"NCR Lieutenant",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",

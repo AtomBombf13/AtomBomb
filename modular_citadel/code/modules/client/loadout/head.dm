@@ -272,7 +272,6 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
-							"NCR Medical Officer",
 							"NCR Sergeant First Class",
 							"NCR Lieutenant",
 							"NCR Heavy Trooper",

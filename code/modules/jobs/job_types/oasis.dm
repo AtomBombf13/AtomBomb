@@ -148,7 +148,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/thelaw
 	name = "The Law Man"
 	suit = /obj/item/clothing/suit/armor/medium/duster/town/sheriff
-	head = /obj/item/clothing/head/f13/town/big
+	head = /obj/item/clothing/head/f13/town/sheriff
 	uniform = /obj/item/clothing/under/f13/police/formal
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
@@ -218,7 +218,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Detective"
 	jobtype = /datum/job/oasis/f13detective
 	suit = /obj/item/clothing/suit/armor/medium/duster/town
-	head = /obj/item/clothing/head/helmet/f13/bowler
+	head = /obj/item/clothing/head/f13/town
 	ears = /obj/item/radio/headset/headset_town/lawman
 	id = /obj/item/card/id/silver
 	l_pocket = /obj/item/storage/bag/money/small/settler

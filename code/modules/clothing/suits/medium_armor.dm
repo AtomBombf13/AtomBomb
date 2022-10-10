@@ -424,12 +424,6 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
-/obj/item/clothing/suit/armor/medium/duster/town/deputy
-	name = "deputy's armored cloak"
-	desc = "A cloak covering an armored vest."
-	icon_state = "The_good"
-	item_state = "The_good"
-
 /obj/item/clothing/suit/armor/medium/duster/navyblue
 	name = "head of security's jacket"
 	desc = "This piece of clothing was specifically designed for asserting superior authority."
@@ -462,16 +456,11 @@
 /obj/item/clothing/suit/armor/medium/duster/town
 	name = "detective's trenchcoat"
 	desc = "An armored trench coat with added shoulderpads, a chestplate, and leg guards."
-	icon_state = "towntrench_medium"
-	item_state = "hostrench"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "towntrench"
 
-/obj/item/clothing/suit/armor/medium/duster/town/embroidered
-	name = "embroidered trenchcoat"
-	desc = "A custom armored trench coat with extra-length and a raised collar. There's a flower embroidered onto the back, although the color is a little faded."
-	icon_state = "towntrench_special"
-	item_state = "towntrench_special"
-
-/obj/item/clothing/suit/armor/medium/duster/town/deputyold
+/obj/item/clothing/suit/armor/medium/duster/town/deputy
 	name = "armored town trenchcoat"
 	desc = "An armored trench coat with added shoulderpads, a chestplate, and legguards."
 	icon_state = "towntrench_medium"
@@ -863,7 +852,7 @@
 	item_state = "ncr_lt_armour"
 
 //Rangers
-/obj/item/clothing/suit/armor/medium/ncr/patrol
+/obj/item/clothing/suit/armor/medium/combat/patrol
 	name = "NCR patrol ranger combat armor"
 	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
@@ -884,7 +873,7 @@
 	icon_state = "mutie_ncr"
 	item_state = "mutie_ncr"
 
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol/mutant
+/obj/item/clothing/suit/armor/medium/combat/patrol/mutant
 	name = "mutant desert ranger armor"
 	desc = "Multiple sets of desert ranger patrol armor made to protect a massive humanoid, and smelling like blood sausage."
 	icon_state = "mutie_ranger_armour"
@@ -969,31 +958,34 @@
 /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	name = "brotherhood armor"
 	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "brotherhood_armor_knight"
-	item_state = "brotherhood_armor_knight"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
+	name = "initiate armor"
+	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
+	icon_state = "brotherhood_armor"
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
 	name = "reinforced initiate armor"
 	desc = "A combat armor set made and updated by the Brotherhood of Steel. This varient appears to be a refurbished set based on its welding marks."
 	icon_state = "brotherhood_armor_mk2"
-	item_state = "brotherhood_armor_mk2"
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	name = "brotherhood senior knight armor"
 	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
 	icon_state = "brotherhood_armor_senior"
-	item_state = "brotherhood_armor_senior"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
-	name = "brotherhood head knight armor"
-	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Head Knights. It bears golden embroidery."
+	name = "brotherhood knight-captain armor"
+	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Knight-Captains. It bears golden embroidery."
 	icon_state = "brotherhood_armor_captain"
-	item_state = "brotherhood_armor_captain"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)

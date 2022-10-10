@@ -467,7 +467,7 @@
 /obj/effect/mob_spawn/human/corpse/ncr/ranger
 	name = "NCR Ranger"
 	uniform = /obj/item/clothing/under/f13/ranger/patrol
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
+	suit = /obj/item/clothing/suit/armor/medium/combat/patrol
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	gloves = /obj/item/clothing/gloves/patrol
 	head = /obj/item/clothing/head/f13/ncr/ranger

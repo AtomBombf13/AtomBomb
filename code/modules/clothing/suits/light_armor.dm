@@ -891,11 +891,9 @@
 	item_state = "elder"
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
-	name = "initiate armor"
-	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
-	icon_state = "brotherhood_armor"
-	item_state = "brotherhood_armor"
+/obj/item/clothing/suit/armor/light/combat/brotherhood
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 
 /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	name = "brotherhood scout armor"
