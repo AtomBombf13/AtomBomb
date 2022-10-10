@@ -426,8 +426,8 @@
 	minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/knightcaptain
-	name = "Head Knight pins"
-	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Head Knight."
+	name = "Knight-Captain pins"
+	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Knight-Captain."
 	icon_state = "knight-captain"
 	item_color = "knight-captain"
 	minimize_when_attached = TRUE

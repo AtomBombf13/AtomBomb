@@ -378,8 +378,8 @@
 /obj/item/clothing/head/helmet/f13/wastewarhat
 	name = "warrior helmet"
 	desc = "It might have been a cooking pot once, now its a helmet, with a piece of cloth covering the neck from the sun."
-	icon = 'icons/fallout/clothing/helmets.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "wastewar"
 	item_state = "wastewar"
 	flags_inv = HIDEEARS|HIDEHAIR
@@ -563,7 +563,7 @@
 	icon_state = "gamblerrang"
 	item_state = "gamblerrang"
 
-/obj/item/clothing/head/helmet/f13/legion/venator/diohelmet
+/obj/item/clothing/head/helmet/f13/legion/assassin/diohelmet
 	name = "galerum lacertarex"
 	desc = "The hide of a deadly green gecko affixed over a reinforced legion helmet. Its ghastly appearance serves as an intimidating gesture to those who do not yet fear the Lizard King."
 	icon_state = "diohelmet"

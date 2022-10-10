@@ -571,10 +571,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Trooper"
 	icon_state = "NCR Trooper"
 
-/obj/effect/landmark/start/f13/ncrconscript
-	name = "NCR Conscript"
-	icon_state = "NCR Conscript"
-
 /obj/effect/landmark/start/f13/ncrveteranranger
 	name = "NCR Veteran Ranger"
 	icon_state = "NCR Veteran Ranger"
@@ -642,19 +638,15 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Legion Slavemaster"
 
 /obj/effect/landmark/start/f13/explorer
-	name = "Legion Scout"
-	icon_state = "Legionary"
-
-/obj/effect/landmark/start/f13/venator
 	name = "Legion Explorer"
 	icon_state = "Legionary"
 
-/obj/effect/landmark/start/f13/auxilia
-	name = "Legion Auxilia"
-	icon_state = "Auxilla"
+/obj/effect/landmark/start/f13/venator
+	name = "Legion Assassin"
+	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/campfollower
-	name = "Legion Forgemaster"
+	name = "Camp Exactor"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slave
@@ -680,7 +672,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Paladin"
 
 /obj/effect/landmark/start/f13/knightcap
-	name = "Head Knight"
+	name = "Knight-Captain"
 	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/seniorknight

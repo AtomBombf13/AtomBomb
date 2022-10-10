@@ -450,8 +450,8 @@
 /obj/item/clothing/head/helmet/armyhelmet
 	name = "steel helmet"
 	desc = "A steel helmet, inspired by several pre-war designs. It provides some protection against impacts, cuts, and medium-velocity bullets."
-	icon = 'icons/fallout/clothing/helmets.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "armyhelmet"
 	item_state = "armyhelmet"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
