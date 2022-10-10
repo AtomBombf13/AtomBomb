@@ -49,6 +49,6 @@
 	// dna.features["pod_hair"] = "Ivy"
 	// dna.features["grad_style"] = "none"
 	// dna.features["grad_color"] = COLOR_ALMOST_BLACK
-	facial_hair_style = "Shaved"
+	facial_hair_style = "Clean shave (Hairless)"
 	hair_style = "Bald"
 	hair_color = "FF0000"

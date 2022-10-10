@@ -229,11 +229,10 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "n99"
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
-	mag_type = /obj/item/ammo_box/magazine/m10mm // load any 10mm pistol ammos
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	disallowed_mags = list(
 		/obj/item/ammo_box/magazine/pistol10mm/extended, 
-		/obj/item/ammo_box/magazine/pistol10mm/extended/empty,
-		/obj/item/ammo_box/magazine/m10mm/rifle)
+		/obj/item/ammo_box/magazine/pistol10mm/extended/empty,)
 	
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY

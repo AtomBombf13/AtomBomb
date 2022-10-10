@@ -124,29 +124,6 @@
 /// 	Beginning of Coats/Armor section
 // 	Below are one points as they are cosmetics
 
-/datum/gear/suit/NCRutilityvest
-	name = "Utility Vest"
-	path = /obj/item/clothing/suit/armor/light/utilityvest
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
-	cost = 1  /// Has no armor so its cosmetic as heck.
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Veteran Ranger",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant First Class",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
-							)
-
 /datum/gear/suit/fieldscribe
 	name = "Fieldscribe suit"
 	path = /obj/item/clothing/suit/toggle/labcoat/fieldscribe

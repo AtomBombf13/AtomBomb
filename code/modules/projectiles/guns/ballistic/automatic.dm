@@ -429,7 +429,7 @@
 	item_state = "smg10mm"
 	icon_prefix = "smg10mm"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/m10mm
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm/extended
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
@@ -503,8 +503,8 @@
 	icon_state = "p90"
 	item_state = "m90"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	mag_type = /obj/item/ammo_box/magazine/smg_p90
+	init_mag_type = /obj/item/ammo_box/magazine/smg_p90
 
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -792,7 +792,7 @@
 	desc = "The M1 Carbine was mass produced during some old war, and at some point NCR found stockpiles and rechambered them to 10mm to make up for the fact their service rifle production can't keep up with demand."
 	icon_state = "m1carbine"
 	item_state = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/m10mm
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
 
 	slowdown = GUN_SLOWDOWN_CARBINE
@@ -992,6 +992,7 @@
 /obj/item/gun/ballistic/automatic/sportcarbine
 	name = "sport carbine"
 	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "svarmint"
 	item_state = "varmintrifle"
 	mag_type = /obj/item/ammo_box/magazine/pistol22
@@ -2347,7 +2348,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
-	name = "Explorer sniper rifle"
+	name = "assassin sniper rifle"
 	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
@@ -2447,7 +2448,8 @@
 /obj/item/gun/ballistic/automatic/m1919/m2a1
 	name = "John 'Moses' Browning M2A1"
 	desc = "This ancient heavy machine gun has been directly pulled off of some once combat vehicle and modified to be fired while being carried. It is adorned by symbols of the US Government and the Encalve."
-	icon_state = "M2A1"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "m2a1"
 	slot_flags = 0
 	slowdown = 1.25
 	mag_type = /obj/item/ammo_box/magazine/cal50

@@ -49,7 +49,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(command_positions, list(
 	"Head Paladin",
-	"Head Knight",
+	"Knight-Captain",
 	"Head Scribe", //Wasn't here before. Still technically command, I put it here - Kitsunemitsu
 
 	"NCR Captain",
@@ -57,7 +57,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Legion Centurion",
 
-	"Chief of Police",
+	"Mayor",
+	"Marshal",
 
 	"Enclave Lieutenant",
 
@@ -71,10 +72,9 @@ GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 //NCR Assistant and Legion Camp Follower re-added to whitelisting.  BoS Initiate removed from whitelist.
 
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
-"Head Scribe",
 "Elder",
 "Head Paladin",
-"Head Knight",
+"Knight-Captain",
 "Head Scribe",
 "Senior Paladin",
 "Paladin",
@@ -93,7 +93,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Prime Legionnaire",
 "Legion Recruit Decanus",
 "Legion Scout",
-"Legion Auxilia",
 "Legion Slave",
 
 "Mayor",
@@ -124,7 +123,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Head Paladin",
-	"Head Knight",
+	"Knight-Captain",
 	"Head Scribe",
 	"Senior Paladin",
 	"Paladin",
@@ -138,8 +137,8 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Mayor",
 	"Marshal",
-	"Detective",
 	"Deputy",
+	"Detective",
 	"Merchant",
 	"Prospector",
 	"Barkeep",
@@ -159,20 +158,18 @@ GLOBAL_LIST_INIT(legion_command_positions, list(
 GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Centurion",
 	"Legion Orator",
+	"Legion Vexillarius",
 	"Legion Veteran Decanus",
 	"Legion Prime Decanus",
 	"Legion Recruit Decanus",
-	"Legion Vexillarius",
+	"Legion Assassin",
 	"Legion Explorer",
-	"Legion Scout",
 	"Veteran Legionnaire",
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
-	"Legion Forgemaster",
+	"Camp Exactor",
 	"Legion Immune",
-	"Legion Auxilia",
-	"Legion Slave",
-	"Legion Slavemaster"
+	"Legion Slave"
 ))
 
 GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
@@ -182,21 +179,17 @@ GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Captain",
 	"NCR Lieutenant",
-	"NCR Veteran Ranger",
 	"NCR Representative",
+	"NCR Veteran Ranger",
 	"NCR Ranger",
 	"NCR Sergeant First Class",
-	"NCR Heavy Trooper",
-	"NCR Military Police",
-	"NCR Senior Enlisted Advisor",
 	"NCR Sergeant",
 	"NCR Corporal",
+	"NCR Heavy Trooper",
+	"NCR Military Police",
 	"NCR Combat Medic",
 	"NCR Combat Engineer",
 	"NCR Trooper",
-	"NCR Conscript",
-	"NCR Medical Officer",
-	"NCR Logistics Officer",
 	"NCR Rear Echelon",
 ))
 

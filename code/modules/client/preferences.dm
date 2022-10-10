@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/jumpsuit_style = PREF_SUIT		//suit/skirt
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000000"				//Hair color
-	var/facial_hair_style = "Shaved"	//Face hair type
+	var/facial_hair_style = "Clean shave (Hairless)"	//Face hair type
 	var/facial_hair_color = "000000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
 	var/use_custom_skin_tone = FALSE
@@ -2614,12 +2614,6 @@ Records disabled until a use for them is found
 				if("genital_examine")
 					cit_toggles ^= GENITAL_EXAMINE
 
-				if("breast_enlargement")
-					cit_toggles ^= BREAST_ENLARGEMENT
-
-				if("penis_enlargement")
-					cit_toggles ^= PENIS_ENLARGEMENT
-
 				if("feminization")
 					cit_toggles ^= FORCED_FEM
 
@@ -2637,9 +2631,6 @@ Records disabled until a use for them is found
 
 				if("ass_slap")
 					cit_toggles ^= NO_ASS_SLAP
-
-				if("bimbo")
-					cit_toggles ^= BIMBOFICATION
 
 				if("auto_wag")
 					cit_toggles ^= NO_AUTO_WAG

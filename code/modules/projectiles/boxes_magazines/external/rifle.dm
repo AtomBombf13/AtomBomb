@@ -1,19 +1,3 @@
-/obj/item/ammo_box/magazine/m10mm/rifle
-	name = "rifle magazine (10mm)"
-	desc = "A well-worn magazine fitted for the surplus rifle."
-	icon_state = "75-8"
-	ammo_type = /obj/item/ammo_casing/c10mm
-	caliber = list(CALIBER_10MM)
-	max_ammo = 10
-	custom_materials = list(/datum/material/iron = MATS_LIGHT_SMALL_RIFLE_MAGAZINE)
-	w_class = WEIGHT_CLASS_TINY
-
-/obj/item/ammo_box/magazine/m10mm/rifle/update_icon()
-	if(ammo_count())
-		icon_state = "75-8"
-	else
-		icon_state = "75-0"
-
 /obj/item/ammo_box/magazine/m556
 	name = "toploader magazine (5.56mm)"
 	icon_state = "5.56m"

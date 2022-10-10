@@ -176,9 +176,3 @@
 		/obj/item/gun/ballistic/rifle/mosin,
 		/obj/item/ammo_box/stripper/a762
 	)
-
-/obj/effect/spawner/bundle/crate/surplusrifle
-	name = "surplus rifle spawner"
-	items = list(
-		/obj/item/ammo_box/magazine/m10mm/rifle
-	)

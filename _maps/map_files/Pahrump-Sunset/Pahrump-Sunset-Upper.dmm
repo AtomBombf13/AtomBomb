@@ -630,12 +630,6 @@
 	},
 /turf/closed/wall/rust,
 /area/f13/ncr)
-"bds" = (
-/obj/structure/window/fulltile/house{
-	icon_state = "housewindowvertical"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legion)
 "bem" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
@@ -1968,12 +1962,6 @@
 "dDq" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
-"dDt" = (
-/obj/structure/window/fulltile/house{
-	icon_state = "housewindowbrokenvertical"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legion)
 "dDu" = (
 /obj/machinery/telecomms/relay/preset/telecomms,
 /turf/open/indestructible,
@@ -2359,10 +2347,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/city)
-"enE" = (
-/obj/structure/window/fulltile/house,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legion)
 "erz" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -4572,12 +4556,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/city)
-"jbP" = (
-/obj/structure/window/fulltile/house{
-	icon_state = "housewindowbroken"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legion)
 "jbS" = (
 /obj/structure/dresser,
 /turf/open/floor/wood_fancy,
@@ -5196,13 +5174,6 @@
 	icon_state = "hydrofloor"
 	},
 /area/f13/building)
-"knP" = (
-/obj/structure/window/fulltile/house{
-	dir = 2;
-	icon_state = "housewindowvertical"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legion)
 "kpQ" = (
 /obj/machinery/seed_extractor,
 /turf/open/indestructible/ground/outside/dirt,
@@ -7799,13 +7770,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/city)
-"psZ" = (
-/obj/structure/window/fulltile/house{
-	dir = 2;
-	icon_state = "housewindowbrokenvertical"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legion)
 "pua" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
@@ -70098,8 +70062,8 @@ cHt
 oez
 fxn
 fxn
-dDt
-bds
+xZD
+eVa
 fZB
 fxn
 fxn
@@ -70610,7 +70574,7 @@ cHt
 cHt
 cHt
 oez
-enE
+lOE
 cWQ
 bTS
 iEW
@@ -70867,7 +70831,7 @@ cHt
 cHt
 cHt
 oez
-enE
+lOE
 wZn
 bTS
 bSK
@@ -71895,7 +71859,7 @@ cHt
 cHt
 cHt
 oez
-enE
+lOE
 wZn
 bTS
 iEW
@@ -72152,7 +72116,7 @@ cHt
 cHt
 cHt
 oez
-jbP
+rCg
 mde
 bTS
 iEW
@@ -72668,8 +72632,8 @@ cHt
 oez
 fxn
 fxn
-knP
-psZ
+fZB
+xWX
 fZB
 fxn
 fxn

@@ -742,12 +742,11 @@
 	flavour_text = "Rangers lead the way!"
 	assignedrole = "NCR Ranger"
 	outfit = /datum/outfit/job/ncr/f13ranger
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
+	suit = /obj/item/clothing/suit/armor/medium/combat/patrol
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
-	head = /obj/item/clothing/head/f13/ranger
+	head = /obj/item/clothing/head/f13/ncr/patrol
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
-		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/storage/survivalkit = 1,
 		/obj/item/storage/survivalkit/medical = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,

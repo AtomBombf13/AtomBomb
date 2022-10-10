@@ -85,7 +85,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/mining)
 "abE" = (
 /obj/structure/cable{
@@ -964,7 +964,7 @@
 /obj/machinery/door/airlock/grunge{
 	req_access_txt = "120"
 	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices2nd)
 "aJt" = (
 /obj/structure/filingcabinet,
@@ -4451,9 +4451,8 @@
 	},
 /area/f13/brotherhood/operations)
 "bOP" = (
-/obj/machinery/door/airlock/grunge{
-	name = "security airlock";
-	req_access_txt = "137"
+/obj/machinery/door/airlock/wood{
+	req_access_txt = "87"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
@@ -8524,11 +8523,6 @@
 	pixel_x = -9;
 	pixel_y = 10
 	},
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 10
 	},
@@ -9099,10 +9093,6 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/tunnel)
-"epi" = (
-/obj/vertibird,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/offices2nd)
 "ept" = (
 /obj/machinery/shower{
 	pixel_y = 32
@@ -20472,7 +20462,6 @@
 	pixel_x = 26;
 	specialfunctions = 4
 	},
-/obj/item/storage/belt/army/assault,
 /turf/open/floor/wood_common,
 /area/f13/caves)
 "nZn" = (
@@ -20857,7 +20846,7 @@
 /obj/machinery/door/airlock/grunge{
 	req_access_txt = "120"
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/mining)
 "otS" = (
 /obj/machinery/autolathe/ammo,
@@ -30250,22 +30239,6 @@
 /obj/structure/wreck/trash/machinepile,
 /turf/open/floor/plasteel/f13{
 	icon_state = "redrustyfull"
-	},
-/area/f13/caves)
-"vZP" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/bot,
-/obj/item/storage/belt/army/assault,
-/obj/structure/window/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
-	req_access_txt = "1"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/darkred/side{
-	dir = 4
 	},
 /area/f13/caves)
 "vZV" = (
@@ -87435,7 +87408,7 @@ xsE
 bHT
 jCb
 idg
-vZP
+nrv
 nrv
 jQF
 rrf
@@ -92529,7 +92502,7 @@ fHe
 fHe
 fHe
 fHe
-epi
+fHe
 fHe
 fHe
 iGw

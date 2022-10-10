@@ -9,7 +9,7 @@
 
 // please make sure they're sorted alphabetically and categorized
 /datum/sprite_accessory/facial_hair/shaved //this is exempt from the alphabetical sort
-	name = "Shaved"
+	name = "Clean shave (Hairless)"
 	icon_state = null
 	gender = NEUTER
 

@@ -1038,7 +1038,7 @@
 	if(M && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.hair_style = "Business Hair 4"
-		H.facial_hair_style = "Shaved"
+		H.facial_hair_style = "Clean shave (Hairless)"
 		H.facial_hair_color = "#FFFF99"
 		H.hair_color = "#FFFF99"
 		H.update_hair()
@@ -1073,7 +1073,7 @@
 	if(M && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.hair_style = "Over Eye"
-		H.facial_hair_style = "Shaved"
+		H.facial_hair_style = "Clean shave (Hairless)"
 		H.facial_hair_color = "#FFFF99"
 		H.hair_color = "#FFFF99"
 		H.update_hair()

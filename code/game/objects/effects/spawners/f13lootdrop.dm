@@ -400,7 +400,7 @@
 	name = "vault armor spawner"
 	items = list(
 				/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
-				/obj/item/clothing/head/helmet/riot/vaultsec,
+				/obj/item/clothing/head/helmet/riot,
 				)
 
 /obj/effect/spawner/bundle/f13/armor/combat/mk2
@@ -1413,7 +1413,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	name = "P90 SMG spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/p90,
-				/obj/item/ammo_box/magazine/m10mm_p90/
+				/obj/item/ammo_box/magazine/smg_p90/
 	)
 
 /obj/effect/spawner/bundle/f13/hunting
