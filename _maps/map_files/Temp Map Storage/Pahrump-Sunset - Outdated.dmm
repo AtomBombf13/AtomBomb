@@ -2407,7 +2407,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/village)
 "aVn" = (
-/obj/structure/blacksmith/furnace,
+/obj/structure/furnace,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "aVq" = (
@@ -16370,7 +16370,7 @@
 /turf/closed/wall/f13/store,
 /area/f13/village)
 "gIs" = (
-/obj/structure/blacksmith/anvil/obtainable/table,
+/obj/structure/anvil/obtainable/table,
 /obj/item/twohanded/sledgehammer/simple,
 /obj/item/book/manual/advice_blacksmith,
 /turf/open/indestructible/ground/inside/mountain,
@@ -20843,7 +20843,7 @@
 	},
 /area/f13/wasteland)
 "iyy" = (
-/obj/structure/blacksmith/anvil/obtainable/sandstone,
+/obj/structure/anvil/obtainable/sandstone,
 /obj/item/twohanded/sledgehammer/simple,
 /obj/item/book/manual/advice_blacksmith,
 /turf/open/indestructible/ground/outside/dirt,
@@ -23889,7 +23889,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/blacksmith/furnace,
+/obj/structure/furnace,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "jKT" = (
