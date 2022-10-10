@@ -190,7 +190,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Combat Medic",
 	"NCR Combat Engineer",
 	"NCR Trooper",
-	"NCR Rear Echelon",
+	"NCR Off-Duty",
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(

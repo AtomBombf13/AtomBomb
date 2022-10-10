@@ -175,9 +175,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
 	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 2
-	},
+/obj/effect/turf_decal/weather/dirt,
 /turf/open/water,
 /area/f13/caves)
 "afd" = (
@@ -1654,7 +1652,6 @@
 	desc = "A cloning pod system's exit node. This one appears to have several specimen in the storage below.";
 	icon = 'icons/obj/machines/cloning.dmi';
 	icon_state = "pod_0";
-	max_mobs = 1;
 	name = "occupied cloning pod";
 	radius = 2
 	},
@@ -9267,7 +9264,6 @@
 /area/f13/caves)
 "evd" = (
 /obj/structure/nest/supermutant/melee{
-	max_mobs = 1;
 	spawn_time = 10
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9489,7 +9485,6 @@
 "eDd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/nest/supermutant/ranged{
-	max_mobs = 1;
 	spawn_time = 100
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
@@ -13477,7 +13472,6 @@
 /area/f13/caves)
 "idY" = (
 /obj/structure/nest/supermutant/ranged{
-	max_mobs = 1;
 	spawn_time = 100
 	},
 /turf/open/indestructible/ground/inside/subway,
@@ -13874,7 +13868,6 @@
 	desc = "A cloning pod system's exit node. This one appears to have several specimen in the storage below.";
 	icon = 'icons/obj/machines/cloning.dmi';
 	icon_state = "pod_0";
-	max_mobs = 1;
 	name = "occupied cloning pod"
 	},
 /turf/open/floor/plating/tunnel,
@@ -17047,7 +17040,6 @@
 /area/f13/caves)
 "lcq" = (
 /obj/effect/landmark/start/f13/ncrtrooper,
-/obj/effect/landmark/start/f13/ncrconscript,
 /obj/effect/landmark/start/f13/ncrcorporal,
 /obj/effect/landmark/start/f13/ncrsergeant,
 /obj/effect/landmark/start/f13/ncrcombatengineer,
@@ -17106,7 +17098,6 @@
 	},
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 2;
 	pixel_y = 20
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -20720,9 +20711,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "omO" = (
-/obj/structure/nest/supermutant{
-	max_mobs = 1
-	},
+/obj/structure/nest/supermutant,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "omR" = (
@@ -20999,9 +20988,7 @@
 	},
 /area/f13/caves)
 "oBe" = (
-/obj/structure/simple_door/room{
-	name = "wooden door"
-	},
+/obj/structure/simple_door/room,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
 "oBr" = (
@@ -21294,7 +21281,6 @@
 	network = list("Vault")
 	},
 /obj/structure/rack,
-/obj/item/clothing/head/helmet/riot/vaultsec,
 /obj/item/clothing/glasses/sunglasses,
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/caves)
@@ -22320,7 +22306,6 @@
 "pHr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
-/obj/item/clothing/head/helmet/riot/vaultsec,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/museum)
 "pHC" = (
@@ -22840,9 +22825,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "qba" = (
-/obj/structure/simple_door/room{
-	name = "wooden door"
-	},
+/obj/structure/simple_door/room,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
 "qbd" = (
@@ -26430,9 +26413,7 @@
 	},
 /area/f13/brotherhood/operations)
 "sWu" = (
-/obj/structure/nest/supermutant{
-	max_mobs = 1
-	},
+/obj/structure/nest/supermutant,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -28744,6 +28725,14 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/vault)
+"uMO" = (
+/obj/effect/landmark/start/f13/ncrtrooper,
+/obj/effect/landmark/start/f13/ncrtrooper,
+/obj/effect/landmark/start/f13/ncrcorporal,
+/obj/effect/landmark/start/f13/ncrsergeant,
+/obj/effect/landmark/start/f13/ncrcombatengineer,
+/turf/open/floor/f13/wood,
+/area/f13/ncr)
 "uNC" = (
 /obj/effect/decal/waste,
 /obj/structure/nest/supermutant/melee,
@@ -46202,7 +46191,7 @@ rJB
 bzD
 lcq
 bzD
-lcq
+uMO
 bzD
 lcq
 bzD
