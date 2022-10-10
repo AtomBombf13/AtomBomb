@@ -2,18 +2,9 @@
 // PISTOL MAGAZINES //
 //////////////////////
 
-/obj/item/ammo_box
-	var/special_ammo = FALSE
-
-/obj/item/ammo_box/update_overlays()
-	. = ..()
-	if(special_ammo)
-		. += ("[initial(icon_state)]_x")
-
 //.22
-/obj/item/ammo_box/magazine/m22
+/obj/item/ammo_box/magazine/pistol22
 	name = "pistol magazine (.22lr)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "pistol22"
 	ammo_type = /obj/item/ammo_casing/a22
 	caliber = list(CALIBER_22LR)
@@ -22,13 +13,12 @@
 	custom_materials = list(/datum/material/iron = MATS_SMALL_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ammo_box/magazine/m22/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol22/empty
+	start_empty = TRUE
 
 //.22 extended
-/obj/item/ammo_box/magazine/m22/extended
+/obj/item/ammo_box/magazine/pistol22/extended
 	name = "carbine magazine (.22lr)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "22carbine"
 	ammo_type = /obj/item/ammo_casing/a22
 	caliber = list(CALIBER_22LR)
@@ -37,13 +27,12 @@
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/ammo_box/magazine/m22/extended/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol22/extended/empty
+	start_empty = TRUE
 
 //9mm
 /obj/item/ammo_box/magazine/zipgun
 	name = "Zip gun clip (9mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "zip"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = list(CALIBER_9MM)
@@ -58,9 +47,8 @@
 	valid_new_calibers = GLOB.zipgun_valid_calibers
 
 //9mm
-/obj/item/ammo_box/magazine/m9mm
+/obj/item/ammo_box/magazine/pistol9mm
 	name = "9mm pistol magazine (9mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "9mmp"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = list(CALIBER_9MM)
@@ -69,13 +57,12 @@
 	custom_materials = list(/datum/material/iron = MATS_SMALL_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ammo_box/magazine/m9mm/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol9mm/empty
+	start_empty = TRUE
 
 //9mm doublestack
-/obj/item/ammo_box/magazine/m9mm/doublestack
+/obj/item/ammo_box/magazine/pistol9mm/doublestack
 	name = "doublestack pistol magazine (9mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "m9mmds"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = list(CALIBER_9MM)
@@ -83,47 +70,39 @@
 	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
 
-/obj/item/ammo_box/magazine/m9mm/doublestack/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol9mm/doublestack/empty
+	start_empty = TRUE
 
-//10mm template
-/obj/item/ammo_box/magazine/m10mm
-	name = "pistol magazine (10mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	desc = "A gun magazine."
+//10mm magazine
+/obj/item/ammo_box/magazine/pistol10mm
+	name = "10mm pistol magazine"
+	desc = "A small magazine (10mm)."
+	icon_state = "pistol10mm"
 	caliber = list(CALIBER_10MM)
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
-	w_class = WEIGHT_CLASS_TINY
-
-//10mm small
-/obj/item/ammo_box/magazine/m10mm/adv
-	name = "10mm pistol magazine (10mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "m10mm"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 12
 	multiple_sprites = 2
+	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ammo_box/magazine/m10mm/adv/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol10mm/empty
+	start_empty = TRUE
 
 //10mm extended
-/obj/item/ammo_box/magazine/m10mm/adv/ext
+/obj/item/ammo_box/magazine/pistol10mm/extended
 	name = "10mm extended magazine (10mm)"
+	desc = "A extended magazine with 24 rounds."
 	icon_state = "smg10mm"
-	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 24
-	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_SMG)
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/ammo_box/magazine/m10mm/adv/ext/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol10mm/extended/empty
+	start_empty = TRUE
 
 //.45
-/obj/item/ammo_box/magazine/m45
+/obj/item/ammo_box/magazine/pistol45
 	name = "handgun magazine (.45)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = list(CALIBER_45ACP)
@@ -131,17 +110,16 @@
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
 
-/obj/item/ammo_box/magazine/m45/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol45/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/m45/update_icon()
+/obj/item/ammo_box/magazine/pistol45/update_icon()
 	..()
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
 
 //.45 socom
-/obj/item/ammo_box/magazine/m45/socom
+/obj/item/ammo_box/magazine/pistol45/socom
 	name = "socom magazine (.45)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "45socom"
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 12
@@ -149,17 +127,16 @@
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ammo_box/magazine/m45/socom/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol45/socom/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/m45/socom/update_icon()
+/obj/item/ammo_box/magazine/pistol45/socom/update_icon()
 	..()
 	icon_state = "[initial(icon_state)]-[stored_ammo.len ? "[max_ammo]" : "0"]" // I hate this system
 
 //.44 Magnum
-/obj/item/ammo_box/magazine/m44
+/obj/item/ammo_box/magazine/pistol44
 	name = "handgun magazine (.44 magnum)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50ae"
 	ammo_type = /obj/item/ammo_casing/m44
 	caliber = list(CALIBER_44)
@@ -168,32 +145,30 @@
 	custom_materials = list(/datum/material/iron = MATS_HEAVY_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ammo_box/magazine/m44/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol44/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/m44/update_icon()
+/obj/item/ammo_box/magazine/pistol44/update_icon()
 	..()
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
 
-/obj/item/ammo_box/magazine/m44/automag
+/obj/item/ammo_box/magazine/pistol44/automag
 	name = "automag magazine (.44 magnum)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "magnum"
 	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 7
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/m44/automag/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol44/automag/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/m44/automag/update_icon()
+/obj/item/ammo_box/magazine/pistol44/automag/update_icon()
 	..()
 	icon_state = "[initial(icon_state)]-[stored_ammo.len ? "[max_ammo]" : "0"]"
 
 //14mm
-/obj/item/ammo_box/magazine/m14mm
+/obj/item/ammo_box/magazine/pistol14mm
 	name = "handgun magazine (14mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50ae"
 	ammo_type = /obj/item/ammo_casing/p14mm
 	caliber = list(CALIBER_14MM)
@@ -202,18 +177,9 @@
 	custom_materials = list(/datum/material/iron = MATS_HEAVY_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ammo_box/magazine/m14mm/empty
-	start_empty = 1
+/obj/item/ammo_box/magazine/pistol14mm/empty
+	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/m14mm/update_icon()
+/obj/item/ammo_box/magazine/pistol14mm/update_icon()
 	..()
 	icon_state = "[initial(icon_state)]-[round(ammo_count(),4)]"
-
-// BETA STUFF // Obsolete
-/obj/item/ammo_box/magazine/testbullet
-	name = "Bulletcrate"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "m9mmds"
-	ammo_type = /obj/item/ammo_casing/testcasing
-	caliber = list(CALIBER_9MM)
-	max_ammo = 100

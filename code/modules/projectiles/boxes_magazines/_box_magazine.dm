@@ -33,6 +33,7 @@
 	var/start_empty = 0
 	var/list/bullet_cost
 	var/list/base_cost// override this one as well if you override bullet_cost
+	var/special_ammo = FALSE
 
 /obj/item/ammo_box/Initialize()
 	. = ..()
@@ -349,3 +350,9 @@
 /obj/item/ammo_box/magazine/handle_atom_del(atom/A)
 	stored_ammo -= A
 	update_icon()
+
+// For "Special" Ammo, whatever that is
+/obj/item/ammo_box/update_overlays()
+	. = ..()
+	if(special_ammo)
+		. += ("[initial(icon_state)]_x")

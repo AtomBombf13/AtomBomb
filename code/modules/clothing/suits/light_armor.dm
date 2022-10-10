@@ -898,8 +898,8 @@
 /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	name = "brotherhood scout armor"
 	desc = "A pre-war set of combat armor with stripped armor plating, allowing for better mobility over their heavier combat armor mk 2 armor counterparts."
-	icon_state = "brotherhood_scout"
-	item_state = "brotherhood_scout"
+	icon_state = "brotherhood_scout_knight"
+	item_state = "brotherhood_scout_knight"
 
 /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	name = "brotherhood senior scout armor"

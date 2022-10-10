@@ -88,7 +88,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/pen/fountain/captain = 1,
 		/obj/item/clothing/mask/cigarette/cigar = 1,
 		/obj/item/toy/cards/deck/unum = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv = 3
+		/obj/item/ammo_box/magazine/pistol10mm = 3
 		)
 
 /*--------------------------------------------------------------*/

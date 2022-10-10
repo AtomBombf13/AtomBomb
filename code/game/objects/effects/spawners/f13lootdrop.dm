@@ -977,21 +977,21 @@
 	name = "10mm pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/n99,
-				/obj/item/ammo_box/magazine/m10mm/adv
+				/obj/item/ammo_box/magazine/pistol10mm
 				)
 
 /obj/effect/spawner/bundle/f13/m1911
 	name = "m1911 and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/m1911,
-				/obj/item/ammo_box/magazine/m45
+				/obj/item/ammo_box/magazine/pistol45
 				)
 
 /obj/effect/spawner/bundle/f13/ninemil
 	name = "9mm pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil,
-				/obj/item/ammo_box/magazine/m9mm/doublestack
+				/obj/item/ammo_box/magazine/pistol9mm/doublestack
 				)
 
 /obj/effect/spawner/bundle/f13/varmint
@@ -1005,14 +1005,14 @@
 	name = ".22 pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/pistol22,
-				/obj/item/ammo_box/magazine/m22
+				/obj/item/ammo_box/magazine/pistol22
 				)
 
 /obj/effect/spawner/bundle/f13/sig
 	name = " p220 pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/sig,
-				/obj/item/ammo_box/magazine/m9mm/
+				/obj/item/ammo_box/magazine/pistol9mm/
 				)
 
 /obj/effect/spawner/bundle/f13/pepperbox
@@ -1062,7 +1062,7 @@
 	name = "automag and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/automag,
-				/obj/item/ammo_box/magazine/m44/automag
+				/obj/item/ammo_box/magazine/pistol44/automag
 	)
 
 /obj/effect/spawner/bundle/f13/revolver45
@@ -1111,21 +1111,21 @@
 	name = "m1 carbine and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/m1carbine,
-				/obj/item/ammo_box/magazine/m10mm/adv
+				/obj/item/ammo_box/magazine/pistol10mm
 	)
 
 /obj/effect/spawner/bundle/f13/guns/commando
 	name = "de lisle carbine and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/delisle,
-				/obj/item/ammo_box/magazine/m9mm/doublestack
+				/obj/item/ammo_box/magazine/pistol9mm/doublestack
 	)
 
 /obj/effect/spawner/bundle/f13/mk23
 	name = "autoloader and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/autoloader,
-				/obj/item/ammo_box/magazine/m45/socom/
+				/obj/item/ammo_box/magazine/pistol45/socom/
 	)
 
 /obj/effect/spawner/bundle/f13/thatgun
@@ -1159,21 +1159,21 @@
 	name = ".22 rockwell and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/rockwell,
-				/obj/item/ammo_box/magazine/m22/extended
+				/obj/item/ammo_box/magazine/pistol22/extended
 				)
 
 /obj/effect/spawner/bundle/f13/sportcarbine
 	name = "sport carbine and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/sportcarbine,
-				/obj/item/ammo_box/magazine/m22/extended
+				/obj/item/ammo_box/magazine/pistol22/extended
 				)
 
 /obj/effect/spawner/bundle/f13/smg10mm
 	name = "10mm SMG and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/smg10mm,
-				/obj/item/ammo_box/magazine/m10mm/adv/ext/
+				/obj/item/ammo_box/magazine/pistol10mm/extended/
 				)
 
 /obj/effect/spawner/bundle/f13/greasegun
@@ -1236,21 +1236,21 @@
 	name = "select-fire beretta pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/beretta/automatic,
-				/obj/item/ammo_box/magazine/m9mm/doublestack/
+				/obj/item/ammo_box/magazine/pistol9mm/doublestack/
 				)
 
 /obj/effect/spawner/bundle/f13/deagle
 	name = "Desert Eagle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
-				/obj/item/ammo_box/magazine/m44/
+				/obj/item/ammo_box/magazine/pistol44/
 				)
 
 /obj/effect/spawner/bundle/f13/pistol14
 	name = "14mm pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/pistol14,
-				/obj/item/ammo_box/magazine/m14mm
+				/obj/item/ammo_box/magazine/pistol14mm
 	)
 
 /obj/effect/spawner/bundle/f13/neostead
@@ -1413,7 +1413,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	name = "P90 SMG spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/p90,
-				/obj/item/ammo_box/magazine/m10mm_p90/
+				/obj/item/ammo_box/magazine/smg_p90/
 	)
 
 /obj/effect/spawner/bundle/f13/hunting
@@ -1544,11 +1544,11 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootdoubles = TRUE
 
 	loot = list(
-				/obj/item/ammo_box/magazine/m9mm,
+				/obj/item/ammo_box/magazine/pistol9mm,
 				/obj/item/ammo_box/shotgun/buck,
 				/obj/item/ammo_box/shotgun/slug,
 				/obj/item/ammo_box/loader/c38,
-				/obj/item/ammo_box/magazine/m10mm/adv,
+				/obj/item/ammo_box/magazine/pistol10mm,
 				/obj/item/ammo_box/magazine/m556/rifle/small
 				)
 
@@ -1557,13 +1557,13 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootdoubles = TRUE
 
 	loot = list(
-				/obj/item/ammo_box/magazine/m45,
+				/obj/item/ammo_box/magazine/pistol45,
 				/obj/item/ammo_box/stripper/a762,
 				/obj/item/ammo_box/stripper/a308,
-				/obj/item/ammo_box/magazine/m10mm/adv,
+				/obj/item/ammo_box/magazine/pistol10mm,
 				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/loader/c38,
-				/obj/item/ammo_box/magazine/m9mm,
+				/obj/item/ammo_box/magazine/pistol9mm,
 				/obj/item/ammo_box/loader/m44,
 				/obj/item/ammo_box/tube/a357,
 				/obj/item/ammo_box/loader/a357,
@@ -1581,12 +1581,12 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	loot = list(
 				/obj/item/ammo_box/shotgun/buck,
 				/obj/item/ammo_box/magazine/uzim9mm,
-				/obj/item/ammo_box/magazine/m10mm/adv,
+				/obj/item/ammo_box/magazine/pistol10mm,
 				/obj/item/ammo_box/magazine/greasegun,
 				/obj/item/ammo_box/stripper/needle,
 				/obj/item/ammo_box/magazine/tommygunm45,
 				/obj/item/ammo_box/tube/m44,
-				/obj/item/ammo_box/magazine/m10mm/adv/ext,
+				/obj/item/ammo_box/magazine/pistol10mm/extended,
 				/obj/item/stock_parts/cell/ammo/ec
 				)
 
@@ -1600,7 +1600,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 	loot = list(
 				/obj/item/ammo_box/magazine/d12g,
-				/obj/item/ammo_box/magazine/m44,
+				/obj/item/ammo_box/magazine/pistol44,
 				/obj/item/ammo_box/magazine/m556/rifle,
 				/obj/item/ammo_box/loader/c4570,
 				/obj/item/ammo_box/tube/c4570,
@@ -1693,7 +1693,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/poster/random_official,
 				/obj/item/multitool,
 				/obj/item/cigbutt/cigarbutt,
-				/obj/item/razor,
+				/obj/item/cosmetics/razor,
 				/obj/item/candle,
 				/obj/item/rollingpaper,
 				/obj/item/trash/coal,

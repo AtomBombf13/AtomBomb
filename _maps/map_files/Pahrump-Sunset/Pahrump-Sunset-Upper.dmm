@@ -125,15 +125,15 @@
 /area/f13/building/hospital)
 "adz" = (
 /obj/structure/closet/crate/secure/weapon,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
+/obj/item/ammo_box/magazine/pistol9mm,
 /obj/item/ammo_box/magazine/m556/rifle,
 /obj/item/ammo_box/magazine/m556/rifle,
 /obj/item/ammo_box/magazine/m556/rifle,
@@ -242,11 +242,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "aoF" = (
-/obj/structure/railing{
-	color = "#968d87"
+/obj/structure/railing/corner{
+	dir = 8
 	},
-/turf/open/transparent/openspace,
-/area/f13/building)
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "aqU" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/inside/mountain,
@@ -440,6 +440,13 @@
 /obj/machinery/telecomms/relay/preset/telecomms,
 /turf/open/indestructible,
 /area/f13/wasteland/ncr)
+"aHI" = (
+/obj/structure/destructible/tribal_torch/wall/lit,
+/obj/structure/chair/wood{
+	dir = 1
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "aIW" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
@@ -700,6 +707,13 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/wasteland)
+"bkC" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "bkO" = (
 /obj/structure/fence/handrail{
 	density = 0;
@@ -1463,6 +1477,11 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"cDO" = (
+/obj/structure/fluff/railing,
+/obj/structure/table/wood,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "cFm" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -2425,6 +2444,12 @@
 /obj/item/toy/plush/lampplushie,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
+"eAP" = (
+/obj/structure/window/fulltile/house{
+	dir = 2
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "eBz" = (
 /obj/structure/chair/f13chair1{
 	dir = 8
@@ -4127,11 +4152,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building/hospital)
 "ioD" = (
-/obj/structure/fluff/railing{
-	color = "#968d87"
+/obj/structure/window/fulltile/house{
+	dir = 2;
+	icon_state = "housewindowbroken"
 	},
-/turf/open/transparent/openspace,
-/area/f13/building)
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "ipe" = (
 /obj/structure/table/glass,
 /obj/item/paper_bin,
@@ -4556,6 +4582,12 @@
 /obj/structure/dresser,
 /turf/open/floor/wood_fancy,
 /area/f13/ncr)
+"jck" = (
+/obj/structure/fluff/railing/corner{
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "jcD" = (
 /obj/structure/railing{
 	color = null;
@@ -5244,6 +5276,10 @@
 	icon_state = "bar"
 	},
 /area/f13/city)
+"kAm" = (
+/obj/structure/destructible/tribal_torch/wall/lit,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "kCf" = (
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -5337,6 +5373,11 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland/ncr)
+"kMC" = (
+/obj/structure/table/wood,
+/obj/item/card/id/rusted,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "kOc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -6540,6 +6581,14 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/building/hospital)
+"ndI" = (
+/obj/structure/table/wood,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "ndW" = (
 /obj/machinery/light,
 /obj/structure/table/reinforced,
@@ -7009,6 +7058,10 @@
 /obj/structure/fluff/railing{
 	dir = 8
 	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
+"nSn" = (
+/obj/structure/fluff/railing,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "nSB" = (
@@ -8295,6 +8348,10 @@
 /obj/structure/chair/sofa,
 /turf/open/floor/carpet/red,
 /area/f13/legion)
+"qxF" = (
+/obj/structure/fluff/railing/corner,
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "qxH" = (
 /obj/structure/bed/wooden,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
@@ -8652,6 +8709,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/radiation)
+"riZ" = (
+/obj/effect/landmark/start/f13/orator,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "rjs" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
@@ -9002,6 +9063,12 @@
 "rLB" = (
 /turf/open/transparent/openspace,
 /area/f13/wasteland/ncr)
+"rLM" = (
+/obj/structure/fluff/railing{
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "rMZ" = (
 /obj/structure/barricade/wooden,
 /turf/closed/wall/f13/wood,
@@ -9501,6 +9568,11 @@
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
+/area/f13/legion)
+"sGA" = (
+/obj/structure/table/wood,
+/obj/item/melee/onehanded/slavewhip,
+/turf/open/floor/f13/wood,
 /area/f13/legion)
 "sGM" = (
 /obj/structure/window/reinforced{
@@ -11044,6 +11116,10 @@
 /obj/structure/table/wood,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"wck" = (
+/obj/structure/simple_door/interior,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "wcK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood/fancy/royalblack,
@@ -11156,6 +11232,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/followers)
+"wmN" = (
+/obj/machinery/computer/card/legion,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "wnK" = (
 /obj/structure/window/fulltile/wood,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
@@ -11353,6 +11433,14 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/building/hospital)
+"wEF" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
+/obj/structure/chair/wood,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "wEZ" = (
 /obj/structure/toilet{
 	dir = 8
@@ -11961,6 +12049,13 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/city)
+"xMD" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "xMZ" = (
 /obj/structure/closet,
 /obj/item/clothing/under/f13/mechanic,
@@ -12145,6 +12240,12 @@
 /obj/machinery/light/small,
 /turf/open/water,
 /area/f13/brotherhood/offices1st)
+"ygz" = (
+/obj/structure/fluff/railing/corner{
+	dir = 8
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "ygG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
@@ -57332,7 +57433,7 @@ teM
 mWt
 nyQ
 hMq
-ioD
+kmu
 qzj
 qzj
 oez
@@ -57589,7 +57690,7 @@ qzj
 mWt
 nyQ
 hMq
-aoF
+kmu
 gZj
 qzj
 biJ
@@ -66931,11 +67032,11 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -67173,26 +67274,26 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -67430,26 +67531,26 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -67687,26 +67788,26 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -67944,26 +68045,26 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -68201,26 +68302,26 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -68458,26 +68559,26 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -68718,23 +68819,23 @@ oez
 oez
 oez
 oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 vLb
 vLb
 vLb
@@ -69988,12 +70089,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 fxn
@@ -70245,12 +70346,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 pGD
@@ -70502,12 +70603,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 enE
 cWQ
@@ -70759,12 +70860,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 enE
 wZn
@@ -71016,12 +71117,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 bxB
@@ -71273,12 +71374,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 jvX
@@ -71530,12 +71631,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 pGD
@@ -71787,12 +71888,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 enE
 wZn
@@ -72044,12 +72145,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 jbP
 mde
@@ -72301,12 +72402,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 bxB
@@ -72558,12 +72659,12 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
+cHt
+cHt
+cHt
+cHt
+cHt
+cHt
 oez
 fxn
 fxn
@@ -72816,14 +72917,14 @@ oez
 oez
 oez
 oez
+fxn
+fxn
+fxn
+fxn
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+qxF
+rLM
+jck
 oez
 oez
 oez
@@ -73072,16 +73173,16 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+fxn
+fxn
+wZn
+wZn
+fxn
+fxn
+fxn
+xWX
+fxn
+fxn
 oez
 oez
 oez
@@ -73328,18 +73429,18 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+qxF
+fxn
+xMD
+bxB
+bxB
+xMD
+fxn
+wEF
+wZn
+aHI
+fxn
+jck
 oez
 oez
 oez
@@ -73585,18 +73686,18 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+nSn
+ioD
+iEW
+iEW
+iEW
+iEW
+wOD
+iEW
+iEW
+iEW
+lOE
+jxl
 oez
 oez
 oez
@@ -73842,18 +73943,18 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+nSn
+eAP
+iEW
+iEW
+iEW
+iEW
+fxn
+iEW
+iEW
+iEW
+lOE
+jxl
 oez
 oez
 oez
@@ -74099,18 +74200,18 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+nSn
+eAP
+iEW
+iEW
+iEW
+iEW
+fxn
+wmN
+bTS
+iEW
+ioD
+jxl
 oez
 oez
 oez
@@ -74356,18 +74457,18 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+nSn
+eAP
+iEW
+iEW
+iEW
+iEW
+fxn
+sGA
+riZ
+kAm
+fxn
+hzU
 oez
 oez
 oez
@@ -74613,17 +74714,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+ygz
+fxn
+bkC
+iEW
+iEW
+bkC
+fxn
+ndI
+kMC
+fxn
+fxn
 oez
 oez
 oez
@@ -74871,15 +74972,15 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+fxn
+fxn
+wck
+fxn
+fxn
+fxn
+fxn
+fxn
+fxn
 oez
 oez
 oez
@@ -75127,13 +75228,13 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+qxF
+fxn
+lcB
+iEW
+cDO
+ebv
+fxn
 cHt
 cHt
 cHt
@@ -75384,13 +75485,13 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+nSn
+ioD
+eZe
+iEW
+cDO
+ebv
+fxn
 cHt
 cHt
 cHt
@@ -75642,12 +75743,12 @@ vLb
 vLb
 vLb
 vLb
-vLb
-vLb
-vLb
-vLb
-vLb
-vLb
+fxn
+lcB
+iEW
+aoF
+iEW
+fxn
 cHt
 cHt
 cHt
@@ -75899,12 +76000,12 @@ vLb
 vLb
 vLb
 vLb
-vLb
-vLb
-vLb
-vLb
-vLb
-vLb
+fxn
+fxn
+fxn
+fxn
+fxn
+fxn
 cHt
 cHt
 cHt
@@ -76160,7 +76261,7 @@ vLb
 vLb
 vLb
 vLb
-vLb
+lRr
 vLb
 cHt
 cHt

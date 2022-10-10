@@ -182,14 +182,12 @@
 
 /// Little bitty ammo thingies
 GLOBAL_LIST_INIT(small_ammo_types, typecacheof(list(
-	/obj/item/ammo_box/magazine/m22,
+	/obj/item/ammo_box/magazine/pistol22,
 	/obj/item/ammo_box/magazine/zipgun,
-	/obj/item/ammo_box/magazine/m9mm,
-	/obj/item/ammo_box/magazine/m10mm,
-	/obj/item/ammo_box/magazine/m45,
-	/obj/item/ammo_box/magazine/m44,
-	/obj/item/ammo_box/magazine/m14mm,
-	/obj/item/ammo_box/magazine/m10mm/rifle,
+	/obj/item/ammo_box/magazine/pistol9mm,
+	/obj/item/ammo_box/magazine/pistol45,
+	/obj/item/ammo_box/magazine/pistol44,
+	/obj/item/ammo_box/magazine/pistol14mm,
 	/obj/item/ammo_box/magazine/autopipe,
 	/obj/item/ammo_box/magazine/m556/rifle/small,
 	/obj/item/ammo_box/loader/c38,
@@ -213,7 +211,7 @@ GLOBAL_LIST_INIT(holster_allowed, typecacheof(list(
 
 /// Not so little bitty ammo thingies
 GLOBAL_LIST_INIT(holster_disallowed, typecacheof(list(
-	/obj/item/ammo_box/magazine/m22/extended
+	/obj/item/ammo_box/magazine/pistol22/extended
 	)))
 
 GLOBAL_LIST_INIT(advanced_hardsuit_allowed, typecacheof(list(
@@ -456,7 +454,7 @@ GLOBAL_LIST_INIT(medibelt_allowed, typecacheof(list(
 	/obj/item/geiger_counter,
 	/obj/item/clothing/neck/stethoscope,
 	/obj/item/stamp,
-	/obj/item/razor,
+	/obj/item/cosmetics/razor,
 	/obj/item/clothing/glasses,
 	/obj/item/wrench/medical,
 	/obj/item/clothing/mask/muzzle,
@@ -571,7 +569,7 @@ GLOBAL_LIST_INIT(storage_treasurer_can_hold, typecacheof(list(
 	/obj/item/folder,
 	/obj/item/storage/bag/money/small,
 	/obj/item/binoculars,
-	/obj/item/lipstick,
+	/obj/item/cosmetics/lipstick,
 	/obj/item/pen,
 	/obj/item/melee/smith/dagger,
 	)))
@@ -590,7 +588,7 @@ GLOBAL_LIST_INIT(storage_wallet_can_hold, typecacheof(list(
 	/obj/item/disk,
 	/obj/item/implanter,
 	/obj/item/lighter,
-	/obj/item/lipstick,
+	/obj/item/cosmetics/lipstick,
 	/obj/item/match,
 	/obj/item/paper,
 	/obj/item/pen,

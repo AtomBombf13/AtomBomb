@@ -579,11 +579,7 @@
 	multiple_sprites = 1
 
 
-////////////////
-//SPEEDLOADERS//
-////////////////
-
-
+// ---------------------------- SPEED LOADERS ---------------------------------------//
 //.38
 /obj/item/ammo_box/loader/c38
 	name = "speed loader (.38)"
@@ -625,17 +621,6 @@
 	name = "speed loader (.357 DumDum)"
 	desc = "Designed to quickly reload revolvers. Usage of these rounds will constitute a war crime in your area."
 
-/obj/item/ammo_box/tube/a357
-	name = "speed loader tube (.357)"
-	desc = "Designed to quickly reload repeaters. Also accepts .38!"
-	icon_state = "357tube"
-	caliber = list(CALIBER_357, CALIBER_38)
-	ammo_type = /obj/item/ammo_casing/a357
-	max_ammo = 12
-
-/obj/item/ammo_box/tube/a357/empty
-	start_empty = TRUE
-
 
 //.44 Magnum
 /obj/item/ammo_box/loader/m44
@@ -645,16 +630,6 @@
 	caliber = list(CALIBER_44)
 
 /obj/item/ammo_box/loader/m44/empty
-	start_empty = TRUE
-
-/obj/item/ammo_box/tube/m44
-	name = "speed loader tube (.44)"
-	icon_state = "44tube"
-	caliber = list(CALIBER_44)
-	ammo_type = /obj/item/ammo_casing/m44
-	max_ammo = 12
-
-/obj/item/ammo_box/tube/m44/empty
 	start_empty = TRUE
 
 
@@ -708,6 +683,32 @@
 	icon_state = "4570"
 	ammo_type = /obj/item/ammo_casing/c4570/explosive
 
+
+
+// ---------------------------- AMMUNITION TUBES ---------------------------------------//
+/obj/item/ammo_box/tube/a357
+	name = "speed loader tube (.357)"
+	desc = "Designed to quickly reload repeaters. Also accepts .38!"
+	icon_state = "357tube"
+	caliber = list(CALIBER_357, CALIBER_38)
+	ammo_type = /obj/item/ammo_casing/a357
+	max_ammo = 12
+
+/obj/item/ammo_box/tube/a357/empty
+	start_empty = TRUE
+
+
+/obj/item/ammo_box/tube/m44
+	name = "speed loader tube (.44)"
+	icon_state = "44tube"
+	caliber = list(CALIBER_44)
+	ammo_type = /obj/item/ammo_casing/m44
+	max_ammo = 12
+
+/obj/item/ammo_box/tube/m44/empty
+	start_empty = TRUE
+
+
 /obj/item/ammo_box/tube/c4570
 	name = "speed loader tube (.45-70)"
 	icon_state = "4570tube"
@@ -719,12 +720,7 @@
 	start_empty = TRUE
 
 
-
-//////////////////
-//STRIPPER CLIPS//
-//////////////////
-
-
+// ---------------------------- STRIPPER CLIPS ---------------------------------------//
 //Shotgun clips (sort out with the box versio if implemented)
 /*
 /obj/item/ammo_box/shotgun

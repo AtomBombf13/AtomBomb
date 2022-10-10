@@ -17,7 +17,7 @@
 	item_state = "gun"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/m10mm/adv
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -73,8 +73,8 @@
 	name = ".22 pistol"
 	desc = "The silenced .22 pistol is a sporting handgun with an integrated silencer."
 	icon_state = "silenced22"
-	mag_type = /obj/item/ammo_box/magazine/m22
-	disallowed_mags = list(/obj/item/ammo_box/magazine/m22/extended)
+	mag_type = /obj/item/ammo_box/magazine/pistol22
+	disallowed_mags = list(/obj/item/ammo_box/magazine/pistol22/extended)
 	w_class = WEIGHT_CLASS_TINY
 	
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
@@ -104,8 +104,8 @@
 	desc = "A mass produced pre-war Browning Hi-power 9mm pistol."
 	icon_state = "ninemil"
 	w_class = WEIGHT_CLASS_SMALL
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
-	mag_type = /obj/item/ammo_box/magazine/m9mm // load any 9mm pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos	
 	
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -159,8 +159,8 @@
 	desc = "The P220 Sig Sauer. A Swiss designed pistol that is compact and has an average rate of fire for a pistol."
 	icon_state = "sig"
 	w_class = WEIGHT_CLASS_SMALL
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
-	mag_type = /obj/item/ammo_box/magazine/m9mm // load any 9mm pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos	
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -188,8 +188,8 @@
 	desc = "A rare select fire variant of the M93R."
 	icon_state = "m93r"
 	w_class = WEIGHT_CLASS_SMALL
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
-	mag_type = /obj/item/ammo_box/magazine/m9mm // load any 9mm pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos	
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -228,12 +228,11 @@
 	desc = "A large, pre-war styled, gas-operated 10mm pistol."
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "n99"
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv
-	mag_type = /obj/item/ammo_box/magazine/m10mm // load any 10mm pistol ammos
+	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	disallowed_mags = list(
-		/obj/item/ammo_box/magazine/m10mm/adv/ext, 
-		/obj/item/ammo_box/magazine/m10mm/adv/ext/empty,
-		/obj/item/ammo_box/magazine/m10mm/rifle)
+		/obj/item/ammo_box/magazine/pistol10mm/extended, 
+		/obj/item/ammo_box/magazine/pistol10mm/extended/empty,)
 	
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
@@ -311,8 +310,8 @@
 	icon_state = "m1911"
 	item_state = "pistolchrome"
 	w_class = WEIGHT_CLASS_NORMAL
-	init_mag_type = /obj/item/ammo_box/magazine/m45
-	mag_type = /obj/item/ammo_box/magazine/m45 // load any .45 pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol45
+	mag_type = /obj/item/ammo_box/magazine/pistol45 // load any .45 pistol ammos	
 
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -375,8 +374,8 @@
 	name = ".45 Autoloader"
 	desc = "A sleek looking handgun chambered in .45 ACP for all your operating needs. Don't let the slide catch your finger though."
 	icon_state = "autoloader"
-	init_mag_type = /obj/item/ammo_box/magazine/m45/socom
-	mag_type = /obj/item/ammo_box/magazine/m45 // load any .45 pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol45/socom
+	mag_type = /obj/item/ammo_box/magazine/pistol45 // load any .45 pistol ammos	
 	w_class = WEIGHT_CLASS_NORMAL
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
@@ -426,8 +425,8 @@
 	desc = "A robust .44 magnum semi-automatic handgun."
 	icon_state = "deagle"
 	item_state = "deagle"
-	init_mag_type = /obj/item/ammo_box/magazine/m44
-	mag_type = /obj/item/ammo_box/magazine/m44 // load any .44 pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol44
+	mag_type = /obj/item/ammo_box/magazine/pistol44 // load any .44 pistol ammos	
 	w_class = WEIGHT_CLASS_NORMAL
 
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
@@ -469,8 +468,8 @@
 	desc = "A long-barreled .44 magnum semi-automatic handgun."
 	icon_state = "automag"
 	item_state = "deagle"
-	init_mag_type = /obj/item/ammo_box/magazine/m44/automag
-	mag_type = /obj/item/ammo_box/magazine/m44 // load any .44 pistol ammos	
+	init_mag_type = /obj/item/ammo_box/magazine/pistol44/automag
+	mag_type = /obj/item/ammo_box/magazine/pistol44 // load any .44 pistol ammos	
 	w_class = WEIGHT_CLASS_NORMAL
 	
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
@@ -511,8 +510,8 @@
 	name = "14mm pistol"
 	desc = "A Swiss SIG-Sauer 14mm handgun, powerful but a little inaccurate"
 	icon_state = "pistol14"
-	mag_type = /obj/item/ammo_box/magazine/m14mm
-	init_mag_type = /obj/item/ammo_box/magazine/m14mm
+	mag_type = /obj/item/ammo_box/magazine/pistol14mm
+	init_mag_type = /obj/item/ammo_box/magazine/pistol14mm
 	w_class = WEIGHT_CLASS_NORMAL
 
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
@@ -632,7 +631,7 @@
 	desc = "The Captain loves his gun, despite some silly gunsmith adding some gas venting to the barrel after his second visit to the surgeon for recoil-related wrist injuries."
 	icon_state = "elcapitan"
 	item_state = "deagle"
-	mag_type = /obj/item/ammo_box/magazine/m14mm
+	mag_type = /obj/item/ammo_box/magazine/pistol14mm
 	w_class = WEIGHT_CLASS_NORMAL
 
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY

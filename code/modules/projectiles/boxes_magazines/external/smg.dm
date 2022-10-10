@@ -137,7 +137,7 @@
 /obj/item/ammo_box/magazine/smg14/stacked/empty
 	start_empty = 1
 
-/obj/item/ammo_box/magazine/m10mm_p90
+/obj/item/ammo_box/magazine/smg_p90
 	name = "toploader magazine (10mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "5.56m"
@@ -148,5 +148,5 @@
 	custom_materials = list(/datum/material/iron = MATS_SMG_EXTENDED)
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/ammo_box/magazine/m10mm_p90/empty
+/obj/item/ammo_box/magazine/smg_p90/empty
 	start_empty = 1

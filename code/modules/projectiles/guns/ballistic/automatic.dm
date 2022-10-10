@@ -223,8 +223,8 @@
 	icon_state = "rockwell"
 	item_state = "uzi"
 	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/m22/extended
-	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
+	mag_type = /obj/item/ammo_box/magazine/pistol22/extended
+	init_mag_type = /obj/item/ammo_box/magazine/pistol22/extended
 
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -429,8 +429,8 @@
 	item_state = "smg10mm"
 	icon_prefix = "smg10mm"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/m10mm
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv/ext
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
+	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm/extended
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
@@ -503,8 +503,8 @@
 	icon_state = "p90"
 	item_state = "m90"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm_p90
+	mag_type = /obj/item/ammo_box/magazine/smg_p90
+	init_mag_type = /obj/item/ammo_box/magazine/smg_p90
 
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -747,8 +747,8 @@
 	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. Chambered in 9mm."
 	icon_state = "delisle"
 	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/m9mm
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm
+	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -792,8 +792,8 @@
 	desc = "The M1 Carbine was mass produced during some old war, and at some point NCR found stockpiles and rechambered them to 10mm to make up for the fact their service rifle production can't keep up with demand."
 	icon_state = "m1carbine"
 	item_state = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/m10mm
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv
+	mag_type = /obj/item/ammo_box/magazine/pistol10mm
+	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -902,8 +902,8 @@
 	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. This modified version is often used by the Brotherhood of Steel. Its stock has been replaced by post-war polymer furniture, with space to mount a scope. Chambered in .45 ACP."
 	icon_state = "commando"
 	item_state = "commando"
-	mag_type = /obj/item/ammo_box/magazine/m45
-	init_mag_type = /obj/item/ammo_box/magazine/m45/socom
+	mag_type = /obj/item/ammo_box/magazine/pistol45
+	init_mag_type = /obj/item/ammo_box/magazine/pistol45/socom
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -992,10 +992,11 @@
 /obj/item/gun/ballistic/automatic/sportcarbine
 	name = "sport carbine"
 	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "svarmint"
 	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/m22
-	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
+	mag_type = /obj/item/ammo_box/magazine/pistol22
+	init_mag_type = /obj/item/ammo_box/magazine/pistol22/extended
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
@@ -2447,7 +2448,8 @@
 /obj/item/gun/ballistic/automatic/m1919/m2a1
 	name = "John 'Moses' Browning M2A1"
 	desc = "This ancient heavy machine gun has been directly pulled off of some once combat vehicle and modified to be fired while being carried. It is adorned by symbols of the US Government and the Encalve."
-	icon_state = "M2A1"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "m2a1"
 	slot_flags = 0
 	slowdown = 1.25
 	mag_type = /obj/item/ammo_box/magazine/cal50
