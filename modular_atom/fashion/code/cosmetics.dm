@@ -162,7 +162,7 @@
 
 /obj/item/cosmetics/razor/proc/shave(mob/living/carbon/human/H, location = BODY_ZONE_PRECISE_MOUTH)
 	if(location == BODY_ZONE_PRECISE_MOUTH)
-		H.facial_hair_style = "Shaved"
+		H.facial_hair_style = "Clean shave (Hairless)"
 	else
 		H.hair_style = "Skinhead"
 
@@ -184,7 +184,7 @@
 			if(!get_location_accessible(H, location))
 				to_chat(user, span_warning("The mask is in the way!"))
 				return
-			if(H.facial_hair_style == "Shaved")
+			if(H.facial_hair_style == "Clean shave (Hairless)")
 				to_chat(user, span_warning("Already clean-shaven!"))
 				return
 
@@ -212,7 +212,7 @@
 			if(!get_location_accessible(H, location))
 				to_chat(user, span_warning("The headgear is in the way!"))
 				return
-			if(H.hair_style == "Bald" || H.hair_style == "Mature (Balding)" || H.hair_style == "Shaved")
+			if(H.hair_style == "Bald" || H.hair_style == "Mature (Balding)" || H.hair_style == "Clean shave (Hairless)")
 				to_chat(user, span_warning("There is not enough hair left to shave!"))
 				return
 

@@ -645,7 +645,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.hair_style = "Spiky"
-		H.facial_hair_style = "Shaved"
+		H.facial_hair_style = "Clean shave (Hairless)"
 		H.facial_hair_color = "000"
 		H.hair_color = "000"
 		if(!(HAIR in H.dna.species.species_traits)) //No hair? No problem!
@@ -2068,7 +2068,7 @@
 			var/mob/living/carbon/human/H = M
 			to_chat(H, span_danger("Your hair is falling out in clumps!"))
 			H.hair_style = "Bald"
-			H.facial_hair_style = "Shaved"
+			H.facial_hair_style = "Clean shave (Hairless)"
 			H.update_hair()
 
 /datum/reagent/saltpetre
