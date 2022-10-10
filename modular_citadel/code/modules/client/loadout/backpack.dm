@@ -16,29 +16,62 @@
 	path = /obj/item/taperecorder
 	cost = 2
 
-/datum/gear/backpack/razor
-	name = "electric razor"
-	path = /obj/item/cosmetics/razor
-	cost = 2
-
 /datum/gear/backpack/donuts
-	name = "donut box"
+	name = "Donut box"
 	path = /obj/item/storage/fancy/donut_box
 	cost = 2
-
-//// "Toys"
 
 /datum/gear/backpack/crayons
 	name = "Box of Crayons"
 	path = /obj/item/storage/crayons
-	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
 	cost = 2
 
-/datum/gear/backpack/toykatana
-	name = "Toy Katana"
-	path = /obj/item/toy/katana
-	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
-	cost = 3
+
+// -------------------- COSMETICS ------------------------------
+
+/datum/gear/backpack/razor
+	name = "Electric razor"
+	path = /obj/item/cosmetics/razor
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+	cost = 2
+
+/datum/gear/backpack/haircomb
+	name = "Plastic comb"
+	path = /obj/item/cosmetics/haircomb
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+	cost = 1
+
+/datum/gear/backpack/hairbrush
+	name = "Hair brush"
+	path = /obj/item/cosmetics/haircomb/brush
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+	cost = 1
+
+/datum/gear/backpack/makeupmirror
+	name = "Makeup mirror"
+	path = /obj/item/cosmetics/mirror_makeup
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+	cost = 1
+
+/datum/gear/backpack/lipstick
+	name = "Red lipstick"
+	path = "/obj/item/cosmetics/lipstick"
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+
+/datum/gear/backpack/lipstickpurple
+	name = "Purple lipstick"
+	path = /obj/item/cosmetics/lipstick/purple
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+
+/datum/gear/backpack/lipstickjade
+	name = "Jade lipstick"
+	path = /obj/item/cosmetics/lipstick/jade
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
+
+/datum/gear/backpack/lipstickblack
+	name = "Black lipstick"
+	path = /obj/item/cosmetics/lipstick/black
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
 
 //// Pens - not catagorized
 

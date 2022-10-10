@@ -95,29 +95,6 @@
 	item_state = "ncr_officer"
 	item_color = "ncr_officer"
 
-/obj/item/clothing/under/f13/ncr/conscript
-	name = "NCR conscript fatigues"
-	desc = "A standard duty uniform for conscripts of the New California Republic."
-	can_adjust = FALSE
-	icon_state = "ncr_conscript"
-	item_state = "ncr_conscript"
-	item_color = "ncr_conscript"
-
-/obj/item/clothing/under/f13/ncr/scout
-	name = "NCR scout fatigues"
-	desc = "A standard duty uniform for scouts of the New California Republic."
-	icon_state = "scoutclothes"
-	item_state = "scoutclothes"
-	item_color = "scoutclothes"
-
-/obj/item/clothing/under/f13/ncr/sniper
-	name = "NCR sniper fatigues"
-	desc = "A standard duty uniform for snipers of the New California Republic."
-	can_adjust = FALSE
-	icon_state = "ncr_snipermgs"
-	item_state = "ncr_snipermgs"
-	item_color = "ncr_snipermgs"
-
 /obj/item/clothing/under/f13/ncr/pants
 	name = "NCR fatigue pants"
 	desc = "A set of standard issue fatigue pants without the upper overcoat. For when you really need to show off your guns."
@@ -125,14 +102,6 @@
 	icon_state = "ncr_fatigue_pants"
 	item_state = "ncr_fatigue_pants"
 	item_color = "ncr_fatigue_pants"
-
-/obj/item/clothing/under/f13/ncr/ncr_shorts
-	name = "NCR fatigue shorts"
-	desc = "A set of uniform shorts and lightweight shirt for NCR troopers deployed in hot climates."
-	can_adjust = TRUE
-	icon_state = "ncr_shorts"
-	item_state = "ncr_shorts"
-	item_color = "ncr_shorts"
 
 /obj/item/clothing/under/f13/ncrcaravan
 	name = "NCR caravaneer outfit"

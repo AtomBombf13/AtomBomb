@@ -1036,10 +1036,10 @@
 	icon_state = "ncrdogtagcaptain"
 
 /obj/item/card/id/dogtag/legforgemaster
-	name = "forgemasters' medallion"
-	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to the Forgemaster."
-	icon_state = "legionmedallionrecruit"
-	assignment = "forgmaster medallion"
+	name = "camp exactor medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to the Camp Exactor."
+	icon_state = "legionmedallionprime"
+	assignment = "camp cxactor medallion"
 
 /obj/item/card/id/dogtag/legslavemaster
 	name = "slavemaster medallion"

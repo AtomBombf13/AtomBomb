@@ -273,14 +273,18 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	item_state = "hat_enclave_officer"
 
 
+//////////
+//LEGION//
+//////////
 
-								////////////
-//------------------------------// LEGION //-----------------------------------
-								////////////
 
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet template"
 	desc = "should not exist."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = ""
+	item_state = ""
 	lefthand_file = ""
 	righthand_file = ""
 	flags_inv = HIDEEARS|HIDEHAIR
@@ -289,194 +293,157 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	dynamic_fhair_suffix = ""
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
 
-/* /obj/item/clothing/head/helmet/f13/legion/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-/obj/item/clothing/head/helmet/f13/legion/marsheaddress
-	name = "priestess' headdress"
-	desc = "A headdress made of feathers and decorated with two golden tassles."
-	icon_state = "legion-priestess"
-	item_state = "legion-priestess"
-	dynamic_hair_suffix = "+generic"
-	salvage_loot = list()
-
-/obj/item/clothing/head/helmet/f13/legion/recruit
-	name = "legion recruit helmet"
-	desc = "It's a leather skullcap issued to recruits."
-	icon_state = "legrecruit"
-	item_state = "legrecruit"
-	flags_inv = HIDEEARS|HIDEHAIR
-
-/obj/item/clothing/head/helmet/f13/legion/prime
-	name = "legion prime helmet"
-	desc = "A helmet from reinforced leather with a red peak."
-	item_state = "legprime"
-	icon_state = "legprime"
-	flags_inv = HIDEEARS|HIDEHAIR
-
-/obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
-	name = "slavemaster helmet"
-	desc = "The distinct helmet used by slavemasters."
-	icon_state = "legslavemaster"
-	item_state = "legslavemaster"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
-	flags_cover = HEADCOVERSEYES
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/f13/legion/vet
-	name = "legion veteran helmet"
-	desc = "It's a metal legion veteran helmet, clearly inspired by old world sports uniforms."
-	icon_state = "legveteran"
-	item_state = "legveteran"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-
-/obj/item/clothing/head/helmet/f13/legion/vet/explorer
-	name = "legion scout hood"
-	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
-	icon_state = "legexplorer"
-	item_state = "legexplorer"
-
-/obj/item/clothing/head/helmet/f13/legion/vet/combvexil
-	name = "legion bear vexillarius helmet"
-	desc = "This helmet is decorated with the pelt of a ashland bear."
-	icon_state = "legvexil_bear"
-	item_state = "legvexil_bear"
-
-/obj/item/clothing/head/helmet/f13/legion/vet/vexil
-	name = "legion fox vexillarius helmet"
-	desc = "This helmet is decorated with the pelt of a desert fox."
-	icon_state = "legvexil"
-	item_state = "legvexil"
-
-/obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
-	name = "legion nightstalker vexillarius helmet"
-	desc = "This helmet is decorated with the pelt of a nightstalker."
-	icon_state = "legvexil_night"
-	item_state = "legvexil_night"
-
-/obj/item/clothing/head/helmet/f13/legion/venator
-	name = "legion venator hood"
-	desc = "A leather hood with a sturdy metal skullcap and a gold bull insignia in the front."
-	icon_state = "legvenator"
-	item_state = "legvenator"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-/*
-/obj/item/clothing/head/helmet/f13/legion/orator
-	name = "laurel wreath"
-	desc = "A laurel wreath is made of branches and leaves of the laurel, a type of evergreen shrub or small tree. This one appears to be out of metal,however. In Ancient Rome, it was worn on the head as a symbol of triumph."
-	icon_state = "legion-orator"
-	item_state = "legion-orator"
-	flags_inv = null
-*/
-/obj/item/clothing/head/helmet/f13/legion/recruit/decan
-	name = "legion recruit decanus helmet"
-	desc = "This reinforced leather helmet has a plume of black and dark red feathers."
-	icon_state = "legdecan"
-	item_state = "legdecan"
-
-/obj/item/clothing/head/helmet/f13/legion/prime/decan
-	name = "legion prime decanus helmet"
-	desc = "This reinforced leather helmet with a red peak has a plume of black feathers."
-	icon_state = "legdecanprime"
-	item_state = "legdecanprime"
-
-/*
-/obj/item/clothing/head/helmet/f13/legion/heavy
-	name = "reinforced legion veteran decanus helmet"
-	desc = "A metal helmet with ballistic visor and a plume, denoting veteran Decanus status."
-	icon_state = "legion-decvet"
-	item_state = "legion-decvet"
-	actions_types = list(/datum/action/item_action/toggle)
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-
-/obj/item/clothing/head/helmet/f13/legion/heavy/attack_self(mob/user)
-	weldingvisortoggle(user)
-	icon_state = "legion-decvetup"
-	item_state = "legion-decvetup"
-*/
-/obj/item/clothing/head/helmet/f13/legion/vet/decan
-	name = "legion veteran decanus helmet"
-	desc = "It's a metal helmet with an array of red, white and black feathers, unmistakably a Veteran Decanus."
-	icon_state = "legdecanvet"
-	item_state = "legdecanvet"
-
-/obj/item/clothing/head/helmet/f13/legion/centurion
-	name = "legion centurion helmet"
-	desc = "A sturdy helmet from steel and brass with a red horizontal plume."
-	icon_state = "legcenturion"
-	item_state = "legcenturion"
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
-
-/obj/item/clothing/head/helmet/f13/legion/rangercent
-	name = "ranger-hunter centurion helmet"
-	desc = "The helmet of an NCR ranger, refit to serve as a Centurions helmet."
-	icon_state = "rangercent"
-	item_state = "rangercent"
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
-
-/obj/item/clothing/head/helmet/f13/legion/palacent
-	name = "paladin-slayer centurion helmet"
-	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
-	icon_state = "palacent"
-	item_state = "palacent"
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
-
-/obj/item/clothing/head/helmet/f13/legion/legate
-	name = "legion legate helmet"
-	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
-	icon_state = "leglegate"
-	item_state = "leglegate"
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
-	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+///////////
+/*SLAVES */
+///////////
 
 /obj/item/clothing/head/f13/servant
 	name = "servant headwear"
 	desc = "A simple uncoloured linen cloth wrapped around the head, the mark of a servant slave trained in household work."
-	icon_state = "legslaveservant"
-	item_state = "legslaveservant"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "leg_slave"
 	flags_inv = HIDEEARS
 	flags_cover = null
 
 /obj/item/clothing/head/f13/auxilia
 	name = "auxilia headwear"
-	desc = "A soft red cap with a black band, used by female Auxilia outside camp."
-	icon_state = "legaux"
-	item_state = "legaux"
+	desc = "A soft red cap with a black band, used by Auxilia outside camp."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "leg_aux"
 	flags_inv = HIDEEARS
 	flags_cover = null
 
+/////////////
+/*LINE LEG */
+/////////////
+
+/obj/item/clothing/head/helmet/f13/legion/recruit
+	name = "legion recruit helmet"
+	desc = "It's a leather skullcap issued to recruits."
+	icon_state = "leg_rec"
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/legion/prime
+	name = "legion prime helmet"
+	desc = "A helmet from reinforced leather with a red peak."
+	item_state = "leg_prime"
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/legion/vet
+	name = "legion veteran helmet"
+	desc = "It's a metal legion veteran helmet, clearly inspired by old world sports uniforms."
+	icon_state = "leg_vet"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	flags_inv = HIDEEARS|HIDEHAIR
+
+////////////////
+/*RECON/SCOUT */
+////////////////
+
+/obj/item/clothing/head/helmet/f13/legion/explorer
+	name = "legion explorer hood"
+	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
+	icon_state = "leg_hood"
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/legion/assassin
+	name = "legion assassin hood"
+	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into. This one has golden bull on it's forehead."
+	icon_state = "leg_hood_assassin"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	flags_inv = HIDEEARS|HIDEHAIR
+
+//////////
+/*DECANI*/
+//////////
+
+/obj/item/clothing/head/helmet/f13/legion/recruit/decan
+	name = "legion recruit decanus helmet"
+	desc = "This reinforced leather helmet has a plume of black and dark red feathers."
+	icon_state = "leg_decan"
+
+/obj/item/clothing/head/helmet/f13/legion/prime/decan
+	name = "legion prime decanus helmet"
+	desc = "This reinforced leather helmet with a red peak has a plume of black feathers."
+	icon_state = "leg_decan_prime"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/decan
+	name = "legion veteran decanus helmet"
+	desc = "It's a metal helmet with an array of red, white and black feathers, unmistakably a Veteran Decanus."
+	icon_state = "leg_decan_veteran"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/vexil
+	name = "legion fox vexillarius helmet"
+	desc = "This helmet is decorated with the pelt of a desert fox."
+	icon_state = "leg_vex"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/combvexil
+	name = "legion bear vexillarius helmet"
+	desc = "This helmet is decorated with the pelt of a ashland bear."
+	icon_state = "leg_vex_bear"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
+	name = "legion nightstalker vexillarius helmet"
+	desc = "This helmet is decorated with the pelt of a nightstalker."
+	icon_state = "leg_vex_night"
+
+/////////////
+/*CENTURION*/
+/////////////
+
+/obj/item/clothing/head/helmet/f13/legion/centurion
+	name = "legion centurion helmet"
+	desc = "A sturdy helmet from steel and brass with a red horizontal plume."
+	icon_state = "leg_cent"
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+
+/obj/item/clothing/head/helmet/f13/legion/palacent
+	name = "legion centurion paladin-slayer helmet"
+	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
+	icon_state = "leg_cent_paladin"
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+
+/obj/item/clothing/head/helmet/f13/legion/rangercent
+	name = "legion centurion ranger-hunter helmet"
+	desc = "The helmet of an NCR ranger, refit to serve as a Centurions helmet."
+	icon_state = "leg_cent_ranger"
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+
+//Don't give this to anything outside of event crap
+/obj/item/clothing/head/helmet/f13/legion/legate
+	name = "legion legate helmet"
+	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
+	icon_state = "leg_legate"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
 
-									/////////
-//----------------------------------// NCR //-----------------------------------
-									/////////
+
+///////
+/*NCR*/
+///////
 
 /obj/item/clothing/head/f13/ncr
-	name = "NCR trooper helmet"
-	desc = "A standard issue NCR steel helmet. Looks like you can write on it and strap a few items on the helmet band."
-	icon_state = "ncr_steelpot"
-	item_state = "ncr_steelpot"
+	name = "NCR pith helmet"
+	desc = "A standard issue NCR pith helmet made out of scrap and covered over with leather." //THESE ARE MADE OUT OF LEATHER HOLY HELL MAN
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "ncr_helmet"
 	strip_delay = 50
-	obj_flags = UNIQUE_RENAME
-	unique_reskin = list("M1" = "ncr_old")
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
 
-/* /obj/item/clothing/head/f13/ncr/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-/obj/item/clothing/head/f13/ncr/steelpot_goggles
+/obj/item/clothing/head/f13/ncr/storm //Whoever named these steelpots should go to get their eyes checked
 	name = "NCR storm helmet"
 	desc = "A standard issue NCR steel helmet, issued with an additional pair of storm goggles for weather resistance."
-	icon_state = "steelpot_goggles"
-	item_state = "steelpot_goggles"
-	alt_toggle_message = "You push the goggles down "
+	icon_state = "ncr_helmet_storm"
+	alt_toggle_message = "You push the goggles down"
 	can_toggle = 1
 	flags_inv = HIDEEARS
 	actions_types = list(/datum/action/item_action/toggle)
@@ -485,8 +452,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	visor_flags_cover = HEADCOVERSEYES
 	dog_fashion = null
 
-
-/obj/item/clothing/head/f13/ncr/steelpot_goggles/attack_self(mob/user)
+/obj/item/clothing/head/f13/ncr/storm/attack_self(mob/user)
 	if(can_toggle && !user.incapacitated())
 		if(world.time > cooldown + toggle_cooldown)
 			cooldown = world.time
@@ -494,7 +460,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 			flags_1 ^= visor_flags
 			flags_inv ^= visor_flags_inv
 			flags_cover ^= visor_flags_cover
-			icon_state = "[initial(icon_state)][up ? "up" : ""]"
+			icon_state = "[initial(icon_state)][up ? "-up" : ""]"
 			to_chat(user, "[up ? alt_toggle_message : toggle_message] \the [src]")
 
 			user.update_inv_head()
@@ -507,179 +473,52 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 					playsound(src.loc, "[active_sound]", 100, 0, 4)
 					sleep(15)
 
-/obj/item/clothing/head/f13/ncr/steelpot_goggles/trenchraider
-	name = "NCR trench storm helmet"
-	desc = "A standard issue NCR steel helmet, issued with extra steel for close quarters fighting."
-
-/obj/item/clothing/head/f13/ncr/steelpot_med
+/obj/item/clothing/head/f13/ncr/med
 	name = "NCR medic helmet"
-	desc = "A standard issue NCR steel helmet with the addition of decalling signifying a medic."
-	icon_state = "steelpot_med"
-	item_state = "steelpot_med"
-	unique_reskin = list("M1" = "ncr_old_med")
+	desc = "A standard issue NCR pth helmet with the addition of decalling signifying a medic."
+	icon_state = "ncr_helmet_medic"
 
-/obj/item/clothing/head/f13/ncr/steelpot_mp
+/obj/item/clothing/head/f13/ncr/mp
 	name = "NCR military police helmet"
-	desc = "A standard issue NCR steel helmet emblazoned with the initials of the military police."
-	icon_state = "steelpot_mp"
-	item_state = "steelpot_mp"
-	unique_reskin = list("M1" = "ncr_old_mp")
-
-/obj/item/clothing/head/f13/ncr/steelpot_gambler
-	name = "NCR gambler helmet"
-	desc = "A standard issue NCR steel helmet. Stashed in the strap are decks of cards, dominoes and cigarettes for personal use."
-	icon_state = "steelpot_gambler"
-	item_state = "steelpot_gambler"
-	unique_reskin = list("M1" = "ncr_old_gambler")
-
-/obj/item/clothing/head/f13/ncr/steelpot_bandolier
-	name = "NCR bandolier helmet"
-	desc = "A standard issue NCR steel helmet. This one has clearly seen heavy use, as well as having additional bullets tucked into the strap."
-	icon_state = "steelpot_bandolier"
-	item_state = "steelpot_bandolier"
-	unique_reskin = list("M1" = "ncr_old_bandolier")
-
-/obj/item/clothing/head/hardhat/ncr
-	name = "NCR engineer helmet"
-	desc = "A standard issue NCR Infantry helmet, modified with a head lamp for engineers."
-	icon_state = "hardhat0_ncr"
-	item_state = "hardhat0_ncr"
-	item_color = "ncr"
-	hat_type = "ncr"
-	flags_inv = HIDEEARS
-	dog_fashion = null
-
-/obj/item/clothing/head/f13/ncr/standard/conscript
-	name = "NCR conscript helmet"
-	desc = "A standard issue NCR steel helmet. Looks like you can write on it and strap a few items on the helmet band."
-	icon_state = "ncr_steelpot"
-	item_state = "ncr_steelpot"
-	flags_inv = HIDEEARS
-	flags_cover = HEADCOVERSEYES
-	visor_flags_cover = HEADCOVERSEYES
-	dog_fashion = null
-	unique_reskin = list("M1" = "ncr_old")
-
-/obj/item/clothing/head/f13/ncr/ncr_flapcap
-	name = "NCR field cap"
-	desc = "A special issue canvas NCR field cap with cotton neckflap, for sun protection in arid climates."
-	icon_state = "ncr_flapcap"
-	item_state = "ncr_flapcap"
-
-/obj/item/clothing/head/f13/ncr/ncr_slouch
-	name = "NCR slouch hat"
-	desc = "An irregular issue NCR sun hat, the left side of the brim is pinned to the crown for ease with shouldering rifles."
-	icon_state = "ncr_slouch"
-	item_state = "ncr_slouch"
-
-/obj/item/clothing/head/f13/ncr/ncr_stetson
-	name = "NCR air cavalry stetson"
-	desc = "A black brahmin leather stetson, authorized for usage amongst all troopers assigned to Air Cavalry units."
-	icon_state = "ncr_stetson"
-	item_state = "ncr_stetson"
-
-/obj/item/clothing/head/f13/ncr/ncr_cap
-	name = "NCR garrison cap"
-	desc = "A simple cloth garrison cap to be worn when a helmet isn't necessary."
-	icon_state = "ncr_cap"
-	item_state = "ncr_cap"
-
-/obj/item/clothing/head/f13/ncr/ncr_campaign
-	name = "NCR campaign hat"
-	desc = "A khaki campaign hat, popularly used by senior NCOs in the NCRA."
-	icon_state = "ncr_campaign"
-	item_state = "ncr_campaign"
+	desc = "A standard issue NCR pith helmet emblazoned with the initials of the military police."
+	icon_state = "ncr_helmet_mp"
 
 /obj/item/clothing/head/beret/ncr
 	name = "NCR officer beret"
 	desc = "A green beret, standard issue for all commissioned NCR Officers."
-	icon_state = "ncr_officer_beret"
-	item_state = "ncr_officer_beret"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "ncr_beret"
 
-/obj/item/clothing/head/beret/ncr/ncr_medic
+/obj/item/clothing/head/beret/ncr/medic
 	name = "NCR medical beret"
 	desc = "A white beret, issued to officers of the medical corps."
-	icon_state = "ncr_medical_beret"
-	item_state = "ncr_medical_beret"
+	icon_state = "ncr_beret_medical"
 
-/obj/item/clothing/head/beret/ncr/ncr_sapper
-	name = "NCR Sapper beret"
-	desc = "A grey beret, issued to troopers that have passed Sapper School."
-	icon_state = "ncr_sapper_beret"
-	item_state = "ncr_sapper_beret"
-
-/obj/item/clothing/head/beret/ncr/ncr_sof
-	name = "NCR SOF beret"
-	desc = "A tan beret, issued members of the New California Republic Special Operations Command."
-	icon_state = "ncr_sof_beret"
-	item_state = "ncr_sof_beret"
-
-/obj/item/clothing/head/beret/ncr_dresscap
-	name = "NCR peaked cap"
-	desc = "A tan peaked cap with silver pin, designated for enlisted NCRA personnel."
-	icon_state = "ncr_dresscap"
-	item_state = "ncr_dresscap"
-
-/obj/item/clothing/head/beret/ncr_codresscap
-	name = "NCR peaked cap"
-	desc = "A tan peaked cap with golden pin, designated for commissioned NCRA personnel."
-	icon_state = "ncr_codresscap"
-	item_state = "ncr_codresscap"
+//This thing is a meme don't you dare actually put it into loadouts
+/obj/item/clothing/head/beret/ncr/recon
+	name = "NCR first Recon beret"
+	desc = "A red beret, issued to members of NCR First Recon."
+	icon_state = "ncr_beret_recon"
 
 //NCR Ranger
 
-/obj/item/clothing/head/beret/ncr_recon_ranger
-	name = "NCR Ranger scout beret"
-	desc = "A brown beret, issued to members of the NCR Recon Rangers."
-	icon_state = "scoutberet"
-	item_state = "scoutberet"
+/obj/item/clothing/head/f13/ncr/ranger
+	name = "NCR ranger hat"
+	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
+	icon_state = "ncr_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 
-/* /obj/item/clothing/head/beret/ncr_recon_ranger/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-/obj/item/clothing/head/f13/trailranger
-	name = "NCR trail ranger hat"
-	desc = "a rustic, homely style cowboy hat worn by NCR trail rangers. Yeehaw!"
-	icon_state = "cowboyrang"
-	item_state = "cowboyrang"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-
-/* /obj/item/clothing/head/f13/trailranger/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-/obj/item/clothing/head/f13/ranger
+/obj/item/clothing/head/f13/ncr/patrol
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
-	icon_state = "rangerhat"
-	item_state = "rangerhat"
+	icon_state = "ncr_ranger_patrol"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 
-/* /obj/item/clothing/head/f13/ranger/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-/obj/item/clothing/head/helmet/f13/combat/ncr_patrol
-	name = "NCR patrol helmet"
-	desc = "A combat helmet hand-manufactured in the NCR and issued to patrol rangers."
-	icon_state = "ncr_patrol_helmet"
-	item_state = "ncr_patrol_helmet"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-
-/* /obj/item/clothing/head/helmet/f13/combat/ncr_patrol/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat
-	name = "ranger combat helmet"
+/obj/item/clothing/head/f13/ncr/veteran
+	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
-	icon_state = "ranger"
-	item_state = "ranger"
+	icon_state = "ncr_ranger_veteran"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -691,77 +530,36 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	darkness_view = 24
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3, /obj/item/clothing/glasses/night/polarizing = 1)
 
-/* /obj/item/clothing/head/helmet/f13/ncr/rangercombat/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriot
-	name = "elite riot gear helmet"
-	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers."
-	icon_state = "elite_riot"
-	item_state = "elite_riot"
-
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
-	name = "desert ranger combat helmet"
-	desc = "An U.S Marine Corps helmet, used by the legendary Desert Rangers."
-	icon_state = "desert_ranger"
-	item_state = "desert_ranger"
-
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert/whiskey
-	name = "weathered ranger helmet"
-	desc = "A well-used desert ranger helmet passed down through generations. Though this one's stripped of night vision and it's kevlar lining, it's even more lightweight."
-	lighting_alpha = null
-	darkness_view = null
-	flash_protect = 0
-	resistance_flags = null
-
-
-/obj/item/clothing/head/helmet/f13/rangercombat/eliteriot/reclaimed
-	name = "reclaimed desert ranger gear"
-	desc = "A refurbished and personalized set of pre-unification desert ranger gear."
-	icon_state = "desert_ranger"
-	item_state = "desert_ranger"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-
-//Brotherhood of Steel (PA in f13head.dm)
+///////
+/*BOS*/
+///////
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Knights."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "brotherhood_helmet_knight"
-	item_state = "brotherhood_helmet_knight"
-
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
-	item_state = "brotherhood_helmet_senior"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
-	name = "brotherhood head knight helmet"
-	desc = "An improved combat helmet, bearing the symbol of the Head Knight."
+	name = "brotherhood knight-captain helmet"
+	desc = "An improved combat helmet, bearing the symbol of the Knight-Captain."
 	icon_state = "brotherhood_helmet_captain"
-	item_state = "brotherhood_helmet_captain"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
 	desc = "An old degraded pre-war combat helmet, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
-	item_state = "brotherhood_helmet"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate/mk2
 	name = "reinforced knight helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
-	item_state = "brotherhood_helmet"
-
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/outcast
-	name = "brotherhood helmet"
-	desc = " An improved combat helmet, bearing a series of red markings."
-	icon_state = "brotherhood_helmet_outcast"
-	item_state = "brotherhood_helmet_outcast"
 
 /obj/item/clothing/head/f13/boscap
 	name = "brotherhood formal cap"
@@ -776,74 +574,50 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "bos_beret"
 	item_state = "bos_beret"
 
-//Oasis/Town
+////////////
+/*EASTWOOD*/
+////////////
 
 /obj/item/clothing/head/f13/town
 	name = "town tricorn"
 	desc = "Why are there tricorns in the desert again?"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "tricorn"
-	item_state = "dethat"
-	flags_inv = HIDEHAIR
-	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/f13/town/mayor
 	name = "mayoral tricorn"
-	desc = "A tricorn in the desert.  Stranger things have happened."
-
-/obj/item/clothing/head/f13/town/big
-	name = "big hat, big iron."
 	desc = "It's a big hat."
 	icon_state = "bigcowboyhat"
 
 /obj/item/clothing/head/f13/town/deputy
 	name = "deputy hat"
 	desc = "Leather Cowboy hat, worn by eastwood deputies."
-	icon_state = "The_good"
+	icon_state = "deputyhat"
 
-/obj/item/clothing/head/f13/town/deputy/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-/obj/item/clothing/head/f13/town/officer
-	name = "Eastwood officer's cap"
-	desc = "A simple dark navy peaked cap, worn by police."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "police_officer"
-	item_state = "police_officer"
-
-/* /obj/item/clothing/head/f13/town/officer/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
 /obj/item/clothing/head/f13/town/sheriff
 	name = "sheriff hat"
 	desc = "A black cowboy hat with a snakeskin band."
 	icon_state = "sheriffhat"
 
-/* /obj/item/clothing/head/f13/town/sheriff/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
+/obj/item/clothing/head/f13/town/officer
+	name = "eastwood officer's cap"
+	desc = "A simple dark navy peaked cap, worn by police."
+	icon_state = "police_officer"
+	item_state = "police_officer"
+
 /obj/item/clothing/head/f13/town/chief
-	name = "Eastwood Chief's hat"
+	name = "eastwood chief's hat"
 	desc = "A blue hat with a silver badge."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "police_chief"
 	item_state = "police_chief"
 
-/* /obj/item/clothing/head/f13/town/chief/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
 /obj/item/clothing/head/f13/det_hat_alt
 	name = "detective's fedora"
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
-
 
 ////////////////////////
 // GREAT KHAN HELMETS //
@@ -862,20 +636,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	dynamic_hair_suffix = "+generic"
 	dynamic_fhair_suffix = null
 
-/* /obj/item/clothing/head/helmet/f13/khan/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-
 /obj/item/clothing/head/helmet/f13/khan/pelt
 	desc = "A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the Khan who wants to show off their hair."
 	icon_state = "khan_helmetpelt"
 	item_state = "khan_helmetpelt"
-
-/* /obj/item/clothing/head/helmet/f13/khan/pelt/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
 	name = "Great Khan bandana"
@@ -887,10 +651,6 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	dynamic_fhair_suffix = null
 	var/helmettoggled = FALSE
 
-/* /obj/item/clothing/head/helmet/f13/khan/bandana/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
 /obj/item/clothing/head/helmet/f13/khan/bandana/AltClick(mob/user)
 	. = ..()
 	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -930,11 +690,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
 
-/* /obj/item/clothing/head/helmet/f13/khan/fullhelm/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-//Wayfarer
+/////////
+/*TRIBE*/
+/////////
+
 /obj/item/clothing/head/helmet/f13/deathskull
 	name = "eerie helm"
 	desc = "A helmet fastened from the skull of a deer. Something about it doesn't look right."
@@ -1006,23 +765,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "chiefgreen"
 	item_state = "chiefgreen"
 
-//Followers
+/////////////
+/*OLD WORLD*/
+/////////////
 
-//Vault
-
-/obj/item/clothing/head/helmet/riot/vaultsec
-	name = "security helmet"
-	desc = "A standard issue vault security helmet, pretty robust."
-	slowdown = 0.01
-
-
-/obj/item/clothing/head/helmet/riot/vaultsec/vc
-	name = "vtcc riot helmet"
-	desc = "A riot helmet adapted from the design of most pre-war riot helmets, painted blue."
-	icon_state = "vtcc_riot_helmet"
-	item_state = "vtcc_riot_helmet"
-
-//Old World Militaries
 //US Army and PLA
 
 /obj/item/clothing/head/f13/army
@@ -1051,7 +797,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "army_general"
 	item_state = "army_general"
 
-obj/item/clothing/head/f13/army/beret
+/obj/item/clothing/head/f13/army/beret
 	name = "US Army beret"
 	desc = "A black beret, standard issue for all US Army personnel not authorised to wear a different beret."
 	icon = 'icons/fallout/clothing/hats.dmi'
@@ -1162,29 +908,6 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "ncr_helmet_mk2"
 	item_state = "ncr_helmet_mk2"
 
-/obj/item/clothing/head/beret/ncr/ncr_recon
-	name = "NCR First Recon beret"
-	desc = "A red beret, issued to members of NCR First Recon."
-	icon_state = "ncr_recon_beret"
-	item_state = "ncr_recon_beret"
-
-/obj/item/clothing/head/beret/ncr/ncr_recon/worn
-	name = "Worn NCR First Recon beret"
-	desc = "A red beret, issued to members of NCR First Recon. This one is worn, having been kept when a soldier was transfered from the unit."
-	icon_state = "ncr_recon_beret"
-	item_state = "ncr_recon_beret"
-
-/obj/item/clothing/head/beret/ncr/ncr_scout
-	name = "NCR Third Scout beret"
-	desc = "A brown beret, issued to members of the NCR Third Scout Battallion."
-	icon_state = "scoutberet"
-	item_state = "scoutberet"
-
-/obj/item/clothing/head/beret/ncr/ncr_scout_lt
-	name = "NCR Third Scout officer beret"
-	desc = "A brown beret, issued to officers of the NCR Third Scout Battallion."
-	icon_state = "scoutberet"
-	item_state = "scoutberet"
 
 /obj/item/clothing/head/f13/ncr/medic
 	name = "NCR medical helmet"

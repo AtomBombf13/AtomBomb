@@ -383,35 +383,25 @@
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
 	name = "salvaged NCR power armor"
 	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "ncr_salvaged"
 	item_state = "ncr_salvaged"
-
-/obj/item/clothing/suit/armor/heavy/ncr/vetranger
-	name = "veteran ranger combat armor"
-	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
-	icon_state = "ranger"
-	item_state = "ranger"
 
 ////////////
 // Legion //
 ////////////
-
-/obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
-	name = "legion centurion armor"
-	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
-	icon_state = "legcenturion"
-	item_state = "legcenturion"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
+/obj/item/clothing/suit/armor/heavy/legion
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 
 /obj/item/clothing/suit/armor/heavy/legion/palacent //laser resist spec
-	name = "paladin-slayer centurion armor"
+	name = "legion centurion paladin-slayer armor"
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
-	icon_state = "palacent"
-	item_state = "palacent"
+	icon_state = "leg_cent_paladin"
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
 	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
-	icon_state = "legion_legate"
-	item_state = "legion_legate"
+	icon_state = "leg_legate"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?

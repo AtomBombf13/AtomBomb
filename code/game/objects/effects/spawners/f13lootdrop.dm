@@ -400,7 +400,7 @@
 	name = "vault armor spawner"
 	items = list(
 				/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
-				/obj/item/clothing/head/helmet/riot/vaultsec,
+				/obj/item/clothing/head/helmet/riot,
 				)
 
 /obj/effect/spawner/bundle/f13/armor/combat/mk2
