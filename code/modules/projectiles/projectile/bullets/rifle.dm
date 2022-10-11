@@ -611,6 +611,7 @@
  * RECOIL: 2
  * WOUNDS: 40
  * WNAKED: 30
+ * Disabled from lathe - Too fucking strong.
  */
 /obj/item/projectile/bullet/a762/rubber
 	name = "7.62 rubber bullet"
@@ -814,6 +815,7 @@
  * RECOIL: 2
  * WOUNDS: 200
  * WNAKED: 150
+ * Disabled - Too fucking strong. Literally 1 hit KO.
  */
 /obj/item/projectile/bullet/a50MG/rubber
 	name = "rubber .50MG slug"
@@ -836,6 +838,7 @@
  * RECOIL: 2
  * WOUNDS: 200
  * WNAKED: 150
+ * Removed from loot-roation - How tf is a round rubber AND a penetrator??
  */
 /obj/item/projectile/bullet/a50MG/penetrator
 	name = "penetrator .50MG slug"
@@ -911,42 +914,21 @@
  * Microshrapnel
  * * * * * * * */
 
-#define BULLET_4570_DAMAGE_MULT 0.75
-#define BULLET_4570_STAMINA_MULT 0.5
+#define BULLET_4570_DAMAGE_MULT 0.80
+#define BULLET_4570_STAMINA_MULT 0.4
 #define BULLET_4570_WOUND_MULT 0.50
 #define BULLET_4570_NAKED_WOUND_MULT 0.50
 #define BULLET_4570_SPEED_MULT 0.50
 #define BULLET_4570_RECOIL_MULT 1
 
-/* .45-70 match
- * DAMAGE: 70
- * STAMIN: 70
+/* .45-70 surplus
+ * DAMAGE: 50
+ * STAMIN: 45
  * RECOIL: 1
  * WOUNDS: 25
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/c4570
-	name = ".45-70 match bullet"
-	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_DAMAGE_MULT
-	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_STAMINA_MULT
-	spread = BULLET_SPREAD_MATCH
-	recoil = BULLET_RECOIL_RIFLE_HEAVY * BULLET_4570_RECOIL_MULT
-
-	wound_bonus = BULLET_WOUND_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_WOUND_MULT
-	bare_wound_bonus = BULLET_WOUND_RIFLE_HEAVY * BULLET_NAKED_WOUND_MULT * BULLET_4570_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_HEAVY
-	
-	pixels_per_second = BULLET_SPEED_RIFLE_HEAVY * BULLET_4570_SPEED_MULT
-	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
-
-/* .45-70 surplus
- * DAMAGE: 56
- * STAMIN: 56
- * RECOIL: 1
- * WOUNDS: 25
- * WNAKED: 15
- */
-/obj/item/projectile/bullet/c4570/surplus
 	name = ".45-70 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_SURPLUS_MULT * BULLET_4570_DAMAGE_MULT
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_SURPLUS_MULT * BULLET_4570_STAMINA_MULT
@@ -960,7 +942,7 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_HEAVY * BULLET_4570_SPEED_MULT
 
 /* .45-70 handloaded
- * DAMAGE: 42 // cant kill a ghoul
+ * DAMAGE: 45
  * STAMIN: 33
  * RECOIL: 1
  * WOUNDS: 15
@@ -1037,22 +1019,23 @@
 		reagents.reaction(M, TOUCH)
 		reagents.trans_to(M, reagents.total_volume)
 
-/* .45-70 rubber
- * DAMAGE: 7
- * STAMIN: 281
+/* .45-70 special
+ * DAMAGE: 35
+ * STAMIN: 33
  * RECOIL: 1
- * WOUNDS: 125
- * WNAKED: 75
+ * WOUNDS: 15
+ * WNAKED: 15
+ * Knockback Probability
  */
 /obj/item/projectile/bullet/c4570/knockback
 	name = ".45-70 ultradense bullet"
-	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_DAMAGE_MULT * RUBBERY_DAMAGE_MULT
-	stamina = RUBBERY_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_STAMINA_MULT
+	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_DAMAGE_MULT * BULLET_DAMAGE_EXPLOSIVE
+	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_HANDLOAD_MULT * BULLET_4570_STAMINA_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_HEAVY * BULLET_4570_RECOIL_MULT
 
-	wound_bonus = RUBBERY_WOUND_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_4570_WOUND_MULT
-	bare_wound_bonus = RUBBERY_WOUND_RIFLE_HEAVY * BULLET_NAKED_WOUND_MULT * BULLET_4570_NAKED_WOUND_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_HEAVY * BULLET_HANDLOAD_MULT * BULLET_4570_WOUND_MULT
+	bare_wound_bonus = BULLET_WOUND_RIFLE_HEAVY * BULLET_NAKED_WOUND_MULT * BULLET_4570_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_HEAVY
 	
 	pixels_per_second = BULLET_SPEED_RIFLE_HEAVY * BULLET_4570_SPEED_MULT
@@ -1081,17 +1064,17 @@
  * Extremely Overkill
  * * * * * * * */
 
-#define BULLET_GAUSS_DAMAGE_MULT 2
-#define BULLET_GAUSS_STAMINA_MULT 2
-#define BULLET_GAUSS_WOUND_MULT 5 // gonna feel that blender
+#define BULLET_GAUSS_DAMAGE_MULT 1.1
+#define BULLET_GAUSS_STAMINA_MULT 1
+#define BULLET_GAUSS_WOUND_MULT 2 // gonna feel that blender
 #define BULLET_GAUSS_NAKED_WOUND_MULT 10 // lol
 #define BULLET_GAUSS_SPEED_MULT 10 // lol
 
 /* 2mmEC match
- * DAMAGE: 150
- * STAMIN: 225
+ * DAMAGE: 103
+ * STAMIN: 112.5
  * RECOIL: 1
- * WOUNDS: 250
+ * WOUNDS: 100
  * WNAKED: 150
  */
 /obj/item/projectile/bullet/c2mm
@@ -1109,10 +1092,10 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 /* 2mmEC blender
- * DAMAGE: 150
- * STAMIN: 225
+ * DAMAGE: 103
+ * STAMIN: 112.5
  * RECOIL: 1
- * WOUNDS: 250
+ * WOUNDS: 100
  * WNAKED: 150
  */
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town

@@ -192,7 +192,7 @@
 	icon_state = "hypo_superstimpak"
 	volume = 62
 	amount_per_transfer_from_this = 62
-	list_reagents = list(/datum/reagent/medicine/super_stimpak = 30, /datum/reagent/medicine/stimpak = 20)
+	list_reagents = list(/datum/reagent/medicine/super_stimpak = 15)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom
 	desc = "The super version comes in a hypodermic, but with an additional vial to inject more drugs than the basic model and a leather belt to strap the needle to a limb. This particular one will deliver a tailored cocktail."

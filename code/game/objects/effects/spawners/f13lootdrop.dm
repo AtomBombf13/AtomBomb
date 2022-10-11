@@ -1625,7 +1625,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/m556/rifle/extended,
 				/obj/item/ammo_box/magazine/m762/ext,
 				/obj/item/ammo_box/magazine/d12g,
-				/obj/item/ammo_box/a50MG/penetrator,
 				/obj/item/ammo_casing/caseless/rocket/big,
 				/obj/item/ammo_casing/caseless/rocket/incendiary = 10,
 				/obj/item/ammo_casing/caseless/rocket/chem = 3,

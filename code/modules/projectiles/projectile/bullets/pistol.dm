@@ -596,14 +596,14 @@
  * Fire rounds
  * * * * * * * */
 
-#define BULLET_45ACP_DAMAGE_MULT 1.2
+#define BULLET_45ACP_DAMAGE_MULT 1.1
 #define BULLET_45ACP_STAMINA_MULT 1.2
 #define BULLET_45ACP_WOUND_MULT 1.3
 #define BULLET_45ACP_NAKED_WOUND_MULT 1.3
 #define BULLET_45ACP_SPEED_MULT 1.2
 
 /* 45
- * DAMAGE: 36
+ * DAMAGE: 33
  * STAMIN: 39
  * RECOIL: 3
  * WOUNDS: 6.5
@@ -645,7 +645,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_MEDIUM
 
 /* 45 simplemob
- * DAMAGE: 36
+ * DAMAGE: 33
  * STAMIN: 32.5
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -665,7 +665,7 @@
 	pixels_per_second = BULLET_SPEED_PISTOL_MEDIUM * BULLET_45ACP_SPEED_MULT
 
 /* 45 op
- * DAMAGE: 25
+ * DAMAGE: 24.75
  * STAMIN: 32.5
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -690,6 +690,7 @@
  * RECOIL: 1
  * WOUNDS: 9.75
  * WNAKED: 4.8
+ * Disabled from being made - Really too fucking strong.
  */
 /obj/item/projectile/bullet/c45/rubber
 	name = ".45 rubber bullet"
@@ -707,7 +708,7 @@
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
 
 /* 45 fire
- * DAMAGE: 18
+ * DAMAGE: 16.5
  * STAMIN: 58
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -755,9 +756,11 @@
  * Fire rounds
  * * * * * * * */
 
+#define BULLET_357_STAMINA_MULT 0.8
+
 /* 357 fmj
  * DAMAGE: 40
- * STAMIN: 40
+ * STAMIN: 32
  * RECOIL: 1
  * WOUNDS: 10
  * WNAKED: 7.5
@@ -765,7 +768,7 @@
 /obj/item/projectile/bullet/a357
 	name = ".357 FMJ bullet"
 	damage = BULLET_DAMAGE_PISTOL_HEAVY * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_PISTOL_HEAVY * BULLET_SURPLUS_MULT
+	stamina = BULLET_STAMINA_PISTOL_HEAVY * BULLET_SURPLUS_MULT * BULLET_357_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_MEDIUM
 
@@ -778,7 +781,7 @@
 
 /* 357 handload
  * DAMAGE: 30
- * STAMIN: 30
+ * STAMIN: 24
  * RECOIL: 1
  * WOUNDS: 7.5
  * WNAKED: 7.5
@@ -786,7 +789,7 @@
 /obj/item/projectile/bullet/a357/improvised
 	name = "handloaded .357 bullet"
 	damage = BULLET_DAMAGE_PISTOL_HEAVY * BULLET_HANDLOAD_MULT
-	stamina = BULLET_STAMINA_PISTOL_HEAVY * BULLET_HANDLOAD_MULT
+	stamina = BULLET_STAMINA_PISTOL_HEAVY * BULLET_HANDLOAD_MULT * BULLET_357_STAMINA_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_PISTOL_MEDIUM
 
@@ -798,7 +801,7 @@
 
 /* 357 bounce
  * DAMAGE: 40
- * STAMIN: 40
+ * STAMIN: 32
  * RECOIL: 1
  * WOUNDS: 10
  * WNAKED: 7.5
@@ -806,7 +809,7 @@
 /obj/item/projectile/bullet/a357/ricochet
 	name = ".357 ricochet bullet"
 	damage = BULLET_DAMAGE_PISTOL_HEAVY * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_PISTOL_HEAVY * BULLET_SURPLUS_MULT
+	stamina = BULLET_STAMINA_PISTOL_HEAVY * BULLET_SURPLUS_MULT * BULLET_357_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_MEDIUM
 
@@ -896,14 +899,14 @@
  * * * * * * * */
 
 #define BULLET_44MAG_DAMAGE_MULT 1.1 //44
-#define BULLET_44MAG_STAMINA_MULT 1.3
+#define BULLET_44MAG_STAMINA_MULT 1.1
 #define BULLET_44MAG_WOUND_MULT 2
 #define BULLET_44MAG_NAKED_WOUND_MULT 2
 #define BULLET_44MAG_SPEED_MULT 2
 
 /* 44 fmj
  * DAMAGE: 44
- * STAMIN: 52
+ * STAMIN: 44
  * RECOIL: 1
  * WOUNDS: 20
  * WNAKED: 15
@@ -945,7 +948,7 @@
 
 /* 44 simple
  * DAMAGE: 44
- * STAMIN: 52
+ * STAMIN: 44
  * RECOIL: 1
  * WOUNDS: 20
  * WNAKED: 15
@@ -1017,7 +1020,7 @@
 
 /* 14mm fmj
  * DAMAGE: 52
- * STAMIN: 80
+ * STAMIN: 52
  * RECOIL: 3
  * WOUNDS: 20
  * WNAKED: 15
