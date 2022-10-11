@@ -579,45 +579,33 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 ////////////
 
 /obj/item/clothing/head/f13/town
-	name = "town tricorn"
-	desc = "Why are there tricorns in the desert again?"
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "tricorn"
-
-/obj/item/clothing/head/f13/town/mayor
-	name = "mayoral tricorn"
-	desc = "It's a big hat."
-	icon_state = "bigcowboyhat"
 
 /obj/item/clothing/head/f13/town/deputy
-	name = "deputy hat"
-	desc = "Leather Cowboy hat, worn by eastwood deputies."
-	icon_state = "deputyhat"
+	name = "eastwood lawman hat"
+	desc = "A stylish classic hat used by lawmen."
+	icon_state = "town_deputy"
 
 /obj/item/clothing/head/f13/town/sheriff
-	name = "sheriff hat"
-	desc = "A black cowboy hat with a snakeskin band."
-	icon_state = "sheriffhat"
+	name = "eastwood marshal hat"
+	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
+	icon_state = "town_marshal"
 
-/obj/item/clothing/head/f13/town/officer
-	name = "eastwood officer's cap"
-	desc = "A simple dark navy peaked cap, worn by police."
-	icon_state = "police_officer"
-	item_state = "police_officer"
-
-/obj/item/clothing/head/f13/town/chief
-	name = "eastwood chief's hat"
-	desc = "A blue hat with a silver badge."
-	icon_state = "police_chief"
-	item_state = "police_chief"
-
-/obj/item/clothing/head/f13/det_hat_alt
-	name = "detective's fedora"
-	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
-	icon_state = "detectivealt"
-	item_state = "fedora"
-	flags_inv = HIDEHAIR
+/obj/item/clothing/head/f13/town/riot //UN Glowie
+	name = "eastwood marshal combat helmet"
+	desc = "An old combat helmet in suprisingly good state, painted over with dark blue paint remining of times long gone."
+	icon_state = "town_marshal_riot" //In reality a placeholder
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	flash_protect = 1
+	glass_colour_type = /datum/client_colour/glass_colour/red
+	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+	darkness_view = 24
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3, /obj/item/clothing/glasses/night/polarizing = 1)
 
 ////////////////////////
 // GREAT KHAN HELMETS //

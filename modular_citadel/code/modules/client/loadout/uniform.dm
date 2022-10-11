@@ -708,12 +708,6 @@
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
-/datum/gear/uniform/skirt/vcity
-	name = "VTCC jumpskirt"
-	path = /obj/item/clothing/under/f13/vault/vcity/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
-
 /datum/gear/uniform/skirt/tac
 	name = "''tactical'' combat skirt"
 	path = /obj/item/clothing/under/f13/legskirt/tac
