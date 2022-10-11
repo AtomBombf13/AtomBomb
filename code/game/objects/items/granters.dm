@@ -10,6 +10,7 @@
 	var/used = FALSE //only really matters if oneuse but it might be nice to know if someone's used it for admin investigations perhaps
 	var/select = FALSE
 	var/time_per_page = 5 SECONDS
+	var/list/languages_granted = list()
 
 /obj/item/book/granter/proc/turn_page(mob/user)
 	playsound(user, pick('sound/effects/pageturn1.ogg','sound/effects/pageturn2.ogg','sound/effects/pageturn3.ogg'), 30, 1)
@@ -90,6 +91,9 @@
 		var/datum/crafting_recipe/R = crafting_recipe_type
 		user.mind.teach_crafting_recipe(crafting_recipe_type)
 		to_chat(user,span_notice("You learned how to make [initial(R.name)]."))
+	for(var/datum/language/language in languages_granted)
+		user.grant_language(language)
+		to_chat(user,span_notice("You now speak [initial(language.name)]."))
 	onlearned(user)
 
 /obj/item/book/granter/trait/rifleman
@@ -1141,45 +1145,53 @@
 	time_per_page = 0
 
 /obj/item/book/granter/trait/tribaltraditions/attack_self(mob/user)
-	var/list/choices = list("Dead Horses traditions","Rustwalkers traditions","Sorrows traditions","Bone Dancer traditions")
+	var/list/choices = list("Dead Horses traditions","White Legs traditions","Rustwalkers traditions","Eighties traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")	
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)
 			if(null)
 				return 0
-			/*
 			if("White Legs traditions")
 				traitname = "White Legs traditions"
+				languages_granted = list(/datum/language/whiteleg)
 				granted_trait = TRAIT_WHITELEGS_TRAD
-				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb, /datum/crafting_recipe/tribalwar/whitelegs/femalegarb, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour)
-			*/
+				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb, 
+				/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour)
 			if("Dead Horses traditions")
 				traitname = "Dead Horses traditions"
+				languages_granted = list(/datum/language/deadhorses)
 				granted_trait = TRAIT_DEADHORSES_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/deadhorses/lightarmour, /datum/crafting_recipe/tribalwar/deadhorses/armour, /datum/crafting_recipe/tribalwar/deadhorses/garb,
 								/datum/crafting_recipe/tribalwar/deadhorses/femalegarb, /datum/crafting_recipe/tribalwar/deadhorses/heavyarmour)
 			if("Rustwalkers traditions")
 				traitname = "Rustwalkers traditions"
+				languages_granted = list(/datum/language/german)
 				granted_trait = TRAIT_RUSTWALKERS_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/rustwalkers/garb,
 								/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb, /datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour)
-			/*
 			if("Eighties traditions")
 				traitname = "Eighties traditions"
+				languages_granted = list(/datum/language/tribal)
 				granted_trait = TRAIT_EIGHTIES_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/eighties/lightarmour, /datum/crafting_recipe/tribalwar/eighties/armour, /datum/crafting_recipe/tribalwar/eighties/garb,
 								/datum/crafting_recipe/tribalwar/eighties/femalegarb, /datum/crafting_recipe/tribalwar/eighties/heavyarmour)
-			*/
 			if("Sorrows traditions")
 				traitname = "Sorrows traditions"
+				languages_granted = list(/datum/language/sorrows)
 				granted_trait = TRAIT_SORROWS_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/sorrows/armour, /datum/crafting_recipe/tribalwar/sorrows/garb, /datum/crafting_recipe/tribalwar/sorrows/femalegarb,
 								/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
 			if("Bone Dancer traditions")
 				traitname = "Bone Dancer traditions"
+				languages_granted = list(/datum/language/tribal)
 				granted_trait = TRAIT_BONEDANCER_TRAD
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/bone/lightarmour,/datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour,
 								/datum/crafting_recipe/tribalwar/bone/garb,/datum/crafting_recipe/tribalwar/bone/helmet)
+			if("Wayfarer traditions")
+				traitname = "Wayfarer traditions"
+				languages_granted = list(/datum/language/tribal)
+				granted_trait = TRAIT_WAYFARER_TRAD
+				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
 		return ..()
 
 

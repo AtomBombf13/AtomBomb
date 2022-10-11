@@ -26,6 +26,13 @@
 		/datum/language/vampiric,
 		/datum/language/dwarf,
 		/datum/language/tribal,
+		/datum/language/neohongo,
+		/datum/language/spanish,
+		/datum/language/deadhorses,
+		/datum/language/german,
+		/datum/language/latin,
+		/datum/language/whiteleg,
+		/datum/language/sorrows,
 	))
 	healing_factor = STANDARD_ORGAN_HEALING*5 //Fast!!
 	decay_factor = STANDARD_ORGAN_DECAY/2

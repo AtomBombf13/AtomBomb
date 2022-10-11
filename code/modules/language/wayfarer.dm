@@ -2,7 +2,7 @@
 	name = "Tribal"
 	desc = "The language spoken by members of the local tribe, boasting a complex system of phonemes and mixed grammar."
 	key = "t"
-	icon_state = "tribal"
+	icon_state = "plant"
 	syllables = list(
 	"pa", "pe", "pi","pa", "pe", "pi","pr", "bm",
 	"ta", "te", "ti", "ta", "te", "ti", "tr", "dm",
