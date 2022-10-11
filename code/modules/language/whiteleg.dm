@@ -2,7 +2,7 @@
 	name = "White Leg"
 	desc = "The language used by members of the White Leg tribe."
 	key = "h"
-	icon_state = "whiteleg"
+	icon_state = "codespeak"
 	syllables = list(
 	"Maiku", "Ahm", "Naaiyawi", "Wichoo", "Deyai-yoo", "Murdah", "Bui-neeking",
 	"Hainji", "Tek", "Thees", "Kuna", "Baika-ker", "Haganai",  "Go", "Hem",
