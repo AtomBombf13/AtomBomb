@@ -12,7 +12,7 @@
 	color = "#eb0000"
 	taste_description = "numbness"
 	metabolization_rate = 1 * REAGENTS_METABOLISM
-	overdose_threshold = 35
+	overdose_threshold = 30
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 
