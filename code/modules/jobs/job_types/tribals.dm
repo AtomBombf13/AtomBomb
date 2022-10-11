@@ -435,7 +435,7 @@ Villager
 	name = "Blacksmith"
 	backpack_contents = list(
 		/obj/item/melee/smith/hammer/premade=1,
-		/obj/item/clothing/gloves/f13/blacksmith=1,
+		/obj/item/clothing/gloves/blacksmith_mittens=1,
 		/obj/item/stack/sheet/bronze/thirty=1
 	)
 

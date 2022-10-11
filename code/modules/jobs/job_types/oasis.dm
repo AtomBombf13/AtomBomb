@@ -974,7 +974,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Artisan"
 	uniform = /obj/item/clothing/under/f13/cowboyg
 	belt = /obj/item/storage/belt/utility/mining
-	gloves = /obj/item/clothing/gloves/f13/blacksmith
+	gloves = /obj/item/clothing/gloves/blacksmith_mittens
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	neck = /obj/item/storage/belt/holster/ranger357
 	backpack_contents = list(/obj/item/twohanded/sledgehammer/simple = 1,
