@@ -34938,8 +34938,8 @@
 /obj/item/clothing/neck/apron/labor/forge,
 /obj/item/clothing/neck/apron/labor/forge,
 /obj/structure/closet/anchored,
-/obj/item/clothing/gloves/legion/forgemaster,
-/obj/item/clothing/gloves/legion/forgemaster,
+/obj/item/clothing/gloves/blacksmith_mittens,
+/obj/item/clothing/gloves/blacksmith_mittens,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "iQx" = (

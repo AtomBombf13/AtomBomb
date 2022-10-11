@@ -13,13 +13,15 @@
 	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
 	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
 	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	force = 6
+	throwforce = THROWING_DECENT
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 6
 	obj_flags = UNIQUE_RENAME
 	wielded_mult = 1
+	wound_bonus = WOUNDING_BONUS_MODEST
 	var/quality
 	var/overlay_state = "woodenrod"
 	var/mutable_appearance/overlay
@@ -41,9 +43,10 @@
 	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
 	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
 	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	force = 10
+	throwforce = THROWING_POOR
 	sharpness = SHARP_EDGED
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	force = 10
 	wielded_mult = 1.8
 	w_class = WEIGHT_CLASS_BULKY
 	wielded = FALSE
@@ -82,6 +85,7 @@
 	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
 	item_state = "hammer"
 	overlay_state = "hammerhandle"
+	force = WEAPON_FORCE_CLUB
 	slot_flags = ITEM_SLOT_BELT
 	var/qualitymod = 0
 
@@ -296,11 +300,11 @@
 	overlay_state = "hilt_dagger"
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
-	force = 21
-	throwforce = 23
+	force = (WEAPON_FORCE_BIG_KNIFE-6)
+	throwforce = THROWING_EFFECTIVE
 	hitsound = 'modular_atom/blacksmith/sound/hit_knife.ogg'
 	armour_penetration = 0.05
-	attack_speed = FAST_ATTACK
+	attack_speed = MELEE_SPEED_FAST //7
 
 // go for the eyes Boo
 /obj/item/melee/smith/dagger/attack(mob/living/carbon/M, mob/living/carbon/user)
@@ -322,7 +326,7 @@
 	name = "bowie knife"
 	icon_state = "bowie_smith"
 	overlay_state = "hilt_bowie"
-	force = 23
+	force = (WEAPON_FORCE_BIG_KNIFE-4)
 
 
 //////////////////////////////////
@@ -336,12 +340,11 @@
 	name = "machete"
 	icon_state = "machete_smith"
 	overlay_state = "hilt_machete"
-	force = 29
-	throwforce = 15
+	force = (WEAPON_FORCE_SWORD-4)
 	sharpness = SHARP_EDGED
-	wound_bonus = 10
+	wound_bonus = WOUNDING_BONUS_BIG
 	block_chance = 20
-	armour_penetration = 0.1
+	armour_penetration = PIERCING_MINOR
 
 /obj/item/melee/smith/machete/ComponentInitialize()
 	. = ..()
@@ -373,14 +376,11 @@
 	icon_state = "waki_smith"
 	overlay_state = "hilt_waki"
 	sharpness = SHARP_EDGED
-	force = 25
-	throwforce = 12
+	force = (WEAPON_FORCE_SWORD-10)
 	item_flags = ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/waki
 	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
 	block_chance = 5
-	wound_bonus = 5
-	bare_wound_bonus = 20
 
 /datum/block_parry_data/waki
 	parry_stamina_cost = 8
@@ -408,18 +408,18 @@
 	hitsound = 'sound/effects/butcher.ogg'
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
-	wound_bonus = -5
-	bare_wound_bonus = 35
+	wound_bonus = WOUNDING_MALUS_SHALLOW
+	bare_wound_bonus = WOUNDING_BONUS_BIG
 
 // ------------ MACE ------------ // [32 AP 0.4]
 /obj/item/melee/smith/mace
 	name = "mace"
 	icon_state = "mace_smith"
 	overlay_state = "shaft_mace"
-	force = 22
-	throwforce = 12
-	armour_penetration = 0.3
-	wound_bonus = 10
+	force = (WEAPON_FORCE_CLUB-6)
+	throwforce = THROWING_POOR
+	armour_penetration = PIERCING_MAJOR
+	wound_bonus = WOUNDING_BONUS_HUGE
 	hitsound = 'modular_atom/blacksmith/sound/hit_mace.ogg'
 
 /obj/item/melee/smith/mace/afterattack(mob/living/M, mob/living/user)
@@ -441,16 +441,15 @@
 	icon_state = "sword_smith"
 	item_state = "sword_smith"
 	overlay_state = "hilt_sword"
-	armour_penetration = 0.1
-	force = 27
-	throwforce = 10
+	force = (WEAPON_FORCE_SWORD-7) //28
+	armour_penetration = PIERCING_MINOR
 	sharpness = SHARP_EDGED
 	item_flags = ITEM_CAN_PARRY
 	block_parry_data = /datum/block_parry_data/sword
 	w_class = WEIGHT_CLASS_BULKY
-	wound_bonus = 5
+	wound_bonus = WOUNDING_BONUS_BIG
 	block_chance = 10
-	armour_penetration = 0.1
+
 
 /datum/block_parry_data/sword
 	parry_stamina_cost = 12
@@ -475,7 +474,7 @@
 	icon_state = "spatha_smith"
 	item_state = "spatha_smith"
 	overlay_state = "hilt_spatha"
-	block_chance = 15
+	block_chance = 14
 
 // ------------ SABRE ------------ // [35 AP 0.25 Parry]
 /obj/item/melee/smith/sword/sabre
@@ -483,11 +482,9 @@
 	icon_state = "sabre_smith"
 	item_state = "sabre_smith"
 	overlay_state = "hilt_sabre"
-	armour_penetration = 0.25
-	force = 25
-	block_chance = 20
+	force = (WEAPON_FORCE_SWORD-8)
+	block_chance = 18
 	block_parry_data = /datum/block_parry_data/smithsaber
-	armour_penetration = 0.15
 
 /datum/block_parry_data/smithsaber
 	parry_stamina_cost = 10
@@ -517,17 +514,16 @@
 	icon_state = "katana_smith"
 	icon_prefix = "katana_smith"
 	overlay_state = "hilt_katana"
-	force = 25
-	throwforce = 8
+	force = (WEAPON_FORCE_SWORD-8)
+	armour_penetration = PIERCING_MODERATE
+	throwforce = THROWING_POOR
 	wielded_mult = 1.5
 	item_flags = ITEM_CAN_PARRY | NEEDS_PERMIT
-	block_parry_data = /datum/block_parry_data/smithkatana
-	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
 	slot_flags = ITEM_SLOT_BELT
 	block_chance = 15
-	wound_bonus = 5
-	bare_wound_bonus = 30
-	armour_penetration = 0.2
+	wound_bonus = WOUNDING_BONUS_BIG
+	block_parry_data = /datum/block_parry_data/smithkatana
+	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
 
 /datum/block_parry_data/smithkatana
 	parry_stamina_cost = 10
@@ -556,21 +552,17 @@
 	icon_prefix = "longsword_smith"
 	overlay_state = "hilt_longsword"
 
-// ------------ SCRAP BLADE ------------ // [33/46.2 AP 0.1 Wounding]
+// ------------ SCRAP BLADE ------------ // [33/46.2 Wounding]
 /obj/item/melee/smith/twohand/katana/scrapblade
 	name = "scrap blade"
 	icon_state = "scrap_smith"
 	icon_prefix = "scrap_smith"
 	overlay_state = "hilt_scrap"
-	force = 23
-	throwforce = 30
+	force = (WEAPON_FORCE_SWORD-9)
 	wielded_mult = 1.4
-	armour_penetration = 0.1
-	wound_bonus = 20
-	attack_speed = SLOW_ATTACK
-	slot_flags = ITEM_SLOT_BELT
+	attack_speed = MELEE_SPEED_SLOW //9
 
-/obj/item/melee/smith/twohand/axe/scrapblade/ComponentInitialize()
+/obj/item/melee/smith/twohand/katana/scrapblade/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 110, 75) //decent in a pinch, but pretty bad.
 
@@ -581,7 +573,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ HEAVY AXE ------------ // [28/56 AP 0.05 Doorbusting]
+// ------------ HEAVY AXE ------------ // [28/56 AP 0.1 Doorbusting]
 /obj/item/melee/smith/twohand/axe
 	name = "heavy axe"
 	icon_state = "axe_smith"
@@ -592,9 +584,8 @@
 	throwforce = 15
 	wielded_mult = 2
 	slot_flags = ITEM_SLOT_BACK
-	wound_bonus = 10
-	bare_wound_bonus = 10
-	armour_penetration = 0.05
+	wound_bonus = WOUNDING_BONUS_BIG
+	armour_penetration = PIERCING_MINOR
 
 /obj/item/melee/smith/twohand/axe/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -613,7 +604,7 @@
 	icon_state = "waraxe_smith"
 	icon_prefix = "waraxe_smith"
 	overlay_state = "shaft_waraxe"
-	throwforce = 30
+	throwforce = THROWING_GOOD
 
 /obj/item/melee/smith/twohand/axe/waraxe/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -633,15 +624,14 @@
 	icon_prefix = "crusher_smith"
 	overlay_state = "shaft_crusher"
 	sharpness = SHARP_NONE
-	force = 22
-	throwforce = 5
-	wound_bonus = 20
-	bare_wound_bonus = 30
-	wielded_mult = 1.5
+	force = (WEAPON_FORCE_CLUB-6)
+	throwforce = THROWING_PATHETIC
+	wound_bonus = WOUNDING_BONUS_HUGE
+	wielded_mult = WEAPON_BLUNT_TWOHAND_MULT
 	hitsound = 'modular_atom/blacksmith/sound/hit_mace.ogg'
 	slot_flags = null
-	armour_penetration = 0.1
-	attack_speed = SLOW_ATTACK
+	armour_penetration =PIERCING_MODERATE
+	attack_speed = MELEE_SPEED_SLOW
 
 /obj/item/melee/smith/twohand/crusher/Initialize()
 	. = ..()
@@ -679,11 +669,11 @@
 	icon_state = "spear_smith"
 	icon_prefix = "spear_smith"
 	overlay_state = "shaft_spear"
+	force = (WEAPON_FORCE_SPEAR_WIELDED-21)
+	armour_penetration = PIERCING_MINOR
+	throwforce = THROWING_GOOD
 	max_reach = 2
-	force = 11
-	throwforce = 20
 	sharpness = SHARP_POINTY
-	armour_penetration = 0.1
 
 // ------------ TRIDENT ------------ // [21/37.8 Reach Embed]
 /obj/item/melee/smith/twohand/spear/trident
@@ -691,13 +681,12 @@
 	icon_state = "trident_smith"
 	icon_prefix = "trident_smith"
 	overlay_state = "shaft_trident"
-	force = 10
-	attack_speed = SLOW_ATTACK
-	throwforce = 30
+	force = (WEAPON_FORCE_SPEAR_WIELDED-20)
+	attack_speed = MELEE_SPEED_SLOW
 	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 30, "ignore_throwspeed_threshold" = TRUE)
 	armour_penetration = 0
 
-/obj/item/melee/smith/twohand/crusher/Initialize()
+/obj/item/melee/smith/twohand/spear/trident/Initialize()
 	. = ..()
 	desc = "Made for spearing small lizard and fish, able to pin down the prey if thrown."
 
@@ -707,7 +696,6 @@
 	icon_state = "lance_smith"
 	icon_prefix = "lance_smith"
 	overlay_state = "shaft_lance"
-	throwforce = 30
 
 
 //////////////////////////////////////////////////
@@ -724,8 +712,8 @@
 	item_state = "javelin_smith"
 	sharpness = SHARP_POINTY
 	embedding = list("pain_mult" = 2, "embed_chance" = 62, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
-	force = 16
-	armour_penetration = 0.2
+	force = (WEAPON_FORCE_SPEAR-8)
+	armour_penetration = PIERCING_MODERATE
 
 // ------------ THROWING KNIFE ------------ // [25 (33.6) AP 0.1 Embed]
 /obj/item/melee/smith/throwingknife
@@ -734,9 +722,9 @@
 	overlay_state = "handle_throwing"
 	item_state = "dagger_smith"
 	embedding = list("pain_mult" = 2, "embed_chance" = 65, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
-	force = 15
+	force = (WEAPON_FORCE_SPEAR-9)
+	armour_penetration = PIERCING_MINOR
 	w_class = WEIGHT_CLASS_SMALL
-	armour_penetration = 0.1
 
 // ------------ METAL BOLA ------------ //
 /obj/item/restraints/legcuffs/bola/smithed

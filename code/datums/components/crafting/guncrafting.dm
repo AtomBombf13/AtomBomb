@@ -143,7 +143,7 @@
 	icon = 'icons/fallout/machines/64x32.dmi'
 	icon_state = "bench_metal"
 	bound_width = 64
-	machine_tool_behaviour = list(TOOL_FORGE)
+	machine_tool_behaviour = list(TOOL_METAL_BENCH)
 
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"

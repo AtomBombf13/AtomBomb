@@ -33581,7 +33581,7 @@
 /area/f13/wasteland)
 "uQp" = (
 /obj/structure/closet/crate/large,
-/obj/item/clothing/gloves/f13/blacksmith,
+/obj/item/clothing/gloves/blacksmith_mittens,
 /obj/item/clothing/suit/armor/outfit/overalls/blacksmith,
 /obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel/cult,

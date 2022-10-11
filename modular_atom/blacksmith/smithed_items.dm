@@ -809,8 +809,6 @@
 #undef GLOW_BRIGHT
 #undef GLOW_MODERATE
 #undef GLOW_WEAK
-#undef FAST_ATTACK
-#undef SLOW_ATTACK
 
 
 // ------------------------------- TG Remnants ------------------------------

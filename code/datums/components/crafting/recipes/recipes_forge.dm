@@ -92,7 +92,7 @@
 		/obj/item/stack/sheet/metal = 15,
 		/obj/item/stack/sheet/mineral/wood = 5,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
@@ -107,7 +107,7 @@
 		/obj/item/stack/sheet/metal = 3,
 		/obj/item/stack/sheet/mineral/wood = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -120,7 +120,7 @@
 		/obj/item/blacksmith/swordhandle = 1,
 		/obj/item/stack/sheet/cloth = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -132,7 +132,7 @@
 		/obj/item/stack/sheet/prewar = 3,
 		/obj/item/stack/sheet/leather = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -156,7 +156,7 @@
 		/obj/item/stack/sheet/metal = 2,
 		/obj/item/stack/sheet/mineral/wood = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -168,7 +168,7 @@
 		/obj/item/stack/sheet/metal = 5,
 		/obj/item/blacksmith/swordhandle = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -180,7 +180,7 @@
 		/obj/item/stack/sheet/metal = 2,
 		/obj/item/stack/crafting/metalparts = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -193,7 +193,7 @@
 		/obj/item/blacksmith/swordhandle = 1,
 		)
 	time = 280
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -206,7 +206,7 @@
 		/obj/item/stack/sheet/cloth = 2,
 		)
 	time = 400
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -219,7 +219,7 @@
 		/obj/item/stack/sheet/plasteel = 2,
 	    )
 	time = 380
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -234,7 +234,7 @@
 		/obj/item/stack/sheet/leather = 2,
 		)
 	time = 250
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
@@ -250,7 +250,7 @@
 		/obj/item/stack/sheet/metal = 16,
 		/obj/item/stack/sheet/mineral/wood = 4,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -262,7 +262,7 @@
 		/obj/item/stack/sheet/metal = 2,
 		/obj/item/stack/sheet/mineral/wood = 3,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -273,7 +273,7 @@
 	result = /obj/item/melee/unarmed/brass/spiked
 	time = 140
 	reqs = list(/obj/item/stack/sheet/metal = 3)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -285,7 +285,7 @@
 		/obj/item/stack/sheet/cloth = 3,
 		/obj/item/stack/sheet/lead = 2,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -294,7 +294,7 @@
 	result = /obj/item/melee/unarmed/maceglove
 	time = 240
 	reqs = list(/obj/item/stack/sheet/metal = 20)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -338,7 +338,7 @@
 		/obj/item/stack/sheet/metal = 5,
 		/obj/item/stack/sheet/mineral/wood = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -350,7 +350,7 @@
 		/obj/item/stack/sheet/metal = 5,
 		/obj/item/stack/sheet/mineral/wood = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -362,7 +362,7 @@
 		/obj/item/stack/sheet/metal = 2,
 		/obj/item/stack/sheet/mineral/wood = 3,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -374,7 +374,7 @@
 		/obj/item/stack/sheet/metal = 5,
 		/obj/item/stack/sheet/mineral/wood = 2,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 
@@ -387,7 +387,7 @@
 		/obj/item/stack/sheet/cloth = 1,
 		/obj/item/stack/sheet/mineral/wood = 1,
 		)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE

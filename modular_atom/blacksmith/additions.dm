@@ -9,8 +9,7 @@
 #define CHAIN /obj/item/blacksmith/chain
 
 #define QUALITY_MODIFIER quality
-#define FAST_ATTACK 7
-#define SLOW_ATTACK 9
+
 
 //////////////////////////////////////
 //									//
@@ -217,10 +216,6 @@
 
 
 // TEMPORARY CACHE OF SINFUL SHAME
-
-/obj/item/clothing/gloves/f13/blacksmith
-/obj/item/clothing/gloves/legion/forgemaster
-
 /obj/item/ingot/silver
 /obj/item/ingot/gold
 /obj/item/ingot/titanium
