@@ -674,14 +674,14 @@
 	materials = list(/datum/material/iron = 12000,/datum/material/titanium = 2000, /datum/material/blackpowder = 2000)
 	build_path = /obj/item/ammo_box/m473/dumdum
 	category = list("initial", "Advanced Ammo")
-
+/*
 /datum/design/ammolathe/m473esd
 	name = "4.73mm ESD caseless ammo box"
 	id = "m473esd"
 	materials = list(/datum/material/iron = 12000, /datum/material/titanium = 2000, /datum/material/blackpowder = 2000)
 	build_path = /obj/item/ammo_box/m473/shock
 	category = list("initial", "Advanced Ammo")
-
+*/
 /datum/design/ammolathe/m473hv
 	name = "4.73mm high-velocity caseless ammo box"
 	id = "m473hv"
