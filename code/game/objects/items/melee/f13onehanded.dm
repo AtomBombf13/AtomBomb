@@ -320,7 +320,7 @@ obj/item/melee/onehanded/knife/switchblade
 	icon_state = "knife_cosmic_heated"
 	item_state = "knife"
 	damtype = BURN
-	force = WEAPON_FORCE_BIG_KNIFE
+	force = (WEAPON_FORCE_BIG_KNIFE+2)
 	armour_penetration = PIERCING_MAJOR
 	throwforce = THROWING_EFFECTIVE
 	w_class = WEIGHT_CLASS_NORMAL // Its super hot, not comfy to put back in your pocket.
@@ -763,7 +763,7 @@ obj/item/melee/onehanded/knife/switchblade
 	item_state = "lacerator"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 29
-	bare_wound_bonus = 5
+	bare_wound_bonus = WOUNDING_BONUS_TINY
 	armour_penetration = 0 //my brother in christ it is razor blades on tape
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
@@ -786,7 +786,7 @@ obj/item/melee/onehanded/knife/switchblade
 	icon_state = "punch_dagger"
 	item_state = "punch_dagger"
 	force = 29
-	armour_penetration = 0.12
+	armour_penetration = PIERCING_MINOR
 	sharpness = SHARP_POINTY
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'

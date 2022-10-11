@@ -10,16 +10,17 @@
 	item_state = "powerfist"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	flags_1 = CONDUCT_1
-	attack_verb = list("whacked", "fisted", "power-punched")
+	attack_speed = MELEE_SPEED_NORMAL
 	force = 22
 	throwforce = 10
 	throw_range = 3
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
+	flags_1 = CONDUCT_1
+	attack_verb = list("whacked", "fisted", "power-punched")
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 	var/throw_distance = 1
-	attack_speed = CLICK_CD_MELEE
+
 
 /obj/item/melee/powerfist/f13/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/wrench))
@@ -94,9 +95,8 @@
 	item_state = "mole_miner_g"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	flags_1 = CONDUCT_1
 	force = 15
-	throwforce = 10
+	throwforce = THROWING_POOR
 	throw_range = 7
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -104,9 +104,7 @@
 	var/digrange = 0
 	toolspeed = 0.4
 	sharpness = SHARP_EDGED
-	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
-	armor = ARMOR_VALUE_GENERIC_ITEM
 
 
 /////////////////////
@@ -121,15 +119,15 @@
 	icon_state = "ripper"
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
-	w_class = WEIGHT_CLASS_NORMAL
-	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
-	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
 	force = 10
-	wound_bonus = 25
+	wound_bonus = WOUNDING_BONUS_BIG
 	block_chance = 15
 	throw_speed = 3
 	throw_range = 4
-	throwforce = 10
+	throwforce = THROWING_POOR
+	w_class = WEIGHT_CLASS_NORMAL
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON
+	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
 	toolspeed = 1.5
