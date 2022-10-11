@@ -91,9 +91,10 @@
 		var/datum/crafting_recipe/R = crafting_recipe_type
 		user.mind.teach_crafting_recipe(crafting_recipe_type)
 		to_chat(user,span_notice("You learned how to make [initial(R.name)]."))
-	for(var/datum/language/language in languages_granted)
-		user.grant_language(language)
-		to_chat(user,span_notice("You now speak [initial(language.name)]."))
+	for(var/i in languages_granted)
+		var/datum/language/lang = i
+		user.grant_language(lang)
+		to_chat(user,span_notice("You now speak [initial(lang.name)]."))
 	onlearned(user)
 
 /obj/item/book/granter/trait/rifleman
