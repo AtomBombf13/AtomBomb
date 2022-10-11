@@ -46922,14 +46922,6 @@
 /obj/structure/barricade/wooden,
 /turf/closed/wall/r_wall/rust,
 /area/f13/city)
-"ouR" = (
-/obj/structure/simple_door/metal/fence/wooden,
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
-	},
-/turf/open/indestructible/ground/outside/graveldirt,
-/area/f13/wasteland)
 "ouU" = (
 /obj/effect/overlay/junk/toilet{
 	dir = 8
@@ -88243,7 +88235,7 @@ bba
 gaX
 aOk
 aOk
-ouR
+nQb
 huu
 huu
 huu
