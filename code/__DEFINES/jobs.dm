@@ -70,12 +70,11 @@
 #define F13COMBATENGINEER (1<<11)
 #define F13TROOPER		 (1<<12)
 #define F13CONSCRIPT    (1<<13)
-#define F13REARECHELON	 (1<<14)
-#define F13NCROFFDUTY    (1<<15)
-#define F13VETRANGER	 (1<<16)
-#define F13RANGER	 	 (1<<17)
-#define F13MP            (1<<18)
-#define F13REP           (1<<19)
+#define F13OFFDUTYNCR	 (1<<14)
+#define F13VETRANGER	 (1<<15)
+#define F13RANGER	 	 (1<<16)
+#define F13MP            (1<<17)
+#define F13REP           (1<<18)
 
 #define LEGION			(1<<4)
 
@@ -259,7 +258,7 @@
 #define JOB_DISPLAY_ORDER_CONSCRIPT 52
 #define JOB_DISPLAY_ORDER_DRILLSERGEANT 53
 #define JOB_DISPLAY_ORDER_MILITARY_POLICE 54
-#define JOB_DISPLAY_ORDER_REAR_ECHELON 55
+#define JOB_DISPLAY_ORDER_OFFDUTYNCR 55
 #define JOB_DISPLAY_ORDER_NCR_OFF_DUTY 56
 //Legion
 #define JOB_DISPLAY_ORDER_CENTURION 57

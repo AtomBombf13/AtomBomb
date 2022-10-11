@@ -456,13 +456,13 @@
 	force_unwielded = 25
 
 
-// Sledgehammer			Keywords: Damage 25/65, Blacksmithing
+// Sledgehammer			Keywords: Damage 25/55, Blacksmithing
 /obj/item/twohanded/sledgehammer/simple
 	icon_state = "hammer-sledge"
 	icon_prefix = "hammer-sledge"
 	var/qualitymod = 0
 	wielded_icon = "hammer-sledge2"
-	force_wielded = 65
+	force_wielded = 55
 
 /obj/item/twohanded/sledgehammer/simple/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -476,7 +476,7 @@
 // ADVANCED TWO HANDED WEAPONS //
 /////////////////////////////////
 
-// Thermic Lance		Keywords: Damage 5/65, AP 0.3 Special Damage Type - Burn, bonus damage metal door
+// Thermic Lance		Keywords: Damage 5/60, AP 0.3 Special Damage Type - Burn, bonus damage metal door
 /obj/item/twohanded/thermic_lance
 	name = "thermic lance"
 	desc = "A versatile power-welding tool. Useful for cutting apart metal things like airlocks, bars, and probably limbs."
@@ -497,7 +497,7 @@
 	hitsound = 'sound/items/welder2.ogg'
 	wielded_icon = "thermiclance2"
 	force_unwielded = 5
-	force_wielded = 65
+	force_wielded = 60
 
 /obj/item/twohanded/thermic_lance/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -545,7 +545,7 @@
 	AddElement(/datum/element/update_icon_updates_onmob)
 
 
-// Super Sledge			Keywords: Damage 25/70
+// Super Sledge			Keywords: Damage 20/60
 /obj/item/twohanded/sledgehammer/supersledge
 	name = "super sledge"
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
@@ -553,8 +553,8 @@
 	icon_prefix = "hammer-super"
 	force = 25
 	wielded_icon = "hammer-super2"
-	force_unwielded = 25
-	force_wielded = 70
+	force_unwielded = 20
+	force_wielded = 60
 
 obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()

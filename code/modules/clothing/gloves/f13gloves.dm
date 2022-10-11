@@ -23,8 +23,6 @@
 	strip_delay = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/leather/fingerless
 	name = "fingerless leather gloves"
@@ -45,8 +43,6 @@
 	strip_delay = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/doom
 	name = "strange gloves"
@@ -71,8 +67,6 @@
 	strip_delay = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/lace
 	name = "lace gloves"
@@ -84,21 +78,6 @@
 	strip_delay = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-
-/obj/item/clothing/gloves/f13/blacksmith
-	name = "blacksmith gloves"
-	desc = "A pair of heavy duty leather gloves designed to protect the wearer when metalforging."
-	icon_state = "opifex_gloves"
-	item_state = "opifex_gloves"
-	item_color = null
-	transfer_prints = FALSE
-	strip_delay = 10
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/f13/crudemedical
 	name = "crude medical gloves"
@@ -161,17 +140,6 @@
 	equip_delay_other = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-
-/obj/item/clothing/gloves/legion/forgemaster
-	name = "forgemaster gloves"
-	desc = "A pair of heavy duty leather gloves designed to help the Forgemaster do his work."
-	icon_state = "legion_forge"
-	item_state = "legion_forge"
-	item_color = null
-	transfer_prints = FALSE
-	strip_delay = 10
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
 /obj/item/clothing/gloves/legion/plated
 	name = "plated gloves"

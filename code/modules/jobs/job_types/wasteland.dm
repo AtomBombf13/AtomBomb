@@ -305,7 +305,7 @@ Raider
 	suit = /obj/item/clothing/suit/armor/heavy/metal/raider
 	uniform = /obj/item/clothing/under/f13/raider_leather
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
-	gloves = /obj/item/clothing/gloves/f13/blacksmith
+	gloves = /obj/item/clothing/gloves/blacksmith_mittens
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 1,
@@ -453,7 +453,7 @@ Raider
 	name = "Salvager"
 	uniform = /obj/item/clothing/under/f13/machinist
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/blacksmith
+	gloves = /obj/item/clothing/gloves/blacksmith_mittens
 	head = /obj/item/clothing/glasses/welding
 	r_hand = /obj/item/weldingtool/largetank
 	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/pistol45 = 2,)

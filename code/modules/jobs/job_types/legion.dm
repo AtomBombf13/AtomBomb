@@ -632,14 +632,14 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/book/granter/trait/rifleman = 1,
 		)
 
-//Assassin
+//Speculator
 
 /datum/job/CaesarsLegion/Legionnaire/f13venator
-	title = "Legion Assassin"
+	title = "Legion Speculator"
 	flag = F13VENATOR
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the assassin. With your powerful rifle and your many years of experience, you are a killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
+	description = "You are a member of the Legion Speculatores. With your powerful rifle and your many years of experience, you are a killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
 	supervisors = "the Decani and Centurion"
 	display_order = JOB_DISPLAY_ORDER_ASSASSIN
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
@@ -655,7 +655,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Assassin"
+	name = "Legion Speculator"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id = /obj/item/card/id/dogtag/legvenator
 	head = /obj/item/clothing/head/helmet/f13/legion/assassin
@@ -1012,21 +1012,21 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 ////Support Roles ////
 //////////////////////
 
-// Immunes are mostly an off-duty role meant to attend to the camp itself and the slaves or prisoners within.
+// Legion Off-Duty - The difference between off-duty and camp follower is that off-duty is NOT expected to do a job.
 
 /datum/job/CaesarsLegion/Legionnaire/f13immune
-	title = "Legion Immune"
+	title = "Legion Off-Duty"
 	flag = F13IMMUNE
-	total_positions = 0
-	spawn_positions = 0
-	description = "An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
+	total_positions = 4
+	spawn_positions = 4
+	description = "A Legionnaire immune from labor services for the week, granted time of recovery for their victories or injuries, or otherwise deligated to medial tasks maintaining the Legion's encampment."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
 	exp_requirements = 150
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
-	name = "Immune"
+	name = "Legion Off-Duty"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13immune
 	id = /obj/item/card/id/dogtag/legimmune
 	mask = /obj/item/clothing/mask/bandana/legion/camp
@@ -1046,14 +1046,14 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		return
 	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
 
-// FORGE MASTER
+// Camp Follower - Difference intended between off-duty and Camp Follower is that camp followers may vary in background and are EXPECTED to work as an on-duty role.
 
 /datum/job/CaesarsLegion/Legionnaire/f13campfollower	// Extra materials, Blueprints
-	title = "Camp Exactor"
+	title = "Camp Follower"
 	flag = F13CAMPFOLLOWER
-	total_positions = 1
-	spawn_positions = 1
-	description = "The Camp Exactor is many things, from enforcer of discipline amongst slaves to master blacksmith to fortification engineer to even a surgeon. Whichever it might be they instill fear into other slaves throught brutality."
+	total_positions = 4
+	spawn_positions = 4
+	description = "A camp follower ranges in defintiion and purposes. Some may be not enslaved men who are simply not fit for service, termorarily or perminantly, or women who serve a purpose above stock to the Legion. Duties may vary from medical specialities, weapon crafting or other skilled-labor tasks."
 	supervisors = "the Decani and Centurion"
 	display_order = JOB_DISPLAY_ORDER_CAMPFOLLOWER
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
@@ -1065,13 +1065,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
-	name = "Camp Exactor"
+	name = "Camp Follower"
 	id = /obj/item/card/id/dogtag/legforgemaster
 	glasses = /obj/item/clothing/glasses/welding
-	belt = null
-	head = /obj/item/clothing/head/f13/auxilia
-	uniform = /obj/item/clothing/under/f13/legauxilia
-	suit = 	/obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	gloves = null
 	r_pocket = /obj/item/flashlight/lantern
@@ -1123,15 +1119,11 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 			L.registered_name = H.name
 			L.update_label()	
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gladius)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/spatha)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/grease_gun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/brush)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/strongrocket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
@@ -1139,15 +1131,15 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
 
 
-// No such thing as legion citizens babe
+
 // LEGION SLAVES - Servant cook, and assist with medical, low surgery. Worker farm and mine.
 // Both get Mars teachings to help out when normal work is done.
 
 /datum/job/CaesarsLegion/slave
 	title = "Legion Slave"
 	flag = F13LEGIONSLAVE
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 0
+	spawn_positions = 0
 	description = "A slave that survives the breaking camps is given a Legion appropriate name (latin-tribal inspired) and bull tattoo. Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men. Do NOT escape on your own, up to you how to handle it if forcibly freed by outside forces."
 	supervisors = "Officers and Camp Exactor first, then warriors."
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
