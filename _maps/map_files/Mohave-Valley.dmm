@@ -144,6 +144,15 @@
 	icon_state = "mosaic-broken5"
 	},
 /area/f13/ncr)
+"by" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 1
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "bA" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrusty"
@@ -221,6 +230,34 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/wasteland)
+"co" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
+"cq" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 10
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
+"cD" = (
+/obj/structure/closet/crate/bin/trashbin,
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/turf/open/floor/wood_mosaic,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "cI" = (
 /obj/effect/decal/marking{
 	icon_state = "dottedverticalcorroded"
@@ -308,11 +345,21 @@
 	icon_state = "common_light-broken1"
 	},
 /area/f13/ncr)
+"dK" = (
+/obj/effect/decal/fspline,
+/turf/closed/wall/f13/wood,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "dM" = (
 /obj/structure/railing{
 	dir = 2;
 	color = "#5b4c32";
 	layer = 4
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 1
 	},
 /turf/open/floor/wood_mosaic,
 /area/f13/building{
@@ -350,6 +397,17 @@
 	},
 /turf/open/floor/grass,
 /area/f13/wasteland)
+"eg" = (
+/obj/effect/decal/fspline{
+	color = "#5b4c32";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/gravel{
+	color = "#B7ABAB";
+	footstep = "dirt";
+	name = "rocky dirt"
+	},
+/area/f13/wasteland)
 "en" = (
 /obj/machinery/chem_master/condimaster,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
@@ -368,6 +426,15 @@
 	},
 /turf/open/floor/wood_common/wood_common_light,
 /area/f13/ncr)
+"et" = (
+/obj/effect/decal/fspline{
+	color = "#4f5557";
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/redchess,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "eH" = (
 /turf/open/floor/wood_mosaic,
 /area/f13/ncr)
@@ -525,6 +592,23 @@
 /obj/structure/flora/ausbushes/pointybush,
 /turf/open/indestructible/ground/outside/dirt/dark,
 /area/f13/wasteland)
+"ge" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 9
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "gi" = (
 /obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess{
@@ -542,6 +626,10 @@
 "gq" = (
 /obj/machinery/vending/boozeomat{
 	pixel_y = 32
+	},
+/obj/effect/decal/spline_corner{
+	color = "#4f5557";
+	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/building{
@@ -699,6 +787,10 @@
 /area/f13/ncr)
 "iu" = (
 /obj/item/kirbyplants/random,
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
 /turf/open/floor/wood_common,
 /area/f13/building{
 	name = "NCR Saloon"
@@ -729,6 +821,19 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/ncr)
+"iZ" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 1
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "jf" = (
 /obj/structure/flora/twig,
 /turf/open/indestructible/ground/outside/desert,
@@ -778,6 +883,15 @@
 	},
 /turf/open/floor/wood_wide,
 /area/f13/ncr)
+"jK" = (
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 8
+	},
+/turf/open/floor/wood_mosaic,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "jL" = (
 /obj/structure/chair/wood{
 	dir = 4
@@ -976,6 +1090,19 @@
 /obj/structure/flora/tree/jungle,
 /turf/open/floor/grass,
 /area/f13/wasteland)
+"mb" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 10
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "mf" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 1
@@ -1213,6 +1340,17 @@
 /obj/machinery/light/sign/shed,
 /turf/closed/wall/f13/wood,
 /area/f13/wasteland)
+"pj" = (
+/obj/effect/decal/spline_corner{
+	color = "#5b4c32";
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/gravel{
+	color = "#B7ABAB";
+	footstep = "dirt";
+	name = "rocky dirt"
+	},
+/area/f13/wasteland)
 "pk" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -1339,6 +1477,15 @@
 /area/f13/building{
 	name = "NCR Saloon"
 	})
+"qz" = (
+/obj/effect/decal/fspline_end{
+	color = "#4f3b30";
+	dir = 1
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "qD" = (
 /obj/effect/turf_decal/weather/dirt,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -1453,6 +1600,10 @@
 /obj/machinery/vending/wardrobe/bar_wardrobe{
 	pixel_y = 24
 	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
 /turf/open/floor/wood_common,
 /area/f13/building{
 	name = "NCR Saloon"
@@ -1505,6 +1656,19 @@
 	icon_state = "mosaic-broken6"
 	},
 /area/f13/ncr)
+"sG" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "sH" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/shaker,
@@ -1534,6 +1698,14 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"sX" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30"
+	},
+/turf/open/floor/wood_mosaic,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "ta" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/condiment/saltshaker{
@@ -1850,6 +2022,19 @@
 	icon_state = "vaultrust"
 	},
 /area/f13/ncr)
+"wG" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "wI" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2left"
@@ -1968,6 +2153,15 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/ncr)
+"xE" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "xG" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 2
@@ -2046,6 +2240,15 @@
 /area/f13/building{
 	name = "NCR Saloon"
 	})
+"yw" = (
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 2
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "yz" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -2097,11 +2300,11 @@
 	},
 /area/f13/ncr)
 "yY" = (
-/obj/structure/railing/corner{
-	color = "#5b4c32";
-	dir = 8
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
 	},
-/turf/open/floor/wood_mosaic,
+/turf/open/floor/wood_common,
 /area/f13/building{
 	name = "NCR Saloon"
 	})
@@ -2338,6 +2541,15 @@
 	},
 /turf/open/floor/grass,
 /area/f13/wasteland)
+"Bw" = (
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 2
+	},
+/turf/open/floor/wood_mosaic,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "BA" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
@@ -2346,6 +2558,10 @@
 	})
 "BF" = (
 /obj/structure/closet/crate/bin/trashbin,
+/obj/effect/decal/fspline_end{
+	color = "#4f3b30";
+	dir = 1
+	},
 /turf/open/floor/wood_common,
 /area/f13/building{
 	name = "NCR Saloon"
@@ -2360,6 +2576,16 @@
 	dir = 9
 	},
 /area/f13/ncr)
+"BN" = (
+/obj/effect/decal/spline_corner{
+	color = "#5b4c32"
+	},
+/turf/open/indestructible/ground/outside/gravel{
+	color = "#B7ABAB";
+	footstep = "dirt";
+	name = "rocky dirt"
+	},
+/area/f13/wasteland)
 "BS" = (
 /obj/structure/curtain{
 	color = "#4f1a0f";
@@ -2463,6 +2689,19 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/wasteland)
+"De" = (
+/obj/structure/railing/corner{
+	color = "#5b4c32";
+	dir = 8
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Dk" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/road{
@@ -2554,6 +2793,15 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/ncr)
+"EG" = (
+/obj/effect/decal/fspline{
+	color = "#4f5557";
+	dir = 9
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/redchess,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "EK" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/indestructible/ground/outside/dirt/dark,
@@ -2886,6 +3134,19 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/ncr)
+"Jo" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Js" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/vodka{
@@ -2955,6 +3216,10 @@
 	dir = 2;
 	color = "#5b4c32"
 	},
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 1
+	},
 /turf/open/floor/wood_mosaic,
 /area/f13/building{
 	name = "NCR Saloon"
@@ -2993,6 +3258,14 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"Kx" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30"
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "KC" = (
 /obj/structure/barricade/bars{
 	max_integrity = 800;
@@ -3186,6 +3459,16 @@
 	icon_state = "horizontalinnermain2left"
 	},
 /area/f13/wasteland)
+"Ms" = (
+/obj/structure/closet/locker,
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Mv" = (
 /obj/structure/sign/poster/contraband/syndicate_pistol,
 /turf/closed/wall/f13/wood,
@@ -3194,6 +3477,19 @@
 /obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/wood_common/wood_common_light,
 /area/f13/ncr)
+"MD" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 8
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 9
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "MI" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/sunnybush,
@@ -3398,6 +3694,24 @@
 	name = "rocky dirt"
 	},
 /area/f13/wasteland)
+"Pi" = (
+/obj/effect/decal/fspline{
+	color = "#4f5557";
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/redchess,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
+"Pv" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/wood_mosaic,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Pw" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/wasteland)
@@ -3474,6 +3788,15 @@
 /obj/structure/flora/tree_stump,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"QM" = (
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 8
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "QQ" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -3740,6 +4063,19 @@
 	dir = 5
 	},
 /area/f13/wasteland)
+"Ub" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 6
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Uc" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
@@ -3833,6 +4169,15 @@
 /area/f13/building{
 	name = "NCR Saloon"
 	})
+"Vf" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 6
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Vh" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/road{
@@ -3901,6 +4246,19 @@
 	name = "lake water"
 	},
 /area/f13/wasteland)
+"VQ" = (
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 4
+	},
+/obj/effect/decal/spline_corner{
+	color = "#4f3b30";
+	dir = 1
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "VR" = (
 /obj/structure/table/glass,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
@@ -3999,6 +4357,15 @@
 /area/f13/building{
 	name = "NCR Saloon"
 	})
+"Xz" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "XF" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -4022,6 +4389,15 @@
 /area/f13/building{
 	name = "NCR Saloon"
 	})
+"Yh" = (
+/obj/effect/decal/spline_corner{
+	color = "#4f5557";
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/redchess,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "Yk" = (
 /turf/open/indestructible/ground/outside/dirt/dark,
 /area/f13/wasteland)
@@ -4034,6 +4410,19 @@
 	dir = 5
 	},
 /area/f13/wasteland)
+"Yw" = (
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 4
+	},
+/obj/effect/decal/fspline{
+	color = "#4f3b30";
+	dir = 5
+	},
+/turf/open/floor/wood_common,
+/area/f13/building{
+	name = "NCR Saloon"
+	})
 "YD" = (
 /obj/structure/chair/stool/retro/backed,
 /turf/open/floor/carpet/black,
@@ -101217,10 +101606,10 @@ DU
 DU
 DU
 DU
-DU
-DU
-DU
-DU
+BN
+eg
+eg
+pj
 DU
 DU
 DU
@@ -102722,10 +103111,10 @@ DU
 It
 It
 BF
-kE
-kE
-kE
-kE
+wG
+iZ
+xE
+cq
 oh
 tw
 xm
@@ -103225,13 +103614,13 @@ It
 gH
 gH
 gH
+by
 kE
-kE
-kE
-kE
-kE
-kE
-kE
+QM
+xE
+xE
+xE
+cq
 LN
 ix
 Qf
@@ -103727,22 +104116,22 @@ It
 ta
 ix
 ta
+by
 kE
 kE
 kE
 kE
 kE
-kE
-kE
+Kx
 IJ
 uG
 IJ
 IJ
 uG
 IJ
-IJ
-IJ
-IJ
+Bw
+Pv
+Pv
 Ke
 kn
 It
@@ -104229,20 +104618,20 @@ It
 ob
 ob
 ob
+by
 kE
 kE
 kE
 kE
 kE
-kE
-kE
-kE
-kE
-kE
-kE
+QM
+xE
+xE
+xE
+cq
 IJ
 IJ
-IJ
+sX
 pY
 pY
 dM
@@ -104729,6 +105118,9 @@ DU
 DU
 It
 oh
+qz
+wG
+VQ
 kE
 kE
 kE
@@ -104738,12 +105130,9 @@ kE
 kE
 kE
 kE
-kE
-kE
-kE
-kE
-IJ
-IJ
+Kx
+Bw
+Pv
 It
 ur
 ur
@@ -105233,23 +105622,23 @@ It
 gH
 gH
 gH
+by
 kE
-kE
-kE
-kE
-kE
-kE
-kE
+yw
+yY
+yY
+yY
+yY
 iu
-kE
-kE
-kE
-IJ
+yY
+yY
+Vf
+sX
 YD
 ur
-ow
-ow
-ow
+EG
+et
+Yh
 Uh
 It
 yA
@@ -105735,9 +106124,9 @@ It
 ta
 ix
 ta
+by
 kE
-kE
-kE
+Kx
 It
 qM
 xm
@@ -105746,10 +106135,10 @@ It
 qM
 xm
 Vd
-IJ
+sX
 YD
 ur
-ow
+Pi
 ow
 ow
 FI
@@ -106237,9 +106626,9 @@ It
 ob
 ob
 ob
+by
 kE
-kE
-kE
+Kx
 It
 wT
 xm
@@ -106248,10 +106637,10 @@ It
 wT
 xm
 KZ
-IJ
+sX
 YD
 ur
-ow
+Pi
 ow
 ow
 sH
@@ -106738,10 +107127,10 @@ DU
 It
 It
 BF
-kE
-kE
-kE
-kE
+wG
+Jo
+yY
+Vf
 It
 tw
 xm
@@ -106750,8 +107139,8 @@ It
 tw
 xm
 Ue
-IJ
-xL
+jK
+cD
 It
 gq
 ow
@@ -107249,7 +107638,7 @@ It
 It
 It
 It
-It
+dK
 It
 It
 It
@@ -107755,7 +108144,7 @@ xL
 ix
 oh
 It
-IJ
+oh
 IJ
 IJ
 IJ
@@ -108250,18 +108639,18 @@ AZ
 AZ
 Th
 kM
-kE
-kE
-fP
-fP
-kE
-kE
+xE
+cq
+co
+co
+MD
+xE
 kM
-kE
-fP
-fP
-kE
-kE
+mb
+co
+co
+ge
+sG
 It
 bZ
 yA
@@ -108753,13 +109142,13 @@ AZ
 tJ
 It
 dr
-kE
+Kx
 qv
 bW
-kE
+by
 jO
 It
-kE
+Kx
 fP
 Ds
 mQ
@@ -109255,17 +109644,17 @@ AZ
 tJ
 It
 dr
-kE
+Kx
 qv
 bW
-kE
+by
 jO
 It
-kE
+Kx
 fP
 Ds
-mQ
-kn
+Rc
+lE
 It
 bZ
 yA
@@ -109757,17 +110146,17 @@ AZ
 en
 It
 se
-kE
-fP
-fP
-kE
-jO
+Vf
+Xz
+Xz
+Yw
+Ms
 It
-kE
-fP
-Ds
-Rc
-lE
+Ub
+Xz
+De
+It
+It
 It
 bZ
 yA
@@ -110267,7 +110656,7 @@ EV
 It
 oh
 IJ
-yY
+IJ
 It
 It
 It
