@@ -29,3 +29,59 @@
 	icon = 'icons/obj/smooth_structures/lattice.dmi'
 	icon_state = "lattice"
 	density = FALSE
+
+/obj/effect/decal/spline
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_plain"
+	density = FALSE
+
+/obj/effect/decal/spline_corner
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_fancy_corner"
+	density = FALSE
+
+/obj/effect/decal/spline_end
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_plain_cee"
+	density = FALSE
+
+/obj/effect/decal/spline_full
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_plain_full"
+	density = FALSE
+
+/obj/effect/decal/fspline
+	name = "Spline"
+	desc = "A fancy ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_fancy"
+	density = FALSE
+
+/obj/effect/decal/fspline_corner
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_fancy_corner"
+	density = FALSE
+
+/obj/effect/decal/fspline_end
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_fancy_cee"
+	density = FALSE
+
+/obj/effect/decal/fspline_full
+	name = "Spline"
+	desc = "A basic ground divider"
+	icon = 'icons/fallout/objects/decals.dmi'
+	icon_state = "spline_fancy_full"
+	density = FALSE
