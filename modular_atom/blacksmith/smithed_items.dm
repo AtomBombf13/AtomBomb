@@ -106,13 +106,13 @@
 			qualname =  "poor"
 		if(-1 to 1)
 			qualname = "normal"
-		if(11 to INFINITY)
+		if(12 to INFINITY)
 			qualname = "legendary"
-		if(8 to 11)
+		if(10 to 12)
 			qualname = "masterwork"
-		if(7 to 8)
+		if(8 to 9)
 			qualname = "excellent"
-		if(5 to 7)
+		if(5 to 8)
 			qualname = "good"
 		if(0 to 5)
 			qualname = "above-average"
@@ -279,7 +279,7 @@
 
 /obj/item/smithing/hammerhead/startfinish()
 	var/obj/item/melee/smith/hammer/finalforreal = new /obj/item/melee/smith/hammer(src)
-	finalforreal.force += quality/2
+	finalforreal.force += quality/4
 	finalforreal.qualitymod = quality/2.5
 	finalitem = finalforreal
 	..()
@@ -469,7 +469,7 @@
 /obj/item/smithing/daggerblade/startfinish()
 	finalitem = new /obj/item/melee/smith/dagger(src)
 	finalitem.force += QUALITY_MODIFIER
-	finalitem.armour_penetration += QUALITY_MODIFIER*0.03
+	finalitem.armour_penetration += QUALITY_MODIFIER*0.01
 	..()
 
 // ------------ BOWIE KNIFE ------------ //
@@ -718,7 +718,7 @@
 	finalforreal.force += QUALITY_MODIFIER
 	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
 	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalforreal.throwforce = finalforreal.force/10
+	finalforreal.throwforce = finalforreal.force
 	finalitem = finalforreal
 	..()
 
@@ -733,7 +733,7 @@
 	finalforreal.force += QUALITY_MODIFIER
 	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
 	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalforreal.throwforce = finalforreal.force/10
+	finalforreal.throwforce = finalforreal.force
 	finalitem = finalforreal
 	..()
 
@@ -748,7 +748,7 @@
 	finalforreal.force += QUALITY_MODIFIER
 	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
 	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
-	finalforreal.throwforce = finalforreal.force/10
+	finalforreal.throwforce = finalforreal.force
 	finalitem = finalforreal
 	..()
 

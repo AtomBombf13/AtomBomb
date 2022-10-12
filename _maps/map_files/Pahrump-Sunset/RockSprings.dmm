@@ -10514,7 +10514,7 @@
 	},
 /area/f13/wasteland)
 "gxZ" = (
-/obj/structure/furnace,
+/obj/structure/blacksmith/furnace,
 /turf/open/floor/plasteel/cult,
 /area/f13/building)
 "gyy" = (
@@ -13602,7 +13602,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/anvil/obtainable/basic,
+/obj/structure/blacksmith/anvil/obtainable/basic,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "inZ" = (
@@ -18804,7 +18804,7 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "lrV" = (
-/obj/structure/anvil/obtainable/table,
+/obj/structure/blacksmith/anvil/obtainable/table,
 /obj/item/twohanded/sledgehammer/simple,
 /turf/open/floor/plasteel/cult,
 /area/f13/building)

@@ -50,7 +50,7 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
-/datum/crafting_recipe/blacksmit/furnace
+/datum/crafting_recipe/blacksmith/furnace
 	name = "Furnace"
 	result = /obj/structure/blacksmith/furnace
 	time = 300

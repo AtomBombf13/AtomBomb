@@ -10,6 +10,10 @@
 
 #define QUALITY_MODIFIER quality
 
+#define FORCE_SMITH_REACH 18
+#define FORCE_SMITH_LOW 21
+#define FORCE_SMITH_HIGH 28
+
 
 //////////////////////////////////////
 //									//
@@ -212,16 +216,3 @@
 				</body>
 				</html>
 				"}
-
-
-
-// TEMPORARY CACHE OF SINFUL SHAME
-/obj/item/ingot/silver
-/obj/item/ingot/gold
-/obj/item/ingot/titanium
-
-/obj/structure/furnace
-
-/obj/structure/anvil/obtainable
-/obj/structure/anvil/obtainable/sandstone
-/obj/structure/anvil/obtainable/table

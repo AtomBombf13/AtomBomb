@@ -26048,7 +26048,7 @@
 	},
 /area/f13/wasteland)
 "eJy" = (
-/obj/structure/anvil/obtainable/legion,
+/obj/structure/blacksmith/anvil/obtainable/legion,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "eJO" = (
@@ -53401,7 +53401,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/mall)
 "rIv" = (
-/obj/structure/anvil/obtainable/table,
+/obj/structure/blacksmith/anvil/obtainable/table,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/village)
 "rIF" = (
