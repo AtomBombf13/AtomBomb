@@ -1,6 +1,6 @@
 /datum/language/tribal
 	name = "Tribal"
-	desc = "The language spoken by members of the local tribe, boasting a complex system of phonemes and mixed grammar."
+	desc = "The language spoken by members of the local tribes, boasting a complex system of phonemes and mixed grammar."
 	key = "t"
 	icon_state = "tribal"
 	syllables = list(
