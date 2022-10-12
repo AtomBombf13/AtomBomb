@@ -193,20 +193,6 @@
 	icon_state = "vest_follower"
 	item_state = "vest_follower"
 
-/obj/item/clothing/suit/armor/medium/vest/town
-	name = "Eastwood flak vest"
-	desc = "A refurbished flak vest, repaired by the Eastwood Security Force. The ballistic nylon has a much tougher weave, but it still will not take acid or most high-powered rounds."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "vest_flak"
-	item_state = "vest_flak"
-
-/obj/item/clothing/suit/armor/medium/vest/oasis
-	name = "NPD vest"
-	desc = "a lightweight ballistic vest that combines protection and comfort. This one has pockets sewn into the front and a badge pinned on it."
-	icon_state = "blueshift"
-	item_state = "blueshift"
-
 /obj/item/clothing/suit/armor/light/vest/russian
 	name = "russian vest"
 	desc = "A bulletproof vest with forest camo. Good thing there's plenty of forests to hide in around here, right?"
@@ -452,29 +438,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "duster-renegade"
 	item_state = "duster-renegade"
-
-/obj/item/clothing/suit/armor/medium/duster/town
-	name = "detective's trenchcoat"
-	desc = "An armored trench coat with added shoulderpads, a chestplate, and leg guards."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "towntrench"
-
-/obj/item/clothing/suit/armor/medium/duster/town/deputy
-	name = "armored town trenchcoat"
-	desc = "An armored trench coat with added shoulderpads, a chestplate, and legguards."
-	icon_state = "towntrench_medium"
-
-/obj/item/clothing/suit/armor/medium/duster/town/sheriff
-	name = "marshal's trenchcoat"
-	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
-	icon_state = "towntrench_heavy"
-
-/obj/item/clothing/suit/armor/medium/duster/town/sheriff/detsuit
-	name = "sheriff duster"
-	desc = "A long brown leather overcoat.<br>A powerful accessory of a respectful sheriff, bringer of justice."
-	icon_state = "sheriff"
-	item_state = "det_suit"
 
 /obj/item/clothing/suit/armor/medium/duster/town/commissioner
 	name = "commissioner's jacket"
@@ -990,21 +953,29 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
-//////////////
-// Cog City //
-//////////////
+//////////////////////
+// Town of Eastwood //
+//////////////////////
+/obj/item/clothing/suit/armor/medium/duster/mayor
+	name = "eastwood mayor duster"
+	desc = "A long blue coat belonging to the man with finaly say in the town's matters, the Mayor."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "town_command"
 
-/obj/item/clothing/suit/armor/medium/vault
-	name = "cog city combat armor"
-	desc = "A combat armor set with post-war modifications, done by the local town of Cog City. Its Vault-Tec markings have been seemingly incorporated into its new markings."
-	icon_state = "vest_armor"
-	item_state = "vest_armor"
+/obj/item/clothing/suit/armor/medium/duster/sheriff
+	name = "eastwood marshal's trenchcoat"
+	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "town_marshal"
 
-/obj/item/clothing/suit/armor/medium/vault/marshal
-	name = "Marhsal's battlecoat"
-	desc = "A heavy pre-war bomber coat, dyed blue with the insignia of the Vault-Tec City Coalition embroidered on the back. This one is worn by the Marshals of the Coalition."
-	icon_state = "marshal_commandcoat"
-	item_state = "marshal_commandcoat"
+/obj/item/clothing/suit/armor/medium/town/riot //UN Glowie
+	name = "eastwood marshal riot armor"
+	desc = "A set of pristine L.A police riot armor known mainly from use by the NCR Rangers these days. This set is covered over by vault colored duster and looks way cleaner than most sets out there."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "town_marshal_riot" //In reality a placeholder
 
 /////////////
 // Enclave //

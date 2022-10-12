@@ -165,20 +165,6 @@
 							"Barkeep",
 							)
 
-/datum/gear/suit/deputyvest
-	name = "NPD armor vest"
-	path = /obj/item/clothing/suit/armor/medium/vest/oasis
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
-	cost = 3
-	restricted_desc = "Eastwood Security, Eastwood Officials"
-	restricted_roles = list("Chief of Police",
-							"Officer",
-							"Mayor",
-							"Detective",
-							"Secretary",
-							"Shopkeeper",
-						)
-
 /datum/gear/suit/hazardvest
 	name = "Hazard Vest"
 	path = /obj/item/clothing/suit/hazardvest

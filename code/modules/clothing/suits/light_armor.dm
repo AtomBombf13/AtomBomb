@@ -519,16 +519,6 @@
 	item_state = "duster_lawman"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/light/duster/town
-	name = "town trenchcoat"
-	desc = "A non-descript black trenchcoat."
-	icon_state = "towntrench"
-	item_state = "hostrench"
-
-/obj/item/clothing/suit/armor/light/duster/town/mayor
-	name = "mayor trenchcoat"
-	desc = "A symbol of the mayor's authority (or lack thereof)."
-
 /obj/item/clothing/suit/armor/light/duster/rustedcowboy
 	name = "rusted cowboy outfit"
 	desc = "A weather treated leather cowboy outfit. Yeehaw Pard'!"
@@ -561,18 +551,6 @@
 	icon_state = "maxson_battlecoat"
 	item_state = "maxson_battlecoat"
 
-/obj/item/clothing/suit/armor/light/duster/battlecoat/vault/overseer
-	name = "Overseer's battlecoat"
-	desc = "A heavy pre-war bomber coat, dyed blue with the insignia of the Vault-Tec embroidered on the back. This one is worn by the Coalition's Overseer."
-	icon_state = "maxson_battlecoat"
-	item_state = "maxson_battlecoat"
-
-/obj/item/clothing/suit/armor/light/duster/battlecoat/vault/marshal
-	name = "Marhsal's battlecoat"
-	desc = "A heavy pre-war bomber coat, dyed blue with the insignia of the Vault-Tec City Coalition embroidered on the back. This one is worn by the Marshals of the Coalition."
-	icon_state = "maxson_battlecoat"
-	item_state = "maxson_battlecoat"
-
 /obj/item/clothing/suit/armor/light/duster/rustedcowboy
 	name = "rusted cowboy outfit"
 	desc = " A weather treated leather cowboy outfit.  Yeehaw Pard'!"
@@ -587,12 +565,6 @@
 	desc = "Only a monk would find this robe nice and comfortable."
 	icon_state = "robe_liz"
 	item_state = "brownjsuit"
-
-/obj/item/clothing/suit/armor/light/duster/town
-	name = "town trenchcoat"
-	desc = "A non-descript black trenchcoat."
-	icon_state = "towntrench"
-	item_state = "hostrench"
 
 /obj/item/clothing/suit/armor/light/duster/robe_hubologist
 	name = "hubologist robe"
@@ -645,12 +617,6 @@
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-
-/obj/item/clothing/suit/armor/light/duster/town
-	name = "town trenchcoat"
-	desc = "A non-descript black trenchcoat."
-	icon_state = "towntrench"
-	item_state = "hostrench"
 
 ///////////////////
 // LEATHER ARMOR //
@@ -907,17 +873,23 @@
 	icon_state = "brotherhood_scout_senior"
 	item_state = "brotherhood_scout_senior"
 
-//////////////
-// Cog City //
-////////////// 
+//////////////////////
+// Town of Eastwood //
+//////////////////////
 
-/obj/item/clothing/suit/armor/light/duster/roadie
-	name = "roadie patrol jacket"
-	desc = "A heavy padded duster with the insignia of the Vault-Tec City Coalition embroidered on the back. This one is often worn by the various employed Roadies in the cities."
-	icon_state = "roadie_battlecoat"
-	item_state = "roadie_battlecoat"
+/obj/item/clothing/suit/armor/light/duster/town
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 
+/obj/item/clothing/suit/armor/light/duster/town/bartender
+	name = "eastwood bartender's trenchcoat"
+	desc = "A fancy long trenchcoat belonging to a bartender, features an internal pocket large enough to hold a shotgun concealed."
+	icon_state = "town_bartender"
 
+/obj/item/clothing/suit/armor/light/duster/town/deputy
+	name = "eastwood armored trenchcoat"
+	desc = "A lightly armored stylish trenchcoat for low-grade lawmen."
+	icon_state = "town_security"
 
 /////////////////
 // Great Khans //

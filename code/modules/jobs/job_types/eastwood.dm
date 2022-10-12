@@ -10,26 +10,23 @@ Detective : 4 ACCESS_FORENSICS_LOCKERS
 here's a tip, go search DEFINES/access.dm
 */
 
-/datum/job/oasis
+/datum/job/eastwood
 	exp_type = EXP_TYPE_EASTWOOD
 	faction = FACTION_EASTWOOD
 	department_flag = DEP_EASTWOOD
 	selection_color = "#dcba97"
 
 // Headsets for everyone!!
-/datum/outfit/job/den
+/datum/outfit/job/eastwood
 	name = "Eastwood Default Template"
+	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town
 	belt = null
-	id = /obj/item/card/id/dogtag/town
-	uniform = /obj/item/clothing/under/f13/vault
-	shoes = /obj/item/clothing/shoes/f13/cowboy
+	uniform = /obj/item/clothing/under/f13/eastwood/vault
+	shoes = /obj/item/clothing/shoes/jackboots
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
-	r_pocket = /obj/item/flashlight/seclite
-	r_hand = /obj/item/book/granter/trait/selection
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/storage/bag/money/small/settler = 1
 		)
 
@@ -38,7 +35,7 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Executive with 3 mags
 
-/datum/job/oasis/f13mayor
+/datum/job/eastwood/f13mayor
 	title = "Mayor"
 	flag = F13MAYOR
 	display_order = JOB_DISPLAY_ORDER_MAYOR
@@ -49,20 +46,20 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#af9172"
 	exp_requirements = 750
 
-	outfit = /datum/outfit/job/den/f13mayor
+	outfit = /datum/outfit/job/eastwood/f13mayor
 	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
 
-/datum/outfit/job/den/f13mayor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13mayor/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -71,16 +68,16 @@ here's a tip, go search DEFINES/access.dm
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
-/datum/outfit/job/den/f13mayor
+/datum/outfit/job/eastwood/f13mayor
 	name = "Mayor"
-	jobtype = /datum/job/oasis/f13mayor
+	jobtype = /datum/job/eastwood/f13mayor
 	id = /obj/item/card/id/silver/mayor
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_town/mayor
 	head =/obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	l_pocket = /obj/item/storage/bag/money/small/oasis
 	r_pocket = /obj/item/flashlight/seclite
-	suit = /obj/item/clothing/suit/armor/light/duster/battlecoat
+	suit = /obj/item/clothing/suit/armor/medium/duster/mayor
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
@@ -97,7 +94,7 @@ here's a tip, go search DEFINES/access.dm
 //Brush gun, peacekeeper - Sheriff Coat
 //Citykiller, big 10mm revolver - NPD Coat
 
-/datum/job/oasis/f13sheriff
+/datum/job/eastwood/f13sheriff
 	title = "Marshal"
 	flag = F13SHERIFF
 	display_order = JOB_DISPLAY_ORDER_SHERIFF
@@ -109,32 +106,33 @@ here's a tip, go search DEFINES/access.dm
 	description = "As the head of the security forces, you are the face of justice in the town. Uphold the law, or bend it to suit your needs, you set the precedent for how justice is doled out in the town, so bear that in mind when you sentence that pickpocket to death. Maintain the armoury and keep that watchful eye on the elevator to the Vault below. Whatever you do, don't lose your head."
 	exp_requirements = 750
 
-	outfit = /datum/outfit/job/den/f13sheriff
+	outfit = /datum/outfit/job/eastwood/f13sheriff
 
 	loadout_options = list(
-	/datum/outfit/loadout/thelaw,
-	/datum/outfit/loadout/thechief
+	/datum/outfit/loadout/thechief,
+	/datum/outfit/loadout/theoldguard
 	)
 
 	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
-/datum/outfit/job/den/f13sheriff
+/datum/outfit/job/eastwood/f13sheriff
 	name = "Marshal"
-	jobtype = /datum/job/oasis/f13sheriff
+	jobtype = /datum/job/eastwood/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff
 	ears = /obj/item/radio/headset/headset_town/lawman
-	glasses  = /obj/item/clothing/glasses/hud/security/sunglasses
+	glasses  = /obj/item/clothing/glasses/sunglasses
 	belt = /obj/item/storage/belt/military/army
-	neck = /obj/item/storage/belt/holster
+	neck = /obj/item/storage/belt/holster/leg
+	uniform = /obj/item/clothing/under/f13/eastwood/vault/security
 	l_pocket = /obj/item/storage/bag/money/small/den
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
@@ -142,14 +140,25 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/grenade/flashbang = 1,
+		/obj/item/grenade/flashbang = 1
 		)
 
-/datum/outfit/loadout/thelaw
-	name = "The Law Man"
-	suit = /obj/item/clothing/suit/armor/medium/duster/town/sheriff
+/datum/outfit/loadout/thechief
+	name = "The Chief of Security"
+	suit = /obj/item/clothing/suit/armor/medium/town/riot
+	head = /obj/item/clothing/head/f13/town/riot
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller //I used the shotgun, wanna know why ?
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/slug = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/colt6520/Bigiron = 1
+		)
+
+/datum/outfit/loadout/theoldguard
+	name = "The Old Guard"
+	uniform = /obj/item/clothing/under/f13/eastwood/sheriff
+	suit = /obj/item/clothing/suit/armor/medium/duster/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
-	uniform = /obj/item/clothing/under/f13/police/formal
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/c4570 = 3,
@@ -157,19 +166,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1
 		)
 
-/datum/outfit/loadout/thechief
-	name = "The Chief"
-	uniform = /obj/item/clothing/under/f13/police/chief
-	suit = /obj/item/clothing/suit/armor/medium/duster/town/chief
-	head = /obj/item/clothing/head/f13/town/chief
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
-	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/slug = 1,
-		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/gun/ballistic/revolver/colt6520/Bigiron = 1
-		)
-
-/datum/outfit/job/den/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -186,7 +183,7 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //.44 Magnum Snub - Duster
 
-/datum/job/oasis/f13detective
+/datum/job/eastwood/f13detective
 	title = "Detective"
 	flag = F13DETECTIVE
 	display_order = JOB_DISPLAY_ORDER_DETECTIVE
@@ -195,18 +192,18 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "The Marshal"
 	description  = "Investigating crimes and disappearences in the town, you are the marshal's infromation gathering expert."
 	selection_color = "#dcba97"
-	outfit = /datum/outfit/job/oasis/f13detective
+	outfit = /datum/outfit/job/eastwood/f13detective
 
 	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
 	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
-			/datum/job/oasis/f13detective
+			/datum/job/eastwood/f13detective
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/wasteland/f13wastelander,
-			/datum/job/oasis/f13detective
+			/datum/job/eastwood/f13detective
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/wasteland/f13wastelander
@@ -214,15 +211,16 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 
-/datum/outfit/job/oasis/f13detective
+/datum/outfit/job/eastwood/f13detective
 	name = "Detective"
-	jobtype = /datum/job/oasis/f13detective
-	suit = /obj/item/clothing/suit/armor/medium/duster/town
-	head = /obj/item/clothing/head/f13/town
-	ears = /obj/item/radio/headset/headset_town/lawman
+	jobtype = /datum/job/eastwood/f13detective
 	id = /obj/item/card/id/silver
+	uniform = /obj/item/clothing/under/f13/eastwood/detective
+	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
+	head = /obj/item/clothing/head/f13/town/deputy
+	ears = /obj/item/radio/headset/headset_town/lawman
+	gloves = /obj/item/clothing/gloves/color/black
 	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/flare
 	suit_store = /obj/item/gun/ballistic/revolver/m29/snub
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
@@ -240,56 +238,57 @@ here's a tip, go search DEFINES/access.dm
 //Police shotgun, 10mm revolver - Vault Security Armor
 //Police carbine, 10mm revolver - Vault Security Armor
 
-/datum/job/oasis/f13deputy
+/datum/job/eastwood/f13deputy
 	title = "Deputy"
 	flag = F13DEPUTY
 	display_order = JOB_DISPLAY_ORDER_DEPUTY
 	total_positions = 5
-	spawn_positions = 4
+	spawn_positions = 5
 	supervisors = "The Marshal"
 	description = "Day or night, you watch the walls with diligence. The wastes outside are lawless."
 	selection_color = "#dcba97"
 	exp_requirements = 300
 
 	loadout_options = list(
-	/datum/outfit/loadout/frontierjustice,
-	/datum/outfit/loadout/police,
-	/datum/outfit/loadout/swat,)
+	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/frontiershotgun,
+	/datum/outfit/loadout/vaultheavy)
 
-	outfit = /datum/outfit/job/den/f13deputy
+	outfit = /datum/outfit/job/eastwood/f13deputy
 	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
 	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
-/datum/outfit/job/den/f13deputy
+/datum/outfit/job/eastwood/f13deputy
 	name = "Deputy"
-	jobtype = /datum/job/oasis/f13deputy
+	jobtype = /datum/job/eastwood/f13deputy
 	id = /obj/item/card/id/dogtag/deputy
+	uniform = /obj/item/clothing/under/f13/eastwood/deputy
 	ears = /obj/item/radio/headset/headset_town/lawman
-	neck = /obj/item/storage/belt/holster
+	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/army
-	gloves = /obj/item/clothing/gloves/f13/military
-	glasses  = /obj/item/clothing/glasses/hud/security/sunglasses
-	l_pocket = /obj/item/storage/bag/money/small/settler
+	glasses  = /obj/item/clothing/glasses/sunglasses
 	r_pocket = /obj/item/flashlight/seclite
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/grenade/flashbang = 1,
+		/obj/item/storage/bag/money/small/settler = 1
 		)
 
-/datum/outfit/loadout/frontierjustice
+/datum/outfit/loadout/frontier
 	name = "Rugged Frontiersman"
-	suit = /obj/item/clothing/suit/armor/medium/duster/town/deputy
 	head = /obj/item/clothing/head/f13/town/deputy
+	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
+	gloves = /obj/item/clothing/gloves/rifleman
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
@@ -297,125 +296,44 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/gun/ballistic/revolver/colt357 = 1
 		)
 
-/datum/outfit/loadout/police
-	name = "Vault Security Heavy"
-	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/Vault
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2/vault
-	r_hand = /obj/item/gun/ballistic/shotgun/police
+/datum/outfit/loadout/frontiershotgun
+	name = "Upfront Frontiersman"
+	head = /obj/item/clothing/head/f13/town/deputy
+	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
+	gloves = /obj/item/clothing/gloves/rifleman
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	shoes = /obj/item/clothing/shoes/jackboots
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1
+		/obj/item/ammo_box/loader/a357 = 2,
+		/obj/item/gun/ballistic/revolver/colt357 = 1
 		)
 
-/datum/outfit/loadout/swat
+/datum/outfit/loadout/vaultheavy
 	name = "Vault Security Classic"
-	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/Vault
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/vault
+	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/Vault
 	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/f13/military
 	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m5mm=1,
 		/obj/item/gun/ballistic/revolver/colt6520 = 1
 		)
 
-/datum/outfit/job/den/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-
-
-/*--------------------------------------------------------------*/
-//Prospector
-/*--------------------------------------------------------------*/
-//10mm Revolver - Leather armor / just overalls
-
-/datum/job/oasis/f13prospector
-	title = "Prospector"
-	flag = F13PROSPECTOR
-	display_order = JOB_DISPLAY_ORDER_PROSPECTOR
-	total_positions = 2
-	spawn_positions = 4
-	supervisors = "The Mayor and Merchant"
-	description = "You are employeed by the local town merchant to bring in gear, supplies, and materials in exchange for caps. Pay varies depending on what you bring in so.. sometimes it's not great work, but it's honest work."
-	selection_color = "#dcba97"
-
-	outfit = /datum/outfit/job/den/f13prospector
-
-	access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
-
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis,
-		),
-	)
-
-	loadout_options = list(
-	/datum/outfit/loadout/engineer,
-	/datum/outfit/loadout/miner,)
-
-/datum/outfit/job/den/f13prospector
-	name = "Prospector"
-	jobtype = /datum/job/oasis/f13prospector
-
-	id = /obj/item/card/id/dogtag/town
-	ears = /obj/item/radio/headset/headset_town/commerce
-	l_pocket = /obj/item/storage/bag/money/small/settler
-	r_pocket = /obj/item/flashlight/lantern
-	belt = null
-	shoes = /obj/item/clothing/shoes/jackboots
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/colt6520 = 1
-		)
-
-/datum/outfit/job/den/f13prospector/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-
-/datum/outfit/loadout/engineer
-	name = "Engineer"
-	suit = /obj/item/clothing/suit/apron/overalls
-	glasses = /obj/item/clothing/glasses/welding
-	uniform = /obj/item/clothing/under/misc/overalls
-	belt = /obj/item/storage/belt/utility/full
-	shoes = /obj/item/clothing/shoes/workboots
-	backpack_contents = list(
-		/obj/item/pickaxe/mini = 1,
-		/obj/item/shovel/spade = 1,
-		)
-
-/datum/outfit/loadout/miner
-	name = "Miner"
-	suit = /obj/item/clothing/suit/armor/light/leather/rig
-	uniform = /obj/item/clothing/under/f13/lumberjack
-	head = /obj/item/clothing/head/hardhat
-	belt = /obj/item/storage/belt/utility/mining
-	shoes = /obj/item/clothing/shoes/f13/miner
-	backpack_contents = list(
-		/obj/item/t_scanner/adv_mining_scanner = 1,
-		/obj/item/pickaxe/silver = 1,
-		/obj/item/shovel = 1,
-		)
 
 /*--------------------------------------------------------------*/
 //Researcher
 /*--------------------------------------------------------------*/
 //Needler - Labcoat
 
-/datum/job/oasis/f13denres
+/datum/job/eastwood/f13denres
 	title = "Researcher"
 	flag = F13DENRES
 	display_order = JOB_DISPLAY_ORDER_RESEARCHER
@@ -425,32 +343,28 @@ here's a tip, go search DEFINES/access.dm
 	description =  "Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 
-	outfit = /datum/outfit/job/den/f13denres
+	outfit = /datum/outfit/job/eastwood/f13denres
 	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
 	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
-/datum/outfit/job/den/f13denres
+/datum/outfit/job/eastwood/f13denres
 	name = "Researcher"
-	jobtype = /datum/job/oasis/f13denres
+	jobtype = /datum/job/eastwood/f13denres
+	id = /obj/item/card/id/denresearcher
 	chemwhiz = TRUE
 	ears = /obj/item/radio/headset/headset_town/commerce
-	uniform = /obj/item/clothing/under/f13/vault
+	uniform = /obj/item/clothing/under/f13/eastwood/vault
 	glasses = /obj/item/clothing/glasses/science
-	neck = /obj/item/clothing/neck/tie/black
 	suit = /obj/item/clothing/suit/toggle/labcoat/science
 	suit_store = /obj/item/gun/ballistic/revolver/needler
-	backpack = /obj/item/storage/backpack/science
-	satchel = /obj/item/storage/backpack/satchel/tox
-	shoes = /obj/item/clothing/shoes/sneakers/white
-	id = /obj/item/card/id/denresearcher
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
@@ -459,7 +373,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/ammo_box/stripper/needle = 1
 		)
 
-/datum/outfit/job/den/f13denres/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13denres/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -474,7 +388,7 @@ here's a tip, go search DEFINES/access.dm
 /*--------------------------------------------------------------*/
 //Regular Labcoat or Follower
 
-/datum/job/oasis/f13dendoc
+/datum/job/eastwood/f13dendoc
 	title = "Town Doctor"
 	flag = F13DENDOC
 	display_order = JOB_DISPLAY_ORDER_DENDOC
@@ -485,35 +399,33 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	loadout_options = list(
+	/datum/outfit/loadout/vaultdoc,
 	/datum/outfit/loadout/barber,
 	/datum/outfit/loadout/follower
 	)
 
-	outfit = /datum/outfit/job/den/f13dendoc
+	outfit = /datum/outfit/job/eastwood/f13dendoc
 	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
-/datum/outfit/job/den/f13dendoc
+/datum/outfit/job/eastwood/f13dendoc
 	name = "Town Doctor"
-	jobtype = /datum/job/oasis/f13dendoc
+	jobtype = /datum/job/eastwood/f13dendoc
+	id = /obj/item/card/id/dendoctor
 	chemwhiz = TRUE
 	ears = /obj/item/radio/headset/headset_town/commerce
-	uniform = /obj/item/clothing/under/f13/medic
 	glasses = /obj/item/clothing/glasses/hud/health
 	gloves = /obj/item/clothing/gloves/color/latex
 	neck = /obj/item/clothing/neck/stethoscope
-	backpack = /obj/item/storage/backpack/medic
-	satchel = /obj/item/storage/backpack/satchel/med
-	shoes = /obj/item/clothing/shoes/sneakers/white
-	id = /obj/item/card/id/dendoctor
+	belt = /obj/item/storage/belt/medical/primitive
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
@@ -524,7 +436,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/flashlight/pen = 1
 		)
 
-/datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -546,10 +458,15 @@ here's a tip, go search DEFINES/access.dm
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
+/datum/outfit/loadout/vaultdoc
+	name = "Vault Doctor"
+	suit = /obj/item/clothing/suit/toggle/labcoat/paramedic
+
 /datum/outfit/loadout/barber
 	name = "Barber Surgeon"
+	uniform = /obj/item/clothing/under/f13/eastwood/doctor
 	suit = /obj/item/clothing/suit/toggle/labcoat
-	belt = /obj/item/storage/belt/medical/primitive
+	shoes = /obj/item/clothing/shoes/f13/military/leather
 
 /datum/outfit/loadout/follower
 	name = "Follower"
@@ -558,11 +475,11 @@ here's a tip, go search DEFINES/access.dm
 	shoes 	=	/obj/item/clothing/shoes/f13/brownie
 
 /*--------------------------------------------------------------*/
-//Mechant
+//Merchant
 /*--------------------------------------------------------------*/
 //Gets nothing but can craft
 
-/datum/job/oasis/f13shopkeeper
+/datum/job/eastwood/f13shopkeeper
 	title = "Merchant"
 	flag = F13SHOPKEEPER
 	display_order = JOB_DISPLAY_ORDER_SHOPKEEPER
@@ -574,24 +491,25 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 	exp_requirements = 300
 
-	outfit = /datum/outfit/job/den/f13shopkeeper
+	outfit = /datum/outfit/job/eastwood/f13shopkeeper
 	access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
-/datum/outfit/job/den/f13shopkeeper
+/datum/outfit/job/eastwood/f13shopkeeper
 	name = "Merchant"
-	jobtype = /datum/job/oasis/f13shopkeeper
+	jobtype = /datum/job/eastwood/f13shopkeeper
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town/commerce
-	uniform = /obj/item/clothing/under/f13/roving
+	uniform = /obj/item/clothing/under/f13/eastwood/merchant
+	suit = /obj/item/clothing/suit/armor/light/duster/brahmin
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_pocket = /obj/item/storage/bag/money/small/den
 	shoes = /obj/item/clothing/shoes/f13/explorer
@@ -599,7 +517,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/storage/pill_bottle/chem_tin/radx =1,
 		/obj/item/storage/box/shopkeeper = 1)
 
-/datum/outfit/job/den/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13shopkeeper/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -624,17 +542,94 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
 
-/datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/eastwood/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+
+/*--------------------------------------------------------------*/
+//Prospector
+/*--------------------------------------------------------------*/
+//10mm Revolver - Leather armor / just overalls
+
+/datum/job/eastwood/f13prospector
+	title = "Prospector"
+	flag = F13PROSPECTOR
+	display_order = JOB_DISPLAY_ORDER_PROSPECTOR
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "The Mayor and Merchant"
+	description = "You are employeed by the local town merchant to bring in gear, supplies, and materials in exchange for caps. Pay varies depending on what you bring in so.. sometimes it's not great work, but it's honest work."
+	selection_color = "#dcba97"
+
+	outfit = /datum/outfit/job/eastwood/f13prospector
+
+	access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	minimal_access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/eastwood,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/eastwood,
+		),
+	)
+
+	loadout_options = list(
+	/datum/outfit/loadout/engineer,
+	/datum/outfit/loadout/miner)
+
+/datum/outfit/job/eastwood/f13prospector
+	name = "Prospector"
+	jobtype = /datum/job/eastwood/f13prospector
+	id = /obj/item/card/id/dogtag/town
+	
+	ears = /obj/item/radio/headset/headset_town/commerce
+	l_pocket = /obj/item/storage/bag/money/small/settler
+	r_pocket = /obj/item/flashlight/lantern
+	uniform = /obj/item/clothing/under/f13/eastwood/prospector
+	shoes = /obj/item/clothing/shoes/workboots
+	backpack_contents = list(/obj/item/gun/ballistic/revolver/colt6520 = 1)
+
+/datum/outfit/job/eastwood/f13prospector/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+
+/datum/outfit/loadout/engineer
+	name = "Engineer"
+	suit = /obj/item/clothing/suit/apron/overalls
+	glasses = /obj/item/clothing/glasses/welding
+	belt = /obj/item/storage/belt/utility/full
+	backpack_contents = list(
+		/obj/item/pickaxe/mini = 1,
+		/obj/item/shovel/spade = 1
+		)
+
+/datum/outfit/loadout/miner
+	name = "Miner"
+	suit = /obj/item/clothing/suit/armor/light/leather/rig
+	head = /obj/item/clothing/head/hardhat
+	belt = /obj/item/storage/belt/utility/mining
+	backpack_contents = list(
+		/obj/item/t_scanner/adv_mining_scanner = 1,
+		/obj/item/pickaxe/silver = 1,
+		/obj/item/shovel = 1
+		)
 
 /*--------------------------------------------------------------*/
 //Barkeeper
 /*--------------------------------------------------------------*/
 //Starts with Shotgun and some alcohol - Otherwise outfits
 
-/datum/job/oasis/f13barkeep
+/datum/job/eastwood/f13barkeep
 	title = "Barkeeper"
 	flag = F13BARKEEP
 	display_order = JOB_DISPLAY_ORDER_BARKEEP
@@ -645,34 +640,29 @@ here's a tip, go search DEFINES/access.dm
 	enforces = "Your saloon is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
 
-	outfit = /datum/outfit/job/den/f13barkeep
-
-	loadout_options = list(
-	/datum/outfit/loadout/rugged,
-	/datum/outfit/loadout/frontier,
-	/datum/outfit/loadout/richmantender,
-	/datum/outfit/loadout/diner)
+	outfit = /datum/outfit/job/eastwood/f13barkeep
 
 	access = list(ACCESS_BAR, ACCESS_KITCHEN)
 	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
 
-/datum/outfit/job/den/f13barkeep
+/datum/outfit/job/eastwood/f13barkeep
 	name = "Barkeeper"
-	jobtype = /datum/job/oasis/f13barkeep
+	jobtype = /datum/job/eastwood/f13barkeep
 	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_town/commerce
-	belt = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	shoes = /obj/item/clothing/shoes/workboots/mining
-	backpack = /obj/item/storage/backpack/satchel/leather
+	shoes = /obj/item/clothing/shoes/laceup
+	uniform = /obj/item/clothing/under/f13/eastwood/barkeeper
+	suit = /obj/item/clothing/suit/armor/light/duster/town/bartender
+	suit_store = /obj/item/gun/ballistic/revolver/caravan_shotgun
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/storage/bag/money/small/settler = 1,
@@ -682,47 +672,11 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/reagent_containers/food/drinks/bottle/rotgut = 1
 		)
 
-/datum/outfit/loadout/rugged
-	name = "Rugged"
-	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
-	uniform = /obj/item/clothing/under/f13/cowboyb
-	suit = /obj/item/clothing/suit/armor/outfit/vest/cowboy
-	gloves = /obj/item/clothing/gloves/color/brown
-	shoes = /obj/item/clothing/shoes/f13/brownie
-
-/datum/outfit/loadout/frontier
-	name = "Frontier"
-	head = /obj/item/clothing/head/helmet/f13/bowler
-	mask = /obj/item/clothing/mask/fakemoustache
-	uniform = /obj/item/clothing/under/f13/westender
-	suit = /obj/item/clothing/suit/armor/outfit/vest/bartender
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/f13/fancy
-
-/datum/outfit/loadout/richmantender
-	name = "Fancy"
-	head = /obj/item/clothing/head/fedora
-	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/rank/bartender
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	gloves = /obj/item/clothing/gloves/fingerless
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	neck = /obj/item/clothing/neck/tie/black
-
-/datum/outfit/loadout/diner
-	name = "Diner"
-	glasses = /obj/item/clothing/glasses/orange
-	uniform = /obj/item/clothing/under/f13/brahminf
-	neck = /obj/item/clothing/neck/apron/chef
-	gloves = /obj/item/clothing/gloves/color/white
-	shoes = /obj/item/clothing/shoes/f13/military/ncr
-
 /*--------------------------------------------------------------*/
 //Preacher
 /*--------------------------------------------------------------*/
-//Bread or Shishkebab
 
-/datum/job/oasis/f13preacher
+/datum/job/eastwood/f13preacher
 	title = "Preacher"
 	flag = F13PREACHER
 	display_order = JOB_DISPLAY_ORDER_PREACHER
@@ -731,11 +685,13 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "your faith"
 	description = "You are the last bastion of your faith in this forsaken Wasteland - whatever that faith may be. Spread your word and preach to the faithless in whatever manner you see fit, but remember that the divine cannot always protect you from harsh realities."
 
-	outfit = /datum/outfit/job/oasis/f13preacher
+	outfit = /datum/outfit/job/eastwood/f13preacher
 
 	loadout_options = list(
-	/datum/outfit/loadout/samaritan, 	//Water and food to share with the wastes.
-	/datum/outfit/loadout/cleanser		//Shishkebab
+	/datum/outfit/loadout/mormon, 			//FNV Mormons
+	/datum/outfit/loadout/hubologist,		//Post F2 Hubologists (or what is even left of them)
+	/datum/outfit/loadout/preacheratom		//F3/F4 Children of Atom
+	//datum/outfit/loadout/reaver			//FBoS: Tactics Reaver Movement
 	)
 
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
@@ -761,36 +717,46 @@ here's a tip, go search DEFINES/access.dm
 		),
 	)
 
-/datum/outfit/job/oasis/f13preacher
+/datum/outfit/job/eastwood/f13preacher
 	name = "Preacher"
-	jobtype = /datum/job/oasis/f13preacher
+	jobtype = /datum/job/eastwood/f13preacher
 
-	id = /obj/item/card/id/dogtag/town
-	belt = null
-	uniform = 		/obj/item/clothing/under/f13/chaplain
-	gloves =		/obj/item/clothing/gloves/fingerless
-	shoes = 		/obj/item/clothing/shoes/jackboots
+	id = 			/obj/item/card/id/dogtag/town
+	head =			/obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	neck =			/obj/item/clothing/neck/scarf/red
+	uniform = 		/obj/item/clothing/under/f13/eastwood/townie
+	shoes = 		/obj/item/clothing/shoes/f13/military/leather
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/food/drinks/flask=1,
+		/obj/item/reagent_containers/food/snacks/store/bread/plain = 5,
+		/obj/item/reagent_containers/food/snacks/fishmeat/salmon = 2,
+		/obj/item/reagent_containers/glass/beaker/waterbottle = 2,
 		/obj/item/storage/fancy/candle_box = 1,
 		/obj/item/storage/bag/money/small/settler = 1
 		)
 
 
-/datum/outfit/loadout/samaritan
-	name = "Samaritan"
+/datum/outfit/loadout/mormon
+	name = "Mormon"
 	backpack_contents = list(
-		/obj/item/reagent_containers/food/snacks/store/bread/plain = 5,
-		/obj/item/reagent_containers/food/snacks/fishmeat/salmon = 2,
-		/obj/item/reagent_containers/glass/beaker/waterbottle = 2
+	/obj/item/reagent_containers/food/snacks/store/bread/plain = 5	
 	)
 
-/datum/outfit/loadout/cleanser
-	name = "Cleanser"
-	backpack_contents = list(/obj/item/shishkebabpack = 1)
+/datum/outfit/loadout/hubologist
+	name = "Hubologist"
+	suit = /obj/item/clothing/suit/armor/light/duster/robe_hubologist
 
-/datum/job/wasteland/f13preacher/after_spawn(mob/living/H, mob/M)
+/datum/outfit/loadout/preacheratom
+	name = "Preacher of Atom"
+	r_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
+	uniform = /obj/item/clothing/under/f13/atomfaithful
+/*
+/datum/outfit/loadout/reaver
+	name = "Reaver Follower"
+	backpack_contents = list(
+	)
+*/
+/datum/job/eastwood/f13preacher/after_spawn(mob/living/H, mob/M)
 	. = ..()
 	if(H.mind)
 		H.mind.isholy = TRUE
@@ -889,109 +855,54 @@ here's a tip, go search DEFINES/access.dm
 //Citizen
 /*--------------------------------------------------------------*/
 
-/datum/job/oasis/f13settler
+/datum/job/eastwood/f13settler
 	title = "Citizen"
 	flag = F13SETTLER
 	display_order = JOB_DISPLAY_ORDER_SETTLER
-	total_positions = 10
+	total_positions = 8
 	spawn_positions = 8
 	supervisors = "Eastwood's laws"
 	description = "You are a citizen living in Eastwood. Treat your town and vault with respect and make sure to follow the laws in place, as your premium status may be revoked if you are considered a danger to the populace. One of the local businesses may have work if you require funds."
 	selection_color = "#dcba97"
 
-	outfit = /datum/outfit/job/den/f13settler
+	outfit = /datum/outfit/job/eastwood/f13settler
 
 	loadout_options = list(
-		/datum/outfit/loadout/provisioner,
-		/datum/outfit/loadout/groundskeeper,
-		/datum/outfit/loadout/artisan,
 		/datum/outfit/loadout/outdoorsman,
-		/datum/outfit/loadout/singer,
-		/datum/outfit/loadout/farmer,
+		/datum/outfit/loadout/vaultie,
+		/datum/outfit/loadout/farmer
 	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		),
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis
+			/datum/job/eastwood
 		)
 	)
 
 
-/datum/outfit/job/den/f13settler
+/datum/outfit/job/eastwood/f13settler
 	name = "Citizen"
-	jobtype = /datum/job/oasis/f13settler
-	belt = null
+	jobtype = /datum/job/eastwood/f13settler
 	id = /obj/item/card/id/dogtag/town
-	uniform = /obj/item/clothing/under/f13/settler
-	shoes = /obj/item/clothing/shoes/jackboots
+	uniform = /obj/item/clothing/under/f13/eastwood/townie
+	shoes = /obj/item/clothing/shoes/f13/military/leather
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
 		/obj/item/storage/bag/money/small/settler = 1
 		)
 
-/datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/eastwood/f13settler/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-
-/datum/outfit/loadout/provisioner
-	name = "Provisioner"
-	neck = /obj/item/clothing/neck/scarf/cptpatriot
-	suit = /obj/item/clothing/suit/jacket/miljacket
-	neck = /obj/item/clothing/ears/headphones
-	gloves = /obj/item/pda
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	uniform = /obj/item/clothing/under/f13/merca
-	gloves = /obj/item/clothing/gloves/f13/leather
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
-	/obj/item/gun/ballistic/revolver/colt6520 = 1,
-	/obj/item/storage/medical/ancientfirstaid = 1,
-	/obj/item/reagent_containers/food/drinks/flask/survival = 1
-	)
-
-/datum/outfit/loadout/groundskeeper
-	name = "Groundskeeper"
-	head = /obj/item/clothing/head/soft/grey
-	belt = /obj/item/storage/belt/utility/waster
-	suit = /obj/item/clothing/under/f13/mechanic
-	gloves = /obj/item/clothing/gloves/color/black
-	shoes = /obj/item/clothing/shoes/sneakers/noslip
-	neck = /obj/item/storage/belt/holster/ranger44
-	backpack_contents = list(/obj/item/storage/bag/trash = 1,
-	/obj/item/reagent_containers/spray/cleaner = 1,
-	/obj/item/mop = 1,
-	/obj/item/reagent_containers/glass/bucket/plastic = 1,
-	/obj/item/broom = 1,
-	/obj/item/stack/sheet/metal/fifty = 1,
-	/obj/item/lightreplacer = 1,
-	/obj/item/reagent_containers/spray/cleaner = 1
-	)
-
-/datum/outfit/loadout/artisan
-	name = "Artisan"
-	uniform = /obj/item/clothing/under/f13/cowboyg
-	belt = /obj/item/storage/belt/utility/mining
-	gloves = /obj/item/clothing/gloves/blacksmith_mittens
-	shoes = /obj/item/clothing/shoes/f13/military/leather
-	neck = /obj/item/storage/belt/holster/ranger357
-	backpack_contents = list(/obj/item/twohanded/sledgehammer/simple = 1,
-	/obj/item/book/granter/crafting_recipe/ODF = 1,
-	/obj/item/clothing/glasses/welding = 1,
-	/obj/item/melee/smith/hammer/premade = 1,
-	/obj/item/stack/sheet/mineral/titanium = 15,
-	/obj/item/pickaxe/mini = 1,
-	/obj/item/mining_scanner = 1
-	)
 
 /datum/outfit/loadout/outdoorsman
 	name = "Outdoorsman"
 	head = /obj/item/clothing/head/helmet/f13/marlowhat
 	suit = /obj/item/clothing/suit/armor/light/leather/tanvest
 	belt = /obj/item/melee/onehanded/knife/bowie
-	uniform = /obj/item/clothing/under/f13/cowboyt
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/f13/peltboots
 	backpack_contents = list(/obj/item/gun/ballistic/revolver/winchesterrebored = 1,
@@ -1002,27 +913,21 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/storage/fancy/rollingpapers/makeshift = 1
 	)
 
-/datum/outfit/loadout/singer
-	name = "Singer"
-	shoes = /obj/item/clothing/shoes/laceup
+/datum/outfit/loadout/vaultie //Think of this as old citizens
+	name = "Vaultie"
+	uniform = /obj/item/clothing/under/f13/eastwood/vault
+	gloves = /obj/item/pda
+	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/f13/leather
 	backpack_contents = list(
-	/obj/item/clothing/under/f13/classdress = 1,
-	/obj/item/clothing/under/suit/black_really = 1,
-	/obj/item/clothing/gloves/evening = 1,
-	/obj/item/clothing/gloves/color/white = 1,
-	/obj/item/melee/classic_baton/militarypolice = 1,
-	/obj/item/grenade/smokebomb = 2,
-	/obj/item/clothing/accessory/pocketprotector/full = 1,
-	/obj/item/choice_beacon/music = 1,
-	/obj/item/gun/energy/laser/complianceregulator = 1,
-	/obj/item/stock_parts/cell/ammo/ec = 1
+	/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 	)
 
 /datum/outfit/loadout/farmer
 	name = "Farmer"
 	backpack_contents = list(
 	/obj/item/clothing/head/helmet/f13/brahmincowboyhat = 1,
-	/obj/item/clothing/under/f13/rustic = 1,
+	/obj/item/clothing/under/f13/eastwood/townie/farmer = 1,
 	/obj/item/clothing/suit/armor/light/duster/brahmin = 1,
 	/obj/item/clothing/gloves/botanic_leather = 1,
 	/obj/item/twohanded/fireaxe= 1,
@@ -1035,7 +940,6 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/seeds/apple/gold = 1,
 	/obj/item/seeds/cannabis = 1
 	)
-
 
 /////////////////////
 // Oasis Mob Roles //
@@ -1154,9 +1058,9 @@ Roles should be limited and low since they should attempt to work within town ra
 	minimal_access = list(ACCESS_DEN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/rival = list(
-			/datum/job/oasis/f13mayor,
-			/datum/job/oasis/f13sheriff,
-			/datum/job/oasis/f13detective,
+			/datum/job/eastwood/f13mayor,
+			/datum/job/eastwood/f13sheriff,
+			/datum/job/eastwood/f13detective,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13wastelander,
