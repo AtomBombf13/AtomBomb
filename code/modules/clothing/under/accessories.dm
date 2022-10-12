@@ -481,7 +481,7 @@
 	item_color = "headscribe"
 	minimize_when_attached = TRUE
 
-/obj/item/clothing/accessory/bos/sentinel
+/obj/item/clothing/accessory/bos/headpaladin
 	name = "Head Paladin pins"
 	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on purple-cloth. Worn by the Head Paladin."
 	icon_state = "sentinel"
