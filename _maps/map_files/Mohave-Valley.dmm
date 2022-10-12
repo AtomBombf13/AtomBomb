@@ -29,9 +29,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ax" = (
 /turf/open/floor/plasteel/stairs{
 	dir = 1;
@@ -155,9 +153,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "bp" = (
 /obj/structure/railing{
 	color = "#5d6263"
@@ -249,9 +245,7 @@
 /area/f13/wasteland)
 "bW" = (
 /turf/closed/wall/f13/wood/house,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "bZ" = (
 /turf/closed/wall/f13/wood,
 /area/f13/wasteland)
@@ -295,9 +289,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "cI" = (
 /obj/effect/decal/marking{
 	icon_state = "dottedverticalcorroded"
@@ -392,9 +384,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "dv" = (
 /obj/structure/chair/sofa/left{
 	color = "#4b291a";
@@ -474,9 +464,7 @@
 	dir = 10
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ep" = (
 /obj/item/bighorn_sign,
 /turf/closed/wall/f13/wood/house,
@@ -668,9 +656,7 @@
 "fP" = (
 /obj/structure/closet/locker,
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "fQ" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -790,18 +776,14 @@
 	color = "#4f3b30"
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "gN" = (
 /obj/structure/curtain{
 	color = "#4f1a0f";
 	pixel_x = -32
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "gO" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -819,9 +801,7 @@
 "gV" = (
 /obj/structure/closet/locker,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "gW" = (
 /obj/structure/barricade/bars,
 /obj/structure/window/fulltile/house{
@@ -875,9 +855,7 @@
 	obj_integrity = 800
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "hE" = (
 /turf/open/indestructible/ground/outside/road{
 	dir = 4;
@@ -921,9 +899,7 @@
 	pixel_y = 24
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "hU" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -948,9 +924,7 @@
 	dir = 6
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ii" = (
 /obj/effect/turf_decal{
 	dir = 10
@@ -977,9 +951,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "io" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -1005,18 +977,14 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ix" = (
 /obj/effect/decal/fspline{
 	color = "#4f3b30";
 	dir = 1
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "iz" = (
 /obj/structure/chair/pew/right{
 	dir = 4
@@ -1033,9 +1001,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "iI" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -1051,9 +1017,7 @@
 	},
 /obj/structure/table/booth,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "iQ" = (
 /obj/structure/chair/sofa/corp{
 	dir = 1
@@ -1097,9 +1061,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "jo" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
@@ -1189,9 +1151,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "jO" = (
 /obj/structure/closet/cabinet{
 	anchored = 1
@@ -1210,9 +1170,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "jR" = (
 /obj/machinery/door/unpowered/secure_NCR{
 	name = "Dungeon"
@@ -1224,15 +1182,11 @@
 	dir = 8
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "jV" = (
 /obj/structure/simple_door/glass,
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "jX" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -1329,9 +1283,7 @@
 "kE" = (
 /obj/structure/table/booth,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "kF" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/wood_common/wood_common_light,
@@ -1360,9 +1312,7 @@
 	color = "#5b4c32"
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "kU" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -1554,9 +1504,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "mL" = (
 /obj/machinery/light/sign/chiken_ranch,
 /obj/structure/sign/poster/contraband/red_rum,
@@ -1653,9 +1601,7 @@
 "nx" = (
 /obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ny" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -1728,17 +1674,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "oh" = (
 /obj/structure/chair/bench{
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ok" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 10
@@ -1779,9 +1721,7 @@
 	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ox" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -1947,9 +1887,7 @@
 "pY" = (
 /obj/machinery/smartfridge/bottlerack,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "qb" = (
 /obj/item/flag/ncr{
 	density = 0
@@ -2011,9 +1949,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "qz" = (
 /obj/structure/table,
 /obj/item/clothing/neck/apron/chef,
@@ -2021,9 +1957,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrusty"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "qA" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright1"
@@ -2036,9 +1970,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "qD" = (
 /obj/effect/turf_decal/weather/dirt,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -2074,9 +2006,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "qS" = (
 /obj/structure/sign/poster/contraband/pinup_vixen,
 /turf/closed/wall/f13/wood/house,
@@ -2133,9 +2063,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "rC" = (
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/building)
@@ -2230,9 +2158,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "se" = (
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid{
 	icon_state = "whitedirtysolid"
@@ -2341,9 +2267,7 @@
 "sS" = (
 /obj/structure/chair/stool/retro/backed,
 /turf/open/floor/carpet/black,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "sT" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -2354,9 +2278,7 @@
 /area/f13/wasteland)
 "ta" = (
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "td" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -2409,9 +2331,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ty" = (
 /turf/open/floor/plasteel/f13/concrete/cable/box{
 	icon_state = "floorrusty"
@@ -2436,9 +2356,7 @@
 	dir = 6
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "tN" = (
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -2449,9 +2367,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "tY" = (
 /obj/structure/simple_door/interior,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess{
@@ -2522,9 +2438,7 @@
 	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "us" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid{
@@ -2575,9 +2489,7 @@
 "uG" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/black,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "uH" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -2596,9 +2508,7 @@
 	dir = 4;
 	color = "#5b4c32"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "uQ" = (
 /obj/machinery/light/sign/kebab_sign,
 /obj/structure/sign/poster/official/high_class_martini,
@@ -2700,9 +2610,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "wg" = (
 /obj/structure/closet/crate/freezer{
 	anchored = 1
@@ -2868,9 +2776,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "xo" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/ammo/civilian,
@@ -2913,9 +2819,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "xz" = (
 /turf/open/floor/plasteel/f13/vault_floor/white{
 	icon_state = "whitedirty"
@@ -2947,9 +2851,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "xK" = (
 /obj/structure/closet/fridge/meat,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -2957,9 +2859,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "xL" = (
 /obj/effect/decal/fspline{
 	color = "#4f3b30";
@@ -2974,9 +2874,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "xP" = (
 /obj/machinery/smartfridge/chemistry,
 /turf/closed/wall/f13/store,
@@ -3109,9 +3007,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "yZ" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticaltop"
@@ -3214,15 +3110,11 @@
 	color = "#5b4c32"
 	},
 /turf/open/transparent/openspace,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "zO" = (
 /obj/structure/chair/left,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "zP" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -3296,9 +3188,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "At" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertopleft"
@@ -3388,9 +3278,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Bd" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -3422,9 +3310,7 @@
 "BA" = (
 /obj/structure/window/fulltile/wood,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "BE" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -3440,9 +3326,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "BL" = (
 /obj/structure/table/glass,
 /obj/machinery/chem_master{
@@ -3455,9 +3339,7 @@
 /area/f13/ncr)
 "BS" = (
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "BU" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -3494,9 +3376,7 @@
 	dir = 5
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Cg" = (
 /obj/structure/obstacle/barbedwire{
 	dir = 4
@@ -3649,9 +3529,7 @@
 	dir = 2
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Dw" = (
 /obj/structure/sink/greyscale{
 	dir = 1;
@@ -3784,9 +3662,7 @@
 	dir = 9
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ET" = (
 /obj/structure/sign/poster/official/medical_green_cross,
 /turf/closed/wall/f13/wood,
@@ -3909,18 +3785,14 @@
 "FW" = (
 /obj/structure/chair/right,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "FZ" = (
 /obj/effect/decal/spline_corner{
 	color = "#4f5557";
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Gg" = (
 /turf/open/indestructible/ground/outside/road{
 	dir = 1;
@@ -4006,9 +3878,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Hf" = (
 /obj/structure/dresser,
 /turf/open/floor/f13/wood,
@@ -4101,9 +3971,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "HL" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -4129,9 +3997,7 @@
 "HN" = (
 /obj/structure/chair/wood,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "HP" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/condiment/flour,
@@ -4140,9 +4006,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "HQ" = (
 /obj/effect/decal/marking{
 	icon_state = "doublevertical"
@@ -4188,9 +4052,7 @@
 	color = "#5b4c32"
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Ig" = (
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull{
 	icon_state = "yellowcorner"
@@ -4218,9 +4080,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "IE" = (
 /turf/closed/wall/f13/tunnel,
 /area/f13/wasteland)
@@ -4230,9 +4090,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "IK" = (
 /obj/structure/window/fulltile/store,
 /obj/structure/barricade/bars{
@@ -4363,9 +4221,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Kf" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull{
@@ -4452,9 +4308,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "KX" = (
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
@@ -4530,9 +4384,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Lu" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -4561,9 +4413,7 @@
 	color = "#4f3b30"
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "LO" = (
 /obj/structure/table/glass,
 /obj/machinery/reagentgrinder,
@@ -4631,9 +4481,7 @@
 	dir = 2
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Mv" = (
 /obj/structure/rack,
 /obj/item/book/granter/trait/chemistry,
@@ -4695,9 +4543,7 @@
 "Nf" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Ng" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood_mosaic,
@@ -4719,9 +4565,7 @@
 	icon_state = "booth_north_west"
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Nr" = (
 /obj/structure/sign/poster/contraband/pinup_ride,
 /turf/closed/wall/f13/wood,
@@ -4794,9 +4638,7 @@
 "Oj" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Ok" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -4947,9 +4789,7 @@
 "PC" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "PF" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/grassybush,
@@ -5008,9 +4848,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/black,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Qi" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
@@ -5086,9 +4924,7 @@
 "QW" = (
 /obj/structure/chair/middle,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "QX" = (
 /obj/structure/barricade/bars{
 	max_integrity = 800;
@@ -5181,9 +5017,7 @@
 	dir = 8;
 	color = "#5b4c32"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "RS" = (
 /obj/structure/table,
 /obj/item/kitchen/knife,
@@ -5193,9 +5027,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "RX" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/sunnybush,
@@ -5222,9 +5054,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "So" = (
 /turf/open/indestructible/ground/outside/dirt/dark{
 	icon_state = "dirtcorner"
@@ -5240,9 +5070,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Sq" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -5376,9 +5204,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrusty"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Tl" = (
 /turf/open/floor/wood_wide,
 /area/f13/ncr)
@@ -5411,9 +5237,7 @@
 	},
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Ty" = (
 /obj/structure/closet/crate/bin/trashbin,
 /obj/effect/decal/fspline_end{
@@ -5421,9 +5245,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "TA" = (
 /obj/effect/decal/fspline{
 	color = "#4f3b30";
@@ -5434,9 +5256,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "TE" = (
 /obj/structure/chair/sofa/right{
 	dir = 4;
@@ -5462,9 +5282,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrusty"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "TW" = (
 /obj/effect/decal/spline{
 	color = "#ab776c"
@@ -5506,9 +5324,7 @@
 "Ue" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Uf" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -5592,9 +5408,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "UT" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 2
@@ -5603,14 +5417,10 @@
 /area/f13/wasteland)
 "Vd" = (
 /turf/closed/wall/f13/wood,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Ve" = (
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Vg" = (
 /obj/structure/table/optable,
 /obj/machinery/defibrillator_mount/loaded{
@@ -5638,9 +5448,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Vm" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -5661,9 +5469,7 @@
 	dir = 10
 	},
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Vu" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
@@ -5698,9 +5504,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "VG" = (
 /obj/effect/decal/spline_corner{
 	color = "#5b4c32";
@@ -5774,9 +5578,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Ws" = (
 /obj/structure/sign/poster/ncr/loaded,
 /turf/closed/wall/f13/wood,
@@ -5812,9 +5614,7 @@
 "Wy" = (
 /obj/structure/simple_door/interior,
 /turf/open/floor/wood_common,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "WD" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood_wide,
@@ -5827,9 +5627,7 @@
 "WO" = (
 /obj/effect/decal/fspline,
 /turf/closed/wall/f13/wood/house,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "WS" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -5878,9 +5676,7 @@
 "Xl" = (
 /obj/structure/chair/bench,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Xm" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/ammo/civilian,
@@ -5937,9 +5733,7 @@
 "Yb" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Yk" = (
 /turf/open/indestructible/ground/outside/dirt/dark,
 /area/f13/wasteland)
@@ -5968,9 +5762,7 @@
 /area/f13/wasteland)
 "YD" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "YG" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -6065,9 +5857,7 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Zk" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
@@ -6081,9 +5871,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "Zr" = (
 /obj/structure/stairs/west{
 	color = "#4c4339"
@@ -6112,9 +5900,7 @@
 "ZJ" = (
 /obj/structure/simple_door/interior,
 /turf/open/floor/wood_mosaic,
-/area/f13/building{
-	name = "Saloon"
-	})
+/area/f13/building)
 "ZQ" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
