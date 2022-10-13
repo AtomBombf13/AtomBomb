@@ -376,19 +376,19 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	anchored = TRUE
 
 // Decent makeshift anvil, can break, mobile. Gets the exclusive scrap version of the machete and 2h chopper, as well as the universal tool instead of a crowbar
-/obj/structure/anvil/obtainable/table
+/obj/structure/blacksmith/anvil/obtainable/table
 	name = "table anvil"
 	desc = "A reinforced table. Usable as an anvil, favored by mad wastelanders and the dregs of the wasteland. Can be loosened from its bolts and moved."
 	icon_state = "tablevil"
 	anvilquality = -2 //WE SHOULD NOT HAVE CHANGED THIS.
 	itemqualitymax = 4
 
-/obj/structure/anvil/obtainable/table/wrench_act(mob/living/user, obj/item/I)
+/obj/structure/blacksmith/anvil/obtainable/table/wrench_act(mob/living/user, obj/item/I)
 	..()
 	default_unfasten_wrench(user, I, 5)
 	return TRUE
 
-/obj/structure/anvil/obtainable/table/do_shaping(mob/user, qualitychange)
+/obj/structure/blacksmith/anvil/obtainable/table/do_shaping(mob/user, qualitychange)
 	if(prob(2))
 		to_chat(user, "The [src] breaks under the strain!")
 		take_damage(max_integrity)

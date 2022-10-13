@@ -248,7 +248,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/sheet/cloth = 6)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -258,7 +258,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -291,7 +291,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -310,7 +310,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/sheet/cloth = 1)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -320,7 +320,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -330,7 +330,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 30,
 				/obj/item/stack/sheet/cloth = 5)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -362,7 +362,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 5)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -374,7 +374,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 100
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/sheet/cloth = 5)
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 

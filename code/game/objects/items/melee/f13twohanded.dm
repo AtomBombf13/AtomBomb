@@ -5,7 +5,7 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
-	attack_speed = CLICK_CD_MELEE * 1.15 //9.2
+	attack_speed = MELEE_SPEED_SLOW
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	max_integrity = 200
@@ -40,9 +40,8 @@
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
 	force = 30
-	throwforce = 15
-	wound_bonus = 10
-	bare_wound_bonus = 10
+	throwforce = THROWING_POOR
+	wound_bonus = WOUNDING_BONUS_TINY
 	sharpness = SHARP_EDGED
 	resistance_flags = FIRE_PROOF
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
@@ -50,6 +49,7 @@
 	wielded_icon = "legionaxe2"
 	force_unwielded = 30
 	force_wielded = 60
+	attack_speed = MELEE_SPEED_SLOWER
 
 /obj/item/twohanded/legionaxe/ComponentInitialize()
 	. = ..()
@@ -82,18 +82,17 @@
 	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel. Excellent for smashing doors."
 	icon_state = "fireaxe"
 	icon_prefix = "fireaxe"
+	wielded_icon = "fireaxe2"
+	attack_speed = MELEE_SPEED_SLOWER
 	force = 28
-	throwforce = 15
-	wound_bonus = 10
-	bare_wound_bonus = 10
+	force_unwielded = 28
+	force_wielded = 55
+	wound_bonus = WOUNDING_BONUS_TINY
+	throwforce = THROWING_POOR
 	sharpness = SHARP_EDGED
 	resistance_flags = FIRE_PROOF
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	wielded_icon = "fireaxe2"
-	force_unwielded = 28
-	force_wielded = 55
-	attack_speed = CLICK_CD_MELEE * 1.25 //10
 
 /obj/item/twohanded/fireaxe/ComponentInitialize()
 	. = ..()
@@ -127,11 +126,12 @@
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters. Swings faster than other axes due to its light weight."
 	icon_state = "boneaxe"
 	icon_prefix = "boneaxe"
-	resistance_flags = null
 	wielded_icon = "boneaxe2"
+	attack_speed = MELEE_SPEED_SLOW
 	force_unwielded = 25
 	force_wielded = 40
-	attack_speed = CLICK_CD_MELEE * 1.1 //8.8
+	bare_wound_bonus = WOUNDING_BONUS_BIG
+	resistance_flags = null
 
 /obj/item/twohanded/fireaxe/boneaxe/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -156,10 +156,10 @@
 	desc = "It was too big to be called a sword. Massive, thick, heavy, and far too rough. Indeed, it was more like a heap of raw iron."
 	icon_prefix = "bumper"
 	icon_state = "bumper"
-	wound_bonus = null
-	sharpness = SHARP_NONE
-	resistance_flags = null
 	wielded_icon = "bumper2"
+	wound_bonus = WOUNDING_BONUS_MODEST
+	sharpness = SHARP_NONE
+	resistance_flags = FIRE_PROOF
 
 /obj/item/twohanded/fireaxe/bmprsword/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -186,21 +186,19 @@
 	desc = "A simple spear with a metal head and wooden shaft."
 	icon_state = "spear-metal"
 	icon_prefix = "spear-metal"
-	force = 13
-	throwforce = 30
+	wielded_icon = "spear-metal2"
+	force = WEAPON_FORCE_SPEAR
+	force_unwielded = WEAPON_FORCE_SPEAR
+	force_wielded = WEAPON_FORCE_SPEAR_WIELDED
+	throwforce = THROWING_GOOD
 	throw_speed = 4
 	embedding = list("embed_chance" = 0)
 	max_reach = 2
-	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb = list("attacked", "impaled", "jabbed", "torn", "gored")
 	sharpness = SHARP_POINTY
-	max_integrity = 200
-	armor = ARMOR_VALUE_GENERIC_ITEM
 	wound_bonus = -15
 	bare_wound_bonus = 15
-	wielded_icon = "spear-metal2"
-	force_unwielded = 13
-	force_wielded = 32
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "impaled", "jabbed", "torn", "gored")
 	var/obj/item/grenade/explosive = null
 	var/war_cry = "AAAAARGH!!!"
 
@@ -287,9 +285,9 @@
 	icon_state = "spear-lance"
 	icon_prefix = "spear-lance"
 	wielded_icon = "spear-lance2"
-	force = 25
-	force_unwielded = 25
-	force_wielded = 40
+	force = (WEAPON_FORCE_SPEAR+1)
+	force_unwielded = (WEAPON_FORCE_SPEAR+1)
+	force_wielded = (WEAPON_FORCE_SPEAR_WIELDED+4)
 
 // Scrap spear		Keywords: Damage 17/28, Reach, Throw bonus
 /obj/item/twohanded/spear/scrapspear
@@ -297,12 +295,13 @@
 	desc = "Made from two rods, a glass shard and some duct tape. For the modern tribal or the truly desperate. Surprisingly effective when thrown."
 	icon_state = "spear-scrap"
 	icon_prefix = "spear-scrap"
-	throwforce = 28
+	force = (WEAPON_FORCE_SPEAR-2)
+	force_unwielded = (WEAPON_FORCE_SPEAR-2)
+	force_wielded = (WEAPON_FORCE_SPEAR_WIELDED-3)
+	throwforce = THROWING_EFFECTIVE
 	embedding = list("pain_mult" = 2, "embed_chance" = 35, "fall_chance" = 20)
 	wielded_icon = "spear-scrap2"
-	force = 17
-	force_unwielded = 17
-	force_wielded = 28
+
 
 // Bone Spear		Keywords: TRIBAL, Damage 21/36, Armor-piercing +0.1, Reach
 /obj/item/twohanded/spear/bonespear
@@ -358,7 +357,6 @@
 	force = 20
 	force_unwielded = 25
 	force_wielded = 30
-	attack_speed = CLICK_CD_MELEE * 0.85 // 6.8
 	
 
 /////////////////
@@ -371,30 +369,29 @@
 	desc = "There ain't a skull in the league that can withstand a swatter."
 	icon_state = "baseball"
 	icon_prefix = "baseball"
-	force = 25
-	throwforce = 12
+	wielded_icon = "baseball2"
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
+	force_wielded = WEAPON_FORCE_CLUB_WIELDED
+	throwforce = THROWING_POOR
+	attack_speed = MELEE_SPEED_NORMAL //8. swing as fast as one-handed weapons, and do more damage, but with the inconvenience of worse storage.
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = SHARP_NONE
-	wielded_icon = "baseball2"
-	force_unwielded = 25
-	force_wielded = 38
-	attack_speed = CLICK_CD_MELEE //8. swing as fast as one-handed weapons, and do more damage, but with the inconvenience of worse storage.
 	
 
-// Spiked Baseball Bat		Keywords: Damage 26/40, Damage bonus Stamina, Sharp
+// Spiked Baseball Bat		Keywords: Damage 25/38, Damage bonus Stamina, Sharp
 /obj/item/twohanded/baseball/spiked
 	name = "spiked baseball bat"
 	desc = "There ain't a skull in the league that can withstand a swatter, especially with large nails drilled through the top of it."
 	icon_state = "baseballspike"
 	icon_prefix = "baseballspike"
-	force = 26
-	throwforce = 15
+	wielded_icon = "baseballspike2"
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
+	force_wielded = WEAPON_FORCE_CLUB_WIELDED
 	wound_bonus = 5
 	sharpness = SHARP_POINTY
-	wielded_icon = "baseballspike2"
-	force_unwielded = 26
-	force_wielded = 40
 
 /obj/item/twohanded/baseball/spiked/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -402,7 +399,7 @@
 		return
 	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
-// Louisville Slugger		Keywords: Damage 25/32, Damage bonus Stamina
+// Louisville Slugger		Keywords: Damage 25/38, Damage bonus Stamina
 /obj/item/twohanded/baseball/louisville
 	name = "Louisville slugger"
 	desc = "Purification in progress."
@@ -410,9 +407,9 @@
 	icon_prefix = "louisville"
 	attack_verb = list("thwacked", "bashed", "louisville slugged", "hit", "bludgeoned", "whacked", "bonked")
 	wielded_icon = "louisville2"
-	force = 25
-	force_unwielded = 25
-	force_wielded = 34
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
+	force_wielded = WEAPON_FORCE_CLUB_WIELDED
 
 /obj/item/twohanded/baseball/louisville/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -428,9 +425,9 @@
 	icon_prefix = "golfclub"
 	attack_verb = list("smashed", "bashed", "fored", "hit", "bludgeoned", "whacked")
 	wielded_icon = "golfclub2"
-	force = 22
-	force_unwielded = 22
-	force_wielded = 32
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
+	force_wielded = WEAPON_FORCE_CLUB_WIELDED
 
 /obj/item/twohanded/baseball/golfclub/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -448,12 +445,12 @@
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads and barricades. Swings incredibly slowly, but with deadly power."
-	attack_speed = CLICK_CD_MELEE * 1.8 //14.4
-	force = 25
-	throwforce = 20 // Huge hammers aren't that great for throwing
+	attack_speed = MELEE_SPEED_SLOWEST
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
+	throwforce = THROWING_POOR // Huge hammers aren't that great for throwing
 	sharpness = SHARP_NONE
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
-	force_unwielded = 25
 
 
 // Sledgehammer			Keywords: Damage 25/55, Blacksmithing
@@ -487,10 +484,11 @@
 	righthand_file = 'icons/fallout/onmob/weapons/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
+	attack_speed = MELEE_SPEED_SLOWEST
 	damtype = "fire"
 	force = 5
-	armour_penetration = 0.3
-	throwforce = 5
+	armour_penetration = PIERCING_MAJOR
+	throwforce = THROWING_PATHETIC
 	throw_speed = 2
 	throw_range = 3
 	attack_verb = list("burned", "welded", "cauterized", "melted", "charred")
@@ -551,6 +549,7 @@
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
 	icon_state = "hammer-super"
 	icon_prefix = "hammer-super"
+	attack_speed = MELEE_SPEED_SLOWER
 	force = 25
 	wielded_icon = "hammer-super2"
 	force_unwielded = 20
@@ -577,7 +576,10 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	and deliver a tremendously powerful impact, easily crushing concrete."
 	icon_state = "hammer-rocket"
 	icon_prefix = "hammer-rocket"
-	force = 20
+	wielded_icon = "hammer-rocket2"
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
+	force_wielded = 56
 	tool_behaviour = TOOL_MINING
 	toolspeed = 0.5
 	hitsound = "sound/f13effects/explosion_distant_2.ogg"
@@ -585,9 +587,6 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	var/digrange = 1
 	var/attacksound = "sound/f13effects/explosion_distant_2.ogg"
 	var/sound = "sound/f13effects/explosion_distant_2.ogg"
-	wielded_icon = "hammer-rocket2"
-	force_unwielded = 20
-	force_wielded = 56
 
 /obj/item/twohanded/sledgehammer/rockethammer/ComponentInitialize()
 	. = ..()
@@ -635,9 +634,9 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "A heavy hammer with a head that consists of leaking fusion cores. Might be unhealthy."
 	icon_state = "hammer-atom"
 	icon_prefix = "hammer-atom"
-	force = 25
 	wielded_icon = "hammer-atom2"
-	force_unwielded = 25
+	force = WEAPON_FORCE_CLUB
+	force_unwielded = WEAPON_FORCE_CLUB
 	force_wielded = 55
 
 /obj/item/twohanded/sledgehammer/atomsjudgement/attack(mob/living/M, mob/living/user)
@@ -660,7 +659,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	wielded_icon = "hammer-war2"
 	force_unwielded = 34
 	force_wielded = 55
-	attack_speed = CLICK_CD_MELEE
+	attack_speed = MELEE_SPEED_NORMAL
 
 
 // Shaman staff				Keywords: Damage 15/30, Big stamina damage buff
@@ -721,6 +720,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
 	icon_state = "chainsaw"
 	icon_prefix = "chainsaw"
+	attack_speed = MELEE_SPEED_NORMAL
 	force = 8
 	wound_bonus = 15
 	bare_wound_bonus = 15
@@ -848,7 +848,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	item_state = "autoaxe"
 	icon_prefix = "autoaxe"
 	force_on = 33
-	attack_speed = CLICK_CD_MELEE * 1.5
+	attack_speed = MELEE_SPEED_SLOWEST
 	armour_penetration = 0.3
 	on_icon_state = "autoaxe_on"
 	off_icon_state = "autoaxe"
@@ -865,7 +865,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		item_state = on_item_state
 		w_class = weight_class_on
 		force = force_on
-		attack_speed = CLICK_CD_MELEE * 0.5
+		attack_speed = MELEE_SPEED_FASTEST
 		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 		playsound(loc, on_sound, 50, TRUE)
 	else

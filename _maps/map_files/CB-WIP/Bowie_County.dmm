@@ -14701,7 +14701,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/anvil/obtainable/basic,
+/obj/structure/blacksmith/anvil/obtainable/basic,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "ZL" = (

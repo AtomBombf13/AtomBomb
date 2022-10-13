@@ -429,7 +429,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/cloth = 5)
 	category = CAT_TRIBAL
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	always_available = FALSE
 
 /datum/crafting_recipe/tribalwar/heavytribe
@@ -439,7 +439,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 20,
 				/obj/item/stack/sheet/cloth = 5)
 	category = CAT_TRIBAL
-	tools = list(TOOL_FORGE)
+	tools = list(TOOL_METAL_BENCH)
 	always_available = FALSE
 
 /datum/crafting_recipe/tribalwar/goliathcloak

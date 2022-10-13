@@ -64,7 +64,7 @@
 /obj/item/ingot/silver
 	custom_materials = list(/datum/material/silver=12000)
 
-/obj/item/ingot/titanium
+/obj/item/blacksmith/ingot/titanium
 	custom_materials = list(/datum/material/titanium=12000)
 
 // Adapted to suit FO so it can be used.

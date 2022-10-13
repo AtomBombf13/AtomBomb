@@ -1,7 +1,7 @@
 // In this document: Onehanded templates, Swords, Knives, Clubs, Glove weapons, Tool weapons
 
 /obj/item/melee //Melee weapon template
-	attack_speed = CLICK_CD_MELEE
+	attack_speed = MELEE_SPEED_NORMAL
 	max_integrity = 200
 	armor = ARMOR_VALUE_GENERIC_ITEM
 
@@ -54,7 +54,7 @@
 	desc = "A makeshift machete made of a lawn mower blade."
 	icon_state = "machete_imp"
 	item_state = "salvagedmachete"
-	force = 34
+	force = WEAPON_FORCE_SWORD
 	block_chance = 7
 	throwforce = 20
 	wound_bonus = 10
@@ -64,7 +64,6 @@
 	name = "machete"
 	desc = "A forged machete made of high quality steel."
 	icon_state = "machete"
-	force = 35
 	wound_bonus = 20
 	block_chance = 8
 
@@ -88,7 +87,6 @@
 	desc = "A heavy cutting blade, made for war and mass produced in Legion territory."
 	icon_state = "gladius"
 	item_state = "gladius"
-	force = 36
 	wound_bonus = 30
 	block_chance = 10
 
@@ -114,7 +112,7 @@
 	desc = "Made from materials found in the wastes, a skilled blacksmith has turned it into a thing of deadly beauty."
 	icon_state = "scrapsabre"
 	item_state = "scrapsabre"
-	force = 37
+	force = WEAPON_FORCE_SWORD
 	block_chance = 15
 
 /obj/item/throwing_star/spear
@@ -141,21 +139,19 @@
 	name = "knife template"
 	desc = "should not exist"
 	item_state = "knife"
-	flags_1 = CONDUCT_1
-	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 15
-	hitsound = 'sound/weapons/bladeslice.ogg'
-	armour_penetration = 0.05
+	force = WEAPON_FORCE_KNIFE
+	throwforce = THROWING_DECENT
+	armour_penetration = PIERCING_MINOR
+	attack_speed = MELEE_SPEED_FAST
+	bare_wound_bonus = 5
 	throw_speed = 3
 	throw_range = 6
-	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	sharpness = SHARP_POINTY
-	armor = ARMOR_VALUE_GENERIC_ITEM
-	var/bayonet = FALSE	//Can this be attached to a gun?
-	bare_wound_bonus = 5
 	custom_materials = list(/datum/material/iron=6000)
-	resistance_flags = FIRE_PROOF
-	attack_speed = CLICK_CD_MELEE * 0.85 //6.8
+	w_class = WEIGHT_CLASS_SMALL
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	var/bayonet = FALSE	//Can this be attached to a gun?
 
 /obj/item/melee/onehanded/knife/Initialize()
 	. = ..()
@@ -179,8 +175,7 @@
 	icon_state = "knife_hunting"
 	desc = "Dependable hunting knife."
 	embedding = list("pain_mult" = 4, "embed_chance" = 65, "fall_chance" = 10, "ignore_throwspeed_threshold" = TRUE)
-	force = 23
-	throwforce = 25
+	throwforce = THROWING_EFFECTIVE
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
 /obj/item/melee/onehanded/knife/survival
@@ -188,14 +183,12 @@
 	icon_state = "knife_survival"
 	desc = "Multi-purpose knife with blackened steel."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
-	force = 23
-	throwforce = 25
+	throwforce = THROWING_EFFECTIVE
 
 /obj/item/melee/onehanded/knife/bayonet
 	name = "bayonet knife"
 	icon_state = "knife_bayonet"
 	desc = "This weapon is made for stabbing, not much use for other things."
-	force = 23
 	bayonet = TRUE
 
 /obj/item/melee/onehanded/knife/bowie
@@ -203,8 +196,8 @@
 	icon_state = "knife_bowie"
 	item_state = "knife_bowie"
 	desc = "A large clip point fighting knife."
-	force = 28
-	throwforce = 25
+	force = WEAPON_FORCE_BIG_KNIFE
+	throwforce = THROWING_EFFECTIVE
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
 /obj/item/melee/onehanded/knife/trench
@@ -212,7 +205,8 @@
 	icon_state = "knife_trench"
 	item_state = "knife_trench"
 	desc = "This blade is designed for brutal close quarters combat."
-	force = 30
+	force = (WEAPON_FORCE_BIG_KNIFE+1)
+	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=8000)
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -224,8 +218,6 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharpened bone. The bare minimum in survival."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
-	force = 23
-	throwforce = 20
 	custom_materials = null
 
 /obj/item/melee/onehanded/knife/ritualdagger
@@ -233,7 +225,6 @@
 	desc = "An ancient blade used to carry out the spiritual rituals of the Wayfarer people."
 	icon_state = "knife_ritual"
 	item_state = "knife_ritual"
-	force = 25
 	armour_penetration = 0.1
 	custom_materials = null
 
@@ -242,12 +233,12 @@ obj/item/melee/onehanded/knife/switchblade
 	desc = "A sharp, concealable, spring-loaded knife."
 	icon_state = "knife_switch"
 	force = 3
-	throwforce = 5
+	throwforce = THROWING_PATHETIC
 	hitsound = 'sound/weapons/genhit.ogg'
 	attack_verb = list("stubbed", "poked")
 	var/extended = 0
-	var/extended_force = 21
-	var/extended_throwforce = 23
+	var/extended_force = WEAPON_FORCE_KNIFE
+	var/extended_throwforce = THROWING_DECENT
 	var/extended_icon_state = "knife_switch_ext"
 	var/retracted_icon_state = "knife_switch"
 
@@ -284,9 +275,9 @@ obj/item/melee/onehanded/knife/switchblade
 	desc = "A high-quality kitchen knife made from Saturnite alloy, this one is covered in oxidation. Perhaps Abraxo might clean it up?"
 	icon_state = "knife_cosmic_dirty"
 	item_state = "knife"
-	force = 15
-	throwforce = 10
-	armour_penetration = 0.2
+	force = WEAPON_FORCE_KNIFE
+	throwforce = THROWING_POOR
+	armour_penetration = PIERCING_MINOR
 
 // Abraxo my beloved. Can now be used directly to clean the blade.
 /obj/item/melee/onehanded/knife/cosmicdirty/attackby(obj/item/C, mob/user, params)
@@ -308,9 +299,9 @@ obj/item/melee/onehanded/knife/switchblade
 	desc = "A high-quality kitchen knife made from Saturnite alloy, can be heated with a welder for easier cutting of frozen butter."
 	icon_state = "knife_cosmic"
 	item_state = "knife"
-	force = 25
-	throwforce = 15
-	armour_penetration = 0.2
+	force = WEAPON_FORCE_BIG_KNIFE
+	throwforce = THROWING_DECENT
+	armour_penetration = PIERCING_MODERATE
 
 // Heat it with a welder
 /obj/item/melee/onehanded/knife/cosmic/welder_act(mob/living/user, obj/item/I)
@@ -329,21 +320,21 @@ obj/item/melee/onehanded/knife/switchblade
 	icon_state = "knife_cosmic_heated"
 	item_state = "knife"
 	damtype = BURN
-	force = 35
-	throwforce = 20
-	armour_penetration = 0.4
+	force = (WEAPON_FORCE_BIG_KNIFE+2)
+	armour_penetration = PIERCING_MAJOR
+	throwforce = THROWING_EFFECTIVE
 	w_class = WEIGHT_CLASS_NORMAL // Its super hot, not comfy to put back in your pocket.
 
 /obj/item/melee/onehanded/knife/throwing
 	name = "throwing knife"
 	desc = "a finely balanced knife made from a lightweight alloy, designed for being thrown. You can easily embed these in someone, and you look darn cool while doing so."
 	icon_state = "knife_throw"
-	force = 20
-	throwforce = 30
-	armour_penetration = 0.25
-	bare_wound_bonus = 15 //keep your arteries covered
+	force = WEAPON_FORCE_KNIFE
+	armour_penetration = PIERCING_MODERATE
+	throwforce = THROWING_GOOD
 	throw_speed = 5
 	throw_range = 7
+	bare_wound_bonus = 15 //keep your arteries covered
 	embedding = list("pain_mult" = 4, "embed_chance" = 70, "fall_chance" = 5)
 
 ///////////
@@ -357,8 +348,8 @@ obj/item/melee/onehanded/knife/switchblade
 	icon_state = "pipe"
 	item_state = "pipe"
 	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
-	force = 26
-	throwforce = 10
+	force = WEAPON_FORCE_CLUB
+	throwforce = THROWING_POOR
 	throw_speed = 3
 	throw_range = 3
 	sharpness = SHARP_NONE
@@ -377,8 +368,8 @@ obj/item/melee/onehanded/knife/switchblade
 	icon_state = "warclub"
 	item_state = "warclub"
 	attack_verb = list("mashed", "bashed", "hit", "bludgeoned", "whacked")
-	force = 30
-	throwforce = 25
+	force = (WEAPON_FORCE_CLUB+1)
+	throwforce = THROWING_EFFECTIVE
 	block_chance = 5
 
 /obj/item/melee/onehanded/club/warclub/attack(mob/living/M, mob/living/user)
@@ -393,7 +384,7 @@ obj/item/melee/onehanded/knife/switchblade
 	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon_state = "tire"
 	item_state = "tire"
-	force = 30
+	force = WEAPON_FORCE_CLUB
 	custom_materials = list(/datum/material/iron = 4000)
 
 // NCR Flag			Keywords: NCR, Damage 26, Stamina damage, Block
@@ -404,7 +395,7 @@ obj/item/melee/onehanded/knife/switchblade
 	item_state = "flag-ncr"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = null
-	force = 26
+	force = WEAPON_FORCE_CLUB
 	block_chance = 30
 	attack_verb = list("smacked", "thwacked", "democratized", "freedomed")
 
@@ -657,13 +648,13 @@ obj/item/melee/onehanded/knife/switchblade
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
-	attack_speed = CLICK_CD_MELEE * 0.9
+	attack_speed = MELEE_SPEED_FAST
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_SMALL
 	flags_1 = CONDUCT_1
 	sharpness = SHARP_NONE
 	armour_penetration = 0.05
-	throwforce = 10
+	throwforce = THROWING_PATHETIC
 	throw_range = 5
 	attack_verb = list("punched", "jabbed", "whacked")
 	var/can_adjust_unarmed = TRUE
@@ -772,7 +763,7 @@ obj/item/melee/onehanded/knife/switchblade
 	item_state = "lacerator"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 29
-	bare_wound_bonus = 5
+	bare_wound_bonus = WOUNDING_BONUS_TINY
 	armour_penetration = 0 //my brother in christ it is razor blades on tape
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
@@ -795,7 +786,7 @@ obj/item/melee/onehanded/knife/switchblade
 	icon_state = "punch_dagger"
 	item_state = "punch_dagger"
 	force = 29
-	armour_penetration = 0.12
+	armour_penetration = PIERCING_MINOR
 	sharpness = SHARP_POINTY
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -910,25 +901,3 @@ CODE FOR BLEEDING STACK
 	else
 		B.add_stacks(bleed_stacks_per_hit)
 */
-
-
-// BETA // Obsolete
-
-/obj/item/melee/onehanded/machete/knifetesting
-	name = "testing knife"
-	icon_state = "knife_bowie"
-	item_state = "knife_bowie"
-	force = 18
-	throwforce = 15
-
-/obj/item/melee/onehanded/machete/clubtesting
-	name = "1hgeneric"
-	icon_state = "tire"
-	item_state = "tire"
-	force = 20
-
-/obj/item/melee/onehanded/machete/swordtesting
-	name = "topmelee"
-	icon_state = "machete_imp"
-	item_state = "salvagedmachete"
-	force = 30

@@ -1089,7 +1089,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/weldingtool = 1,
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/book/granter/trait/explosives_advanced = 1,
-		/obj/item/clothing/gloves/legion/forgemaster = 1
+		/obj/item/clothing/gloves/blacksmith_mittens = 1
 		)
 
 /datum/outfit/loadout/headmedicus
@@ -1249,7 +1249,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/loadout/slaveopifex
 	name = "Artisan"
 	neck = /obj/item/clothing/neck/apron/labor/forge
-	gloves = /obj/item/clothing/gloves/legion/forgemaster
+	gloves = /obj/item/clothing/gloves/blacksmith_mittens
 	belt = /obj/item/storage/belt/fannypack
 	glasses = /obj/item/clothing/glasses/welding
 	shoes = /obj/item/clothing/shoes/f13/military/plated
