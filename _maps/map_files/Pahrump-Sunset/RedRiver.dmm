@@ -21644,7 +21644,9 @@
 	},
 /area/f13/wasteland)
 "pUU" = (
-/turf/closed/indestructible/f13/matrix/transition,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/indestructible/f13/matrix,
 /area/f13/caves)
 "pUW" = (
 /obj/structure/decoration/hatch{
@@ -27343,10 +27345,12 @@
 	},
 /area/f13/wasteland)
 "ufQ" = (
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 1;
-	icon_state = "outerbordercorner"
+/obj/effect/decal/marking{
+	icon_state = "doublevertical"
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/indestructible/f13/matrix,
 /area/f13/caves)
 "ugj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -49238,9 +49242,9 @@ lHJ
 pVV
 oMa
 oMa
-iff
-cxL
-pUU
+gMW
+gMW
+rYb
 "}
 (66,1,1) = {"
 rYb
@@ -49495,9 +49499,9 @@ pVV
 lHJ
 oMa
 oMa
-iff
-cxL
-pUU
+gMW
+gMW
+rYb
 "}
 (67,1,1) = {"
 rYb
@@ -49752,9 +49756,9 @@ pVV
 pVV
 qaR
 oMa
-aFQ
-cxL
-pUU
+gMW
+gMW
+rYb
 "}
 (68,1,1) = {"
 rYb
@@ -50009,9 +50013,9 @@ oMa
 pVV
 qqL
 pVV
-iff
-cxL
-pUU
+gMW
+gMW
+rYb
 "}
 (69,1,1) = {"
 rYb
@@ -50266,9 +50270,9 @@ oMa
 lHJ
 qHL
 ezc
-iff
-cxL
-pUU
+gMW
+gMW
+rYb
 "}
 (70,1,1) = {"
 rYb
@@ -50523,9 +50527,9 @@ vNf
 vNf
 vtG
 oMa
-aFQ
-cxL
-pUU
+gMW
+gMW
+rYb
 "}
 (71,1,1) = {"
 rYb
@@ -50780,9 +50784,9 @@ pnb
 pnb
 rMX
 pnb
-wpn
-ufQ
-pUU
+gMW
+gMW
+rYb
 "}
 (72,1,1) = {"
 rYb
@@ -91387,8 +91391,8 @@ pVV
 lHJ
 lHJ
 nNT
-nNT
 pUU
+rYb
 "}
 (230,1,1) = {"
 rYb
@@ -91644,8 +91648,8 @@ lHJ
 oMa
 oMa
 vWU
-vWU
-pUU
+ptw
+rYb
 "}
 (231,1,1) = {"
 rYb
@@ -91901,8 +91905,8 @@ pVV
 pVV
 oMa
 aFQ
-aFQ
-pUU
+ucR
+rYb
 "}
 (232,1,1) = {"
 rYb
@@ -92158,8 +92162,8 @@ oMa
 oMa
 oMa
 vWU
-vWU
-pUU
+ptw
+rYb
 "}
 (233,1,1) = {"
 rYb
@@ -92415,8 +92419,8 @@ uEl
 bax
 lgk
 ink
-ink
-pUU
+ufQ
+rYb
 "}
 (234,1,1) = {"
 rYb
@@ -92672,8 +92676,8 @@ oMa
 ezc
 pVV
 vWU
-vWU
-pUU
+ptw
+rYb
 "}
 (235,1,1) = {"
 rYb
@@ -92929,8 +92933,8 @@ ezc
 pVV
 oMa
 qbd
-qbd
 pUU
+rYb
 "}
 (236,1,1) = {"
 rYb
@@ -93186,8 +93190,8 @@ oMa
 pVV
 oMa
 aFQ
-aFQ
-pUU
+ucR
+rYb
 "}
 (237,1,1) = {"
 rYb
@@ -93443,8 +93447,8 @@ oMa
 lHJ
 oMa
 vWU
-vWU
-pUU
+ptw
+rYb
 "}
 (238,1,1) = {"
 rYb
@@ -93700,8 +93704,8 @@ rMX
 rMX
 pnb
 jIx
-jIx
-pUU
+ptw
+rYb
 "}
 (239,1,1) = {"
 rYb
@@ -93957,8 +93961,8 @@ kgF
 kVq
 kgF
 kad
-kad
-pUU
+ucR
+rYb
 "}
 (240,1,1) = {"
 rYb

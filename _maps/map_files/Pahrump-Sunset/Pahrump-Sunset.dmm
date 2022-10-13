@@ -14106,12 +14106,6 @@
 	icon_state = "outerpavementcorner"
 	},
 /area/f13/wasteland)
-"aZN" = (
-/obj/effect/decal/waste{
-	icon_state = "goo12"
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
 "aZR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_box/shotgun/bean,
@@ -20578,10 +20572,6 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
-"cnl" = (
-/obj/structure/debris/v1,
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland)
 "cnm" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Gatehouse";
@@ -20612,11 +20602,6 @@
 "cnq" = (
 /turf/open/floor/plasteel/stairs/right,
 /area/f13/wasteland)
-"cns" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/grass/coyote/one,
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "cnu" = (
 /obj/structure/flora/grass/wasteland{
 	pixel_x = 9;
@@ -26047,10 +26032,6 @@
 	icon_state = "innerpavement"
 	},
 /area/f13/wasteland)
-"eJy" = (
-/obj/structure/anvil/obtainable/legion,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/legion)
 "eJO" = (
 /obj/structure/flora/grass/coyote/eight,
 /obj/structure/flora/grass/wasteland{
@@ -39597,11 +39578,6 @@
 /obj/effect/spawner/lootdrop/clothing_low,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"lcS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/debris/v1,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "lcV" = (
 /obj/structure/flora/grass/coyote/eight,
 /obj/effect/spawner/lootdrop/trash,
@@ -47662,7 +47638,6 @@
 /area/f13/city)
 "oPz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/grass/coyote/one,
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland)
 "oPA" = (
@@ -56024,15 +55999,6 @@
 /obj/structure/flora/rock/pile/largejungle,
 /turf/open/water,
 /area/f13/caves)
-"sXu" = (
-/obj/effect/decal/waste{
-	icon_state = "goo12"
-	},
-/turf/open/indestructible/ground/outside/road{
-	dir = 8;
-	icon_state = "horizontaltopborderbottom2left"
-	},
-/area/f13/wasteland)
 "sXv" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain0"
@@ -61329,13 +61295,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"vxy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/grass/coyote/one,
-/obj/structure/debris/v2,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "vxz" = (
 /obj/structure/flora/timber,
 /turf/open/floor/grass,
@@ -62837,13 +62796,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
-"wkY" = (
-/obj/structure/car/rubbish2,
-/obj/structure/nest/gecko,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/wasteland)
 "wle" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/kirbyplants/random,
@@ -89036,7 +88988,7 @@ lWu
 etg
 kjR
 aOk
-cle
+aOk
 nBl
 aOk
 aOk
@@ -90890,7 +90842,7 @@ aQZ
 rFj
 iEL
 wMi
-gtr
+hEG
 anR
 biV
 moN
@@ -91604,7 +91556,7 @@ kpC
 blj
 bZf
 eBH
-aZN
+xLC
 aAk
 xLC
 xLC
@@ -91866,7 +91818,7 @@ xLC
 xLC
 xLC
 xix
-aZN
+xLC
 nHC
 aiO
 eMW
@@ -92764,7 +92716,7 @@ aOk
 aOk
 aOk
 aOk
-cnl
+tPB
 aaa
 aJN
 aaa
@@ -93019,10 +92971,10 @@ kAf
 cFK
 iYj
 cFK
-qyV
-lcS
 cFK
-cns
+cFK
+cFK
+tCT
 aJN
 aaa
 "}
@@ -93276,10 +93228,10 @@ aOk
 mkA
 vvB
 cFK
-iYj
+bZY
 cFK
-vxy
-cns
+bZY
+tCT
 aJN
 aaa
 "}
@@ -102114,7 +102066,7 @@ meh
 azh
 azh
 koC
-sXu
+bZT
 wLX
 igF
 aVX
@@ -106318,7 +106270,7 @@ cKe
 mgn
 bFF
 mHp
-lSJ
+nvn
 nvn
 nvn
 oPh
@@ -114547,7 +114499,7 @@ nvn
 nvn
 oPh
 nvn
-wkY
+ukz
 nvn
 nvn
 hEG
@@ -125099,7 +125051,7 @@ aae
 aaa
 vdJ
 aqx
-eJy
+wXT
 wXT
 mxw
 qAK
