@@ -103,6 +103,14 @@
 	item_state = "ncr_fatigue_pants"
 	item_color = "ncr_fatigue_pants"
 
+/obj/item/clothing/under/f13/ncr/ncr_shorts
+	name = "NCR fatigue shorts"
+	desc = "A set of uniform shorts and lightweight shirt for NCR troopers deployed in hot climates."
+	can_adjust = TRUE
+	icon_state = "ncr_shorts"
+	item_state = "ncr_shorts"
+	item_color = "ncr_shorts"
+
 /obj/item/clothing/under/f13/ncrcaravan
 	name = "NCR caravaneer outfit"
 	desc = "A soft outfit commonly worn by NCR caravaneers."
@@ -174,7 +182,7 @@
 /obj/item/clothing/under/f13/eastwood
 	icon = 'icons/fallout/clothing/uniforms.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	
+
 /obj/item/clothing/under/f13/eastwood/vault
 	name = "vault 41 jumpsuit"
 	desc = "The regulation clothing worn by the vault dwellers, of Vault-Tec vaults. It's made of sturdy leather. This one is little bit roughened up from time spent out in the sun."
