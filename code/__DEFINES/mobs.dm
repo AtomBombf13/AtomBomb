@@ -159,15 +159,25 @@
 #define SANITY_INSANE 0
 
 //Nutrition levels for humans
-#define NUTRITION_LEVEL_FAT 600
-#define NUTRITION_LEVEL_FULL 550
-#define NUTRITION_LEVEL_WELL_FED 450
-#define NUTRITION_LEVEL_FED 350
-#define NUTRITION_LEVEL_HUNGRY 250
-#define NUTRITION_LEVEL_STARVING 150
+#define NUTRITION_LEVEL_FAT 1000 //Because this stuff is annoying as hell
+#define NUTRITION_LEVEL_FULL 800 //You know how it is
+#define NUTRITION_LEVEL_WELL_FED 600
+#define NUTRITION_LEVEL_FED 450
+#define NUTRITION_LEVEL_HUNGRY 350
+#define NUTRITION_LEVEL_STARVING 200
 
 #define NUTRITION_LEVEL_START_MIN 250
 #define NUTRITION_LEVEL_START_MAX 400
+
+//Thirst levels for humans
+#define THIRST_LEVEL_FULL 700
+#define THIRST_LEVEL_LIGHT 500
+#define THIRST_LEVEL_MIDDLE 300
+#define THIRST_LEVEL_HARD 100
+#define THIRST_LEVEL_DEADLY 10
+
+#define THIRST_LEVEL_START_MIN 145
+#define THIRST_LEVEL_START_MAX 285
 
 //Disgust levels for humans
 #define DISGUST_LEVEL_MAXEDOUT 150
@@ -291,6 +301,7 @@
 #define POCKET_STRIP_DELAY			40	//time taken (in deciseconds) to search somebody's pockets
 #define DOOR_CRUSH_DAMAGE	15	//the amount of damage that airlocks deal when they crush you
 
+#define THIRST_FACTOR		0.2	//factor at which mob thrist decreases
 #define	HUNGER_FACTOR		0.1	//factor at which mob nutrition decreases
 #define	ETHEREAL_CHARGE_FACTOR	0.08 //factor at which ethereal's charge decreases
 #define	REAGENTS_METABOLISM 0.4	//How many units of reagent are consumed per tick, by default.

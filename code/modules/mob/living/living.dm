@@ -577,6 +577,7 @@
 		updatehealth() //then we check if the mob should wake up.
 		update_sight()
 		clear_alert("not_enough_oxy")
+		water = THIRST_LEVEL_MIDDLE + 100
 		reload_fullscreen()
 		. = 1
 		if(mind)
@@ -616,6 +617,7 @@
 	ExtinguishMob()
 	fire_stacks = 0
 	confused = 0
+	water = THIRST_LEVEL_MIDDLE + 100
 	update_mobility()
 	update_movespeed()
 	//Heal all organs

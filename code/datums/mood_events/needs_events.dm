@@ -1,27 +1,48 @@
 //nutrition
-/datum/mood_event/fat
+/datum/mood_event/nutrition/fat
 	description = "<span class='warning'><B>I feel like I'm gonna burst...</B></span>\n"
 	mood_change = -4
 
-/datum/mood_event/fat/voracious
+/datum/mood_event/nutrition/fat/voracious
 	description = span_nicegreen("Nothing like a good, hearty meal out here in the wastes!")
 	mood_change = 4
 
-/datum/mood_event/wellfed
+/datum/mood_event/nutrition/wellfed
 	description = span_nicegreen("I'm stuffed!")
 	mood_change = 6
 
-/datum/mood_event/fed
+/datum/mood_event/nutrition/fed
 	description = span_nicegreen("I have recently had some food.")
 	mood_change = 3
 
-/datum/mood_event/hungry
+/datum/mood_event/nutrition/hungry
 	description = span_warning("I'm getting a bit hungry.")
 	mood_change = -2
 
-/datum/mood_event/starving
+/datum/mood_event/nutrition/starving
 	description = span_boldwarning("I'm starving!")
 	mood_change = -4
+
+//water
+/datum/mood_event/nutrition/slaked
+	description = "<span class='nicegreen'>I'm topped up!</span>\n"
+	mood_change = 4
+
+/datum/mood_event/nutrition/thirsty
+	description = "<span class='warning'>I'm slightly thirsty.</span>\n"
+	mood_change = 6
+
+/datum/mood_event/nutrition/thirsty2
+	description = "<span class='warning'>I'm very thirsty!</span>\n"
+	mood_change = -4
+
+/datum/mood_event/nutrition/thirsty3
+	description = "<span class='boldwarning'>I'm going to die of thirst!</span>\n"
+	mood_change = -6
+
+/datum/mood_event/nutrition/thirsty4
+	description = "<span class='boldwarning'>This is how I die...</span>\n"
+	mood_change = -12
 
 //charge
 /datum/mood_event/supercharged

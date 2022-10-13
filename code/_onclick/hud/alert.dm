@@ -171,6 +171,28 @@
 	icon_state = "too_much_tox"
 
 //End gas alerts
+/////////
+// Food/Water
+/////////
+/obj/screen/alert/thirst1
+	name = "Thirst"
+	desc = "Your mouth is slightly dry."
+	icon_state = "water1"//temp
+
+/obj/screen/alert/thirst2
+	name = "Thirst"
+	desc = "You're starting to feel the effects of slight fatigue. Find something to drink."
+	icon_state = "water2"//temp
+
+/obj/screen/alert/thirst3
+	name = "Thirst"
+	desc = "You're starting to feel the effects of extreme fatigue. Find something to drink."
+	icon_state = "water3"//temp
+
+/obj/screen/alert/thirst4
+	name = "Thirst"
+	desc = "Drink something, or you're soon going to waste away."
+	icon_state = "water4"//temp
 
 
 /obj/screen/alert/fat
@@ -178,16 +200,27 @@
 	desc = "You ate too much food, now your satiated gut is slowing you down."
 	icon_state = "fat"
 
-/obj/screen/alert/hungry
-	name = "Hungry"
-	desc = "Some food would be good right about now."
-	icon_state = "hungry"
+/obj/screen/alert/hunger1
+	name = "Hunger"
+	desc = "You are full but could probably shove something more in you."
+	icon_state = "starv1"
 
-/obj/screen/alert/starving
-	name = "Starving"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
-	icon_state = "starving"
+/obj/screen/alert/hunger2
+	name = "Hunger"
+	desc = "You're more than peckish. Get something to snack on."
+	icon_state = "starv2"
 
+/obj/screen/alert/hunger3
+	name = "Hunger"
+	desc = "You feel as if your stomach is in freefall. Find something to eat."
+	icon_state = "starv3"
+
+/obj/screen/alert/hunger4
+	name = "Hunger"
+	desc = "Your body is slowly starting to waste away. Find food. Soon."
+	icon_state = "starv4"
+
+//
 /obj/screen/alert/gross
 	name = "Grossed out."
 	desc = "That was kind of gross..."
