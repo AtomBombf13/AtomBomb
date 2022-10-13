@@ -104,6 +104,21 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/tribal)
 
+/datum/quirk/spanishspeak
+	name = "Spanish Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking the common language of the mexican cartels in the south."
+	value = 1
+	gain_text = span_notice("You remember the old ways of the mexican cartels..")
+	lose_text = span_notice("You've forgotten the ways of the mexican cartels..")
+
+/datum/quirk/spanishspeak/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/spanish)
+
+/datum/quirk/spanishspeak/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/spanish)
 
 /datum/quirk/apathetic
 	name = "Apathetic"
@@ -503,64 +518,128 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 
 
 /datum/quirk/whitelegstraditions
-	name = "White Legs traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
+	name = "White Legs traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
 	value = 2
 	mob_trait = TRAIT_WHITELEGS_TRAD
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/whitelegstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/whiteleg)
+
+/datum/quirk/whitelegstraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/whiteleg)
+
+
 /datum/quirk/deadhorsestraditions
-	name = "Dead Horses traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
+	name = "Dead Horses traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
 	value = 2
 	mob_trait = TRAIT_DEADHORSES_TRAD
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
-/datum/quirk/rustwalkerstraditions
-	name = "Rust Walkers traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
-	value = 2
-	mob_trait = TRAIT_RUSTWALKERS_TRAD
-	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
-	lose_text = span_danger("You forget how your ancestors have created their garments.")
-	locked =  FALSE
+/datum/quirk/deadhorsestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/deadhorses)
 
-/datum/quirk/eightiestraditions
-	name = "Eighties traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
-	value = 2
-	mob_trait = TRAIT_EIGHTIES_TRAD
-	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
-	lose_text = span_danger("You forget how your ancestors have created their garments.")
-	locked =  FALSE
+/datum/quirk/deadhorsestraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/deadhorses)
 
 /datum/quirk/sorrowstraditions
-	name = "Sorrows traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
+	name = "Sorrows traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
 	value = 2
 	mob_trait = TRAIT_SORROWS_TRAD
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/sorrowstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/sorrows)
+
+/datum/quirk/sorrowstraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/sorrows)
+
+/datum/quirk/rustwalkerstraditions
+	name = "Rust Walkers traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
+	value = 2
+	mob_trait = TRAIT_RUSTWALKERS_TRAD
+	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
+	lose_text = span_danger("You forget how your ancestors have created their garments.")
+	locked =  FALSE
+
+/datum/quirk/rustwalkerstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/german)
+
+/datum/quirk/rustwalkerstraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/german)
+
+/datum/quirk/eightiestraditions
+	name = "Eighties traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
+	value = 2
+	mob_trait = TRAIT_EIGHTIES_TRAD
+	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
+	lose_text = span_danger("You forget how your ancestors have created their garments.")
+	locked =  FALSE
+
+/datum/quirk/eightiestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+
+/datum/quirk/eightiestraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/tribal)
+
 /datum/quirk/wayfarertraditions
-	name = "Wayfarer traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
+	name = "Wayfarer traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
 	value = 2
 	mob_trait = TRAIT_WAYFARER_TRAD
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/wayfarertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+
+/datum/quirk/wayfarertraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/tribal)
+
 /datum/quirk/bonedancertraditions
-	name = "Bone Dancer traditions"
-	desc = "You remember how to make your peoples ancient garments after all this time."
+	name = "Bone Dancer traditions and language comprehension"
+	desc = "You remember how to make your peoples ancient garments after all this time and language."
 	value = 2
 	mob_trait = TRAIT_BONEDANCER_TRAD
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/bonedancertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+
+/datum/quirk/bonedancertraditions/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/tribal)
