@@ -108,9 +108,9 @@
 			qualname = "normal"
 		if(12 to INFINITY)
 			qualname = "legendary"
-		if(10 to 12)
+		if(11 to 12)
 			qualname = "masterwork"
-		if(8 to 9)
+		if(8 to 10)
 			qualname = "excellent"
 		if(5 to 8)
 			qualname = "good"
@@ -452,6 +452,13 @@
 	..()
 
 
+// ------------ ARMOR PIECES ------------ //  - Obviously meant to be included in recipes to build metal armor instead of generic metal parts, at least for the less "scrap metal salvage" styled metal armors. Make it inherit material would be amusing.
+/obj/item/smithing/armor_piece
+	name = "metal armor parts"
+	desc = "Metal worked to be used in making some sort of simple armor."
+	icon_state = "armor_piece_smith"
+
+
 //////////////////////////////////////////////////
 //												//
 //  			ONEHANDED WEAPONS				//
@@ -483,7 +490,7 @@
 /obj/item/smithing/bowieblade/startfinish()
 	finalitem = new /obj/item/melee/smith/dagger/bowie(src)
 	finalitem.force += QUALITY_MODIFIER
-	finalitem.armour_penetration += QUALITY_MODIFIER*0.02
+	finalitem.armour_penetration += QUALITY_MODIFIER*0.01
 	..()
 
 
@@ -552,6 +559,7 @@
 	finalitem = new /obj/item/melee/smith/wakizashi/scrapsaw(src)
 	finalitem.force += QUALITY_MODIFIER
 	..()
+
 
 // ------------ MACE ------------ //
 /obj/item/smithing/macehead
@@ -809,12 +817,3 @@
 #undef GLOW_BRIGHT
 #undef GLOW_MODERATE
 #undef GLOW_WEAK
-
-
-// ------------------------------- TG Remnants ------------------------------
-
-/obj/item/blacksmith/ingot/plasma
-	custom_materials = list(/datum/material/plasma=12000)//yeah ok
-
-/obj/item/blacksmith/ingot/diamond
-	custom_materials = list(/datum/material/diamond=12000) //yeah ok

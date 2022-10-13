@@ -25,6 +25,8 @@ Sort of. It works, but the following was planned, before time and heart ran out.
 - X and Y offsets dynamic so the long items (spears etc) can have the workpiece centered then moved to the finished position once dofinish is done
 - Replacing forge mittens with tongs (having both useful would be optimal)
 
+If you plan on adding or changing stuff ADD changelog to the end of this readme. Adjust damage by changing the define values first, not by messing with the formulas, for obbvious reasons.
+
 ## Whats new? 
 So much its hard to list
 Item quality much less impactful (this just means low quality items arent completely useless)

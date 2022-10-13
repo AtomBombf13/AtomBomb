@@ -14,6 +14,7 @@
 
 #define RECIPE_RING "sss" //shrink shrink shrink
 #define RECIPE_BALLANDCHAIN "pbu" //punch bend upset
+#define RECIPE_ARMOR_PIECE "pup" //punch upset punch
 
 #define RECIPE_BOWIE "dfs" //draw fold shrink
 #define RECIPE_DAGGER "dds" //draw draw shrink
@@ -40,6 +41,7 @@
 #define RECIPE_THROWING "sdd" //shrink draw draw
 #define RECIPE_BOLA "suu" //shrink upset upset
 
+
 // LEGION SPECIFIC
 #define RECIPE_GLADIUS "fbf" //fold bend fold
 #define RECIPE_LANCE "dbdf" //draw bend fold fold LEGION
@@ -56,6 +58,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	RECIPE_UNITOOL = /obj/item/smithing/unitool,
 	RECIPE_RING = /obj/item/smithing/special/jewelry/ring,
 	RECIPE_BALLANDCHAIN = /obj/item/smithing/ballandchain,
+	RECIPE_ARMOR_PIECE = /obj/item/smithing/armor_piece,
 	RECIPE_DAGGER = /obj/item/smithing/daggerblade,
    	RECIPE_BOWIE = /obj/item/smithing/bowieblade,
 	RECIPE_MACHETE = /obj/item/smithing/macheteblade,
@@ -211,48 +214,48 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			user.visible_message("<span class='notice'>[user] carefully hammers out imperfections in the metal.</span>", \
 						"<span class='notice'>You carefully hammer out imperfections in the metal.</span>")
 		if("strong hit")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_strong.ogg',80)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_strong.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] hammers out imperfections in the metal.</span>", \
 						"<span class='notice'>You hammer out imperfections in the metal.</span>")
 		if("heavy hit")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_heavy.ogg',90)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_heavy.ogg',100)
 			do_smithing_sparks(2, TRUE, src)
 			user.visible_message("<span class='notice'>[user] forcefully hammers out imperfections in the metal.</span>", \
 						"<span class='notice'>You forcefuly hammer out imperfections in the metal.</span>")
 		if("fold")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_double1.ogg',90)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_double1.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] folds the metal.</span>", \
 						"<span class='notice'>You fold the metal.</span>")
 		if("draw")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_double2.ogg',90)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_double2.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] hammers both sides of the metal, drawing it out.</span>", \
 						"<span class='notice'>You hammer both sides of the metal, drawing it out.</span>")
 		if("shrink")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_rapid.ogg',110)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_rapid.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] flattens the metal, shrinking it.</span>", \
 						"<span class='notice'>You flatten the metal, shrinking it.</span>")
 		if("bend")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_single1.ogg',80)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_single1.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] bends the metal, using the rounded end of the anvil.</span>", \
 						"<span class='notice'>You bend the metal, using the rounded end of the anvil.</span>")
 		if("punch")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_single2.ogg',90)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_single2.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] uses the puncher to make holes in the metal.</span>", \
 						"<span class='notice'>You use the puncher to make holes in the metal.</span>")
 		if("upset")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_double3.ogg',90)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_double3.ogg',100)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] upsets the metal by hammering the thick end.</span>", \
 						"<span class='notice'>You upset the metal by hammering the thick end.</span>")
 
-	if(user.mind.skill_holder) // Skill modifier to make it faster at blacksmithing.
-		var/skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/10 + 1
+	if(user.mind.skill_holder) // Skill modifier to make it faster at blacksmithing. Limited to avoid going too far out of step with sounds.
+		var/skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/15 + 1
 		steptime = 50 / skillmod
 
 

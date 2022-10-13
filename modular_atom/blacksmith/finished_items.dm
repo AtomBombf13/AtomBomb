@@ -48,7 +48,7 @@
 	throwforce = THROWING_POOR
 	sharpness = SHARP_EDGED
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	wielded_mult = 1.4
+	wielded_mult = 1.5
 	w_class = WEIGHT_CLASS_BULKY
 	wielded = FALSE
 	total_mass = (TOTAL_MASS_MEDIEVAL_WEAPON * 1.5)
@@ -303,7 +303,7 @@
 	overlay_state = "hilt_dagger"
 	attack_speed = MELEE_SPEED_FAST
 	force = FORCE_SMITH_LOW
-	armour_penetration = 0.05
+	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_EFFECTIVE
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
@@ -528,7 +528,7 @@
 	armour_penetration = PIERCING_MODERATE
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_BIG
-	wielded_mult = 1.2
+	wielded_mult = 1.25
 	item_flags = ITEM_CAN_PARRY
 	block_chance = 15
 	block_parry_data = /datum/block_parry_data/smithkatana
@@ -682,7 +682,6 @@
 	icon_prefix = "spear_smith"
 	overlay_state = "shaft_spear"
 	force = FORCE_SMITH_REACH
-	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_GOOD
 	wielded_mult = 1.3
 	max_reach = 2
