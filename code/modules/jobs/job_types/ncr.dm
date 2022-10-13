@@ -432,7 +432,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_two = 1,
 		/obj/item/clothing/accessory/waistcoat = 1,
 		/obj/item/clothing/suit/toggle/lawyer/black = 1,
-		/obj/item/storage/briefcase = 1
+		/obj/item/storage/briefcase = 1,
+		/obj/item/clothing/accessory/lawyers_badge = 1
 		)
 
 /datum/outfit/loadout/repambassador
