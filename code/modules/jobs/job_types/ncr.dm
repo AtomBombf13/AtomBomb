@@ -425,6 +425,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/repagent
 	name = "Government Agent"
+	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/under/rank/security/detective/grey
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
