@@ -2,6 +2,7 @@
 	name = "Spanish"
 	desc = "A language native to many peoples from south of the US border. Plenty of its speakers can be found around New California, the South West and even the Legion's territories."
 	key = "s"
+	icon_state = "mexico"
 	syllables = list("acenituna", "chivo", "cerdo", "feliz", "estufa", "espalda", "deficiente", "domingo", "jugador", "azúcar", \
 					"atún", "martillo", "madre", "sí", "quién", "estás", "hora es", "día", "gracias", "que", "extraño", \
 					"aegresco", "gente", "bella", "acuerdo", "perdido", "mi", "me gusta", "favorito es", "trabajo", "cuánto", "cuesta", "equivocado", \

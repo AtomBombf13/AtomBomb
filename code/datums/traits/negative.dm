@@ -83,6 +83,8 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 			heirloom_type = /obj/item/camera/spooky/family
 		if("Captain")
 			heirloom_type = /obj/item/clothing/accessory/medal/gold/captain/family
+		if("Far-Lands Tribals")
+			heirloom_type = pick(/obj/item/clothing/accessory/talisman,/obj/item/clothing/accessory/skullcodpiece/fake)
 	if(!heirloom_type)
 		heirloom_type = pick(
 		/obj/item/toy/cards/deck,
@@ -451,3 +453,18 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/severe/monophobia, TRAUMA_RESILIENCE_ABSOLUTE)
+
+/datum/quirk/foreigner
+	name = "Foreigner"
+	desc = "You're not from around here. You don't know English!"
+	value = -3
+	gain_text = "<span class='notice'>The words being spoken around you don't make any sense."
+	lose_text = "<span class='notice'>You've developed fluency in English."
+
+/datum/quirk/foreigner/add()
+	var/mob/living/carbon/human/human_holder = quirk_holder
+	human_holder.add_blocked_language(/datum/language/common)
+
+/datum/quirk/foreigner/remove()
+	var/mob/living/carbon/human/human_holder = quirk_holder
+	human_holder.remove_blocked_language(/datum/language/common)
