@@ -136,7 +136,7 @@
 	var/on_item_state = "ripper_on"
 	var/off_item_state = "ripper"
 	var/weight_class_on = WEIGHT_CLASS_HUGE
-	var/force_on = 45
+	var/force_on = WEAPON_FORCE_BRUTAL
 	var/force_off = 10
 	var/on = FALSE
 	var/on_icon_state = "ripper_on"
@@ -177,8 +177,8 @@
 	off_icon_state = "prewarrip_off"
 	on_item_state = "prewarrip_on"
 	off_item_state = "prewarrip_off"
-	force_on = 50
-	armour_penetration = 0.15
+	force_on = WEAPON_FORCE_BRUTAL
+	armour_penetration = PIERCING_MINOR
 
 
 // Shishkebab backpack				The shishkebab weapon base unit
@@ -283,14 +283,13 @@
 	item_state = "shishkebab"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	force =  WEAPON_FORCE_MASSIVE
+	damtype = "fire"
 	w_class = WEIGHT_CLASS_BULKY
 	item_flags = ABSTRACT  // don't put in storage
 	slot_flags = 0
-	force = 55
-	damtype = "fire"
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.3
-
 	var/obj/item/shishkebabpack/tank
 
 /obj/item/weapon/melee/shishkebab/Initialize()
