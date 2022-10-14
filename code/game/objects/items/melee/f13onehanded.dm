@@ -1,4 +1,5 @@
 // In this document: Onehanded templates, Swords, Knives, Clubs, Glove weapons, Tool weapons
+// Maybe in the future instead of copy pasting weapons you think are too weak and repainting it and slapping on +30% damage, try adjusting the defines so whole categories arent obsoleted by the latest snowflake crap.
 
 /obj/item/melee //Melee weapon template
 	attack_speed = MELEE_SPEED_NORMAL
@@ -178,7 +179,7 @@
 	icon_state = "knife_trench"
 	item_state = "knife_trench"
 	desc = "This blade is designed for brutal close quarters combat."
-	force = (WEAPON_FORCE_BIG_KNIFE+1)
+	force = WEAPON_FORCE_BIG_KNIFE+1
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=8000)
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
@@ -233,7 +234,7 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 ////////////////////
 //  Cosmic Knife  //	----------------------------------------
 //////////////////// now you do the cleaning & heating manually.
-/obj/item/melee/onehanded/knife/cosmicdirty		//	[ Damage KNIFE, Minor AP, Fast attack ] --------------------------------
+/obj/item/melee/onehanded/knife/cosmicdirty		//	[ Damage KNIFE, Minor AP, Fast attack ] ----------------
 	name = "dirty cosmic knife"
 	desc = "A high-quality kitchen knife made from Saturnite alloy, this one is covered in oxidation. Perhaps Abraxo might clean it up?"
 	icon_state = "knife_cosmic_dirty"
@@ -241,7 +242,6 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 	force = WEAPON_FORCE_KNIFE
 	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_POOR
-
 
 // Abraxo my beloved. Can now be used directly to clean the blade.
 /obj/item/melee/onehanded/knife/cosmicdirty/attackby(obj/item/C, mob/user, params)
@@ -258,7 +258,7 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 		return
 	return ..()
 
-/obj/item/melee/onehanded/knife/cosmic			//	[ Damage BIG KNIFE, Moderate AP, Fast attack ] --------------------------
+/obj/item/melee/onehanded/knife/cosmic			//	[ Damage BIG KNIFE, Moderate AP, Fast attack ] -----------
 	name = "cosmic knife"
 	desc = "A high-quality kitchen knife made from Saturnite alloy, can be heated with a welder for easier cutting of frozen butter."
 	icon_state = "knife_cosmic"
@@ -278,13 +278,13 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 		return
 	return ..()
 
-/obj/item/melee/onehanded/knife/cosmicheated	//	[ Damage BIG KNIFE + 2, Major AP, Fast attack ] -------------------------
+/obj/item/melee/onehanded/knife/cosmicheated	//	[ Damage BIG KNIFE + 2, Major AP, Fast attack ] -----------
 	name = "superheated cosmic knife"
 	desc = "A high-quality kitchen knife made from Saturnite alloy, this one looks like it has been heated to high temperatures."
 	icon_state = "knife_cosmic_heated"
 	item_state = "knife"
 	damtype = BURN
-	force = (WEAPON_FORCE_BIG_KNIFE+2)
+	force = WEAPON_FORCE_BIG_KNIFE+2
 	armour_penetration = PIERCING_MAJOR
 	throwforce = THROWING_EFFECTIVE
 	w_class = WEIGHT_CLASS_NORMAL // Its super hot, not comfy to put back in your pocket.
@@ -298,21 +298,21 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 //								//
 //////////////////////////////////
 
-/obj/item/throwing_star/spear					//	[ Throw Damage SUPREME, Minor AP, Embed] --------------------
+/obj/item/throwing_star/spear					//	[ Throw Damage SUPREME, Minor AP, Embed] ------------------
 	name = "throwing spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	icon_state = "throw_spear"
 	item_state = "tribalspear"
-	force = WEAPON_FORCE_BIG_TOO
+	force = WEAPON_FORCE_BIG_TOOL
 	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_SUPREME //clears threshholds for trash mobs
 	max_reach = 2
 	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 15)
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/melee/onehanded/knife/throwing		//	[ Throw Damage GOOD, Moderate AP, Fast attack, Embed ] -------
+/obj/item/melee/onehanded/knife/throwing		//	[ Throw Damage GOOD, Moderate AP, Fast attack, Embed ] -----
 	name = "throwing knife"
 	desc = "a finely balanced knife made from a lightweight alloy, designed for being thrown. You can easily embed these in someone, and you look darn cool while doing so."
 	icon_state = "knife_throw"
@@ -356,7 +356,7 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 	desc = "A simple carved wooden club with turquoise inlays."
 	icon_state = "warclub"
 	item_state = "warclub"
-	force = (WEAPON_FORCE_CLUB+1)
+	force = WEAPON_FORCE_CLUB+1
 	throwforce = THROWING_EFFECTIVE
 	block_chance = 5
 	attack_verb = list("mashed", "bashed", "hit", "bludgeoned", "whacked")

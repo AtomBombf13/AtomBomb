@@ -10,7 +10,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	max_integrity = 200
 	armor = ARMOR_VALUE_GENERIC_ITEM
-	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 1,5
+	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 1.5
 	throw_range = THROWRANGE_BAD
 	var/icon_prefix = null
 
@@ -204,7 +204,7 @@
 	embedding = list("embed_chance" = 0)
 	max_reach = 2
 	wound_bonus = -15
-	bare_wound_bonus = WOUNDING_BONUS_MODES
+	bare_wound_bonus = WOUNDING_BONUS_MODEST
 	sharpness = SHARP_POINTY
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "impaled", "jabbed", "torn", "gored")
@@ -294,9 +294,9 @@
 	icon_state = "spear-lance"
 	icon_prefix = "spear-lance"
 	wielded_icon = "spear-lance2"
-	force = (WEAPON_FORCE_SPEAR+1)
-	force_unwielded = (WEAPON_FORCE_SPEAR+1)
-	force_wielded = (WEAPON_FORCE_SPEAR_WIELDED+4)
+	force = WEAPON_FORCE_SPEAR+1
+	force_unwielded = WEAPON_FORCE_SPEAR+1
+	force_wielded = WEAPON_FORCE_SPEAR_WIELDED+4
 
 
 // Scrap spear					[ Damage SPEAR WIELDED - 3, Reach, Better throwing ] ------
@@ -306,9 +306,9 @@
 	icon_state = "spear-scrap"
 	icon_prefix = "spear-scrap"
 	wielded_icon = "spear-scrap2"
-	force = (WEAPON_FORCE_SPEAR-2)
-	force_unwielded = (WEAPON_FORCE_SPEAR-2)
-	force_wielded = (WEAPON_FORCE_SPEAR_WIELDED-3)
+	force = WEAPON_FORCE_SPEAR-2
+	force_unwielded = WEAPON_FORCE_SPEAR-2
+	force_wielded = WEAPON_FORCE_SPEAR_WIELDED-3
 	throwforce = THROWING_EFFECTIVE
 	embedding = list("pain_mult" = 2, "embed_chance" = 35, "fall_chance" = 20)
 
@@ -341,7 +341,7 @@
 	wielded_icon = "spear-claw2"
 	force = WEAPON_FORCE_SPEAR
 	force_unwielded = WEAPON_FORCE_SPEAR
-	force_wielded = (WEAPON_FORCE_SPEAR_WIELDED+12)
+	force_wielded = WEAPON_FORCE_SPEAR_WIELDED+12
 	armour_penetration = PIERCING_MINOR
 	sharpness = SHARP_EDGED
 
@@ -375,7 +375,6 @@
 //		HEAVY CLUBS		//		[ Bonus damage STAMINA ]
 //						//
 //////////////////////////	
-
 
 // Baseball Bat				[ Damage CLUB WIELDED, Bonus damage STAMINA ] ---------------
 /obj/item/twohanded/baseball
@@ -420,6 +419,7 @@
 		return
 	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
+
 // Louisville Slugger		[ Damage CLUB WIELDED, Bonus damage STAMINA ] ---------------
 /obj/item/twohanded/baseball/louisville
 	name = "Louisville slugger"
@@ -437,6 +437,7 @@
 	if(!istype(M))
 		return
 	M.apply_damage(25, STAMINA, null, 0)
+
 
 // Golf Club				[ Damage CLUB WIELDED, Bonus damage STAMINA ] ----------------
 /obj/item/twohanded/baseball/golfclub
@@ -618,6 +619,7 @@
 		playsound(loc, hitsound, 70, TRUE)
 	else if(istype(A, /turf/closed))
 		playsound(loc, hitsound, 70, TRUE)
+
 
 // Proton axe						[ Damage SPEAR, Reach, huge AP ]  -------------------------------------
 /obj/item/melee/transforming/energy/axe/protonaxe
@@ -873,6 +875,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		user.visible_message(span_suicide("[user] smashes [src] into [user.p_their()] neck, destroying [user.p_their()] esophagus! It looks like [user.p_theyre()] trying to commit suicide!"))
 		playsound(src, 'sound/weapons/genhit1.ogg', 100, 1)
 	return(BRUTELOSS)
+
 
 //autoaxe		Keywords: Damage 10/33, 2x attackspeed, Wound Bonus, structure bonus damage, 0.3 AP
 /obj/item/twohanded/steelsaw/autoaxe
