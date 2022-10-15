@@ -593,6 +593,26 @@
 							"NCR Ranger"
 						)
 
+/datum/gear/uniform/ncr_shorts
+	name = "NCR fatigue shorts"
+	path = /obj/item/clothing/under/f13/ncr/ncr_shorts
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Veteran Ranger",
+							"NCR Lieutenant",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+							"NCR Rear Echelon",
+							"NCR Off-Duty",
+							"NCR Ranger"
+						)
+
 /datum/gear/uniform/ncr_officer_dress
 	name = "NCR officer dress"
 	path = /obj/item/clothing/under/f13/ncr_female_officer
