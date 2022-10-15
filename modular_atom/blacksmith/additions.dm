@@ -10,7 +10,7 @@
 
 #define QUALITY_MODIFIER quality
 
-#define FORCE_SMITH_REACH 18
+#define FORCE_SMITH_REACH 17
 #define FORCE_SMITH_LOW 21
 #define FORCE_SMITH_HIGH 28
 
@@ -140,7 +140,7 @@
 				<li>Furnace: Needs fuel, welding fuel most commonly. Five measures of fuel burns fast but is enough to heat a couple ingots if you are fast.</li>
 				<li>Wooden bits: Cut down planks to rods with something sharp. Then cut leather to strips and wrap it around the rod for making a sword handle, or directly on the workpiece for some tools. </li>
 				<li>Metal bits: On occasion you might need some chain to complete your work, if so, take a metal sheet in your hand and make a length of chain from it. (inhand crafting) </li>
-				<li>Anvil: Various traditions in blacksmithing use various anvils. This means following the same recipes on another anvil might produce something unexpected. Bull stamped anvils are used by the Legion, wasters often use reinforced tables, and various settlers use sandstone or metal anvils. (crafting menu forging & blacksmithing)</li>
+				<li>Anvil: A solid anvil makes things easier. (crafting menu forging & blacksmithing)</li>
 				<li>Quenching trough: Basically a big tub of water, or oil. (crafting menu forging & blacksmithing) </li>
 				<li>Hammer: Most commonly a sledgehammer is used for the first work, which is making a better hammer. Craft one to get going. (crafting menu forging & blacksmithing) </li>
 				</ol>
@@ -175,6 +175,7 @@
 
 				<li>Rings: (SSS) Tiny things, my fingers hurt when I try to work it, but if you youngsters want to make one just shrink the metal to shape. Might cheer you up.</li>
 				<li>Ball and chain: (PBU) Punch the metal, bend and upset it. Add a chain and then snap it on the slaves leg, and laugh while they hobble about. Silly slave.</li>
+				<li>Armor piece: (PUP) Punch the metal, upset and punch some more holes. Use the metal together with leather to make armoured gauntlets and such.</li>
 
 				<li>Bowie knife: (DFS) Draw fold and shrink it, add a sword handle and THIS is a knife. </li>
 				<li>Dagger: (DDS) Draw draw and shrink it, add a sword handle and you got a tiny little weapon. </li>
@@ -216,3 +217,11 @@
 				</body>
 				</html>
 				"}
+
+// ------------------------------- TG Remnants ------------------------------
+// Ingots are for smithing. Only metals can be heated and beaten on a metal anvil. Below are pointless in practice.
+/obj/item/blacksmith/ingot/plasma
+	custom_materials = list(/datum/material/plasma=12000)//yeah ok
+
+/obj/item/blacksmith/ingot/diamond
+	custom_materials = list(/datum/material/diamond=12000) //yeah ok

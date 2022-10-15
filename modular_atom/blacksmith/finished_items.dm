@@ -3,7 +3,7 @@
 //		SMITHED ITEMS BASE CODE			//
 //										//
 //////////////////////////////////////////
-// Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 10 Iron weapons.  
+// Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 12 Iron weapons.  
 
 /obj/item/melee/smith
 	name = "base class obj/item/melee/smith"
@@ -48,7 +48,7 @@
 	throwforce = THROWING_POOR
 	sharpness = SHARP_EDGED
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	wielded_mult = 1.4
+	wielded_mult = 1.5
 	w_class = WEIGHT_CLASS_BULKY
 	wielded = FALSE
 	total_mass = (TOTAL_MASS_MEDIEVAL_WEAPON * 1.5)
@@ -296,14 +296,14 @@
 //								//
 //////////////////////////////////
 
-// ------------ DAGGER ------------ // [33 AP Eyestab]
+// ------------ DAGGER ------------ // [Eyestab]
 /obj/item/melee/smith/dagger
 	name = "dagger"
 	icon_state = "dagger_smith"
 	overlay_state = "hilt_dagger"
 	attack_speed = MELEE_SPEED_FAST
 	force = FORCE_SMITH_LOW
-	armour_penetration = 0.05
+	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_EFFECTIVE
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_EDGED
@@ -325,7 +325,7 @@
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 100, 10)
 
-// ------------ BOWIE KNIFE ------------ // [35 AP  Eyestab]
+// ------------ BOWIE KNIFE ------------ // [Eyestab]
 /obj/item/melee/smith/dagger/bowie 
 	name = "bowie knife"
 	icon_state = "bowie_smith"
@@ -339,7 +339,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ MACHETE ------------ // [40 AP 0.1]
+// ------------ MACHETE ------------ // [AP 0.1]
 /obj/item/melee/smith/machete
 	name = "machete"
 	icon_state = "machete_smith"
@@ -355,13 +355,13 @@
 	AddComponent(/datum/component/butchering, 100, 85, 10) //decent in a pinch.
 	AddElement(/datum/element/sword_point)
 
-// ------------ GLADIUS ------------ // [39 AP 0.1]
+// ------------ GLADIUS ------------ // [AP 0.1]
 /obj/item/melee/smith/machete/gladius
 	name = "gladius"
 	icon_state = "gladius_smith"
 	overlay_state = "hilt_gladius"
 
-// ------------ REFORGED MACHETE ------------ // [39 AP 0.1]
+// ------------ REFORGED MACHETE ------------ // [AP 0.1]
 /obj/item/melee/smith/machete/reforged
 	name = "reforged machete"
 	icon_state = "macheter_smith"
@@ -374,7 +374,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ WAKIZASHI ------------ // [35 AP 0 Parry]
+// ------------ WAKIZASHI ------------ // [Parry]
 /obj/item/melee/smith/wakizashi
 	name = "wakizashi"
 	icon_state = "waki_smith"
@@ -406,7 +406,7 @@
 	AddComponent(/datum/component/butchering, 110, 70) //decent in a pinch, but pretty bad.
 
 
-// ------------ SCRAP SAW ------------ // [35 AP 0 Parry]
+// ------------ SCRAP SAW ------------ // [Parry]
 /obj/item/melee/smith/wakizashi/scrapsaw
 	name = "scrap saw"
 	icon_state = "saw_smith"
@@ -418,7 +418,7 @@
 	hitsound = 'sound/effects/butcher.ogg'
 
 
-// ------------ MACE ------------ // [32 AP 0.4]
+// ------------ MACE ------------ //
 /obj/item/melee/smith/mace
 	name = "mace"
 	icon_state = "mace_smith"
@@ -444,7 +444,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ SWORD ------------ // [37 AP 0.2 Parry]
+// ------------ SWORD ------------ // [AP 0.1 Parry]
 /obj/item/melee/smith/sword
 	name = "sword"
 	icon_state = "sword_smith"
@@ -477,7 +477,7 @@
 	AddElement(/datum/element/sword_point)
 
 
-// ------------ SPATHA ------------ // [37 AP 0.2 Parry]
+// ------------ SPATHA ------------ // [AP 0.1 Parry]
 /obj/item/melee/smith/sword/spatha
 	name = "spatha"
 	icon_state = "spatha_smith"
@@ -486,7 +486,7 @@
 	block_chance = 14
 
 
-// ------------ SABRE ------------ // [35 AP 0.25 Parry]
+// ------------ SABRE ------------ // [AP 0.1 Parry]
 /obj/item/melee/smith/sword/sabre
 	name = "sabre"
 	icon_state = "sabre_smith"
@@ -518,7 +518,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ KATANA ------------ // [35/49 AP 0.2 Parry]
+// ------------ KATANA ------------ // [AP 0.2 Parry]
 /obj/item/melee/smith/twohand/katana
 	name = "katana"
 	icon_state = "katana_smith"
@@ -528,7 +528,7 @@
 	armour_penetration = PIERCING_MODERATE
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_BIG
-	wielded_mult = 1.2
+	wielded_mult = 1.25
 	item_flags = ITEM_CAN_PARRY
 	block_chance = 15
 	block_parry_data = /datum/block_parry_data/smithkatana
@@ -556,7 +556,7 @@
 	AddElement(/datum/element/sword_point)
 
 
-// ------------ LONGSWORD ------------ // [35/49 AP 0.2 Parry]
+// ------------ LONGSWORD ------------ // [AP 0.2 Parry]
 /obj/item/melee/smith/twohand/katana/longsword
 	name = "longsword"
 	icon_state = "longsword_smith"
@@ -564,7 +564,7 @@
 	overlay_state = "hilt_longsword"
 
 
-// ------------ SCRAP BLADE ------------ // [33/46.2 Wounding]
+// ------------ SCRAP BLADE ------------ // [AP 0.2 Parry]
 /obj/item/melee/smith/twohand/katana/scrapblade
 	name = "scrap blade"
 	icon_state = "scrap_smith"
@@ -584,7 +584,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ HEAVY AXE ------------ // [28/56 AP 0.1 Doorbusting]
+// ------------ HEAVY AXE ------------ // [AP 0.1 Doorbusting]
 /obj/item/melee/smith/twohand/axe
 	name = "heavy axe"
 	icon_state = "axe_smith"
@@ -609,7 +609,7 @@
 		M.take_damage(20, BRUTE, "melee", 0)
 
 
-// ------------ LEGION WAR AXE ------------ // [28/56 AP 0.05 Doorbusting]
+// ------------ LEGION WAR AXE ------------ // [AP 0.1 Doorbusting]
 /obj/item/melee/smith/twohand/axe/waraxe
 	name = "war axe"
 	icon_state = "waraxe_smith"
@@ -629,7 +629,7 @@
 		M.take_damage(20, BRUTE, "melee", 0)
 
 
-// ------------ GHOUL CRUSHER ------------ // [32/48 AP 0.1 Ghoul bonus] - for those dry twig like limbs, snap snap..
+// ------------ GHOUL CRUSHER ------------ // [Ghoul bonus] - for those dry twig like limbs, snap snap..
 /obj/item/melee/smith/twohand/crusher
 	name = "crusher"
 	icon_state = "crusher_smith"
@@ -675,20 +675,19 @@
 //									//
 //////////////////////////////////////
 
-// ------------ SPEAR ------------ // [20/36 AP 0.1 Reach]
+// ------------ SPEAR ------------ // [Reach]
 /obj/item/melee/smith/twohand/spear
 	name = "spear"
 	icon_state = "spear_smith"
 	icon_prefix = "spear_smith"
 	overlay_state = "shaft_spear"
 	force = FORCE_SMITH_REACH
-	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_GOOD
 	wielded_mult = 1.3
 	max_reach = 2
 	sharpness = SHARP_POINTY
 
-// ------------ TRIDENT ------------ // [21/37.8 Reach Embed]
+// ------------ TRIDENT ------------ // [Reach Embed]
 /obj/item/melee/smith/twohand/spear/trident
 	name = "trident"
 	icon_state = "trident_smith"
@@ -703,7 +702,7 @@
 	. = ..()
 	desc = "Made for spearing small lizard and fish, able to pin down the prey if thrown."
 
-// ------------ LEGION LANCE ------------ // [20/36 AP 0.1 Reach]
+// ------------ LEGION LANCE ------------ // [Reach]
 /obj/item/melee/smith/twohand/spear/lance
 	name = "legion lance"
 	icon_state = "lance_smith"
@@ -717,7 +716,7 @@
 //												//
 //////////////////////////////////////////////////
 
-// ------------ JAVELIN ------------ // [26 (37.5) AP 0.2 Embed]
+// ------------ JAVELIN ------------ // [Embed]
 /obj/item/melee/smith/javelin
 	name = "javelin"
 	icon_state = "javelin_smith"
@@ -728,7 +727,7 @@
 	sharpness = SHARP_POINTY
 	embedding = list("pain_mult" = 2, "embed_chance" = 62, "fall_chance" = 20, "ignore_throwspeed_threshold" = TRUE)
 
-// ------------ THROWING KNIFE ------------ // [25 (33.6) AP 0.1 Embed]
+// ------------ THROWING KNIFE ------------ // [Embed]
 /obj/item/melee/smith/throwingknife
 	name = "throwing knife"
 	icon_state = "throwing_smith"

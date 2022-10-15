@@ -354,15 +354,17 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
+
+// ------------------- ARMOR MADE FROM BLACKSMITH PARTS -------------------------
 //Greaves
 
 /datum/crafting_recipe/plateboot
 	name = "Plate Boots"
 	result = /obj/item/clothing/shoes/f13/military/plated
 	time = 100
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/stack/sheet/cloth = 5)
-	tools = list(TOOL_METAL_BENCH)
+	reqs = list(/obj/item/smithing/armor_piece = 1,
+				/obj/item/stack/sheet/leather = 3)
+	tools = list(TOOL_WORKBENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
@@ -372,12 +374,12 @@ datum/crafting_recipe/steelbib/heavy
 	name = "Plate Gloves"
 	result = /obj/item/clothing/gloves/legion/plated
 	time = 100
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/stack/sheet/cloth = 5)
-	tools = list(TOOL_METAL_BENCH)
+	reqs = list(/obj/item/smithing/armor_piece = 1,
+				/obj/item/stack/sheet/leather = 2)
+	tools = list(TOOL_WORKBENCH)
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-
+	
 /*CRAFT rework: removed for balance
 /datum/crafting_recipe/tesla_armor
 	name = "tesla armor"
