@@ -20578,10 +20578,6 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
-"cnl" = (
-/obj/structure/debris/v1,
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland)
 "cnm" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Gatehouse";
@@ -20612,11 +20608,6 @@
 "cnq" = (
 /turf/open/floor/plasteel/stairs/right,
 /area/f13/wasteland)
-"cns" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/grass/coyote/one,
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "cnu" = (
 /obj/structure/flora/grass/wasteland{
 	pixel_x = 9;
@@ -27765,11 +27756,6 @@
 	dir = 4
 	},
 /area/f13/building/mall)
-"fvI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "fvR" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_3"
@@ -39614,11 +39600,6 @@
 /obj/effect/spawner/lootdrop/clothing_low,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"lcS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/debris/v1,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "lcV" = (
 /obj/structure/flora/grass/coyote/eight,
 /obj/effect/spawner/lootdrop/trash,
@@ -61355,13 +61336,6 @@
 /obj/structure/flora/ausbushes/grassybush,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
-"vxy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/flora/grass/coyote/one,
-/obj/structure/debris/v2,
-/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "vxz" = (
 /obj/structure/flora/timber,
@@ -92535,7 +92509,7 @@ qoU
 qoU
 cYE
 aae
-aaa
+aJN
 aJN
 aaa
 "}
@@ -92791,8 +92765,8 @@ aOk
 aOk
 aOk
 aOk
-cnl
-aaa
+tPB
+aJN
 aJN
 aaa
 "}
@@ -93047,9 +93021,9 @@ cFK
 iYj
 cFK
 qyV
-lcS
 cFK
-cns
+cFK
+oLv
 aJN
 aaa
 "}
@@ -93305,8 +93279,8 @@ vvB
 cFK
 iYj
 cFK
-vxy
-cns
+oSP
+oLv
 aJN
 aaa
 "}
@@ -93563,7 +93537,7 @@ mkA
 bjb
 hTt
 oPz
-fvI
+cru
 aJN
 aaa
 "}
@@ -93820,7 +93794,7 @@ aae
 aae
 aae
 aae
-aaa
+aJN
 aJN
 aaa
 "}
