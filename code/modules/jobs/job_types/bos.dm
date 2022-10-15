@@ -160,7 +160,9 @@ Head Paladin
 	belt =			/obj/item/storage/belt/military/army
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	ears =			/obj/item/radio/headset/headset_bos/command
-	neck = 			/obj/item/storage/belt/holster
+	neck = 			/obj/item/clothing/neck/mantle/bos/paladin
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/melee/powerfist/f13 = 1,
@@ -171,8 +173,6 @@ Head Paladin
 
 /datum/outfit/loadout/hpstand
 	name = "Shock Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/hardened
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3
@@ -180,8 +180,6 @@ Head Paladin
 
 /datum/outfit/loadout/hpheavy
 	name = "Heavy Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/hardened
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72 = 1,
 		/obj/item/ammo_box/magazine/m2mm = 3,
@@ -191,8 +189,6 @@ Head Paladin
 
 /datum/outfit/loadout/hpgat
 	name = "Laser Gatling Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/hardened
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpack = 1
 	)
@@ -417,13 +413,13 @@ Senior Paladin
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t51b
+	suit =	/obj/item/clothing/suit/armor/power_armor/t51b/bos
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/army
-	neck =	/obj/item/storage/belt/holster
+	neck =	/obj/item/clothing/neck/mantle/bos/paladin
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -435,8 +431,7 @@ Senior Paladin
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/clothing/accessory/bos/paladin = 1
+		/obj/item/stock_parts/cell/ammo/ec = 2
 	)
 
 /datum/outfit/loadout/spaladinc
@@ -503,12 +498,12 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
+	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/army
-	neck =	/obj/item/storage/belt/holster
+	neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
 		/obj/item/melee/onehanded/knife/hunting = 1

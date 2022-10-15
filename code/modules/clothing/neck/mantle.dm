@@ -34,37 +34,33 @@
 	icon_state = "overseer"
 
 /obj/item/clothing/neck/mantle/bos
-	name = "Brotherhood of Steel shoulder cape"
+	name = "brotherhood of steel shoulder cape"
 	desc = "Issued to the Elders of the Brotherhood. Style over substance is important. This one is designed to be worn over the shoulder."
 	icon_state = "bosshouldercape_l"
 
 /obj/item/clothing/neck/mantle/bos/left
-	name = "Brotherhood of Steel shoulder cape"
+	name = "brotherhood of steel shoulder cape"
 	desc = "Issued to the Elders of the Brotherhood. Style over substance is important. This one is designed to be worn over the shoulder."
 	icon_state = "bosshouldercape_l"
 
 /obj/item/clothing/neck/mantle/bos/right
-	name = "Brotherhood of Steel shoulder cape"
+	name = "brotherhood of steel shoulder cape"
 	desc = "Issued to the Elders of the Brotherhood. Style over substance is important. This one is designed to be worn over the shoulder."
 	icon_state = "bosshouldercape_r"
 
-/obj/item/clothing/neck/mantle/bos/paladin
-	name = "Paladin cape"
-	desc = "This stylish deep crimson cape is made to be worn below a power armor pauldron, a shoulder holster is added for utility."
+/obj/item/clothing/neck/mantle/bos/ceremonial
+	name = "ceremonial paladin cape"
+	desc = "This stylish deep crimson cape is made to be worn below a power armor pauldron, meant purely for ceremonial purposes."
 	icon_state = "paladin"
-	pocket_storage_component_path = /datum/component/storage/concrete/belt/specialized/gun
 
-/obj/item/clothing/neck/mantle/legion
-	name = "Legion Cape"
-	desc = "A deep crimson cape woven by fine legionnaire craftsmanship. A shoulder holster is added beneath for utility."
-	icon_state = "legion"
-	pocket_storage_component_path = /datum/component/storage/concrete/belt/specialized/gun
-
-/obj/item/clothing/neck/mantle/ranger
-	name = "NCR ranger cape"
-	desc = "Ranger cape made from what looks like old poncho fitted with star, stripes and a bear. Most likely has a holster hidden underneath."
-	icon_state = "rangercape"
-	pocket_storage_component_path = /datum/component/storage/concrete/belt/specialized/gun
+/obj/item/clothing/neck/mantle/bos/paladin
+	name = "paladin cape"
+	desc = "This stylish deep crimson cape is made to be worn below a power armor pauldron, meant for actual combat situations."
+	icon_state = "palcapes"
+	unique_reskin = list(
+						"Short" = "palcapes",
+						"Long" = "palcapel"
+						)
 
 /obj/item/clothing/neck/mantle/chief
 	name = "chieftains mantle"
