@@ -642,7 +642,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/campfollower
-	name = "Camp Exactor"
+	name = "Camp Follower"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slave
