@@ -16,14 +16,14 @@
 	var/max_nutrition = INFINITY
 	var/quality = 0	//affects mood, typically higher for mixed drinks with more complex recipes
 	ghoulfriendly = TRUE
-	water_level = 0.5 //Things you are actually supposed to eat won't make you thirsty (outside food)
+	var/water_level = 0.5
 	var/max_water = INFINITY
 
 /datum/reagent/consumable/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M, TRAIT_NO_PROCESS_FOOD))
 		current_cycle++
 		M.adjust_nutrition(nutriment_factor, max_nutrition)
-		M.adjust_thirst(water_level, max_water)	
+		M.adjust_thirst(water_level, max_water)
 	M.CheckBloodsuckerEatFood(nutriment_factor)
 	holder?.remove_reagent(type, metabolization_rate)
 
@@ -47,7 +47,6 @@
 	name = "Nutriment"
 	description = "All the vitamins, minerals, and carbohydrates the body needs in pure form."
 	reagent_state = SOLID
-	water_level = -0.5
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	color = "#664330" // rgb: 102, 67, 48
 
@@ -115,7 +114,6 @@
 	taste_mult = 0.8
 	value = REAGENT_VALUE_COMMON
 	taste_description = "oil"
-	water_level = 0.2 //Drinkable but you know it's oil
 	nutriment_factor = 5 * REAGENTS_METABOLISM //Not very healthy on its own
 	metabolization_rate = 10 * REAGENTS_METABOLISM
 	var/fry_temperature = 450 //Around ~350 F (117 C) which deep fryers operate around in the real world
@@ -159,7 +157,6 @@
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255, 255, 255
 	taste_mult = 1.5 // stop sugar drowning out other flavours
-	water_level = -0.5
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 	overdose_threshold = 200 // Hyperglycaemic shock
@@ -199,7 +196,6 @@
 /datum/reagent/consumable/soysauce
 	name = "Soysauce"
 	description = "A salty sauce made from the soy plant."
-	water_level = -0.2
 	color = "#792300" // rgb: 121, 35, 0
 	taste_description = "umami"
 	value = REAGENT_VALUE_COMMON
@@ -207,7 +203,6 @@
 /datum/reagent/consumable/ketchup
 	name = "Ketchup"
 	description = "Ketchup, catsup, whatever. It's tomato paste."
-	water_level = 0.1
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#731008" // rgb: 115, 16, 8
 	taste_description = "ketchup"
@@ -215,7 +210,6 @@
 /datum/reagent/consumable/mustard
 	name = "Mustard"
 	description = "Mustard, mostly used on hotdogs, corndogs and burgers."
-	water_level = -1
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#DDED26" // rgb: 221, 237, 38
 	taste_description = "mustard"
@@ -223,7 +217,6 @@
 /datum/reagent/consumable/capsaicin
 	name = "Capsaicin Oil"
 	description = "This is what makes chilis hot."
-	water_level = -1.5
 	color = "#B31008" // rgb: 179, 16, 8
 	taste_description = "hot peppers"
 	taste_mult = 1.5
@@ -256,7 +249,6 @@
 	name = "Frost Oil"
 	description = "A special oil that noticably chills the body. Extracted from Icepeppers and slimes."
 	color = "#8BA6E9" // rgb: 139, 166, 233
-	water_level = -1.5
 	taste_description = "mint"
 	value = REAGENT_VALUE_COMMON
 	pH = 13 //HMM! I wonder
@@ -302,7 +294,6 @@
 /datum/reagent/consumable/condensedcapsaicin
 	name = "Condensed Capsaicin"
 	description = "A chemical agent used for self-defense and in police work."
-	water_level = -3
 	color = "#B31008" // rgb: 179, 16, 8
 	taste_description = "scorching agony"
 	pH = 7.4
@@ -376,7 +367,6 @@
 /datum/reagent/consumable/sodiumchloride
 	name = "Table Salt"
 	description = "A salt made of sodium chloride. Commonly used to season food."
-	water_level = -3 //Salt moment
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255,255,255
 	taste_description = "salt"
@@ -397,7 +387,6 @@
 /datum/reagent/consumable/brocjuice
 	name = "Broc Flower Juice"
 	description = "The juice of a ground-up broc flower. Heals mild hypoxia."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "flowers"
@@ -409,7 +398,6 @@
 /datum/reagent/consumable/xanderjuice
 	name = "Xander Root Juice"
 	description = "Ground up xander root, mashed into juicy pulp. Stimulates blood production."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "dirt"
@@ -422,7 +410,6 @@
 /datum/reagent/consumable/agavejuice
 	name = "Agave Leaf Juice"
 	description = "Ground up agave leaf, mashed into juicy pulp. Heals minor burns."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#BAE3B4"
 	taste_description = "plants"
@@ -434,7 +421,6 @@
 /datum/reagent/consumable/ferajuice
 	name = "Barrel Fruit Juice"
 	description = "Squeezed barrelfruit juice. Heals damage caused by poisons and venoms."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#E8E67E"
 	taste_description = "bitter"
@@ -447,7 +433,6 @@
 /datum/reagent/consumable/daturajuice
 	name = "Datura Juice"
 	description = "Ground up bits of the datura plant. Mildly hallucinogenic."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#ACDFCE"
 	taste_description = "bitter leaves"
@@ -460,7 +445,6 @@
 /datum/reagent/consumable/coyotejuice
 	name = "Coyote Leaf Juice"
 	description = "Juiced coyote tobacco leaves. Stimulates the nervous system."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#168B64"
 	taste_description = "leaves"
@@ -477,7 +461,6 @@
 /datum/reagent/consumable/cavefungusjuice
 	name = "Cave Fungus Juice"
 	description = "Juiced cave fungus fruiting bodies."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#274E13"
 	taste_description = "nuts"
@@ -489,7 +472,6 @@
 /datum/reagent/consumable/tato_juice
 	name = "Tato Juice"
 	description = "Juiced tatos."
-	water_level = 2
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#274E13"
 	taste_description = "tato"
@@ -499,7 +481,6 @@
 /datum/reagent/consumable/blackpepper
 	name = "Black Pepper"
 	description = "A powder ground from peppercorns. *AAAACHOOO*"
-	water_level = -0.5
 	reagent_state = SOLID
 	// no color (ie, black)
 	taste_description = "pepper"
@@ -508,7 +489,6 @@
 	name = "Coco Powder"
 	description = "A fatty, bitter paste made from coco beans."
 	reagent_state = SOLID
-	water_level = -1.5
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "bitterness"
@@ -516,7 +496,6 @@
 /datum/reagent/consumable/hot_coco
 	name = "Hot Chocolate"
 	description = "Made with love! And coco beans."
-	water_level = 3
 	color = "#660000" // rgb: 221, 202, 134
 	taste_description = "creamy chocolate"
 	glass_icon_state  = "chocolateglass"
@@ -620,7 +599,6 @@
 	reagent_state = SOLID
 	color = "#C29261"
 	value = REAGENT_VALUE_UNCOMMON
-	water_level = -1
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	taste_description = "peanuts"
 
@@ -654,14 +632,12 @@
 	name = "Dry Ramen"
 	description = "Space age food, since August 25, 1958. Contains dried noodles, vegetables, and chemicals that boil in contact with water."
 	reagent_state = SOLID
-	water_level = -6
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "dry and cheap noodles"
 
 /datum/reagent/consumable/hot_ramen
 	name = "Hot Ramen"
 	description = "The noodles are boiled, the flavors are artificial, just like being back in school."
-	water_level = -3
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "wet and cheap noodles"
@@ -673,7 +649,6 @@
 /datum/reagent/consumable/hell_ramen
 	name = "Hell Ramen"
 	description = "The noodles are boiled, the flavors are artificial, just like being back in school."
-	water_level = -10
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "wet and cheap noodles on fire"
@@ -685,7 +660,6 @@
 /datum/reagent/consumable/flour
 	name = "Flour"
 	description = "This is what you rub all over yourself to pretend to be a ghost."
-	water_level = -1
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 0, 0, 0
 	taste_description = "chalky wheat"
@@ -700,7 +674,6 @@
 /datum/reagent/consumable/cherryjelly
 	name = "Cherry Jelly"
 	description = "Totally the best. Only to be spread on foods with excellent lateral symmetry."
-	water_level = 0.1
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	color = "#801E28" // rgb: 128, 30, 40
 	value = REAGENT_VALUE_COMMON
@@ -709,7 +682,6 @@
 /datum/reagent/consumable/bluecherryjelly
 	name = "Blue Cherry Jelly"
 	description = "Blue and tastier kind of cherry jelly."
-	water_level = 0.1
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	color = "#00F0FF"
 	value = REAGENT_VALUE_UNCOMMON
@@ -719,7 +691,6 @@
 	name = "Rice"
 	description = "tiny nutritious grains"
 	reagent_state = SOLID
-	water_level = -1
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#FFFFFF" // rgb: 0, 0, 0
 	taste_description = "rice"
@@ -729,7 +700,6 @@
 	value = REAGENT_VALUE_UNCOMMON
 	description = "A fatty, bitter paste made from vanilla pods."
 	reagent_state = SOLID
-	water_level = -3
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#FFFACD"
 	taste_description = "vanilla"
@@ -737,7 +707,6 @@
 /datum/reagent/consumable/eggyolk
 	name = "Egg Yolk"
 	description = "It's full of protein."
-	water_level = 0.2
 	nutriment_factor = 4 * REAGENTS_METABOLISM
 	color = "#FFB500"
 	taste_description = "egg"
@@ -745,7 +714,6 @@
 /datum/reagent/consumable/eggwhite
 	name = "Egg White"
 	description = "It's full of even more protein."
-	water_level = 0.2
 	nutriment_factor = 1.5 * REAGENTS_METABOLISM
 	color = "#fffdf7"
 	taste_description = "bland egg"
@@ -753,7 +721,6 @@
 /datum/reagent/consumable/corn_starch
 	name = "Corn Starch"
 	description = "A slippery solution."
-	water_level = 0.3
 	color = "#f7f6e4"
 	taste_description = "slime"
 
@@ -762,7 +729,6 @@
 	value = REAGENT_VALUE_UNCOMMON
 	description = "Decays into sugar."
 	color = "#fff882"
-	water_level = -0.2
 	metabolization_rate = 3 * REAGENTS_METABOLISM
 	taste_description = "sweet slime"
 
@@ -775,7 +741,6 @@
 	description = "Sweet sweet honey that decays into sugar. Has antibacterial and natural healing properties."
 	color = "#d3a308"
 	value = REAGENT_VALUE_COMMON
-	water_level = 0.5
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	taste_description = "sweetness"
@@ -800,7 +765,6 @@
 /datum/reagent/consumable/mayonnaise
 	name = "Mayonnaise"
 	description = "An white and oily mixture of mixed egg yolks."
-	water_level = 0.5
 	color = "#DFDFDF"
 	taste_description = "mayonnaise"
 	value = REAGENT_VALUE_COMMON

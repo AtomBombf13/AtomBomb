@@ -290,11 +290,3 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "pill_buff"
 	list_reagents = list(/datum/reagent/drug/buffout = 10)
-
-/obj/item/reagent_containers/pill/purify
-	name = "water purification pill"
-	desc = "A pill used even pre-war for servicemen overseas. \
-	Contains enough to clear entire bottle of water out of impurities."
-	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	icon_state = "pill_pure"
-	list_reagents = list(/datum/reagent/water_purifier = 40) //Enough for 20u of purified water
