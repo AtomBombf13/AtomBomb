@@ -302,21 +302,6 @@
 	new /obj/item/storage/box/matches(src)
 	new /obj/item/clothing/mask/cigarette/cigar/ncr(src)
 
-/obj/item/storage/box/ration/army
-	name = "US Army survival pack"
-	desc = "A box containing most basic things to survive in hostile enviroment for long enough to get help.....or just to prolong your death. Clearly belonged to the US Army Infantry."
-	icon = 'icons/fallout/objects/storage.dmi'
-	icon_state = "us-ration"
-	illustration = null
-
-/obj/item/storage/box/ration/army/PopulateContents()
-	. = ..()
-	new /obj/item/reagent_containers/food/snacks/f13/canned/army(src)
-	new /obj/item/reagent_containers/food/snacks/f13/canned/army/desert(src)
-	new /obj/item/reagent_containers/food/drinks/flask/survival/army(src)
-	new /obj/item/reagent_containers/food/snacks/syndicake(src)
-	new /obj/item/reagent_containers/pill/radx(src)
-	new /obj/item/reagent_containers/pill/purify(src)
 
 ////////////////////////
 // HEALING ITEM BOXES //

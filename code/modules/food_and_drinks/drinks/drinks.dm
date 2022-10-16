@@ -461,15 +461,7 @@
 /obj/item/reagent_containers/food/drinks/flask/survival
 	name = "survival flask"
 	desc = "Every good wastelander knows it's a good idea to bring along a couple of pints of water wherever they go."
-	icon = 'icons/fallout/objects/food&drinks/drinks.dmi'
-	icon_state = "flask_waster"
 	list_reagents = list(/datum/reagent/water = 60)
-
-/obj/item/reagent_containers/food/drinks/flask/survival/army
-	name = "US army flask"
-	desc = "A seemingly mint condition US army flask hopefully containing untouched pre-war water."
-	icon_state = "flask_military"
-	list_reagents = list(/datum/reagent/water/purified = 60)
 
 /obj/item/reagent_containers/food/drinks/flask/gold
 	name = "captain's flask"

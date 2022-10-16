@@ -659,28 +659,18 @@
 		icon_state = "[icon_state]-op"
 
 /obj/item/reagent_containers/food/snacks/f13/canned/attack_self(mob/user)
-	if(is_open == TRUE)
-		to_chat(user, span_warning("[src] is already open."))
-		return
-	if(!is_open == TRUE)
-		to_chat(user, span_warning("You need something sharp to open [src]."))
-		return
-
-/obj/item/reagent_containers/food/snacks/f13/canned/attack(mob/living/M, mob/living/user)
 	if(!is_open)
-		to_chat(user, span_warning("You need something sharp to open [src]."))
+		is_open = TRUE
+		to_chat(user, span_notice("You open the lid of the can."))
+		update_icon()
 		return
 	. = ..()
 
-/obj/item/reagent_containers/food/snacks/f13/canned/attackby(obj/item/W, mob/user)
-	if(is_open == TRUE)
-		to_chat(user, span_notice("[src] is already open."))
-		..()
-	if(!is_open == TRUE)
-		if(istype(W,/obj/item/melee/onehanded/knife || /obj/item/kitchen/knife)) //You ain't using swords to open a damn can
-			is_open = TRUE
-			to_chat(user, span_notice("You open the lid of the can."))
-			update_icon()
+/obj/item/reagent_containers/food/snacks/f13/canned/attack(mob/living/M, mob/living/user)
+	if(!is_open)
+		to_chat(user, span_warning("You need to open [src] first."))
+		return
+	. = ..()
 
 /obj/item/reagent_containers/food/snacks/f13/canned/porknbeans
 	name = "can of pork n' beans"
@@ -716,7 +706,7 @@
 	name = "canned military ration"
 	desc = "If you see this, call an admin."
 	filling_color = "#B22222"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 25, /datum/reagent/consumable/nutriment/vitamin = 3)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3)
 	icon_state = "c_ration_1"
 
 /obj/item/reagent_containers/food/snacks/f13/canned/ncr/brahmin_chili
@@ -836,23 +826,6 @@
 	icon_state = "k_ration_can"
 	tastes = list("beef luncheon loaf" = 3, "jalapeno peppers and spices" = 2)
 	foodtype = MEAT
-
-/obj/item/reagent_containers/food/snacks/f13/canned/army
-	name = "army ration entree - 'Beef Stew'"
-	desc = "A canned food product containing the entree portion of a military combat ration. This one still has the vintage beef smell to it."
-	filling_color = "#B22222"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3)
-	tastes = list("rich beef" = 3, "peppers" = 3, "stewed vegetables" = 2)
-	icon = 'icons/fallout/objects/food&drinks/food.dmi'
-	icon_state = "us_can"
-	foodtype = MEAT | VEGETABLES
-
-/obj/item/reagent_containers/food/snacks/f13/canned/army/desert
-	name = "army ration entree - 'Cranberry Pie'"
-	desc = "A canned food product containing the dessert portion of a military combat ration."
-	icon_state = "us_can_2"
-	tastes = list("cranberries" = 3, "buttery flakey crust" = 2)
-	foodtype = SUGAR | FRUIT | GRAIN
 
 /obj/item/reagent_containers/food/snacks/f13/broiled_death_claw
 	name = "broiled deathclaw"
