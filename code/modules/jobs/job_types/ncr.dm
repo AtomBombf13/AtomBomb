@@ -548,6 +548,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	supervisors = "Veteran Ranger"
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_RANGER
+	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
 	outfit = /datum/outfit/job/ncr/f13ranger
 	exp_requirements = 500
 
