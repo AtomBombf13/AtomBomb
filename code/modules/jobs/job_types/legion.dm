@@ -269,7 +269,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Warlord Centurion"
 	suit = /obj/item/clothing/suit/armor/medium/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
-	suit_store = /obj/item/gun/ballistic/automatic/shotgun/pancor
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
@@ -662,7 +662,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit = /obj/item/clothing/suit/armor/medium/legion/vet
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	neck = /obj/item/storage/belt/holster
-	glasses = /obj/item/clothing/glasses/night/polarizing	
+	glasses = /obj/item/clothing/glasses/night/polarizing
 	gloves = /obj/item/clothing/gloves/legion/plated
 	ears = /obj/item/radio/headset/headset_legion
 	r_pocket = /obj/item/binoculars
@@ -1117,7 +1117,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		if(H.wear_id)
 			var/obj/item/card/id/dogtag/L = H.wear_id
 			L.registered_name = H.name
-			L.update_label()	
+			L.update_label()
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)

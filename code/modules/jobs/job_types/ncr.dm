@@ -205,7 +205,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/captainfrontline
 	name = "The Frontliner"
-	suit_store = /obj/item/gun/ballistic/automatic/shotgun/pancor
+	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
 		/obj/item/ammo_box/magazine/d12g = 3,
@@ -330,7 +330,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/sergeantrifleman
 	name = "Lead Rifleman"
 	head = /obj/item/clothing/head/f13/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/worn
+	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m5mm = 2,
 		/obj/item/storage/box/ration/menu_two = 1,

@@ -343,8 +343,8 @@
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
-	damage = 15
-	armour_penetration = 0
+	damage = 10
+	armour_penetration = 0.15
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
