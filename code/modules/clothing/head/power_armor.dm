@@ -27,7 +27,7 @@
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10)
 	salvage_tool_behavior = TOOL_WELDER
 	/// Projectiles below this damage will get deflected
-	var/deflect_damage = 18
+	var/deflect_damage = 10
 	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
 	/// If TRUE - the suit will give its user specific traits when worn
@@ -219,7 +219,7 @@
 	desc = "It's an advanced power armor MK1 helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advhelmet1"
 	item_state = "advhelmet1"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2)
+
 
 /obj/item/clothing/head/helmet/f13/power_armor/advanced/hellfire
 	name = "hellfire power armor"
@@ -235,6 +235,5 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	slowdown = 0.1
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02

@@ -305,9 +305,9 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_DAMAGE_PISTOL_LIGHT 20
 #define BULLET_DAMAGE_PISTOL_MEDIUM 30
 #define BULLET_DAMAGE_PISTOL_HEAVY 40
-#define BULLET_DAMAGE_RIFLE_LIGHT 30
-#define BULLET_DAMAGE_RIFLE_MEDIUM 45
-#define BULLET_DAMAGE_RIFLE_HEAVY 75
+#define BULLET_DAMAGE_RIFLE_LIGHT 25
+#define BULLET_DAMAGE_RIFLE_MEDIUM 40
+#define BULLET_DAMAGE_RIFLE_HEAVY 70
 #define BULLET_DAMAGE_SHOTGUN_PELLET 11
 #define BULLET_DAMAGE_SHOTGUN_SLUG 50
 
@@ -615,6 +615,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_LESS_DAMAGE_T3 0.75
 #define GUN_LESS_DAMAGE_T4 0.65
 #define GUN_LESS_DAMAGE_T5 0.50
+#define GUN_LESS_DAMAGE_T6 0.35 // Miniguns tier
 
 /// Gun melee force base
 #define GUN_MELEE_FORCE_BASE 12
@@ -675,7 +676,9 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define HMG_RECOIL(x)          list(0.4 *x, 0.6*x, 3.6*x )
 
 //Quick defines for fire modes
+#define FULL_AUTO_150		list(mode_name = "full auto",  mode_desc = "150 rounds per minute",   automatic = 1, autofire_shot_delay = 3.5, burst_size = 1, icon="auto")
 #define FULL_AUTO_200		list(mode_name = "full auto",  mode_desc = "200 rounds per minute",   automatic = 1, autofire_shot_delay = 3, burst_size = 1, icon="auto")
+#define FULL_AUTO_250		list(mode_name = "full auto",  mode_desc = "250 rounds per minute",   automatic = 1, autofire_shot_delay = 2.5, burst_size = 1, icon="auto")
 #define FULL_AUTO_300		list(mode_name = "full auto",  mode_desc = "300 rounds per minute",   automatic = 1, autofire_shot_delay = 2, burst_size = 1, icon="auto")
 #define FULL_AUTO_400		list(mode_name = "full auto",  mode_desc = "400 rounds per minute",   automatic = 1, autofire_shot_delay = 1.5, burst_size = 1, icon="auto")
 #define FULL_AUTO_600		list(mode_name = "full auto",  mode_desc = "600 rounds per minute",   automatic = 1, autofire_shot_delay = 1, burst_size = 1, icon="auto")

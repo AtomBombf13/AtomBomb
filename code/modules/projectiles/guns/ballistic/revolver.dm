@@ -233,7 +233,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T2
 
 	fire_sound = 'sound/f13weapons/357magnum.ogg'
 	gun_sound_properties = list(
@@ -276,7 +276,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T1
+	damage_multiplier = GUN_LESS_DAMAGE_T2
 	init_recoil = HANDGUN_RECOIL(1)
 
 	fire_sound = 'sound/f13weapons/policepistol.ogg'
@@ -309,7 +309,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -355,7 +355,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -385,7 +385,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -424,7 +424,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -464,7 +464,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -492,7 +492,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -717,7 +717,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -815,7 +815,7 @@
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL

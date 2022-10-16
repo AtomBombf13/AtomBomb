@@ -24,7 +24,7 @@ obj/item/projectile/energy/plasmabolt
 	damage = 50
 	icon_state = "plasma3"
 	irradiate = 35
-	stamina = 120
+	stamina = 30
 
 /obj/item/projectile/energy/plasmabolt/MP40k
 	damage = 35

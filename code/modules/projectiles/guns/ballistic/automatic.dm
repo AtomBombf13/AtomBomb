@@ -177,17 +177,17 @@
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2 // -15%
+	damage_multiplier = GUN_LESS_DAMAGE_T4
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.7)
 	init_firemodes = list(
-		FULL_AUTO_400
+		FULL_AUTO_600
 	)
 
 	is_automatic = TRUE
@@ -238,7 +238,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY,
-		FULL_AUTO_800
+		FULL_AUTO_200
 	)
 	automatic = 1
 	is_automatic = TRUE
@@ -328,20 +328,19 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	init_mag_type = /obj/item/ammo_box/magazine/uzim9mm
-
+	weapon_weight = GUN_TWO_HAND_ONLY
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // Accurate semiauto fire
 	init_firemodes = list(
-		FULL_AUTO_600,
+		FULL_AUTO_300,
 		SEMI_AUTO_NODELAY
 	)
 
@@ -379,7 +378,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/pps9mm
 	init_mag_type = /obj/item/ammo_box/magazine/pps9mm
-
+	weapon_weight = GUN_TWO_HAND_ONLY
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	draw_time = GUN_DRAW_LONG
@@ -390,7 +389,7 @@
 	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		FULL_AUTO_800
+		FULL_AUTO_600
 	)
 
 	is_automatic = TRUE
@@ -431,7 +430,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm/extended
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -440,10 +438,10 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_250,
 		SEMI_AUTO_NODELAY
 	)
 
@@ -479,7 +477,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1.2)
 	init_firemodes = list(
@@ -508,7 +506,7 @@
 
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
@@ -518,7 +516,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.8)
 	init_firemodes = list(
-		FULL_AUTO_800,
+		FULL_AUTO_400,
 		BURST_3_ROUND,
 		SEMI_AUTO_NODELAY
 	)
@@ -558,10 +556,10 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		FULL_AUTO_400,
+		FULL_AUTO_200,
 		SEMI_AUTO_NODELAY
 	)
 
@@ -606,7 +604,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
 	burst_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1.2)
 	init_firemodes = list(
@@ -648,11 +646,11 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_400,
+		FULL_AUTO_200,
 		BURST_5_ROUND
 	)
 
@@ -692,17 +690,17 @@
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T4
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.8)
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_200,
 		BURST_3_ROUND
 	)
 
@@ -757,7 +755,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1.1)
 	init_firemodes = list(
@@ -802,7 +800,8 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T2
+	weapon_weight = GUN_ONE_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(0.8)
 	init_firemodes = list(
@@ -858,7 +857,8 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T2
+	weapon_weight = GUN_ONE_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1.2)
 	init_firemodes = list(
@@ -912,7 +912,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1)
 	init_firemodes = list(
@@ -954,13 +954,13 @@
 
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1)
 	init_firemodes = list(
@@ -1005,6 +1005,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
 	burst_size = 1
+	weapon_weight = GUN_ONE_HAND_ONLY
 	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // its a weakass cartridge
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(0.5)
@@ -1079,6 +1080,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
+	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(0.8)
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY
@@ -1134,6 +1136,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
+	weapon_weight = GUN_TWO_HAND_ONLY
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
@@ -1186,6 +1189,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 
@@ -1218,6 +1222,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
+	weapon_weight = GUN_ONE_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(0.8)
 
 	gun_tags = list(GUN_SCOPE)
@@ -1252,9 +1257,10 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.2)
+	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY
 	)
@@ -1312,6 +1318,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
@@ -1370,6 +1377,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
+	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY
@@ -1440,6 +1448,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
@@ -1496,11 +1505,12 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
+	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_250,
 		SEMI_AUTO_NODELAY
 	)
 
@@ -1550,11 +1560,12 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_400,
+		FULL_AUTO_200,
 		BURST_3_ROUND,
 		SEMI_AUTO_NODELAY
 	)
@@ -1639,11 +1650,12 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T3
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.8)
 	init_firemodes = list(
-		FULL_AUTO_1000,
+		FULL_AUTO_400,
 		BURST_10_ROUND
 	)
 
@@ -1687,11 +1699,12 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T3
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_400,
 		BURST_3_ROUND
 	)
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
@@ -1746,7 +1759,8 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
+	damage_multiplier = GUN_LESS_DAMAGE_T3
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1.2)
 	init_firemodes = list(
@@ -1780,10 +1794,11 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_400,
+		FULL_AUTO_200,
 		SEMI_AUTO_NODELAY
 	)
 	gun_tags = list(GUN_SCOPE)
@@ -1815,10 +1830,11 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T1
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.3)
 	init_firemodes = list(
-		FULL_AUTO_400,
+		FULL_AUTO_200,
 		SEMI_AUTO_NODELAY
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
@@ -1866,10 +1882,11 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.3)
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_200,
 		SEMI_AUTO_NODELAY
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
@@ -1911,6 +1928,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.8)
 	init_firemodes = list(
@@ -1969,6 +1987,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LMG
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
@@ -1978,7 +1997,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_400
+		FULL_AUTO_250
 	)
 
 	is_automatic = TRUE
@@ -2016,6 +2035,7 @@
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LMG * 0.8
+	weapon_weight = GUN_TWO_HAND_ONLY
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
@@ -2026,7 +2046,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_600
+		FULL_AUTO_300
 	)
 
 	is_automatic = TRUE
@@ -2074,10 +2094,11 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1.2)
 	init_firemodes = list(
-		FULL_AUTO_400
+		FULL_AUTO_150
 	)
 
 	is_automatic = TRUE
@@ -2168,6 +2189,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_GAUSS
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
@@ -2217,6 +2239,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
@@ -2267,13 +2290,13 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T3
+	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 
@@ -2295,7 +2318,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
@@ -2327,7 +2350,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
@@ -2386,6 +2409,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
@@ -2420,6 +2444,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST

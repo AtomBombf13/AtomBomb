@@ -2,7 +2,7 @@
  * ARMOR DEFINES
  */
 
-/* Zero armor values 
+/* Zero armor values
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ZERO list(\
 		"linemelee" = 0, \
@@ -54,9 +54,9 @@
 /* Light armor values
  * High mobility
  * Mild environmental resistances
- * Low defense 
+ * Low defense
  * Low DT
- * 
+ *
  * +20 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_LIGHT list(\
@@ -69,15 +69,15 @@
 		"rad" = 10, \
 		"fire" = 10, \
 		"acid" = 10, \
-		"wound" = 5, \
+		"wound" = 15, \
 		"damage_threshold" = 1)
 
 /* Medium armor values
  * Decent mobility
  * Decent environmental resistances
- * Decent defense 
+ * Decent defense
  * Decent DT
- * 
+ *
  * +35 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_MEDIUM list(\
@@ -90,15 +90,15 @@
 		"rad" = 25, \
 		"fire" = 25, \
 		"acid" = 25, \
-		"wound" = 10, \
+		"wound" = 25, \
 		"damage_threshold" = 3)
 
 /* Heavy armor values
  * Low mobility
  * Decent environmental resistances
- * High defense 
+ * High defense
  * Lot of DT
- * 
+ *
  * +45 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_HEAVY list(\
@@ -111,7 +111,7 @@
 		"rad" = 25, \
 		"fire" = 35, \
 		"acid" = 35, \
-		"wound" = 25, \
+		"wound" = 35, \
 		"damage_threshold" = 5)
 
 /* Salvaged PA values
@@ -119,14 +119,11 @@
  * Good environmental resistances
  * Great defense
  * Lots of DT
- * 
- * +80 effective HP
- * +20 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_SALVAGE list(\
-		"linemelee" = 80, \
-		"linebullet" = 80, \
-		"linelaser" = 100, \
+		"linemelee" = 70, \
+		"linebullet" = 70, \
+		"linelaser" = 60, \
 		"energy" = 30, \
 		"bomb" = 60, \
 		"bio" = 80, \
@@ -140,19 +137,16 @@
  * High mobility
  * Amazing environmental resistances
  * OP defense
- * 
- * +125 effective HP
- * +25 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_PA list(\
-		"linemelee" = 125, \
-		"linebullet" = 125, \
-		"linelaser" = 150, \
-		"energy" = 40, \
+		"linemelee" = 70, \
+		"linebullet" = 70, \
+		"linelaser" = 60, \
+		"energy" = 30, \
 		"bomb" = 90, \
 		"bio" = 100, \
 		"rad" = 50, \
-		"fire" = 95, \
+		"fire" = 70, \
 		"acid" = 95, \
 		"wound" = 100, \
 		"damage_threshold" = 12)
@@ -373,53 +367,53 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 /* Armor slowdowns
  * * * * * * * * * * * */
 
-/* 
+/*
  * Global multiplier for armor slowdown
  * Change this, changes them all
 */
 #define ARMOR_SLOWDOWN_GLOBAL_MULT 1
 
-/* 
+/*
  * No slowdown
  * Yup
 */
 #define ARMOR_SLOWDOWN_NONE 0
 
-/* 
+/*
  * Light Armor
  * Basically clothes, but more
 */
 #define ARMOR_SLOWDOWN_LIGHT 0
 
-/* 
+/*
  * Medium Armor
  * Substantial armor
 */
-#define ARMOR_SLOWDOWN_MEDIUM 0.5
+#define ARMOR_SLOWDOWN_MEDIUM 0.25
 
-/* 
+/*
  * Heavy Armor
  * Bulky suits of heavy armor
 */
-#define ARMOR_SLOWDOWN_HEAVY 1
+#define ARMOR_SLOWDOWN_HEAVY 0.75
 
-/* 
+/*
  * Salvaged Power Armor
  * Basically wearing a car
 */
-#define ARMOR_SLOWDOWN_SALVAGE 2
+#define ARMOR_SLOWDOWN_SALVAGE 1
 
-/* 
+/*
  * Power Armor
  * Basically driving a car
 */
-#define ARMOR_SLOWDOWN_PA 1
+#define ARMOR_SLOWDOWN_PA 0.75
 
 /* Armor slowdown modifiers
- * Multipliers to armor slowdown 
+ * Multipliers to armor slowdown
  * * * * * * * * * * * */
 
-/* 
+/*
  * Less armor slowdown, yay!
  * T1 - Slightly lighter materials, less clothes
  * T2 - Lightened materials, streamlined or something
@@ -429,7 +423,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 #define ARMOR_SLOWDOWN_LESS_T2 0.8
 #define ARMOR_SLOWDOWN_LESS_T3 0.7
 
-/* 
+/*
  * More armor slowdown, ack!
  * T1 - Heavier clothing or padding
  * T2 - Substantial extra plating
