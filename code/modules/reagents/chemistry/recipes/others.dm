@@ -21,7 +21,7 @@
 	name = "Purified Water"
 	id = /datum/reagent/water/purified
 	results = list(/datum/reagent/water/purified = 1)
-	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/water_purifier = 1)
+	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/water_purifier = 2)
 
 /datum/chemical_reaction/metalgen_imprint/on_reaction(datum/reagents/holder, created_volume)
 	var/datum/reagent/metalgen/MM = holder.get_reagent(/datum/reagent/metalgen)

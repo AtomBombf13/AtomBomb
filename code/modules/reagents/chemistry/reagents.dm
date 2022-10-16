@@ -57,6 +57,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/value = REAGENT_VALUE_NONE //How much does it sell for in cargo?
 	var/datum/material/material //are we made of material?
 
+	var/water_level = -0.5 //Hacky way to get around the whole thirst being a joke
+
 /datum/reagent/New()
 	. = ..()
 
@@ -89,6 +91,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	current_cycle++
 	if(holder)
 		holder.remove_reagent(type, metabolization_rate * M.metabolism_efficiency) //By default it slowly disappears.
+	M.water += water_level
 
 //called when a mob processes chems when dead.
 /datum/reagent/proc/on_mob_dead(mob/living/carbon/M)
