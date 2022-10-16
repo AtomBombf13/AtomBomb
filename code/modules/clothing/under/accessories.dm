@@ -292,8 +292,8 @@
 //////////////
 
 /obj/item/clothing/accessory/lawyers_badge
-	name = "attorney's badge"
-	desc = "Fills you with the conviction of JUSTICE. Lawyers tend to want to show it to everyone they meet."
+	name = "NCR agent's badge"
+	desc = "A polished badge representative of courage, honor, and morally dubious undercover missions."
 	icon_state = "lawyerbadge"
 
 /obj/item/clothing/accessory/lawyers_badge/attack_self(mob/user)

@@ -386,9 +386,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 750
 
 	loadout_options = list(
-		/datum/outfit/loadout/repbrahminbaron,
-		/datum/outfit/loadout/repambassador,
-		/datum/outfit/loadout/repexecutive
+		/datum/outfit/loadout/repsenator,
+		/datum/outfit/loadout/repagent,
+		/datum/outfit/loadout/repambassador
 		)
 
 	matchmaking_allowed = list(
@@ -413,8 +413,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncr = 2
 		)
 
-/datum/outfit/loadout/repbrahminbaron
-	name = "Brahmin Baron"
+/datum/outfit/loadout/repsenator
+	name = "Senator"
 	suit = /obj/item/clothing/under/suit/burgundy
 	shoes = /obj/item/clothing/shoes/f13/cowboy
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
@@ -423,8 +423,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_two = 1
 		)
 
-/datum/outfit/loadout/repambassador
-	name = "Ambassador"
+/datum/outfit/loadout/repagent
+	name = "Government Agent"
+	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/under/rank/security/detective/grey
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
@@ -432,11 +433,12 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_two = 1,
 		/obj/item/clothing/accessory/waistcoat = 1,
 		/obj/item/clothing/suit/toggle/lawyer/black = 1,
-		/obj/item/storage/briefcase = 1
+		/obj/item/storage/briefcase = 1,
+		/obj/item/clothing/accessory/lawyers_badge = 1
 		)
 
-/datum/outfit/loadout/repexecutive
-	name = "Executive"
+/datum/outfit/loadout/repambassador
+	name = "Ambassador"
 	suit = /obj/item/clothing/under/suit_jacket/tan
 	shoes = /obj/item/clothing/shoes/laceup
 	head = /obj/item/clothing/head/helmet/f13/rustedcowboyhat
