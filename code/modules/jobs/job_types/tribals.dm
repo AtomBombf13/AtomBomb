@@ -118,7 +118,7 @@ Tribal Chief
 	suit_store =	/obj/item/twohanded/spear/bonespear/deathclaw
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/warpaint_bowl=1,
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/flashlight/lantern = 1,
@@ -254,7 +254,7 @@ Tribal Head Hunter
 	belt = /obj/item/twohanded/spearaxe
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/healingpowder=2,
+		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/warpaint_bowl=1,
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/restraints/legcuffs/bola/tactical=2,
@@ -410,7 +410,7 @@ Villager
 	shoes = /obj/item/clothing/shoes/sandal
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/healingpowder=1,
+		/obj/item/reagent_containers/pill/patch/healingpowder=1,
 		/obj/item/warpaint_bowl=1,
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/flashlight/flare/torch=1
@@ -520,7 +520,7 @@ Hunter
 	shoes = /obj/item/clothing/shoes/sandal
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/healingpowder=2,
+		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/warpaint_bowl=1,
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/flashlight/flare/torch=1
@@ -590,7 +590,7 @@ Spirit-Pledged
 	backpack_contents = list(
 		/obj/item/twohanded/spear/bonespear=1,
 		/obj/item/melee/onehanded/knife/bone=1,
-		/obj/item/reagent_containers/pill/healingpowder=1
+		/obj/item/reagent_containers/pill/patch/healingpowder=1
 	)
 
 /datum/outfit/loadout/gardener
@@ -641,7 +641,7 @@ Guardian
 	suit_store = /obj/item/twohanded/spear/bonespear/deathclaw
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/healingpowder=2,
+		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/warpaint_bowl=1,
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/flashlight/flare/torch=1,

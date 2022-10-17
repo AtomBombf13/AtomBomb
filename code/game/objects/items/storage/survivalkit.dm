@@ -22,8 +22,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/survivalkit/tribal/PopulateContents()
-	new /obj/item/reagent_containers/pill/healingpowder(src)
-	new /obj/item/reagent_containers/pill/healingpowder(src)
+	new /obj/item/reagent_containers/pill/patch/healingpowder(src)
+	new /obj/item/reagent_containers/pill/patch/healingpowder(src)
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 
@@ -74,8 +74,8 @@
 	color = "#d1ffb3"
 
 /obj/item/storage/survivalkit/medical/tribal/PopulateContents()
-	new /obj/item/reagent_containers/pill/healingpowder(src)
-	new /obj/item/reagent_containers/pill/healingpowder(src)
+	new /obj/item/reagent_containers/pill/patch/healingpowder(src)
+	new /obj/item/reagent_containers/pill/patch/healingpowder(src)
 	new /obj/item/stack/medical/gauze/improvised(src)
 	new /obj/item/stack/medical/mesh/aloe(src)
 

@@ -33,7 +33,7 @@
 
 /datum/crafting_recipe/healpowder  //keep the number of plants needed low so picking wild plants is viable. balance botany instead.
 	name = "Healing powder"
-	result = /obj/item/reagent_containers/pill/healingpowder
+	result = /obj/item/reagent_containers/pill/patch/healingpowder
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 1)
 	time = 5

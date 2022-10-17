@@ -12260,7 +12260,7 @@
 	},
 /area/f13/wasteland)
 "fct" = (
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 10;
 	icon_state = "dirt"
@@ -12314,7 +12314,7 @@
 /area/f13/wasteland)
 "fdf" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "fdm" = (
@@ -12426,7 +12426,7 @@
 /area/f13/wasteland)
 "feR" = (
 /obj/structure/closet/cabinet,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "ffa" = (
@@ -14407,7 +14407,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -17198,7 +17198,7 @@
 /area/f13/building)
 "hbw" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "hbH" = (
@@ -24184,7 +24184,7 @@
 /area/f13/building)
 "jRy" = (
 /obj/structure/table/wood/poker,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "jRI" = (
@@ -24744,8 +24744,8 @@
 /area/f13/wasteland)
 "kbQ" = (
 /obj/structure/closet/crate/large,
-/obj/item/reagent_containers/pill/healingpowder,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -36231,8 +36231,8 @@
 /area/f13/wasteland)
 "pbf" = (
 /obj/structure/rack,
-/obj/item/reagent_containers/pill/healingpowder,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /obj/effect/spawner/lootdrop/clothing_low,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/hypospray/medipen/medx,
@@ -43985,8 +43985,8 @@
 /area/f13/village)
 "suQ" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/healingpowder,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /obj/item/clothing/under/f13/legskirt,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building)
@@ -52467,7 +52467,7 @@
 "wlJ" = (
 /obj/structure/table/wood/settler,
 /obj/item/reagent_containers/food/drinks/flask,
-/obj/item/reagent_containers/pill/healingpowder,
+/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "wmp" = (

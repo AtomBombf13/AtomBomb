@@ -803,7 +803,7 @@ Raider
 	box = /obj/item/storage/survivalkit/tribal
 	box_two = /obj/item/storage/survivalkit/medical/tribal
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/flashlight/lantern = 1,
 		)
 
@@ -844,7 +844,7 @@ Raider
 		/obj/item/twohanded/sledgehammer/warmace = 1,
 		/obj/item/melee/onehanded/knife/ritualdagger = 1,
 		/obj/item/stack/medical/gauze/improvised = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/crafting_recipe/tribal = 1,
 		/obj/item/book/granter/trait/tribaltraditions =1,
 	)
@@ -860,7 +860,7 @@ Raider
 		/obj/item/reagent_containers/glass/bucket/wood = 1,
 		/obj/item/storage/bag/plants = 1,
 		/obj/item/crowbar/smithedunitool = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 3,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 3,
 		/obj/item/book/granter/trait/tribaltraditions =1,
 	)
 
@@ -873,7 +873,7 @@ Raider
 		/obj/item/gun/ballistic/bow/sturdy = 1,
 		/obj/item/storage/bag/tribe_quiver/archer = 1,
 		/obj/item/binoculars = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/trait/tribaltraditions =1,
 		)
 
@@ -908,7 +908,7 @@ Raider
 		/obj/item/clothing/under/f13/female/deadhorses = 1,
 		/obj/item/melee/onehanded/club/warclub = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 	)
 
 /datum/outfit/loadout/deadhorsesranged
@@ -930,7 +930,7 @@ Raider
 		/obj/item/storage/bag/plants=1,
 		/obj/item/cultivator=1,
 		/obj/item/reagent_containers/glass/bucket/wood=1,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/crafting_recipe/tribal/deadhorses = 1
 	)
 
@@ -957,7 +957,7 @@ Raider
 		/obj/item/storage/bag/plants = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket/wood = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/melee/unarmed/yaoguaigauntlet = 1,
 		/obj/item/warpaint_bowl = 1,
 		/obj/item/toy/crayon/spraycan = 2,
@@ -974,7 +974,7 @@ Raider
 		/obj/item/clothing/under/f13/female/eighties = 1,
 		/obj/item/gun/ballistic/shotgun/trench = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/reagent_containers/pill/patch/turbo = 2,
 		/obj/item/reagent_containers/pill/patch/jet = 2
 	)
@@ -989,7 +989,7 @@ Raider
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/gun/ballistic/automatic/smg/greasegun/worn = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/reagent_containers/pill/healingpowder = 2
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 	)
 
 /datum/outfit/loadout/eightiesshaman
@@ -1000,7 +1000,7 @@ Raider
 		/obj/item/clothing/under/f13/female/eighties = 1,
 		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 		/obj/item/ammo_box/shotgun/slug = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/storage/belt/utility/full = 1,
 		/obj/item/book/granter/crafting_recipe/tribal/eighties = 1
 	)
@@ -1027,7 +1027,7 @@ Raider
 		/obj/item/warpaint_bowl=1,
 		/obj/item/melee/onehanded/knife/ritualdagger = 1,
 		/obj/item/stack/medical/gauze/improvised = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/book/granter/crafting_recipe/tribal/wayfarer = 1,
 	)
 
@@ -1040,7 +1040,7 @@ Raider
 		/obj/item/clothing/under/f13/female/rustwalkers = 1,
 		/obj/item/gun/ballistic/automatic/autopipe = 1,
 		/obj/item/ammo_box/magazine/autopipe = 2,
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/circular_saw = 1
 	)
 

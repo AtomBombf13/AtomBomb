@@ -728,7 +728,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
 		/obj/item/ammo_box/loader/acp45 = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/machete = 1,
 		/obj/item/restraints/handcuffs = 1,
@@ -988,7 +988,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/melee/onehanded/machete = 1,
 		)
 
@@ -1041,7 +1041,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/melee/onehanded/machete/forgedmachete
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/reagent_containers/pill/healingpowder = 2
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1196,7 +1196,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	gloves = /obj/item/clothing/gloves/f13/crudemedical
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/smelling_salts = 1,
 		/obj/item/book/granter/trait/lowsurgery = 1,
