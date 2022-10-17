@@ -282,27 +282,6 @@
 							"NCR Trooper",
 						)
 
-/datum/gear/head/ncr_slouch
-	name = "NCR slouch hat"
-	path = /obj/item/clothing/head/f13/ncr/ncr_slouch
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Off-Duty",
-							"NCR Ranger",
-							"NCR Veteran Ranger"
-						)
-
 /// Eastwood
 
 /datum/gear/head/oasishelmet
