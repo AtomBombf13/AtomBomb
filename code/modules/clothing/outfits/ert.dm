@@ -192,6 +192,26 @@
 		/obj/item/gun/energy/pulse/pistol/loyalpin=1,\
 		/obj/item/construction/rcd/combat=1)
 
+/datum/outfit/ert/janitor
+	name = "ERT Janitor"
+
+	id = /obj/item/card/id/debug
+	suit = /obj/item/clothing/suit/space/hardsuit/ert
+	back = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/storage/box/engineer=1,\
+		/obj/item/grenade/clusterbuster/cleaner = 1,
+		/obj/item/melee/baton/loaded = 1,
+		/obj/item/mop/advanced = 1,
+		/obj/item/reagent_containers/glass/bucket = 1,
+		/obj/item/storage/box/lights/mixed = 1,
+	)
+	belt = /obj/item/storage/belt/janitor
+	glasses = /obj/item/clothing/glasses/night
+	l_pocket = /obj/item/grenade/chem_grenade/cleaner
+	r_pocket = /obj/item/grenade/chem_grenade/cleaner
+	l_hand = /obj/item/storage/bag/trash/bluespace
+	r_hand = /obj/item/mop/advanced
+
 /datum/outfit/ert/greybois
 	name = "Emergency Assistant"
 
