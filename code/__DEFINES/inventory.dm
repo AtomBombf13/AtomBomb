@@ -514,7 +514,7 @@ GLOBAL_LIST_INIT(ammobelt_allowed, typecacheof(list(
 	/obj/item/ammo_casing,
 	/obj/item/grenade,
 	/obj/item/reagent_containers/hypospray/medipen/stimpak,
-	/obj/item/reagent_containers/pill/healingpowder,
+	/obj/item/reagent_containers/pill/patch/healingpowder,
 	/obj/item/reagent_containers/pill/patch/healpoultice,
 	/obj/item/reagent_containers/pill/bitterdrink,
 	/obj/item/restraints/handcuffs,

@@ -347,7 +347,7 @@
 
 /obj/item/storage/box/medicine/powder5/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/reagent_containers/pill/healingpowder(src)
+		new /obj/item/reagent_containers/pill/patch/healingpowder(src)
 
 // -----------------------------------
 // POULTICE BOX

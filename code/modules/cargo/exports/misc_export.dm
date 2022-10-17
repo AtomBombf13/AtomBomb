@@ -10,11 +10,11 @@
 	/obj/item/reagent_containers/blood/radaway,
 	/obj/item/reagent_containers/hypospray/medipen/steady,
 	/obj/item/storage/pill_bottle/chem_tin/mentats,
-	/obj/item/reagent_containers/pill/healingpowder,
+	/obj/item/reagent_containers/pill/patch/healingpowder,
 	/obj/item/storage/pill_bottle/chem_tin/buffout,
 	/obj/item/reagent_containers/pill/stimulant,
 	/obj/item/storage/pill_bottle/chem_tin/radx,
-	/obj/item/reagent_containers/pill/healingpowder
+	/obj/item/reagent_containers/pill/patch/healingpowder
 	)
 
 /datum/export/item/chemshigh

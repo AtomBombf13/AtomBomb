@@ -72,7 +72,7 @@
 // ---------------------------------
 // HEALING POWDER
 
-/obj/item/reagent_containers/pill/healingpowder // 50hp over 50 seconds.
+/obj/item/reagent_containers/pill/patch/healingpowder // 50hp over 50 seconds.
 	name = "Healing powder"
 	desc = "A powder used to heal physical wounds derived from ground broc flowers and xander roots, commonly used by tribals."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
@@ -83,7 +83,7 @@
 // ---------------------------------
 // CUSTOM POWDER
 
-/obj/item/reagent_containers/pill/healingpowder/custom
+/obj/item/reagent_containers/pill/patch/healingpowder/custom
 	name = "Homebrew powder"
 	desc = "A mysterious mix of powders."
 	list_reagents = null
