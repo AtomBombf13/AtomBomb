@@ -10,8 +10,8 @@
 
 	weather_message = "<span class='notice'><i>You hear the crack of thunder as the rainstorm grows.</i></span>"
 	weather_overlay = "thunderstorm"
-	weather_duration_lower = 2400
-	weather_duration_upper = 7200
+	weather_duration_lower = 1200
+	weather_duration_upper = 2400
 	end_sound = 'sound/weather/thunder.ogg' //credit: boomlibrary
 	end_duration = 250
 	end_message = "<span class='notice'><font size=2>You start to hear the last of the rain as the sky begins to clear up.</font></span>"
@@ -46,8 +46,8 @@
 	area_types = list(/area/f13/wasteland/event)
 	probability = 0
 	target_trait = ZTRAIT_AWAY
-	weather_duration_lower = 18000
-	weather_duration_upper = 18000
+	weather_duration_lower = 1200
+	weather_duration_upper = 2400
 
 /datum/weather/rain/weather_act(mob/living/L)
 	if(iscarbon(L))
