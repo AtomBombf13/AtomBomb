@@ -193,10 +193,10 @@ ALLOW_VOTE_TRANSFER
 #ALLOW_VOTE_MODE
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
-VOTE_DELAY 18000
+VOTE_DELAY 7200
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
-VOTE_PERIOD 600
+VOTE_PERIOD 300
 
 ## autovote initial delay (deciseconds) before first automatic transfer vote call (default 120 minutes)
 ## Set to 0 to disable the subsystem altogether.
