@@ -52,7 +52,7 @@
 	result = /obj/item/reagent_containers/pill/bitterdrink
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
-				/obj/item/reagent_containers/glass/bottle = 1)
+				/obj/item/reagent_containers/glass/beaker = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_MEDICAL
@@ -63,7 +63,7 @@
 	result = /obj/item/storage/box/medicine/bitterdrink5
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
-				/obj/item/reagent_containers/glass/bottle = 5)
+				/obj/item/reagent_containers/glass/beaker = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 20
 	category = CAT_MEDICAL
