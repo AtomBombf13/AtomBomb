@@ -62,6 +62,7 @@ datum/chemical_reaction/rezadone
 	required_reagents = list(/datum/reagent/medicine/salglu_solution = 2, /datum/reagent/consumable/baked_banana_peel = 1)
 	mob_react = FALSE
 
+/*
 /datum/chemical_reaction/mine_salve
 	name = "Miner's Salve"
 	id = /datum/reagent/medicine/mine_salve
@@ -73,6 +74,7 @@ datum/chemical_reaction/rezadone
 	id = "mine_salve_2"
 	results = list(/datum/reagent/medicine/mine_salve = 15)
 	required_reagents = list(/datum/reagent/toxin/plasma = 5, /datum/reagent/iron = 5, /datum/reagent/consumable/sugar = 1) // A sheet of plasma, a twinkie and a sheet of metal makes four of these
+*/
 
 /datum/chemical_reaction/synthflesh
 	name = "Synthflesh"
