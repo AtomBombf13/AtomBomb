@@ -13580,7 +13580,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/start/f13/raider,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -18604,7 +18603,6 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/raider,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -20105,7 +20103,6 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/raider,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -29828,10 +29825,6 @@
 /obj/item/geiger_counter,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
-"vLY" = (
-/obj/effect/landmark/start/f13/raider,
-/turf/open/floor/f13/wood,
-/area/f13/tunnel)
 "vMn" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 1
@@ -30336,7 +30329,6 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start/f13/raider,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -65574,7 +65566,7 @@ khg
 mVE
 vZV
 bsC
-vLY
+mVE
 mVE
 bsC
 ugW
@@ -66859,7 +66851,7 @@ sWJ
 mby
 eGs
 bsC
-vLY
+mVE
 gmb
 laM
 sEs
@@ -67116,7 +67108,7 @@ ylO
 mby
 dzF
 bsC
-vLY
+mVE
 mVE
 rqX
 iUK
