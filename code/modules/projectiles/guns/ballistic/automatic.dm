@@ -2371,11 +2371,11 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
-	name = "assassin sniper rifle"
+	name = "speculator sniper rifle"
 	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	icon_state = "venator_sniper"
 	item_state = "venator_sniper"

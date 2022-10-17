@@ -1036,10 +1036,10 @@
 	icon_state = "ncrdogtagcaptain"
 
 /obj/item/card/id/dogtag/legforgemaster
-	name = "camp exactor medallion"
-	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to the Camp Exactor."
+	name = "camp follower medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a follower of the legion."
 	icon_state = "legionmedallionprime"
-	assignment = "camp cxactor medallion"
+	assignment = "camp follower medallion"
 
 /obj/item/card/id/dogtag/legslavemaster
 	name = "slavemaster medallion"
@@ -1090,11 +1090,11 @@
 	assignment = "centurion medallion"
 
 /obj/item/card/id/dogtag/legvenator
-	name = "explorer medallion"
+	name = "speculator medallion"
 	desc = "A golden disc awarded to the elite hunters of the legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
 	item_state = "card-id_leg2"
-	assignment = "Venator"
+	assignment = "Speculator medallion"
 
 
 /obj/item/card/id/dogtag/legpriest

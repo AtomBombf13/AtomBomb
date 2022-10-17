@@ -141,7 +141,7 @@ GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Detective",
 	"Merchant",
 	"Prospector",
-	"Barkeep",
+	"Barkeeper",
 	"Town Doctor",
 	"Researcher",
 	"Preacher",
@@ -162,12 +162,12 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Veteran Decanus",
 	"Legion Prime Decanus",
 	"Legion Recruit Decanus",
-	"Legion Assassin",
+	"Legion Speculator",
 	"Legion Explorer",
 	"Veteran Legionnaire",
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
-	"Camp Exactor",
+	"Camp Follower",
 	"Legion Immune",
 	"Legion Slave"
 ))
