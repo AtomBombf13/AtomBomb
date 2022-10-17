@@ -282,6 +282,29 @@
 							"NCR Trooper",
 						)
 
+/datum/gear/head/ncr_slouch
+	name = "NCR slouch hat"
+	path = /obj/item/clothing/head/f13/ncr/ncr_slouch
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Medical Officer",
+							"NCR Sergeant",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+							"NCR Off-Duty",
+							"NCR Ranger",
+							"NCR Veteran Ranger"
+						)
+
+/// Eastwood
+
 /datum/gear/head/oasishelmet
 	name = "light security helmet"
 	path = /obj/item/clothing/head/helmet/blueshirt
@@ -296,6 +319,7 @@
 							"Shopkeeper",
 						)
 
+/// Khan
 
 /datum/gear/head/khan_bandana
 	name = "Great Khan helmet"
@@ -320,3 +344,24 @@
 	cost = 2
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
+
+/// Brotherhood of Steel
+
+/datum/gear/head/bos_beret
+	name = "brotherhood beret"
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	path = /obj/item/clothing/head/f13/boscap/beret
+	restricted_desc = "BoS"
+	restricted_roles = list(
+							"Head Paladin",
+							"Knight-Captain",
+							"Head Scribe",
+							"Senior Paladin",
+							"Senior Knight",
+							"Senior Scribe",
+							"Paladin",
+							"Knight",
+							"Scribe",
+							"Initiate",
+							"Brotherhood Off-Duty"
+	)
