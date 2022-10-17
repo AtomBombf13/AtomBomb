@@ -34,6 +34,14 @@
 	has_sensor = NO_SENSORS
 	alt_covers_chest = TRUE
 
+/obj/item/clothing/under/syndicate/brotherhood/midwestern
+	name = "midwestern fatigues"
+	desc = "A non-descript and slightly suspicious looking turtleneck with digital camouflage cargo pants."
+	icon_state = "newsyndicate"
+	item_state = "bl_suit"
+	has_sensor = NO_SENSORS
+	alt_covers_chest = TRUE
+
 /obj/item/clothing/under/syndicate/bloodred/sleepytime
 	name = "blood-red pajamas"
 	desc = "Do operatives dream of nuclear sheep?"
