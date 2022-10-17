@@ -639,6 +639,12 @@
 	icon_state = "explorer2"
 	item_state = "explorer2"
 
+/obj/item/storage/belt/webbing/security /// Darker chest rig does the same as the rest, more for flavor
+	name = "security chest rig"
+	desc = "A tactical webbing made out of reinforced kevlar to hold all your gear."
+	icon_state = "securitywebbing"
+	item_state = "securitywebbing"
+
 ////////////////
 // Bandoliers //
 ////////////////
