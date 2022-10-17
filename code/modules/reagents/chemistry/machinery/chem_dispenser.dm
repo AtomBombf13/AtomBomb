@@ -75,7 +75,6 @@
 	)
 
 	var/list/upgrade_reagents3 = list(
-		/datum/reagent/medicine/mine_salve,
 		/datum/reagent/toxin
 	)
 
