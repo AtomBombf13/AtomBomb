@@ -282,6 +282,8 @@
 							"NCR Trooper",
 						)
 
+/// Eastwood
+
 /datum/gear/head/oasishelmet
 	name = "light security helmet"
 	path = /obj/item/clothing/head/helmet/blueshirt
@@ -296,6 +298,7 @@
 							"Shopkeeper",
 						)
 
+/// Khan
 
 /datum/gear/head/khan_bandana
 	name = "Great Khan helmet"
@@ -320,3 +323,24 @@
 	cost = 2
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
+
+/// Brotherhood of Steel
+
+/datum/gear/head/bos_beret
+	name = "brotherhood beret"
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	path = /obj/item/clothing/head/f13/boscap/beret
+	restricted_desc = "BoS"
+	restricted_roles = list(
+							"Head Paladin",
+							"Knight-Captain",
+							"Head Scribe",
+							"Senior Paladin",
+							"Senior Knight",
+							"Senior Scribe",
+							"Paladin",
+							"Knight",
+							"Scribe",
+							"Initiate",
+							"Brotherhood Off-Duty"
+	)
