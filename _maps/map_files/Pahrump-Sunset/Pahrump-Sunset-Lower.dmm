@@ -5383,6 +5383,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
+"bTN" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/offices2nd)
 "bUo" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
@@ -6535,6 +6539,10 @@
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
+"coO" = (
+/obj/machinery/vending/hydroseeds,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/offices2nd)
 "cpb" = (
 /mob/living/simple_animal/hostile/supermutant/rangedmutant,
 /turf/open/floor/plasteel/neutral/side{
@@ -14618,6 +14626,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/plantgenes/seedvault,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices2nd)
 "iZv" = (
@@ -19709,6 +19718,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/vault)
+"nra" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/offices2nd)
 "nre" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbroken"
@@ -23653,6 +23670,7 @@
 	pixel_y = 10
 	},
 /obj/item/key/vertibird,
+/obj/item/storage/box/disks_plantgene,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices2nd)
 "qDL" = (
@@ -25570,6 +25588,7 @@
 	pixel_y = 23;
 	start_charge = 500
 	},
+/obj/machinery/biogenerator,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices2nd)
 "snv" = (
@@ -28541,8 +28560,7 @@
 	},
 /area/f13/caves)
 "uHs" = (
-/obj/structure/wreck/trash/engine,
-/obj/structure/kitchenspike,
+/obj/machinery/seed_extractor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices2nd)
 "uHx" = (
@@ -91452,7 +91470,7 @@ aZx
 dYb
 fWS
 qDG
-fHe
+nra
 amK
 qXn
 qRO
@@ -91967,9 +91985,9 @@ dYb
 fHe
 fHe
 evL
+bTN
 fHe
-fHe
-fHe
+bTN
 fHe
 fHe
 rEV
@@ -92477,13 +92495,13 @@ nja
 jNn
 dRi
 tZM
+coO
 fHe
+bTN
 fHe
+bTN
 fHe
-fHe
-fHe
-fHe
-fHe
+bTN
 fHe
 fHe
 iGw
@@ -92993,11 +93011,11 @@ ngl
 dYb
 iZt
 fHe
+bTN
 fHe
+bTN
 fHe
-fHe
-fHe
-fHe
+bTN
 fHe
 fHe
 iGw

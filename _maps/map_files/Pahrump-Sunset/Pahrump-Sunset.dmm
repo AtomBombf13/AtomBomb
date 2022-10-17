@@ -8929,7 +8929,7 @@
 /area/f13/village)
 "aHc" = (
 /obj/structure/window/fulltile/house,
-/turf/closed/wall/f13/wood/house,
+/turf/open/floor/f13/wood,
 /area/f13/city)
 "aHd" = (
 /obj/structure/kitchenspike,
@@ -17707,6 +17707,12 @@
 /area/f13/building)
 "btz" = (
 /obj/machinery/light/small,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
+"btA" = (
+/obj/structure/sink/well{
+	pixel_x = -15
+	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "btD" = (
@@ -27460,6 +27466,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"fqp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sink/well,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "fqr" = (
 /obj/structure/tires/half,
 /turf/open/indestructible/ground/outside/desert,
@@ -52280,6 +52291,10 @@
 	icon_state = "yellowrustychess"
 	},
 /area/f13/building/massfusion)
+"rep" = (
+/obj/item/storage/box/disks_plantgene,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "rer" = (
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/ncr)
@@ -78557,8 +78572,8 @@ nbb
 mji
 aOk
 cFK
-ijg
 aOk
+btA
 aOk
 aOk
 bAu
@@ -103329,7 +103344,7 @@ aSo
 aSo
 abY
 wRa
-aSo
+rep
 uyt
 eRX
 uyt
@@ -129619,7 +129634,7 @@ aOk
 cFK
 cFK
 aOk
-cFK
+fqp
 aOk
 xaI
 qSh
