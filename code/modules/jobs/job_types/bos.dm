@@ -117,7 +117,7 @@ Head Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/hpstand, //Tribeam laser + Hardened T-51
-	/datum/outfit/loadout/hpheavy, //Gauss + Glock + Hardened T-51
+	//datum/outfit/loadout/hpheavy, //Gauss + Glock + Hardened T-51
 	/datum/outfit/loadout/hpgat		//Gatling + Hardened T-51
 	)
 
@@ -177,7 +177,7 @@ Head Paladin
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3
 	)
-
+/* Bad
 /datum/outfit/loadout/hpheavy
 	name = "Heavy Head Paladin"
 	backpack_contents = list(
@@ -186,7 +186,7 @@ Head Paladin
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
 	)
-
+*/
 /datum/outfit/loadout/hpgat
 	name = "Laser Gatling Head Paladin"
 	backpack_contents = list(
