@@ -624,6 +624,7 @@
 /obj/item/storage/belt/webbing
 	name = "chest rig"
 	desc = "A tactical webbing vest to hold all your gear."
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	icon_state = "militarywebbing"
 	item_state = "militarywebbing"
 	slot_flags = ITEM_SLOT_NECK
@@ -646,6 +647,12 @@
 	icon_state = "explorer2"
 	item_state = "explorer2"
 
+/obj/item/storage/belt/webbing/security /// Darker chest rig does the same as the rest, more for flavor
+	name = "security chest rig"
+	desc = "A tactical webbing made out of reinforced kevlar to hold all your gear."
+	icon_state = "securitywebbing"
+	item_state = "securitywebbing"
+
 ////////////////
 // Bandoliers //
 ////////////////
@@ -653,6 +660,7 @@
 /obj/item/storage/belt/bandolier
 	name = "bandolier"
 	desc = "A bandolier for holding ammunition."
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	icon_state = "bandolier"
 	item_state = "bandolier"
 
