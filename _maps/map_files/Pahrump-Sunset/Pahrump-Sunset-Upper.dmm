@@ -241,12 +241,6 @@
 "anR" = (
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
-"aoF" = (
-/obj/structure/railing/corner{
-	dir = 8
-	},
-/turf/open/floor/f13/wood,
-/area/f13/legion)
 "aqU" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/inside/mountain,
@@ -1471,11 +1465,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
-"cDO" = (
-/obj/structure/fluff/railing,
-/obj/structure/table/wood,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
 "cFm" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -75196,7 +75185,7 @@ qxF
 fxn
 lcB
 iEW
-cDO
+wZn
 ebv
 fxn
 cHt
@@ -75453,7 +75442,7 @@ nSn
 ioD
 eZe
 iEW
-cDO
+wZn
 ebv
 fxn
 cHt
@@ -75710,7 +75699,7 @@ vLb
 fxn
 lcB
 iEW
-aoF
+iEW
 iEW
 fxn
 cHt
