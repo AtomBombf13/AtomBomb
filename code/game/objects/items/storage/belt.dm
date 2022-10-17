@@ -617,6 +617,7 @@
 /obj/item/storage/belt/webbing
 	name = "chest rig"
 	desc = "A tactical webbing vest to hold all your gear."
+	mob_overlay_icon = 'icons/onmob/clothes/belt.dmi'
 	icon_state = "militarywebbing"
 	item_state = "militarywebbing"
 	slot_flags = ITEM_SLOT_NECK
@@ -652,6 +653,7 @@
 /obj/item/storage/belt/bandolier
 	name = "bandolier"
 	desc = "A bandolier for holding ammunition."
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	icon_state = "bandolier"
 	item_state = "bandolier"
 
