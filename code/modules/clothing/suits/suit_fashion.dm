@@ -30,6 +30,12 @@
 	icon_state = "scribecoat"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1)
 
+/obj/item/clothing/suit/toggle/labcoat/robe_hubologist
+	name = "hubologist robe"
+	desc = "A black robe worn by Adepts of Hubology Studies.<br>Beware - the spirits of the dead are all around us!"
+	icon_state = "hubologist"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+
 /obj/item/clothing/suit/cyborg_suit
 	name = "cyborg suit"
 	desc = "Suit for a cyborg costume."

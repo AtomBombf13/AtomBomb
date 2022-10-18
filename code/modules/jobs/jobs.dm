@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Legion Centurion",
 
 	"Mayor",
-	"Marshal",
+	"Provost Marshal",
 
 	"Enclave Lieutenant",
 
@@ -136,8 +136,8 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 
 GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Mayor",
-	"Marshal",
-	"Deputy",
+	"Provost Marshal",
+	"Deputy Marshal",
 	"Detective",
 	"Merchant",
 	"Prospector",

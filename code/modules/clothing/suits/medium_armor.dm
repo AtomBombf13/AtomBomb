@@ -970,6 +970,13 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "town_marshal"
 
+/obj/item/clothing/suit/armor/medium/combat/town
+	name = "eastwood security combat armor"
+	desc = "A traditional Vault-Tec riot vest reinforced for use out in wastes. Features wrist and legguards compared to standard version"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "town_armor"
+
 /obj/item/clothing/suit/armor/medium/town/riot //UN Glowie
 	name = "eastwood marshal riot armor"
 	desc = "A set of pristine L.A police riot armor known mainly from use by the NCR Rangers these days. This set is covered over by vault colored duster and looks way cleaner than most sets out there."

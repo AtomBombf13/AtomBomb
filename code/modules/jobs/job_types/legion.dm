@@ -277,7 +277,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
-		/obj/item/ammo_box/magazine/d12g = 2,
+		/obj/item/ammo_box/shotgun/buck = 3,
+		/obj/item/ammo_box/shotgun/trainshot = 1
 		)
 
 // VETERAN DECANUS
@@ -1062,9 +1063,12 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	display_order = JOB_DISPLAY_ORDER_CAMPFOLLOWER
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
 
-	loadout_options = list(	//ALL: Machete
+	loadout_options = list(
+		/datum/outfit/loadout/servant,
+		/datum/outfit/loadout/worker,
+		/datum/outfit/loadout/treasurer,
 		/datum/outfit/loadout/forgemaster,	// Explosives and base Building
-		/datum/outfit/loadout/headmedicus,	// Head Surgeon
+		/datum/outfit/loadout/headmedicus	// Head Surgeon
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
@@ -1074,14 +1078,55 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	gloves = null
 	r_pocket = /obj/item/flashlight/lantern
-	suit_store = 	/obj/item/melee/onehanded/machete/forgedmachete
+	head = /obj/item/clothing/head/f13/auxilia
+	uniform	= /obj/item/clothing/under/f13/legauxiliaf
 	backpack_contents = list(
+		/obj/item/clothing/under/f13/legauxilia = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/stack/sheet/metal/twenty = 2,
 		/obj/item/stack/sheet/mineral/wood/twenty = 1,
 		/obj/item/stack/sheet/leather/twenty = 1,
 		/obj/item/stack/sheet/cloth/thirty = 1,
-		/obj/item/stack/sheet/prewar/twenty = 1
+		)
+
+/datum/outfit/loadout/servant
+	name = "Servant"
+	gloves = /obj/item/clothing/gloves/f13/crudemedical
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/smelling_salts = 1,
+		/obj/item/book/granter/trait/lowsurgery = 1,
+		/obj/item/reagent_containers/food/condiment/flour = 2,
+		/obj/item/storage/box/bowls = 1,
+		/obj/item/reagent_containers/glass/beaker/large = 1,
+		/obj/item/soap/homemade = 1,
+		/obj/item/lighter = 1,
+		)
+
+/datum/outfit/loadout/worker
+	name = "Worker"
+	suit = /obj/item/clothing/suit/armor/outfit/slavelabor
+	uniform = /obj/item/clothing/under/f13/legslave
+	shoes =	/obj/item/clothing/shoes/f13/rag
+	r_hand = /obj/item/flashlight/flare/torch
+	backpack_contents = list(
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/soap/homemade = 1,
+		/obj/item/shovel/spade = 1,
+		)
+
+/datum/outfit/loadout/treasurer
+	name = "Treasurer"
+	neck = /obj/item/clothing/neck/mantle/treasurer
+	backpack_contents = list(
+		/obj/item/folder/red = 1,
+		/obj/item/paper/natural = 2,
+		/obj/item/pen/fountain = 1,
+		/obj/item/storage/bag/money/small/legion = 1,
+		/obj/item/taperecorder = 1,
 		)
 
 /datum/outfit/loadout/forgemaster
@@ -1092,7 +1137,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/weldingtool = 1,
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/book/granter/trait/explosives_advanced = 1,
-		/obj/item/clothing/gloves/blacksmith_mittens = 1
+		/obj/item/clothing/gloves/blacksmith_mittens = 1,
+		/obj/item/stack/sheet/prewar/five = 1
 		)
 
 /datum/outfit/loadout/headmedicus
@@ -1108,19 +1154,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	if(H.gender == FEMALE)
-		H.gender = MALE
-		H.real_name = random_unique_name(MALE)
-		H.name = H.real_name
-		if(H.wear_id)
-			var/obj/item/card/id/dogtag/L = H.wear_id
-			L.registered_name = H.name
-			L.update_label()
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionshield)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/grease_gun)

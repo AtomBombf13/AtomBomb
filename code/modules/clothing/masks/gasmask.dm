@@ -26,6 +26,13 @@
 	icon_state = "gas_clear"
 	flags_inv = HIDEEYES
 
+/obj/item/clothing/mask/gas/town
+	name = "eastwood security faceshield"
+	desc = "A stripped down riot faceshield with internals still intact and lens replaced with anti-flash version."
+	icon = 'icons/fallout/clothing/masks.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/mask.dmi'
+	icon_state = "vault"
+	flash_protect = 2
 
 // **** Welding gas mask ****
 

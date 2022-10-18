@@ -909,8 +909,8 @@
 	return ..()
 
 /obj/item/card/id/dogtag/sheriff
-	name = "marshal's badge"
-	desc = "A golden Marshal's badge."
+	name = "provost's badge"
+	desc = "A golden badge which shows honour and dedication."
 	assignment = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"

@@ -95,7 +95,7 @@ here's a tip, go search DEFINES/access.dm
 //Citykiller, big 10mm revolver - NPD Coat
 
 /datum/job/eastwood/f13sheriff
-	title = "Marshal"
+	title = "Provost Marshal"
 	flag = F13SHERIFF
 	display_order = JOB_DISPLAY_ORDER_SHERIFF
 	selection_color = "#af9172"
@@ -125,13 +125,12 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 /datum/outfit/job/eastwood/f13sheriff
-	name = "Marshal"
+	name = "Provost Marshal"
 	jobtype = /datum/job/eastwood/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff
 	ears = /obj/item/radio/headset/headset_town/lawman
 	glasses  = /obj/item/clothing/glasses/sunglasses
 	belt = /obj/item/storage/belt/military/army
-	neck = /obj/item/storage/belt/holster/leg
 	uniform = /obj/item/clothing/under/f13/eastwood/vault/security
 	l_pocket = /obj/item/storage/bag/money/small/den
 	backpack_contents = list(
@@ -147,6 +146,8 @@ here's a tip, go search DEFINES/access.dm
 	name = "The Chief of Security"
 	suit = /obj/item/clothing/suit/armor/medium/town/riot
 	head = /obj/item/clothing/head/f13/town/riot
+	neck = /obj/item/storage/belt/webbing/security
+	gloves = /obj/item/clothing/gloves/f13/military
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller //I used the shotgun, wanna know why ?
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/slug = 1,
@@ -159,11 +160,14 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/eastwood/sheriff
 	suit = /obj/item/clothing/suit/armor/medium/duster/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
+	neck = /obj/item/storage/belt/holster/leg
+	gloves = /obj/item/clothing/gloves/rifleman
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/c4570 = 3,
 		/obj/item/gun_upgrade/scope/watchman = 1,
-		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1
+		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1,
+		/obj/item/book/granter/trait/rifleman = 1
 		)
 
 /datum/outfit/job/eastwood/f13sheriff/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -177,6 +181,106 @@ here's a tip, go search DEFINES/access.dm
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
+
+/*--------------------------------------------------------------*/
+//Deputy
+/*--------------------------------------------------------------*/
+//Police carbine, 10mm revolver - Vault Security Armor
+//Trail carbine, .357 revolver - Deputy Coat (OG DR loadout)
+//Lever-action Shotgun, .357 revolver - Deputy Coat
+
+/datum/job/eastwood/f13deputy
+	title = "Deputy Marshal"
+	flag = F13DEPUTY
+	display_order = JOB_DISPLAY_ORDER_DEPUTY
+	total_positions = 5
+	spawn_positions = 5
+	supervisors = "The Marshal, in his absence Mayor"
+	description = "You are part of a local police department as an officer of Eastwood, uphold laws and protect it's citizens whatever it takes. You are a subordinate of Marshal and in his absence Mayor, follow their orders as long as it doesn't endanger Eastwood or it's citizens."
+	selection_color = "#dcba97"
+	exp_requirements = 300
+
+	loadout_options = list(
+	/datum/outfit/loadout/vaultheavy,
+	/datum/outfit/loadout/frontier,
+	/datum/outfit/loadout/frontiershotgun
+	)
+
+	outfit = /datum/outfit/job/eastwood/f13deputy
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/eastwood
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/eastwood
+		)
+	)
+
+/datum/outfit/job/eastwood/f13deputy
+	name = "Deputy Marshal"
+	jobtype = /datum/job/eastwood/f13deputy
+	id = /obj/item/card/id/dogtag/deputy
+	uniform = /obj/item/clothing/under/f13/eastwood/vault/security
+	ears = /obj/item/radio/headset/headset_town/lawman
+	neck = /obj/item/storage/belt/holster/leg
+	belt = /obj/item/storage/belt/military/army
+	glasses  = /obj/item/clothing/glasses/sunglasses
+	r_pocket = /obj/item/flashlight/seclite
+	backpack_contents = list(
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
+		/obj/item/restraints/handcuffs = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/storage/bag/money/small/settler = 1
+		)
+
+/datum/outfit/loadout/vaultheavy
+	name = "Vault Security Classic"
+	head = /obj/item/clothing/head/helmet/f13/combat/town
+	suit = /obj/item/clothing/suit/armor/medium/combat/town
+	mask = /obj/item/clothing/mask/gas/town
+	gloves = /obj/item/clothing/gloves/f13/military
+	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m5mm=1,
+		/obj/item/gun/ballistic/revolver/colt6520 = 1
+		)
+
+/datum/outfit/loadout/frontier
+	name = "Rugged Frontiersman"
+	head = /obj/item/clothing/head/f13/town/deputy
+	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
+	uniform = /obj/item/clothing/under/f13/eastwood/deputy
+	gloves = /obj/item/clothing/gloves/rifleman
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44 = 2,
+		/obj/item/ammo_box/loader/a357 = 2,
+		/obj/item/gun/ballistic/revolver/colt357 = 1
+		)
+
+/datum/outfit/loadout/frontiershotgun
+	name = "Upfront Frontiersman"
+	head = /obj/item/clothing/head/f13/town/deputy
+	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
+	uniform = /obj/item/clothing/under/f13/eastwood/deputy
+	gloves = /obj/item/clothing/gloves/rifleman
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/bean = 1,
+		/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/ammo_box/loader/a357 = 2,
+		/obj/item/gun/ballistic/revolver/colt357 = 1
+		)
+
+/datum/outfit/job/eastwood/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+
 
 /*--------------------------------------------------------------*/
 //Detective
@@ -230,103 +334,6 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/detective_scanner=1,
 		/obj/item/storage/box/gloves=1,
 		/obj/item/storage/box/evidence=1)
-
-/*--------------------------------------------------------------*/
-//Deputy
-/*--------------------------------------------------------------*/
-//Trail carbine, .357 revolver - Deputy Coat (OG DR loadout)
-//Police shotgun, 10mm revolver - Vault Security Armor
-//Police carbine, 10mm revolver - Vault Security Armor
-
-/datum/job/eastwood/f13deputy
-	title = "Deputy"
-	flag = F13DEPUTY
-	display_order = JOB_DISPLAY_ORDER_DEPUTY
-	total_positions = 5
-	spawn_positions = 5
-	supervisors = "The Marshal"
-	description = "Day or night, you watch the walls with diligence. The wastes outside are lawless."
-	selection_color = "#dcba97"
-	exp_requirements = 300
-
-	loadout_options = list(
-	/datum/outfit/loadout/frontier,
-	/datum/outfit/loadout/frontiershotgun,
-	/datum/outfit/loadout/vaultheavy)
-
-	outfit = /datum/outfit/job/eastwood/f13deputy
-	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/eastwood
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/eastwood
-		)
-	)
-
-/datum/outfit/job/eastwood/f13deputy
-	name = "Deputy"
-	jobtype = /datum/job/eastwood/f13deputy
-	id = /obj/item/card/id/dogtag/deputy
-	uniform = /obj/item/clothing/under/f13/eastwood/deputy
-	ears = /obj/item/radio/headset/headset_town/lawman
-	neck = /obj/item/storage/belt/holster/leg
-	belt = /obj/item/storage/belt/military/army
-	glasses  = /obj/item/clothing/glasses/sunglasses
-	r_pocket = /obj/item/flashlight/seclite
-	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
-		/obj/item/restraints/handcuffs = 1,
-		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/grenade/flashbang = 1,
-		/obj/item/storage/bag/money/small/settler = 1
-		)
-
-/datum/outfit/loadout/frontier
-	name = "Rugged Frontiersman"
-	head = /obj/item/clothing/head/f13/town/deputy
-	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
-	gloves = /obj/item/clothing/gloves/rifleman
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
-	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44 = 2,
-		/obj/item/ammo_box/loader/a357 = 2,
-		/obj/item/gun/ballistic/revolver/colt357 = 1
-		)
-
-/datum/outfit/loadout/frontiershotgun
-	name = "Upfront Frontiersman"
-	head = /obj/item/clothing/head/f13/town/deputy
-	suit = /obj/item/clothing/suit/armor/light/duster/town/deputy
-	gloves = /obj/item/clothing/gloves/rifleman
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
-	shoes = /obj/item/clothing/shoes/jackboots
-	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/bean = 1,
-		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/ammo_box/loader/a357 = 2,
-		/obj/item/gun/ballistic/revolver/colt357 = 1
-		)
-
-/datum/outfit/loadout/vaultheavy
-	name = "Vault Security Classic"
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2/vault
-	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/Vault
-	shoes = /obj/item/clothing/shoes/jackboots
-	gloves = /obj/item/clothing/gloves/f13/military
-	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m5mm=1,
-		/obj/item/gun/ballistic/revolver/colt6520 = 1
-		)
-
-/datum/outfit/job/eastwood/f13deputy/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /*--------------------------------------------------------------*/
 //Researcher
@@ -735,27 +742,35 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/storage/bag/money/small/settler = 1
 		)
 
-
-/datum/outfit/loadout/mormon
+/datum/outfit/loadout/mormon //Translators and tribal teachers like in NV
 	name = "Mormon"
+	suit = /obj/item/clothing/suit/jacket/leather
 	backpack_contents = list(
+	/obj/item/book/granter/trait/mormon = 1,
 	/obj/item/reagent_containers/food/snacks/store/bread/plain = 5	
 	)
 
-/datum/outfit/loadout/hubologist
+/datum/outfit/loadout/hubologist //Crackheads and horny fiends
 	name = "Hubologist"
-	suit = /obj/item/clothing/suit/armor/light/duster/robe_hubologist
+	suit = /obj/item/clothing/suit/toggle/labcoat/robe_hubologist
+	backpack_contents = list(
+	/obj/item/reagent_containers/pill/patch/jet = 5,
+	/obj/item/reagent_containers/hypospray/medipen/psycho = 5	
+	)
 
-/datum/outfit/loadout/preacheratom
+/datum/outfit/loadout/preacheratom //Big hammer, big radiation energy
 	name = "Preacher of Atom"
 	r_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
 	uniform = /obj/item/clothing/under/f13/atomfaithful
+	backpack_contents = list(/obj/item/storage/pill_bottle/chem_tin/radx = 3) //You are going to need these buddy
+	
 /*
 /datum/outfit/loadout/reaver
 	name = "Reaver Follower"
 	backpack_contents = list(
 	)
 */
+
 /datum/job/eastwood/f13preacher/after_spawn(mob/living/H, mob/M)
 	. = ..()
 	if(H.mind)
