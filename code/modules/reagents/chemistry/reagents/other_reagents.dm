@@ -2338,7 +2338,7 @@
 	description = "blue sparkles that get everywhere"
 	color = "#4040FF" //A blueish color
 	glitter_type = /obj/effect/decal/cleanable/glitter/blue
-
+/*
 /datum/reagent/pax
 	name = "pax"
 	description = "A colorless liquid that suppresses violence on the subjects."
@@ -2357,7 +2357,7 @@
 /datum/reagent/pax/on_mob_end_metabolize(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_PACIFISM, type)
 	..()
-
+*/
 /datum/reagent/bz_metabolites
 	name = "BZ metabolites"
 	description = "A harmless metabolite of BZ gas"
@@ -2381,14 +2381,14 @@
 		if(changeling)
 			changeling.chem_charges = max(changeling.chem_charges-2, 0)
 	return ..()
-
+/*
 /datum/reagent/pax/peaceborg
 	name = "synth-pax"
 	description = "A colorless liquid that suppresses violence on the subjects. Cheaper to synthetize, but wears out faster than normal Pax."
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
-
+*/
 /datum/reagent/peaceborg_confuse
 	name = "Dizzying Solution"
 	description = "Makes the target off balance and dizzy"
@@ -2471,14 +2471,14 @@
 	color = "#BCC740" //RGB: 188, 199, 64
 	taste_description = "plant dust"
 	ghoulfriendly = TRUE
-
+/*
 /datum/reagent/pax/catnip
 	name = "catnip"
 	taste_description = "grass"
 	description = "A colorless liquid that makes people more peaceful and felines more happy."
 	metabolization_rate = 1.75 * REAGENTS_METABOLISM
 	value = REAGENT_VALUE_COMMON
-
+*/
 /datum/reagent/preservahyde
 	name = "Preservahyde"
 	description = "A powerful preservation agent, utilizing the preservative effects of formaldehyde with significantly less of the histamine."

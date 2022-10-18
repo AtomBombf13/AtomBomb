@@ -856,7 +856,6 @@
 	else
 		if(ishuman(M))
 			if(prob(80))
-				M.vomit(10)
 				M.adjustToxLoss(4*REAGENTS_EFFECT_MULTIPLIER, 0)
 			..()
 

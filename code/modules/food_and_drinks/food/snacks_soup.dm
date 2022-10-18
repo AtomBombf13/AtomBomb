@@ -247,7 +247,7 @@
 	name = "electron soup"
 	desc = "A gastronomic curiosity of ethereal origin. It is famed for the minature weather system formed over a properly prepared soup."
 	icon_state = "electronsoup"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/liquidelectricity = 5)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3)
 	tastes = list("mushroom" = 1, "electrons" = 4, "shockingly good" = 1)
 	filling_color = "#CC2B52"
 	foodtype = VEGETABLES | TOXIC
@@ -256,8 +256,8 @@
 	name = "spiral soup"
 	desc = "The swirling of this soup is both frightening, and enticing."
 	icon_state = "spiral_soup"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/liquidelectricity = 5, /datum/reagent/cryptobiolin = 10, /datum/reagent/toxin/rotatium = 10)
-	bonus_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/cryptobiolin = 15, /datum/reagent/toxin/rotatium = 15, /datum/reagent/consumable/liquidelectricity = 2)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/cryptobiolin = 10, /datum/reagent/toxin/rotatium = 10)
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 1, /datum/reagent/cryptobiolin = 15, /datum/reagent/toxin/rotatium = 15)
 	tastes = list("the floor" = 1, "the ceiling" = 1, "regret" = 2)
 	filling_color = "#4476e2"
 	foodtype = GROSS | TOXIC | VEGETABLES

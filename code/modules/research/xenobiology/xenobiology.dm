@@ -348,8 +348,6 @@
 		if(SLIME_ACTIVATE_MAJOR)
 			user.visible_message(span_warning("[user]'s skin starts flashing hypnotically..."), span_notice("Your skin starts forming odd patterns, pacifying creatures around you."))
 			for(var/mob/living/carbon/C in viewers(user, null))
-				if(C != user)
-					C.reagents.add_reagent(/datum/reagent/pax,2)
 			return 600
 
 /obj/item/slime_extract/green

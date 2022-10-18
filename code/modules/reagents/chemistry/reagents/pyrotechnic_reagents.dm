@@ -216,7 +216,7 @@
 		M.reagents.remove_reagent(/datum/reagent/oxygen, 0.5)
 		M.adjust_bodytemperature(15)
 	..()
-
+/*
 /datum/reagent/teslium //Teslium. Causes periodic shocks, and makes shocks against the target much more effective.
 	name = "Teslium"
 	description = "An unstable, electrically-charged metallic slurry. Periodically electrocutes its victim, and makes electrocutions against them more deadly. Excessively heating teslium results in dangerous destabilization. Do not allow to come into contact with water."
@@ -267,7 +267,7 @@
 			var/datum/species/jelly/luminescent/L = H.dna.species
 			L.extract_cooldown = max(0, L.extract_cooldown - 20)
 	..()
-
+*/
 /datum/reagent/firefighting_foam
 	name = "Firefighting Foam"
 	description = "A historical fire suppressant. Originally believed to simply displace oxygen to starve fires, it actually interferes with the combustion reaction itself. Vastly superior to the cheap water-based extinguishers found on NT vessels."
