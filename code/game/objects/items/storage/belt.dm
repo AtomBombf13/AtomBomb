@@ -661,6 +661,7 @@
 	name = "bandolier"
 	desc = "A bandolier for holding ammunition."
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	slot_flags = ITEM_SLOT_NECK
 	icon_state = "bandolier"
 	item_state = "bandolier"
 

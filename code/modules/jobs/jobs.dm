@@ -60,10 +60,10 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Mayor",
 	"Provost Marshal",
 
+	"Desperado Leader",
+
 	"Enclave Lieutenant",
 
-	"Noyan",
-	"Steward",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -126,10 +126,10 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight-Captain",
 	"Head Scribe",
 	"Senior Paladin",
-	"Paladin",
 	"Senior Knight",
-	"Knight",
 	"Senior Scribe",
+	"Paladin",
+	"Knight",
 	"Scribe",
 	"Initiate",
 ))
@@ -200,9 +200,9 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 
 GLOBAL_LIST_INIT(outlaw_positions, list(
 	"Raider",
-	"Desperado Enforcer",
-	"Desperado Leader",
 	"Great Khan",
+	"Desperado Leader",
+	"Desperado Enforcer"
 ))
 
 GLOBAL_LIST_INIT(enclave_positions, list(

@@ -237,6 +237,13 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_LEGION = 1)
 
+/obj/item/encryptionkey/headset_khan
+	name = "\improper Khan radio encryption key"
+	desc = "An encryption key for a radio headset.  To access the Khan channel, use :e."
+	icon_state = "cent_cypherkey"
+	independent = TRUE
+	channels = list(RADIO_CHANNEL_ENGINEERING = 1)
+
 /obj/item/encryptionkey/headset_cent
 	name = "\improper CentCom radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the CentCom channel, use :y."
