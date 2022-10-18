@@ -1053,7 +1053,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 // Camp Follower - Difference intended between off-duty and Camp Follower is that camp followers may vary in background and are EXPECTED to work as an on-duty role.
 
-/datum/job/CaesarsLegion/Legionnaire/f13campfollower	// Extra materials, Blueprints
+/datum/job/CaesarsLegion/f13campfollower	// Extra materials, Blueprints
 	title = "Camp Follower"
 	flag = F13CAMPFOLLOWER
 	total_positions = 4
@@ -1061,7 +1061,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	description = "A camp follower ranges in defintiion and purposes. Some may be not enslaved men who are simply not fit for service, termorarily or perminantly, or women who serve a purpose above stock to the Legion. Duties may vary from medical specialities, weapon crafting or other skilled-labor tasks."
 	supervisors = "the Decani and Centurion"
 	display_order = JOB_DISPLAY_ORDER_CAMPFOLLOWER
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
+	outfit = /datum/outfit/job/CaesarsLegion/f13campfollower
 
 	loadout_options = list(
 		/datum/outfit/loadout/servant,
@@ -1071,7 +1071,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/datum/outfit/loadout/headmedicus	// Head Surgeon
 		)
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
+/datum/outfit/job/CaesarsLegion/f13campfollower
 	name = "Camp Follower"
 	id = /obj/item/card/id/dogtag/legforgemaster
 	glasses = /obj/item/clothing/glasses/welding
@@ -1150,7 +1150,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/book/granter/trait/midsurgery = 1
 		)
 
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/CaesarsLegion/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
