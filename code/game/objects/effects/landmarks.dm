@@ -736,7 +736,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Banker"
 
 /obj/effect/landmark/start/f13/sheriff
-	name = "Marshal"
+	name = "Provost Marshal"
 	icon_state = "Chief of Police"
 
 /obj/effect/landmark/start/f13/detective
@@ -744,7 +744,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/f13/deputy
-	name = "Deputy"
+	name = "Deputy Marshal"
 	icon_state = "Officer"
 
 /obj/effect/landmark/start/f13/prospector

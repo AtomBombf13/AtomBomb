@@ -592,6 +592,14 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
 	icon_state = "town_marshal"
 
+/obj/item/clothing/head/helmet/f13/combat/town
+	name = "eastwood security helmet"
+	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "town_helmet"
+	flags_inv = HIDEEARS
+
 /obj/item/clothing/head/f13/town/riot //UN Glowie
 	name = "eastwood marshal combat helmet"
 	desc = "An old combat helmet in suprisingly good state, painted over with dark blue paint remining of times long gone."

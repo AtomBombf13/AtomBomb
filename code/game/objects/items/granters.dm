@@ -1195,8 +1195,32 @@
 				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
 		return ..()
 
+/obj/item/book/granter/trait/mormon //for translators
+	name = "Mormon Translator Booklet"
+	desc = "An instruction manual for mormons on how to communicate with tribals!"
+
+/obj/item/book/granter/trait/mormon/attack_self(mob/user)
+	var/list/choices = list("Dead Horses Language","Sorrows Language")	
+	if(granted_trait == null)
+		var/choice = input("Choose a trait:") in choices
+		switch(choice)
+			if(null)
+				return 0
+			if("Dead Horses Language")
+				traitname = "Dead Horses Language"
+				languages_granted = list(/datum/language/deadhorses)
+				granted_trait = TRAIT_DEADHORSES_TRAD
+			if("Sorrows Language")
+				traitname = "Sorrows Language"
+				languages_granted = list(/datum/language/sorrows)
+				granted_trait = TRAIT_SORROWS_TRAD
+		return ..()
 
 /obj/item/book/granter/trait/tribaltraditions/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
+/obj/item/book/granter/trait/mormon/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 

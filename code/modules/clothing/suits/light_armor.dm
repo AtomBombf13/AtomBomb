@@ -566,13 +566,6 @@
 	icon_state = "robe_liz"
 	item_state = "brownjsuit"
 
-/obj/item/clothing/suit/armor/light/duster/robe_hubologist
-	name = "hubologist robe"
-	desc = "A black robe worn by Adepts of Hubology Studies.<br>Beware - the spirits of the dead are all around us!"
-	icon_state = "hubologist"
-	item_state = "wcoat"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
-
 /obj/item/clothing/suit/armor/light/duster/goner
 	name = "dev-patched dull trenchcoat"
 	desc = "A non-existent dull trenchcoat."
