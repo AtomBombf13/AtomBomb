@@ -10525,12 +10525,6 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
-"uxd" = (
-/mob/living/simple_animal/hostile/legion/decan,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood3-broken"
-	},
-/area/f13/legion)
 "uxm" = (
 /obj/structure/barricade/wooden,
 /obj/structure/window/fulltile/store{
@@ -70723,7 +70717,7 @@ iEW
 iEW
 faC
 iEW
-uxd
+bSK
 pGD
 xZD
 iEW
