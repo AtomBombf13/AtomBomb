@@ -5,12 +5,20 @@
 //Please be wary to not add inorganic items to the results such as generic glass bottles and metal.
 //as they kind of defeat the design of this feature.
 
-/datum/design/milk
-	name = "10u Milk"
-	id = "milk"
+/datum/design/soymilk
+	name = "10u Soymilk"
+	id = "soymilk"
 	build_type = BIOGENERATOR
 	materials = list(/datum/material/biomass = 20)
-	make_reagents = list(/datum/reagent/consumable/milk = 10)
+	make_reagents = list(/datum/reagent/consumable/soymilk = 10)
+	category = list("initial","Food")
+
+/datum/design/ethanol
+	name = "10u Ethanol"
+	id = "ethanol"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass= 30)
+	make_reagents = list(/datum/reagent/consumable/ethanol = 10)
 	category = list("initial","Food")
 
 /datum/design/cream
