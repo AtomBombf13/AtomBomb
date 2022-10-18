@@ -107,7 +107,7 @@
 	name = "Dots Burgers & Fries crate"
 	desc = "For people who want quick bite and or even open up your own resturant, sponsored by Dot's Diner."
 	cost = 2500
-	num_contained = 7
+	num_contained = 10
 	contains = list(/obj/item/reagent_containers/food/snacks/burger/corgi,
 					/obj/item/reagent_containers/food/snacks/burger/plain,
 					/obj/item/reagent_containers/food/snacks/burger/fish,
@@ -135,7 +135,7 @@
 	name = "Petró-Chicos food crate"
 	desc = "For people who want a quick bite of mexican food or to open up your own resturant, sponsored by Petró-Chico."
 	cost = 2500
-	num_contained = 7
+	num_contained = 10
 	contains = list(/obj/item/reagent_containers/food/snacks/burrito,
 					/obj/item/reagent_containers/food/snacks/cheesyburrito,
 					/obj/item/reagent_containers/food/snacks/carneburrito,
