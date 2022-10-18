@@ -94,6 +94,7 @@
 	amount_per_transfer_from_this = 15
 	volume = 15
 	ignore_flags = 1 //so you can medipen through hardsuits
+	var/syringe_self_delay = FALSE //Same as pills except for syringes
 	reagent_flags = NONE
 	flags_1 = null
 	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/preservahyde = 3, /datum/reagent/medicine/coagulant = 2)
@@ -109,7 +110,12 @@
 		return
 
 	if(M == user)
+		M.visible_message(span_notice("[user] attempts to inject themselves with the [src]."))
+		if(syringe_self_delay)
+			if(!do_mob(user, M, syringe_self_delay))
+				return FALSE
 		to_chat(M, span_notice("You jab yourself with the [src]."))
+
 
 	else
 		M.visible_message(span_danger("[user] attempts to use [src] on [M]."), \
@@ -156,8 +162,9 @@
 	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_stimpak"
-	volume = 26
-	amount_per_transfer_from_this = 26
+	syringe_self_delay = 10 //Double of a powder
+	volume = 15
+	amount_per_transfer_from_this = 15
 	reagent_flags = DRAWABLE
 	list_reagents = list(/datum/reagent/medicine/stimpak = 15)
 
@@ -190,8 +197,9 @@
 	name = "super stimpak"
 	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
 	icon_state = "hypo_superstimpak"
-	volume = 62
-	amount_per_transfer_from_this = 62
+	syringe_self_delay = 10 //Double of a powder
+	volume = 15
+	amount_per_transfer_from_this = 15
 	list_reagents = list(/datum/reagent/medicine/super_stimpak = 15)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom

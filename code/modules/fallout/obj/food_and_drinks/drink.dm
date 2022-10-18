@@ -8,9 +8,10 @@
 	list_reagents = list(/datum/reagent/water = 50)
 
 /obj/item/reagent_containers/food/drinks/flask/survival
-	name = "metal flask"
+	name = "survival flask"
 	desc = "A metallic liquid container. Essential for survival out in the wastes."
-	list_reagents = list(/datum/reagent/water = 40, /datum/reagent/medicine/silver_sulfadiazine = 10)
+	icon_state = "flask_survival"
+	list_reagents = list(/datum/reagent/water/purified = 50)
 
 /obj/item/reagent_containers/food/drinks/flask/vault13
 	name = "Vault 13 flask"

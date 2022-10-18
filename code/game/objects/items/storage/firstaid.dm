@@ -636,3 +636,17 @@
 		new /obj/item/reagent_containers/pill/buffout(src)
 
 ///
+// ---------------------------------------------
+// PURIFICATION PILL BOTTLE
+
+/obj/item/storage/pill_bottle/chem_tin/waterpurification
+	name = "bottle of water purifying pills"
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon_state = "pill_canister_purify"
+	desc = "Contains pills to treat water."
+
+/obj/item/storage/pill_bottle/chem_tin/waterpurification/PopulateContents()
+	for(var/i in 1 to 4)
+		new /obj/item/reagent_containers/pill/purify(src)
+
+///

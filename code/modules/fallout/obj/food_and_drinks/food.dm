@@ -650,6 +650,7 @@
 /obj/item/reagent_containers/food/snacks/f13/canned
 	name = "canned food item"
 	desc = "If you see this, call an admin."
+	icon = 'icons/fallout/objects/food&drinks/food.dmi'
 	var/is_open = FALSE
 
 /obj/item/reagent_containers/food/snacks/f13/canned/update_icon_state()
@@ -712,11 +713,21 @@
 	tastes = list("mushy kibble" = 4, "musty meat" = 2)
 	foodtype = MEAT
 
+/obj/item/reagent_containers/food/snacks/f13/canned/kibble
+	name = "can of kibble"
+	desc = "A can of indescribable contents letting out a putrid strench looking like it was meant for animals not humans. On the front of label you can only make out \"Goy\" with rest of the word lost to time."
+	icon_state = "kibble"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 7)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	filling_color = "#4c5a26fb"
+	tastes = list("horror" = 5)
+	foodtype = MEAT
+
 /obj/item/reagent_containers/food/snacks/f13/canned/ncr
 	name = "canned military ration"
 	desc = "If you see this, call an admin."
 	filling_color = "#B22222"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 35, /datum/reagent/consumable/nutriment/vitamin = 3)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 25, /datum/reagent/consumable/nutriment/vitamin = 3)
 	icon_state = "c_ration_1"
 
 /obj/item/reagent_containers/food/snacks/f13/canned/ncr/brahmin_chili
