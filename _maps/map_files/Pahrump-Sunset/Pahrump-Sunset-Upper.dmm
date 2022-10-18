@@ -8033,10 +8033,7 @@
 /turf/open/transparent/openspace,
 /area/f13/radiation)
 "pGc" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Armory";
-	req_access_txt = "122"
-	},
+/obj/machinery/door/unpowered/secure_NCR,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "pGD" = (
@@ -11716,10 +11713,7 @@
 	},
 /area/f13/city)
 "wUC" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Gatehouse";
-	req_access_txt = "121"
-	},
+/obj/machinery/door/unpowered/secure_NCR,
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},

@@ -20516,10 +20516,7 @@
 	},
 /area/f13/wasteland)
 "cnm" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Gatehouse";
-	req_access_txt = "121"
-	},
+/obj/machinery/door/unpowered/secure_NCR,
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},
@@ -25934,10 +25931,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "eFV" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Prison";
-	req_access_txt = "121"
-	},
+/obj/machinery/door/unpowered/secure_NCR,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -39380,10 +39374,7 @@
 /area/f13/wasteland)
 "kSd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/security/glass{
-	name = "Prison";
-	req_access_txt = "121"
-	},
+/obj/machinery/door/unpowered/secure_NCR,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
