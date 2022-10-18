@@ -157,7 +157,7 @@
 /datum/supply_pack/engineering/bsa
 	name = "Long-Tom Artillery Parts"
 	desc = "The pride of the United States Army. The legendary Long Tom Nuclear Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
-	cost = 900000
+	cost = 1000000
 	special = TRUE
 	contains = list(/obj/item/circuitboard/machine/bsa/front,
 					/obj/item/circuitboard/machine/bsa/middle,

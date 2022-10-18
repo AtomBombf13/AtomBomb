@@ -21,24 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// Meals ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-/*
-/datum/supply_pack/organic/combomeal2
-	name = "Burger Combo #2"
-	desc = "We value our customers at the Greasy Griddle, so much so that we're willing to deliver -just for you.- This combo meal contains two burgers, a soda, fries, a toy, and some chicken nuggets."
-	cost = 3200
-	contains = list(/obj/item/reagent_containers/food/snacks/burger/bigbite,
-					/obj/item/reagent_containers/food/snacks/burger/cheese,
-					/obj/item/reagent_containers/food/snacks/fries,
-					/obj/item/reagent_containers/food/condiment/pack/ketchup,
-					/obj/item/reagent_containers/food/condiment/pack/ketchup,
-					/obj/item/reagent_containers/food/snacks/nugget,
-					/obj/item/reagent_containers/food/snacks/nugget,
-					/obj/item/reagent_containers/food/snacks/nugget,
-					/obj/item/reagent_containers/food/snacks/nugget,
-					/obj/effect/spawner/lootdrop/plush)
-	crate_name = "combo meal w/toy"
-	crate_type = /obj/structure/closet/crate/wooden
-*/
+
 /datum/supply_pack/organic/randomized/candy
 	name = "Candy Crate"
 	desc = "For people that have an insatiable sweet tooth! Has ten candies to be eaten up.."
@@ -83,26 +66,7 @@
 					/obj/item/storage/box/mre/menu3,
 					/obj/item/storage/box/mre/menu4/safe)
 	crate_name = "MRE crate (emergency rations)"
-/*
-/datum/supply_pack/organic/fiestatortilla
-	name = "Fiesta Crate"
-	desc = "Spice up the kitchen with this fiesta themed food order! Contains 8 tortilla based food items, as well as a sombrero, moustache, and cloak!"
-	cost = 2750
-	contains = list(/obj/item/clothing/head/sombrero,
-					/obj/item/clothing/suit/hooded/cloak/david,
-					/obj/item/clothing/mask/fakemoustache,
-					/obj/item/reagent_containers/food/snacks/taco,
-					/obj/item/reagent_containers/food/snacks/taco,
-					/obj/item/reagent_containers/food/snacks/taco/plain,
-					/obj/item/reagent_containers/food/snacks/taco/plain,
-					/obj/item/reagent_containers/food/snacks/enchiladas,
-					/obj/item/reagent_containers/food/snacks/enchiladas,
-					/obj/item/reagent_containers/food/snacks/carneburrito,
-					/obj/item/reagent_containers/food/snacks/cheesyburrito,
-					/obj/item/reagent_containers/glass/bottle/capsaicin,
-					/obj/item/reagent_containers/glass/bottle/capsaicin)
-	crate_name = "fiesta crate"
-*/
+
 /datum/supply_pack/organic/pizza
 	name = "Pizza Crate"
 	desc = "Best prices on this side of the wastes. All deliveries are guaranteed to be 99% rad-free!"
@@ -136,6 +100,90 @@
 	delivery. Please search all crates and manifests provided with the delivery and return the object if is located. The object resembles a standard <b>\[DATA EXPUNGED\]</b> and is to be \
 	considered <b>\[REDACTED\]</b> and returned at your leisure. Note that objects the anomaly produces are specifically attuned exactly to the individual opening the anomaly; regardless \
 	of species, the individual will find the object edible and it will taste great according to their personal definitions, which vary significantly based on person and species.")
+
+// Dots Diner reference, it is from F4 / F76. But it should work for now
+// https://fallout.fandom.com/wiki/Dot%27s_Diner 
+/datum/supply_pack/organic/randomized/burgersfries
+	name = "Dots Burgers & Fries crate"
+	desc = "For people who want quick bite and or even open up your own resturant, sponsored by Dot's Diner."
+	cost = 2500
+	num_contained = 7
+	contains = list(/obj/item/reagent_containers/food/snacks/burger/corgi,
+					/obj/item/reagent_containers/food/snacks/burger/plain,
+					/obj/item/reagent_containers/food/snacks/burger/fish,
+					/obj/item/reagent_containers/food/snacks/burger/tofu,
+					/obj/item/reagent_containers/food/snacks/burger/bearger,
+					/obj/item/reagent_containers/food/snacks/burger/brain,
+					/obj/item/reagent_containers/food/snacks/burger/bigbite,
+					/obj/item/reagent_containers/food/snacks/burger/fivealarm,
+					/obj/item/reagent_containers/food/snacks/burger/rat,
+					/obj/item/reagent_containers/food/snacks/burger/baseball,
+					/obj/item/reagent_containers/food/snacks/burger/baconburger,
+					/obj/item/reagent_containers/food/snacks/burger/soylent,
+					/obj/item/reagent_containers/food/snacks/burger/crab,
+					/obj/item/reagent_containers/food/snacks/burger/chicken,
+					/obj/item/reagent_containers/food/snacks/burger/cheese,
+					/obj/item/reagent_containers/food/snacks/fries,
+					/obj/item/reagent_containers/food/snacks/tatortot,
+					/obj/item/reagent_containers/food/snacks/cheesyfries,
+					/obj/item/reagent_containers/food/snacks/chilicheesefries)
+	crate_name = "burgers & fries crate"
+
+// Petró-Chico reference, it is referenced in F:NV. But someone could of ran with the name and had an diner or something among those lines, using it as a name.
+// https://fallout.fandom.com/wiki/Petr%C3%B3-Chico 
+/datum/supply_pack/organic/randomized/mexican
+	name = "Petró-Chicos food crate"
+	desc = "For people who want a quick bite of mexican food or to open up your own resturant, sponsored by Petró-Chico."
+	cost = 2500
+	num_contained = 7
+	contains = list(/obj/item/reagent_containers/food/snacks/burrito,
+					/obj/item/reagent_containers/food/snacks/cheesyburrito,
+					/obj/item/reagent_containers/food/snacks/carneburrito,
+					/obj/item/reagent_containers/food/snacks/fuegoburrito,
+					/obj/item/reagent_containers/food/snacks/nachos,
+					/obj/item/reagent_containers/food/snacks/cheesynachos,
+					/obj/item/reagent_containers/food/snacks/cubannachos,
+					/obj/item/reagent_containers/food/snacks/taco,
+					/obj/item/reagent_containers/food/snacks/taco/plain,
+					/obj/item/reagent_containers/food/snacks/chipsandsalsa,
+					/obj/item/reagent_containers/food/snacks/enchiladas)
+	crate_name = "Mexican food crate"
+
+// No Reference for this one.
+/datum/supply_pack/organic/randomized/seafood
+	name = "Seafood crate"
+	desc = "For people who want a quick bite of seafood or to open up your own resturant."
+	cost = 2500
+	num_contained = 10
+	contains = list(/obj/item/reagent_containers/food/snacks/fishmeat/salmon/cooked,
+					/obj/item/reagent_containers/food/snacks/fishmeat/crawdad/cooked,
+					/obj/item/reagent_containers/food/snacks/fishmeat/shrimp/cooked,
+					/obj/item/reagent_containers/food/snacks/fishing/lobster_deluxe,
+					/obj/item/reagent_containers/food/snacks/fishing/lobster_roll,
+					/obj/item/reagent_containers/food/snacks/fishfingers,
+					/obj/item/reagent_containers/food/snacks/fishandchips,
+					/obj/item/reagent_containers/food/snacks/fishfry,
+					/obj/item/reagent_containers/food/snacks/fishtaco,
+					/obj/item/reagent_containers/food/snacks/sushi_rice,
+					/obj/item/reagent_containers/food/snacks/tuna,
+					/obj/item/reagent_containers/food/snacks/sushie_basic,
+					/obj/item/reagent_containers/food/snacks/sushie_adv,
+					/obj/item/reagent_containers/food/snacks/sushie_pro,
+					/obj/item/reagent_containers/food/snacks/tobiko,
+					/obj/item/reagent_containers/food/snacks/riceball,
+					/obj/item/reagent_containers/food/snacks/sashimi,
+					/obj/item/reagent_containers/food/snacks/fishing_sushi/sake_sushi,
+					/obj/item/reagent_containers/food/snacks/fishing_sushi/sake_cookedsalmon,
+					/obj/item/reagent_containers/food/snacks/fishing_sushi/ebi_sushi,
+					/obj/item/reagent_containers/food/snacks/fishing_sushi/ikura_sushi,
+					/obj/item/reagent_containers/food/snacks/fishing_sushi/maguro_sushi,
+					/obj/item/reagent_containers/food/snacks/fishing_sushi/masago_sushi,
+					/obj/item/reagent_containers/food/snacks/vegetariansushiroll,
+					/obj/item/reagent_containers/food/snacks/vegetariansushislice,
+					/obj/item/reagent_containers/food/snacks/spicyfiletsushiroll,
+					/obj/item/reagent_containers/food/snacks/spicyfiletsushislice,
+					/obj/item/reagent_containers/food/snacks/springroll,
+					/obj/item/reagent_containers/food/snacks/customizable/sushi)
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Raw Ingredients /////////////////////////////////
@@ -350,7 +398,7 @@
 
 /datum/supply_pack/organic/exoticseeds
 	name = "Seeds Crate (Exotic)"
-	desc = "Any entrepreneuring botanist's dream. Contains twelve different seeds, including three replica-pod seeds and two mystery seeds!"
+	desc = "Any entrepreneuring botanist's dream. Contains twelve different seeds, including two mystery seeds!"
 	cost = 1500
 	contains = list(/obj/item/seeds/nettle,
 					/obj/item/seeds/plump,
@@ -376,7 +424,8 @@
 					/obj/item/seeds/mutfruit,
 					/obj/item/seeds/xander,
 					/obj/item/seeds/xander,
-					/obj/item/seeds/datura)
+					/obj/item/seeds/datura,
+					/obj/item/seeds/horsenettle)
 	crate_name = "wasteland seeds crate"
 	crate_type = /obj/structure/closet/crate/hydroponics
 
@@ -402,7 +451,7 @@
 /datum/supply_pack/organic/parrot
 	name = "Bird Crate"
 	desc = "Contains five expert telecommunication birds."
-	cost = 4000
+	cost = 500000
 	contains = list(/mob/living/simple_animal/parrot)
 	crate_name = "parrot crate"
 

@@ -166,7 +166,7 @@
 					/obj/item/tank/internals/air,
 					/obj/item/clothing/mask/gas)
 	crate_name = "sec hardsuit crate"
-*/
+
 /datum/supply_pack/security/securitybarriers
 	name = "Security Barrier Grenades"
 	desc = "Stem the tide with four pre-war riot grenades."
@@ -177,6 +177,7 @@
 	cost = 2000
 	crate_name = "security barriers crate"
 	can_private_buy = TRUE
+*/
 /*
 /datum/supply_pack/security/securityclothes
 	name = "Security Clothing Crate"
@@ -278,7 +279,7 @@
 /datum/supply_pack/security/traitbooks
 	name = "Technical manuals"
 	desc = "A box crammed full of manuals, for reading. SCAV issues, Guns and Ammo, how to operate chem-machines, it's all here! Come in groups of three."
-	cost = 2200
+	cost = 2500
 	contains = list(/obj/effect/spawner/lootdrop/f13/traitbooks,
 					/obj/effect/spawner/lootdrop/f13/traitbooks/low,
 					/obj/effect/spawner/lootdrop/f13/traitbooks/low)
@@ -330,14 +331,14 @@
 /datum/supply_pack/security/gunsuperhightier
 	name = "Weapons - Prewar Gun"
 	desc = "A sealed crate of a Prewar firearm, an exceptional weapon machined with lost technology."
-	cost = 6250
+	cost = 10000
 	contains = list(/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh)
 	crate_name = "prewar gun crate"
 
 /datum/supply_pack/security/gunhightier
 	name = "Weapons - High-Tier Guns"
 	desc = "Two high-powered ballistics, perfect for taking down the meanest of muties."
-	cost = 3500
+	cost = 6250
 	contains = list(/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high,
 					/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high)
 	crate_name = "gun crate"

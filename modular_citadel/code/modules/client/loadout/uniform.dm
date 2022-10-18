@@ -678,6 +678,28 @@
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
 
+/// Brotherhood of Steel 
+
+/datum/gear/uniform/bos
+	name = "midwestern fatigues"
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	path = /obj/item/clothing/under/syndicate/brotherhood/midwestern
+	restricted_desc = "BoS"
+	restricted_roles = list(
+							"Head Paladin",
+							"Knight-Captain",
+							"Head Scribe",
+							"Senior Paladin",
+							"Senior Knight",
+							"Senior Scribe",
+							"Paladin",
+							"Knight",
+							"Scribe",
+							"Initiate",
+							"Brotherhood Off-Duty"
+	)
+
+
 //Skirts
 
 /datum/gear/uniform/skirt/white
