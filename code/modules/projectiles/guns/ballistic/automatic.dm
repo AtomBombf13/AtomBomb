@@ -285,15 +285,13 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		BURST_5_ROUND
+		SEMI_AUTO_NODELAY,
+		FULL_AUTO_300
 	)
 
-	automatic = 1
-	is_automatic = TRUE
 	can_suppress = TRUE
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 29

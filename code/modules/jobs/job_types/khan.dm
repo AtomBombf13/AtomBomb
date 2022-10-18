@@ -1,6 +1,6 @@
 /datum/job/khan //do NOT use this for anything, it's just to store faction datums
 	department_flag = KHAN
-	selection_color = "#ff915e"
+	selection_color = "#df80af"
 	faction = FACTION_KHAN
 	exp_type = EXP_TYPE_KHAN
 	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_MINING, ACCESS_GATEWAY)
@@ -23,7 +23,6 @@
 	r_pocket = /obj/item/flashlight/flare
 	box = /obj/item/storage/survivalkit/tribal/chief
 	box_two = /obj/item/storage/survivalkit/medical/tribal
-	gloves = /obj/item/melee/unarmed/brass/spiked
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/khan = 1
 		)
@@ -64,40 +63,61 @@
 	spawn_positions = 8
 	description = "You are a Great Khan, a warrior of the Khans who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
 	supervisors = "Your tribe"
-	selection_color = "#ff915e"
+	selection_color = "#df80af"
 	exp_type = EXP_TYPE_KHAN
 	outfit = /datum/outfit/job/khan/greatkhan
 
 	loadout_options = list(
 		/datum/outfit/loadout/enforcer,
 		/datum/outfit/loadout/khanskirmisher,
-		/datum/outfit/loadout/khandrug,
+		/datum/outfit/loadout/khanrifler,
+		/datum/outfit/loadout/khandrug
 		)
 
 //=========================================================== LOADOUT DATUMS ===========================================================
 
-/datum/outfit/loadout/enforcer
+/datum/outfit/loadout/enforcer //Short-range Shogunner, Leagues
 	name = "Enforcer"
-	r_hand = /obj/item/twohanded/baseball/spiked
-	belt = /obj/item/storage/belt/bandolier
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	neck = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+		/obj/item/melee/unarmed/brass/spiked = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2)
 
-/datum/outfit/loadout/khanskirmisher
+/datum/outfit/loadout/khanskirmisher //Mid-range SMG user with an autoloader and a bola
 	name = "Skirmisher"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
+	neck = /obj/item/storage/belt/holster/leg
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/uzim9mm = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/belt/holster = 1)
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
+		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
+		)
 
-/datum/outfit/loadout/khandrug
-	name = "Drug Pusher"
-	belt = /obj/item/storage/belt/bandolier
+/datum/outfit/loadout/khanrifler //Long-range Trail with an autoloader
+	name = "Rifler"
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
+	neck = /obj/item/storage/belt/holster/leg
 	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44 = 2,
+		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
+		)
+
+/datum/outfit/loadout/khandrug //Pusher with .44 Magnum
+	name = "Drug Pusher"
+	r_hand = /obj/item/gun/ballistic/revolver/m29
+	neck = /obj/item/storage/belt/holster/leg
+	backpack_contents = list(
+		/obj/item/ammo_box/loader/m44 = 2,
 		/obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
+		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
+		/obj/item/reagent_containers/pill/patch/jet = 4,
+		/obj/item/reagent_containers/hypospray/medipen/psycho = 2,
 		/obj/item/reagent_containers/pill/patch/turbo = 2)
 

@@ -980,7 +980,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	spawn_positions = 3
 	description = "You're a member of the local desperado gang, a group of chem-dealers, loan-sharkers and hitman from across the civilized wastes."
 	supervisors = "The Boss."
-	selection_color = "#ff4747"
+	selection_color = "#df80af"
 	exp_requirements = 300
 	exp_type = EXP_TYPE_WASTELAND
 
@@ -1063,7 +1063,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	spawn_positions = 1
 	description = "You are the leader of the local desperado gang, a gang of bandits, cattle-rustlers, hitmen, loan-sharkers and various other criminal activities. Luckily for you, you own the casino in town with your fellow 'buisness partners'. Make use of it, keep your men in line, and turn a profit. Be it working with the locals or against them."
 	supervisors = "Whatever god you pray to. The sky's the limit!"
-	selection_color = "#ff4747"
+	selection_color = "#df80af"
 	exp_requirements = 500
 	exp_type = EXP_TYPE_OUTLAW
 
