@@ -111,7 +111,7 @@
 	INVOKE_ASYNC(H, /mob/living/carbon/human/.proc/apply_damage, damage, BRUTE, picked_def_zone, FALSE, FALSE, FALSE, CANT_WOUND)
 
 	if(!(flags & CALTROP_NOSTUN)) // Won't set off the paralysis.
-		H.Paralyze(60)
+		H.DefaultCombatKnockdown(60)
 
 	if(!soundfile)
 		return
