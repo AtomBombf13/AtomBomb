@@ -382,7 +382,7 @@
 /datum/chemical_reaction/pyrosium/on_reaction(datum/reagents/holder, multiplier)
 	holder.chem_temp = 20 // also cools the fuck down
 	return
-
+/*
 /datum/chemical_reaction/teslium
 	name = "Teslium"
 	id = /datum/reagent/teslium
@@ -434,7 +434,7 @@
 	id = "teslium_lightning2"
 	required_temp = 474
 	required_reagents = list(/datum/reagent/teslium = 1)
-
+*/
 /datum/chemical_reaction/reagent_explosion/nitrous_oxide
 	name = "N2O explosion"
 	id = "n2o_explosion"

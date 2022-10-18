@@ -172,7 +172,6 @@ SUBSYSTEM_DEF(research)
 	/obj/item/slimecross/industrial/pyrite         = list(TECHWEB_POINT_TYPE_GENERIC = 3000),
 	/obj/item/slimecross/industrial/red            = list(TECHWEB_POINT_TYPE_GENERIC = 3250),
 	/obj/item/slimecross/industrial/green          = list(TECHWEB_POINT_TYPE_GENERIC = 3250),
-	/obj/item/slimecross/industrial/pink           = list(TECHWEB_POINT_TYPE_GENERIC = 3250),
 	/obj/item/slimecross/industrial/gold           = list(TECHWEB_POINT_TYPE_GENERIC = 3250),
 	/obj/item/slimecross/industrial/oil            = list(TECHWEB_POINT_TYPE_GENERIC = 3500),
 	/obj/item/slimecross/industrial/black          = list(TECHWEB_POINT_TYPE_GENERIC = 3500),

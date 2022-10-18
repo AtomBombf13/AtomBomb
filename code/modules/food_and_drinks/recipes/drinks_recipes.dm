@@ -948,7 +948,7 @@
 	name = "Catnip Tea"
 	id = /datum/reagent/consumable/catnip_tea
 	results = list(/datum/reagent/consumable/catnip_tea = 3)
-	required_reagents = list(/datum/reagent/consumable/tea = 5, /datum/reagent/pax/catnip = 2)
+	required_reagents = list(/datum/reagent/consumable/tea = 5)
 
 
 ////////////////////////////////////////// Race Base Drinks //////////////////////////////////////
@@ -987,7 +987,7 @@
 	name = "Bug Zapper"
 	id = /datum/reagent/consumable/ethanol/species_drink/bug_zapper
 	results = list(/datum/reagent/consumable/ethanol/species_drink/bug_zapper = 20) //Harder to make
-	required_reagents = list(/datum/reagent/consumable/lemonjuice = 10,  /datum/reagent/teslium = 1, /datum/reagent/copper = 10)
+	required_reagents = list(/datum/reagent/consumable/lemonjuice = 10, /datum/reagent/copper = 10)
 
 /datum/chemical_reaction/mush_crush
 	name = "Mush Crush"

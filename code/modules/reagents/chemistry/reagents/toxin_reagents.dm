@@ -499,7 +499,7 @@
 /datum/reagent/toxin/mutetoxin/on_mob_life(mob/living/carbon/M)
 	M.silent = max(M.silent, 3)
 	..()
-
+/*
 /datum/reagent/toxin/staminatoxin
 	name = "Tirizene"
 	description = "A nonlethal poison that causes extreme fatigue and weakness in its victim."
@@ -513,7 +513,7 @@
 	data = max(data - 1, 5)
 	..()
 	. = 1
-
+*/
 /datum/reagent/toxin/polonium
 	name = "Polonium"
 	description = "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation."
