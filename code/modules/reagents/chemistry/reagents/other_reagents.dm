@@ -253,13 +253,11 @@
 	glass_desc = "The father of all refreshments."
 	shot_glass_icon_state = "shotglassclear"
 	ghoulfriendly = TRUE
-	var/water_level = 5
 
 /datum/reagent/water/on_mob_life(mob/living/carbon/M)
 	. = ..()
 	if(M.blood_volume)
 		M.blood_volume += 0.1 // water is good for you!
-	M.water += water_level
 	holder.remove_reagent(type, 1)	
 
 /*

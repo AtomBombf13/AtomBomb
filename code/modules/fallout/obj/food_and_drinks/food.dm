@@ -659,18 +659,28 @@
 		icon_state = "[icon_state]-op"
 
 /obj/item/reagent_containers/food/snacks/f13/canned/attack_self(mob/user)
-	if(!is_open)
-		is_open = TRUE
-		to_chat(user, span_notice("You open the lid of the can."))
-		update_icon()
+	if(is_open == TRUE)
+		to_chat(user, span_warning("[src] is already open."))
 		return
-	. = ..()
+	if(!is_open == TRUE)
+		to_chat(user, span_warning("You need something sharp to open [src]."))
+		return
 
 /obj/item/reagent_containers/food/snacks/f13/canned/attack(mob/living/M, mob/living/user)
 	if(!is_open)
-		to_chat(user, span_warning("You need to open [src] first."))
+		to_chat(user, span_warning("You need something sharp to open [src]."))
 		return
 	. = ..()
+
+/obj/item/reagent_containers/food/snacks/f13/canned/attackby(obj/item/W, mob/user)
+	if(is_open == TRUE)
+		to_chat(user, span_notice("[src] is already open."))
+		..()
+	if(!is_open == TRUE)
+		if(istype(W,/obj/item/melee/onehanded/knife || /obj/item/kitchen/knife)) //You ain't using swords to open a damn can
+			is_open = TRUE
+			to_chat(user, span_notice("You open the lid of the can."))
+			update_icon()
 
 /obj/item/reagent_containers/food/snacks/f13/canned/porknbeans
 	name = "can of pork n' beans"

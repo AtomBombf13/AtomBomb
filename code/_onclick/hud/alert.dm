@@ -174,26 +174,6 @@
 /////////
 // Food/Water
 /////////
-/obj/screen/alert/thirst1
-	name = "Thirst"
-	desc = "Your mouth is slightly dry."
-	icon_state = "water1"//temp
-
-/obj/screen/alert/thirst2
-	name = "Thirst"
-	desc = "You're starting to feel the effects of slight fatigue. Find something to drink."
-	icon_state = "water2"//temp
-
-/obj/screen/alert/thirst3
-	name = "Thirst"
-	desc = "You're starting to feel the effects of extreme fatigue. Find something to drink."
-	icon_state = "water3"//temp
-
-/obj/screen/alert/thirst4
-	name = "Thirst"
-	desc = "Drink something, or you're soon going to waste away."
-	icon_state = "water4"//temp
-
 
 /obj/screen/alert/fat
 	name = "Stuffed"
