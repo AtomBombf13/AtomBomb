@@ -23,27 +23,6 @@
 	description = span_boldwarning("I'm starving!")
 	mood_change = -4
 
-//water
-/datum/mood_event/nutrition/slaked
-	description = "<span class='nicegreen'>I'm topped up!</span>\n"
-	mood_change = 4
-
-/datum/mood_event/nutrition/thirsty
-	description = "<span class='warning'>I'm slightly thirsty.</span>\n"
-	mood_change = 6
-
-/datum/mood_event/nutrition/thirsty2
-	description = "<span class='warning'>I'm very thirsty!</span>\n"
-	mood_change = -4
-
-/datum/mood_event/nutrition/thirsty3
-	description = "<span class='boldwarning'>I'm going to die of thirst!</span>\n"
-	mood_change = -6
-
-/datum/mood_event/nutrition/thirsty4
-	description = "<span class='boldwarning'>This is how I die...</span>\n"
-	mood_change = -12
-
 //charge
 /datum/mood_event/supercharged
 	description = span_boldwarning("I can't possibly keep all this power inside, I need to release some quick!")

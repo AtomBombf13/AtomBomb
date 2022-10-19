@@ -74,6 +74,18 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
 
+/datum/crafting_recipe/bulkysheath
+	name = "Bulky Sheath"
+	result = /obj/item/storage/belt/sabre/single
+	reqs = list(/obj/item/stack/sheet/leather = 2,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+
 /datum/crafting_recipe/durathread_toolbelt
 	name = "Durathread Toolbelt"
 	result = /obj/item/storage/belt/durathread

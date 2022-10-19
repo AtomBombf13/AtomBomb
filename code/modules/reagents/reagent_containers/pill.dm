@@ -260,6 +260,13 @@
 /obj/item/reagent_containers/pill/get_belt_overlay()
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "pouch")
 
+/obj/item/reagent_containers/pill/emergency
+	name = "emergency pill"
+	desc = "Standard issue pill for least serious wounds."
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon_state = "pill_emergency"
+	list_reagents = list(/datum/reagent/medicine/bicaridine = 10, /datum/reagent/medicine/kelotane = 10, /datum/reagent/medicine/tricordrazine = 10)
+
 /obj/item/reagent_containers/pill/mentat
 	name = "Mentat"
 	desc = "A chalky pill that induces increased memory and cognitive functions, as well as heightened perception and creative faculties. \
@@ -290,3 +297,12 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "pill_buff"
 	list_reagents = list(/datum/reagent/drug/buffout = 10)
+
+/obj/item/reagent_containers/pill/purify
+	name = "Water purification pill"
+	desc = "A metallic tasting pill that cleans water of it's impurities. \
+	Perfect for time out in the wastes."
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon_state = "pill_pure"
+	list_reagents = list(/datum/reagent/water_purifier = 40) //Enough for 20u of purified water
+
