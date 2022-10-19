@@ -92,6 +92,7 @@
 	cost = 2
 
 /datum/gear/suit/marlowsuit
+	name = "wasteland ganger overcoat" 
 	path = /obj/item/clothing/suit/armor/marlowsuit 
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
