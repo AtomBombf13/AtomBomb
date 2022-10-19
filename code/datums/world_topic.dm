@@ -246,7 +246,9 @@
 	var/list/legion = list()
 	var/list/eastwood = list()
 	var/list/brotherhood = list()
+	var/list/enclave = list()
 	var/list/wastelanders = list()
+	var/list/outlaws = list()
 	var/list/misc = list()
 	for(var/datum/data/record/R in GLOB.data_core.general)
 		var/name = R.fields["name"]
@@ -260,10 +262,14 @@
 			eastwood[name] = rank
 		else if(real_rank in GLOB.brotherhood_positions)
 			brotherhood[name] = rank
+		else if(real_rank in GLOB.enclave_positions)
+			enclave[name] = rank
 		else if(real_rank in GLOB.command_positions)
 			command[name] = rank
 		else if(real_rank in GLOB.wasteland_positions)
 			wastelanders[name] = rank
+		else if(real_rank in GLOB.outlaw_positions)
+			outlaws[name] = rank
 		else
 			misc[name] = rank
 		// mixed departments, /datum/department when
@@ -275,8 +281,10 @@
 	.["New California Republic"] = ncr
 	.["Legion"] = legion
 	.["Brotherhood of Steel"] = brotherhood
+	.["Enclave Remnants"] = enclave
 	.["Eastwood"] = eastwood
 	.["Wastelanders"] = wastelanders
+	.["Outlaws"] = outlaws
 	.["Other"] = misc
 	return json_encode(.)
 
