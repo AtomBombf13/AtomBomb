@@ -162,6 +162,10 @@ Raider
 	..()
 	if(visualsOnly)
 		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombatarmor)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombatarmormk2)
 	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)
 
 	H.social_faction = FACTION_RAIDERS
