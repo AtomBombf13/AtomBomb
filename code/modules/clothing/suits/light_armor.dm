@@ -710,7 +710,8 @@
 //////////////////////
 // Light Armor Vests//
 /////////////////////
-	
+/* only protects vs a single type of damage and bomb damage, no or low DT */
+
 /obj/item/clothing/suit/armor/light/vest/
 	name = "light vest"
 	desc = "Light armor vest template. You shouldnt see this normally."
@@ -726,7 +727,7 @@
 	item_state = "vest_flak"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T1 ARMOR_MODIFIER_DOWN_DT_T1) 
 	
-/obj/item/clothing/suit/armor/light/vest/blueshirt
+/obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, no DT*/
 	name = "light security vest"
 	desc = "a lightweight ballistic vest that combines protection and comfort."
 	icon_state = "blueshift"
