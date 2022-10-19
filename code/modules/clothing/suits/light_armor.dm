@@ -726,7 +726,7 @@
 	icon_state = "vest_flak"
 	item_state = "vest_flak"
 	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1 ARMOR_MODIFIER_DOWN_DT_T3) 
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T3) 
 	
 /obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, no DT*/
 	name = "light security vest"
