@@ -9,15 +9,6 @@ Make sure you ALWAYS direct the icon path of these custom items to: "suit(s)_cus
 
 Below you will find all the templates for modkit items.*/
 
-//Custom item - For anyone who wants Talon Company chestgear
-/obj/item/clothing/suit/armor/medium/combat/talon
-	name = "talon company combat armor"
-	desc = "This set of combat armor bears the markings of the Talon Company, showing an eagle with a skull lifting a newborn from the ground."
-	icon = 'icons/obj/clothing/suits_custom.dmi'
-	icon_state = "talon"
-	item_state = "talon"
-
-
 //Custom item - Rebel0 / Mariya Sankinova
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/mari
 	name = "modified midwestern power armor"

@@ -43,6 +43,10 @@
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombatarmor)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/enclavecombatarmormk2)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 
@@ -201,8 +205,8 @@
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/enclavesgt
-	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/remnant
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
+	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/enclave
+	head = /obj/item/clothing/head/helmet/f13/combat/mk2/enclave
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 
 	backpack_contents = list(

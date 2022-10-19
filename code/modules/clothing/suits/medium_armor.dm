@@ -498,6 +498,8 @@
 /obj/item/clothing/suit/armor/medium/combat
 	name = "combat armor"
 	desc = "An old military grade pre war combat armor."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
@@ -511,7 +513,6 @@
 	name = "ablative combat armor"
 	desc = "An old military grade pre war combat armor. This one switches out its ballistic fibers for an ablative coating that disrupts energy weapons."
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T1)
-
 
 /obj/item/clothing/suit/armor/medium/combat/dark
 	name = "combat armor"
@@ -530,7 +531,6 @@
 /obj/item/clothing/suit/armor/medium/combat/mk2
 	name = "reinforced combat armor"
 	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates."
-	icon = 'icons/obj/clothing/suits.dmi'
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
@@ -550,22 +550,10 @@
 	desc = "A reinforced model based of the pre-war combat armor. Now in dark, light, and smoky barbeque!"
 	color = "#302E2E"
 
-/obj/item/clothing/suit/armor/medium/combat/mk2/remnant
-	name = "remnant combat armor"
-	desc = "A dark armor, used commonly in espionage or shadow ops."
-	icon_state = "remnant"
-	item_state = "remnant"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/raider
-	name = "raider combat armor"
-	desc = "An old set of reinforced combat armor with some parts supplanted with painspike armor. It seems less protective than a mint-condition set of combat armor."
-	item_state = "combat_armor_raider"
-
 /obj/item/clothing/suit/armor/medium/combat/mk2/tribal
 	name = "tribal reinforced combat armor"
 	desc = "An old military grade pre-war reinforced combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
-	icon_state = "tribecombatarmor"
-	item_state = "tribecombatarmor"
+	icon_state = "combat_armor_tribe"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
@@ -615,12 +603,6 @@
 	permeability_coefficient = 0.9
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
 
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/outcast
-	name = "brotherhood armor" //unused?
-	desc = "A superior combat armor set made by the Brotherhood of Steel, bearing a series of red markings."
-	icon_state = "brotherhood_armor_outcast"
-	item_state = "brotherhood_armor_outcast"
-
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
 	name = "modified Brotherhood armor"
 	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
@@ -646,17 +628,10 @@
 /obj/item/clothing/suit/armor/medium/combat/tribal
 	name = "tribal combat armor"
 	desc = "An old military grade pre war combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
-	icon_state = "tribecombatarmor"
-	item_state = "tribecombatarmor"
+	icon_state = "combat_armor_tribe"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/armor/medium/combat/marine
-	name = "old United States Marine Corp Armor"
-	desc = "An advanced model of combat armor worn by marines aboard the USS Democracy, second only to power armor in protection used by the USCM For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
-	icon_state = "enclave_marine"
-	item_state = "enclave_marine"
 
 ///////////////////
 // MEDIUM RAIDER //
@@ -718,14 +693,6 @@
 	icon_state = "patrolduster"
 	item_state = "patrolduster"
 
-/obj/item/clothing/suit/armor/medium/raider/raidercombat
-	name = "combat raider armor"
-	desc = "An old military-grade pre-war combat armor. It appears to be fitted with metal plates to replace the crumbling ceramic."
-	icon_state = "raider_combat"
-	item_state = "raider_combat"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
-
 /obj/item/clothing/suit/armor/medium/raider/raidermetal
 	name = "metal raider armor"
 	desc = "A suit of welded, fused metal plates. Looks bulky, with great protection."
@@ -774,6 +741,45 @@
 // !!!FACTION SECTION!!! //
 ///////////////////////////
 
+////////////////
+//Combat Armor//
+////////////////
+
+/obj/item/clothing/suit/armor/medium/combat/raider
+	name = "raider combat armor"
+	desc = "An old military-grade pre-war combat armor. It appears to be fitted with metal plates to replace the crumbling ceramic."
+	icon_state = "combat_armor_raider"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/raider
+	name = "reinforced raider combat armor"
+	desc = "An old set of reinforced combat armor with some parts supplanted with painspike armor. It seems less protective than a mint-condition set of combat armor."
+	icon_state = "combat_armor_raider"
+
+/obj/item/clothing/suit/armor/medium/combat/ncr
+	name = "NCR combat armor"
+	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for New California Republic."
+	icon_state = "combat_armor_ncr"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/ncr
+	name = "reinforced NCR combat armor"
+	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for New California Republic."
+	icon_state = "combat_armor_ncr_mk2"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+
+/obj/item/clothing/suit/armor/medium/combat/legion
+	name = "legion combat armor"
+	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
+	icon_state = "combat_armor_legion"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/legion
+	name = "reinforced legion combat armor"
+	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
+	icon_state = "combat_armor_legion_mk2"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /////////
 // NCR //
@@ -901,19 +907,6 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
-/obj/item/clothing/suit/armor/medium/combat/legion
-	name = "legion combat armor"
-	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion"
-
-/obj/item/clothing/suit/armor/medium/combat/mk2/legion
-	name = "reinforced legion combat armor"
-	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion_mk2"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
-
 //////////////////////////
 // Brotherhood of Steel //
 //////////////////////////
@@ -921,8 +914,6 @@
 /obj/item/clothing/suit/armor/medium/combat/brotherhood
 	name = "brotherhood armor"
 	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "brotherhood_armor_knight"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
@@ -956,6 +947,7 @@
 //////////////////////
 // Town of Eastwood //
 //////////////////////
+
 /obj/item/clothing/suit/armor/medium/duster/mayor
 	name = "eastwood mayor duster"
 	desc = "A long blue coat belonging to the man with finaly say in the town's matters, the Mayor."
@@ -973,8 +965,6 @@
 /obj/item/clothing/suit/armor/medium/combat/town
 	name = "eastwood security combat armor"
 	desc = "A traditional Vault-Tec riot vest reinforced for use out in wastes. Features wrist and legguards compared to standard version"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "town_armor"
 
 /obj/item/clothing/suit/armor/medium/town/riot //UN Glowie
@@ -989,10 +979,14 @@
 /////////////
 
 /obj/item/clothing/suit/armor/medium/combat/enclave
-	name = "enclave combat armor"
-	desc = "An old set of pre-war combat armor, painted black."
-	icon_state = "enclave_new"
-	item_state = "enclave_new"
+	name = "remnant combat armor"
+	desc = "An old well-kept combat armor bearing a small faded circle of stars encompassing an E."
+	icon_state = "enclave_armor"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/enclave
+	name = "reinforced remnant combat armor"
+	desc = "An old well-kept combat armor bearing a small faded circle of stars encompassing an E. This one is meant for heavier duties."
+	icon_state = "enclave_armor_mk2"
 
 /////////////////
 // Great Khans //
