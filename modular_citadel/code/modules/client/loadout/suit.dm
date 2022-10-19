@@ -184,7 +184,7 @@
 	path = /obj/item/clothing/suit/armor/light/vest/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 3
-	restricted_desc = "Eastwood Security"
+	restricted_desc = "Eastwood PD, Eastwood officials"
 	restricted_roles = list("Mayor",
 								"Sheriff",
 								"Deputy",
