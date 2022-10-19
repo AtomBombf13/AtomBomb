@@ -179,7 +179,18 @@
 	restricted_roles = list("Citizen",
 							"Prospector",
 							)
-
+/datum/gear/suit/blueshirt
+	name = "Eastwood light armor vest"
+	path = /obj/item/clothing/suit/armor/light/vest/blueshirt
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
+	cost = 3
+	restricted_desc = "Eastwood Security"
+	restricted_roles = list("Mayor",
+								"Sheriff",
+								"Deputy",
+								"Shopkeeper",
+								"Secretary",
+								)
 
 // BEGIN_INTERNALS
 // END_INTERNALS
