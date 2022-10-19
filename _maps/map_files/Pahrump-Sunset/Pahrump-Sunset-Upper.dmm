@@ -3641,13 +3641,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "hkT" = (
-/obj/structure/window/fulltile/house{
-	dir = 2;
-	icon_state = "housewindowbrokenvertical"
-	},
 /obj/structure/curtain{
 	color = "#5c131b"
 	},
+/obj/structure/window/fulltile/ruins{
+	icon_state = "ruinswindowbrokenvertical"
+	},
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "hkV" = (
