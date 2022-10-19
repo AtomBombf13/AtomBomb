@@ -706,7 +706,26 @@
 	item_state = "r_gear_rig"
 	body_parts_hidden = 0
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
-
+	
+//////////////////////
+// Light Armor Vests//
+/////////////////////
+	
+/obj/item/clothing/suit/armor/light/vest/
+	name = "light vest"
+	desc = "Light armor vest template. You shouldnt see this normally."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	icon_state = "vest_kevlar"
+	item_state = "vest_kevlar"
+	
+/obj/item/clothing/suit/armor/light/vest/flak /*no melee protection, more bomb, some bullet, no DT*/
+	name = "flak vest"
+	desc = "A vest made of ballistic nylon to stop spall, frag, and handgun rounds. It is much lighter and breathes easier than kevlar but a lot less sturdy. Smells faintly of napalm."
+	icon_state = "vest_flak"
+	item_state = "vest_flak"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMO_MODIFIER_DOWN_MELEE_T1 ARMOR_MODIFIER_DOWN_DT_T1) /
+	
 ////////////////
 // ARMOR KITS //
 ////////////////
