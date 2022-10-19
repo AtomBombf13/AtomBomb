@@ -87,7 +87,12 @@
 
 /datum/gear/suit/flakjack
 	name = "Flak Jacket"
-	path = /obj/item/clothing/suit/flakjack
+	path = /obj/item/clothing/suit/armor/light/vest/flak
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
+	cost = 2
+
+/datum/gear/suit/marlowsuit
+	path = /obj/item/clothing/suit/armor/marlowsuit 
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
