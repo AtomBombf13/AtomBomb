@@ -725,14 +725,16 @@
 	desc = "A vest made of ballistic nylon to stop spall, frag, and handgun rounds. It is much lighter and breathes easier than kevlar but a lot less sturdy. Smells faintly of napalm."
 	icon_state = "vest_flak"
 	item_state = "vest_flak"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T1 ARMOR_MODIFIER_DOWN_DT_T1) 
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1 ARMOR_MODIFIER_DOWN_DT_T3) 
 	
 /obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, no DT*/
 	name = "light security vest"
 	desc = "a lightweight ballistic vest that combines protection and comfort."
 	icon_state = "blueshift"
 	item_state = "blueshift"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1 ARMOR_MODIFIER_DOWN_DT_T1) 
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T3) 
 	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 	
 ////////////////
