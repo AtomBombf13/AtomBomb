@@ -29265,6 +29265,13 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/building/museum)
+"vxc" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "S8"
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/tunnel)
 "vxA" = (
 /obj/structure/wreck/trash/five_tires,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -70434,7 +70441,7 @@ aae
 aae
 bsC
 aah
-aah
+vxc
 bKb
 bsC
 aae
