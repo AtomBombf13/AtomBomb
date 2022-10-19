@@ -56944,7 +56944,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
 "tke" = (
-/obj/structure/nest/zombieghoul,
+/obj/structure/nest/ghoul,
 /turf/open/indestructible/ground/outside/ruins{
 	dir = 1;
 	icon_state = "rubble"
