@@ -57,19 +57,13 @@
 	flag = F13USLT
 	display_order = JOB_DISPLAY_ORDER_F13USLT
 	selection_color = "#686666"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavelt
 	exp_requirements = 1500
-
-	loadout_options = list(
-		/datum/outfit/loadout/lt_ballistics, // FN FAL and Deagle
-		/datum/outfit/loadout/lt_plasma, // Plasma Rifle and Plasma Glock
-		)
-
 
 /datum/outfit/job/enclave/peacekeeper/enclavelt
 	name = "Enclave Lieutenant"
@@ -78,34 +72,19 @@
 	head = /obj/item/clothing/head/helmet/f13/enclave/officer
 	uniform = /obj/item/clothing/under/f13/enclave/officer
 	suit = /obj/item/clothing/suit/armor/medium/duster/enclave
+	suit_store = /obj/item/gun/energy/laser/plasma
 	accessory = /obj/item/clothing/accessory/ncr/LT1
 	id = /obj/item/card/id/dogtag/enclave/officer
 	ears = /obj/item/radio/headset/headset_enclave/command
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 1,
 		/obj/item/grenade/flashbang = 1,
 		/obj/item/pda = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		)
-
-/datum/outfit/loadout/lt_ballistics
-	name = "Shiny Bullet"
-	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 2,
-		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
-		/obj/item/ammo_box/magazine/pistol44 = 2,
-		)
-
-/datum/outfit/loadout/lt_plasma
-	name = "Never Forgotten"
-	suit_store = /obj/item/gun/energy/laser/plasma
-	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/gun/energy/laser/plasma/glock = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/energy/laser/plasma/glock = 1
 		)
 
 /datum/outfit/job/enclave/peacekeeper/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -125,8 +104,8 @@
 	title = "Enclave Gunnery Sergeant"
 	flag = F13USGYSGT
 	display_order = JOB_DISPLAY_ORDER_F13USGYSGT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	selection_color = "#686666"
 	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
 	description = "Second in command after Lieutenant, your role is to direct their orders directly to the sergeants and regular troops."
@@ -135,9 +114,8 @@
 	exp_requirements = 1400
 
 	loadout_options = list(
-		/datum/outfit/loadout/gysgt_ballistics, // Unique M2A1 .50 cal MG
 		/datum/outfit/loadout/gysgt_laser, // AER12
-		/datum/outfit/loadout/gysgt_minigun, // Laser gatling
+		/datum/outfit/loadout/gysgt_minigun, // Minigun
 		)
 
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant
@@ -155,13 +133,6 @@
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
 
-/datum/outfit/loadout/gysgt_ballistics
-	name = "Assault Kit"
-	suit_store = /obj/item/gun/ballistic/automatic/m1919/m2a1
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/cal50 = 3,
-		)
-
 /datum/outfit/loadout/gysgt_laser
 	name = "Laser Weaponry"
 	suit_store = /obj/item/gun/energy/laser/aer12
@@ -171,10 +142,7 @@
 
 /datum/outfit/loadout/gysgt_minigun
 	name = "Armored Infantry"
-	suit_store = 	/obj/item/minigunpack
-	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ecp = 2,
-		)
+	backpack_contents = list(/obj/item/minigunpackbal5mm = 1)
 
 /datum/outfit/job/enclave/peacekeeper/f13gysergeant/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -190,8 +158,8 @@
 	title = "Enclave Sergeant"
 	flag = F13USSGT
 	display_order = JOB_DISPLAY_ORDER_F13USSGT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
@@ -244,8 +212,8 @@
 	title = "Enclave Specialist"
 	flag = F13USSPECIALIST
 	display_order = JOB_DISPLAY_ORDER_F13USSPECIALIST
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are an operative for the remnants of the Enclave. You, unlike the normal privates, have recieved specialist training in either engineering or medicine."
 	supervisors = "The Lieutenant and the Sergeants."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13specialist
@@ -259,7 +227,8 @@
 /datum/outfit/job/enclave/peacekeeper/f13specialist
 	name = "Enclave Specialist"
 	jobtype = /datum/job/enclave/f13specialist
-	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	suit = /obj/item/clothing/suit/armor/medium/combat/enclave
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	accessory = /obj/item/clothing/accessory/enclave/specialist
 
@@ -275,7 +244,6 @@
 	name = "Combat Medic"
 	mask = /obj/item/clothing/mask/surgical
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
-	head = /obj/item/clothing/head/beret/enclave/science
 	backpack_contents = list(
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/gun/medbeam = 1,
@@ -287,7 +255,6 @@
 	name = "Combat Engineer"
 	mask = /obj/item/clothing/mask/gas/welding
 	gloves = /obj/item/clothing/gloves/color/yellow
-	head = /obj/item/clothing/head/hardhat/orange
 	suit_store = /obj/item/gun/ballistic/revolver/grenadelauncher
 	backpack_contents = list(
 		/obj/item/storage/belt/utility = 1,
@@ -301,8 +268,8 @@
 	title = "Enclave Private"
 	flag = F13USPRIVATE
 	display_order = JOB_DISPLAY_ORDER_F13USPRIVATE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are an operative for the remnants of the Enclave. Obey your Lieutenant. He sets the Enclave's policies."
 	supervisors = "The Lieutenant and the Sergeants"
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
@@ -312,8 +279,8 @@
 /datum/outfit/job/enclave/peacekeeper/enclavespy
 	name = "Enclave Private"
 	jobtype = /datum/job/enclave/enclavespy
-	head = /obj/item/clothing/head/helmet/f13/combat/swat
-	suit = /obj/item/clothing/suit/armor/medium/combat/swat
+	head = /obj/item/clothing/head/helmet/f13/combat/enclave
+	suit = /obj/item/clothing/suit/armor/medium/combat/enclave
 	suit_store =  /obj/item/gun/ballistic/automatic/assault_carbine/worn
 	accessory = /obj/item/clothing/accessory/enclave
 
@@ -334,8 +301,8 @@
 	title = "Enclave Scientist"
 	flag = F13USSCIENTIST
 	display_order = JOB_DISPLAY_ORDER_F13USSCIENTIST
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in your field of research, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
 	supervisors = "Enclave Research and Development Division."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
