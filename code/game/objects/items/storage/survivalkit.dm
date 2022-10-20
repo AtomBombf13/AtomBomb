@@ -15,7 +15,7 @@
 	STR.max_items = 4
 
 /obj/item/storage/survivalkit/PopulateContents()
-	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/melee/onehanded/knife/switchblade(src)
 	new /obj/item/lighter/greyscale(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 	new /obj/item/reagent_containers/food/snacks/f13/canned/kibble(src)
@@ -25,7 +25,7 @@
 	icon_state = "survivalkit_advanced"
 
 /obj/item/storage/survivalkit/adv/PopulateContents()
-	new /obj/item/stack/medical/gauze/adv(src)
+	new /obj/item/melee/onehanded/knife/switchblade(src)
 	new /obj/item/lighter(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 	new /obj/item/reagent_containers/food/snacks/f13/canned/ncr/igauna_bits(src)
@@ -35,7 +35,7 @@
 	icon_state = "survivalkit_tribal"
 
 /obj/item/storage/survivalkit/tribal/PopulateContents()
-	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/melee/onehanded/knife/switchblade(src)
 	new /obj/item/lighter/greyscale(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 	new /obj/item/reagent_containers/food/snacks/breadhard(src)
@@ -49,7 +49,7 @@
 	icon_state = "survivalkit_tribal_chief"
 
 /obj/item/storage/survivalkit/tribal/chief/PopulateContents()
-	new /obj/item/stack/medical/gauze/adv(src)
+	new /obj/item/melee/onehanded/knife/switchblade(src)
 	new /obj/item/lighter(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 	new /obj/item/reagent_containers/food/snacks/f13/molerat_manicotti(src)
@@ -104,3 +104,14 @@
 	new /obj/item/stack/medical/suture(src)
 	new /obj/item/stack/medical/mesh(src)
 	new /obj/item/reagent_containers/pill/bitterdrink(src)
+
+/obj/item/storage/survivalkit/medical/raider
+	name = "raider emergency bag"
+	desc = "A rugged pouch full of average assortment of medications."
+	icon_state = "ifak"
+
+/obj/item/storage/survivalkit/medical/raider/PopulateContents()
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/reagent_containers/pill/patch/turbo(src)
+	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
+	new /obj/item/reagent_containers/pill/emergency(src)
