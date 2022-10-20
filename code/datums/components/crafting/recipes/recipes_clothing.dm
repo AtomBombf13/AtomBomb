@@ -1,6 +1,29 @@
 /////////
 //BELTS//
 /////////
+/datum/crafting_recipe/belt
+	name = "Leather Belt"
+	result = /obj/item/storage/belt/military/waster
+	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+
+/datum/crafting_recipe/fanny
+	name = "Fannypack"
+	result = /obj/item/storage/belt/fannypack
+	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
 
 /datum/crafting_recipe/bandolier
 	name = "Bandolier"
@@ -14,30 +37,6 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
 
-/datum/crafting_recipe/belt
-	name = "Fannypack"
-	result = /obj/item/storage/belt/fannypack
-	reqs = list(/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/cloth = 2,
-				/obj/item/stack/sheet/leather = 3)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_BELTS
-
-/datum/crafting_recipe/chestrig
-	name = "Chest Rig"
-	result = /obj/item/storage/belt/webbing
-	tools = list(TOOL_AWORKBENCH)
-	reqs = list(/obj/item/stack/sheet/plastic = 2,
-				/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/cloth = 2,
-				/obj/item/stack/sheet/leather = 3)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_BELTS
-
 /datum/crafting_recipe/webbing
 	name = "Webbing"
 	result = /obj/item/storage/belt/webbing/leather
@@ -47,6 +46,18 @@
 				/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
+
+/datum/crafting_recipe/chestrig
+	name = "Chest Rig"
+	result = /obj/item/storage/belt/webbing
+	tools = list(TOOL_AWORKBENCH)
+	reqs = list(/obj/item/stack/sheet/plastic = 8,
+				/obj/item/stack/crafting/metalparts = 4,
+				/obj/item/stack/sheet/cloth = 4,
+				/obj/item/stack/sheet/leather = 6)
+	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
 
@@ -85,36 +96,6 @@
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
-
-/datum/crafting_recipe/durathread_toolbelt
-	name = "Durathread Toolbelt"
-	result = /obj/item/storage/belt/durathread
-	reqs = list(/obj/item/stack/sheet/durathread = 5,
-				/obj/item/stack/sheet/leather = 2)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_BELTS
-	always_available = FALSE
-
-/datum/crafting_recipe/durathread_bandolier
-	name = "Durathread Bandolier"
-	result = /obj/item/storage/belt/bandolier/durathread
-	reqs = list(/obj/item/stack/sheet/durathread = 6,
-				/obj/item/stack/sheet/leather = 2)
-	time = 50
-	category = CAT_CLOTHING
-	subcategory = CAT_BELTS
-	always_available = FALSE
-
-/datum/crafting_recipe/durathread_wintercoat
-	name = "Durathread Winter Coat"
-	result = /obj/item/clothing/suit/hooded/wintercoat/durathread
-	reqs = list(/obj/item/stack/sheet/durathread = 12,
-				/obj/item/stack/sheet/leather = 10)
-	time = 70
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-	always_available = FALSE
 
 /* * * * * *
  * APRONS  *
