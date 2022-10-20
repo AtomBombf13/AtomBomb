@@ -22,7 +22,7 @@
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal
+	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/khan = 1
 		)
