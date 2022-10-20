@@ -707,6 +707,12 @@
 	body_parts_hidden = 0
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
 	
+/obj/item/clothing/suit/armor/marlowsuit //Raider armour reskin.
+	name = "wasteland ganger overcoat"
+	desc = "A heavy raw buckskin overcoat littered with aged bullet holes and frays from regular wear-and-tear."
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	icon_state = "marlowsuit"
+
 //////////////////////
 // Light Armor Vests//
 /////////////////////
