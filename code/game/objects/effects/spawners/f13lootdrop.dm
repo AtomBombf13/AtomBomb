@@ -700,6 +700,7 @@
 				/obj/item/melee/unarmed/maceglove,
 				/obj/item/melee/unarmed/punchdagger,
 				/obj/item/twohanded/baseball/louisville,
+				/obj/item/shishkebabpack,
 				/obj/item/shield/riot,
 				)
 
@@ -715,7 +716,6 @@
 				/obj/item/melee/transforming/energy/axe/protonaxe,
 				/obj/item/gun/ballistic/revolver/ballisticfist,
 				/obj/item/twohanded/sledgehammer/supersledge,
-				/obj/item/shishkebabpack,
 				/obj/item/melee/unarmed/deathclawgauntlet,
 				/obj/item/melee/powerfist/f13/moleminer
 				)
@@ -764,25 +764,22 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
 	name = "mid tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 26,
-				/obj/effect/spawner/bundle/f13/aer12 = 13,
 				/obj/effect/spawner/bundle/f13/wattz2k = 26,
-				/obj/effect/spawner/bundle/f13/wattz2kext = 15,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 15,
 				/obj/effect/spawner/bundle/f13/ionrifle = 5
 				)
 
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier / Why does this exist like why
 	name = "mid-high tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/aer12,
 				/obj/effect/spawner/bundle/f13/plasmapistol,
 				/obj/effect/spawner/bundle/f13/wattz2kext,
 				/obj/effect/spawner/bundle/f13/ionrifle,
-				/obj/effect/spawner/bundle/f13/aer14
 				)
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
 	name = "high tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/plasmarifle = 25,
-				/obj/effect/spawner/bundle/f13/tribeam = 10,
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/aer14 = 20,
 				/obj/effect/spawner/bundle/f13/plasmaglock = 25
@@ -791,6 +788,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
 	name = "superhigh tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/multiplas,
+				/obj/effect/spawner/bundle/f13/tribeam
 				/obj/item/gun/energy/laser/plasma/pistol/alien
 				)
 
@@ -882,14 +880,12 @@
 	name = "high tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 20,
 				/obj/effect/spawner/bundle/f13/r84 = 10,
-				/obj/effect/spawner/bundle/f13/bar = 5,
+				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/m14 = 5,
 				/obj/effect/spawner/bundle/f13/assault_carbine = 5,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
-				/obj/item/gun/ballistic/rocketlauncher = 5,
-				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 5,
 				/obj/item/gun/ballistic/automatic/lsw = 5,
@@ -897,14 +893,12 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
 	name = "superhigh tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/riotshotgun = 5,
+	loot = list(/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 10,
 				/obj/effect/spawner/bundle/f13/amr = 10,
-				/obj/effect/spawner/bundle/f13/brushgun = 15,
+				/obj/effect/spawner/bundle/f13/bar = 10,
 				/obj/effect/spawner/bundle/f13/rangemaster = 15,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
-				/obj/item/gun/ballistic/automatic/bozar = 10,
-				/obj/item/gun/ballistic/automatic/m1919 = 5,
 				/obj/item/gun/ballistic/automatic/g11 = 5,
 				)
 
@@ -920,8 +914,7 @@
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
 				/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
-				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil,
-				/obj/item/gun/ballistic/automatic/m1919/m2a1,
+				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
 				)
 
 
