@@ -5,16 +5,16 @@
 	allow_diagonal_movement = TRUE
 	movedelay = 3
 	dir_in = 1 //Facing North.
-	max_integrity = 250
-	deflect_chance = 5
+	max_integrity = 350
 	armor = ARMOR_VALUE_HEAVY
 	max_temperature = 25000
-	leg_overload_coeff = 80
+	leg_overload_coeff = 300
+	overload_step_energy_drain_min = 300
 	force = 25
 	wreckage = /obj/structure/mecha_wreckage/gygax
 	internal_damage_threshold = 35
 	max_equip = 3
-	step_energy_drain = 3
+	normal_step_energy_drain = 3
 
 /obj/vehicle/sealed/mecha/combat/gygax/dark
 	desc = "A lightweight exosuit, painted in a dark scheme. This model appears to have some modifications."

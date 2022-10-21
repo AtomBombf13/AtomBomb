@@ -5,7 +5,6 @@
 	movedelay = 2
 	dir_in = 1 //Facing North.
 	max_integrity = 100
-	deflect_chance = 3
 	armor = ARMOR_VALUE_LIGHT
 	max_temperature = 15000
 	wreckage = /obj/structure/mecha_wreckage/reticence

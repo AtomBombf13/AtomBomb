@@ -40,11 +40,6 @@
 	dizziness = 0
 	jitteriness = 0
 
-	if(ismecha(loc))
-		var/obj/vehicle/sealed/mecha/M = loc
-		if(M.occupants == src)
-			M.go_out()
-
 	if(!QDELETED(dna)) //The gibbed param is bit redundant here since dna won't exist at this point if they got deleted.
 		dna.species.spec_death(gibbed, src)
 

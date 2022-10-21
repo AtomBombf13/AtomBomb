@@ -157,7 +157,7 @@
 /obj/structure/mecha_wreckage/clarke
 	name = "\improper Clarke wreckage"
 	icon_state = "clarke-broken"
-	var/list/parts = list(
+	parts = list(
 				/obj/item/mecha_parts/part/clarke_torso,
 				/obj/item/mecha_parts/part/clarke_head,
 				/obj/item/mecha_parts/part/clarke_left_arm,

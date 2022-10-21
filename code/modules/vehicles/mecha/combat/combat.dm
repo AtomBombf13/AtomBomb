@@ -7,6 +7,7 @@
 	destruction_sleep_duration = 40
 	exit_delay = 40
 	explode_on_death = TRUE
+	stepsound = 'sound/mecha/neostep2.ogg'
 
 /obj/vehicle/sealed/mecha/combat/restore_equipment()
 	mouse_pointer = 'icons/mecha/mecha_mouse.dmi'

@@ -5,10 +5,9 @@
 	allow_diagonal_movement = TRUE
 	movedelay = 2
 	max_temperature = 15000
-	max_integrity = 120
+	max_integrity = 200
 	wreckage = /obj/structure/mecha_wreckage/odysseus
 	internal_damage_threshold = 35
-	deflect_chance = 15
 	armor = ARMOR_VALUE_LIGHT
 	step_energy_drain = 6
 

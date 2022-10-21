@@ -41,7 +41,7 @@
 	///The minimum amount of energy charge consumed by leg overload
 	var/overload_step_energy_drain_min = 100
 	///chance to deflect the incoming projectiles, hits, or lesser the effect of ex_act.
-	var/deflect_chance = 10
+	var/deflect_chance = 0
 	///Modifiers for directional armor
 	var/list/facing_modifiers = list(MECHA_FRONT_ARMOUR = 1.5, MECHA_SIDE_ARMOUR = 1, MECHA_BACK_ARMOUR = 0.5)
 	///if we cant use our equipment(such as due to EMP)
@@ -272,7 +272,7 @@
 
 /obj/vehicle/sealed/mecha/proc/update_part_values() ///Updates the values given by scanning module and capacitor tier, called when a part is removed or inserted.
 	if(scanmod)
-		normal_step_energy_drain = 20 - (5 * scanmod.rating) //10 is normal, so on lowest part its worse, on second its ok and on higher its real good up to 0 on best
+		normal_step_energy_drain = initial(normal_step_energy_drain) * (1.5 / (scanmod.rating - 0.5)) //movement power cost is 3x of default at T1, 1x at T2, 0.6x at T3 and 0.4x at T4
 		step_energy_drain = normal_step_energy_drain
 	else
 		normal_step_energy_drain = 500
@@ -591,7 +591,7 @@
 		to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>Air port connection has been severed!</span>")
 		log_message("Lost connection to gas port.", LOG_MECHA)
 
-/obj/vehicle/sealed/mecha/Process_Spacemove(movement_dir = 0)
+/obj/vehicle/sealed/mecha/Process_Spacemove(movement_dir = 0, continuous_move)
 	. = ..()
 	if(.)
 		return TRUE
@@ -641,6 +641,9 @@
 	if(!Process_Spacemove(direction))
 		return FALSE
 	if(!has_charge(step_energy_drain))
+		if(TIMER_COOLDOWN_CHECK(src, COOLDOWN_MECHA_MESSAGE))
+			to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>Insufficient power to move!</span>")
+			TIMER_COOLDOWN_START(src, COOLDOWN_MECHA_MESSAGE, 2 SECONDS)
 		return FALSE
 	if(zoom_mode)
 		to_chat(occupants, "[icon2html(src, occupants)]<span class='warning'>Unable to move while in zoom mode!</span>")
@@ -683,6 +686,7 @@
 			return TRUE
 
 	set_glide_size(DELAY_TO_GLIDE_SIZE(movedelay))
+	use_power(step_energy_drain)
 	//Otherwise just walk normally
 	. = step(src,direction, dir)
 
@@ -956,7 +960,7 @@
 
 
 /obj/vehicle/sealed/mecha/generate_actions()
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/climb_out) // I don't see a single problem in generating exit vehicle action.
+	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_eject) // I don't see a single problem in generating exit vehicle action.
 	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_internals, VEHICLE_CONTROL_SETTINGS)
 	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip, VEHICLE_CONTROL_EQUIPMENT)
 	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_lights, VEHICLE_CONTROL_SETTINGS)
@@ -1202,7 +1206,6 @@
 					playsound(get_turf(user),A.load_audio,50,TRUE)
 					to_chat(user, "<span class='notice'>You add [ammo_needed] [A.round_term][ammo_needed > 1?"s":""] to the [gun.name]</span>")
 					A.rounds = A.rounds - ammo_needed
-					A.update_name()
 					return TRUE
 
 				else

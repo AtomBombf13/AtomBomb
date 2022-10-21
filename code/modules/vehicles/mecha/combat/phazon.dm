@@ -5,8 +5,7 @@
 	movedelay = 2
 	dir_in = 2 //Facing South.
 	step_energy_drain = 3
-	max_integrity = 200
-	deflect_chance = 30
+	max_integrity = 300
 	armor = ARMOR_VALUE_HEAVY
 	max_temperature = 25000
 	wreckage = /obj/structure/mecha_wreckage/phazon

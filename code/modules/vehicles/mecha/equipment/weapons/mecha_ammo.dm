@@ -12,7 +12,7 @@
 	var/load_audio = 'sound/weapons/bulletinsert.ogg'
 	var/ammo_type
 
-/obj/item/mecha_ammo/update_name()
+/obj/item/mecha_ammo/proc/update_name()
 	if(!rounds)
 		name = "empty ammo box"
 		desc = "An exosuit ammuniton box that has since been emptied. Please recycle."

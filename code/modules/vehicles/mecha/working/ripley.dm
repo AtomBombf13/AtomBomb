@@ -3,13 +3,10 @@
 	name = "\improper APLU MK-I \"Ripley\""
 	icon_state = "ripley"
 	silicon_icon_state = "ripley-empty"
-	movedelay = 1.5 //Move speed, lower is faster.
+	movedelay = 2 //Move speed, lower is faster.
 	/// How fast the mech is in low pressure
-	var/fast_pressure_step_in = 1.5
-	/// How fast the mech is in normal pressure
-	var/slow_pressure_step_in = 2
 	max_temperature = 20000
-	max_integrity = 200
+	max_integrity = 250
 	lights_power = 7
 	deflect_chance = 15
 	armor = ARMOR_VALUE_MEDIUM
@@ -25,21 +22,17 @@
 	/// How much things Ripley can carry in their Cargo Compartment
 	var/cargo_capacity = 15
 
-/obj/vehicle/sealed/mecha/working/ripley/Move()
-	. = ..()
-	update_pressure()
-
 /obj/vehicle/sealed/mecha/working/ripley/check_for_internal_damage(list/possible_int_damage, ignore_threshold = FALSE)
 	if (!enclosed)
 		possible_int_damage -= (MECHA_INT_TEMP_CONTROL + MECHA_INT_TANK_BREACH) //if we don't even have an air tank, these two doesn't make a ton of sense.
 	. = ..()
-
+/*
 /obj/vehicle/sealed/mecha/working/ripley/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate,3,/obj/item/stack/sheet/animalhide/goliath_hide,list(MELEE = 10, BULLET = 5, LASER = 5))
-
+*/
 /obj/vehicle/sealed/mecha/working/ripley/generate_actions()
-	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/climb_out)
+	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_eject)
 	if(enclosed)
 		initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_toggle_internals, VEHICLE_CONTROL_SETTINGS)
 	initialize_controller_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip, VEHICLE_CONTROL_EQUIPMENT)
@@ -60,11 +53,9 @@
 	desc = "Autonomous Power Loader Unit MK-II. This prototype Ripley is refitted with a pressurized cabin, trading its prior speed for atmospheric protection and armor."
 	name = "\improper APLU MK-II \"Ripley\""
 	icon_state = "ripleymkii"
-	fast_pressure_step_in = 2 //step_in while in low pressure conditions
-	slow_pressure_step_in = 4 //step_in while in normal pressure conditions
-	movedelay = 4
+	movedelay = 3
 	max_temperature = 30000
-	max_integrity = 250
+	max_integrity = 350
 	armor = ARMOR_VALUE_MEDIUM
 	wreckage = /obj/structure/mecha_wreckage/ripley/mkii
 	enclosed = TRUE
@@ -77,7 +68,7 @@
 	icon_state = "clarke"
 	max_temperature = 65000
 	max_integrity = 300
-	step_in = 1.6
+	movedelay = 1.75
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
 	step_energy_drain = 30 //slightly higher energy drain since you movin those wheels FAST
@@ -93,7 +84,7 @@
 		hud.add_hud_to(H)
 
 /obj/vehicle/sealed/mecha/working/clarke/container_resist()
-	if(isliving(occupant))
+	if(isliving(occupants))
 		var/mob/living/L = occupants
 		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_DIAGNOSTIC_ADVANCED]
 		hud.remove_hud_from(L)
@@ -110,11 +101,8 @@
 	desc = "Autonomous Power Loader Unit MK-II-F. This model is refitted with additional thermal protection."
 	name = "\improper APLU \"Firefighter\""
 	icon_state = "firefighter"
-	movedelay = 4
-	fast_pressure_step_in = 2
-	slow_pressure_step_in = 4
+	movedelay = 3
 	max_temperature = 65000
-	max_integrity = 250
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	armor = ARMOR_VALUE_MEDIUM
 	max_equip = 5 // More armor, less tools
@@ -125,8 +113,6 @@
 	desc = "OH SHIT IT'S THE DEATHSQUAD WE'RE ALL GONNA DIE"
 	name = "\improper DEATH-RIPLEY"
 	icon_state = "deathripley"
-	fast_pressure_step_in = 2 //step_in while in low pressure conditions
-	slow_pressure_step_in = 3 //step_in while in normal pressure conditions
 	max_temperature = 100000
 	max_integrity = 500
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -236,21 +222,3 @@
 	else
 		if(user.loc == src) //so we don't get the message if we resisted multiple times and succeeded.
 			to_chat(user, "<span class='warning'>You fail to push [O] out of [src]!</span>")
-
-/**
-  * Makes the mecha go faster and halves the mecha drill cooldown if in Lavaland pressure.
-  *
-  * Checks for Lavaland pressure, if that works out the mech's speed is equal to fast_pressure_step_in and the cooldown for the mecha drill is halved. If not it uses slow_pressure_step_in and drill cooldown is normal.
-  */
-/obj/vehicle/sealed/mecha/working/ripley/proc/update_pressure()
-	var/turf/T = get_turf(loc)
-
-	if(lavaland_equipment_pressure_check(T))
-		movedelay = fast_pressure_step_in
-		for(var/obj/item/mecha_parts/mecha_equipment/drill/drill in equipment)
-			drill.equip_cooldown = initial(drill.equip_cooldown) * 0.5
-
-	else
-		movedelay = slow_pressure_step_in
-		for(var/obj/item/mecha_parts/mecha_equipment/drill/drill in equipment)
-			drill.equip_cooldown = initial(drill.equip_cooldown)

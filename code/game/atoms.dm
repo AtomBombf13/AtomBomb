@@ -1066,6 +1066,8 @@
 			log_game(log_text)
 		if(LOG_GAME)
 			log_game(log_text)
+		if(LOG_MECHA)
+			log_mecha(log_text)
 		if(LOG_SHUTTLE)
 			log_shuttle(log_text)
 		else

@@ -3,8 +3,7 @@
 	name = "\improper Marauder"
 	icon_state = "marauder"
 	movedelay = 5
-	max_integrity = 500
-	deflect_chance = 25
+	max_integrity = 600
 	armor = ARMOR_VALUE_PA
 	max_temperature = 60000
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF

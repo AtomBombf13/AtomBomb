@@ -1,10 +1,10 @@
 /obj/vehicle/sealed/mecha/combat/five_stars
 	desc = "A state of the art tank deployed by the Spinward Stellar Coalition National Guard."
 	name = "\improper Tank"
-	icon = 'icons/mecha/mecha_96x96.dmi'
+//	icon = 'icons/mecha/mecha_96x96.dmi'
 	icon_state = "five_stars"
 	armor = ARMOR_VALUE_PA
-	step_in = 4
+	movedelay = 4
 	dir_in = 1 //Facing North.
 	max_integrity = 800
 	pixel_x = -32

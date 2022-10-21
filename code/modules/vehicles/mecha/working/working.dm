@@ -1,5 +1,5 @@
 /obj/vehicle/sealed/mecha/working
-	internal_damage_threshold = 60
+	internal_damage_threshold = 40
 
 /obj/vehicle/sealed/mecha/working/Move()
 	. = ..()
