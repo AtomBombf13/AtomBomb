@@ -119,7 +119,7 @@
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/is_valid_mecha(obj/vehicle/sealed/mecha/M)
 	if(!M)
 		return FALSE
-	if(LAZYLEN(m.occupantss))
+	if(LAZYLEN(m.occupants))
 		return FALSE
 	if(!M.has_charge(required_mecha_charge))
 		return FALSE
@@ -270,7 +270,7 @@
 		else //we're not in a mecha, so we check if we can steal it instead.
 			if(is_valid_mecha(M))
 				return TRUE
-			for(var/occupant in m.occupantss)
+			for(var/occupant in m.occupants)
 				if(CanAttack(occupant))
 					return TRUE
 			return FALSE

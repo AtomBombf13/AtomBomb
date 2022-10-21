@@ -364,7 +364,7 @@
 	if(!(M.mecha_flags & ADDING_MAINT_ACCESS_POSSIBLE)) //non-removable upgrade, so lets make sure the pilot or owner has their say.
 		to_chat(loc, "<span class='warning'>[M] must have maintenance protocols active in order to allow this conversion kit.</span>")
 		return FALSE
-	if(LAZYLEN(m.occupantss)) //We're actualy making a new mech and swapping things over, it might get weird if players are involved
+	if(LAZYLEN(m.occupants)) //We're actualy making a new mech and swapping things over, it might get weird if players are involved
 		to_chat(loc, "<span class='warning'>[M] must be unoccupied before this conversion kit can be applied.</span>")
 		return FALSE
 	if(!M.cell) //Turns out things break if the cell is missing

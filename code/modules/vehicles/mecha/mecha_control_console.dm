@@ -58,7 +58,7 @@
 			var/message = stripped_input(usr, "Input message", "Transmit message")
 			var/obj/vehicle/sealed/mecha/M = MT.chassis
 			if(trim(message) && M)
-				to_chat(m.occupantss, message)
+				to_chat(m.occupants, message)
 				to_chat(usr, "<span class='notice'>Message sent.</span>")
 				. = TRUE
 		if("shock")
@@ -68,8 +68,8 @@
 			var/obj/vehicle/sealed/mecha/M = MT.chassis
 			if(M)
 				MT.shock()
-				log_game("[key_name(usr)] has activated remote EMP on exosuit [M], located at [loc_name(M)], which [m.occupantss ? "has the occupants [m.occupantss]." : "without a pilot."] ")
-				message_admins("[key_name_admin(usr)][ADMIN_FLW(usr)] has activated remote EMP on exosuit [M][ADMIN_JMP(M)], which is currently [m.occupantss ? "occupied by [m.occupantss][ADMIN_FLW(M)]." : "without a pilot."] ")
+				log_game("[key_name(usr)] has activated remote EMP on exosuit [M], located at [loc_name(M)], which [m.occupants ? "has the occupants [m.occupants]." : "without a pilot."] ")
+				message_admins("[key_name_admin(usr)][ADMIN_FLW(usr)] has activated remote EMP on exosuit [M][ADMIN_JMP(M)], which is currently [m.occupants ? "occupied by [m.occupants][ADMIN_FLW(M)]." : "without a pilot."] ")
 				. = TRUE
 
 /obj/item/mecha_parts/mecha_tracking
