@@ -9,6 +9,7 @@
 	wreckage = /obj/structure/mecha_wreckage/odysseus
 	internal_damage_threshold = 35
 	deflect_chance = 15
+	armor = ARMOR_VALUE_LIGHT
 	step_energy_drain = 6
 
 /obj/vehicle/sealed/mecha/medical/odysseus/moved_inside(mob/living/carbon/human/H)

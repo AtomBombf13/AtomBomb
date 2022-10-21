@@ -5,13 +5,13 @@
 	movedelay = 5
 	max_integrity = 500
 	deflect_chance = 25
-	armor = list(MELEE = 50, BULLET = 55, LASER = 40, ENERGY = 30, BOMB = 30, BIO = 0, RAD = 60, FIRE = 100, ACID = 100)
+	armor = ARMOR_VALUE_PA
 	max_temperature = 60000
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	wreckage = /obj/structure/mecha_wreckage/marauder
 	mecha_flags = CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
 	internal_damage_threshold = 25
-	force = 45
+	force = 50
 	max_equip = 5
 	bumpsmash = TRUE
 
