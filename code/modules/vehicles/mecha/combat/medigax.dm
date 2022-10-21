@@ -13,7 +13,6 @@
 	internal_damage_threshold = 35
 	step_energy_drain = 6
 	infra_luminosity = 6
-	internals_req_access = list(ACCESS_ROBOTICS, ACCESS_MEDICAL)
 
 /obj/vehicle/sealed/mecha/medical/medigax/moved_inside(mob/living/carbon/human/H)
 	. = ..()

@@ -110,11 +110,11 @@
 	if(ismecha(AM))
 		var/obj/vehicle/sealed/mecha/mecha = AM
 		if(density)
-			if(mecha.occupant)
-				if(world.time - mecha.occupant.last_bumped <= 10)
+			if(mecha.occupants)
+				if(world.time - mecha.occupants.last_bumped <= 10)
 					return
-				mecha.occupant.last_bumped = world.time
-			if(mecha.occupant && (src.allowed(mecha.occupant) || src.check_access_list(mecha.operation_req_access)))
+				mecha.occupants.last_bumped = world.time
+			if(mecha.occupants && (src.allowed(mecha.occupants) || src.check_access_list(mecha.operation_req_access)))
 				open()
 			else
 				do_animate("deny")

@@ -9,8 +9,6 @@
 	armor = list(MELEE = 25, BULLET = 20, LASER = 30, ENERGY = 15, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	max_temperature = 15000
 	wreckage = /obj/structure/mecha_wreckage/reticence
-	operation_req_access = list(ACCESS_THEATRE)
-	internals_req_access = list(ACCESS_ROBOTICS, ACCESS_THEATRE)
 	mecha_flags =  CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
 	internal_damage_threshold = 25
 	max_equip = 2

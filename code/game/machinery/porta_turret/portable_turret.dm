@@ -459,8 +459,8 @@
 	for(var/A in GLOB.mechas_list)
 		if((get_dist(A, base) < scan_range) && can_see(base, A, scan_range))
 			var/obj/vehicle/sealed/mecha/Mech = A
-			if(mech.occupants && !in_faction(mech.occupants)) //If there is a user and they're not in our faction
-				if(assess_perp(mech.occupants) >= 4)
+			if(Mech.occupants && !in_faction(Mech.occupants)) //If there is a user and they're not in our faction
+				if(assess_perp(Mech.occupants) >= 4)
 					targets += Mech
 
 	if((turret_flags & TURRET_FLAG_SHOOT_ANOMALOUS) && GLOB.blobs.len && (mode == TURRET_LETHAL))

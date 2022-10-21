@@ -121,7 +121,7 @@
 	else
 		//drill makes a hole
 		var/obj/item/bodypart/target_part = target.get_bodypart(ran_zone(BODY_ZONE_CHEST))
-		target.apply_damage(10, BRUTE, BODY_ZONE_CHEST, target.run_armor_check(target_part, MELEE))
+		target.apply_damage(10, BRUTE, BODY_ZONE_CHEST, target.run_armor_check(target_part, "melee"))
 
 		//blood splatters
 		var/splatter_dir = get_dir(chassis, target)
@@ -131,7 +131,7 @@
 			if(ishuman(target))
 				var/mob/living/carbon/human/H = target
 				new /obj/effect/temp_visual/dir_setting/bloodsplatter(target.drop_location(), splatter_dir, H.dna.species.exotic_blood_color)
-			else	
+			else
 				new /obj/effect/temp_visual/dir_setting/bloodsplatter(target.drop_location(), splatter_dir)
 
 		//organs go everywhere

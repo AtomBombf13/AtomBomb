@@ -1037,14 +1037,14 @@
 			"key" = /obj/item/bikehorn
 		),
 		list(
-			"key" = /obj/item/clothing/mask/gas/clown_hat,
+			"key" = /obj/item/clothing/mask/gas,
 			"action" = ITEM_DELETE
 		),
 		list(
 			"key" = /obj/item/bikehorn
 		),
 		list(
-			"key" = /obj/item/clothing/shoes/clown_shoes,
+			"key" = /obj/item/clothing/shoes,
 			"action" = ITEM_DELETE
 		),
 		list(

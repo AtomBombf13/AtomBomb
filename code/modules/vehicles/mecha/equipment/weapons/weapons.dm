@@ -150,7 +150,6 @@
 	equip_cooldown = 150
 	range = MECHA_MELEE|MECHA_RANGED
 	kickback = FALSE
-	mech_flags = EXOSUIT_MODULE_HONK
 
 /obj/item/mecha_parts/mecha_equipment/weapon/honker/can_attach(obj/vehicle/sealed/mecha/mecha)
 	. = ..()
@@ -274,7 +273,7 @@
 	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
 	icon_state = "mecha_mime"
 	equip_cooldown = 30
-	projectile = /obj/item/projectile/bullet/mime
+	projectile = /obj/item/projectile/bullet
 	projectiles = 6
 	projectile_energy_cost = 50
 	harmful = TRUE
@@ -296,7 +295,6 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/seedscatter
 	name = "\improper Melon Seed \"Scattershot\""
 	desc = "A weapon for combat exosuits. Shoots a spread of pellets, shaped as seed."
-	fire_sound = 'sound/weapons/gunshotshotgunshot.ogg'
 	icon_state = "mecha_scatter"
 	equip_cooldown = 20
 	projectile = /obj/item/projectile/bullet/seed
@@ -418,7 +416,6 @@
 	missile_speed = 1.5
 	projectile_energy_cost = 100
 	equip_cooldown = 20
-	mech_flags = EXOSUIT_MODULE_HONK
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar/can_attach(obj/vehicle/sealed/mecha/combat/honker/M)
 	if(..())
@@ -436,7 +433,6 @@
 	missile_speed = 1.5
 	projectile_energy_cost = 100
 	equip_cooldown = 10
-	mech_flags = EXOSUIT_MODULE_HONK
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/mousetrap_mortar/can_attach(obj/vehicle/sealed/mecha/combat/honker/M)
 	if(..())
@@ -467,7 +463,6 @@
 	var/punch_damage = 35
 	/// TRUE - Can toggle between lethal and non-lethal || FALSE - Cannot toggle
 	var/can_toggle_lethal = TRUE
-	mech_flags = EXOSUIT_MODULE_HONK
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/punching_glove/can_attach(obj/vehicle/sealed/mecha/combat/honker/M)
 	if(..())

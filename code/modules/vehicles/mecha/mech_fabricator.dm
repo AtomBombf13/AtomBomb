@@ -164,11 +164,14 @@
 					category_override += "Gygax"
 				if(mech_types & EXOSUIT_MODULE_DURAND)
 					category_override += "Durand"
-				if(mech_types & EXOSUIT_MODULE_HONK)
-					category_override += "H.O.N.K"
+//				if(mech_types & EXOSUIT_MODULE_HONK)
+//					category_override += "H.O.N.K"
 				if(mech_types & EXOSUIT_MODULE_PHAZON)
-					category_override += "Phazon"
-
+					category_override += "Savannah-Ivanov"
+				if(mech_types & EXOSUIT_MODULE_PHAZON)
+					category_override += "Savannah-Ivanov"
+				if(mech_types & EXOSUIT_MODULE_PHAZON)
+					category_override += "Marauder"
 
 	var/list/part = list(
 		"name" = D.name,
