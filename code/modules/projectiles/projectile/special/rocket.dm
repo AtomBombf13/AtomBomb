@@ -118,7 +118,7 @@
 	ricochets_max = 0 //Guess what? Still a MISSILE
 	var/sturdy = list(
 	/turf/closed,
-	/obj/mecha,
+	/obj/vehicle/sealed/mecha,
 	/obj/machinery/door,
 	/obj/machinery/door/poddoor/shutters
 	)
