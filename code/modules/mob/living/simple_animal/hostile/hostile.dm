@@ -274,7 +274,7 @@
 			return TRUE
 
 		if(ismecha(the_target))
-			var/obj/mecha/M = the_target
+			var/obj/vehicle/sealed/mecha/M = the_target
 			if(M.occupant)//Just so we don't attack empty mechs
 				if(CanAttack(M.occupant))
 					return TRUE

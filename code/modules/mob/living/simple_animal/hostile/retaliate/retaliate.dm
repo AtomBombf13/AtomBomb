@@ -10,7 +10,7 @@
 		else
 			enemies -= WEAKREF(L)
 	else if(ismecha(A))
-		var/obj/mecha/M = A
+		var/obj/vehicle/sealed/mecha/M = A
 		if(M.occupant)
 			return A
 
@@ -40,7 +40,7 @@
 			if(faction_check_mob(M) && attack_same || !faction_check_mob(M))
 				enemies |= WEAKREF(M)
 		else if(ismecha(A))
-			var/obj/mecha/M = A
+			var/obj/vehicle/sealed/mecha/M = A
 			if(M.occupant)
 				enemies |= WEAKREF(M)
 				enemies |= WEAKREF(M.occupant)

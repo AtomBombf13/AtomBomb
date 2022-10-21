@@ -41,7 +41,7 @@
 	jitteriness = 0
 
 	if(ismecha(loc))
-		var/obj/mecha/M = loc
+		var/obj/vehicle/sealed/mecha/M = loc
 		if(M.occupant == src)
 			M.go_out()
 

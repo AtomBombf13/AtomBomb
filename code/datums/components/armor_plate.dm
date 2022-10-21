@@ -12,7 +12,7 @@
 	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/examine)
 	RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/applyplate)
 	RegisterSignal(parent, COMSIG_PARENT_PREQDELETED, .proc/dropplates)
-	if(istype(parent, /obj/mecha/working/ripley))
+	if(istype(parent, /obj/vehicle/sealed/mecha/working/ripley))
 		RegisterSignal(parent, COMSIG_ATOM_UPDATE_OVERLAYS, .proc/apply_mech_overlays)
 
 	if(_maxamount)
@@ -67,7 +67,7 @@
 	O.armor = O.armor.attachArmor(added_armor)
 
 	if(ismecha(O))
-		var/obj/mecha/R = O
+		var/obj/vehicle/sealed/mecha/R = O
 		R.update_icon()
 		to_chat(user, span_info("You strengthen [R], improving its resistance against melee, bullet and laser damage."))
 	else

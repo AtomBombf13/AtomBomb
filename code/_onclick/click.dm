@@ -82,7 +82,7 @@
 		return
 
 	if(ismecha(loc))
-		var/obj/mecha/M = loc
+		var/obj/vehicle/sealed/mecha/M = loc
 		M.click_action(A,src,params)
 		return TRUE
 
