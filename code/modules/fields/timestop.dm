@@ -128,10 +128,10 @@
 	frozen_things -= A
 	global_frozen_atoms -= A
 
-/datum/proximity_monitor/advanced/timestop/proc/freeze_mecha(obj/mecha/M)
+/datum/proximity_monitor/advanced/timestop/proc/freeze_mecha(obj/vehicle/sealed/mecha/M)
 	M.completely_disabled = TRUE
 
-/datum/proximity_monitor/advanced/timestop/proc/unfreeze_mecha(obj/mecha/M)
+/datum/proximity_monitor/advanced/timestop/proc/unfreeze_mecha(obj/vehicle/sealed/mecha/M)
 	M.completely_disabled = FALSE
 
 /datum/proximity_monitor/advanced/timestop/proc/freeze_throwing(atom/movable/AM)
