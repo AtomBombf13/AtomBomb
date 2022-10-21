@@ -664,12 +664,12 @@
 		to_chat(user, span_warning("[src] is already open."))
 		return
 	if(!is_open == TRUE)
-		to_chat(user, span_warning("You need something sharp to open [src]."))
+		to_chat(user, span_warning("You need a knife to open [src]."))
 		return
 
 /obj/item/reagent_containers/food/snacks/f13/canned/attack(mob/living/M, mob/living/user)
 	if(!is_open)
-		to_chat(user, span_warning("You need something sharp to open [src]."))
+		to_chat(user, span_warning("You need a knife to open [src]."))
 		return
 	. = ..()
 
@@ -678,7 +678,7 @@
 		to_chat(user, span_notice("[src] is already open."))
 		..()
 	if(!is_open == TRUE)
-		if(istype(W,/obj/item/melee/onehanded/knife || /obj/item/kitchen/knife)) //You ain't using swords to open a damn can
+		if(istype(W,/obj/item/melee/onehanded/knife))
 			is_open = TRUE
 			to_chat(user, span_notice("You open the lid of the can."))
 			update_icon()
@@ -715,7 +715,7 @@
 
 /obj/item/reagent_containers/food/snacks/f13/canned/kibble
 	name = "can of kibble"
-	desc = "A can of indescribable contents letting out a putrid strench looking like it was meant for animals not humans. On the front of label you can only make out \"Goy\" with rest of the word lost to time."
+	desc = "A can of indescribable contents letting out a putrid strench looking like it was meant for animals not humans. The label is completely ruined but you are pretty sure that's for the best."
 	icon_state = "kibble"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 7)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 10)

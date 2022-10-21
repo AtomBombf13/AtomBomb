@@ -597,6 +597,12 @@
 	icon_state = "assaultbelt"
 	item_state = "security"
 
+/obj/item/storage/belt/military/waster
+	name = "leather belt"
+	desc = "A ragtag belt used by wasters."
+	icon_state = "cowboy"
+	item_state = "survival"
+
 /obj/item/storage/belt/military/legion
 	name = "legionnaire marching belt"
 	desc = "A belt capable of holding the necessities of a legionnaire."

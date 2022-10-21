@@ -51,6 +51,8 @@
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
 	desc = "An old military grade pre-war combat helmet."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
 	armor = ARMOR_VALUE_MEDIUM
@@ -102,12 +104,6 @@
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
-
-/obj/item/clothing/head/helmet/f13/combat/mk2/raider
-	name = "customized raider combat helmet"
-	desc = "A reinforced combat helmet painted black with the laser designator removed."
-	icon_state = "combat_helmet_raider"
-	item_state = "combat_helmet_raider"
 
 /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	name = "broken riot helmet"

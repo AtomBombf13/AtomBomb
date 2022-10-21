@@ -802,6 +802,24 @@
 				counter = 0
 		dat += "</tr></table>"
 
+	//Outlaws (Red)
+		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
+		dat += "<tr align='center' bgcolor='ffa2a2'><th colspan='[length(GLOB.outlaw_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=outlawdept;jobban4=[REF(M)]'>Outlaw Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.outlaw_positions)
+			if(!jobPos)
+				continue
+			if(jobban_isbanned(M, jobPos))
+				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'><font color=red>[jobPos]</font></a></td>"
+				counter++
+			else
+				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'>[jobPos]</a></td>"
+				counter++
+
+			if(counter >= 6) //So things dont get squiiiiished!
+				dat += "</tr><tr>"
+				counter = 0
+		dat += "</tr></table>"
+
 	//Non-Human (Green)
 		counter = 0
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
