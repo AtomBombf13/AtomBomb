@@ -4,8 +4,8 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher
 	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	name = "grenade rifle"
-	icon_state = "dshotgun-sawn"
-	item_state = "gun"
+	icon_state = "grenade_rifle"
+	item_state = "shotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
 	init_mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'

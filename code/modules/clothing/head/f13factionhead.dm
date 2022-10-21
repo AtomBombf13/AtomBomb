@@ -586,12 +586,12 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
 /obj/item/clothing/head/f13/town/deputy
-	name = "eastwood lawman hat"
+	name = "eastwood lawman's hat"
 	desc = "A stylish classic hat used by lawmen."
 	icon_state = "town_deputy"
 
 /obj/item/clothing/head/f13/town/sheriff
-	name = "eastwood marshal hat"
+	name = "eastwood provost's hat"
 	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
 	icon_state = "town_marshal"
 
@@ -604,9 +604,9 @@
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/f13/town/riot //UN Glowie
-	name = "eastwood marshal combat helmet"
-	desc = "An old combat helmet in suprisingly good state, painted over with dark blue paint remining of times long gone."
-	icon_state = "town_marshal_riot" //In reality a placeholder
+	name = "eastwood provost combat helmet"
+	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
+	icon_state = "town_marshal_riot"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF

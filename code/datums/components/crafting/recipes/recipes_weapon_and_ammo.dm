@@ -2,7 +2,7 @@
 	name = "Spear"
 	result = /obj/item/twohanded/spear
 	reqs = list(/obj/item/restraints/handcuffs/cable = 1,
-				/obj/item/melee/onehanded/knife = 1,
+				/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/rods = 1,
 				/obj/item/stack/crafting/goodparts = 2)
 	time = 60

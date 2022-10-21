@@ -479,11 +479,6 @@
 	icon_state = "cloak_armored"
 	item_state = "cloak_armored"
 
-/obj/item/clothing/suit/armor/medium/duster/enclave
-	name = "enclave officer trenchcoat"
-	desc = "Premium prewar military armor worn under a coat for Enclave officers."
-	icon_state = "armor_enclave_officer"
-	item_state = "armor_enclave_officer"
 
 /obj/item/clothing/suit/armor/medium/duster/follower
 	name = "follower's duster"
@@ -956,7 +951,7 @@
 	icon_state = "town_command"
 
 /obj/item/clothing/suit/armor/medium/duster/sheriff
-	name = "eastwood marshal's trenchcoat"
+	name = "eastwood provost's trenchcoat"
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
@@ -968,11 +963,11 @@
 	icon_state = "town_armor"
 
 /obj/item/clothing/suit/armor/medium/town/riot //UN Glowie
-	name = "eastwood marshal riot armor"
-	desc = "A set of pristine L.A police riot armor known mainly from use by the NCR Rangers these days. This set is covered over by vault colored duster and looks way cleaner than most sets out there."
+	name = "eastwood provost riot coat"
+	desc = "A weathered coat made for most part out of ballistic fiber and stuffed with ceramic plates underneath, it provides more than enough protection for the big gun of the town."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "town_marshal_riot" //In reality a placeholder
+	icon_state = "town_marshal_riot"
 
 /////////////
 // Enclave //
@@ -987,6 +982,13 @@
 	name = "reinforced remnant combat armor"
 	desc = "An old well-kept combat armor bearing a small faded circle of stars encompassing an E. This one is meant for heavier duties."
 	icon_state = "enclave_armor_mk2"
+
+/obj/item/clothing/suit/armor/medium/duster/enclave
+	name = "enclave officer trenchcoat"
+	desc = "Premium prewar military armor worn under a coat for Enclave officers."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "armor_enclave_officer"
 
 /////////////////
 // Great Khans //
