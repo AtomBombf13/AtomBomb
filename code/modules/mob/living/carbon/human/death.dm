@@ -42,7 +42,7 @@
 
 	if(ismecha(loc))
 		var/obj/vehicle/sealed/mecha/M = loc
-		if(M.occupant == src)
+		if(m.occupants == src)
 			M.go_out()
 
 	if(!QDELETED(dna)) //The gibbed param is bit redundant here since dna won't exist at this point if they got deleted.

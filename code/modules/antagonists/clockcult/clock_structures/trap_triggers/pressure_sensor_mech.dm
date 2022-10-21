@@ -13,7 +13,7 @@
 		return
 
 	var/obj/vehicle/sealed/mecha/M = AM
-	if(M.occupant && is_servant_of_ratvar(M.occupant))
+	if(m.occupants && is_servant_of_ratvar(m.occupants))
 		return
 	audible_message("<i>*click*</i>")
 	playsound(src, 'sound/items/screwdriver2.ogg', 50, TRUE)

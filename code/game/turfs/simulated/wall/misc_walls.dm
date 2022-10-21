@@ -148,7 +148,7 @@
 /turf/closed/wall/clockwork/mech_melee_attack(obj/vehicle/sealed/mecha/M)
 	..()
 	if(heated)
-		to_chat(M.occupant, span_userdanger("The wall's intense heat completely reflects your [M.name]'s attack!"))
+		to_chat(m.occupants, span_userdanger("The wall's intense heat completely reflects your [M.name]'s attack!"))
 		M.take_damage(20, BURN)
 
 /turf/closed/wall/clockwork/proc/turn_up_the_heat()

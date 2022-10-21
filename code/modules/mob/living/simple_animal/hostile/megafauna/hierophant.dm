@@ -664,10 +664,10 @@ Difficulty: Normal
 		log_combat(caster, L, "struck with a [name]")
 	for(var/obj/vehicle/sealed/mecha/M in T.contents - hit_things) //also damage mechs.
 		hit_things += M
-		if(M.occupant)
-			if(friendly_fire_check && caster && caster.faction_check_mob(M.occupant))
+		if(m.occupants)
+			if(friendly_fire_check && caster && caster.faction_check_mob(m.occupants))
 				continue
-			to_chat(M.occupant, span_userdanger("Your [M.name] is struck by a [name]!"))
+			to_chat(m.occupants, span_userdanger("Your [M.name] is struck by a [name]!"))
 		playsound(M,'sound/weapons/sear.ogg', 50, 1, -4)
 		M.take_damage(damage, BURN, 0, 0, null, 50)
 

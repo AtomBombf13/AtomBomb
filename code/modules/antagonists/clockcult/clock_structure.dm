@@ -73,7 +73,7 @@
 	return ..()
 
 /obj/structure/destructible/clockwork/mech_melee_attack(obj/vehicle/sealed/mecha/M)
-	if(M.occupant && is_servant_of_ratvar(M.occupant) && immune_to_servant_attacks)
+	if(m.occupants && is_servant_of_ratvar(m.occupants) && immune_to_servant_attacks)
 		return FALSE
 	return ..()
 

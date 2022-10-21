@@ -84,7 +84,7 @@
 		var/overlay_string = "ripley-g"
 		if(amount >= 3)
 			overlay_string += "-full"
-		if(!mech.occupant)
+		if(!mech.occupants)
 			overlay_string += "-open"
 		overlays += overlay_string
 

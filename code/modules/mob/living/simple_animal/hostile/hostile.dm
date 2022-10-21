@@ -275,8 +275,8 @@
 
 		if(ismecha(the_target))
 			var/obj/vehicle/sealed/mecha/M = the_target
-			if(M.occupant)//Just so we don't attack empty mechs
-				if(CanAttack(M.occupant))
+			if(m.occupants)//Just so we don't attack empty mechs
+				if(CanAttack(m.occupants))
 					return TRUE
 
 		if(istype(the_target, /obj/machinery/porta_turret))
