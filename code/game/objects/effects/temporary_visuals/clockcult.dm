@@ -133,10 +133,10 @@
 		log_combat(user, L, "struck with a volt blast")
 		hit_amount++
 	for(var/obj/vehicle/sealed/mecha/M in T)
-		if(m.occupants)
-			if(is_servant_of_ratvar(m.occupants))
+		if(M.occupants)
+			if(is_servant_of_ratvar(M.occupants))
 				continue
-			to_chat(m.occupants, span_userdanger("Your [M.name] is struck by a [name]!"))
+			to_chat(M.occupants, span_userdanger("Your [M.name] is struck by a [name]!"))
 		M.visible_message(span_warning("[M] is struck by a [name]!"))
 		M.take_damage(damage, BURN, 0, 0)
 		hit_amount++

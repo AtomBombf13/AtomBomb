@@ -412,7 +412,7 @@
 			return FALSE
 	if (ismecha(the_target))
 		var/obj/vehicle/sealed/mecha/M = the_target
-		if (m.occupants)
+		if (M.occupants)
 			return FALSE
 	return TRUE
 
