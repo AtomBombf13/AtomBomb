@@ -1074,7 +1074,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	total_positions = 4
 	spawn_positions = 4
 	description = "A camp follower ranges in defintiion and purposes. Some may be not enslaved men who are simply not fit for service, termorarily or perminantly, or women who serve a purpose above stock to the Legion. Duties may vary from medical specialities, weapon crafting or other skilled-labor tasks."
-	supervisors = "the Decani and Centurion"
+	supervisors = "Officers first, then warriors."
 	display_order = JOB_DISPLAY_ORDER_CAMPFOLLOWER
 	outfit = /datum/outfit/job/CaesarsLegion/f13campfollower
 
@@ -1089,6 +1089,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/job/CaesarsLegion/f13campfollower
 	name = "Camp Follower"
 	id = /obj/item/card/id/dogtag/legforgemaster
+	ears = /obj/item/radio/headset/headset_legion
 	glasses = /obj/item/clothing/glasses/welding
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	gloves = null
