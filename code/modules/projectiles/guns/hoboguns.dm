@@ -170,7 +170,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	init_recoil = HANDGUN_RECOIL(2.4)
 	init_firemodes = list(
-		SEMI_AUTO_RIFLE
+		SEMI_AUTO_RIFLE,
 		list(mode_name="Fire all barrels", mode_desc = "Fire all four barrels at once", automatic = 0, burst_size=4, fire_delay=15, icon="burst", burst_shot_delay = 0.1)
 	)
 
