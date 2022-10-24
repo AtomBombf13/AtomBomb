@@ -546,6 +546,13 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/metal_guard)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/laserguide)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forged_barrel)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/overshootermod)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/fullauto)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_helmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_armor)
 
 /datum/outfit/job/eastwood/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
