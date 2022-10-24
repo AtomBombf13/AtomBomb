@@ -287,7 +287,7 @@
 		item_state = "gun"
 		slot_flags |= ITEM_SLOT_BELT //but you can wear it on your belt (poorly concealed under a trenchcoat, ideally)
 		recoil_dat.modifyAllRatings(2)
-		cock_delay = GUN_COCK_SHOTGUN_FAST
+
 		damage_multiplier *= GUN_LESS_DAMAGE_T2 // -15% damage
 		sawn_off = TRUE
 		gun_accuracy_zone_type = ZONE_WEIGHT_SHOTGUN

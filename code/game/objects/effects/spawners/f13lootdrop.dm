@@ -833,7 +833,6 @@
 				/obj/effect/spawner/bundle/f13/colt357,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/police_pistol,
-				/obj/effect/spawner/bundle/f13/guns/commando,
 				/obj/effect/spawner/bundle/f13/m1carbine
 				)
 
@@ -950,13 +949,6 @@
 	items = list(
 				/obj/item/gun/ballistic/revolver/caravan_shotgun,
 				/obj/item/ammo_box/shotgun/improvised
-				)
-
-/obj/effect/spawner/bundle/f13/mosin
-	name = "mosin nagant and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/rifle/mosin,
-				/obj/item/ammo_box/stripper/a762
 				)
 
 /obj/effect/spawner/bundle/f13/remington
@@ -2096,9 +2088,9 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/uzi,
 		/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
-		/obj/item/book/granter/crafting_recipe/blueprint/commando,
 		/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
 	)
+
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
 	icon_state = "blueprint_loot"

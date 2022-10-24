@@ -21,9 +21,6 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 
 	var/obj/item/stock_parts/cell/cell //What type of power cell this uses
 	var/cell_type = /obj/item/stock_parts/cell/ammo/mfc
@@ -32,8 +29,8 @@
 	var/list/ammo_type = list(/obj/item/ammo_casing/energy = TRUE)
 	/// The index of the ammo_types/firemodes which we're using right now
 	var/current_firemode_index = 1
-	var/can_charge = 1 //Can it be charged in a recharger?
-	var/can_remove = 1 //Can the cell itself be removed and replaced?
+	var/can_charge = TRUE //Can it be charged in a recharger?
+	var/can_remove = TRUE //Can the cell itself be removed and replaced? / Use TRUE/FALSE if you can ffs
 	var/automatic_charge_overlays = TRUE	//Do we handle overlays with base update_icon()?
 	var/charge_sections = 4
 	ammo_x_offset = 2

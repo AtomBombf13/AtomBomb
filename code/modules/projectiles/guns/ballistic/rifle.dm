@@ -24,11 +24,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2.2)
 	init_firemodes = list(
 		SEMI_AUTO_NODELAY
@@ -136,12 +132,12 @@
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+
+	init_firemodes = list(
+		SEMI_AUTO_SMG
+	)
 
 	scope_x_offset = 5
 	scope_y_offset = 13
@@ -175,11 +171,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_LESS_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3)
 
 	fire_sound = 'sound/f13weapons/cowboyrepeaterfire.ogg'
@@ -212,11 +204,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_LESS_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3.3)
 
 	fire_sound = 'sound/f13weapons/44mag.ogg'
@@ -249,11 +237,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
@@ -303,11 +287,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	gun_tags = list(GUN_SCOPE)
@@ -317,6 +297,11 @@
 	scope_y_offset = 12
 	pump_sound = 'sound/weapons/boltpump.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
+	init_firemodes = list(
+		SEMI_AUTO_RIFLE
+	)
+
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
@@ -345,7 +330,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/rifle/hunting/remington
-	name = "Remington rifle"
+	name = "remington rifle"
 	desc = "A militarized hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy."
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting/remington
 
@@ -353,11 +338,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_BASE
 
 /obj/item/gun/ballistic/rifle/hunting/remington/attackby(obj/item/A, mob/user, params) //DO NOT BUBBA YOUR STANDARD ISSUE RIFLE SOLDIER!
 	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
@@ -389,11 +370,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_T4
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2.2)
 
 	zoomable = TRUE
@@ -410,54 +387,6 @@
 			return
 	else
 		..()
-
-/* * * * * * * * * * *
- * Mosin Bolt-Action Rifle
- * Moist Bolt-Action Rifle
- * .308 / 7.62
- * Can bayonet
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/rifle/mosin
-	name = "Mosin-Nagant m38"
-	desc = "A rusty old Russian bolt action chambered in 7.62."
-	icon_state = "mosin"
-	item_state = "308"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(2.5)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-	scope_state = "scope_mosin"
-	scope_x_offset = 3
-	scope_y_offset = 13
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 22
-	knife_y_offset = 21
-	pump_sound = 'sound/weapons/boltpump.ogg'
-	fire_sound = 'sound/f13weapons/boltfire.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
-	)
 
 /* * * * * * * * * * *
  * SMLE Bolt-Action Rifle
@@ -480,11 +409,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_FAST
 	init_recoil = RIFLE_RECOIL(2.8)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	gun_tags = list(GUN_SCOPE)
@@ -499,6 +424,11 @@
 	pump_sound = 'sound/weapons/boltpump.ogg'
 	fire_sound = 'sound/f13weapons/boltfire.ogg'
 	pump_stam_cost = 15
+
+	init_firemodes = list(
+		SEMI_AUTO_RIFLE
+	)
+
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
@@ -533,11 +463,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
 
 /obj/item/gun/ballistic/rifle/mag/examine(mob/user)
 	. = ..()
@@ -593,13 +519,13 @@
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = HMG_RECOIL(3)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+
+	init_firemodes = list(
+		SEMI_AUTO_SNIPER
+	)
 
 	zoomable = TRUE
 	zoom_amt = 10

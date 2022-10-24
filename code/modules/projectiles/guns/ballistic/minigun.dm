@@ -95,11 +95,7 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FASTEST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	damage_multiplier = GUN_LESS_DAMAGE_T5
-	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(0.5)
 	init_firemodes = list(
 		FULL_AUTO_800

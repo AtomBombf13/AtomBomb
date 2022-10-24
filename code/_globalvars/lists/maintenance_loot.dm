@@ -511,7 +511,6 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/gun/ballistic/revolver/caravan_shotgun,
 	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/gun/ballistic/rifle/mosin,
 	/obj/item/ammo_box/stripper/a762,
 	/obj/item/gun/ballistic/revolver/police,
 	/obj/item/ammo_box/loader/c38,
