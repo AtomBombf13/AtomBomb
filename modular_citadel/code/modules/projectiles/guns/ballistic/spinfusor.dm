@@ -38,10 +38,8 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/spinfusor
 	fire_sound = 'sound/weapons/rocketlaunch.ogg'
 	w_class = WEIGHT_CLASS_BULKY
-	can_suppress = 0
-	burst_size = 1
+	can_suppress = FALSE
 	fire_delay = 40
-	select = 0
 	actions_types = list()
 	casing_ejector = 0
 

@@ -17,7 +17,7 @@
 	var/obj/item/ammo_box/magazine/magazine
 	var/casing_ejector = TRUE //whether the gun ejects the chambered casing
 	var/magazine_wording = "magazine"
-	var/en_bloc = 0
+	var/en_bloc = FALSE //Faster than 0/1
 	/// Which direction do the casings fly out?
 	var/handedness = GUN_EJECTOR_RIGHT
 	gun_sound_properties = list(

@@ -9,11 +9,16 @@
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	force = 0
 	throwforce = 0
-	burst_size = 3
 	can_suppress = TRUE
 	clumsy_check = 0
 	item_flags = NONE
 	casing_ejector = FALSE
+
+	init_firemodes = list(
+		FULL_AUTO_200,
+		BURST_3_ROUND,
+		SEMI_AUTO_NODELAY
+	)
 
 /obj/item/gun/ballistic/automatic/toy/unrestricted
 	pin = /obj/item/firing_pin
@@ -26,7 +31,6 @@
 	mag_type = /obj/item/ammo_box/magazine/toy
 	init_mag_type = /obj/item/ammo_box/magazine/toy/pistol
 	fire_sound = 'sound/weapons/gunshot.ogg'
-	burst_size = 1
 	fire_delay = 0
 	actions_types = list()
 	automatic_burst_overlay = FALSE
@@ -128,7 +132,6 @@
 	mag_type = /obj/item/ammo_box/magazine/toy
 	init_mag_type = /obj/item/ammo_box/magazine/toy/foamag
 	fire_sound = 'sound/weapons/magrifle.ogg'
-	burst_size = 1
 	actions_types = null
 	fire_delay = 3
 	can_suppress = FALSE

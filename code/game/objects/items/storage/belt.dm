@@ -760,9 +760,6 @@
 /obj/item/storage/belt/holster/ranger4570/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/sequoia(src)
 
-/obj/item/storage/belt/holster/ranger4570bayonet/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/sequoia/bayonet(src)
-
 ////////////////
 // Sheaths //
 ////////////////

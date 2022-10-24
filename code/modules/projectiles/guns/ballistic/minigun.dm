@@ -98,12 +98,11 @@
 	fire_delay = GUN_FIRE_DELAY_FASTEST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(0.5)
 	init_firemodes = list(
-		FULL_AUTO_1200
+		FULL_AUTO_800
 	)
 
 	flags_1 = CONDUCT_1

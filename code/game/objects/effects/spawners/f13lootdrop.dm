@@ -1001,13 +1001,6 @@
 				/obj/item/ammo_box/magazine/pistol22
 				)
 
-/obj/effect/spawner/bundle/f13/sig
-	name = " p220 pistol and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/pistol/sig,
-				/obj/item/ammo_box/magazine/pistol9mm/
-				)
-
 /obj/effect/spawner/bundle/f13/pepperbox
 	name = "pepperbox gun spawner"
 	items = list(
@@ -1105,13 +1098,6 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/m1carbine,
 				/obj/item/ammo_box/magazine/pistol10mm
-	)
-
-/obj/effect/spawner/bundle/f13/guns/commando
-	name = "de lisle carbine and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/delisle,
-				/obj/item/ammo_box/magazine/pistol9mm/doublestack
 	)
 
 /obj/effect/spawner/bundle/f13/mk23

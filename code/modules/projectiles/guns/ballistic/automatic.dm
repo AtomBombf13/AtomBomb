@@ -20,28 +20,21 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 
 	slot_flags = SLOT_BACK
-	force = 15
-	burst_size = 1
-	burst_shot_delay = 3
+	automatic = TRUE
 	var/automatic_burst_overlay = TRUE
-	var/semi_auto = FALSE
-	var/auto_eject = 0
+	var/auto_eject = FALSE
 	var/auto_eject_sound = null
-	var/alarmed = 0
-	var/select = 1
-	var/is_automatic = FALSE
+	var/alarmed = FALSE
 	can_suppress = FALSE
 	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
 		FULL_AUTO_400,
 		FULL_AUTO_800,
-		SEMI_AUTO_NODELAY,
 		BURST_3_ROUND,
 		BURST_5_ROUND
 	)
@@ -55,14 +48,6 @@
 		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
 	)
-
-/obj/item/gun/ballistic/automatic/update_overlays()
-	. = ..()
-	if(automatic_burst_overlay)
-		if(!select)
-			. += ("[initial(icon_state)]semi")
-		if(select == 1)
-			. += "[initial(icon_state)]burst"
 
 /obj/item/gun/ballistic/automatic/update_icon_state()
 	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"]"
@@ -150,11 +135,8 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 
 /* * * * * * * * * * *
  * American 180 SMG
@@ -182,7 +164,6 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T4
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.7)
@@ -190,7 +171,6 @@
 		FULL_AUTO_600
 	)
 
-	is_automatic = TRUE
 	automatic = TRUE
 	silenced = TRUE
 	actions_types = null
@@ -233,20 +213,15 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		SEMI_AUTO_NODELAY,
-		FULL_AUTO_200
+		FULL_AUTO_150
 	)
-	automatic = 1
-	is_automatic = TRUE
 	can_suppress = TRUE
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 30
 	suppressor_y_offset = 18
-	//actions_types = list(/datum/action/item_action/toggle_firemode)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
@@ -288,15 +263,14 @@
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		SEMI_AUTO_NODELAY,
-		FULL_AUTO_300
+		FULL_AUTO_300,
+		SEMI_AUTO_NODELAY
 	)
 
 	can_suppress = TRUE
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 29
 	suppressor_y_offset = 16
-	//actions_types = list(/datum/action/item_action/toggle_firemode)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_LIGHT_VOLUME),
@@ -333,17 +307,15 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // Accurate semiauto fire
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_400,
+		BURST_3_ROUND,
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	silenced = TRUE
 	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
 	fire_sound_silenced = 'sound/weapons/Gunshot_silenced.ogg'
@@ -383,15 +355,12 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		FULL_AUTO_600
+		FULL_AUTO_400
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	can_scope = TRUE
 	scope_state = "AEP7_scope"
 	scope_x_offset = 9
@@ -435,52 +404,17 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		FULL_AUTO_250,
+		FULL_AUTO_200,
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	suppressor_state = "10mm_suppressor" //activate if sprited
 	suppressor_x_offset = 30
 	suppressor_y_offset = 16
-	//actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
-
-/* * * * * * * * * * *
- * Worn 10mm SMG
- * Poor Baseline 10mm SMG
- * 10mm
- * Slower firing
- * Less damage
- * One-handed
- * No akimbo
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/smg/smg10mm/worn
-	name = "worn-out 10mm submachine gun"
-	desc = "Mass-produced weapon from the Great War, this one has seen use ever since. Grip is wrapped in tape to keep the plastic from crumbling, the metals are oxidizing, but the gun still works."
-	worn_out = TRUE
-
-	slowdown = GUN_SLOWDOWN_SMG_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T3
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = SMG_RECOIL(1.2)
-	init_firemodes = list(
-		BURST_5_ROUND
-	)
 
 /* * * * * * * * * * *
  * P90c SMG
@@ -509,7 +443,6 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.8)
@@ -519,8 +452,6 @@
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
 	suppressor_x_offset = 29
@@ -553,7 +484,6 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
@@ -561,53 +491,10 @@
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	suppressor_state = "uzi_suppressor"
 	suppressor_x_offset = 26
 	suppressor_y_offset = 19
-	//actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
- * Worn greasegun SMG
- * Cruddy .45 SMG
- * .45
- * One-handed
- * No akimbo
- * Less accuracy
- * Less damage
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/smg/greasegun/worn
-	name = "beat up 9mm submachine gun"
-	desc = "What was once an inexpensive, but reliable submachine gun is now an inexpensive piece of shit. It's impressive this thing still fires at all."
-
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
-	burst_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T3
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = SMG_RECOIL(1.2)
-	init_firemodes = list(
-		FULL_AUTO_300
-	)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
@@ -643,18 +530,14 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		FULL_AUTO_200,
-		BURST_5_ROUND
-	)
+		FULL_AUTO_250
+	)//Definetly higher fire rate than grease
 
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
-	is_automatic = TRUE
-	automatic = 1
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
@@ -693,7 +576,6 @@
 	fire_delay = GUN_FIRE_DELAY_FASTER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T4
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.8)
@@ -702,10 +584,7 @@
 		BURST_3_ROUND
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	can_suppress = FALSE
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -732,51 +611,6 @@
  * * * * * * * * * * */
 
 /* * * * * * * * * * *
- * De Lisle Carbine
- * Silent 9mm carbine
- * Silent!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/delisle
-	name = "De Lisle carbine"
-	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. Chambered in 9mm."
-	icon_state = "delisle"
-	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/pistol9mm
-	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = CARBINE_RECOIL(1.1)
-	init_firemodes = list(
-		SEMI_AUTO_NODELAY
-	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // tacticool
-
-	can_scope = TRUE
-	silenced = TRUE
-	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
  * M1 Carbine
  * 10mm
  * Can take extendomags
@@ -797,7 +631,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	weapon_weight = GUN_ONE_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -808,7 +641,6 @@
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-	automatic_burst_overlay = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
 	knife_x_offset = 22
@@ -817,7 +649,6 @@
 	scope_state = "scope_medium"
 	scope_x_offset = 5
 	scope_y_offset = 14
-	semi_auto = TRUE
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 26
@@ -854,7 +685,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	weapon_weight = GUN_ONE_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -895,7 +725,7 @@
  * Common?
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/automatic/delisle/commando
+/obj/item/gun/ballistic/automatic/commando
 	name = "commando carbine"
 	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. This modified version is often used by the Brotherhood of Steel. Its stock has been replaced by post-war polymer furniture, with space to mount a scope. Chambered in .45 ACP."
 	icon_state = "commando"
@@ -909,7 +739,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1)
@@ -918,8 +747,6 @@
 	)
 	silenced = TRUE
 	can_scope = TRUE
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
 	scope_state = "scope_medium"
 	scope_x_offset = 6
 	scope_y_offset = 14
@@ -942,7 +769,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/combat
-	name = "Combat Rifle"
+	name = "combat rifle"
 	desc = "A .45 semi-automatic combat rifle, produced pre-war for National Guard forces."
 	icon_state = "combat_rifle"
 	item_state = "combatrifle"
@@ -957,7 +784,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1)
@@ -966,8 +792,6 @@
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
 
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
 	fire_sound = 'sound/f13weapons/combatrifle.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1002,7 +826,6 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
 	weapon_weight = GUN_ONE_HAND_ONLY
 	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // its a weakass cartridge
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1015,7 +838,6 @@
 
 	max_upgrades = 5 // moddable to fuck and fack
 
-	automatic_burst_overlay = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonetstraight"
 	knife_x_offset = 27
@@ -1024,7 +846,6 @@
 	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 12
-	semi_auto = TRUE
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
@@ -1075,7 +896,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -1088,8 +908,6 @@
 	gun_tags = list(GUN_SCOPE)
 
 	can_bayonet = FALSE
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
 	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 12
@@ -1133,7 +951,6 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	weapon_weight = GUN_TWO_HAND_ONLY
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1143,8 +960,6 @@
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
 
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
 	knife_x_offset = 22
@@ -1160,42 +975,6 @@
 		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
 	)
-
-/* * * * * * * * * * *
- * Police Rifle
- * Cool semi-auto rifle
- * .223 / 5.56mm
- * Scope!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/marksman/policerifle
-	name = "Police Rifle"
-	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Eastwood Security Force. Held together by duct tape and prayers, it somehow still shoots."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_prefix = "assault_carbine"
-	icon_state = "rifle-police"
-	item_state = "assault_carbine"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	weapon_weight = GUN_TWO_HAND_ONLY
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
-
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-
-	can_suppress = FALSE
-	can_scope = TRUE
-	zoomable = FALSE
 
 /* * * * * * * * * * *
  * Scout carbine
@@ -1217,7 +996,6 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -1254,7 +1032,6 @@
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T4
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1265,8 +1042,6 @@
 	gun_tags = list(GUN_FA_MODDABLE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
 	can_scope = FALSE
 	zoom_factor = 1
 	can_bayonet = FALSE
@@ -1288,6 +1063,41 @@
 		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
 	)
+
+/* * * * * * * * * * *
+ * Police Rifle
+ * Cool semi-auto rifle
+ * .223 / 5.56mm
+ * Scope!
+ * Common
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/marksman/policerifle
+	name = "police rifle"
+	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Eastwood Security Force. Held together by duct tape and prayers, it somehow still shoots."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_prefix = "assault_carbine"
+	icon_state = "rifle-police"
+	item_state = "assault_carbine"
+
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
+	force = GUN_MELEE_FORCE_RIFLE_LIGHT
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_FAST
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	weapon_weight = GUN_TWO_HAND_ONLY
+	cock_delay = GUN_COCK_RIFLE_BASE
+	init_recoil = RIFLE_RECOIL(1)
+
+	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
+
+	can_suppress = FALSE
+	can_scope = TRUE
+	zoomable = FALSE
 
 /* * * * * * * * * * *
  * Rangemaster Rifle
@@ -1314,7 +1124,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1325,8 +1134,6 @@
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
 	can_scope = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
@@ -1369,7 +1176,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = 4
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1382,9 +1189,8 @@
 
 	gun_tags = list(GUN_SCOPE)
 
-	en_bloc = 1
-	auto_eject = 1
-	semi_auto = TRUE
+	en_bloc = TRUE
+	auto_eject = TRUE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
 	knife_x_offset = 22
@@ -1442,14 +1248,12 @@
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T4
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-	semi_auto = TRUE
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
@@ -1500,7 +1304,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1510,8 +1313,6 @@
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	can_bayonet = FALSE
 	bayonet_state = "rifles"
 	knife_x_offset = 23
@@ -1520,7 +1321,6 @@
 	suppressor_x_offset = 32
 	suppressor_y_offset = 15
 	suppressor_state = "ar_suppressor"
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1555,7 +1355,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1566,13 +1365,10 @@
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	can_suppress = TRUE
 	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
 	suppressor_y_offset = 27
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1608,7 +1404,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
@@ -1630,7 +1425,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/bozar
-	name = "Bozar"
+	name = "bozar"
 	desc = "The ultimate refinement of the sniper's art, the Bozar is a scoped, accurate, light machine gun that will make nice big holes in your enemy. Uses 5.56."
 	icon_state = "bozar"
 	item_state = "sniper"
@@ -1645,18 +1440,16 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.8)
 	init_firemodes = list(
-		FULL_AUTO_400,
-		BURST_10_ROUND
-	)
+		FULL_AUTO_300,
+		BURST_5_ROUND,
+		SEMI_AUTO_NODELAY
+	)//LMG but alos still just a sniper rifle come on now
 
-	is_automatic = TRUE
-	automatic = 1
 	zoomable = TRUE
 	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
 	zoom_factor = 1.2
@@ -1694,7 +1487,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T3
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1704,8 +1496,6 @@
 		BURST_3_ROUND
 	)
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	is_automatic = TRUE
-	automatic = 1
 	can_scope = TRUE
 	scope_state = "scope_short"
 	scope_x_offset = 4
@@ -1718,7 +1508,6 @@
 	gunlight_state = "flightangle"
 	flight_x_offset = 21
 	flight_y_offset = 21
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assault_carbine.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1754,7 +1543,6 @@
 	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T3
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1788,7 +1576,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1824,7 +1611,6 @@
 	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T1
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1839,7 +1625,6 @@
 	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 15
-	automatic = 1
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1876,7 +1661,6 @@
 	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1887,7 +1671,6 @@
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-	automatic = 1
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1922,7 +1705,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1933,13 +1715,9 @@
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
-	is_automatic = TRUE
-	automatic = 1
-	semi_auto = TRUE
 	can_scope = FALSE
 	zoom_factor = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	select = 0
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_LIGHT_VOLUME),
@@ -1988,7 +1766,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1)
@@ -1996,9 +1773,6 @@
 		FULL_AUTO_250
 	)
 
-	is_automatic = TRUE
-	automatic = 1
-	actions_types = null
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -2037,7 +1811,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1)
@@ -2045,9 +1818,6 @@
 		FULL_AUTO_300
 	)
 
-	is_automatic = TRUE
-	automatic = 1
-	spawnwithmagazine = TRUE
 	zoom_factor = 1
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
@@ -2088,7 +1858,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	weapon_weight = GUN_TWO_HAND_ONLY
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -2097,11 +1866,8 @@
 		FULL_AUTO_150
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	var/cover_open = FALSE
 	var/require_twohands = FALSE
-	actions_types = null
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -2190,7 +1956,6 @@
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
@@ -2201,7 +1966,6 @@
 
 	can_scope = FALSE
 	zoom_factor = 1.2
-	semi_auto = TRUE
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -2240,7 +2004,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
@@ -2249,8 +2012,6 @@
 		SEMI_AUTO_NODELAY
 	)
 
-	is_automatic = TRUE
-	automatic = 1
 	can_suppress = FALSE
 	silenced = TRUE
 	can_bayonet = FALSE
@@ -2344,7 +2105,6 @@
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T4
 	cock_delay = GUN_COCK_RIFLE_BASE
 
@@ -2376,7 +2136,6 @@
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 
@@ -2403,7 +2162,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 
@@ -2438,7 +2196,6 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 

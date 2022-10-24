@@ -761,7 +761,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/loadout/expsniper
 	name = "Sniper"
 	glasses = /obj/item/clothing/glasses/sunglasses/big
-	suit_store = /obj/item/gun/ballistic/automatic/delisle/commando
+	suit_store = /obj/item/gun/ballistic/automatic/commando
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/pistol45/socom = 3,
 		/obj/item/grenade/smokebomb = 1,

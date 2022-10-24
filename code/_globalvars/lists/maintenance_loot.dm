@@ -553,7 +553,6 @@ GLOBAL_LIST_INIT(loot_t2_range, list(
 	/obj/item/stock_parts/cell/ammo/ec,
 	/obj/item/gun/ballistic/automatic/m1carbine,
 	/obj/item/ammo_box/magazine/pistol10mm,
-	/obj/item/gun/ballistic/automatic/delisle,
 	/obj/item/ammo_box/magazine/pistol9mm/doublestack
 ))
 

@@ -657,7 +657,6 @@
 	name = "Upgraded Varmint Rifle"
 	result = /obj/item/gun/ballistic/automatic/varmint/verminkiller
 	reqs = list(/obj/item/gun/ballistic/automatic/varmint = 1,
-				/obj/item/gun/ballistic/automatic/delisle = 1, //silencer
 				/obj/item/advanced_crafting_components/lenses = 1, //scope
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/plastic = 2,
@@ -743,19 +742,6 @@
 				/obj/item/stack/crafting/metalparts = 2
 				)
 	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-
-/datum/crafting_recipe/commando
-	name = "DeLisle Commando Carbine"
-	result = /obj/item/gun/ballistic/automatic/delisle/commando
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/crafting/metalparts = 2
-				)
-	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
