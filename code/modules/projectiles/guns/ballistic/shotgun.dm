@@ -374,6 +374,10 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+
+	init_firemodes = list(
+		SEMI_AUTO_SHOTGUN
+	)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(SHOTGUN_VOLUME),

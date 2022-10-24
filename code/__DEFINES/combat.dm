@@ -712,14 +712,14 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 	BODY_ZONE_R_ARM = 22,\
 	BODY_ZONE_L_LEG = 22,\
 	BODY_ZONE_R_LEG = 22)
-/// Pellet zone weight list
+/// Pellet zone weight list / Who actually aims for LEGS with a shotgun aim for center mass
 #define ZONE_WEIGHT_LIST_SHOTGUN list(\
 	BODY_ZONE_HEAD = 1,\
-	BODY_ZONE_CHEST = 1,\
-	BODY_ZONE_L_ARM = 22,\
-	BODY_ZONE_R_ARM = 22,\
-	BODY_ZONE_L_LEG = 22,\
-	BODY_ZONE_R_LEG = 22)
+	BODY_ZONE_CHEST = 12,\
+	BODY_ZONE_L_ARM = 15,\
+	BODY_ZONE_R_ARM = 15,\
+	BODY_ZONE_L_LEG = 15,\
+	BODY_ZONE_R_LEG = 15)
 
 /// Gun skill flags
 /// Gun is affected by rifleman skill
