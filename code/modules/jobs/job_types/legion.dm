@@ -281,8 +281,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
-		/obj/item/ammo_box/shotgun/buck = 3,
-		/obj/item/ammo_box/shotgun/trainshot = 1
+		/obj/item/ammo_box/shotgun/buck = 3
 		)
 
 // VETERAN DECANUS

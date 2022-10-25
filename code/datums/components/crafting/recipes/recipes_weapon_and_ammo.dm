@@ -185,19 +185,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-/datum/crafting_recipe/shotgunammo3p
-	name = "12g 3p trainshot box"
-	result = /obj/item/ammo_box/shotgun/trainshot
-	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/prewar = 2,
-	/obj/item/stack/sheet/metal = 1,
-	/obj/item/stack/ore/blackpowder = 1
-	)
-	tools = list(TOOL_AWORKBENCH)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
 /datum/crafting_recipe/m22shock
 	name = ".22 Long Rifle electroshock ammo box"
 	result = /obj/item/ammo_box/m22/shock
