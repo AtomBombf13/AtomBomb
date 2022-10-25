@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	RECIPE_BOLA = /obj/item/smithing/bola,
 	RECIPE_GLADIUS =  /obj/item/smithing/gladiusblade,
 	RECIPE_SPATHA = /obj/item/smithing/spathablade,
-	RECIPE_WARHONED = /obj/item/smithing/waraxehead,
+	RECIPE_WARAXE = /obj/item/smithing/waraxehead,
 	RECIPE_LANCE = /obj/item/smithing/lancehead,
     ))
 
