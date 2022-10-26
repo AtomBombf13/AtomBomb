@@ -3,7 +3,6 @@
 	name = "\improper Durand"
 	icon_state = "durand"
 	movedelay = 4
-	dir_in = 1 //Facing North.
 	max_integrity = 500
 	armor = ARMOR_VALUE_PA
 	max_temperature = 30000

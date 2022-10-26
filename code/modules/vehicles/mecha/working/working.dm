@@ -1,5 +1,7 @@
 /obj/vehicle/sealed/mecha/working
 	internal_damage_threshold = 40
+	allow_diagonal_movement = TRUE
+	mecha_flags = ADDING_ACCESS_POSSIBLE | CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
 
 /obj/vehicle/sealed/mecha/working/Move()
 	. = ..()

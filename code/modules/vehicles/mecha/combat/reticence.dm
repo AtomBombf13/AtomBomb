@@ -3,7 +3,7 @@
 	name = "\improper reticence"
 	icon_state = "reticence"
 	movedelay = 2
-	dir_in = 1 //Facing North.
+	allow_diagonal_movement = TRUE
 	max_integrity = 100
 	armor = ARMOR_VALUE_LIGHT
 	max_temperature = 15000

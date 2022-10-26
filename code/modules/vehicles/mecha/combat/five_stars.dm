@@ -5,7 +5,6 @@
 	icon_state = "five_stars"
 	armor = ARMOR_VALUE_PA
 	movedelay = 4
-	dir_in = 1 //Facing North.
 	max_integrity = 800
 	pixel_x = -32
 	pixel_y = -32

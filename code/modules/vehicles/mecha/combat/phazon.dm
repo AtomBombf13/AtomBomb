@@ -3,7 +3,7 @@
 	name = "\improper Phazon"
 	icon_state = "phazon"
 	movedelay = 2
-	dir_in = 2 //Facing South.
+	allow_diagonal_movement = TRUE
 	step_energy_drain = 3
 	max_integrity = 300
 	armor = ARMOR_VALUE_HEAVY

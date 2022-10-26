@@ -8,15 +8,12 @@
 	max_temperature = 20000
 	max_integrity = 250
 	lights_power = 7
-	deflect_chance = 15
 	armor = ARMOR_VALUE_MEDIUM
 	max_equip = 6
 	wreckage = /obj/structure/mecha_wreckage/ripley
 	enclosed = FALSE //Normal ripley has an open cockpit design
 	enter_delay = 10 //can enter in a quarter of the time of other mechs
 	exit_delay = 10
-	/// Amount of Goliath hides attached to the mech
-	var/hides = 0
 	/// List of all things in Ripley's Cargo Compartment
 	var/list/cargo = new
 	/// How much things Ripley can carry in their Cargo Compartment
@@ -26,11 +23,7 @@
 	if (!enclosed)
 		possible_int_damage -= (MECHA_INT_TEMP_CONTROL + MECHA_INT_TANK_BREACH) //if we don't even have an air tank, these two doesn't make a ton of sense.
 	. = ..()
-/*
-/obj/vehicle/sealed/mecha/working/ripley/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate,3,/obj/item/stack/sheet/animalhide/goliath_hide,list(MELEE = 10, BULLET = 5, LASER = 5))
-*/
+
 /obj/vehicle/sealed/mecha/working/ripley/generate_actions()
 	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_eject)
 	if(enclosed)
@@ -69,6 +62,7 @@
 	max_temperature = 65000
 	max_integrity = 300
 	movedelay = 1.75
+	allow_diagonal_movement = FALSE
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
 	step_energy_drain = 30 //slightly higher energy drain since you movin those wheels FAST
@@ -103,6 +97,7 @@
 	icon_state = "firefighter"
 	movedelay = 3
 	max_temperature = 65000
+	max_integrity = 400
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	armor = ARMOR_VALUE_MEDIUM
 	max_equip = 5 // More armor, less tools

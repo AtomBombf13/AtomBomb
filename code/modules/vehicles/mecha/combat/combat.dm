@@ -8,6 +8,7 @@
 	exit_delay = 40
 	explode_on_death = TRUE
 	stepsound = 'sound/mecha/neostep2.ogg'
+	mecha_flags = ADDING_ACCESS_POSSIBLE | IS_ENCLOSED | HAS_LIGHTS | CANSTRAFE
 
 /obj/vehicle/sealed/mecha/combat/restore_equipment()
 	mouse_pointer = 'icons/mecha/mecha_mouse.dmi'

@@ -3,8 +3,8 @@
 	name = "\improper H.O.N.K"
 	icon_state = "honker"
 	movedelay = 3
-	max_integrity = 140
-	deflect_chance = 60
+	allow_diagonal_movement = TRUE
+	max_integrity = 200
 	internal_damage_threshold = 60
 	armor = ARMOR_VALUE_LIGHT
 	max_temperature = 25000
@@ -12,6 +12,8 @@
 	mecha_flags = CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
 	max_equip = 3
 	var/squeak = TRUE
+
+// ADD deflection/reflection becuz honk?
 
 /obj/vehicle/sealed/mecha/combat/honker/get_stats_part(mob/user)
 	var/integrity = obj_integrity/max_integrity*100
