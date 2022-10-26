@@ -513,12 +513,20 @@
  * Uncommon
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
+/obj/item/gun/ballistic/automatic/shotgun/citykiller
 	name = "Winchester City-Killer shotgun"
-	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This particular model uses a internal tube magazine."
+	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This one is well preserved pre-war pattern version."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "citykiller"
 	item_state = "shotguncity"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/citykiller
+	mag_type = /obj/item/ammo_box/magazine/city12g
+
+	init_firemodes = list(
+		BURST_5_ROUND,
+		SEMI_AUTO_SHOTGUN
+	)
 
 	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
@@ -553,6 +561,11 @@
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
+	init_firemodes = list(
+		FULL_AUTO_200,
+		SEMI_AUTO_SHOTGUN
+	)
+
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -580,7 +593,6 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-
 	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -588,8 +600,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	init_recoil = RIFLE_RECOIL(2.8)
 	init_firemodes = list(
-		FULL_AUTO_300,
-		SEMI_AUTO_SHOTGUN
+		FULL_AUTO_300
 	)
 
 	w_class = WEIGHT_CLASS_BULKY

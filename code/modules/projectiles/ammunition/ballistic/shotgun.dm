@@ -19,6 +19,14 @@
 	pellets = 6
 	variance = 18
 
+/obj/item/ammo_casing/shotgun/magnum //Half the pellets, way more accurate and damaging for that
+	name = "magnum buckshot shell"
+	desc = "A 12 gauge magnum buckshot shell."
+	icon_state = "gshell"
+	projectile_type = /obj/item/projectile/bullet/pellet/shotgun_magnum
+	pellets = 3
+	variance = 6
+
 /obj/item/ammo_casing/shotgun/improvised
 	name = "improvised shell"
 	desc = "An extremely weak shotgun shell with multiple small pellets made out of metal shards."
@@ -39,7 +47,7 @@
 		/datum/material/iron = MATS_SHOTGUN_CASING + MATS_SHOTGUN_BULLET,
 		/datum/material/blackpowder = MATS_SHOTGUN_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
 
-obj/item/ammo_casing/shotgun/executioner
+/obj/item/ammo_casing/shotgun/executioner
 	name = "executioner slug"
 	desc = "A 12 gauge lead slug purpose built to annihilate flesh on impact."
 	icon_state = "stunshell"

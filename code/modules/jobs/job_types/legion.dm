@@ -277,11 +277,11 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Warlord Centurion"
 	suit = /obj/item/clothing/suit/armor/medium/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
-	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
+	suit_store = /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
-		/obj/item/ammo_box/shotgun/buck = 3
+		/obj/item/ammo_box/magazine/city12g = 3
 		)
 
 // VETERAN DECANUS

@@ -1241,7 +1241,7 @@
 //city killer
 /datum/crafting_recipe/city_killer
 	name = "City-Killer Shotgun"
-	result = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
+	result = /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,

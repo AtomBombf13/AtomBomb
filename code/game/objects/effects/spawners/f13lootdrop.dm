@@ -885,7 +885,7 @@
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
-				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
+				/obj/item/gun/ballistic/automatic/shotgun/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 5,
 				/obj/item/gun/ballistic/automatic/lsw = 5,
 				)
@@ -1376,8 +1376,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 /obj/effect/spawner/bundle/f13/citykiller
 	name = "citykiller and ammo spawner"
 	items = list(
-		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
-		/obj/item/ammo_box/shotgun/buck
+		/obj/item/gun/ballistic/automatic/shotgun/citykiller,
+		/obj/item/ammo_box/magazine/city12g
 	)
 
 /obj/effect/spawner/bundle/f13/guns/p90

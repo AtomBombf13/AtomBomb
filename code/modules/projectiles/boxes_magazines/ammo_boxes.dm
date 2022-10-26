@@ -51,6 +51,12 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	icon_state = "gbox"
 
+/obj/item/ammo_box/shotgun/magnum
+	name = "Magnum Buckshot shotgun ammo box"
+	desc = "A box full of shotgun shells."
+	ammo_type = /obj/item/ammo_casing/shotgun/magnum
+	icon_state = "trainshotbox"
+
 /obj/item/ammo_box/shotgun/bean
 	name = "Beanbag shotgun ammo box"
 	desc = "A box full of shotgun shells."
@@ -739,6 +745,9 @@
 
 /obj/item/ammo_box/shotgun/loaded/buckshot
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+
+/obj/item/ammo_box/shotgun/loaded/magnum
+	ammo_type = /obj/item/ammo_casing/shotgun/magnum
 
 /obj/item/ammo_box/shotgun/loaded/beanbag
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag

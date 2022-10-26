@@ -309,6 +309,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_DAMAGE_RIFLE_MEDIUM 40
 #define BULLET_DAMAGE_RIFLE_HEAVY 70
 #define BULLET_DAMAGE_SHOTGUN_PELLET 11
+#define BULLET_DAMAGE_SHOTGUN_MAGNUM 21
 #define BULLET_DAMAGE_SHOTGUN_SLUG 50
 
 /// Bullet damage falloff per tile defines
@@ -330,7 +331,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_FALLOFF_START_RIFLE_LIGHT 3
 #define BULLET_FALLOFF_START_RIFLE_MEDIUM 10
 #define BULLET_FALLOFF_START_RIFLE_HEAVY 20
-#define BULLET_FALLOFF_START_SHOTGUN_PELLET 0
+#define BULLET_FALLOFF_START_SHOTGUN_PELLET 1 //So it doesn't instantly lose as the tile under you counts as 1
 #define BULLET_FALLOFF_START_SHOTGUN_SLUG 5
 
 /// Bullet damage falloff default defines

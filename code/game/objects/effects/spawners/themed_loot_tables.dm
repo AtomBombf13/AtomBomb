@@ -257,7 +257,7 @@
 /obj/effect/spawner/lootdrop/weapons/oldarmyelite
 	name = "weaponspawner old army elite"
 	loot = list(
-		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 17,
+		/obj/item/gun/ballistic/automatic/shotgun/citykiller = 17,
 		/obj/effect/spawner/bundle/f13/amr = 17,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 12,
 		/obj/item/gun/energy/laser/aer12 = 10,
