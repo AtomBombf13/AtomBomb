@@ -3,7 +3,7 @@
 	name = "\improper Tank"
 //	icon = 'icons/mecha/mecha_96x96.dmi'
 	icon_state = "five_stars"
-	armor = ARMOR_VALUE_PA
+	armor = list("melee" = 100, "bullet" = 60, "laser" = 60, "energy" = 60, "bomb" = 75, "rad" = 75)
 	movedelay = 4
 	max_integrity = 800
 	pixel_x = -32

@@ -6,7 +6,7 @@
 	allow_diagonal_movement = TRUE
 	step_energy_drain = 3
 	max_integrity = 300
-	armor = ARMOR_VALUE_HEAVY
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 35, "rad" = 100)
 	max_temperature = 25000
 	wreckage = /obj/structure/mecha_wreckage/phazon
 	internal_damage_threshold = 15

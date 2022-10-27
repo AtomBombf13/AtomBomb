@@ -8,7 +8,6 @@
 	max_temperature = 25000
 	leg_overload_coeff = 300
 	overload_step_energy_drain_min = 300
-	force = 25
 	wreckage = /obj/structure/mecha_wreckage/gygax
 	internal_damage_threshold = 25
 	normal_step_energy_drain = 3
@@ -21,7 +20,7 @@
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 30, "rad" = 75)
 	max_temperature = 35000
 	leg_overload_coeff = 70
-	force = 30
+	force = 35
 	wreckage = /obj/structure/mecha_wreckage/gygax/dark
 	max_equip = 5
 	destruction_sleep_duration = 20

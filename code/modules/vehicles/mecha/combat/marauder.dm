@@ -4,7 +4,7 @@
 	icon_state = "marauder"
 	movedelay = 5
 	max_integrity = 600
-	armor = list("melee" = 55, "bullet" = 55, "laser" = 30, "energy" = 30, "bomb" = 50, "rad" = 75)
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 30, "energy" = 30, "bomb" = 50, "rad" = 75)
 	max_temperature = 60000
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	wreckage = /obj/structure/mecha_wreckage/marauder
@@ -35,7 +35,7 @@
 	name = "\improper Seraph"
 	icon_state = "seraph"
 	movedelay = 3
-	max_integrity = 650
+	max_integrity = 700
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 50, "bomb" = 75, "rad" = 100)
 	wreckage = /obj/structure/mecha_wreckage/seraph
 	internal_damage_threshold = 20
@@ -62,6 +62,8 @@
 	desc = "Heavy-duty, combat exosuit, developed off of the existing Marauder model."
 	name = "\improper Mauler"
 	icon_state = "mauler"
+	max_integrity = 650
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 30, "energy" = 30, "bomb" = 50, "rad" = 75)
 	wreckage = /obj/structure/mecha_wreckage/mauler
 	max_equip = 6
 	destruction_sleep_duration = 20

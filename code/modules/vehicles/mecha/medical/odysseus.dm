@@ -8,5 +8,5 @@
 	max_integrity = 200
 	wreckage = /obj/structure/mecha_wreckage/odysseus
 	internal_damage_threshold = 35
-	armor = ARMOR_VALUE_LIGHT
+	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 20, "bomb" = 15)
 	step_energy_drain = 6

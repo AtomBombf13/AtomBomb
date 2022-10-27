@@ -5,12 +5,12 @@
 	movedelay = 3
 	allow_diagonal_movement = TRUE
 	max_integrity = 200
-	internal_damage_threshold = 60
-	armor = ARMOR_VALUE_LIGHT
+	internal_damage_threshold = 0
+	armor = list("melee" = -20, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 100, "rad" = 100)
 	max_temperature = 25000
 	wreckage = /obj/structure/mecha_wreckage/honker
 	mecha_flags = CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
-	max_equip = 3
+	max_equip = 5
 	var/squeak = TRUE
 
 // ADD deflection/reflection becuz honk?
