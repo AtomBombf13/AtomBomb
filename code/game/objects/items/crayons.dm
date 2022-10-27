@@ -165,7 +165,7 @@
 			is_capped = !is_capped
 			to_chat(user, span_notice("The cap on [src] is now [is_capped ? "on" : "off"]."))
 			update_icon()
-			if(is_capped)
+			if(is_capped) // makes the item massive so it can spraypaint items with containers (bags, armour) at the cost of the inability to store the item when the cap is off. Blatently stolen from pen code.
 				w_class = WEIGHT_CLASS_TINY
 			else
 				w_class = WEIGHT_CLASS_GIGANTIC
@@ -248,7 +248,7 @@
 			if(has_cap)
 				is_capped = !is_capped
 				. = TRUE
-				if(is_capped)
+				if(is_capped) // Same as above, removing the cap makes it massive so it paints bags and armor with pockets instead of going inside. Stolen from pen code.
 					w_class = WEIGHT_CLASS_TINY
 				else
 					w_class = WEIGHT_CLASS_GIGANTIC
