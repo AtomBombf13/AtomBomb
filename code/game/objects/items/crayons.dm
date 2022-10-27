@@ -165,6 +165,10 @@
 			is_capped = !is_capped
 			to_chat(user, span_notice("The cap on [src] is now [is_capped ? "on" : "off"]."))
 			update_icon()
+			if(is_capped)
+				w_class = WEIGHT_CLASS_TINY
+			else
+				w_class = WEIGHT_CLASS_GIGANTIC
 
 /obj/item/toy/crayon/CtrlClick(mob/user)
 	if(can_change_colour && !isturf(loc) && user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
@@ -244,6 +248,10 @@
 			if(has_cap)
 				is_capped = !is_capped
 				. = TRUE
+				if(is_capped)
+					w_class = WEIGHT_CLASS_TINY
+				else
+					w_class = WEIGHT_CLASS_GIGANTIC
 		if("select_stencil")
 			var/stencil = params["item"]
 			if(stencil in all_drawables + randoms)
