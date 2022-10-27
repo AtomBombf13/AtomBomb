@@ -4,14 +4,13 @@
 	icon_state = "gygax"
 	movedelay = 3
 	max_integrity = 350
-	armor = ARMOR_VALUE_HEAVY
+	armor = list("melee" = 30, "bullet" = 25, "laser" = 30, "energy" = 30, "bomb" = 20)
 	max_temperature = 25000
 	leg_overload_coeff = 300
 	overload_step_energy_drain_min = 300
 	force = 25
 	wreckage = /obj/structure/mecha_wreckage/gygax
-	internal_damage_threshold = 35
-	max_equip = 3
+	internal_damage_threshold = 25
 	normal_step_energy_drain = 3
 
 /obj/vehicle/sealed/mecha/combat/gygax/dark
@@ -19,7 +18,7 @@
 	name = "\improper Dark Gygax"
 	icon_state = "darkgygax"
 	max_integrity = 300
-	armor = list(MELEE = 40, BULLET = 40, LASER = 50, ENERGY = 35, BOMB = 20, BIO = 0, RAD =20, FIRE = 100, ACID = 100)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 30, "rad" = 75)
 	max_temperature = 35000
 	leg_overload_coeff = 70
 	force = 30
@@ -33,9 +32,9 @@
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot
 	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster
+	ME = new /obj/item/mecha_parts/mecha_equipment/armor/anticcw_armor_booster
 	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster
+	ME = new /obj/item/mecha_parts/mecha_equipment/armor/antiproj_armor_booster
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay
 	ME.attach(src)

@@ -4,7 +4,7 @@
 	icon_state = "durand"
 	movedelay = 4
 	max_integrity = 500
-	armor = ARMOR_VALUE_PA
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 40)
 	max_temperature = 30000
 	force = 40
 	wreckage = /obj/structure/mecha_wreckage/durand

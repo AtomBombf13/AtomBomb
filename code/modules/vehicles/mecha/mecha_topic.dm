@@ -395,6 +395,9 @@
 		if(!istype(user) || !user.dna)
 			to_chat(user, "[icon2html(src, occupants)]<span class='notice'>You can't create a DNA lock with no DNA!.</span>")
 			return
+		if(!can_be_locked)
+			to_chat(user, "[icon2html(src, occupants)]<span class='notice'>ERROR. Unable to connect to DNA extraction firmware!.</span>")
+			return
 		dna_lock = user.dna.unique_enzymes
 		to_chat(user, "[icon2html(src, occupants)]<span class='notice'>You feel a prick as the needle takes your DNA sample.</span>")
 		return

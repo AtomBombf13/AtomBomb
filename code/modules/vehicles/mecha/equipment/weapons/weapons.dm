@@ -37,9 +37,10 @@
 				spread = round((i / projectiles_per_shot - 0.5) * variance)
 
 		var/obj/item/projectile/A = new projectile(get_turf(src))
+		A.firer = chassis
 		A.preparePixelProjectile(target, source, params, spread)
-
 		A.fire()
+		A.ignore_source_check = FALSE
 		if(!A.suppressed && firing_effect_type)
 			new firing_effect_type(get_turf(src), chassis.dir)
 		playsound(chassis, fire_sound, 50, TRUE)
@@ -49,9 +50,13 @@
 		if(kickback)
 			chassis.newtonian_move(newtonian_target)
 */
+/*
+		if((get_dist(A.firer, A) <= 0 && A.decayedRange <= 2)) // if the proj hasn't moved but hit its firer
+			qdel(A)
+
 	chassis.log_message("Fired from [src.name], targeting [target].", LOG_MECHA)
 	return ..()
-
+*/
 //Base energy weapon type
 /obj/item/mecha_parts/mecha_equipment/weapon/energy
 	name = "general energy weapon"
@@ -62,7 +67,7 @@
 	name = "\improper CH-PS \"Immolator\" laser"
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
-	energy_drain = 30
+	energy_drain = 60
 	projectile = /obj/item/projectile/beam/laser
 	fire_sound = 'sound/weapons/laser.ogg'
 	harmful = TRUE
@@ -72,7 +77,7 @@
 	name = "\improper CH-DS \"Peacemaker\" disabler"
 	desc = "A weapon for combat exosuits. Shoots basic disablers."
 	icon_state = "mecha_disabler"
-	energy_drain = 30
+	energy_drain = 60
 	projectile = /obj/item/projectile/beam/disabler
 	fire_sound = 'sound/weapons/taser2.ogg'
 
@@ -81,7 +86,7 @@
 	name = "\improper CH-LC \"Solaris\" laser cannon"
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
 	icon_state = "mecha_laser"
-	energy_drain = 60
+	energy_drain = 100
 	projectile = /obj/item/projectile/beam/laser/heavylaser
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
@@ -90,7 +95,7 @@
 	name = "\improper MKIV ion heavy cannon"
 	desc = "A weapon for combat exosuits. Shoots technology-disabling ion beams. Don't catch yourself in the blast!"
 	icon_state = "mecha_ion"
-	energy_drain = 120
+	energy_drain = 150
 	projectile = /obj/item/projectile/ion
 	fire_sound = 'sound/weapons/laser.ogg'
 
@@ -109,7 +114,7 @@
 	name = "eZ-13 MK2 heavy pulse rifle"
 	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts capable of demolishing obstacles."
 	icon_state = "mecha_pulse"
-	energy_drain = 120
+	energy_drain = 200
 	projectile = /obj/item/projectile/beam/pulse/heavy
 	fire_sound = 'sound/weapons/marauder.ogg'
 	harmful = TRUE
@@ -121,7 +126,7 @@
 	icon_state = "mecha_plasmacutter"
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
-	energy_drain = 30
+	energy_drain = 50
 	projectile = /obj/item/projectile/plasma/adv/mech
 	fire_sound = 'sound/weapons/plasma_cutter.ogg'
 	harmful = TRUE
@@ -137,7 +142,7 @@
 	name = "\improper PBT \"Pacifier\" mounted taser"
 	desc = "A weapon for combat exosuits. Shoots non-lethal stunning electrodes."
 	icon_state = "mecha_taser"
-	energy_drain = 20
+	energy_drain = 100
 	equip_cooldown = 8
 	projectile = /obj/item/projectile/energy/electrode
 	fire_sound = 'sound/weapons/taser.ogg'

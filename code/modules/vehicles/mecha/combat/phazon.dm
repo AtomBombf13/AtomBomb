@@ -9,9 +9,8 @@
 	armor = ARMOR_VALUE_HEAVY
 	max_temperature = 25000
 	wreckage = /obj/structure/mecha_wreckage/phazon
-	internal_damage_threshold = 25
+	internal_damage_threshold = 15
 	force = 15
-	max_equip = 3
 	phase_state = "phazon-phase"
 
 /obj/vehicle/sealed/mecha/combat/phazon/generate_actions()

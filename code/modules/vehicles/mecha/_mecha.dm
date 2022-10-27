@@ -24,9 +24,11 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	flags_1 = HEAR_1
 	max_integrity = 300
-	armor = list(MELEE = 20, BULLET = 10, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
+	armor = list("melee" = 20, "bullet" = 10, "laser" = 0, "energy" = 0, "bomb" = 25, "bio" = 0, "rad" = 50, "fire" = 100, "acid" = 100)
 	movedelay = 1 SECONDS
-	anchored = TRUE
+	anchored = FALSE
+	move_force = MOVE_FORCE_VERY_STRONG
+	move_resist = MOVE_FORCE_EXTREMELY_STRONG
 	emulate_door_bumps = TRUE
 	COOLDOWN_DECLARE(mecha_bump_smash)
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
@@ -58,6 +60,8 @@
 	var/mecha_flags = ADDING_ACCESS_POSSIBLE | CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
 	///Stores the DNA enzymes of a carbon so tht only they can access the mech
 	var/dna_lock
+	///Whether a mech can be DNA locked
+	var/can_be_locked = FALSE
 	///Spark effects are handled by this datum
 	var/datum/effect_system/spark_spread/spark_system = new
 	///How powerful our lights are
@@ -253,7 +257,7 @@
 	return cell
 
 /obj/vehicle/sealed/mecha/rust_heretic_act()
-	take_damage(500,  BRUTE)
+	take_damage(50, BRUTE)
 
 /obj/vehicle/sealed/mecha/proc/restore_equipment()
 	equipment_disabled = FALSE
@@ -298,7 +302,7 @@
 		C.forceMove(src)
 		cell = C
 		return
-	cell = new /obj/item/stock_parts/cell/high/plus(src)
+	cell = new /obj/item/stock_parts/cell/hyper(src)
 
 ///Adds a scanning module, for use in Map-spawned mechs, Nuke Ops mechs, and admin-spawned mechs. Mechs built by hand will replace this.
 /obj/vehicle/sealed/mecha/proc/add_scanmod(obj/item/stock_parts/scanning_module/sm=null)
@@ -307,7 +311,7 @@
 		sm.forceMove(src)
 		scanmod = sm
 		return
-	scanmod = new /obj/item/stock_parts/scanning_module(src)
+	scanmod = new /obj/item/stock_parts/scanning_module/adv(src)
 
 ///Adds a capacitor, for use in Map-spawned mechs, Nuke Ops mechs, and admin-spawned mechs. Mechs built by hand will replace this.
 /obj/vehicle/sealed/mecha/proc/add_capacitor(obj/item/stock_parts/capacitor/cap=null)
@@ -316,7 +320,7 @@
 		cap.forceMove(src)
 		capacitor = cap
 	else
-		capacitor = new /obj/item/stock_parts/capacitor(src)
+		capacitor = new /obj/item/stock_parts/capacitor/adv(src)
 
 /obj/vehicle/sealed/mecha/proc/add_cabin()
 	cabin_air = new(200)

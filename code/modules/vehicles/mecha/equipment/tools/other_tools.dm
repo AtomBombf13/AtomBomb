@@ -149,42 +149,39 @@
 
 //////////////////////////// ARMOR BOOSTER MODULES //////////////////////////////////////////////////////////
 
-
-/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster //what is that noise? A BAWWW from TK mutants.
-	name = "armor booster module (Close Combat Weaponry)"
-	desc = "Boosts exosuit armor against armed melee attacks. Requires energy to operate."
+/obj/item/mecha_parts/mecha_equipment/armor//what is that noise? A BAWWW from TK mutants.
+	name = "Armor"
+	desc = "Boosts exosuit armor against attacks."
 	icon_state = "mecha_abooster_ccw"
-	equip_cooldown = 10
-	energy_drain = 50
+	equip_cooldown = 0
+	energy_drain = 0
 	range = 0
-	var/deflect_coeff = 1.15
-	var/damage_coeff = 0.8
 	selectable = 0
+	var/list/armor_mod = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "fire" = 0, "acid" = 0)
 
-/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster/proc/attack_react()
-	if(energy_drain && !chassis.has_charge(energy_drain))
-		return FALSE
-	TIMER_COOLDOWN_START(src, COOLDOWN_MECHA_ARMOR, equip_cooldown)
-	return TRUE
+/obj/item/mecha_parts/mecha_equipment/armor/attach(obj/vehicle/sealed/mecha/M)
+	. = ..()
+	chassis.armor = chassis.armor.modifyRating(arglist(armor_mod))
+
+/obj/item/mecha_parts/mecha_equipment/armor/detach(atom/moveto)
+	var/list/removed_armor = armor_mod.Copy()
+	for(var/armor_type in removed_armor)
+		removed_armor[armor_type] = -removed_armor[armor_type]
+	chassis.armor = chassis.armor.modifyRating(arglist(removed_armor))
+	return ..()
+
+/obj/item/mecha_parts/mecha_equipment/armor/anticcw_armor_booster //what is that noise? A BAWWW from TK mutants.
+	name = "armor booster module (Close Combat Weaponry)"
+	desc = "Boosts exosuit armor against armed melee attacks."
+	icon_state = "mecha_abooster_ccw"
+	armor_mod = list("melee" = 15, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 5, "bio" = 0, "fire" = 0, "acid" = 0)
 
 
-
-/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster
+/obj/item/mecha_parts/mecha_equipment/armor/antiproj_armor_booster
 	name = "armor booster module (Ranged Weaponry)"
-	desc = "Boosts exosuit armor against ranged attacks. Completely blocks taser shots. Requires energy to operate."
+	desc = "Boosts exosuit armor against ranged attacks. Completely blocks taser shots."
 	icon_state = "mecha_abooster_proj"
-	equip_cooldown = 10
-	energy_drain = 50
-	range = 0
-	var/deflect_coeff = 1.15
-	var/damage_coeff = 0.8
-	selectable = 0
-
-/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster/proc/projectile_react()
-	if(energy_drain && !chassis.has_charge(energy_drain))
-		return FALSE
-	TIMER_COOLDOWN_START(src, COOLDOWN_MECHA_ARMOR, equip_cooldown)
-	return TRUE
+	armor_mod = list("melee" = 0, "bullet" = 10, "laser" = 10, "energy" = 5, "bomb" = 0, "bio" = 0, "fire" = 0, "acid" = 0)
 
 
 ////////////////////////////////// REPAIR DROID //////////////////////////////////////////////////
@@ -194,9 +191,9 @@
 	name = "exosuit repair droid"
 	desc = "An automated repair droid for exosuits. Scans for damage and repairs it. Can fix almost all types of external or internal damage."
 	icon_state = "repair_droid"
-	energy_drain = 50
+	energy_drain = 175
 	range = 0
-	var/health_boost = 1
+	var/health_boost = 3
 	var/icon/droid_overlay
 	var/list/repairable_damage = list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH)
 	selectable = 0
@@ -359,9 +356,9 @@
 	var/coeff = 100
 	var/obj/item/stack/sheet/fuel
 	var/max_fuel = 150000
-	var/fuel_per_cycle_idle = 25
+	var/fuel_per_cycle_idle = 75
 	var/fuel_per_cycle_active = 200
-	var/power_per_cycle = 20
+	var/power_per_cycle = 200
 
 /obj/item/mecha_parts/mecha_equipment/generator/Initialize()
 	. = ..()
@@ -447,8 +444,8 @@
 	icon_state = "tesla"
 	max_fuel = 50000
 	fuel_per_cycle_idle = 10
-	fuel_per_cycle_active = 30
-	power_per_cycle = 50
+	fuel_per_cycle_active = 50
+	power_per_cycle = 300
 	var/rad_per_cycle = 30
 
 /obj/item/mecha_parts/mecha_equipment/generator/nuclear/generator_init()

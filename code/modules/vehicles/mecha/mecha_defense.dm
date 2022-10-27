@@ -23,29 +23,11 @@
 
 /obj/vehicle/sealed/mecha/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	. = ..()
-	if(!damage_amount)
-		return 0
-	var/booster_deflection_modifier = 1
-	var/booster_damage_modifier = 1
-	if(damage_flag == "bullet" || damage_flag == "laser" || damage_flag == "energy")
-		for(var/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster/B in equipment)
-			if(B.projectile_react())
-				booster_deflection_modifier = B.deflect_coeff
-				booster_damage_modifier = B.damage_coeff
-				break
-	else if(damage_flag == "melee")
-		for(var/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster/B in equipment)
-			if(B.attack_react())
-				booster_deflection_modifier *= B.deflect_coeff
-				booster_damage_modifier *= B.damage_coeff
-				break
 
 	if(attack_dir)
 		var/facing_modifier = get_armour_facing(abs(dir2angle(dir) - dir2angle(attack_dir)))
-		booster_damage_modifier /= facing_modifier
-		booster_deflection_modifier *= facing_modifier
-	if(.)
-		. *= booster_damage_modifier
+		if(.)
+			. *= facing_modifier
 
 /obj/vehicle/sealed/mecha/attack_hand(mob/living/user)
 	. = ..()
@@ -75,9 +57,6 @@
 			play_soundeffect = 0
 			playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
-		if(user.obj_damage)
-			animal_damage = user.obj_damage
-		animal_damage = min(animal_damage, 20*user.environment_smash)
 		log_combat(user, src, "attacked")
 		attack_generic(user, animal_damage, user.melee_damage_type, "melee", play_soundeffect)
 		return 1

@@ -2,6 +2,10 @@
 	internal_damage_threshold = 35
 	allow_diagonal_movement = TRUE
 	mecha_flags = ADDING_ACCESS_POSSIBLE | CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
+	light_range = 8
+	light_power = 2
+	enter_delay = 20
+	exit_delay = 10
 
 /obj/vehicle/sealed/mecha/medical/moved_inside(mob/living/carbon/human/H)
 	. = ..()

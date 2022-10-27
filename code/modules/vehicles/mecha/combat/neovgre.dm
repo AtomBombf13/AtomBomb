@@ -3,9 +3,9 @@
 	desc = "Nezbere's most powerful creation, a mighty war machine of unmatched power said to have ended wars in a single night. Armed with a heavy laser and a tesla sphere generator. Requires a pilot and a gunner."
 	icon = 'icons/mecha/neovgre.dmi'
 	icon_state = "neovgre"
-	max_integrity = 500 //This is THE ratvarian superweaon, its deployment is an investment
+	max_integrity = 800 //This is THE ratvarian superweaon, its deployment is an investment
 	armor = ARMOR_VALUE_PA
-	force = 50 //SMASHY SMASHY!!
+	force = 60 //SMASHY SMASHY!!
 	movedelay = 3
 	internal_damage_threshold = 0
 	pixel_x = -16
