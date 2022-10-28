@@ -34,6 +34,7 @@
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_on = FALSE
 	light_range = 4
+	force = 5
 	///What direction will the mech face when entered/powered on? Defaults to South.
 	var/dir_in = SOUTH
 	///How much energy the mech will consume each time it moves. This variable is a backup for when leg actuators affect the energy drain.
@@ -435,22 +436,25 @@
 				transfer_moles = pressure_delta*cabin_air.return_volume()/(cabin_air.return_temperature() * R_IDEAL_GAS_EQUATION)
 				cabin_air.transfer_to(t_air, transfer_moles)
 
-	if(occupants)
-		for(var/i in occupants)
-			var/mob/living/occupant = i
-			if(cell)
-				var/cellcharge = cell.charge/cell.maxcharge
-				switch(cellcharge)
-					if(0.75 to INFINITY)
-						occupant.clear_alert("charge")
-					if(0.5 to 0.75)
-						occupant.throw_alert("charge", /obj/screen/alert/lowcell, 1)
-					if(0.25 to 0.5)
-						occupant.throw_alert("charge", /obj/screen/alert/lowcell, 2)
-					if(0.01 to 0.25)
-						occupant.throw_alert("charge", /obj/screen/alert/lowcell, 3)
-					else
-						occupant.throw_alert("charge", /obj/screen/alert/emptycell)
+	for(var/mob/living/occupant as anything in occupants)
+		if(!enclosed && occupant?.incapacitated()) //no sides mean it's easy to just sorta fall out if you're incapacitated.
+			visible_message(span_warning("[occupant] tumbles out of the cockpit!"))
+			mob_exit(occupant) //bye bye
+			continue
+		if(cell)
+			var/cellcharge = cell.charge/cell.maxcharge
+			switch(cellcharge)
+				if(0.75 to INFINITY)
+					occupant.clear_alert("charge")
+				if(0.5 to 0.75)
+					occupant.throw_alert("charge", /obj/screen/alert/lowcell, 1)
+				if(0.25 to 0.5)
+					occupant.throw_alert("charge", /obj/screen/alert/lowcell, 2)
+				if(0.01 to 0.25)
+					occupant.throw_alert("charge", /obj/screen/alert/lowcell, 3)
+				else
+					occupant.throw_alert("charge", /obj/screen/alert/emptycell)
+
 
 			var/integrity = obj_integrity/max_integrity*100
 			switch(integrity)
@@ -872,13 +876,14 @@
 
 ///Handles an actual AI (simple_animal mecha pilot) entering the mech
 /obj/vehicle/sealed/mecha/proc/aimob_enter_mech(mob/living/simple_animal/hostile/syndicate/mecha_pilot/pilot_mob)
-	if(pilot_mob && pilot_mob.Adjacent(src))
-		if(LAZYLEN(occupants))
-			return
-		LAZYADD(occupants, src)
-		pilot_mob.mecha = src
-		pilot_mob.forceMove(src)
-		update_icon()
+	if(!pilot_mob?.Adjacent(src))
+		return
+	if(LAZYLEN(occupants))
+		return
+	LAZYSET(occupants, pilot_mob, NONE)
+	pilot_mob.mecha = src
+	pilot_mob.forceMove(src)
+	update_icon()
 
 ///Handles an actual AI (simple_animal mecha pilot) exiting the mech
 /obj/vehicle/sealed/mecha/proc/aimob_exit_mech(mob/living/simple_animal/hostile/syndicate/mecha_pilot/pilot_mob)

@@ -57,6 +57,8 @@
 			play_soundeffect = 0
 			playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 		var/animal_damage = rand(user.melee_damage_lower,user.melee_damage_upper)
+		if(user.obj_damage)
+			animal_damage = max(user.obj_damage,animal_damage)
 		log_combat(user, src, "attacked")
 		attack_generic(user, animal_damage, user.melee_damage_type, "melee", play_soundeffect)
 		return 1

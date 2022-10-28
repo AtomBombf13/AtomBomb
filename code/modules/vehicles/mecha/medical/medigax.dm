@@ -1,5 +1,5 @@
 /obj/vehicle/sealed/mecha/medical/medigax
-	desc = "A Gygax with it's actuator overload stripped and a slick white paint scheme, for medical use, These exosuits are developed and produced by Vey-Med. (&copy; All rights reserved)."
+	desc = "A pre-War medical exosuit based on the Gygax platform. It features a robust suspension to safetly transport patients over rough terrain. The exterior plating is advertised as able to withstand minor impacts and is anti-microbial to boot."
 	name = "\improper Medical Gygax"
 	icon_state = "medigax"
 	allow_diagonal_movement = TRUE

@@ -1,5 +1,5 @@
 /obj/vehicle/sealed/mecha/combat/marauder
-	desc = "Heavy-duty, combat exosuit, developed after the Durand model. Rarely found among civilian populations."
+	desc = "A retrofit of the orginal 'Durand' exosuit designed for extended combat operations, the shield projector has been replaced with a smoke-screen dispenser and a sophisticated sensor suite."
 	name = "\improper Marauder"
 	icon_state = "marauder"
 	movedelay = 5
@@ -10,6 +10,7 @@
 	wreckage = /obj/structure/mecha_wreckage/marauder
 	internal_damage_threshold = 20
 	force = 50
+	max_equip = 3
 
 /obj/vehicle/sealed/mecha/combat/marauder/generate_actions()
 	. = ..()

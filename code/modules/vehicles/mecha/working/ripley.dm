@@ -9,7 +9,7 @@
 	max_integrity = 250
 	lights_power = 7
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 50)
-	max_equip = 6
+	max_equip = 4
 	wreckage = /obj/structure/mecha_wreckage/ripley
 	enclosed = FALSE //Normal ripley has an open cockpit design
 	enter_delay = 10 //can enter in a quarter of the time of other mechs
@@ -55,7 +55,7 @@
 	enter_delay = 40
 	silicon_icon_state = null
 
-/obj/vehicle/sealed/mecha/working/ripley/clarke
+/obj/vehicle/sealed/mecha/working/ripley/mkii/clarke
 	desc = "A pre-War design by Vault-Tec to protect workers in hazardous post-War conditions. This model has had its internal ore box replaced with a generic storage module."
 	name = "\improper Clarke"
 	icon_state = "clarke"
@@ -67,7 +67,7 @@
 	lights_power = 7
 	step_energy_drain = 30 //slightly higher energy drain since you movin those wheels FAST
 	armor = list("melee" = 35, "bullet" = 15, "laser" = 20, "energy" = 20, "bomb" = 60, "rad" = 100)
-	max_equip = 5
+	max_equip = 4
 	wreckage = /obj/structure/mecha_wreckage/clarke
 	cargo_capacity = 10
 

@@ -1,5 +1,5 @@
 /obj/vehicle/sealed/mecha/combat/gygax
-	desc = "A lightweight, security exosuit. Popular among private and corporate security."
+	desc = "A pre-War security exosuit developed by Vault-Tec to minimize casulties among security staff during violent uprisings. It's painted in a bright orange scheme to ensure recognizability."
 	name = "\improper Gygax"
 	icon_state = "gygax"
 	movedelay = 3
@@ -16,7 +16,7 @@
 	desc = "A lightweight exosuit, painted in a dark scheme. This model appears to have some modifications."
 	name = "\improper Dark Gygax"
 	icon_state = "darkgygax"
-	max_integrity = 300
+	max_integrity = 500
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 30, "rad" = 75)
 	max_temperature = 35000
 	leg_overload_coeff = 70

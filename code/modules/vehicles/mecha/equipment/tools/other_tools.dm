@@ -149,7 +149,7 @@
 
 //////////////////////////// ARMOR BOOSTER MODULES //////////////////////////////////////////////////////////
 
-/obj/item/mecha_parts/mecha_equipment/armor//what is that noise? A BAWWW from TK mutants.
+/obj/item/mecha_parts/mecha_equipment/armor
 	name = "Armor"
 	desc = "Boosts exosuit armor against attacks."
 	icon_state = "mecha_abooster_ccw"
@@ -163,7 +163,15 @@
 	. = ..()
 	chassis.armor = chassis.armor.modifyRating(arglist(armor_mod))
 
+
 /obj/item/mecha_parts/mecha_equipment/armor/detach(atom/moveto)
+	var/list/removed_armor = armor_mod.Copy()
+	for(var/armor_type in removed_armor)
+		removed_armor[armor_type] = -removed_armor[armor_type]
+	chassis.armor = chassis.armor.modifyRating(arglist(removed_armor))
+	return ..()
+
+/obj/item/mecha_parts/mecha_equipment/armor/Destroy()
 	var/list/removed_armor = armor_mod.Copy()
 	for(var/armor_type in removed_armor)
 		removed_armor[armor_type] = -removed_armor[armor_type]
@@ -174,12 +182,12 @@
 	name = "armor booster module (Close Combat Weaponry)"
 	desc = "Boosts exosuit armor against armed melee attacks."
 	icon_state = "mecha_abooster_ccw"
-	armor_mod = list("melee" = 15, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 5, "bio" = 0, "fire" = 0, "acid" = 0)
+	armor_mod = list("melee" = 12.5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 5, "bio" = 0, "fire" = 0, "acid" = 0)
 
 
 /obj/item/mecha_parts/mecha_equipment/armor/antiproj_armor_booster
 	name = "armor booster module (Ranged Weaponry)"
-	desc = "Boosts exosuit armor against ranged attacks. Completely blocks taser shots."
+	desc = "Boosts exosuit armor against ranged attacks."
 	icon_state = "mecha_abooster_proj"
 	armor_mod = list("melee" = 0, "bullet" = 10, "laser" = 10, "energy" = 5, "bomb" = 0, "bio" = 0, "fire" = 0, "acid" = 0)
 

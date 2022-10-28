@@ -1541,7 +1541,7 @@
 	)
 
 /datum/component/construction/mecha/clarke
-	result = /obj/vehicle/sealed/mecha/working/ripley/clarke
+	result = /obj/vehicle/sealed/mecha/working/ripley/mkii/clarke
 	base_icon = "clarke"
 	steps = list(
 		//1

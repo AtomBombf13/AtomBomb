@@ -1,15 +1,15 @@
 /obj/vehicle/sealed/mecha/combat/durand
-	desc = "An aging combat exosuit utilized by the Nanotrasen corporation. Originally developed to combat hostile alien lifeforms."
+	desc = "An combat exosuit utilized by the Vault-Tec corporation. A pre-War design, developed by Vault-Tec to combat post-War threats. It seems to have an experimental shield projector installed to minimize damage to the exosuit."
 	name = "\improper Durand"
 	icon_state = "durand"
 	movedelay = 4
 	max_integrity = 500
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 40)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 25, "energy" = 20, "bomb" = 40)
 	max_temperature = 30000
 	force = 40
 	wreckage = /obj/structure/mecha_wreckage/durand
 	var/obj/durand_shield/shield
-
+	max_equip = 3
 
 /obj/vehicle/sealed/mecha/combat/durand/Initialize()
 	. = ..()

@@ -1,5 +1,5 @@
 /obj/vehicle/sealed/mecha/medical/odysseus
-	desc = "These exosuits are developed and produced by Vey-Med. (&copy; All rights reserved)."
+	desc = "A civilian medical exosuit model, produced to assist in medical bays of the Vaults."
 	name = "\improper Odysseus"
 	icon_state = "odysseus"
 	allow_diagonal_movement = TRUE
