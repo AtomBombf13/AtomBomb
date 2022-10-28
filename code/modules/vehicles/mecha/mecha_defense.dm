@@ -275,15 +275,33 @@
 		clearInternalDamage(MECHA_INT_TANK_BREACH)
 		to_chat(user, "<span class='notice'>You repair the damaged gas tank.</span>")
 		return
-	if(obj_integrity < max_integrity)
-		if(!W.use_tool(src, user, 0, volume=50, amount=1))
-			return
-		user.visible_message("<span class='notice'>[user] repairs some damage to [name].</span>", "<span class='notice'>You repair some damage to [src].</span>")
-		obj_integrity += min(10, max_integrity-obj_integrity)
-		if(obj_integrity == max_integrity)
-			to_chat(user, "<span class='notice'>It looks to be fully repaired now.</span>")
+	if(LAZYFIND(repairing_mobs, user))
+		to_chat(user, "<span class='warning'>You're already repairing the [src]!</span>")
 		return
-	to_chat(user, "<span class='warning'>The [name] is at full integrity!</span>")
+	if(obj_integrity >= max_integrity)
+		to_chat(user, "<span class='warning'>The [src] isn't damaged!</span>")
+		return
+	if(!W.tool_start_check(user, amount=1))
+
+		return
+	LAZYADD(repairing_mobs, user)
+	to_chat(user, "<span class='warning'>You start repairing the [src]..</span>")
+	audible_message(span_hear("You hear welding."))
+	var/did_the_thing
+	while(obj_integrity < max_integrity)
+		if(W.use_tool(src, user, 2.5 SECONDS, volume=50, amount=1))
+			did_the_thing = TRUE
+			obj_integrity += min(15, (max_integrity - obj_integrity))
+			audible_message(span_hear("You hear welding."))
+		else
+			break
+	if(did_the_thing)
+		to_chat(user, "<span class='notice'>You [(obj_integrity >= max_integrity) ? "fully" : "partially"] reapired the [src]! </span>")
+	else
+		to_chat(user, "<span class='notice'>You stop repairing [src].</span>")
+	LAZYREMOVE(repairing_mobs, user)
+
+
 
 /obj/vehicle/sealed/mecha/proc/mech_toxin_damage(mob/living/target)
 	playsound(src, 'sound/effects/spray2.ogg', 50, TRUE)
