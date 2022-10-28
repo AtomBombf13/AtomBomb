@@ -53,7 +53,7 @@ GLOBAL_LIST(topic_status_cache)
 	if(CONFIG_GET(flag/usewhitelist))
 		load_whitelist()
 
-	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
+	GLOB.timezoneOffset = text2num(time2text(0,"hh")) + OFFSET_GAME_TIMER //37300//So timer loops to 0 once round starts
 
 	if(fexists(RESTART_COUNTER_PATH))
 		GLOB.restart_counter = text2num(trim(file2text(RESTART_COUNTER_PATH)))

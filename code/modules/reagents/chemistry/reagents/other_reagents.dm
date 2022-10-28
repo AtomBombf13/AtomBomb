@@ -691,6 +691,7 @@
 									"You feel as though you're about to change at any moment!" = MUT_MSG_ABOUT2TURN)
 	var/mutationtext
 	var/cycles_to_turn = 20 //the current_cycle threshold / iterations needed before one can transform
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/mutationtoxin/on_mob_life(mob/living/carbon/human/H)
@@ -927,6 +928,7 @@
 	taste_description = "slime"
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/mulligan/on_mob_life(mob/living/carbon/human/H)
 	..()
@@ -944,6 +946,7 @@
 	taste_description = "slime"
 	value = REAGENT_VALUE_VERY_RARE
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	if(method != TOUCH)
@@ -957,6 +960,7 @@
 	taste_description = "decay"
 	value = REAGENT_VALUE_GLORIOUS
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/gluttonytoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
 	L.ForceContractDisease(new /datum/disease/transformation/morph(), FALSE, TRUE)
@@ -969,6 +973,7 @@
 	taste_description = "bitterness"
 	pH = 10
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/serotrotium/on_mob_life(mob/living/carbon/M)
 	if(ishuman(M))
