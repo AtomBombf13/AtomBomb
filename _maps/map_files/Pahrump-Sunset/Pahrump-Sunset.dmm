@@ -19648,6 +19648,7 @@
 	pixel_x = 6;
 	req_one_access_txt = null
 	},
+/obj/item/book/granter/action/drink_fling,
 /turf/open/floor/wood_fancy/wood_fancy_dark{
 	icon_state = "fancy_dark-broken1"
 	},
