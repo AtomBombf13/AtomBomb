@@ -16144,7 +16144,7 @@
 	area_type = /area/f13;
 	dwidth = 1;
 	height = 4;
-	id = "bos_entryway";
+	id = "bos_level_0";
 	name = "Level 0: Entryway";
 	roundstart_template = /datum/map_template/shuttle/entrance_elevator;
 	width = 4
