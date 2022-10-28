@@ -1,21 +1,23 @@
 
-/**
- * Mecha Pilots!
- * By Remie Richards
- *
- * Mecha pilot mobs are able to pilot Mecha to a rudimentary level
- * this allows for certain mobs to be more of a threat (Because they're in a MECH)
- *
- * Mecha Pilots can either spawn with one, or steal one!
- *
- * Inherits from syndicate just to avoid copy-paste)
- *
- * Featuring:
- * * Mecha piloting skills
- * * Uses Mecha equipment
- * * Uses Mecha special abilities in specific situations
- * * Pure Evil Incarnate
- */
+/*
+ Mecha Pilots!
+ by Remie Richards
+
+ Mecha pilot mobs are able to pilot Mecha to a rudimentary level
+ This allows for certain mobs to be more of a threat (Because they're in a MECH)
+
+ Mecha Pilots can either spawn with one, or steal one!
+
+ (Inherits from syndicate just to avoid copy-paste)
+
+ Featuring:
+ * Mecha piloting skills
+ * Uses Mecha equipment
+ * Uses Mecha special abilities in specific situations
+ * Pure Evil Incarnate
+
+*/
+
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot
 	name = "Syndicate Mecha Pilot"
 	desc = "Death to Nanotrasen. This variant comes in MECHA DEATH flavour."
@@ -63,15 +65,15 @@
 	if(spawn_mecha_type)
 		var/obj/vehicle/sealed/mecha/M = new spawn_mecha_type (get_turf(src))
 		if(istype(M))
-			INVOKE_ASYNC(src, .proc/enter_mecha, M)
+			enter_mecha(M)
 
 
 /mob/living/simple_animal/hostile/syndicate/mecha_pilot/proc/enter_mecha(obj/vehicle/sealed/mecha/M)
 	if(!M)
 		return 0
-	LoseTarget() //Target was our mecha, so null it out
+	target = null //Target was our mecha, so null it out
 	M.aimob_enter_mech(src)
-	targets_from = WEAKREF(M)
+	targets_from = M
 	allow_movement_on_non_turfs = TRUE //duh
 	var/do_ranged = 0
 	for(var/equip in mecha.equipment)
@@ -97,14 +99,14 @@
 
 	mecha.aimob_exit_mech(src)
 	allow_movement_on_non_turfs = FALSE
-	targets_from = null
+	targets_from = src
 
 	//Find a new mecha
 	wanted_objects = typecacheof(/obj/vehicle/sealed/mecha/combat, TRUE)
 	var/search_aggressiveness = 2
 	for(var/obj/vehicle/sealed/mecha/combat/C in range(vision_range,src))
 		if(is_valid_mecha(C))
-			GiveTarget(C)
+			target = C
 			search_aggressiveness = 3 //We can see a mech? RUN FOR IT, IGNORE MOBS!
 			break
 	search_objects = search_aggressiveness
@@ -188,7 +190,7 @@
 				return
 			else
 				if(!CanAttack(M))
-					LoseTarget()
+					target = null
 					return
 
 		return target.attack_animal(src)
@@ -201,7 +203,7 @@
 	if(!mecha)
 		for(var/obj/vehicle/sealed/mecha/combat/mecha_in_range in range(src,vision_range))
 			if(is_valid_mecha(mecha_in_range))
-				GiveTarget(mecha_in_range) //Let's nab it!
+				target = mecha_in_range //Let's nab it!
 				minimum_distance = 1
 				ranged = 0
 				break
@@ -219,7 +221,7 @@
 			exit_mecha(mecha)
 			return
 
-		//Smoke if there's too many targets - Smoke Power
+		//Smoke if there's too many targets	- Smoke Power
 		if(threat_count >= threat_use_mecha_smoke && prob(smoke_chance))
 			if(LAZYACCESSASSOC(mecha.occupant_actions, src, /datum/action/vehicle/sealed/mecha/mech_smoke) && !mecha.smoke_charges)
 				var/datum/action/action = mecha.occupant_actions[src][/datum/action/vehicle/sealed/mecha/mech_smoke]
@@ -263,7 +265,7 @@
 	if(ismecha(the_target))
 		var/obj/vehicle/sealed/mecha/M = the_target
 		if(mecha)
-			if(M == mecha) //Dont kill yourself
+			if(M == mecha)	//Dont kill yourself
 				return FALSE
 		else //we're not in a mecha, so we check if we can steal it instead.
 			if(is_valid_mecha(M))

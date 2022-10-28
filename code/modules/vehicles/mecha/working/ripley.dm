@@ -8,7 +8,7 @@
 	max_temperature = 20000
 	max_integrity = 250
 	lights_power = 7
-	armor = list("melee" = 45, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 50)
+	armor = list("melee" = 45, "bullet" = 20, "laser" = 25, "energy" = 30, "bomb" = 40, "bio" = 100, "rad" = 25, "fire" = 100, "acid" = 100)
 	max_equip = 4
 	wreckage = /obj/structure/mecha_wreckage/ripley
 	enclosed = FALSE //Normal ripley has an open cockpit design
@@ -49,7 +49,7 @@
 	movedelay = 3
 	max_temperature = 30000
 	max_integrity = 350
-	armor = list("melee" = 45, "bullet" = 40, "laser" = 30, "energy" = 30, "bomb" = 60, "rad" = 100)
+	armor = list("melee" = 45, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	wreckage = /obj/structure/mecha_wreckage/ripley/mkii
 	enclosed = TRUE
 	enter_delay = 40
@@ -66,7 +66,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	lights_power = 7
 	step_energy_drain = 30 //slightly higher energy drain since you movin those wheels FAST
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 20, "energy" = 20, "bomb" = 60, "rad" = 100)
+	armor = list("melee" = 20, "bullet" = 25, "laser" = 20, "energy" = 30, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	max_equip = 4
 	wreckage = /obj/structure/mecha_wreckage/clarke
 	cargo_capacity = 10
@@ -99,7 +99,7 @@
 	max_temperature = 65000
 	max_integrity = 400
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	max_equip = 5 // More armor, less tools
+	max_equip = 5
 	enclosed = TRUE
 	enter_delay = 40
 
@@ -110,7 +110,7 @@
 	max_temperature = 100000
 	max_integrity = 500
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 50, "bomb" = 75, "rad" = 100)
+	armor = list("melee" = 50, "bullet" = 45, "laser" = 40, "energy" = 50, "bomb" = 80, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	movedelay = 3
 	lights_power = 7
 	wreckage = /obj/structure/mecha_wreckage/ripley/deathripley

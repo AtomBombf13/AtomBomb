@@ -5,7 +5,7 @@
 	movedelay = 2
 	allow_diagonal_movement = TRUE
 	max_integrity = 100
-	armor = ARMOR_VALUE_LIGHT
+	armor = list("melee" = 15, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 15, "bio" = 100, "rad" = 50, "fire" = 100, "acid" = 100)
 	max_temperature = 15000
 	wreckage = /obj/structure/mecha_wreckage/reticence
 	mecha_flags =  CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
