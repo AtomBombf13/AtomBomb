@@ -20729,7 +20729,9 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building)
 "cnZ" = (
-/obj/structure/stairs,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "cob" = (
@@ -42376,10 +42378,7 @@
 	icon_state = "manhole_open";
 	id = "enclave"
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "mia" = (
 /obj/effect/decal/cleanable/dirt,
@@ -55847,7 +55846,7 @@
 	},
 /area/f13/building/firestation)
 "sBO" = (
-/obj/machinery/door/unpowered/securedoor/wayfareroor,
+/obj/structure/simple_door/repaired,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "sBS" = (
@@ -58582,7 +58581,7 @@
 	},
 /area/f13/wasteland)
 "tQb" = (
-/obj/machinery/door/unpowered/securedoor/wayfareroor,
+/obj/structure/simple_door/repaired,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/village)
 "tQn" = (
@@ -69160,7 +69159,7 @@ aJN
 rwS
 aJN
 aJN
-aJN
+mhY
 aJN
 aJN
 tVn
@@ -75506,7 +75505,7 @@ aae
 aae
 cvp
 cvp
-sBO
+oUj
 cvp
 cvp
 huu
@@ -87921,7 +87920,7 @@ trP
 lSu
 wCQ
 sWl
-mhY
+sWl
 peG
 aaA
 aae
@@ -106319,7 +106318,7 @@ aUc
 aaQ
 aiO
 iht
-jeh
+abB
 jeh
 jmf
 jmf
@@ -115695,7 +115694,7 @@ aae
 aae
 aae
 efg
-bzQ
+vDs
 exq
 iIJ
 aae
