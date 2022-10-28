@@ -48,6 +48,8 @@
 		new /obj/item/reagent_containers/food/snacks/cube/monkey(get_turf(holder.my_atom))
 	..()
 
+
+/*
 //Green
 
 /datum/chemical_reaction/slime/slimemutate
@@ -82,6 +84,7 @@
 	required_other = TRUE
 	required_container = /obj/item/slime_extract/green
 
+*/
 
 //Metal
 /datum/chemical_reaction/slime/slimemetal
@@ -423,6 +426,8 @@
 	new /obj/item/slimepotion/genderchange(get_turf(holder.my_atom))
 	..()
 
+/*
+
 //Black
 
 /datum/chemical_reaction/slime/slimemutate2
@@ -432,7 +437,7 @@
 	required_reagents = list(/datum/reagent/toxin/plasma = 1)
 	required_other = TRUE
 	required_container = /obj/item/slime_extract/black
-
+*/
 
 //Oil
 /datum/chemical_reaction/slime/slimeexplosion

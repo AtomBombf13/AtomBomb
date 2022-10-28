@@ -676,6 +676,8 @@
 #define MUT_MSG_EXTENDED 2
 #define MUT_MSG_ABOUT2TURN 3
 
+
+/*
 /datum/reagent/mutationtoxin
 	name = "Stable Mutation Toxin"
 	description = "A humanizing toxin."
@@ -940,6 +942,7 @@
 			to_chat(H, span_warning("You've become \a jellyperson!"))
 
 
+
 /datum/reagent/mulligan
 	name = "Mulligan Toxin"
 	description = "This toxin will rapidly change the DNA of human beings. Commonly used by Syndicate spies and assassins in need of an emergency ID change."
@@ -1000,6 +1003,8 @@
 		if(prob(7))
 			M.emote(pick("twitch","drool","moan","gasp"))
 	..()
+
+*/
 
 /datum/reagent/oxygen
 	name = "Oxygen"

@@ -75,6 +75,8 @@
 		user.mind.store_memory("Failsafe code for [U.parent] : [U.failsafe_code]")
 	return U.parent //For log icon
 
+/*
+
 /datum/uplink_item/stealthy_tools/mulligan
 	name = "Mulligan"
 	desc = "Screwed up and have security on your tail? This handy syringe will give you a completely new identity \
@@ -83,6 +85,8 @@
 	cost = 3
 	surplus = 30
 	exclude_modes = list(/datum/game_mode/nuclear)
+
+*/
 
 /datum/uplink_item/stealthy_tools/syndigaloshes
 	name = "No-Slip Chameleon Shoes"
