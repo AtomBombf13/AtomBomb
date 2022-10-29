@@ -1483,6 +1483,7 @@
 	dir = 1;
 	light_color = "#706891"
 	},
+/obj/item/circuitboard/machine/colormate,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood)
 "agt" = (
@@ -18015,6 +18016,7 @@
 	pixel_y = -24
 	},
 /obj/structure/rack,
+/obj/item/circuitboard/machine/colormate,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "bwN" = (
@@ -20048,6 +20050,7 @@
 /obj/item/clothing/mask/gas/explorer,
 /obj/item/clothing/mask/vape,
 /obj/item/book/granter/crafting_recipe/gunsmith_three,
+/obj/item/circuitboard/machine/colormate,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "cjC" = (
@@ -45416,9 +45419,7 @@
 /area/f13/building)
 "nzi" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/mineral/wasteland_vendor/attachments{
-	icon_state = "weapon_idle"
-	},
+/obj/machinery/gear_painter,
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
 	},
@@ -50565,7 +50566,9 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/bunker)
 "pUJ" = (
-/obj/machinery/vending/cigarette,
+/obj/machinery/mineral/wasteland_vendor/attachments{
+	icon_state = "weapon_idle"
+	},
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
 	},
@@ -61545,6 +61548,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13,
 /area/f13/building)
+"vlu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/shelf_wood,
+/obj/item/circuitboard/machine/colormate,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/legion)
 "vlI" = (
 /obj/structure/handrail/g_central{
 	pixel_y = -16
@@ -92671,7 +92682,7 @@ mHp
 imF
 ahQ
 hEG
-ean
+ctp
 oDk
 kml
 kml
@@ -127963,7 +127974,7 @@ vLg
 dhs
 cFL
 qXa
-wfv
+vlu
 eYC
 wfv
 eYC
