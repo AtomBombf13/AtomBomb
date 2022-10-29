@@ -203,8 +203,6 @@
 	update_icon()
 
 /obj/vehicle/sealed/mecha/Destroy()
-	if(obj_integrity > 0) //no explody if we have hp remaining!
-		explode_on_death = FALSE
 	for(var/M in occupants)
 		var/mob/living/occupant = M
 		if(isAI(occupant))
@@ -217,14 +215,10 @@
 			var/obj/item/mecha_parts/mecha_equipment/equip = E
 			equip.detach(loc)
 			qdel(equip)
-	if(cell)
-		QDEL_NULL(cell)
-	if(scanmod)
-		QDEL_NULL(scanmod)
-	if(capacitor)
-		QDEL_NULL(capacitor)
-	if(internal_tank)
-		QDEL_NULL(internal_tank)
+	QDEL_NULL(cell)
+	QDEL_NULL(scanmod)
+	QDEL_NULL(capacitor)
+	QDEL_NULL(internal_tank)
 	STOP_PROCESSING(SSobj, src)
 	GLOB.poi_list.Remove(src)
 	LAZYCLEARLIST(equipment)
@@ -265,7 +259,7 @@
 /obj/vehicle/sealed/mecha/proc/restore_equipment()
 	equipment_disabled = FALSE
 	for(var/occupant in occupants)
-		var/mob/mob_occupant
+		var/mob/mob_occupant = occupant
 		SEND_SOUND(mob_occupant, sound('sound/items/timer.ogg', volume=50))
 		to_chat(mob_occupant, "<span=notice>Equipment control unit has been rebooted successfully.</span>")
 		mob_occupant.update_mouse_pointer()
