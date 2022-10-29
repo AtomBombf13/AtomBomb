@@ -1113,6 +1113,7 @@
 	name = "Cucumber Lemonade"
 	description = "Cucumber juice, sugar and soda, what else is needed for happiness?"
 	color = "#6cd87a" 
+	quality = DRINK_GOOD
 	taste_description = "citrus soda with cucumber"
 	glass_icon_state = "cucumber_lemonade"
 	glass_name = "cucumber lemonade"
