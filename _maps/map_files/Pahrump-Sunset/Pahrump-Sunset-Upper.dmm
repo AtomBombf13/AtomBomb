@@ -1314,6 +1314,13 @@
 	dir = 1
 	},
 /area/f13/building/hospital)
+"cqC" = (
+/obj/structure/barricade/sandbags,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland)
 "cqK" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
@@ -4939,6 +4946,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/followers)
+"jGp" = (
+/obj/structure/table/wood/junk,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland)
 "jHg" = (
 /obj/structure/lattice/catwalk,
 /turf/open/transparent/openspace,
@@ -10523,6 +10536,11 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"usZ" = (
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland)
 "utH" = (
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
@@ -10920,6 +10938,14 @@
 /obj/item/clothing/shoes/f13/military/ncr,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
+"vuk" = (
+/obj/structure/chair/folding{
+	dir = 8
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland)
 "vvS" = (
 /obj/structure/fence/handrail{
 	density = 0;
@@ -11359,6 +11385,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/followers)
+"wkE" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland)
 "wmN" = (
 /obj/machinery/computer/card/legion,
 /turf/open/floor/f13/wood,
@@ -12403,6 +12435,14 @@
 	dir = 8
 	},
 /turf/open/floor/plating/rust,
+/area/f13/wasteland)
+"yiT" = (
+/obj/structure/bed/mattress{
+	icon_state = "mattress2"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
 /area/f13/wasteland)
 "ykR" = (
 /obj/item/chair/wood,
@@ -24850,7 +24890,7 @@ oez
 ojP
 ojP
 ojP
-ojP
+oez
 ojP
 ojP
 ojP
@@ -25106,12 +25146,12 @@ oez
 oez
 ojP
 ojP
+oez
+oez
 ojP
 ojP
 ojP
-ojP
-ojP
-ojP
+oez
 ojP
 ojP
 ojP
@@ -25361,17 +25401,17 @@ rLB
 oez
 oez
 oez
+ojP
+ojP
 oez
 oez
 oez
+ojP
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
+ojP
+ojP
 oez
 oez
 oez
@@ -25618,6 +25658,8 @@ rLB
 oez
 oez
 oez
+ojP
+ojP
 oez
 oez
 oez
@@ -25625,10 +25667,8 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
+ojP
+ojP
 oez
 oez
 oez
@@ -25875,17 +25915,17 @@ rLB
 oez
 oez
 oez
+ojP
+ojP
+ojP
+oez
+ojP
+ojP
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+ojP
+ojP
+ojP
 oez
 oez
 oez
@@ -26132,17 +26172,17 @@ rLB
 oez
 oez
 oez
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+ojP
+ojP
+ojP
+ojP
 oez
 oez
 oez
@@ -26389,17 +26429,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
 oez
 oez
 oez
@@ -26646,17 +26686,17 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
+ojP
 oez
 oez
 oez
@@ -55427,16 +55467,16 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+cqC
+wkE
+wkE
+jGp
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
 vqz
 vqz
 vqz
@@ -55684,16 +55724,16 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+wkE
+usZ
+usZ
+vuk
+usZ
+usZ
+usZ
+usZ
+vqz
+usZ
 vqz
 uMb
 xFD
@@ -55941,16 +55981,16 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+wkE
+yiT
+usZ
+usZ
+usZ
+usZ
+usZ
+vqz
+vqz
+usZ
 vqz
 bhm
 tnt
@@ -56198,16 +56238,16 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+wkE
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+vqz
+usZ
+usZ
 vqz
 bhm
 wZD
@@ -56455,16 +56495,16 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+usZ
+usZ
+vqz
+vqz
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
 vqz
 bhm
 gah
@@ -56712,15 +56752,15 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+usZ
+usZ
 vqz
-vqz
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
 vqz
 vqz
 bhm
@@ -56969,15 +57009,15 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+vqz
+vqz
+usZ
 vqz
 vqz
 bhm
@@ -57226,15 +57266,15 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+usZ
+usZ
+usZ
+usZ
+usZ
+vqz
+vqz
+usZ
+usZ
 vqz
 vqz
 bhm
@@ -57483,15 +57523,15 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
 vqz
 vqz
 bhm
@@ -57740,15 +57780,15 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
+usZ
 vqz
 vqz
 bhm

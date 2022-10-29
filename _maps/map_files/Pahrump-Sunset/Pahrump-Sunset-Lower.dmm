@@ -605,6 +605,13 @@
 "aul" = (
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
+"aun" = (
+/obj/structure/closet/crate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "auF" = (
 /mob/living/simple_animal/hostile/radroach,
 /turf/open/floor/f13/wood,
@@ -1113,6 +1120,13 @@
 	icon_state = "tunnelchess"
 	},
 /area/f13/bunker)
+"aOj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/food/drinks/trophy,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "aOp" = (
 /obj/structure/curtain{
 	color = "#845f58"
@@ -6645,6 +6659,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
+"cuI" = (
+/obj/item/clothing/accessory/medal/bronze_heart{
+	name = "Purple Heart"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "cuK" = (
 /obj/structure/nest/ghoul,
 /turf/open/floor/plasteel/f13{
@@ -12760,6 +12783,14 @@
 /obj/effect/mob_spawn/human/corpse/vault,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/caves)
+"hAO" = (
+/obj/structure/table,
+/obj/item/stack/spacecash/c20,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "hAW" = (
 /obj/structure/reagent_dispensers/barrel/old,
 /obj/effect/decal/waste{
@@ -18655,6 +18686,13 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/museum)
+"mvB" = (
+/obj/item/lighter/gold,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "mvR" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -19650,6 +19688,14 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
+"nlf" = (
+/obj/structure/table,
+/obj/item/stack/spacecash/c200,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "nlx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
@@ -19855,6 +19901,11 @@
 "nuB" = (
 /obj/structure/chair/sofa/right,
 /turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
+"nvo" = (
+/obj/structure/barricade/wooden/planks/pregame,
+/obj/structure/simple_door/interior,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "nvA" = (
 /obj/effect/decal/cleanable/dirt{
@@ -21241,6 +21292,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/reactor)
+"oJZ" = (
+/obj/structure/table,
+/obj/item/stack/spacecash/c1,
+/obj/item/clothing/gloves/ring/silver,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "oKm" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/mineral/plastitanium,
@@ -21369,6 +21429,13 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/tunnel)
+"oPB" = (
+/obj/structure/rack,
+/obj/item/clothing/gloves/Biker,
+/obj/item/clothing/under/f13/Retro_Biker_Vest,
+/obj/item/clothing/head/fluff/Bikerhelmet,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "oPJ" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
@@ -23296,6 +23363,12 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/caves)
+"qoi" = (
+/obj/structure/stairs/south{
+	color = "#A47449"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "qom" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/weather/dirt{
@@ -24012,6 +24085,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "redrustyfull"
 	},
+/area/f13/caves)
+"qQK" = (
+/obj/item/reagent_containers/food/drinks/trophy/silver_cup,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "qRk" = (
 /obj/item/reagent_containers/food/snacks/deadmouse,
@@ -26550,6 +26627,10 @@
 /obj/structure/window/fulltile/wood_window,
 /turf/open/water,
 /area/f13/tunnel)
+"sYW" = (
+/obj/item/reagent_containers/food/drinks/trophy/bronze_cup,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "sZg" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/f13/vault_floor/white,
@@ -28568,6 +28649,12 @@
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
+"uEK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "uEV" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -30113,6 +30200,13 @@
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/water,
 /area/f13/caves)
+"vUm" = (
+/obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "vUS" = (
 /obj/structure/lattice{
 	layer = 3
@@ -31651,6 +31745,17 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
+"xjY" = (
+/obj/structure/closet,
+/obj/item/storage/backpack/duffelbag,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/under/rank/civilian/util,
+/obj/item/clothing/mask/balaclava,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/caves)
 "xkd" = (
 /obj/item/storage/fancy/donut_box,
 /turf/open/indestructible/ground/inside/mountain,
@@ -75950,15 +76055,15 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
 aae
 aae
 aae
@@ -76207,15 +76312,15 @@ aae
 aak
 aak
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aak
-aak
+ajX
+uEK
+uEK
+aaB
+uEK
+cuI
+aaB
+uEK
+ajX
 aae
 aae
 aae
@@ -76464,15 +76569,15 @@ aak
 aak
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aak
-aak
-aak
+ajX
+xjY
+uEK
+qQK
+uEK
+uEK
+aun
+uEK
+ajX
 aae
 aaa
 aaa
@@ -76721,15 +76826,15 @@ aak
 aak
 aak
 aak
-aak
-aae
-aae
-aae
-aae
-aae
-aae
-aak
-aae
+ajX
+xjY
+vUm
+ajX
+mvB
+vUm
+ajX
+uEK
+ajX
 aae
 aaa
 dEX
@@ -76978,15 +77083,15 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+ajX
+xjY
+uEK
+uEK
+uEK
+uEK
+aaB
+uEK
+ajX
 aae
 aaa
 dEX
@@ -77235,15 +77340,15 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+ajX
+hAO
+uEK
+aOj
+uEK
+aaB
+sYW
+aaB
+ajX
 aae
 aaa
 dEX
@@ -77492,15 +77597,15 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+ajX
+nlf
+vUm
+ajX
+aaB
+jmO
+ajX
+nvo
+ajX
 aae
 aaa
 dEX
@@ -77749,15 +77854,15 @@ aae
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aak
-aak
+ajX
+oJZ
+uEK
+uEK
+aaB
+aaB
+ajX
+ehh
+ajX
 aae
 aaa
 dEX
@@ -78006,15 +78111,15 @@ aae
 aae
 aak
 aak
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+ajX
+uEK
+uEK
+uEK
+aaB
+qoi
+ajX
+oPB
+ajX
 aae
 aaa
 dEX
@@ -78263,15 +78368,15 @@ aae
 aae
 aak
 aak
-aae
-aae
-aak
-aak
-aae
-aae
-aae
-aae
-aae
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
+ajX
 aae
 aaa
 dEX
