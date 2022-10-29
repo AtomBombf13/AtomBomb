@@ -10,7 +10,7 @@
 			new /obj/item/camera_bug(src) // 1 tc
 			new /obj/item/multitool/ai_detect(src) // 1 tc
 			new /obj/item/encryptionkey/syndicate(src) // 2 tc
-			new /obj/item/reagent_containers/syringe/mulligan(src) // 4 tc
+///			new /obj/item/reagent_containers/syringe/mulligan(src) // 4 tc
 			new /obj/item/storage/fancy/cigarettes/cigpack_syndicate (src) // 2 tc this shit heals
 			new /obj/item/flashlight/emp(src) // 2 tc
 			new /obj/item/chameleon(src) // 7 tc
@@ -471,7 +471,7 @@
 		/obj/item/pen/edagger,
 		/obj/item/pen/sleepy,
 		/obj/item/flashlight/emp,
-		/obj/item/reagent_containers/syringe/mulligan,
+///		/obj/item/reagent_containers/syringe/mulligan,
 		/obj/item/clothing/shoes/chameleon/noslip,
 		/obj/item/storage/firstaid/tactical,
 		/obj/item/encryptionkey/syndicate,

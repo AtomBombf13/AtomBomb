@@ -676,6 +676,8 @@
 #define MUT_MSG_EXTENDED 2
 #define MUT_MSG_ABOUT2TURN 3
 
+
+/*
 /datum/reagent/mutationtoxin
 	name = "Stable Mutation Toxin"
 	description = "A humanizing toxin."
@@ -691,8 +693,9 @@
 									"You feel as though you're about to change at any moment!" = MUT_MSG_ABOUT2TURN)
 	var/mutationtext
 	var/cycles_to_turn = 20 //the current_cycle threshold / iterations needed before one can transform
-	can_synth = FALSE
 	ghoulfriendly = TRUE
+	can_synth = FALSE
+
 
 /datum/reagent/mutationtoxin/on_mob_life(mob/living/carbon/human/H)
 	. = TRUE
@@ -744,12 +747,14 @@
 	color = "#13BC5E" // rgb: 19, 188, 94
 	race = /datum/species/jelly/slime
 	mutationtext = span_danger("The pain subsides. Your whole body feels like slime.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/felinid
 	name = "Felinid Mutation Toxin"
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/human/felinid
 	mutationtext = span_danger("The pain subsides. You feel... like a degenerate.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/lizard
 	name = "Lizard Mutation Toxin"
@@ -757,6 +762,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/lizard
 	mutationtext = span_danger("The pain subsides. You feel... scaly.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/fly
 	name = "Fly Mutation Toxin"
@@ -764,6 +770,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/fly
 	mutationtext = span_danger("The pain subsides. You feel... buzzy.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/insect
 	name = "Insect Mutation Toxin"
@@ -771,6 +778,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/insect
 	mutationtext = span_danger("The pain subsides. You feel... attracted to light.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/pod
 	name = "Podperson Mutation Toxin"
@@ -778,6 +786,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/pod
 	mutationtext = span_danger("The pain subsides. You feel... plantlike.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/jelly
 	name = "Imperfect Mutation Toxin"
@@ -785,6 +794,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/jelly
 	mutationtext = span_danger("The pain subsides. You feel... wobbly.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/jelly/on_mob_life(mob/living/carbon/human/H)
 	if(isjellyperson(H))
@@ -807,6 +817,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/golem/random
 	mutationtext = span_danger("The pain subsides. You feel... rocky.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/abductor
 	name = "Abductor Mutation Toxin"
@@ -814,6 +825,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/abductor
 	mutationtext = span_danger("The pain subsides. You feel... alien.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/android
 	name = "Android Mutation Toxin"
@@ -821,6 +833,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/android
 	mutationtext = span_danger("The pain subsides. You feel... artificial.")
+	can_synth = FALSE
 
 //Citadel Races
 /datum/reagent/mutationtoxin/mammal
@@ -829,6 +842,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/mammal
 	mutationtext = span_danger("The pain subsides. You feel... fluffier.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/insect
 	name = "Insect Mutation Toxin"
@@ -836,6 +850,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/insect
 	mutationtext = span_danger("The pain subsides. You feel... attracted to dark, moist areas.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/xenoperson
 	name = "Xeno-Hybrid Mutation Toxin"
@@ -843,6 +858,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/xeno
 	mutationtext = span_danger("The pain subsides. You feel... oddly longing for the Queen.") //sadly, not the British one.
+	can_synth = FALSE
 
 //BLACKLISTED RACES
 /datum/reagent/mutationtoxin/skeleton
@@ -851,6 +867,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/skeleton
 	mutationtext = span_danger("The pain subsides. You feel... spooky.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/zombie
 	name = "Zombie Mutation Toxin"
@@ -858,6 +875,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/zombie //Not the infectious kind. The days of xenobio zombie outbreaks are long past.
 	mutationtext = span_danger("The pain subsides. You feel... undead.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/ash
 	name = "Ash Mutation Toxin"
@@ -865,6 +883,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/lizard/ashwalker
 	mutationtext = span_danger("The pain subsides. You feel... savage.")
+	can_synth = FALSE
 
 
 //DANGEROUS RACES
@@ -874,6 +893,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/shadow
 	mutationtext = span_danger("The pain subsides. You feel... darker.")
+	can_synth = FALSE
 
 /datum/reagent/mutationtoxin/plasma
 	name = "Plasma Mutation Toxin"
@@ -881,6 +901,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/plasmaman
 	mutationtext = span_danger("The pain subsides. You feel... flammable.")
+	can_synth = FALSE
 
 /datum/reagent/slime_toxin
 	name = "Slime Mutation Toxin"
@@ -889,6 +910,7 @@
 	taste_description = "slime"
 	metabolization_rate = 0.2
 	value = REAGENT_VALUE_RARE
+	can_synth = FALSE
 
 /datum/reagent/slime_toxin/on_mob_life(mob/living/carbon/human/H)
 	..()
@@ -918,6 +940,7 @@
 			H.set_species(species_type)
 			H.reagents.del_reagent(type)
 			to_chat(H, span_warning("You've become \a jellyperson!"))
+
 
 
 /datum/reagent/mulligan
@@ -980,6 +1003,8 @@
 		if(prob(7))
 			M.emote(pick("twitch","drool","moan","gasp"))
 	..()
+
+*/
 
 /datum/reagent/oxygen
 	name = "Oxygen"

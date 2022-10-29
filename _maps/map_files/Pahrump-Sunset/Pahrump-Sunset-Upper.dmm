@@ -5672,6 +5672,8 @@
 	dir = 4
 	},
 /obj/structure/rack/shelf_metal,
+/obj/item/storage/box/medicine/stimpaks/stimpaks5,
+/obj/item/storage/box/medicine/stimpaks/stimpaks5,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
 "lqO" = (
