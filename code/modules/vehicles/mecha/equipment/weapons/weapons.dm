@@ -68,7 +68,7 @@
 	desc = "A weapon for combat exosuits. Shoots basic lasers."
 	icon_state = "mecha_laser"
 	energy_drain = 60
-	projectile = /obj/item/projectile/beam/laser
+	projectile = /obj/item/projectile/beam/laser/mech/light
 	fire_sound = 'sound/weapons/laser.ogg'
 	harmful = TRUE
 
@@ -87,7 +87,7 @@
 	desc = "A weapon for combat exosuits. Shoots heavy lasers."
 	icon_state = "mecha_laser"
 	energy_drain = 100
-	projectile = /obj/item/projectile/beam/laser/heavylaser
+	projectile = /obj/item/projectile/beam/laser/mech/heavy
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
@@ -115,7 +115,7 @@
 	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts capable of demolishing obstacles."
 	icon_state = "mecha_pulse"
 	energy_drain = 200
-	projectile = /obj/item/projectile/beam/pulse/heavy
+	projectile = /obj/item/projectile/beam/laser/mech/pulse
 	fire_sound = 'sound/weapons/marauder.ogg'
 	harmful = TRUE
 
