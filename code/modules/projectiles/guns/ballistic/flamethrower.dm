@@ -101,9 +101,7 @@
 	slot_flags = null
 	w_class = WEIGHT_CLASS_HUGE
 	custom_materials = null
-	burst_size = 2
 	burst_shot_delay = 1
-	//automatic = 0
 	fire_delay = 2
 	weapon_weight = GUN_TWO_HAND_ONLY
 	fire_sound = 'sound/weapons/flamethrower.ogg'

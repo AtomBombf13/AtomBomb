@@ -20,7 +20,6 @@
 	maxHealth = 104
 	healable = FALSE
 	stat_attack = CONSCIOUS
-	auto_fire_delay = GUN_AUTOFIRE_DELAY_SLOWER
 	melee_damage_lower = 14
 	melee_damage_upper = 28
 	robust_searching = TRUE

@@ -612,7 +612,6 @@ GLOBAL_LIST_INIT(storage_wallet_can_hold, typecacheof(list(
 	)))
 
 GLOBAL_LIST_INIT(storage_holdout_can_hold, typecacheof(list(
-	/obj/item/gun/ballistic/automatic/pistol/sig,
 	/obj/item/gun/ballistic/revolver/detective,
 	/obj/item/gun/ballistic/automatic/hobo/zipgun,
 	/obj/item/gun/ballistic/automatic/pistol/pistol14/compact,

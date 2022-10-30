@@ -185,19 +185,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
-/datum/crafting_recipe/shotgunammo3p
-	name = "12g 3p trainshot box"
-	result = /obj/item/ammo_box/shotgun/trainshot
-	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/prewar = 2,
-	/obj/item/stack/sheet/metal = 1,
-	/obj/item/stack/ore/blackpowder = 1
-	)
-	tools = list(TOOL_AWORKBENCH)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
 /datum/crafting_recipe/m22shock
 	name = ".22 Long Rifle electroshock ammo box"
 	result = /obj/item/ammo_box/m22/shock
@@ -657,7 +644,6 @@
 	name = "Upgraded Varmint Rifle"
 	result = /obj/item/gun/ballistic/automatic/varmint/verminkiller
 	reqs = list(/obj/item/gun/ballistic/automatic/varmint = 1,
-				/obj/item/gun/ballistic/automatic/delisle = 1, //silencer
 				/obj/item/advanced_crafting_components/lenses = 1, //scope
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/plastic = 2,
@@ -743,19 +729,6 @@
 				/obj/item/stack/crafting/metalparts = 2
 				)
 	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-
-/datum/crafting_recipe/commando
-	name = "DeLisle Commando Carbine"
-	result = /obj/item/gun/ballistic/automatic/delisle/commando
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/crafting/metalparts = 2
-				)
-	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1268,7 +1241,7 @@
 //city killer
 /datum/crafting_recipe/city_killer
 	name = "City-Killer Shotgun"
-	result = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
+	result = /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
@@ -1658,22 +1631,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_PARTS
 	always_available = FALSE
-/*
-Not implemented due to balance at the moment
-/datum/crafting_recipe/caws
-	name = "h&k caws"
-	result = /obj/item/gun/ballistic/automatic/shotgun/caws
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/sheet/mineral/titanium = 2,
-				/obj/item/stack/sheet/metal = 2,
-				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/goodparts = 3)
-	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-*/
 //Let's get batty
 /datum/crafting_recipe/wooden_bat
 	name = "Wooden Bat"

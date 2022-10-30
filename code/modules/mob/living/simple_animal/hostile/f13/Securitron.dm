@@ -34,7 +34,6 @@
 	minimum_distance = 1
 	retreat_distance = 4
 	extra_projectiles = 2
-	auto_fire_delay = GUN_AUTOFIRE_DELAY_SLOW
 	ranged_ignores_vision = TRUE
 	attack_verb_simple = "punches"
 	attack_sound = "punch"

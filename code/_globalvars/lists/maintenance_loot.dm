@@ -277,13 +277,11 @@ GLOBAL_LIST_INIT(trash_misc, list(
 
 GLOBAL_LIST_INIT(trash_attachment, list(
 	/obj/item/gun_upgrade/scope/watchman = 1,
-	/obj/item/gun_upgrade/trigger/dangerzone = 1,
 	/obj/item/tool_upgrade/productivity/ergonomic_grip = 1,
 	/obj/item/tool_upgrade/refinement/ported_barrel = 1,
 	/obj/item/tool_upgrade/refinement/stabilized_grip = 1,
 	/obj/item/tool_upgrade/refinement/laserguide = 1,
-	/obj/item/tool_upgrade/productivity/booster = 1,
-	/obj/item/tool_upgrade/productivity/red_paint = 2
+	/obj/item/tool_upgrade/productivity/booster = 1
 ))
 
 GLOBAL_LIST_INIT(loot_prewar_clothing, list(
@@ -511,7 +509,6 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/gun/ballistic/revolver/caravan_shotgun,
 	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/gun/ballistic/rifle/mosin,
 	/obj/item/ammo_box/stripper/a762,
 	/obj/item/gun/ballistic/revolver/police,
 	/obj/item/ammo_box/loader/c38,
@@ -553,7 +550,6 @@ GLOBAL_LIST_INIT(loot_t2_range, list(
 	/obj/item/stock_parts/cell/ammo/ec,
 	/obj/item/gun/ballistic/automatic/m1carbine,
 	/obj/item/ammo_box/magazine/pistol10mm,
-	/obj/item/gun/ballistic/automatic/delisle,
 	/obj/item/ammo_box/magazine/pistol9mm/doublestack
 ))
 
@@ -898,13 +894,11 @@ GLOBAL_LIST_INIT(loot_craft_advanced, list(
 
 GLOBAL_LIST_INIT(loot_attachment, list(
 	/obj/item/gun_upgrade/scope/watchman = 1,
-	/obj/item/gun_upgrade/trigger/dangerzone = 1,
 	/obj/item/tool_upgrade/productivity/ergonomic_grip = 1,
 	/obj/item/tool_upgrade/refinement/ported_barrel = 1,
 	/obj/item/tool_upgrade/refinement/stabilized_grip = 1,
 	/obj/item/tool_upgrade/refinement/laserguide = 1,
 	/obj/item/tool_upgrade/productivity/booster = 1,
-	/obj/item/tool_upgrade/productivity/red_paint = 1
 ))
 
 GLOBAL_LIST_INIT(loot_attachment_advanced, list(

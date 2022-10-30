@@ -61,12 +61,10 @@ ATTACHMENTS
 
 	/// Weapon is burst fire if this is above 1
 	var/burst_size = 1
-	/// The time between shots in burst.
-	var/burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	/// The time between firing actions, this means between bursts if this is burst weapon. The reason this is 0 is because you are still, by default, limited by clickdelay.
-	var/fire_delay = GUN_FIRE_DELAY_NORMAL
-	/// Time between individual shots when firing full-auto.
-	var/autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	//delay after shooting before the gun can be used again
+	var/fire_delay = GUN_FIRE_DELAY_ABSOLUTE
+	//delay between shots, if firing in bursts
+	var/burst_shot_delay = GUN_BURSTFIRE_DELAY_BASE
 	/// Last world.time this was fired
 	var/last_fire = 0
 	/// Currently firing, whether or not it's a burst or not.
@@ -128,9 +126,6 @@ ATTACHMENTS
 	var/worn_out = FALSE	//If true adds overlay with suffix _worn, and a slight malus to stats
 	var/dryfire_sound = "gun_dry_fire"
 	var/dryfire_text = "*click*"
-
-	/// Time that much pass between cocking your gun, if it supports it
-	var/cock_delay = GUN_COCK_SHOTGUN_BASE
 
 	var/automatic = 0 // Does the gun fire when the clicker's held down?
 
@@ -414,7 +409,7 @@ ATTACHMENTS
 	if (automatic == 0)
 		user.DelayNextAction(1)
 	if (automatic == 1)
-		user.DelayNextAction(autofire_shot_delay)
+		user.DelayNextAction(fire_delay)
 
 	//DUAL (or more!) WIELDING
 	var/loop_counter = 0
@@ -453,7 +448,7 @@ ATTACHMENTS
 		return 1
 		//return isnull(chambered?.click_cooldown_override)? get_fire_delay(user) : chambered.click_cooldown_override
 	if (automatic == 1)
-		return isnull(chambered?.click_cooldown_override)? autofire_shot_delay : chambered.click_cooldown_override
+		return isnull(chambered?.click_cooldown_override)? fire_delay : chambered.click_cooldown_override
 
 /obj/item/gun/GetEstimatedAttackSpeed(mob/user)
 	return get_clickcd()
@@ -780,7 +775,6 @@ ATTACHMENTS
 		user.client.change_view(zoom_out_amt)
 		user.client.pixel_x = world.icon_size*_x
 		user.client.pixel_y = world.icon_size*_y
-		RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message(span_notice("[user] looks down the scope of [src]."), span_notice("You look down the scope of [src]."))
 	else
@@ -788,7 +782,6 @@ ATTACHMENTS
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
-		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)
 		user.visible_message(span_notice("[user] looks up from the scope of [src]."), span_notice("You look up from the scope of [src]."))
 		RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/on_walk) //Extra proc to make sure your zoom resets for bug where you don't unzoom when toggling while moving
 
