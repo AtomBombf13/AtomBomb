@@ -833,7 +833,6 @@
 				/obj/effect/spawner/bundle/f13/colt357,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/police_pistol,
-				/obj/effect/spawner/bundle/f13/guns/commando,
 				/obj/effect/spawner/bundle/f13/m1carbine
 				)
 
@@ -886,7 +885,7 @@
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
-				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
+				/obj/item/gun/ballistic/automatic/shotgun/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 5,
 				/obj/item/gun/ballistic/automatic/lsw = 5,
 				)
@@ -952,13 +951,6 @@
 				/obj/item/ammo_box/shotgun/improvised
 				)
 
-/obj/effect/spawner/bundle/f13/mosin
-	name = "mosin nagant and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/rifle/mosin,
-				/obj/item/ammo_box/stripper/a762
-				)
-
 /obj/effect/spawner/bundle/f13/remington
 	name = "hunting rifle and ammo spawner"
 	items = list(
@@ -999,13 +991,6 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/pistol22,
 				/obj/item/ammo_box/magazine/pistol22
-				)
-
-/obj/effect/spawner/bundle/f13/sig
-	name = " p220 pistol and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/pistol/sig,
-				/obj/item/ammo_box/magazine/pistol9mm/
 				)
 
 /obj/effect/spawner/bundle/f13/pepperbox
@@ -1105,13 +1090,6 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/m1carbine,
 				/obj/item/ammo_box/magazine/pistol10mm
-	)
-
-/obj/effect/spawner/bundle/f13/guns/commando
-	name = "de lisle carbine and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/delisle,
-				/obj/item/ammo_box/magazine/pistol9mm/doublestack
 	)
 
 /obj/effect/spawner/bundle/f13/mk23
@@ -1398,8 +1376,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 /obj/effect/spawner/bundle/f13/citykiller
 	name = "citykiller and ammo spawner"
 	items = list(
-		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
-		/obj/item/ammo_box/shotgun/buck
+		/obj/item/gun/ballistic/automatic/shotgun/citykiller,
+		/obj/item/ammo_box/magazine/city12g
 	)
 
 /obj/effect/spawner/bundle/f13/guns/p90
@@ -2077,10 +2055,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/advanced_crafting_components/assembly,
 		/obj/item/advanced_crafting_components/alloys,
 		/obj/item/gun_upgrade/scope/watchman,
-		/obj/item/gun_upgrade/trigger/dangerzone,
 		/obj/item/tool_upgrade/productivity/ergonomic_grip,
 		/obj/item/tool_upgrade/refinement/ported_barrel,
-		/obj/item/tool_upgrade/productivity/red_paint
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintLowPartsWeighted
@@ -2096,10 +2072,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/advanced_crafting_components/assembly = 2,
 		/obj/item/advanced_crafting_components/alloys = 2,
 		/obj/item/gun_upgrade/scope/watchman,
-		/obj/item/gun_upgrade/trigger/dangerzone,
 		/obj/item/tool_upgrade/productivity/ergonomic_grip,
 		/obj/item/tool_upgrade/refinement/ported_barrel,
-		/obj/item/tool_upgrade/productivity/red_paint
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintLowMid
@@ -2110,9 +2084,9 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/uzi,
 		/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
-		/obj/item/book/granter/crafting_recipe/blueprint/commando,
 		/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
 	)
+
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
 	icon_state = "blueprint_loot"
@@ -2201,13 +2175,11 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootdoubles = FALSE
 	loot = list(
 		/obj/item/gun_upgrade/scope/watchman,
-		/obj/item/gun_upgrade/trigger/dangerzone,
 		/obj/item/tool_upgrade/productivity/ergonomic_grip,
 		/obj/item/tool_upgrade/refinement/ported_barrel,
 		/obj/item/tool_upgrade/refinement/stabilized_grip,
 		/obj/item/tool_upgrade/refinement/laserguide,
 		/obj/item/tool_upgrade/productivity/booster,
-		/obj/item/tool_upgrade/productivity/red_paint
 	)
 
 /obj/effect/spawner/lootdrop/f13/npc_raider

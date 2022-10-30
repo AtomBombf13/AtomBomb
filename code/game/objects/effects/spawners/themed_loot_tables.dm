@@ -158,7 +158,6 @@
 		/obj/item/gun/ballistic/revolver/winchesterrebored = 4,
 		/obj/item/gun/ballistic/automatic/pistol/m1911 = 4,
 		/obj/effect/spawner/bundle/f13/revolverm29 = 4,
-		/obj/effect/spawner/bundle/weapon/worn10mmsmg = 1,
 		/obj/effect/spawner/bundle/weapon/lasmusket = 1,
 		/obj/item/melee/onehanded/machete = 5,
 		/obj/item/twohanded/baseball = 4,
@@ -258,8 +257,7 @@
 /obj/effect/spawner/lootdrop/weapons/oldarmyelite
 	name = "weaponspawner old army elite"
 	loot = list(
-		/obj/effect/spawner/bundle/f13/sig = 17,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 17,
+		/obj/item/gun/ballistic/automatic/shotgun/citykiller = 17,
 		/obj/effect/spawner/bundle/f13/amr = 17,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 12,
 		/obj/item/gun/energy/laser/aer12 = 10,
@@ -278,13 +276,11 @@
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 20,
 		/obj/effect/spawner/bundle/f13/revolver44 = 16,
 		/obj/item/gun/ballistic/revolver/m29/alt = 16,
-		/obj/effect/spawner/bundle/f13/sig = 12,
 		/obj/effect/spawner/bundle/f13/beretta/select = 8,
 		/obj/effect/spawner/bundle/f13/brushgun = 8,
 		/obj/item/gun/ballistic/automatic/smg/ppsh = 3,
 		/obj/item/gun/ballistic/automatic/type93 = 3,
 		/obj/effect/spawner/bundle/f13/guns/p90 = 2,
-		/obj/effect/spawner/bundle/f13/guns/commando = 2,
 		/obj/item/gun/energy/laser/solar = 1,
 		/obj/item/gun/energy/gammagun = 1,
 		)
@@ -462,11 +458,4 @@
 	items = list(
 		/obj/item/gun/ballistic/revolver/hobo/pepperbox,
 		/obj/item/ammo_box/c10mm/improvised,
-		)
-
-/obj/effect/spawner/bundle/weapon/worn10mmsmg
-	name = "worn 10mm SMG and ammo spawner"
-	items = list(
-		/obj/item/gun/ballistic/automatic/smg/smg10mm/worn,
-		/obj/item/ammo_box/magazine/pistol10mm/empty,
 		)

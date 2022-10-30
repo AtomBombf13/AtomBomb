@@ -36,7 +36,6 @@
 		/obj/item/gun/ballistic/automatic/pistol/type17,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
-		/obj/item/gun/ballistic/automatic/pistol/sig,
 		/obj/item/gun/ballistic/automatic/pistol/beretta/automatic,
 		/obj/item/gun/ballistic/revolver/detective,
 		/obj/item/gun/ballistic/revolver/colt357,
@@ -57,7 +56,6 @@
 		/obj/item/gun/ballistic/automatic/pistol/autoloader,
 		/obj/item/gun/ballistic/automatic/pistol/deagle,
 		/obj/item/gun/ballistic/automatic/pistol/automag,
-		/obj/item/gun/ballistic/automatic/pistol/sig,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14,
 		/obj/item/gun/ballistic/revolver/revolver45,
 		/obj/item/gun/ballistic/revolver/m29,
@@ -86,7 +84,6 @@
 	unit_name = "carbines"
 	export_types = list(
 		/obj/item/gun/ballistic/automatic/m1carbine,
-		/obj/item/gun/ballistic/automatic/delisle,
 		/obj/item/gun/ballistic/automatic/combat,
 		/obj/item/gun/ballistic/automatic/sportcarbine,
 		/obj/item/gun/ballistic/automatic/varmint,
@@ -119,7 +116,7 @@
 		/obj/item/gun/ballistic/shotgun/automatic/combat/auto5,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
+		/obj/item/gun/ballistic/automatic/shotgun/citykiller,
 		/obj/item/gun/ballistic/automatic/shotgun/riot,
 		/obj/item/gun/ballistic/automatic/shotgun/pancor,
 		/obj/item/gun/ballistic/revolver/grenadelauncher,

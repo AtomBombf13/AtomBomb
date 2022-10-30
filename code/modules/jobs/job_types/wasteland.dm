@@ -871,7 +871,6 @@ Wastelander
 		/obj/item/clothing/under/f13/female/eighties = 1,
 		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/gun/ballistic/automatic/smg/greasegun/worn = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 	)
