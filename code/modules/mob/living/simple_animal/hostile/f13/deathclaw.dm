@@ -53,15 +53,6 @@
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
 
-/mob/living/simple_animal/hostile/deathclaw/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 2 //can smash walls
-	wander = FALSE
-
 // Mother death claw
 /mob/living/simple_animal/hostile/deathclaw/mother
 	name = "mother deathclaw"
