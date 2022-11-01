@@ -908,11 +908,10 @@
 	loot = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
 				/obj/item/gun/ballistic/rifle/hunting/paciencia,
-				/obj/item/gun/ballistic/automatic/varmint/ratslayer,
+				/obj/item/gun/ballistic/rifle/mag/varmint/ratslayer,
 				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
-				/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
 				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
 				)
 
@@ -982,7 +981,7 @@
 /obj/effect/spawner/bundle/f13/varmint
 	name = "varmint rifle and ammo spawner"
 	items = list(
-				/obj/item/gun/ballistic/automatic/varmint,
+				/obj/item/gun/ballistic/rifle/mag/varmint,
 				/obj/item/ammo_box/magazine/m556/rifle
 				)
 
@@ -1136,7 +1135,7 @@
 /obj/effect/spawner/bundle/f13/sportcarbine
 	name = "sport carbine and ammo spawner"
 	items = list(
-				/obj/item/gun/ballistic/automatic/sportcarbine,
+				/obj/item/gun/ballistic/rifle/mag/sportcarbine,
 				/obj/item/ammo_box/magazine/pistol22/extended
 				)
 
@@ -1151,7 +1150,7 @@
 	name = "m3a1 grease gun and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/greasegun,
-				/obj/item/ammo_box/magazine/greasegun/
+				/obj/item/ammo_box/magazine/greasegun
 				)
 
 /obj/effect/spawner/bundle/f13/guns/auto5
@@ -1320,7 +1319,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 /obj/effect/spawner/bundle/f13/dkssniper
 	name = "dks sniper and ammo spawner"
 	items = list(
-				/obj/item/gun/ballistic/automatic/marksman/sniper,
+				/obj/item/gun/ballistic/automatic/sniper,
 				/obj/item/ammo_box/magazine/w308
 	)
 
@@ -2027,7 +2026,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/book/granter/trait/rifleman = 5,
 				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
 				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
-				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10
+				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10,
+				/obj/item/book/granter/crafting_recipe/gunsmith_five = 5
 				)
 
 /obj/effect/spawner/lootdrop/f13/traitbooks/low

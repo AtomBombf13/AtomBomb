@@ -180,7 +180,7 @@
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_FULLAUTO = TRUE,
-		GUN_UPGRADE_RECOIL = 1.2
+		GUN_UPGRADE_RECOIL = 1.4
 	)
 	I.req_gun_tags = list(GUN_FA_MODDABLE)
 	I.gun_loc_tag = GUN_MECHANISM
