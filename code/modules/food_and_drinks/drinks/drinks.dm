@@ -353,7 +353,7 @@
 /obj/item/reagent_containers/food/drinks/beer/light
 	name = "Beer Lite"
 	desc = "Beer that somehow tastes \"even worse\"."
-	list_reagents = list(/datum/reagent/consumable/ethanol/beer/light = 30)
+	list_reagents = list(/datum/reagent/consumable/ethanol/beer/light = 29)
 
 /obj/item/reagent_containers/food/drinks/ale
 	name = "Magm-Ale"
