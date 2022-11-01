@@ -615,6 +615,7 @@
 	time = 300 //30 sec
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+	always_available = FALSE
 
 /datum/crafting_recipe/dks
 	name = "DKS Sniper Rifle"
@@ -1299,9 +1300,39 @@
 	subcategory = CAT_PARTS
 	always_available = FALSE
 
+/datum/crafting_recipe/sniperscope
+	name = "Sniper Scope"
+	result = /obj/item/gun_upgrade/scope/killer
+	reqs = list(
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/glass = 3,
+				/obj/item/stack/crafting/metalparts = 1,
+				/obj/item/stack/crafting/goodparts = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_PARTS
+	always_available = FALSE
+
 /datum/crafting_recipe/suppressor
 	name = "Silencer"
 	result = /obj/item/gun_upgrade/muzzle/silencer
+	reqs = list(
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/plastic = 2,
+				/obj/item/stack/crafting/metalparts = 1,
+				/obj/item/stack/crafting/goodparts = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_PARTS
+	always_available = FALSE
+
+/datum/crafting_recipe/recoilcomp
+	name = "Recoil Compensator"
+	result = /obj/item/gun_upgrade/muzzle/recoil_comp
 	reqs = list(
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/plastic = 2,
@@ -1456,7 +1487,7 @@
 	always_available = FALSE
 
 /datum/crafting_recipe/ai_tool
-	name = "Vault-Tec Integrated VATs module"
+	name = "Vault-Tec Integrated VATS module"
 	result = /obj/item/tool_upgrade/augment/ai_tool
 	reqs = list (
 				/obj/item/gun_upgrade/mechanism/overdrive = 1,
@@ -1486,7 +1517,7 @@
 
 /datum/crafting_recipe/fullauto
 	name = "Full Auto Kit"
-	result = /obj/item/gun_upgrade/mechanism/weintraub
+	result = /obj/item/gun_upgrade/mechanism/autosear
 	reqs = list(
 				/obj/item/advanced_crafting_components/receiver = 1,
 				/obj/item/stack/crafting/goodparts = 5,
