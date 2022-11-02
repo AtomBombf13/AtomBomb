@@ -22950,10 +22950,6 @@
 /obj/item/trash/f13/steak,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"jyM" = (
-/mob/living/simple_animal/hostile/wolf/alpha/playable,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/building)
 "jzC" = (
 /obj/machinery/seed_extractor,
 /turf/open/indestructible/ground/outside/dirt,
@@ -57274,8 +57270,8 @@ ubl
 rWe
 gcK
 gcK
-gbL
-gbL
+gcK
+gcK
 gbL
 gbL
 gcK
@@ -95979,7 +95975,7 @@ mji
 bph
 aiT
 bpO
-jyM
+cbr
 hzs
 jVE
 cbr
