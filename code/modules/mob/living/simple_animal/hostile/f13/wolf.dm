@@ -79,6 +79,9 @@
 //Unique Dogs - Guerilla for Khans is a Rottweiler, Brutus and Lupa forgerman shepherds, Sniffs-the-Earth a sheepdog.
 //Feel free to move or add code for different behaviours like sleep, some unused sprites prepped for that sort of thing.
 
+/mob/living/simple_animal/hostile/wolf/friendly
+	faction = list("neutral")
+
 /mob/living/simple_animal/hostile/wolf/rottweiler
 	faction = list("neutral")
 	icon_state = "rottweiler"
