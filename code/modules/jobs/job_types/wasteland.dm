@@ -146,7 +146,7 @@ Raider
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/light/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider/supafly
-	r_hand = /obj/item/gun/ballistic/automatic/varmint
+	r_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,

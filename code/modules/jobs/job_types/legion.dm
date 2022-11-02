@@ -276,7 +276,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Ranger-Hunter Centurion"
 	suit = /obj/item/clothing/suit/armor/medium/legion/rangercent
 	head = /obj/item/clothing/head/helmet/f13/legion/rangercent
-	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
+	suit_store = /obj/item/gun/ballistic/automatic/sniper
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/ammo_box/loader/c4570 = 3,
@@ -693,7 +693,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ears = /obj/item/radio/headset/headset_legion
 	r_pocket = /obj/item/binoculars
 	box_two = /obj/item/storage/survivalkit/medical/tribal/adv
-	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
+	suit_store = /obj/item/gun/ballistic/automatic/sniper/snipervenator
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/w308 = 3,
 		/obj/item/melee/onehanded/machete/gladius = 1,
@@ -771,7 +771,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/expsniper
 	name = "Sniper"
-	suit_store = /obj/item/gun/ballistic/automatic/commando
+	suit_store = /obj/item/gun/ballistic/rifle/mag/commando
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/pistol45/socom = 3,
 		/obj/item/grenade/smokebomb = 1,

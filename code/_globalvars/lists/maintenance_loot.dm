@@ -216,8 +216,7 @@ GLOBAL_LIST_INIT(trash_craft, list(
 GLOBAL_LIST_INIT(trash_gun, list(
 	/obj/item/gun/ballistic/automatic/hobo/zipgun = 2,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox = 2,
-	/obj/item/gun/ballistic/automatic/varmint = 1,
-	/obj/item/gun/ballistic/automatic/sportcarbine = 1,
+	/obj/item/gun/ballistic/rifle/mag/sportcarbine = 1,
 	/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
 	/obj/item/gun/ballistic/revolver/widowmaker = 1
@@ -522,9 +521,9 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/ammo_box/magazine/pistol9mm,
 	/obj/item/gun/ballistic/automatic/pistol/n99,
 	/obj/item/ammo_box/magazine/pistol10mm,
-	/obj/item/gun/ballistic/automatic/varmint,
+	/obj/item/gun/ballistic/rifle/mag/varmint,
 	/obj/item/ammo_box/magazine/m556/rifle/small,
-	/obj/item/gun/ballistic/automatic/sportcarbine,
+	/obj/item/gun/ballistic/rifle/mag/sportcarbine,
 	/obj/item/ammo_box/magazine/pistol22/extended,
 	/obj/item/ammo_box/m22
 ))
@@ -880,7 +879,8 @@ GLOBAL_LIST_INIT(loot_skillbook, list(
 	/obj/item/book/granter/crafting_recipe/gunsmith_one,
 	/obj/item/book/granter/crafting_recipe/gunsmith_two,
 	/obj/item/book/granter/crafting_recipe/gunsmith_three,
-	/obj/item/book/granter/crafting_recipe/gunsmith_four
+	/obj/item/book/granter/crafting_recipe/gunsmith_four,
+	/obj/item/book/granter/crafting_recipe/gunsmith_five
 ))
 
 GLOBAL_LIST_INIT(loot_craft_advanced, list(
@@ -910,7 +910,7 @@ GLOBAL_LIST_INIT(loot_attachment_advanced, list(
 	/obj/item/tool_upgrade/productivity/motor = 1,
 	/obj/item/gun_upgrade/mechanism/overdrive = 1,
 	/obj/item/gun_upgrade/mechanism/battery_shunt = 1,
-	/obj/item/gun_upgrade/mechanism/weintraub = 1,
+	/obj/item/gun_upgrade/mechanism/autosear = 1,
 	/obj/item/gun_upgrade/barrel/excruciator = 1
 ))
 

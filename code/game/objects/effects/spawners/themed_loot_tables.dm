@@ -241,7 +241,7 @@
 		/obj/effect/spawner/bundle/f13/m1911 = 18,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 15,
 		/obj/effect/spawner/bundle/f13/assault_rifle = 10,
-		/obj/item/gun/ballistic/automatic/marksman/sniper = 8,
+		/obj/item/gun/ballistic/automatic/sniper = 8,
 		/obj/effect/spawner/bundle/f13/marksman = 6,
 		/obj/item/gun/ballistic/shotgun/trench = 6,
 		/obj/effect/spawner/bundle/f13/rangemaster = 5,
@@ -288,7 +288,7 @@
 /obj/effect/spawner/lootdrop/weapons/unique
 	name = "weaponspawner unique"
 	loot = list(
-		/obj/item/gun/ballistic/automatic/varmint/ratslayer,
+		/obj/item/gun/ballistic/rifle/mag/varmint/ratslayer,
 		/obj/item/gun/ballistic/automatic/m1garand/oldglory,
 		/obj/item/gun/ballistic/automatic/m1garand/republicspride,
 		/obj/item/gun/ballistic/rifle/hunting/paciencia,
