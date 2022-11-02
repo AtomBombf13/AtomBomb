@@ -26537,10 +26537,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
-"lbJ" = (
-/mob/living/simple_animal/hostile/wolf/playable,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "lbO" = (
 /obj/structure/table/wood,
 /obj/item/wirecutters/crude,
@@ -97006,7 +97002,7 @@ kiH
 cbr
 mvv
 mvv
-lbJ
+mvv
 gDs
 aLd
 mvv
