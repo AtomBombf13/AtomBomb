@@ -209,25 +209,6 @@
 		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
 	)
 
-//Playable Sentrybot
-/mob/living/simple_animal/hostile/securitron/sentrybot/playable
-	health = 750   //El Beef
-	maxHealth = 750
-	speed = 1
-	attack_verb_simple = "clamps"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	ranged = FALSE
-	see_in_dark = 8
-	environment_smash = 2 //can smash walls
-	wander = 0
-	force_threshold = 15
-
-/mob/living/simple_animal/hostile/securitron/sentrybot/playable/death()
-	return ..()
-
 //Junkers
 /mob/living/simple_animal/hostile/securitron/sentrybot/suicide
 	name = "explosive sentry bot"
