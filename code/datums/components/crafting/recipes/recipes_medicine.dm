@@ -42,8 +42,8 @@
 /datum/crafting_recipe/healpowder5
 	name = "Batch of healing powders (x5)"
 	result = /obj/item/storage/box/medicine/powder5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 1)
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 5)
 	time = 10
 	category = CAT_MEDICAL
 
