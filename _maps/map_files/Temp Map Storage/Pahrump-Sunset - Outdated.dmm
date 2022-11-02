@@ -27041,9 +27041,9 @@
 	},
 /area/f13/wasteland)
 "lbJ" = (
-/mob/living/simple_animal/hostile/wolf/playable,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
+/turf/closed/mineral/random/high_chance,
+/turf/closed/mineral/random/low_chance,
+/area/f13/caves)
 "lbO" = (
 /obj/structure/table/wood,
 /obj/item/wirecutters/crude,
@@ -58180,7 +58180,7 @@ rWe
 gcK
 gcK
 gcK
-gbL
+lbJ
 gbL
 gbL
 gcK
@@ -97915,7 +97915,7 @@ kiH
 cbr
 mvv
 mvv
-lbJ
+mvv
 gDs
 aLd
 mvv
