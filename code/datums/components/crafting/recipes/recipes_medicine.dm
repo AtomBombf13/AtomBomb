@@ -47,28 +47,6 @@
 	time = 10
 	category = CAT_MEDICAL
 
-/datum/crafting_recipe/bitterdrink
-	name = "Bottle bitterdrink"
-	result = /obj/item/reagent_containers/pill/bitterdrink
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
-				/obj/item/reagent_containers/glass/beaker = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 10
-	category = CAT_MEDICAL
-	always_available = FALSE // Only the Twin Mothers Tribe knew the secret to making bitter drink prior to legion annexation. Any clever chemist can bootleg the recipe though.
-
-/datum/crafting_recipe/bitterdrink5
-	name = "Batch of bitterdrink (x5)"
-	result = /obj/item/storage/box/medicine/bitterdrink5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
-				/obj/item/reagent_containers/glass/beaker = 5)
-	tools = list(TOOL_WORKBENCH)
-	time = 20
-	category = CAT_MEDICAL
-	always_available = FALSE
-
 /datum/crafting_recipe/healpoultice
 	name = "Healing poultice"
 	result = /obj/item/reagent_containers/pill/patch/healpoultice
@@ -82,12 +60,34 @@
 	always_available = FALSE // only tribals know the secret
 
 /datum/crafting_recipe/healpoultice5
-	name = "Batch of healing poultice (x5)"
+	name = "Batch of healing poultices (x5)"
 	result = /obj/item/storage/box/medicine/poultice5
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
 				/obj/item/reagent_containers/food/snacks/grown/agave = 5,
 				/obj/item/reagent_containers/food/snacks/grown/fungus = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 20
+	category = CAT_MEDICAL
+	always_available = FALSE
+
+/datum/crafting_recipe/bitterdrink
+	name = "Bitterdrink"
+	result = /obj/item/reagent_containers/pill/bitterdrink
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+				/obj/item/reagent_containers/glass/beaker = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_MEDICAL
+	always_available = FALSE // Only the Twin Mothers Tribe knew the secret to making bitter drink prior to legion annexation. Any clever chemist can bootleg the recipe though.
+
+/datum/crafting_recipe/bitterdrink5
+	name = "Batch of bitterdrinks (x5)"
+	result = /obj/item/storage/box/medicine/bitterdrink5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
+				/obj/item/reagent_containers/glass/beaker = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 20
 	category = CAT_MEDICAL
