@@ -21,6 +21,8 @@
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
+	armour_penetration = 0.05
+	damage_threshold_penetration = 1
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -406,6 +408,8 @@
 /obj/item/projectile/bullet/m5mm
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
+	armour_penetration = 0.05
+	damage_threshold_penetration = 2
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -416,7 +420,6 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
-	armour_penetration = 0.15
 
 /* 5mm fmj
  * DAMAGE: 31.25
@@ -555,6 +558,8 @@
 /obj/item/projectile/bullet/a762
 	name = "7.62 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_MATCH_MULT
+	armour_penetration = 0.1
+	damage_threshold_penetration = 3
 	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_MEDIUM
@@ -706,6 +711,8 @@
 /obj/item/projectile/bullet/a50MG
 	name = "match .50MG slug"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT
+	armour_penetration = 0.4
+	damage_threshold_penetration = 8
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -932,6 +939,8 @@
 /obj/item/projectile/bullet/c4570
 	name = ".45-70 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_SURPLUS_MULT * BULLET_4570_DAMAGE_MULT
+	armour_penetration = 0.1
+	damage_threshold_penetration = 1
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_SURPLUS_MULT * BULLET_4570_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_HEAVY * BULLET_4570_RECOIL_MULT
@@ -1081,6 +1090,8 @@
 /obj/item/projectile/bullet/c2mm
 	name = "2mm gauss projectile"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_GAUSS_DAMAGE_MULT
+	armour_penetration = 0.5
+	damage_threshold_penetration = 10
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_GAUSS_STAMINA_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
