@@ -142,7 +142,7 @@
 		"melee" = 10, \
 		"bullet" = 10, \
 		"laser" = 0, \
-		"energy" = 40, \
+		"energy" = 0, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -155,7 +155,7 @@
 		"melee" = 15, \
 		"bullet" = 15, \
 		"laser" = 5, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -168,7 +168,7 @@
 		"melee" = 15, \
 		"bullet" = 10, \
 		"laser" = 5, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -181,7 +181,7 @@
 		"melee" = 20, \
 		"bullet" = 15, \
 		"laser" = 10, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -194,7 +194,7 @@
 		"melee" = 10, \
 		"bullet" = 35, \
 		"laser" = 5, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -207,7 +207,7 @@
 		"melee" = 5, \
 		"bullet" = 45, \
 		"laser" = 5, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -220,7 +220,7 @@
 		"melee" = 30, \
 		"bullet" = 20, \
 		"laser" = 30, \
-		"energy" = 40, \
+		"energy" = 10, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -233,7 +233,7 @@
 		"melee" = 40, \
 		"bullet" = 20, \
 		"laser" = 30, \
-		"energy" = 40, \
+		"energy" = 15, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -246,7 +246,7 @@
 		"melee" = 20, \
 		"bullet" = 20, \
 		"laser" = 10, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -259,7 +259,7 @@
 		"melee" = 20, \
 		"bullet" = 10, \
 		"laser" = 5, \
-		"energy" = 40, \
+		"energy" = 5, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -272,7 +272,7 @@
 		"melee" = 25, \
 		"bullet" = 25, \
 		"laser" = 25, \
-		"energy" = 40, \
+		"energy" = 20, \
 		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -285,7 +285,7 @@
 		"melee" = 30, \
 		"bullet" = 30, \
 		"laser" = 30, \
-		"energy" = 40, \
+		"energy" = 25, \
 		"bomb" = 35, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -298,7 +298,7 @@
 		"melee" = 50, \
 		"bullet" = 40, \
 		"laser" = 25, \
-		"energy" = 40, \
+		"energy" = 25, \
 		"bomb" = 45, \
 		"bio" = 0, \
 		"rad" = 15, \
@@ -317,7 +317,7 @@
 		"rad" = 50, \
 		"fire" = 80, \
 		"acid" = 80, \
-		"wound" = 45, \
+		"wound" = 40, \
 		"damage_threshold" = 16)
 
 #define ARMOR_VALUE_PA list(\
@@ -330,7 +330,7 @@
 		"rad" = 50, \
 		"fire" = 70, \
 		"acid" = 95, \
-		"wound" = 60, \
+		"wound" = 50, \
 		"damage_threshold" = 20)
 
 /* Armor Subclass multipliers
