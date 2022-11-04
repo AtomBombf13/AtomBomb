@@ -26,7 +26,6 @@
 #define CALIBER_MAGNETIC_HYPER "hypermagnetic rounds"
 #define CALIBER_MUSKET_BALL "musket balls"
 #define CALIBER_MUSKET_LASER "laser musket packs"
-#define CALIBER_MUSKET_PLASMA "plasma musket packs"
 #define CALIBER_NEEDLE "needles"
 #define CALIBER_ROCKET "rockets"
 #define CALIBER_SPEAR "speargun rounds"
@@ -39,23 +38,10 @@
 #define CALIBER_ANY "anything even remotely ammolike"
 
 GLOBAL_LIST_INIT(pipe_rifle_valid_calibers, list(
-	CALIBER_22LR,
-	CALIBER_5MM,
-	CALIBER_556,
-	CALIBER_762,
-	CALIBER_9MM,
 	CALIBER_10MM,
 	CALIBER_14MM,
-	CALIBER_38,
 	CALIBER_357,
-	CALIBER_44,
-	CALIBER_45LC,
-	CALIBER_45ACP,
-	CALIBER_4570,
-	CALIBER_50MG,
-	CALIBER_FOAM,
-	CALIBER_MUSKET_BALL,
-	CALIBER_SHOTGUN))
+	CALIBER_44))
 
 GLOBAL_LIST_INIT(zipgun_valid_calibers, list(
 	CALIBER_22LR,

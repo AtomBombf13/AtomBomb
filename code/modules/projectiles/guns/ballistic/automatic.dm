@@ -663,46 +663,6 @@
 	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][stock ? "" : "-f"]"
 
 /* * * * * * * * * * *
- * Commando Carbine
- * Silent .45 carbine
- * Silent!
- * Common?
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/commando
-	name = "commando carbine"
-	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. This modified version is often used by the Brotherhood of Steel. Its stock has been replaced by post-war polymer furniture, with space to mount a scope. Chambered in .45 ACP."
-	icon_state = "commando"
-	item_state = "commando"
-	mag_type = /obj/item/ammo_box/magazine/pistol45
-	init_mag_type = /obj/item/ammo_box/magazine/pistol45/socom
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	init_recoil = CARBINE_RECOIL(1)
-	init_firemodes = list(
-		SEMI_AUTO_SMG
-	)
-	silenced = TRUE
-	can_scope = TRUE
-	scope_state = "scope_medium"
-	scope_x_offset = 6
-	scope_y_offset = 14
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-	)
-
-
-/* * * * * * * * * * *
  * Combat Rifle
  * Baseline .45 carbine
  * Common
@@ -741,60 +701,6 @@
 	)
 
 /* * * * * * * * * * *
- * 10/22ish carbine
- * .22 LR
- * Higher damage
- * Found all over the place
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/sportcarbine
-	name = "sport carbine"
-	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_state = "svarmint"
-	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/pistol22
-	init_mag_type = /obj/item/ammo_box/magazine/pistol22/extended
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	weapon_weight = GUN_ONE_HAND_ONLY
-	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // its a weakass cartridge
-	init_recoil = CARBINE_RECOIL(0.5)
-	init_firemodes = list(
-		SEMI_AUTO_RIFLE
-	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	max_upgrades = 5 // moddable to fuck and fack
-
-	can_bayonet = TRUE
-	bayonet_state = "bayonetstraight"
-	knife_x_offset = 27
-	knife_y_offset = 29
-	can_scope = TRUE
-	scope_state = "scope_short"
-	scope_x_offset = 4
-	scope_y_offset = 12
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 27
-	suppressor_y_offset = 31
-	fire_sound = 'sound/weapons/Gunshot2.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
  * Semi-auto Rifles  *
  * * * * * * * * * * */
 
@@ -805,57 +711,6 @@
  * Lower recoil
  * Common
  * * * * * * * * * * */
-
-/* * * * * * * * * * *
- * Varmint Rifle
- * Light semi-auto rifle
- * .223 / 5.56mm
- * Slow to fire
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/varmint
-	name = "varmint rifle"
-	desc = "A simple bolt action rifle in 5.56mm calibre. Easy to use and maintain."
-	icon_state = "varmint"
-	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = RIFLE_RECOIL(0.8)
-	init_firemodes = list(
-		SEMI_AUTO_RIFLE
-	)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	gun_tags = list(GUN_SCOPE)
-
-	can_bayonet = FALSE
-	scope_state = "scope_short"
-	scope_x_offset = 4
-	scope_y_offset = 12
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 27
-	suppressor_y_offset = 31
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
-	can_scope = TRUE
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
-	)
-
 
 /* * * * * * * * * * *
  * Service Rifle
@@ -882,7 +737,6 @@
 	init_firemodes = list(
 		SEMI_AUTO_PISTOL
 	)
-	gun_tags = list(GUN_FA_MODDABLE)
 
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
@@ -981,37 +835,6 @@
 	)
 
 /* * * * * * * * * * *
- * Police Rifle
- * Cool semi-auto rifle
- * .223 / 5.56mm
- * Scope!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/marksman/policerifle
-	name = "police rifle"
-	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Eastwood Security Force. Held together by duct tape and prayers, it somehow still shoots."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_prefix = "assault_carbine"
-	icon_state = "rifle-police"
-	item_state = "assault_carbine"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = RIFLE_RECOIL(1)
-
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-
-	can_suppress = FALSE
-	can_scope = TRUE
-	zoomable = FALSE
-
-/* * * * * * * * * * *
  * Rangemaster Rifle
  * Baseline semi-auto 7.62mm rifle
  * .308 / 7.62mm
@@ -1021,7 +844,7 @@
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/rangemaster
-	name = "Colt Rangemaster"
+	name = "colt rangemaster"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
 	icon_state = "rangemaster"
 	item_state = "308"
@@ -1039,7 +862,7 @@
 	init_firemodes = list(
 		SEMI_AUTO_RIFLE
 	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
+	gun_tags = list(GUN_SCOPE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
 	can_scope = TRUE
@@ -1137,7 +960,7 @@
  * Common
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/automatic/marksman/sniper
+/obj/item/gun/ballistic/automatic/sniper
 	name = "sniper rifle"
 	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert."
 	icon_prefix = "sniperrifle"
@@ -1380,8 +1203,7 @@
 		FULL_AUTO_400,
 		BURST_3_ROUND
 	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	can_scope = TRUE
+	can_scope = FALSE
 	scope_state = "scope_short"
 	scope_x_offset = 4
 	scope_y_offset = 15
@@ -1925,28 +1747,6 @@
 	can_scope = FALSE
 
 /* * * * * * * * * * *
- * Gold Sniper Rifle
- * Pretty Sniper semi-auto 7.62mm rifle
- * .308 / 7.62mm
- * Stylish!
- * Scope!
- * Bayonet!
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/marksman/sniper/gold
-	name = "golden sniper rifle"
-	desc = "A DKS 501, chambered in .308 Winchester. This one has a gold trim and the words 'Old Cassius' engraved into the stock."
-	icon_state = "gold_sniper"
-	item_state = "gold_sniper"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T4
-
-/* * * * * * * * * * *
  * Explorer Sniper Rifle
  * Legion Sniper semi-auto 7.62mm rifle
  * .308 / 7.62mm
@@ -1957,7 +1757,7 @@
  * Unique - Legion Ven (Spawn - head gun)
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator
+/obj/item/gun/ballistic/automatic/sniper/snipervenator
 	name = "speculator sniper rifle"
 	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
@@ -1972,66 +1772,6 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-
-/* * * * * * * * * * *
- * Verminkiller Rifle
- * Tricked out semi-auto rifle
- * .223 / 5.56mm
- * Scoped
- * Silent
- * More damage
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/varmint/verminkiller
-	name = "verminkiller rifle"
-	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
-	icon_state = "verminrifle"
-	item_state = "ratslayer"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-
-	gun_tags = list()
-
-	silenced = TRUE
-	can_scope = FALSE
-	zoom_factor = 1.5
-	suppressor_state = "none"
-	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
-
-/* * * * * * * * * * *
- * Ratslayer Rifle
- * Tricked out semi-auto rifle
- * .223 / 5.56mm
- * Scoped
- * Silent
- * More damage
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/varmint/ratslayer
-	name = "Ratslayer"
-	desc = "A modified varmint rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
-	icon_state = "ratslayer"
-	item_state = "ratslayer"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-
-	gun_tags = list()
-
-	silenced = TRUE
-	can_scope = FALSE
-	zoom_factor = 1.5
-	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
-
 
 /* * * * * * * * * * *
  * Browning M2A1 HMG
