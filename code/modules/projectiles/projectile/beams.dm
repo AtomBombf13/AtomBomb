@@ -313,20 +313,97 @@
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 60
-	armour_penetration = 0.8
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
 	flag = "laser"
 	eyeblur = 0
 	is_reflectable = FALSE
 	pixels_per_second = TILES_TO_PIXELS(50)
 
+//Lasers
+/obj/item/projectile/beam/laser/pistol/wattz //Wattz pistol
+	damage = 31
+
+/obj/item/projectile/beam/laser/pistol/wattz/magneto //upgraded Wattz
+	name = "penetrating laser beam"
+	damage = 33
+
+/obj/item/projectile/beam/laser/pistol //AEP7
+	name = "laser beam"
+	damage = 35
+
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
 	damage = 33
 
+/obj/item/projectile/beam/laser/tribeam //Tribeam laser, fires 3 shots, will melt you
+	name = "tribeam laser"
+	damage = 21
+
+/obj/item/projectile/beam/laser/wattz2k
+	name = "laser bolt"
+	damage = 35
+
+/obj/item/projectile/beam/laser/aer12 //AER12
+	name = "laser beam"
+	damage = 30
+	icon_state = "xray"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+
+/obj/item/projectile/beam/laser/aer14 //AER14
+	name = "laser beam"
+	damage = 38
+	icon_state = "omnilaser"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
+	light_color = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/rcw //RCW
+	name = "rapidfire beam"
+	icon_state = "xray"
+	damage = 30
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+
+//Actual used lasers
+
+/obj/item/projectile/beam/laser/pistol/wattz/hitscan //hitscan wattz
+	name = "weak laser beam"
+	damage = 10
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	hitscan = TRUE
+	tracer_type = /obj/effect/projectile/tracer/laser
+	muzzle_type = /obj/effect/projectile/muzzle/laser
+	impact_type = /obj/effect/projectile/impact/laser
+
+/obj/item/projectile/beam/laser/pistol/wattz/magneto/hitscan
+	name = "penetrating laser beam"
+	damage = 15
+	hitscan = TRUE
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
+	tracer_type = /obj/effect/projectile/tracer/laser
+	muzzle_type = /obj/effect/projectile/muzzle/laser
+	impact_type = /obj/effect/projectile/impact/laser
+
+/obj/item/projectile/beam/laser/pistol/hitscan //hitscan AEP7
+	name = "laser beam"
+	damage = 15
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	hitscan = TRUE
+	tracer_type = /obj/effect/projectile/tracer/laser
+	muzzle_type = /obj/effect/projectile/muzzle/laser
+	impact_type = /obj/effect/projectile/impact/laser
+
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
-	damage = 26
+	damage = 20
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	hitscan = TRUE
+	wound_bonus = 5
+	bare_wound_bonus = 10 
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -335,25 +412,99 @@
 	name = "overcharged laser beam"
 	damage = 34
 
+/obj/item/projectile/beam/laser/tribeam/hitscan
+	name = "tribeam laser"
+	damage = 20 //if all bullets connect, this will do 60
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	hitscan = TRUE
+	wound_bonus = -10
+	bare_wound_bonus = -20 //tribeam is bad at wounding, as basically its only real downside
+	tracer_type = /obj/effect/projectile/tracer/laser
+	muzzle_type = /obj/effect/projectile/muzzle/laser
+	impact_type = /obj/effect/projectile/impact/laser
+
+/obj/item/projectile/beam/laser/wattz2k/hitscan
+	name = "sniper laser bolt"
+	damage = 28
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
+	wound_bonus = 10
+	bare_wound_bonus = 20
+	tracer_type = /obj/effect/projectile/tracer/heavy_laser
+	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
+	impact_type = /obj/effect/projectile/impact/heavy_laser
+	hitscan = TRUE
+
+/obj/item/projectile/beam/laser/aer12/hitscan
+	name = "laser beam"
+	damage = 25
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
+	wound_bonus = 10
+	bare_wound_bonus = 15 
+	hitscan = TRUE
+	tracer_type = /obj/effect/projectile/tracer/xray
+	muzzle_type = /obj/effect/projectile/muzzle/xray
+	impact_type = /obj/effect/projectile/impact/xray
+	hitscan_light_intensity = 3
+	hitscan_light_range = 0.75
+	hitscan_light_color_override = COLOR_LIME
+	muzzle_flash_intensity = 6
+	muzzle_flash_range = 2
+	muzzle_flash_color_override = COLOR_LIME
+	impact_light_intensity = 7
+	impact_light_range = 2.5
+	impact_light_color_override = COLOR_LIME
+
+/obj/item/projectile/beam/laser/aer14/hitscan
+	damage = 30
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
+	wound_bonus = 20
+	bare_wound_bonus = 25 
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+	hitscan = TRUE
+	hitscan_light_intensity = 3
+	hitscan_light_range = 0.75
+	hitscan_light_color_override = LIGHT_COLOR_BLUE
+	muzzle_flash_intensity = 6
+	muzzle_flash_range = 2
+	muzzle_flash_color_override = LIGHT_COLOR_BLUE
+	impact_light_intensity = 7
+	impact_light_range = 2.5
+	impact_light_color_override = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/beam/laser/rcw/hitscan //RCW
+	name = "rapidfire beam"
+	icon_state = "emitter"
+	damage = 20 //Firerate for damage and wounds
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
+	hitscan = TRUE
+	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
+	tracer_type = /obj/effect/projectile/tracer/laser/emitter
+	impact_type = /obj/effect/projectile/impact/laser/emitter
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+
+/obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
+	damage = 7
+
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
 	damage = 10
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	hitscan = TRUE
+	wound_bonus = -5
+	bare_wound_bonus = -10 //designed to straight up kill people not cuddle them
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/beam/laser/pistol //AEP7
-	name = "laser beam"
-	damage = 35
-
-/obj/item/projectile/beam/laser/pistol/hitscan //hitscan AEP7
-	name = "laser beam"
-	damage = 26
-	hitscan = TRUE
-	tracer_type = /obj/effect/projectile/tracer/laser
-	muzzle_type = /obj/effect/projectile/muzzle/laser
-	impact_type = /obj/effect/projectile/impact/laser
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/projectile/beam/laser/pistol/hitscan/stun //compliance regulator beam
 	name = "compliance beam"
@@ -390,29 +541,6 @@
 	name = "rapid-fire laser beam"
 	damage = 12
 
-/obj/item/projectile/beam/laser/pistol/wattz //Wattz pistol
-	damage = 31
-
-/obj/item/projectile/beam/laser/pistol/wattz/hitscan //hitscan wattz
-	name = "weak laser beam"
-	damage = 20
-	hitscan = TRUE
-	tracer_type = /obj/effect/projectile/tracer/laser
-	muzzle_type = /obj/effect/projectile/muzzle/laser
-	impact_type = /obj/effect/projectile/impact/laser
-
-/obj/item/projectile/beam/laser/pistol/wattz/magneto //upgraded Wattz
-	name = "penetrating laser beam"
-	damage = 33
-
-/obj/item/projectile/beam/laser/pistol/wattz/magneto/hitscan
-	name = "penetrating laser beam"
-	damage = 20
-	hitscan = TRUE
-	tracer_type = /obj/effect/projectile/tracer/laser
-	muzzle_type = /obj/effect/projectile/muzzle/laser
-	impact_type = /obj/effect/projectile/impact/laser
-
 /obj/item/projectile/beam/laser/solar //Solar Scorcher
 	name = "solar scorcher beam"
 	damage = 28
@@ -422,19 +550,6 @@
 	name = "solar scorcher beam"
 	damage = 27
 	hitscan = TRUE
-	tracer_type = /obj/effect/projectile/tracer/laser
-	muzzle_type = /obj/effect/projectile/muzzle/laser
-	impact_type = /obj/effect/projectile/impact/laser
-
-/obj/item/projectile/beam/laser/tribeam //Tribeam laser, fires 3 shots, will melt you
-	name = "tribeam laser"
-	damage = 21
-
-/obj/item/projectile/beam/laser/tribeam/hitscan
-	name = "tribeam laser"
-	damage = 25 //if all bullets connect, this will do 75.
-	hitscan = TRUE
-	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -500,26 +615,6 @@
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 35
 
-/obj/item/projectile/beam/laser/rcw //RCW
-	name = "rapidfire beam"
-	icon_state = "xray"
-	damage = 30
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
-	light_color = LIGHT_COLOR_GREEN
-
-/obj/item/projectile/beam/laser/rcw/hitscan //RCW
-	name = "rapidfire beam"
-	icon_state = "emitter"
-	damage = 19
-	hitscan = TRUE
-	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
-	tracer_type = /obj/effect/projectile/tracer/laser/emitter
-	impact_type = /obj/effect/projectile/impact/laser/emitter
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
-
-/obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
-	damage = 7
-
 /obj/item/projectile/f13plasma/pistol/alien
 	name = "alien projectile"
 	icon_state = "ion"
@@ -542,68 +637,6 @@
 /obj/item/projectile/beam/laser/laer/hitscan/Initialize()
 	. = ..()
 	transform *= 2
-
-/obj/item/projectile/beam/laser/aer14 //AER14
-	name = "laser beam"
-	damage = 38
-	icon_state = "omnilaser"
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
-	light_color = LIGHT_COLOR_BLUE
-
-/obj/item/projectile/beam/laser/aer14/hitscan
-	damage = 32
-	wound_bonus = 20
-	tracer_type = /obj/effect/projectile/tracer/pulse
-	muzzle_type = /obj/effect/projectile/muzzle/pulse
-	impact_type = /obj/effect/projectile/impact/pulse
-	hitscan = TRUE
-	hitscan_light_intensity = 3
-	hitscan_light_range = 0.75
-	hitscan_light_color_override = LIGHT_COLOR_BLUE
-	muzzle_flash_intensity = 6
-	muzzle_flash_range = 2
-	muzzle_flash_color_override = LIGHT_COLOR_BLUE
-	impact_light_intensity = 7
-	impact_light_range = 2.5
-	impact_light_color_override = LIGHT_COLOR_BLUE
-
-/obj/item/projectile/beam/laser/aer12 //AER12
-	name = "laser beam"
-	damage = 30
-	icon_state = "xray"
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
-	light_color = LIGHT_COLOR_GREEN
-
-/obj/item/projectile/beam/laser/aer12/hitscan
-	name = "laser beam"
-	damage = 29
-	hitscan = TRUE
-	tracer_type = /obj/effect/projectile/tracer/xray
-	muzzle_type = /obj/effect/projectile/muzzle/xray
-	impact_type = /obj/effect/projectile/impact/xray
-	hitscan_light_intensity = 3
-	hitscan_light_range = 0.75
-	hitscan_light_color_override = COLOR_LIME
-	muzzle_flash_intensity = 6
-	muzzle_flash_range = 2
-	muzzle_flash_color_override = COLOR_LIME
-	impact_light_intensity = 7
-	impact_light_range = 2.5
-	impact_light_color_override = COLOR_LIME
-
-/obj/item/projectile/beam/laser/wattz2k
-	name = "laser bolt"
-	damage = 35
-
-/obj/item/projectile/beam/laser/wattz2k/hitscan
-	name = "sniper laser bolt"
-	damage = 28
-	wound_bonus = 10
-	bare_wound_bonus = 20
-	tracer_type = /obj/effect/projectile/tracer/heavy_laser
-	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
-	impact_type = /obj/effect/projectile/impact/heavy_laser
-	hitscan = TRUE
 
 /obj/item/projectile/beam/laser/musket //musket
 	name = "laser bolt"

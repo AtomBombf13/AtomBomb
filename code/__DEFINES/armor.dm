@@ -116,13 +116,13 @@
 		"melee" = 15, \
 		"bullet" = 0, \
 		"laser" = 0, \
-		"energy" = 10, \
-		"bomb" = 10, \
+		"energy" = 0, \
+		"bomb" = 0, \
 		"bio" = 0, \
 		"rad" = 0, \
 		"fire" = 20, \
 		"acid" = 20, \
-		"wound" = 5, \
+		"wound" = 10, \
 		"damage_threshold" = 0)
 
 #define ARMOR_VALUE_KIT list(\
@@ -130,7 +130,7 @@
 		"bullet" = 10, \
 		"laser" = 5, \
 		"energy" = 10, \
-		"bomb" = 10, \
+		"bomb" = 0, \
 		"bio" = 0, \
 		"rad" = 0, \
 		"fire" = 20, \
@@ -143,7 +143,7 @@
 		"bullet" = 10, \
 		"laser" = 0, \
 		"energy" = 0, \
-		"bomb" = 30, \
+		"bomb" = 0, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -156,7 +156,7 @@
 		"bullet" = 15, \
 		"laser" = 5, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 5, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -169,7 +169,7 @@
 		"bullet" = 10, \
 		"laser" = 5, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 5, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -182,7 +182,7 @@
 		"bullet" = 15, \
 		"laser" = 10, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 5, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -195,7 +195,7 @@
 		"bullet" = 35, \
 		"laser" = 5, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 5, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -208,7 +208,7 @@
 		"bullet" = 45, \
 		"laser" = 5, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 5, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -221,7 +221,7 @@
 		"bullet" = 20, \
 		"laser" = 30, \
 		"energy" = 10, \
-		"bomb" = 30, \
+		"bomb" = 25, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -232,9 +232,9 @@
 #define ARMOR_VALUE_REINFORCED_METAL_ARMOR list(\
 		"melee" = 40, \
 		"bullet" = 20, \
-		"laser" = 30, \
+		"laser" = 40, \
 		"energy" = 15, \
-		"bomb" = 30, \
+		"bomb" = 25, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -247,7 +247,7 @@
 		"bullet" = 20, \
 		"laser" = 10, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 15, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -260,7 +260,7 @@
 		"bullet" = 10, \
 		"laser" = 5, \
 		"energy" = 5, \
-		"bomb" = 30, \
+		"bomb" = 10, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -272,8 +272,8 @@
 		"melee" = 25, \
 		"bullet" = 25, \
 		"laser" = 25, \
-		"energy" = 20, \
-		"bomb" = 30, \
+		"energy" = 15, \
+		"bomb" = 25, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 20, \
@@ -285,8 +285,8 @@
 		"melee" = 30, \
 		"bullet" = 30, \
 		"laser" = 30, \
-		"energy" = 25, \
-		"bomb" = 35, \
+		"energy" = 20, \
+		"bomb" = 30, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 25, \
@@ -298,8 +298,8 @@
 		"melee" = 50, \
 		"bullet" = 40, \
 		"laser" = 25, \
-		"energy" = 25, \
-		"bomb" = 45, \
+		"energy" = 20, \
+		"bomb" = 50, \
 		"bio" = 0, \
 		"rad" = 15, \
 		"fire" = 25, \
@@ -310,9 +310,9 @@
 #define ARMOR_VALUE_SALVAGE list(\
 		"melee" = 50, \
 		"bullet" = 60, \
-		"laser" = 60, \
+		"laser" = 30, \
 		"energy" = 30, \
-		"bomb" = 60, \
+		"bomb" = 40, \
 		"bio" = 80, \
 		"rad" = 50, \
 		"fire" = 80, \
@@ -323,9 +323,9 @@
 #define ARMOR_VALUE_PA list(\
 		"melee" = 60, \
 		"bullet" = 70, \
-		"laser" = 60, \
-		"energy" = 40, \
-		"bomb" = 90, \
+		"laser" = 40, \
+		"energy" = 30, \
+		"bomb" = 40, \
 		"bio" = 100, \
 		"rad" = 50, \
 		"fire" = 70, \
