@@ -471,7 +471,8 @@
 "aNN" = (
 /obj/structure/curtain{
 	color = "#5c131b";
-	pixel_x = 32
+	pixel_x = 32;
+	density = 1
 	},
 /obj/item/kirbyplants/random,
 /turf/open/floor/carpet/royalblack,
@@ -678,7 +679,8 @@
 "bgX" = (
 /obj/structure/curtain{
 	color = "#5c131b";
-	pixel_x = 32
+	pixel_x = 32;
+	density = 1
 	},
 /obj/structure/table,
 /turf/open/floor/carpet/royalblack,
@@ -709,6 +711,14 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/wasteland)
+"bjY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/junk/drawer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "bkC" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -765,6 +775,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
+"bpn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/comfy/teal{
+	dir = 1
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "bpp" = (
 /obj/structure/sign/poster/contraband/rip_badger{
 	pixel_y = 32
@@ -810,6 +829,13 @@
 /obj/machinery/smartfridge,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/brotherhood/leisure)
+"bum" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "buW" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -1179,6 +1205,15 @@
 	icon_state = "neutralrustyfull"
 	},
 /area/f13/brotherhood/leisure)
+"bYC" = (
+/obj/structure/chair/sofa/right{
+	color = "#800000";
+	dir = 4
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "caq" = (
 /obj/structure/railing,
 /obj/machinery/light{
@@ -1285,6 +1320,13 @@
 	},
 /turf/open/floor/carpet/arcade,
 /area/f13/city)
+"ciV" = (
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "cmg" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -1332,6 +1374,18 @@
 	icon_state = "floor2"
 	},
 /turf/open/floor/f13/wood,
+/area/f13/building)
+"csL" = (
+/obj/structure/railing/corner{
+	color = "#A47449"
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
+"csW" = (
+/obj/machinery/light/small,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
 /area/f13/building)
 "ctf" = (
 /obj/effect/overlay/junk/toilet{
@@ -1589,6 +1643,14 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland/ncr)
+"cRj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bookcase,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "cRN" = (
 /obj/structure/chair/stool,
 /turf/open/floor/carpet/arcade,
@@ -1922,6 +1984,15 @@
 	},
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/brotherhood/leisure)
+"dzb" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "dAK" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/wood_common,
@@ -2005,7 +2076,9 @@
 	},
 /area/f13/brotherhood/offices1st)
 "dGM" = (
-/turf/open/floor/plating/f13/outside/roof/wood/old,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
 /area/f13/building)
 "dHP" = (
 /obj/structure/bodycontainer/morgue,
@@ -2278,6 +2351,16 @@
 	name = "floor"
 	},
 /area/f13/brotherhood/offices1st)
+"ecR" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "efm" = (
 /obj/structure/fence/handrail{
 	density = 0;
@@ -2296,6 +2379,15 @@
 	},
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/dorms)
+"egp" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "egq" = (
 /obj/structure/lattice/catwalk,
 /turf/open/transparent/openspace{
@@ -2485,6 +2577,28 @@
 "eEx" = (
 /obj/machinery/light,
 /turf/open/floor/f13/wood,
+/area/f13/building)
+"eGq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/machinery/computer/terminal{
+	desc = "A RobCo Industries terminal, this one looks well cared for, even as the ravages of time set into plastic and metal.";
+	dir = 1;
+	doc_content_1 = "Gregory Blunderson, a shortsighted fool with an easy weakness, his brat of a child. While his proximity is a concern, the threat of his son's safety should keep him safely under my employ. I believe I'll have him ransack that old bastard Cooke's residence, remind him I'm still alive.";
+	doc_content_2 = "The Mexican Mafia, a gang come south of the state seeking easy gain in the quiet suburbia of our county. The law does not seem to understand these young men are intelligent, and already apply pressure to several small businesses in town. I can pay them off from touching my properties for now, but this may grow to be an issue. It may be time to reach a working agreement with these entrepreneurial boys.";
+	doc_content_3 = "The Children of the Light, what is there to say? Another new age nonsense cult, peddling half hearted self-help to the desperate and broken in exchange for everything they can take. I do not care for a criminal element that lacks either showmanship or professional conduct in my town, no I do not. But attempting to use the Mexican Mafia against them led to, significant discoveries. They have powerful backers in Washington. I must proceed cautiously.";
+	doc_content_4 = "The Post-Modern Artist, as the newspapers have taken to calling him. Fashioning his public displays of viscera, animal at times, man at others. He has become a most useful tool against the cult, for he holds no qualms in his work, and I cannot be tied back to him. I know of course, he must have plots to make me the next ironic piece of art in his show, but I have safety measures against this. Mister Ostin is still good with a gun.";
+	doc_title_1 = "Log 1 - Gregory Blunderson";
+	doc_title_2 = "Log 2 - Mexican Mafia";
+	doc_title_3 = "Log 3 - Children of the Light";
+	doc_title_4 = "Log 4 - The Post-Modern Artist";
+	name = "premium terminal";
+	pixel_y = 3;
+	termtag = "Rivers Pinkerton"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
 /area/f13/building)
 "eGT" = (
 /obj/structure/table/wood,
@@ -2832,6 +2946,17 @@
 /obj/item/stack/sheet/hay,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/brotherhood/leisure)
+"fjF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/cabinet/anchored,
+/obj/item/clothing/under/suit/black_really{
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "fjM" = (
 /obj/structure/window/reinforced/fulltile,
 /obj/structure/grille,
@@ -2876,6 +3001,13 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/city)
+"foj" = (
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 1
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "foW" = (
 /obj/structure/dresser,
 /obj/effect/decal/cleanable/dirt,
@@ -3213,6 +3345,16 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland/ncr)
+"git" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/junk/small/table,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "giY" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -3234,6 +3376,14 @@
 "gkT" = (
 /turf/closed/wall/rust,
 /area/f13/ncr)
+"gma" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/junk/jukebox,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "gmp" = (
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/village)
@@ -3280,6 +3430,19 @@
 /obj/structure/fluff/beach_umbrella/security,
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
+"gtj" = (
+/obj/structure/curtain{
+	color = "#5c131b";
+	pixel_x = 32;
+	density = 1
+	},
+/obj/structure/bed/old,
+/obj/item/bedsheet/rd,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "guf" = (
 /obj/machinery/light{
 	dir = 4
@@ -3610,6 +3773,13 @@
 	sunlight_state = 1
 	},
 /area/f13/building/hospital)
+"hds" = (
+/mob/living/simple_animal/hostile/handy,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "heo" = (
 /obj/structure/table/wood/poker,
 /obj/machinery/light/small,
@@ -3873,6 +4043,17 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
+"hDv" = (
+/obj/structure/curtain{
+	color = "#5c131b";
+	pixel_x = 32;
+	density = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "hFw" = (
 /obj/structure/fence/wooden,
 /obj/effect/turf_decal/weather/dirt{
@@ -4171,6 +4352,13 @@
 	name = "concrete wall"
 	},
 /area/f13/wasteland/ncr)
+"imO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "ina" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -5134,6 +5322,13 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/city)
+"key" = (
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 8
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "keX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
@@ -5216,6 +5411,13 @@
 	dir = 1
 	},
 /obj/structure/railing/corner,
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
+"kjB" = (
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 8
+	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "klH" = (
@@ -5818,6 +6020,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"lDL" = (
+/obj/structure/simple_door/interior,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "lDT" = (
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland)
@@ -6128,6 +6336,16 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/ncr)
+"mei" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "meB" = (
 /obj/structure/flora/junglebush,
 /turf/open/indestructible/ground/outside/dirt,
@@ -6268,6 +6486,13 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/city)
+"mrR" = (
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "msr" = (
 /obj/structure/window/fulltile/wood,
 /obj/structure/decoration/rag,
@@ -6448,6 +6673,15 @@
 /obj/structure/chair/sofa,
 /turf/open/floor/carpet/red,
 /area/f13/city)
+"mHU" = (
+/obj/structure/chair/sofa/left{
+	color = "#800000";
+	dir = 4
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "mHY" = (
 /obj/structure/fireplace,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
@@ -6685,6 +6919,13 @@
 	icon_state = "tealwhrusty_chess2"
 	},
 /area/f13/brotherhood/leisure)
+"neg" = (
+/obj/structure/railing{
+	color = "#A47449"
+	},
+/obj/machinery/light/small,
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated/red,
+/area/f13/wasteland)
 "nem" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -7031,6 +7272,12 @@
 /obj/structure/window/fulltile/house,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
+"nHl" = (
+/turf/open/transparent/openspace{
+	name = "air";
+	sunlight_state = 1
+	},
+/area/f13/building)
 "nHK" = (
 /obj/structure/window/reinforced/fulltile,
 /obj/structure/grille,
@@ -7266,6 +7513,20 @@
 	sunlight_state = 1
 	},
 /area/f13/building/hospital)
+"obL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/junk/small/table,
+/obj/structure/junk/small/tv{
+	desc = "Advertisements would've played on this tv before the bombs dropped.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war advertising television"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "ocx" = (
 /obj/machinery/light{
 	dir = 1
@@ -8463,6 +8724,24 @@
 "qvL" = (
 /turf/open/transparent/openspace,
 /area/f13/building/massfusion)
+"qvT" = (
+/obj/structure/window/fulltile/house{
+	icon_state = "housewindowvertical"
+	},
+/obj/structure/barricade/bars,
+/turf/open/indestructible/ground/outside/woodalt,
+/area/f13/building)
+"qxa" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table/wood,
+/obj/item/toy/plush/lampplushie,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "qxB" = (
 /obj/structure/chair/sofa,
 /turf/open/floor/carpet/red,
@@ -8509,7 +8788,8 @@
 "qzu" = (
 /obj/structure/curtain{
 	color = "#5c131b";
-	pixel_x = 32
+	pixel_x = 32;
+	density = 1
 	},
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
@@ -8694,6 +8974,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"qPF" = (
+/obj/structure/railing{
+	color = "#A47449"
+	},
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated/red,
+/area/f13/wasteland)
 "qQy" = (
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/building/hospital)
@@ -8745,6 +9031,15 @@
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
+"qUH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/item/trash/plate,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "qUQ" = (
 /obj/machinery/light/small,
 /turf/open/floor/f13{
@@ -9444,7 +9739,8 @@
 "sjz" = (
 /obj/structure/curtain{
 	color = "#5c131b";
-	pixel_x = 32
+	pixel_x = 32;
+	density = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
@@ -11097,9 +11393,25 @@
 /obj/effect/landmark/start/f13/elder,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"vHj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/comfy/purple,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "vIH" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building/hospital)
+"vII" = (
+/obj/structure/decoration/clock/old/active{
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "vJy" = (
 /obj/structure/chair/wood{
 	dir = 4
@@ -11201,6 +11513,12 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/wasteland)
+"vVv" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "vVC" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
@@ -11312,6 +11630,16 @@
 	name = "cool metal floor"
 	},
 /area/f13/brotherhood/offices1st)
+"wdp" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "wes" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -12326,6 +12654,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/city)
+"xWd" = (
+/obj/item/chair/wood/modern,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "xWX" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -26993,13 +27328,13 @@ oez
 oez
 oez
 oez
-gEk
-gEk
-gEk
-gEk
 oez
 oez
-gEk
+oez
+oez
+oez
+oez
+oez
 oez
 oez
 oez
@@ -27250,13 +27585,13 @@ oez
 oez
 oez
 oez
-gEk
-hMq
-gEk
-gEk
 oez
-gEk
-gEk
+oez
+oez
+oez
+oez
+oez
+oez
 oez
 oez
 oez
@@ -27498,6 +27833,11 @@ oez
 oez
 oez
 oez
+csL
+ciV
+ciV
+ciV
+mrR
 oez
 oez
 oez
@@ -27507,13 +27847,8 @@ oez
 oez
 oez
 oez
-gEk
-hMq
-hMq
-dGM
-gEk
-gEk
-gEk
+oez
+oez
 oez
 oez
 oez
@@ -27752,25 +28087,25 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-gEk
+rXj
+rXj
+rXj
+neg
+hMq
+mHU
+bYC
 hMq
 hMq
 hMq
-dGM
 hMq
-gEk
+hMq
+hMq
+hMq
+hMq
+hMq
+hMq
+oez
+oez
 oez
 oez
 oez
@@ -28009,25 +28344,25 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-gEk
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+csW
 hMq
+vVv
+bum
+mei
+imO
+vVv
+xWd
+ecR
+xWd
 hMq
-hMq
-hMq
-hMq
-gEk
+oez
+oez
 oez
 oez
 oez
@@ -28266,25 +28601,25 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-gEk
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+dGM
+lDL
+vVv
+vVv
+vHj
+eGq
+egp
+vVv
+xWd
+vVv
 hMq
-hMq
-hMq
-hMq
-hMq
-gEk
+oez
+oez
 oez
 oez
 oez
@@ -28523,25 +28858,25 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-gEk
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+dGM
 hMq
+vII
+vVv
+vVv
+imO
+vVv
+vVv
+nHl
+vVv
 hMq
-hMq
-hMq
-hMq
-gEk
+oez
+oez
 oez
 oez
 oez
@@ -28780,25 +29115,25 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-gEk
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+dGM
 hMq
+dzb
+vVv
+hds
+dzb
+vVv
+vVv
+vVv
+vVv
 hMq
-hMq
-hMq
-hMq
-gEk
+oez
+oez
 oez
 oez
 oez
@@ -29037,25 +29372,25 @@ oez
 oez
 oez
 oez
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+dGM
+hMq
+hMq
+lDL
+hMq
+hMq
+hMq
+vVv
+hds
+vVv
+hMq
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
-gEk
 oez
 oez
 oez
@@ -29294,23 +29629,23 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+dGM
+hMq
+vVv
+vVv
+vVv
+fjF
+hMq
+cRj
+vVv
+qUH
+hMq
 oez
 oez
 oez
@@ -29551,23 +29886,23 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+dGM
+hMq
+vVv
+vVv
+hds
+bjY
+hMq
+obL
+vVv
+bpn
+hMq
 oez
 oez
 oez
@@ -29808,23 +30143,23 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+rXj
+rXj
+rXj
+qPF
+dGM
+dGM
+csW
+hMq
+qxa
+gtj
+hDv
+wdp
+hMq
+gma
+hDv
+git
+hMq
 oez
 oez
 oez
@@ -30065,23 +30400,23 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
-oez
+rXj
+rXj
+rXj
+neg
+hMq
+dGM
+dGM
+hMq
+hMq
+qvT
+qvT
+hMq
+hMq
+hMq
+qvT
+hMq
+hMq
 oez
 oez
 oez
@@ -30325,11 +30660,11 @@ oez
 oez
 oez
 oez
-oez
-oez
-oez
-oez
-oez
+kjB
+key
+key
+key
+foj
 oez
 oez
 oez
