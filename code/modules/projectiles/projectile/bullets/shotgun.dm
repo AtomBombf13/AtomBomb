@@ -1,468 +1,624 @@
-/* buckshot pellet
- * DAMAGE: 11
- * STAMIN: 1
- * RECOIL: 2
- * WOUNDS: 0
- * WNAKED: 0
- */
-/obj/item/projectile/bullet/pellet/shotgun_buckshot
-	name = "buckshot pellet"
-	damage = BULLET_DAMAGE_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+//IN THIS DOCUMENT: Shotgun template, Double barrel shotguns, Pump-action shotguns, Semi-auto shotgun
+// See gun.dm for keywords and the system used for gun balance
 
-	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
-	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 
-/* magnum buckshot pellet
- * DAMAGE: 11
- * STAMIN: 1
- * RECOIL: 2
- * WOUNDS: 0
- * WNAKED: 0
- */
-/obj/item/projectile/bullet/pellet/shotgun_magnum
-	name = "magnum buckshot pellet"
-	damage = BULLET_DAMAGE_SHOTGUN_MAGNUM * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+//////////////////////
+// SHOTGUN TEMPLATE //
+//////////////////////
 
-	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-	
-	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
-	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 
-/* rubber pellet
- * DAMAGE: 1
- * STAMIN: 11
- * RECOIL: 2
- * WOUNDS: 0
- * WNAKED: 0
- */
-/obj/item/projectile/bullet/pellet/shotgun_rubbershot
-	name = "rubbershot pellet"
-	damage = BULLET_DAMAGE_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
-	stamina = RUBBERY_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun
+	name = "shotgun template"
+	desc = "Should not exist"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_prefix = "shotgunpump"
+	icon_state = "shotgun"
+	item_state = "shotgun"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	mag_type = /obj/item/ammo_box/magazine/internal/shot
 
-	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
-	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
+	slowdown = GUN_SLOWDOWN_SHOTGUN_PUMP
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	gun_skill_check = AFFECTED_BY_FAST_PUMP
+	can_scope = FALSE
+	flags_1 =  CONDUCT_1
+	casing_ejector = FALSE
+	var/recentpump = 0 // to prevent spammage
+	spawnwithmagazine = TRUE
+	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
+	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	init_recoil = RIFLE_RECOIL(2.5)
+	init_firemodes = list(
+		SEMI_AUTO_SHOTGUN
+	)
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(SHOTGUN_VOLUME),
+		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(SHOTGUN_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
+		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
+	)
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
-	sharpness = SHARP_NONE
-	embedding = null
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
-	zone_accuracy_type = ZONE_WEIGHT_PRECISION
 
-/* handload pellet
- * DAMAGE: 8
- * STAMIN: 1
- * RECOIL: 2
- * WOUNDS: 0
- * WNAKED: 0
- */
-/obj/item/projectile/bullet/pellet/shotgun_improvised
-	damage = BULLET_DAMAGE_SHOTGUN_PELLET * BULLET_HANDLOAD_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_PELLET * BULLET_HANDLOAD_MULT
-	spread = BULLET_SPREAD_HANDLOAD
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/process_chamber(mob/living/user, empty_chamber = 0)
+	return ..() //changed argument value
 
-	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_HANDLOAD_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
+/obj/item/gun/ballistic/shotgun/can_shoot()
+	return !!chambered?.BB
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
-	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
+/obj/item/gun/ballistic/shotgun/attack_self(mob/living/user)
+	//if(recentpump > world.time)
+	//	return
+	if(IS_STAMCRIT(user))//CIT CHANGE - makes pumping shotguns impossible in stamina softcrit
+		to_chat(user, span_warning("You're too exhausted for that."))//CIT CHANGE - ditto
+		return//CIT CHANGE - ditto
+	pump(user, TRUE)
+	//if(HAS_TRAIT(user, TRAIT_FAST_PUMP))
+	//	recentpump = world.time + GUN_COCK_SHOTGUN_LIGHTNING
+	//else
+	//	recentpump = world.time + cock_delay
+	if(istype(user))//CIT CHANGE - makes pumping shotguns cost a lil bit of stamina.
+		user.adjustStaminaLossBuffered(2) //CIT CHANGE - DITTO. make this scale inversely to the strength stat when stats/skills are added
+	return
 
-/obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
+/obj/item/gun/ballistic/shotgun/blow_up(mob/user)
+	. = 0
+	if(chambered && chambered.BB)
+		process_fire(user, user, FALSE)
+		. = 1
+
+/obj/item/gun/ballistic/shotgun/proc/pump(mob/M, visible = TRUE)
+	if(visible)
+		M.visible_message(span_warning("[M] racks [src]."), span_warning("You rack [src]."))
+	playsound(M, pump_sound, 60, 1)
+	pump_unload(M)
+	pump_reload(M)
+	update_icon()	//I.E. fix the desc
+	update_firemode()
+	return 1
+
+/obj/item/gun/ballistic/shotgun/proc/pump_unload(mob/M)
+	if(chambered)//We have a shell in the chamber
+		chambered.forceMove(drop_location())//Eject casing
+		chambered.bounce_away()
+		chambered = null
+
+/obj/item/gun/ballistic/shotgun/proc/pump_reload(mob/M)
+	if(!magazine.ammo_count())
+		return 0
+	var/obj/item/ammo_casing/AC = magazine.get_round() //load next casing.
+	chambered = AC
+
+/obj/item/gun/ballistic/shotgun/examine(mob/user)
 	. = ..()
-	range = rand(4, 8)
+	if (chambered)
+		. += "A [chambered.BB ? "live" : "spent"] one is in the chamber."
 
-/obj/item/projectile/bullet/pellet/shotgun_improvised/on_range()
-	do_sparks(1, TRUE, get_turf(src))
+/obj/item/gun/ballistic/shotgun/lethal
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
+
+/// Pump if click with empty thing
+/obj/item/gun/ballistic/shotgun/shoot_with_empty_chamber(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
+	if(chambered)
+		attack_self(user)
+	else
+		..()
+
+/* * * * * * * * * * * * * *
+ * Double barrel shotguns  *
+ * * * * * * * * * * * * * */
+
+/* * * * * * * * * * *
+ * Caravan shotgun
+ * Baseline DB shotgun
+ * 12g
+ * Sawable
+ * Common
+ * * * * * * * * * * */
+/obj/item/gun/ballistic/revolver/caravan_shotgun
+	name = "caravan shotgun"
+	desc = "An common over-under double barreled shotgun made in the post-war era."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "caravan"
+	item_state = "shotgundouble"
+	icon_prefix = "shotgundouble"
+	w_class = WEIGHT_CLASS_BULKY
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual/simple
+
+	slowdown = GUN_SLOWDOWN_SHOTGUN_FIXED
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	init_firemodes = list(
+		list(mode_name="Single-fire", mode_desc="Send Vagabonds flying back several paces", burst_size=1, icon="semi"),
+		list(mode_name="Both Barrels", mode_desc="Give them the side-by-side", burst_size=2, icon="burst"),
+	)
+
+	sawn_desc = "Short and concealable, terribly uncomfortable to fire, but worse on the other end."
+	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(SHOTGUN_VOLUME),
+		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(SHOTGUN_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
+		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
+	)
+
+/obj/item/gun/ballistic/revolver/caravan_shotgun/attackby(obj/item/A, mob/user, params)
 	..()
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter) | istype(A, /obj/item/twohanded/chainsaw))
+		sawoff(user)
+	if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			sawoff(user)
 
-/obj/item/projectile/bullet/pellet/shotgun_improvised/on_hit(atom/target, blocked = FALSE)
-	if(prob(50))
-		do_sparks(1, FALSE, get_turf(target))
+/obj/item/gun/ballistic/revolver/caravan_shotgun/update_icon_state()
+	if(sawn_off)
+		icon_state = "[initial(icon_state)]-sawn"
+	else if(!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
+
+/* * * * * * * * * * *
+ * Widowmaker shotgun
+ * Baseline DB shotgun
+ * 12g
+ * Sawable
+ * Common
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/revolver/widowmaker
+	name = "Winchester Widowmaker"
+	desc = "Old-world Winchester Widowmaker double-barreled 12 gauge shotgun, with mahogany furniture"
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "widowmaker"
+	item_state = "shotgundouble"
+	icon_prefix = "shotgundouble"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
+	w_class = WEIGHT_CLASS_BULKY
+
+	slowdown = GUN_SLOWDOWN_SHOTGUN_FIXED
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+	init_firemodes = list(
+		list(mode_name="Single-fire", mode_desc="Send Vagabonds flying back several paces", burst_size=1, icon="semi"),
+		list(mode_name="Both Barrels", mode_desc="Give them the side-by-side", burst_size=2, icon="burst"),
+	)
+
+	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
+	fire_sound = 'sound/f13weapons/max_sawn_off.ogg'
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(SHOTGUN_VOLUME),
+		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(SHOTGUN_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
+		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
+	)
+
+/obj/item/gun/ballistic/revolver/widowmaker/attackby(obj/item/A, mob/user, params)
 	..()
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter) | istype(A, /obj/item/twohanded/chainsaw))
+		sawoff(user)
+	if(istype(A, /obj/item/melee/transforming/energy))
+		var/obj/item/melee/transforming/energy/W = A
+		if(W.active)
+			sawoff(user)
 
-/* 12g slug
- * DAMAGE: 50
- * STAMIN: 10
- * RECOIL: 2
- * WOUNDS: 40
- * WNAKED: 30
- */
-/obj/item/projectile/bullet/shotgun_slug
-	name = "12g shotgun slug"
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/revolver/widowmaker/update_icon_state()
+	if(sawn_off)
+		icon_state = "[initial(icon_state)]-sawn"
+	else if(!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
 
-	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
+/* * * * * * * * *
+ * Pump shotguns *
+ * * * * * * * * */
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
+/* * * * * * * * * * *
+ * Hunting shotgun
+ * Baseline Pump shotgun
+ * 12g
+ * Common
+ * * * * * * * * * * */
 
-/* 12g slug
- * DAMAGE: 50
- * STAMIN: 10
- * RECOIL: 2
- * WOUNDS: 80
- * WNAKED: 30
- */
-/obj/item/projectile/bullet/shotgun_slug/executioner
-	name = "executioner slug" // admin only, can dismember limbs
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/hunting
+	name = "hunting shotgun"
+	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
+	icon_state = "pump"
+	item_state = "shotgunpump"
+	icon_prefix = "shotgunpump"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
 
-	wound_bonus = 80
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
+	slowdown = GUN_SLOWDOWN_SHOTGUN_PUMP //penis
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	sharpness = SHARP_EDGED
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
+/obj/item/gun/ballistic/shotgun/hunting/update_icon_state()
+	if(sawn_off)
+		icon_state = "[initial(icon_state)]-sawn"
+	else if(!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
 
-/* 12g slug
- * DAMAGE: 50
- * STAMIN: 10
- * RECOIL: 2
- * WOUNDS: 80
- * WNAKED: 30
- */
-/obj/item/projectile/bullet/shotgun_slug/pulverizer
-	name = "pulverizer slug" // admin only, can crush bones
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/* * * * * * * * * * *
+ * Police shotgun
+ * Hideaway Pump shotgun
+ * 12g
+ * Folds up
+ * More recoil when folded up
+ * Common
+ * * * * * * * * * * */
 
-	wound_bonus = 80
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/police
+	name = "police shotgun"
+	desc = "A pre-war shotgun with large magazine and folding stock, made from steel and polymers. Flashlight attachment rail."
+	icon_state = "shotgunpolice"
+	item_state = "shotgunpolice"
+	icon_prefix = "shotgunpolice"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/police
+	sawn_desc = "Portable but with a poor recoil managment."
+	w_class = WEIGHT_CLASS_NORMAL
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	sharpness = SHARP_NONE
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
+	slowdown = GUN_SLOWDOWN_SHOTGUN_PUMP
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
-/* 12g beanbag
- * DAMAGE: 5
- * STAMIN: 100
- * RECOIL: 2
- * WOUNDS: 120
- * WNAKED: 90
- */
-/obj/item/projectile/bullet/shotgun_beanbag
-	name = "beanbag slug"
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
-	stamina = RUBBERY_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+	var/stock = FALSE
+	can_flashlight = TRUE
+	gunlight_state = "flightangle"
+	flight_x_offset = 23
+	flight_y_offset = 21
 
-	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	sharpness = SHARP_NONE
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_PRECISION
-
-#define BULLET_TRAINSLUG_DAMAGE_MULT 0.4 // 3 shots, 1.2x damage? sure
-#define BULLET_TRAINSLUG_STAMINA_MULT 0.4
-#define BULLET_TRAINSLUG_WOUND_MULT 1
-#define BULLET_TRAINSLUG_NAKED_WOUND_MULT 1
-#define BULLET_TRAINSLUG_SPEED_MULT 0.9
-
-/* train
- * DAMAGE: 20
- * STAMIN: 4
- * RECOIL: 2
- * WOUNDS: 40
- * WNAKED: 30
- */
-/obj/item/projectile/bullet/pellet/trainshot
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_TRAINSLUG_DAMAGE_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_TRAINSLUG_STAMINA_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
-	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_TRAINSLUG_WOUND_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_TRAINSLUG_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG * BULLET_TRAINSLUG_SPEED_MULT
-	sharpness = SHARP_NONE //crunch
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
-
-/obj/item/projectile/bullet/pellet/trainshot/on_hit(atom/target)
+/obj/item/gun/ballistic/shotgun/police/AltClick(mob/living/user)
 	. = ..()
-	if(ismovable(target) && prob(8))
-		var/atom/movable/M = target
-		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
-		M.safe_throw_at(throw_target, 2, 3)
+	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	toggle_stock(user)
+	return TRUE
 
-#undef BULLET_TRAINSLUG_DAMAGE_MULT
-#undef BULLET_TRAINSLUG_STAMINA_MULT
-#undef BULLET_TRAINSLUG_WOUND_MULT
-#undef BULLET_TRAINSLUG_NAKED_WOUND_MULT
-#undef BULLET_TRAINSLUG_SPEED_MULT
-
-/* 12g slug fire
- * DAMAGE: 25
- * STAMIN: 50
- * RECOIL: 2
- * WOUNDS: 120
- * WNAKED: 0
- */
-/obj/item/projectile/bullet/incendiary/shotgun
-	name = "incendiary slug"
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_DAMAGE_FIRE
-	stamina = RUBBERY_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_STAMINA_FIRE
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
-	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_WOUND_FIRE
-	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_FIRE
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	sharpness = SHARP_NONE
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
-
-/* 12g pellet fire
- * DAMAGE: 5
- * STAMIN: 5
- * RECOIL: 2
- * WOUNDS: 0
- * WNAKED: 0
- */
-/obj/item/projectile/bullet/incendiary/shotgun/dragonsbreath
-	name = "dragonsbreath pellet"
-	damage = BULLET_DAMAGE_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_DAMAGE_FIRE
-	stamina = RUBBERY_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_STAMINA_FIRE
-	spread = BULLET_SPREAD_SURPLUS
-	damage_type = BURN
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
-	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_WOUND_FIRE
-	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_FIRE
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-
-	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
-	sharpness = SHARP_NONE
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
-	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
-
-/* 12g pellet fire
- * DAMAGE: 5
- * STAMIN: 5
- * RECOIL: 2
- * WOUNDS: 0
- * WNAKED: 0
- */
-/obj/item/projectile/incendiary/flamethrower
-	name = "FIREEEEEEEEEE!!!!!"
-	icon = 'icons/effects/fire.dmi'
-	icon_state = "3"
-	light_range = LIGHT_RANGE_FIRE
-	light_color = LIGHT_COLOR_FIRE
-	damage = BULLET_DAMAGE_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_DAMAGE_FIRE
-	stamina = RUBBERY_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_STAMINA_FIRE
-	spread = BULLET_SPREAD_SURPLUS
-	damage_type = BURN
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
-	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_WOUND_FIRE
-	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_FIRE
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-
-	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
-	sharpness = SHARP_NONE
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
-	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
-
-/obj/item/projectile/incendiary/flamethrower/on_hit(atom/target)
+/obj/item/gun/ballistic/shotgun/police/examine(mob/user)
 	. = ..()
-	if(iscarbon(target))
-		var/mob/living/carbon/M = target
-		M.adjust_fire_stacks(3)
-		M.IgniteMob()
+	. += span_notice("Alt-click to toggle the stock.")
 
-/* 12g slug stun
- * DAMAGE: 5
- * STAMIN: 100
- * RECOIL: 2
- * WOUNDS: 120
- * WNAKED: 90
- */
-/obj/item/projectile/bullet/shotgun_stunslug
-	name = "stunslug"
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
-	stamina = RUBBERY_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/police/proc/toggle_stock(mob/living/user)
+	stock = !stock
+	if(stock)
+		w_class = WEIGHT_CLASS_BULKY
+		to_chat(user, "You unfold the stock.")
+		recoil_dat = getRecoil(RIFLE_RECOIL(2.2)[1],RIFLE_RECOIL(2.2)[2],RIFLE_RECOIL(2.2)[3])
+	else
+		w_class = WEIGHT_CLASS_NORMAL
+		to_chat(user, "You fold the stock.")
+		recoil_dat = getRecoil(init_recoil[1],init_recoil[2],init_recoil[3])
+	update_icon()
 
-	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
-	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/police/update_icon_state()
+	icon_state = "[current_skin ? unique_reskin[current_skin] : "shotgunpolice"][stock ? "" : "fold"]"
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	sharpness = SHARP_NONE
-	zone_accuracy_type = ZONE_WEIGHT_PRECISION
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
+/* * * * * * * * * * *
+ * Trench shotgun
+ * Hideaway Pump shotgun
+ * 12g
+ * Quicker to cock
+ * Common
+ * * * * * * * * * * */
 
-	stutter = 5
-	jitter = 20
-	range = 7
-	icon_state = "spark"
-	color = "#FFFF00"
-	var/tase_duration = 50
+/obj/item/gun/ballistic/shotgun/trench
+	name = "trench shotgun"
+	desc = "A quick military shotgun designed for close-quarters fighting, equipped with a bayonet lug."
+	icon_state = "trench"
+	item_state = "shotguntrench"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
 
-/obj/item/projectile/bullet/shotgun_stunslug/on_hit(atom/target, blocked = FALSE)
-	. = ..()
-	if(!ismob(target) || blocked >= 100) //Fully blocked by mob or collided with dense object - burst into sparks!
-		do_sparks(1, TRUE, src)
-	if(iscarbon(target))
-		var/mob/living/carbon/C = target
-		SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "tased", /datum/mood_event/tased)
-		SEND_SIGNAL(C, COMSIG_LIVING_MINOR_SHOCK)
-		C.IgniteMob()
-		if(C.dna && C.dna.check_mutation(HULK))
-			C.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
-		else if(tase_duration && (C.status_flags & CANKNOCKDOWN) && !HAS_TRAIT(C, TRAIT_STUNIMMUNE) && !HAS_TRAIT(C, TRAIT_TASED_RESISTANCE))
-			C.electrocute_act(15, src, 1, SHOCK_NOSTUN)
-			C.apply_status_effect(STATUS_EFFECT_TASED_WEAK, tase_duration)
+	slowdown = GUN_SLOWDOWN_SHOTGUN_PUMP
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
-#define BULLET_METEORSLUG_DAMAGE_MULT 0.8
-#define BULLET_METEORSLUG_STAMINA_MULT 1.5
-#define BULLET_METEORSLUG_WOUND_MULT 1
-#define BULLET_METEORSLUG_NAKED_WOUND_MULT 1
-#define BULLET_METEORSLUG_SPEED_MULT 0.8
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 24
+	knife_y_offset = 22
 
-/* 12g slug meteor
- * DAMAGE: 40
- * STAMIN: 15
- * RECOIL: 2
- * WOUNDS: 40
- * WNAKED: 30
- */
-/obj/item/projectile/bullet/shotgun_meteorslug
-	name = "meteorslug"
-	icon = 'icons/obj/meteor.dmi'
-	icon_state = "dust"
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_METEORSLUG_DAMAGE_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_METEORSLUG_STAMINA_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/trench/update_icon_state()
+	if(!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
 
-	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_METEORSLUG_WOUND_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_METEORSLUG_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG * BULLET_METEORSLUG_SPEED_MULT
-	sharpness = SHARP_NONE
-	knockdown = 80
-	hitsound = 'sound/effects/meteorimpact.ogg'
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
+/* * * * * * * * * * * *
+ * Semi-auto shotguns  *
+ * * * * * * * * * * * */
+/// warning, most arent semi-automatic
 
-/obj/item/projectile/bullet/shotgun_meteorslug/on_hit(atom/target, blocked = FALSE)
-	. = ..()
-	if(ismovable(target))
-		var/atom/movable/M = target
-		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
-		M.safe_throw_at(throw_target, 3, 2)
+/obj/item/gun/ballistic/shotgun/automatic/combat
+	name = "semi-auto shotgun template"
 
-/obj/item/projectile/bullet/shotgun_meteorslug/Initialize()
-	. = ..()
-	SpinAnimation()
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
-#undef BULLET_METEORSLUG_DAMAGE_MULT
-#undef BULLET_METEORSLUG_STAMINA_MULT
-#undef BULLET_METEORSLUG_WOUND_MULT
-#undef BULLET_METEORSLUG_NAKED_WOUND_MULT
-#undef BULLET_METEORSLUG_SPEED_MULT
+	init_firemodes = list(
+		SEMI_AUTO_SHOTGUN
+	)
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(SHOTGUN_VOLUME),
+		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(SHOTGUN_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
+		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
+	)
 
-/* 12g slug explode
- * DAMAGE: 25
- * STAMIN: 5
- * RECOIL: 2
- * WOUNDS: 80
- * WNAKED: 60
- */
-/obj/item/projectile/bullet/shotgun_frag12
-	name ="frag12 slug"
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_DAMAGE_EXPLOSIVE
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_STAMINA_EXPLOSIVE
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+/obj/item/gun/ballistic/shotgun/automatic/combat/update_icon_state()
+	if(!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
 
-	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_WOUND_EXPLOSIVE
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_EXPLOSIVE
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
+/* * * * * * * * * * *
+ * Auto-5 shotgun
+ * Baseline semi-auto shotgun
+ * 12g
+ * Uncommon
+ * * * * * * * * * * */
 
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
-	knockdown = 50
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
+/obj/item/gun/ballistic/shotgun/automatic/combat/auto5
+	name = "Browning Auto-5"
+	desc = "A semi automatic shotgun with a four round tube."
+	icon_state = "auto5"
+	item_state = "shotgunauto5"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact
 
-/obj/item/projectile/bullet/shotgun_frag12/on_hit(atom/target, blocked = FALSE)
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+
+	fire_sound = 'sound/f13weapons/auto5.ogg'
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/auto5/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	..()
-	explosion(target, -1, 0, 1)
-	return BULLET_ACT_HIT
+	src.pump(user)
 
-// Mech Scattershots
+/* * * * * * * * * * *
+ * Lever-Action shotgun
+ * Speedy pump shotgun
+ * 12g
+ * Uncommon
+ * * * * * * * * * * */
 
-/obj/item/projectile/bullet/scattershot
-	damage = 25
-	icon_state = "mech_autocannon"
-	light_range = 1.5
-	light_power = 0.3
-	light_color = "#FF7F01"
+/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	name = "lever action shotgun"
+	desc = "A speedy pistol grip lever action shotgun with a five-shell capacity underneath plus one in chamber."
+	icon_state = "shotgunlever"
+	item_state = "shotgunlever"
+	icon_prefix = "shotgunlever"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/trench
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 
-/obj/item/projectile/bullet/seed
-	damage = 6
-	stamina = 1
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	init_recoil = RIFLE_RECOIL(2.8)
 
-/obj/item/projectile/bullet/pellet/shotgun_incapacitate
-	name = "incapacitating pellet"
-	damage = 1
-	stamina = 6
+	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	can_bayonet = TRUE
+	bayonet_state = "bayonet"
+	knife_x_offset = 23
+	knife_y_offset = 23
 
-/obj/item/projectile/bullet/pellet/magnum_buckshot
-	name = "magnum buckshot pellet"
-	damage = 15
-	armour_penetration = 0.15
-	wound_bonus = 10
-	bare_wound_bonus = 10
+/* * * * * * * * * * *
+ * Neostead shotgun
+ * Two-Tube semi-auto shotgun
+ * 12g
+ * Uncommon
+ * * * * * * * * * * */
 
-// BETA STUFF // Obsolete
-/obj/item/projectile/bullet/pellet/shotgun_buckshot/test
-	name = "buckshot pellet"
-	damage = 0
+/obj/item/gun/ballistic/shotgun/automatic/combat/neostead
+	name = "Neostead 2000"
+	desc = "An advanced shotgun with two separate magazine tubes, allowing you to quickly toggle between ammo types."
+	icon_state = "neostead"
+	item_state = "shotguncity"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube
+
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	init_recoil = RIFLE_RECOIL(2.2)
+
+	var/toggled = FALSE
+	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/neostead/examine(mob/user)
+	. = ..()
+	. += span_notice("Alt-click to switch tubes.")
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/neostead/Initialize()
+	. = ..()
+	if (!alternate_magazine)
+		alternate_magazine = new mag_type(src)
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/neostead/attack_self(mob/living/user)
+	. = ..()
+	if(!magazine.contents.len)
+		toggle_tube(user)
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/neostead/proc/toggle_tube(mob/living/user)
+	var/current_mag = magazine
+	var/alt_mag = alternate_magazine
+	magazine = alt_mag
+	alternate_magazine = current_mag
+	toggled = !toggled
+	if(toggled)
+		to_chat(user, "You switch to tube B.")
+	else
+		to_chat(user, "You switch to tube A.")
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/neostead/AltClick(mob/living/user)
+	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	toggle_tube(user)
+
+
+/* * * * * * * * * * *
+ * City-Killer shotgun
+ * Super semi-auto shotgun
+ * 12g
+ * Uncommon
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/shotgun/citykiller
+	name = "Winchester City-Killer shotgun"
+	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This one is well preserved pre-war pattern version."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "citykiller"
+	item_state = "shotguncity"
+	mag_type = /obj/item/ammo_box/magazine/city12g
+
+	init_firemodes = list(
+		BURST_5_ROUND,
+		SEMI_AUTO_SHOTGUN
+	)
+
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	init_recoil = RIFLE_RECOIL(2.8)
+
+	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
+
+/* * * * * * * * * * *
+ * Riot shotgun
+ * Magazine semi-auto shotgun
+ * 12g
+ * Uncommon
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/shotgun/riot
+	name = "Riot shotgun"
+	desc = "A compact riot shotgun with a large ammo drum and semi-automatic fire, designed to fight in close quarters."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "shotgunriot"
+	item_state = "shotgunriot"
+	w_class = WEIGHT_CLASS_BULKY
+	mag_type = /obj/item/ammo_box/magazine/d12g
+
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+
+	init_firemodes = list(
+		FULL_AUTO_200,
+		SEMI_AUTO_SHOTGUN
+	)
+
+	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(SHOTGUN_VOLUME),
+		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(SHOTGUN_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
+		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
+	)
+
+
+/* * * * * * * * * * *
+ * Jackhammer shotgun
+ * Magazine automatic! shotgun
+ * 12g
+ * Uncommon
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/shotgun/pancor
+	name = "Pancor Jackhammer"
+	desc = "A drum-loaded, fully automatic shotgun. The pinnacle of turning things into swiss cheese."
+	icon_state = "pancor"
+	item_state = "cshotgun1"
+	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
+	mag_type = /obj/item/ammo_box/magazine/d12g
+	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	init_recoil = RIFLE_RECOIL(2.8)
+	init_firemodes = list(
+		FULL_AUTO_300
+	)
+
+	w_class = WEIGHT_CLASS_BULKY
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(SHOTGUN_VOLUME),
+		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(SHOTGUN_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
+		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
+	)
+
+// BETA // Obsolete
+/obj/item/gun/ballistic/shotgun/shotttesting
+	name = "shotgun"
+	icon_state = "shotgunpolice"
+	item_state = "shotgunpolice"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/test
+	damage_multiplier = 7
