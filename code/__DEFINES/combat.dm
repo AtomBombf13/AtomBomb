@@ -309,6 +309,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_DAMAGE_RIFLE_MEDIUM 40
 #define BULLET_DAMAGE_RIFLE_HEAVY 70
 #define BULLET_DAMAGE_SHOTGUN_PELLET 11
+#define BULLET_DAMAGE_SHOTGUN_MAGNUM 21
 #define BULLET_DAMAGE_SHOTGUN_SLUG 50
 
 /// Bullet damage falloff per tile defines
@@ -330,7 +331,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_FALLOFF_START_RIFLE_LIGHT 3
 #define BULLET_FALLOFF_START_RIFLE_MEDIUM 10
 #define BULLET_FALLOFF_START_RIFLE_HEAVY 20
-#define BULLET_FALLOFF_START_SHOTGUN_PELLET 0
+#define BULLET_FALLOFF_START_SHOTGUN_PELLET 1 //So it doesn't instantly lose as the tile under you counts as 1
 #define BULLET_FALLOFF_START_SHOTGUN_SLUG 5
 
 /// Bullet damage falloff default defines
@@ -360,14 +361,14 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define RUBBERY_DAMAGE_MULT 0.1
 
 /// Bullet stamloss defines
-#define BULLET_STAMINA_PISTOL_LIGHT (BULLET_DAMAGE_PISTOL_LIGHT * 0.5)
-#define BULLET_STAMINA_PISTOL_MEDIUM (BULLET_DAMAGE_PISTOL_MEDIUM * 1)
-#define BULLET_STAMINA_PISTOL_HEAVY (BULLET_DAMAGE_PISTOL_HEAVY * 1)
-#define BULLET_STAMINA_RIFLE_LIGHT (BULLET_DAMAGE_RIFLE_LIGHT * 0.2)
-#define BULLET_STAMINA_RIFLE_MEDIUM (BULLET_DAMAGE_RIFLE_MEDIUM * 1)
-#define BULLET_STAMINA_RIFLE_HEAVY (BULLET_DAMAGE_RIFLE_HEAVY * 1.5)
+#define BULLET_STAMINA_PISTOL_LIGHT (BULLET_DAMAGE_PISTOL_LIGHT * 0.2)
+#define BULLET_STAMINA_PISTOL_MEDIUM (BULLET_DAMAGE_PISTOL_MEDIUM * 0.4)
+#define BULLET_STAMINA_PISTOL_HEAVY (BULLET_DAMAGE_PISTOL_HEAVY * 0.8)
+#define BULLET_STAMINA_RIFLE_LIGHT (BULLET_DAMAGE_RIFLE_LIGHT * 0.3)
+#define BULLET_STAMINA_RIFLE_MEDIUM (BULLET_DAMAGE_RIFLE_MEDIUM * 0.6)
+#define BULLET_STAMINA_RIFLE_HEAVY (BULLET_DAMAGE_RIFLE_HEAVY * 0.9)
 #define BULLET_STAMINA_SHOTGUN_PELLET (BULLET_DAMAGE_SHOTGUN_PELLET * 0.1)
-#define BULLET_STAMINA_SHOTGUN_SLUG (BULLET_DAMAGE_SHOTGUN_SLUG * 0.2)
+#define BULLET_STAMINA_SHOTGUN_SLUG (BULLET_DAMAGE_SHOTGUN_SLUG * 0.3)
 
 /// Rubber/beanbag stamloss defines
 #define RUBBERY_STAMINA_PISTOL_LIGHT (BULLET_DAMAGE_PISTOL_LIGHT * 2)
@@ -558,34 +559,16 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_FIRE_DELAY_BASE (1 SECONDS)
 
 /// Gun fire delay modifiers
-#define GUN_FIRE_DELAY_FASTEST (GUN_FIRE_DELAY_BASE * 0.1) // Mostly just good for automatics
-#define GUN_FIRE_DELAY_FASTER (GUN_FIRE_DELAY_BASE * 0.2) // 0.2s Mostly just good for automatics
-#define GUN_FIRE_DELAY_FAST (GUN_FIRE_DELAY_BASE * 0.4) // 0.4s
-#define GUN_FIRE_DELAY_NORMAL (GUN_FIRE_DELAY_BASE * 0.6) // 0.6s
-#define GUN_FIRE_DELAY_SLOW (GUN_FIRE_DELAY_BASE * 0.8) //0.8s
-#define GUN_FIRE_DELAY_SLOWER (GUN_FIRE_DELAY_BASE * 1.5) //1.5s
-
-/// Gun autofire delay Base
-#define GUN_AUTOFIRE_DELAY_BASE 1
-
-/// Gun fire delay modifiers
-#define GUN_AUTOFIRE_DELAY_FASTEST (GUN_AUTOFIRE_DELAY_BASE * 0.1)
-#define GUN_AUTOFIRE_DELAY_FASTER (GUN_AUTOFIRE_DELAY_BASE * 1)
-#define GUN_AUTOFIRE_DELAY_FAST (GUN_AUTOFIRE_DELAY_BASE * 2)
-#define GUN_AUTOFIRE_DELAY_NORMAL (GUN_AUTOFIRE_DELAY_BASE * 3)
-#define GUN_AUTOFIRE_DELAY_SLOW (GUN_AUTOFIRE_DELAY_BASE * 4)
-#define GUN_AUTOFIRE_DELAY_SLOWER (GUN_AUTOFIRE_DELAY_BASE * 5)
+#define GUN_FIRE_DELAY_FASTEST (GUN_FIRE_DELAY_BASE * 2.5) // 2.5
+#define GUN_FIRE_DELAY_FASTER (GUN_FIRE_DELAY_BASE * 3) // 3
+#define GUN_FIRE_DELAY_FAST (GUN_FIRE_DELAY_BASE * 3.5) // 3.5s
+#define GUN_FIRE_DELAY_NORMAL (GUN_FIRE_DELAY_BASE * 4) // 4s
+#define GUN_FIRE_DELAY_SLOW (GUN_FIRE_DELAY_BASE * 4.5) //4.5s
+#define GUN_FIRE_DELAY_SLOWER (GUN_FIRE_DELAY_BASE * 5) //5s
+#define GUN_FIRE_DELAY_ABSOLUTE (GUN_FIRE_DELAY_BASE * 6) //6s
 
 /// Gun burstfire delay Base
-#define GUN_BURSTFIRE_DELAY_BASE 1
-
-/// Gun fire delay modifiers
-#define GUN_BURSTFIRE_DELAY_FASTEST (GUN_BURSTFIRE_DELAY_BASE * 0.1)
-#define GUN_BURSTFIRE_DELAY_FASTER (GUN_BURSTFIRE_DELAY_BASE * 0.5)
-#define GUN_BURSTFIRE_DELAY_FAST (GUN_BURSTFIRE_DELAY_BASE * 1)
-#define GUN_BURSTFIRE_DELAY_NORMAL (GUN_BURSTFIRE_DELAY_BASE * 2)
-#define GUN_BURSTFIRE_DELAY_SLOW (GUN_BURSTFIRE_DELAY_BASE * 3)
-#define GUN_BURSTFIRE_DELAY_SLOWER (GUN_BURSTFIRE_DELAY_BASE * 4)
+#define GUN_BURSTFIRE_DELAY_BASE 2
 
 /// Time after you draw a gun that you're able to shoot it
 #define GUN_AIMING_TIME (1.5 SECONDS)
@@ -649,18 +632,6 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_SLOWDOWN_SHOTGUN_PUMP 0.10
 #define GUN_SLOWDOWN_SHOTGUN_AUTO 0.40
 
-/// Cock length
-/// Delay between cocking your gun
-#define GUN_COCK_BASE (1 SECONDS)
-
-#define GUN_COCK_INSTANT 0.1
-#define GUN_COCK_SHOTGUN_BASE (GUN_COCK_BASE)
-#define GUN_COCK_SHOTGUN_FAST (GUN_COCK_BASE * 0.4)
-#define GUN_COCK_SHOTGUN_LIGHTNING (GUN_COCK_BASE * 0.1)
-#define GUN_COCK_RIFLE_BASE (GUN_COCK_BASE)
-#define GUN_COCK_RIFLE_FAST (GUN_COCK_BASE * 0.75)
-#define GUN_COCK_RIFLE_LIGHTNING (GUN_COCK_BASE * 0.5)
-
 /// Refire speed multiplier for manual action guns, cus we no longer care about your cock length
 #define GUN_RIFLEMAN_REFIRE_DELAY_MULT 0.8
 
@@ -676,29 +647,28 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define HMG_RECOIL(x)          list(0.4 *x, 0.6*x, 3.6*x )
 
 //Quick defines for fire modes
-#define FULL_AUTO_150		list(mode_name = "full auto",  mode_desc = "150 rounds per minute",   automatic = 1, autofire_shot_delay = 3.5, burst_size = 1, icon="auto")
-#define FULL_AUTO_200		list(mode_name = "full auto",  mode_desc = "200 rounds per minute",   automatic = 1, autofire_shot_delay = 3, burst_size = 1, icon="auto")
-#define FULL_AUTO_250		list(mode_name = "full auto",  mode_desc = "250 rounds per minute",   automatic = 1, autofire_shot_delay = 2.5, burst_size = 1, icon="auto")
-#define FULL_AUTO_300		list(mode_name = "full auto",  mode_desc = "300 rounds per minute",   automatic = 1, autofire_shot_delay = 2, burst_size = 1, icon="auto")
-#define FULL_AUTO_400		list(mode_name = "full auto",  mode_desc = "400 rounds per minute",   automatic = 1, autofire_shot_delay = 1.5, burst_size = 1, icon="auto")
-#define FULL_AUTO_600		list(mode_name = "full auto",  mode_desc = "600 rounds per minute",   automatic = 1, autofire_shot_delay = 1, burst_size = 1, icon="auto")
-#define FULL_AUTO_800		list(mode_name = "fuller auto",  mode_desc = "800 rounds per minute",   automatic = 1, autofire_shot_delay = 0.8, burst_size = 1, icon="auto")
-#define FULL_AUTO_1000		list(mode_name = "fullerer auto",  mode_desc = "1000 rounds per minute",   automatic = 1, autofire_shot_delay = 0.6, burst_size = 1, icon="auto")
-#define FULL_AUTO_1200		list(mode_name = "ludicrous auto",  mode_desc = "1200 rounds per minute",   automatic = 1, autofire_shot_delay = 0.5, burst_size = 1, icon="auto")
-
-#define SEMI_AUTO_NODELAY	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, burst_size=1, icon="semi")
-
-//Cog firemode
-#define BURST_2_BEAM		list(mode_name="2-beam bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=2, fire_delay=null, icon="burst")
-
-#define BURST_2_ROUND		list(mode_name="2-round bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=2, fire_delay=null, icon="burst")
-#define BURST_3_ROUND		list(mode_name="3-round bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=3, fire_delay=null, icon="burst")
-#define BURST_3_ROUND_RAPID		list(mode_name=" High-delay Rapid 3-round bursts", mode_desc = "Short, fast bursts with a higher delay between bursts", automatic = 0, burst_size=3, fire_delay=15, icon="auto", burst_shot_delay = 0.9)
-#define BURST_5_ROUND		list(mode_name="5-round bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=5, fire_delay=null, icon="burst")
-#define BURST_8_ROUND		list(mode_name="8-round bursts", mode_desc = "Short, uncontrolled bursts", automatic = 0, burst_size=8, fire_delay=null, icon="burst")
-#define BURST_10_ROUND		list(mode_name="10-round bursts", mode_desc = "Short, uncontrolled bursts", automatic = 0, burst_size=10, fire_delay=null, icon="burst")
-
 #define WEAPON_NORMAL		list(mode_name="standard", burst_size=1, icon="semi")
+#define SEMI_AUTO_NODELAY	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 2, burst_size=1, icon="semi") //Shouldn't be used on guns
+
+#define SEMI_AUTO_SNIPER	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 7, burst_size=1, icon="semi") //Sniper Rifle and AMR/Gauss
+#define SEMI_AUTO_RIFLE		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 5, burst_size=1, icon="semi") //This means bolt action
+#define SEMI_AUTO_PISTOL	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 4, burst_size=1, icon="semi") //Anything that should be baseline weapon
+#define SEMI_AUTO_SMG		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 3, burst_size=1, icon="semi")	//This includes carbines and automatic rifles
+#define SEMI_AUTO_SHOTGUN	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 2.5, burst_size=1, icon="semi")
+
+#define BURST_2_ROUND		list(mode_name="2-round bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=2, fire_delay=2, icon="burst")
+#define BURST_3_ROUND		list(mode_name="3-round bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=3, fire_delay=2, icon="burst")
+#define BURST_5_ROUND		list(mode_name="5-round bursts", mode_desc = "Short, controlled bursts", automatic = 0, burst_size=5, fire_delay=2, icon="burst")
+#define BURST_8_ROUND		list(mode_name="8-round bursts", mode_desc = "Short, uncontrolled bursts", automatic = 0, burst_size=8, fire_delay=2, icon="burst")
+#define BURST_10_ROUND		list(mode_name="10-round bursts", mode_desc = "Short, uncontrolled bursts", automatic = 0, burst_size=10, fire_delay=2, icon="burst")
+
+#define FULL_AUTO_150		list(mode_name = "full auto",  mode_desc = "150 rounds per minute",   automatic = 1, fire_delay = 4, burst_size = 1, icon="auto")
+#define FULL_AUTO_200		list(mode_name = "full auto",  mode_desc = "200 rounds per minute",   automatic = 1, fire_delay = 3.5, burst_size = 1, icon="auto")
+#define FULL_AUTO_250		list(mode_name = "full auto",  mode_desc = "250 rounds per minute",   automatic = 1, fire_delay = 3, burst_size = 1, icon="auto")
+#define FULL_AUTO_300		list(mode_name = "full auto",  mode_desc = "300 rounds per minute",   automatic = 1, fire_delay = 2.5, burst_size = 1, icon="auto")
+#define FULL_AUTO_400		list(mode_name = "full auto",  mode_desc = "400 rounds per minute",   automatic = 1, fire_delay = 2, burst_size = 1, icon="auto")
+#define FULL_AUTO_600		list(mode_name = "full auto",  mode_desc = "600 rounds per minute",   automatic = 1, fire_delay = 1.5, burst_size = 1, icon="auto")
+#define FULL_AUTO_800		list(mode_name = "fuller auto",  mode_desc = "800 rounds per minute",   automatic = 1, fire_delay = 1.2, burst_size = 1, icon="auto") //This is as fast as weapons should ever fire
 
 /// Bullet zone favoring defines
 /// High accuracy, generally goes where you mean to put it, for precision rifles and such
@@ -743,14 +713,14 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 	BODY_ZONE_R_ARM = 22,\
 	BODY_ZONE_L_LEG = 22,\
 	BODY_ZONE_R_LEG = 22)
-/// Pellet zone weight list
+/// Pellet zone weight list / Who actually aims for LEGS with a shotgun aim for center mass
 #define ZONE_WEIGHT_LIST_SHOTGUN list(\
 	BODY_ZONE_HEAD = 1,\
-	BODY_ZONE_CHEST = 1,\
-	BODY_ZONE_L_ARM = 22,\
-	BODY_ZONE_R_ARM = 22,\
-	BODY_ZONE_L_LEG = 22,\
-	BODY_ZONE_R_LEG = 22)
+	BODY_ZONE_CHEST = 12,\
+	BODY_ZONE_L_ARM = 15,\
+	BODY_ZONE_R_ARM = 15,\
+	BODY_ZONE_L_LEG = 15,\
+	BODY_ZONE_R_LEG = 15)
 
 /// Gun skill flags
 /// Gun is affected by rifleman skill

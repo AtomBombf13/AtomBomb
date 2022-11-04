@@ -46,8 +46,8 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/improvisedpipe
 	name = "pipe rifle"
-	ammo_type = /obj/item/ammo_casing/a556/sport
-	caliber = list(CALIBER_556)
+	ammo_type = /obj/item/ammo_casing/c10mm/improvised
+	caliber = list(CALIBER_10MM)
 	max_ammo = 1
 	can_change_caliber = TRUE
 

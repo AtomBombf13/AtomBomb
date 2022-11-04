@@ -866,8 +866,6 @@
 /obj/item/clothing/under/f13/ncr_formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/under/f13/ncr/ncr_officer,
-/obj/item/clothing/suit/armor/ncrarmor/ncr_codressjack,
-/obj/item/clothing/head/beret/ncr_codresscap,
 /turf/open/floor/carpet/royalblue,
 /area/f13/ncr)
 "dI" = (
@@ -1039,7 +1037,6 @@
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack,
 /obj/item/clothing/under/f13/ncr/ncr_dress,
-/obj/item/clothing/head/beret/ncr_dresscap,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "ez" = (
@@ -1603,8 +1600,6 @@
 /obj/item/clothing/under/f13/ncr_formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/under/f13/ncr/ncr_officer,
-/obj/item/clothing/suit/armor/ncrarmor/ncr_codressjack,
-/obj/item/clothing/head/beret/ncr_codresscap,
 /obj/structure/decoration/rag{
 	icon_state = "flag_ncr";
 	name = "NCR banner";
@@ -2137,7 +2132,6 @@
 /obj/effect/decal/remains{
 	icon_state = "remains"
 	},
-/obj/item/clothing/head/helmet/f13/legion/venator,
 /turf/open/floor/plasteel/f13/vault_floor/plating{
 	name = "plating"
 	},
@@ -2675,14 +2669,6 @@
 /area/f13/caves)
 "lm" = (
 /obj/structure/closet/locker,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
-/obj/item/clothing/head/beret/ncr_dresscap,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "lo" = (
@@ -2694,7 +2680,6 @@
 	},
 /obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack,
 /obj/item/clothing/under/f13/ncr/ncr_dress,
-/obj/item/clothing/head/beret/ncr_dresscap,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "lr" = (
@@ -2866,10 +2851,6 @@
 /obj/item/clothing/under/f13/ncr,
 /obj/item/clothing/under/f13/ncr,
 /obj/item/clothing/under/f13/ncr,
-/obj/item/clothing/under/f13/ncr/conscript,
-/obj/item/clothing/under/f13/ncr/conscript,
-/obj/item/clothing/under/f13/ncr/conscript,
-/obj/item/clothing/under/f13/ncr/conscript,
 /obj/item/clothing/shoes/f13/military/ncr,
 /obj/item/clothing/shoes/f13/military/ncr,
 /obj/item/clothing/shoes/f13/military/ncr,
@@ -2908,8 +2889,6 @@
 "ma" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/stripes/box,
-/obj/item/storage/belt/military/NCR_Bandolier,
-/obj/item/storage/belt/army/assault/ncr,
 /obj/structure/rack{
 	name = "equipment rack"
 	},
@@ -2964,7 +2943,6 @@
 /area/f13/brotherhood/surface)
 "mi" = (
 /obj/structure/closet/cabinet/anchored,
-/obj/item/clothing/head/beret/ncr_dresscap,
 /obj/item/clothing/under/f13/ncr/ncr_dress,
 /obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack,
 /obj/machinery/light/small{
@@ -3098,30 +3076,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/brotherhood/surface)
-"mG" = (
-/obj/item/clothing/suit/armor/ncrarmor/reserve,
-/obj/item/clothing/suit/armor/ncrarmor/reserve,
-/obj/item/clothing/suit/armor/ncrarmor/reserve,
-/obj/item/clothing/suit/armor/ncrarmor/reserve,
-/obj/item/clothing/suit/armor/ncrarmor/conscript,
-/obj/item/clothing/suit/armor/ncrarmor/conscript,
-/obj/item/clothing/suit/armor/ncrarmor/conscript,
-/obj/item/clothing/suit/armor/ncrarmor/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
-/obj/machinery/light,
-/obj/effect/turf_decal/stripes/box,
-/obj/structure/rack{
-	name = "equipment rack"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/ncr)
 "mH" = (
 /obj/structure/chair/stool/f13stool,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -3216,8 +3170,6 @@
 	name = "Medal of Science"
 	},
 /obj/item/clothing/under/f13/ncr/ncr_officer,
-/obj/item/clothing/suit/armor/ncrarmor/ncr_codressjack,
-/obj/item/clothing/head/beret/ncr_codresscap,
 /turf/open/floor/carpet/royalblack,
 /area/f13/ncr)
 "mS" = (
@@ -3225,12 +3177,6 @@
 /obj/item/storage/fancy/donut_box,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
-"mU" = (
-/obj/item/flag/followers,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
 "mV" = (
 /obj/structure/chair,
 /turf/open/floor/f13{
@@ -3373,7 +3319,6 @@
 /area/f13/wasteland)
 "nH" = (
 /obj/effect/turf_decal/stripes/box,
-/obj/item/clothing/head/f13/ncr/standard/conscript,
 /obj/structure/rack{
 	name = "equipment rack"
 	},
@@ -6047,7 +5992,6 @@
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen/fountain,
-/obj/effect/spawner/lootdrop/f13/cash_ncr_low,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/ncr)
 "yd" = (
@@ -8790,16 +8734,6 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/item/storage/belt/military/NCR_Bandolier,
-/obj/item/storage/belt/military/NCR_Bandolier,
-/obj/item/storage/belt/military/NCR_Bandolier,
-/obj/item/storage/belt/military/NCR_Bandolier,
-/obj/item/storage/belt/military/NCR_Bandolier,
-/obj/item/storage/belt/army/assault/ncr,
-/obj/item/storage/belt/army/assault/ncr,
-/obj/item/storage/belt/army/assault/ncr,
-/obj/item/storage/belt/army/assault/ncr,
-/obj/item/storage/belt/army/assault/ncr,
 /obj/effect/turf_decal/stripes/box,
 /obj/structure/rack{
 	name = "equipment rack"
@@ -18604,7 +18538,7 @@ kC
 kC
 kC
 kC
-lH
+kC
 kC
 kC
 kC
@@ -22272,7 +22206,7 @@ dI
 UU
 JS
 QH
-mG
+ma
 Jd
 kC
 kC
@@ -50914,7 +50848,7 @@ Fz
 wl
 Fz
 wl
-mU
+RH
 oK
 PL
 PL

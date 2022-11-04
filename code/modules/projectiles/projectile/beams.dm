@@ -329,7 +329,7 @@
 
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
-	damage = 33
+	damage = 26
 	armour_penetration = 0.02 //mostly just to allow scratch damage, so you arent SOL just mostly fucced
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -586,7 +586,7 @@
 
 /obj/item/projectile/beam/laser/aer12 //AER12
 	name = "laser beam"
-	damage = 34
+	damage = 30
 	armour_penetration = 0.55
 	icon_state = "xray"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
@@ -594,9 +594,9 @@
 
 /obj/item/projectile/beam/laser/aer12/hitscan
 	name = "laser beam"
-	damage = 28
+	damage = 29
 	hitscan = TRUE
-	armour_penetration = 0.02
+	armour_penetration = 0.03
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray

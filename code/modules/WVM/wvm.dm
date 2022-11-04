@@ -850,12 +850,16 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	prize_list = list(
 		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
-		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25)
+		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25),
+		new /datum/data/wasteland_equipment("Vertical Foregrip",			/obj/item/gun_upgrade/underbarrel/foregrip,						25),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/gun_upgrade/muzzle/recoil_comp,						25),
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
-		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25)
+		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25),
+		new /datum/data/wasteland_equipment("Vertical Foregrip",			/obj/item/gun_upgrade/underbarrel/foregrip,						25),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/gun_upgrade/muzzle/recoil_comp,						25),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/crafting

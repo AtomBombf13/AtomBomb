@@ -11,7 +11,6 @@
 	can_suppress = FALSE
 	fire_sound_silenced = 'sound/weapons/gunshot_silenced.ogg'
 	silenced = TRUE
-	burst_size = 1
 	fire_delay = 0
 	actions_types = list()
 

@@ -173,7 +173,6 @@ here's a tip, go search DEFINES/access.dm
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
@@ -240,9 +239,9 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/armor/medium/combat/town
 	mask = /obj/item/clothing/mask/gas/town
 	gloves = /obj/item/clothing/gloves/f13/military
-	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
+	r_hand = /obj/item/gun/ballistic/automatic/combat
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m5mm=1,
+		/obj/item/ammo_box/magazine/greasegun = 1,
 		/obj/item/gun/ballistic/revolver/colt6520 = 1
 		)
 
@@ -526,26 +525,23 @@ here's a tip, go search DEFINES/access.dm
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/metal_guard)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/laserguide)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forged_barrel)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/overshootermod)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/fullauto)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_helmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_armor)
 
 /datum/outfit/job/eastwood/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

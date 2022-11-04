@@ -20,6 +20,28 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 
+/* magnum buckshot pellet
+ * DAMAGE: 11
+ * STAMIN: 1
+ * RECOIL: 2
+ * WOUNDS: 0
+ * WNAKED: 0
+ */
+/obj/item/projectile/bullet/pellet/shotgun_magnum
+	name = "magnum buckshot pellet"
+	damage = BULLET_DAMAGE_SHOTGUN_MAGNUM * BULLET_SURPLUS_MULT
+	stamina = BULLET_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
+	spread = BULLET_SPREAD_SURPLUS
+	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+
+	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
+	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
+	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
+	
+	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
+	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
+	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
+
 /* rubber pellet
  * DAMAGE: 1
  * STAMIN: 11
