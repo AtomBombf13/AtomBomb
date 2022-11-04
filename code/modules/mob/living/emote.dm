@@ -281,6 +281,15 @@
 	message = "screams."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/scream/get_sound(mob/living/M) 
+	. = ..()
+	if(ishuman(M))
+		if(M.gender == FEMALE)
+			sound = 'sound/effects/female_scream.ogg'
+		else
+			sound = 'sound/effects/male_scream.ogg'
+		return 
+
 /datum/emote/living/scowl
 	key = "scowl"
 	key_third_person = "scowls"
