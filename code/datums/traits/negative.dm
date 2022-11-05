@@ -84,7 +84,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 		if("Captain")
 			heirloom_type = /obj/item/clothing/accessory/medal/gold/captain/family
 		if("Great Khan")
-			heirloom_type = pick(/obj/item/melee/onehanded/knife/switchblade,/obj/item/melee/onehanded/machete, /obj/item/clothing/mask/bandana/red)
+			heirloom_type = pick(/obj/item/melee/onehanded/knife/switchblade, /obj/item/melee/onehanded/machete, /obj/item/clothing/mask/bandana/red)
 		if("Far-Lands Tribals")
 			heirloom_type = pick(/obj/item/clothing/accessory/talisman,/obj/item/clothing/accessory/skullcodpiece/fake)
 	if(!heirloom_type)
