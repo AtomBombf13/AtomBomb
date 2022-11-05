@@ -331,7 +331,7 @@
 /obj/item/reagent_containers/glass/get_belt_overlay()
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "bottle")
 
-// Mortar & Pestle
+// Mortar & Pestle //
 
 /obj/item/pestle
 	name = "bone pestle"
