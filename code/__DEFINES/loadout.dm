@@ -99,7 +99,7 @@
 #define LOADOUT_CAN_NAME (1<<0) //renaming items
 #define LOADOUT_CAN_DESCRIPTION (1<<1) //adding a custom description to items
 
-//quirks
+///quirks
 #define QUIRK_POSITIVE	"Positive"
 #define QUIRK_NEGATIVE	"Negative"
 #define QUIRK_NEUTRAL	"Neutral"
