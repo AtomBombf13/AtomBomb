@@ -558,16 +558,6 @@
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/ammo_box/plasmamusket
-	name = "Canister box (Plasma musket)"
-	icon_state = "plasmusketbox"
-	multiple_sprites = 2
-	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
-	max_ammo = 6
-	caliber = list(CALIBER_MUSKET_PLASMA)
-	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
-	w_class = WEIGHT_CLASS_SMALL
-
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	caliber = "40mm"

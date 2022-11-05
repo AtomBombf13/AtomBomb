@@ -138,7 +138,7 @@
 		/obj/item/gun/ballistic/automatic/m1garand,
 		/obj/item/gun/ballistic/automatic/assault_carbine/worn,
 		/obj/item/gun/ballistic/rifle/repeater/brush,
-		/obj/item/gun/ballistic/automatic/marksman/sniper,
+		/obj/item/gun/ballistic/automatic/sniper,
 		/obj/item/gun/ballistic/rifle/mag/antimateriel
 	)
 

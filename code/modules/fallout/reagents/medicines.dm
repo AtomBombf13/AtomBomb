@@ -457,6 +457,8 @@
 			switch(job.faction)
 				if(FACTION_LEGION)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
+				if(FACTION_NCR, FACTION_ENCLAVE, FACTION_BROTHERHOOD)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "used drugs", /datum/mood_event/used_drugs, name)
 	. = TRUE
 
 /datum/reagent/medicine/medx/overdose_process(mob/living/carbon/human/M)

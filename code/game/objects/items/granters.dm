@@ -607,7 +607,7 @@
 	icon_state = "gab1"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/ninemil, /datum/crafting_recipe/huntingrifle)
+	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/varmintrifle, /datum/crafting_recipe/huntingshotgun)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_two
 	name = "Guns and Bullets, Part 2"
@@ -615,7 +615,7 @@
 	icon_state = "gab2"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/huntingrifle, /datum/crafting_recipe/m1911, /datum/crafting_recipe/varmintrifle)
+	crafting_recipe_types = list(/datum/crafting_recipe/smg10mm, /datum/crafting_recipe/verminkiller, /obj/item/gun/ballistic/shotgun/trench, /datum/crafting_recipe/huntingrifle)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_three
 	name = "Guns and Bullets, Part 3"
@@ -623,7 +623,7 @@
 	icon_state = "gab3"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/ergonomic_grip, /datum/crafting_recipe/metal_guard, /datum/crafting_recipe/forged_barrel, /datum/crafting_recipe/booster, /datum/crafting_recipe/laserguide, /datum/crafting_recipe/gigalens, /datum/crafting_recipe/battshunt, /datum/crafting_recipe/overdrivemod, /datum/crafting_recipe/overshootermod, /datum/crafting_recipe/ai_tool)
+	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/ergonomic_grip, /datum/crafting_recipe/metal_guard, /datum/crafting_recipe/forged_barrel, /datum/crafting_recipe/booster)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_four
 	name = "Guns and Bullets, Part 4"
@@ -631,7 +631,15 @@
 	icon_state = "gab4"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/flux, /datum/crafting_recipe/lenses, /datum/crafting_recipe/conductors, /datum/crafting_recipe/receiver, /datum/crafting_recipe/assembly, /datum/crafting_recipe/alloys)
+	crafting_recipe_types = list(/datum/crafting_recipe/sniperscope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/recoilcomp, /datum/crafting_recipe/laserguide, /datum/crafting_recipe/fullauto)
+
+/obj/item/book/granter/crafting_recipe/gunsmith_five //Keep this loot only
+	name = "Guns and Bullets, Part 5"
+	desc = "A rare issue of Guns and Bullets barely even making it out of printing press before the war, allowing skilled craftsmen to perfect their weapon. It's barely holding up, and looks like only one person can study the knowledge from it."
+	icon_state = "gab5"
+	oneuse = TRUE
+	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+	crafting_recipe_types = list(/datum/crafting_recipe/gigalens, /datum/crafting_recipe/battshunt, /datum/crafting_recipe/overdrivemod, /datum/crafting_recipe/overshootermod, /datum/crafting_recipe/ai_tool)
 
 /obj/item/book/granter/crafting_recipe/scav_one
 	name = "SCAV! Issue 1"
@@ -856,9 +864,8 @@
 	name = "Weapons of the Vault Defense Force"
 	desc = "a book detailing weapons used in the region and by the local town, it has lithiographed pictures of hand-drawn schematics for each weapon type"
 	oneuse = TRUE
-	crafting_recipe_types = list(/datum/crafting_recipe/policepistol, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/policerifle, /datum/crafting_recipe/steelbib/heavy, /datum/crafting_recipe/armyhelmetheavy, /datum/crafting_recipe/huntingshotgun)
+	crafting_recipe_types = list(/datum/crafting_recipe/policepistol, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/combatrifle, /datum/crafting_recipe/steelbib/heavy, /datum/crafting_recipe/armyhelmetheavy, /datum/crafting_recipe/huntingshotgun)
 	remarks = list("Looks like Eastwood hand-crafts replicas from a pre-war police armory", "Some of these weapons are more than 200 years old....", "Duct tape really can hold it together!", "So that is how you laminate armor sheets together", "Looks like you can beat metal into just the right shape to replace the bits")
-
 
 /obj/item/book/granter/trait/tagger
 	name = "Picket Fences"
@@ -942,8 +949,6 @@
 	granted_trait = TRAIT_WIREVISION
 	traitname = "wirevision"
 	remarks = list("Troubleshooting is a systematic approach to problem solving, do not skip any steps in the process.", "Ensure you have all the required parts before you begin.", "Don't lose track of your tools, or you have a new problem to deal with.", "Make sure you check the colouring of wires extremely carefully- you don't want to be mixing up yellow and lime, or purple and indigo!")
-
-
 
 /obj/item/book/granter/trait/pa_wear
 	name = "US Army: Mechanized Infantry Handbook"

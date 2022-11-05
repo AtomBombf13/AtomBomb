@@ -26440,7 +26440,7 @@
 "ePS" = (
 /obj/structure/table/wood,
 /obj/item/newspaper,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -37766,11 +37766,11 @@
 /area/f13/wasteland)
 "kbE" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/bundle/f13/trail,
-/obj/effect/spawner/bundle/f13/trail,
 /obj/structure/guncase{
 	anchored = 1
 	},
+/obj/item/gun/ballistic/rifle/repeater/trail,
+/obj/item/gun/ballistic/rifle/repeater/trail,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	color = "#e4e4e4"
 	},
@@ -37791,6 +37791,15 @@
 /obj/machinery/light/small/broken,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"kcp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/shelf_wood,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/shotgun/buck,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/legion)
 "kcv" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/f13/wood,
@@ -38451,11 +38460,11 @@
 /area/f13/building)
 "ktD" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/bundle/f13/mosin,
-/obj/effect/spawner/bundle/f13/mosin,
 /obj/structure/guncase{
 	anchored = 1
 	},
+/obj/item/gun/ballistic/shotgun/hunting,
+/obj/item/gun/ballistic/shotgun/hunting,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	color = "#e4e4e4"
 	},
@@ -42582,6 +42591,19 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building/mall)
+"mlj" = (
+/obj/effect/decal/marking{
+	icon_state = "doublevertical"
+	},
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	icon_state = "manhole_open";
+	id = "S7"
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain0"
+	},
+/area/f13/wasteland)
 "mln" = (
 /obj/structure/curtain,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/side{
@@ -43830,6 +43852,15 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/mall)
+"mNW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/shelf_wood,
+/obj/item/ammo_box/tube/m44,
+/obj/item/ammo_box/tube/m44,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	color = "#e4e4e4"
+	},
+/area/f13/legion)
 "mOh" = (
 /obj/structure/rack,
 /obj/item/clothing/neck/tie/black,
@@ -125921,8 +125952,8 @@ qXa
 tbW
 wfv
 wfv
-wfv
-wfv
+kcp
+mNW
 vTx
 uXS
 uvO
@@ -127881,7 +127912,7 @@ add
 add
 wDE
 wDE
-add
+mlj
 add
 add
 aIa
