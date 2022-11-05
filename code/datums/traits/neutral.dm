@@ -190,10 +190,11 @@
 	gain_text = "<span class='notice'>The words being spoken around you don't make any sense."
 	lose_text = "<span class='notice'>You've developed fluency in English."
 
-/datum/quirk/foreigner/add()
-	var/mob/living/carbon/human/human_holder = quirk_holder
-	human_holder.add_blocked_language(/datum/language/common)
+/datum/quirk/foreigner/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.remove_language(/datum/language/common)
+// You can pick languages for your character, if you don't pick anything, enjoy the rest of the round understanding nothing.
 
-/datum/quirk/foreigner/remove()
-	var/mob/living/carbon/human/human_holder = quirk_holder
-	human_holder.remove_blocked_language(/datum/language/common)
+/datum/quirk/foreigner/remove() //i mean, the lose text explains it, so i'm making it actually work
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/common)
