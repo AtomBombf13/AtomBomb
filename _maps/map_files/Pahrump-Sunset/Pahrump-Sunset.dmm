@@ -172,7 +172,6 @@
 /obj/item/pen/fountain/captain,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/protectron/playable,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -403,11 +402,6 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
-"abN" = (
-/obj/structure/flora/grass/coyote/one,
-/mob/living/simple_animal/hostile/stalker/playable/legion,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/caves)
 "abO" = (
 /mob/living/simple_animal/opossum,
 /obj/structure/flora/grass/wasteland{
@@ -29831,14 +29825,6 @@
 /obj/item/soap/homemade,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood)
-"guU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/protectron/playable,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/building)
 "guY" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/pickaxe,
@@ -35757,7 +35743,6 @@
 "jaV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/varmint,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -35917,13 +35902,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legion)
-"jfW" = (
-/mob/living/simple_animal/hostile/eyebot/playable,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "jgb" = (
 /obj/structure/fence/corner{
 	dir = 1;
@@ -42211,11 +42189,6 @@
 	name = "concrete wall"
 	},
 /area/f13/ncr)
-"mcl" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/wolf/alpha/playable,
-/turf/open/floor/f13/wood,
-/area/f13/building)
 "mcp" = (
 /obj/structure/car/rubbish2,
 /turf/open/indestructible/ground/outside/road{
@@ -56617,13 +56590,6 @@
 	icon_state = "cross2"
 	},
 /area/f13/wasteland)
-"sVb" = (
-/mob/living/simple_animal/hostile/handy/playable,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "sVf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -64637,13 +64603,6 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland)
-"wLd" = (
-/mob/living/simple_animal/hostile/stalker/playable,
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 1;
-	icon_state = "dirt"
-	},
-/area/f13/building)
 "wLg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/rock{
@@ -70453,7 +70412,7 @@ gNb
 lIR
 aJN
 eXj
-abN
+nKz
 gUZ
 kCM
 aJN
@@ -73277,7 +73236,7 @@ aae
 aae
 aae
 aae
-aae
+aak
 aae
 aae
 aae
@@ -73533,7 +73492,7 @@ aak
 aak
 aak
 aak
-aak
+aae
 aae
 aae
 aae
@@ -90549,9 +90508,9 @@ biB
 oHM
 aiM
 aaL
-sVb
+aaL
 aiM
-jfW
+aaL
 aaL
 aaD
 aae
@@ -96154,7 +96113,7 @@ rkl
 ixZ
 tbf
 xPI
-wLd
+acg
 rkl
 aae
 aae
@@ -114142,7 +114101,7 @@ cNn
 kVQ
 xQs
 kVQ
-mcl
+kVQ
 abP
 aae
 aae
@@ -116675,7 +116634,7 @@ esK
 bsk
 fkX
 aph
-guU
+fFf
 agk
 bnG
 afS

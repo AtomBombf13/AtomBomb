@@ -853,12 +853,6 @@
 /obj/item/book/manual/wiki/cit/chem_recipies,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"aDx" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/mob/living/simple_animal/hostile/handy/playable,
-/turf/open/water,
-/area/f13/tunnel)
 "aEe" = (
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -11212,11 +11206,6 @@
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
-/area/f13/tunnel)
-"fTd" = (
-/obj/structure/lattice/catwalk,
-/mob/living/simple_animal/hostile/handy/playable,
-/turf/open/water,
 /area/f13/tunnel)
 "fTx" = (
 /obj/structure/displaycase,
@@ -32117,8 +32106,6 @@
 /area/f13/caves)
 "wpP" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
 /obj/item/ammo_box/magazine/w308,
 /obj/item/ammo_box/magazine/w308,
 /obj/item/ammo_box/magazine/w308,
@@ -38122,7 +38109,7 @@ aae
 aae
 aak
 aae
-aak
+aae
 aae
 aae
 aae
@@ -51134,8 +51121,8 @@ bJq
 vSi
 mlr
 pAe
-fTd
-aDx
+dHk
+hab
 mlr
 vSi
 bJq
@@ -51647,7 +51634,7 @@ bJq
 bJq
 uXj
 mlr
-fTd
+dHk
 dHk
 dHk
 edO

@@ -3434,8 +3434,6 @@
 "gOj" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/turf_decal/stripes/white/box,
-/obj/item/gun/ballistic/automatic/varmint,
-/obj/item/gun/ballistic/automatic/varmint,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "gOS" = (
@@ -34040,7 +34038,7 @@ rwk
 rwk
 rwk
 vLb
-vLb
+rwk
 rwk
 vLb
 vLb
