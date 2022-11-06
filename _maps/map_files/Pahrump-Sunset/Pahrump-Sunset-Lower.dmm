@@ -32371,8 +32371,6 @@
 /area/f13/caves)
 "wpP" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
 /obj/item/ammo_box/magazine/w308,
 /obj/item/ammo_box/magazine/w308,
 /obj/item/ammo_box/magazine/w308,
@@ -39407,7 +39405,7 @@ xwF
 aak
 aak
 aak
-aak
+aae
 aae
 aae
 aae
