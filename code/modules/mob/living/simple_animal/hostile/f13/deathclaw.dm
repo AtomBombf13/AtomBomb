@@ -53,15 +53,6 @@
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
 
-/mob/living/simple_animal/hostile/deathclaw/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 2 //can smash walls
-	wander = FALSE
-
 // Mother death claw
 /mob/living/simple_animal/hostile/deathclaw/mother
 	name = "mother deathclaw"
@@ -110,6 +101,29 @@
 	melee_damage_upper = 80
 	footstep_type = FOOTSTEP_MOB_HEAVY
 
+
+//// Cloaked Deathclaws - Boss Unique Deathclaws possibly
+// Brown
+/mob/living/simple_animal/hostile/deathclaw/cloaked
+	name = "cloaked deathclaw"
+	desc = "A massive, retillian creature with powerful muscles, razor-sharp claws, and aggression to match. This one seems to have a cloak around it, and an electronic eye, along with an device on its arm."
+	icon_state = "fight_bro"
+	icon_living = "fight_bro"
+	icon_dead = "ded_bro"
+
+// Red
+/mob/living/simple_animal/hostile/deathclaw/cloaked/red
+	name = "red cloaked deathclaw"
+	icon_state = "fight_red"
+	icon_living = "fight_red"
+	icon_dead = "ded_red"
+
+// Black
+/mob/living/simple_animal/hostile/deathclaw/cloaked/black
+	name = "black cloaked deathclaw"
+	icon_state = "fight_hub"
+	icon_living = "fight_hub"
+	icon_dead = "ded_hub"
 
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
