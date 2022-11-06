@@ -459,7 +459,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/no_guns
 	name = "Fat-Fingered"
 	desc = "Due to the shape of your hands, width of your fingers or just not having fingers at all, you're unable to fire guns without accommodation."
-	value = 2
+	value = -2
 	mob_trait = TRAIT_CHUNKYFINGERS
 	gain_text = "<span class='notice'>Your fingers feel... thick.</span>"
 	lose_text = "<span class='notice'>Your fingers feel normal again.</span>"
@@ -467,7 +467,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/illiterate
 	name = "Illiterate"
 	desc = "You can't read nor write, plain and simple."
-	value = 2
+	value = -1
 	mob_trait = TRAIT_ILLITERATE
 	gain_text = "<span class='notice'>The knowledge of how to read seems to escape from you.</span>"
 	lose_text = "<span class='notice'>Written words suddenly make sense again."
@@ -475,7 +475,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/flimsy
 	name = "Flimsy"
 	desc = "Your body is a little more fragile then most, decreasing total health by 20%."
-	value = 2
+	value = -2
 	medical_record_text = "Patient has abnormally low capacity for injury."
 	gain_text = "<span class='notice'>You feel like you could break with a single hit."
 	lose_text = "<span class='notice'>You feel more durable."
@@ -493,7 +493,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	desc = "For some reason you don't feel... right without wearing some kind of gas mask."
 	gain_text = "<span class='danger'>You start feeling unwell without any gas mask on.</span>"
 	lose_text = "<span class='notice'>You no longer have a need to wear some gas mask.</span>"
-	value = 1
+	value = -1
 	mood_quirk = TRUE
 	medical_record_text = "Patient feels more secure when wearing a gas mask."
 	var/mood_category = "masked_mook"
@@ -528,7 +528,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/paper_skin
 	name = "Paper Skin"
 	desc = "Your flesh is weaker, resulting in receiving cuts more easily."
-	value = 2
+	value = -2
 	mob_trait = TRAIT_PAPER_SKIN
 	gain_text = "<span class='notice'>Your flesh feels weak!</span>"
 	lose_text = "<span class='notice'>Your flesh feels more durable!</span>"
@@ -537,7 +537,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/glass_bones
 	name = "Glass Bones"
 	desc = "Your bones are far more brittle, and more vulnerable to breakage."
-	value = 2
+	value = -2
 	mob_trait = TRAIT_GLASS_BONES
 	gain_text = "<span class='notice'>Your bones feels weak!</span>"
 	lose_text = "<span class='notice'>Your bones feels more durable!</span>"
