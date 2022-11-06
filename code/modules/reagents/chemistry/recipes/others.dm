@@ -553,12 +553,6 @@
 	results = list(/datum/reagent/diethylamine = 2)
 	required_reagents = list (/datum/reagent/ammonia = 1, /datum/reagent/consumable/ethanol = 1)
 
-/datum/chemical_reaction/space_cleaner
-	name = "Abraxo cleaner"
-	id = /datum/reagent/abraxo_cleaner
-	results = list(/datum/reagent/abraxo_cleaner = 2)
-	required_reagents = list(/datum/reagent/ammonia = 1, /datum/reagent/water = 1)
-
 /datum/chemical_reaction/plantbgone
 	name = "Plant-B-Gone"
 	id = /datum/reagent/toxin/plantbgone
