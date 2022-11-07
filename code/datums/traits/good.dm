@@ -1,3 +1,5 @@
+// Explosive / Chemistry Wiz
+
 GLOBAL_LIST_INIT(chemwhiz_recipes, list(
 	/datum/crafting_recipe/jet,
 	/datum/crafting_recipe/turbo,
@@ -32,6 +34,8 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	/datum/crafting_recipe/explosive/shrapnelmine,
 	/datum/crafting_recipe/rocket_base,
 	/datum/crafting_recipe/strongrocket))
+
+/// Tribal globals
 
 GLOBAL_LIST_INIT(whitelegs_recipes, list(
 	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
