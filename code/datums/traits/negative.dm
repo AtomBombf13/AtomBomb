@@ -399,6 +399,24 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(mute, TRAUMA_RESILIENCE_ABSOLUTE)
 
+/datum/quirk/deaf
+	name = "Deaf"
+	desc = "Due to some accident, medical condition or simply by explosion. You are simply completely unable to hear."
+	value = -2 // You are deaf
+	gain_text = span_danger("You find yourself unable to ear at all!")
+	lose_text = span_notice("You somehow can hear again, even the slight sound of the wind.")
+	medical_record_text = "Functionally deaf, patient is unable to hear."
+
+/datum/quirk/deaf/post_add()
+	. = ..()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.gain_trauma(/datum/brain_trauma/severe/deaf, TRAUMA_RESILIENCE_ABSOLUTE)
+
+/datum/quirk/deaf/remove()
+	. = ..()
+	var/mob/living/carbon/human/H = quirk_holder
+	H?.cure_trauma_type(/datum/brain_trauma/severe/deaf, TRAUMA_RESILIENCE_ABSOLUTE)
+
 /datum/quirk/unstable
 	name = "Unstable"
 	desc = "Due to past troubles, you are unable to recover your sanity if you lose it. Be very careful managing your mood!"
