@@ -371,29 +371,3 @@ datum/chemical_reaction/rezadone
 	for(var/i = 1, i <= created_volume, i++)
 		new /obj/item/stack/medical/mesh/(location)
 
-/datum/chemical_reaction/medx
-	name = "Med-X"
-	id = /datum/reagent/medicine/medx
-	results = list(/datum/reagent/medicine/medx = 4)
-	required_reagents = list(/datum/reagent/medicine/epinephrine = 1, /datum/reagent/medicine/morphine = 1, /datum/reagent/consumable/daturajuice = 2)
-	required_temp = 451
-
-
-/datum/chemical_reaction/mentats
-	name = "mentats"
-	id = /datum/reagent/medicine/mentat
-	results = list(/datum/reagent/medicine/mentat = 3)
-	required_reagents = list(/datum/reagent/medicine/neurine = 1, /datum/reagent/cellulose = 1)
-	required_temp = 451
-
-/datum/chemical_reaction/stimfluid
-	name = "stimfluid"
-	id = /datum/reagent/medicine/stimpak
-	results = list(/datum/reagent/medicine/stimpak = 20)
-	required_reagents = list(
-		/datum/reagent/medicine/bicaridine = 5, 
-		/datum/reagent/medicine/kelotane = 5, 
-		/datum/reagent/medicine/styptic_powder = 5, 
-		/datum/reagent/medicine/silver_sulfadiazine = 5, 
-		)
-	required_temp = 451
