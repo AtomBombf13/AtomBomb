@@ -1267,3 +1267,21 @@
 		/datum/crafting_recipe/bitterdrink5,
 		/datum/crafting_recipe/healpoultice,
 		/datum/crafting_recipe/healpoultice5)
+
+/obj/item/book/granter/trait/spirit_teachings
+	name = "Teachings of the Gods"
+	desc = "A book all about tribal life among the Gods."
+	icon_state = "ms_teachings"
+	oneuse = TRUE
+	granted_trait = TRAIT_MACHINE_SPIRITS
+	traitname = "The Machine Spirits"
+	remarks = list("There are ten Gods...", "Each govern an aspect of life...", "Always respect the Gods", "Never use them for selfish reasons", "Honor and love those blessed by the Gods.")
+
+/obj/item/book/granter/trait/mars_teachings
+	name = "Teachings of Mars"
+	desc = "A book all about Mars and the teachings he gives to the wise."
+	icon_state = "mars_teachings"
+	oneuse = TRUE
+	granted_trait = TRAIT_MARS_TEACH
+	traitname = "Mars' Teachings"
+	remarks = list("Remember the aeternit imperi of the Caesar's Legion...", "Do not abuse the knowledge of Mars to break his will, or be broken...", "Remember: In hoc signo taurus vinces.")

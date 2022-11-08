@@ -1075,7 +1075,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/legauxilia = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/book/granter/crafting_recipe/bitters = 1
+		/obj/item/book/granter/crafting_recipe/bitters = 1,
+		/obj/item/book/granter/trait/mars_teachings = 1
 		)
 
 /datum/outfit/loadout/servant
@@ -1147,7 +1148,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
+//	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)	coded out until it works again without book
 
 /////////////////////
 ////Unused Roles ////
