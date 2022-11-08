@@ -15786,6 +15786,15 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/caves)
+"jxk" = (
+/obj/machinery/door/airlock/grunge{
+	req_access_txt = "120"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/offices2nd)
 "jxv" = (
 /obj/structure/table/wood,
 /obj/item/bodybag,
@@ -32371,8 +32380,6 @@
 /area/f13/caves)
 "wpP" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
 /obj/item/ammo_box/magazine/w308,
 /obj/item/ammo_box/magazine/w308,
 /obj/item/ammo_box/magazine/w308,
@@ -95227,7 +95234,7 @@ tck
 aFO
 tck
 tck
-aJi
+jxk
 ydE
 fHe
 qxb
