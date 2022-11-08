@@ -26,7 +26,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	gun_skill_check = AFFECTED_BY_FAST_PUMP
+	gun_skill_check = AFFECTED_BY_FAST_PUMP | AFFECTED_BY_AUTO_PUMP
 	can_scope = FALSE
 	flags_1 =  CONDUCT_1
 	casing_ejector = FALSE
@@ -110,6 +110,7 @@
 /// Pump if click with empty thing
 /obj/item/gun/ballistic/shotgun/shoot_with_empty_chamber(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	if(chambered)
+		apply_cooldown_modifier(GUN_AUTO_PUMPED)
 		attack_self(user)
 	else
 		..()

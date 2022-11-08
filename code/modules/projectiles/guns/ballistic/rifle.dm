@@ -30,7 +30,7 @@
 		SEMI_AUTO_NODELAY
 	)
 
-	gun_skill_check = AFFECTED_BY_FAST_PUMP
+	gun_skill_check = AFFECTED_BY_FAST_PUMP | AFFECTED_BY_AUTO_PUMP
 	flags_1 =  CONDUCT_1
 	casing_ejector = FALSE
 	var/recentpump = 0 // to prevent spammage
@@ -106,6 +106,7 @@
 /// Pump if click with empty thing
 /obj/item/gun/ballistic/rifle/shoot_with_empty_chamber(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	if(chambered)
+		apply_cooldown_modifier(GUN_AUTO_PUMPED)
 		attack_self(user)
 	else
 		..()
