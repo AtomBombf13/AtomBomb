@@ -1268,7 +1268,7 @@
 		/datum/crafting_recipe/healpoultice,
 		/datum/crafting_recipe/healpoultice5)
 
-/// Both books below are for alchemy use.
+/// Both books below are for alchemy use..
 
 /obj/item/book/granter/trait/spirit_teachings
 	name = "Teachings of the Gods"
