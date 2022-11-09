@@ -402,7 +402,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/deaf
 	name = "Deaf"
 	desc = "Due to some accident, medical condition or simply by explosion. You are simply completely unable to hear."
-	value = -2 // You are deaf.
+	value = -2 // You are deaf. Not a License to grief.
 	gain_text = span_danger("You find yourself unable to ear at all!")
 	lose_text = span_notice("You somehow can hear again, even the slight sound of the wind.")
 	medical_record_text = "Functionally deaf, patient is unable to hear."
