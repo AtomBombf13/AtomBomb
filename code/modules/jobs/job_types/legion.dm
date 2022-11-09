@@ -10,7 +10,7 @@ Melee		Officers only - Spatha
 			Vets/Officers - Gladius
 			Rest - Lawnmower machete the most common
 Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns all good, very restrictive on long barrel automatics, generally limited ammo, always good melee option.
-			Avoid Police shotguns, 5,56 semis, Desert Eagle, Survival knives etc, be creative and work within the limitations to avoid powercreep and things getting bland and same
+			Avoid Police shotguns, 5,56 semis, Desert Eagle, Survival knives etc, be creative and work within the limitations to avoid powercreep and things getting bland and same.
 */
 
 /datum/job/CaesarsLegion
