@@ -100,7 +100,7 @@
 	my_atom.reagents.clear_reagents() //just in case
 	return
 
-
+/*
 
 /datum/chemical_reaction/fermi/SDGF
 	name = "Synthetic-derived growth factor"
@@ -166,6 +166,7 @@
 //FOR INSTANT REACTIONS - DO NOT MULTIPLY LIMIT BY 10.
 //There's a weird rounding error or something ugh.
 
+
 //Nano-b-gone
 /datum/chemical_reaction/fermi/nanite_b_gone//done test
 	name = "Naninte bain"
@@ -188,6 +189,8 @@
 	HIonRelease 	= 0.01
 	RateUpLim 		= 1
 	FermiChem 		= TRUE
+
+*/
 
 /datum/chemical_reaction/fermi/acidic_buffer//done test
 	name = "Acetic acid buffer"
@@ -277,6 +280,7 @@
 	RateUpLim 		= 15
 	FermiChem 		= TRUE
 
+/*
 datum/chemical_reaction/fermi/eigenstate
 	name = "Eigenstasium"
 	id = /datum/reagent/fermi/eigenstate
@@ -345,3 +349,5 @@ datum/chemical_reaction/fermi/eigenstate
 	if(!Fb)
 		return
 	Fb.data = 14
+
+*/

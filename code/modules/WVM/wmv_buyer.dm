@@ -237,7 +237,7 @@ ORGAN SELLER
 		final_value = value_per
 
 	stored_caps += final_value
-	playsound(src, 'sound/vore/prey/squish_01.ogg', 60, 1)
+	playsound(src, 'sound/machines/machine_vend.ogg', 60, 1)
 	to_chat(usr, "You sell [final_value] bottle caps value to the [src]. Total caps: [stored_caps].")
 	qdel(I)
 	src.ui_interact(usr)
@@ -322,11 +322,9 @@ Fence
 						/obj/item/gun/ballistic/automatic/pistol/n99 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/pistol22 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/ninemil = 8,
-						/obj/item/gun/ballistic/automatic/pistol/sig = 8,
 						/obj/item/gun/ballistic/automatic/pistol/m1911 = 8,
 						/obj/item/gun/ballistic/rifle/hunting = 10,
 						/obj/item/gun/ballistic/revolver/colt357 = 10,
-						/obj/item/gun/ballistic/rifle/mosin = 10,
 						/obj/item/gun/ballistic/revolver/caravan_shotgun = 10,
 						/obj/item/gun/ballistic/revolver/widowmaker = 10,
 						/obj/item/gun/ballistic/revolver/winchesterrebored = 10,

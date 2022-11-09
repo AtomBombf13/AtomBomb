@@ -150,7 +150,7 @@
 	melee_damage_upper = 35
 	harm_intent_damage = 8
 
-	projectiletype = /obj/item/projectile/bullet/c46x30mm
+	projectiletype = /obj/item/projectile/bullet/F13/musketball
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 	attack_verb_simple = "pistol-whips"
 

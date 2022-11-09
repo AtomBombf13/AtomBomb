@@ -202,12 +202,15 @@
 	required_reagents = list(/datum/reagent/ammonia = 2, /datum/reagent/nitrogen = 1, /datum/reagent/oxygen = 2)
 	required_temp = 525
 
+/*
 
 /datum/chemical_reaction/mulligan
 	name = "Mulligan"
 	id = "mulligan"
 	results = list(/datum/reagent/mulligan = 1)
 	required_reagents = list(/datum/reagent/slime_toxin = 1, /datum/reagent/toxin/mutagen = 1)
+
+*/
 
 ////////////////////////////////// VIROLOGY //////////////////////////////////////////
 
@@ -549,12 +552,6 @@
 	id = /datum/reagent/diethylamine
 	results = list(/datum/reagent/diethylamine = 2)
 	required_reagents = list (/datum/reagent/ammonia = 1, /datum/reagent/consumable/ethanol = 1)
-
-/datum/chemical_reaction/space_cleaner
-	name = "Abraxo cleaner"
-	id = /datum/reagent/abraxo_cleaner
-	results = list(/datum/reagent/abraxo_cleaner = 2)
-	required_reagents = list(/datum/reagent/ammonia = 1, /datum/reagent/water = 1)
 
 /datum/chemical_reaction/plantbgone
 	name = "Plant-B-Gone"

@@ -40,19 +40,6 @@
 	bare_wound_bonus = 0
 	footstep_type = FOOTSTEP_MOB_HEAVY
 
-/mob/living/simple_animal/hostile/supermutant/playable
-	health = 500
-	maxHealth = 500
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-
 
 /mob/living/simple_animal/hostile/supermutant/Aggro()
 	..()

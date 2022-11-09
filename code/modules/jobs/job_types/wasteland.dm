@@ -146,7 +146,7 @@ Raider
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/light/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider/supafly
-	r_hand = /obj/item/gun/ballistic/automatic/varmint
+	r_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
@@ -871,7 +871,6 @@ Wastelander
 		/obj/item/clothing/under/f13/female/eighties = 1,
 		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/gun/ballistic/automatic/smg/greasegun/worn = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 	)

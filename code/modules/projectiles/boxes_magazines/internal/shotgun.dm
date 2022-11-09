@@ -36,11 +36,6 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 4
 
-/obj/item/ammo_box/magazine/internal/shot/com/citykiller
-	name = "city killer shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
-	max_ammo = 12
-
 /obj/item/ammo_box/magazine/internal/shot/dual
 	name = "double-barrel shotgun internal magazine"
 	max_ammo = 2
@@ -91,12 +86,4 @@
 	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
 	caliber = list(CALIBER_MUSKET_LASER)
 	max_ammo = 6
-	multiload = 1
-
-/obj/item/ammo_box/magazine/internal/plasmacaster
-	name = "plasmacaster magazine"
-	desc = "Oh god, this shouldn't be here"
-	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
-	caliber = list(CALIBER_MUSKET_PLASMA)
-	max_ammo = 2
 	multiload = 1

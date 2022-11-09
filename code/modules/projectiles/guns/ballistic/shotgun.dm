@@ -25,13 +25,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
-
 	gun_skill_check = AFFECTED_BY_FAST_PUMP
 	can_scope = FALSE
 	flags_1 =  CONDUCT_1
@@ -42,7 +36,7 @@
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
 	init_recoil = RIFLE_RECOIL(2.5)
 	init_firemodes = list(
-		SEMI_AUTO_NODELAY
+		SEMI_AUTO_SHOTGUN
 	)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -147,10 +141,6 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	init_firemodes = list(
 		list(mode_name="Single-fire", mode_desc="Send Vagabonds flying back several paces", burst_size=1, icon="semi"),
@@ -211,10 +201,6 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	init_firemodes = list(
@@ -275,12 +261,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
 
 /obj/item/gun/ballistic/shotgun/hunting/update_icon_state()
 	if(sawn_off)
@@ -313,10 +294,6 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
 	var/stock = FALSE
@@ -370,12 +347,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_FAST
 
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
@@ -401,12 +373,11 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
+
+	init_firemodes = list(
+		SEMI_AUTO_SHOTGUN
+	)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(SHOTGUN_VOLUME),
@@ -442,12 +413,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
 
 	fire_sound = 'sound/f13weapons/auto5.ogg'
 
@@ -476,12 +442,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_FAST
 	init_recoil = RIFLE_RECOIL(2.8)
 
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
@@ -508,12 +469,7 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
 	init_recoil = RIFLE_RECOIL(2.2)
 
 	var/toggled = FALSE
@@ -557,23 +513,26 @@
  * Uncommon
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
+/obj/item/gun/ballistic/automatic/shotgun/citykiller
 	name = "Winchester City-Killer shotgun"
-	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This particular model uses a internal tube magazine."
+	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This one is well preserved pre-war pattern version."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "citykiller"
 	item_state = "shotguncity"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/citykiller
+	mag_type = /obj/item/ammo_box/magazine/city12g
+
+	init_firemodes = list(
+		BURST_5_ROUND,
+		SEMI_AUTO_SHOTGUN
+	)
 
 	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_FIRE_DELAY_SLOW
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
 	init_recoil = RIFLE_RECOIL(2.8)
 
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
@@ -600,18 +559,13 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
+
 	init_firemodes = list(
-		SEMI_AUTO_NODELAY
+		FULL_AUTO_200,
+		SEMI_AUTO_SHOTGUN
 	)
 
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -639,25 +593,16 @@
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
-	is_automatic = TRUE
-
 	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_SHOTGUN_BASE
 	init_recoil = RIFLE_RECOIL(2.8)
 	init_firemodes = list(
-		FULL_AUTO_300,
-		SEMI_AUTO_NODELAY
+		FULL_AUTO_300
 	)
 
-	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	gun_sound_properties = list(
 		SP_VARY(FALSE),

@@ -76,6 +76,15 @@
 	if(HAS_TRAIT(user, TRAIT_SOOTHED_THROAT))
 		return FALSE
 
+/datum/emote/living/cough/get_sound(mob/living/M) 
+	. = ..()
+	if(ishuman(M))
+		if(M.gender == FEMALE)
+			sound = 'sound/effects/female_cough.ogg'
+		else
+			sound = 'sound/effects/male_cough.ogg'
+		return 
+
 /datum/emote/living/dance
 	key = "dance"
 	key_third_person = "dances"
@@ -125,36 +134,6 @@
 		var/mob/living/L = user
 		L.SetSleeping(200)
 
-
-/* Fortuna edit: flapping your wings disabled
-/datum/emote/living/flap
-	key = "flap"
-	key_third_person = "flaps"
-	message = "flaps their wings."
-	restraint_check = TRUE
-	var/wing_time = 20
-
-/datum/emote/living/flap/run_emote(mob/user, params)
-	. = ..()
-	if(. && ishuman(user))
-		var/mob/living/carbon/human/H = user
-		var/open = FALSE
-		if(H.dna.features["wings"] != "None")
-			if(H.dna.species.mutant_bodyparts["wingsopen"])
-				open = TRUE
-				H.CloseWings()
-			else
-				H.OpenWings()
-			addtimer(CALLBACK(H, open ? /mob/living/carbon/human.proc/OpenWings : /mob/living/carbon/human.proc/CloseWings), wing_time)
-
-/datum/emote/living/flap/aflap
-	key = "aflap"
-	key_third_person = "aflaps"
-	message = "flaps their wings ANGRILY!"
-	restraint_check = TRUE
-	wing_time = 10
-*/
-
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
@@ -172,6 +151,15 @@
 	message = "gasps!"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/gasp/get_sound(mob/living/M) 
+	. = ..()
+	if(ishuman(M))
+		if(M.gender == FEMALE)
+			sound = 'sound/effects/female_gasp.ogg'
+		else
+			sound = 'sound/effects/male_gasp.ogg'
+		return 
 
 /datum/emote/living/giggle
 	key = "giggle"
@@ -293,6 +281,15 @@
 	message = "screams."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/scream/get_sound(mob/living/M) 
+	. = ..()
+	if(ishuman(M))
+		if(M.gender == FEMALE)
+			sound = 'sound/effects/female_scream.ogg'
+		else
+			sound = 'sound/effects/male_scream.ogg'
+		return 
+
 /datum/emote/living/scowl
 	key = "scowl"
 	key_third_person = "scowls"
@@ -337,6 +334,15 @@
 	key_third_person = "sneezes"
 	message = "sneezes."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sneeze/get_sound(mob/living/M) 
+	. = ..()
+	if(ishuman(M))
+		if(M.gender == FEMALE)
+			sound = 'sound/effects/female_sneeze.ogg'
+		else
+			sound = 'sound/effects/male_sneeze.ogg'
+		return 
 
 /datum/emote/living/smug
 	key = "smug"
