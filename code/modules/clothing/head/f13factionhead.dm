@@ -56,6 +56,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	armor = ARMOR_VALUE_RAIDER_ARMOR
 	slowdown = 0
 
 /obj/item/clothing/head/helmet/f13/raider/supafly
@@ -98,7 +99,7 @@
 	desc = "A sturdy helmet to protect against both the elements and from harm, if only it was not looking in such poor condition."
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
@@ -172,6 +173,7 @@
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/f13/raidercombathelmet
 	name = "combat raider helmet"
@@ -181,6 +183,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = 0.025
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/mk2/raider
 	name = "customized raider combat helmet"
@@ -295,6 +298,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
+	armor = ARMOR_VALUE_LEATHER_ARMOR
 
 ///////////
 /*SLAVES */
@@ -340,6 +344,7 @@
 	icon_state = "leg_vet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	flags_inv = HIDEEARS|HIDEHAIR
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_ARMOR
 
 ////////////////
 /*RECON/SCOUT */
@@ -402,6 +407,7 @@
 	icon_state = "leg_cent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "legion centurion paladin-slayer helmet"
@@ -409,6 +415,7 @@
 	icon_state = "leg_cent_paladin"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor = ARMOR_VALUE_SALVAGE
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
@@ -416,6 +423,7 @@
 	icon_state = "leg_cent_ranger"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 //Don't give this to anything outside of event crap
 /obj/item/clothing/head/helmet/f13/legion/legate
@@ -441,6 +449,7 @@
 	icon_state = "ncr_helmet"
 	strip_delay = 50
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
+	armor = ARMOR_VALUE_LEATHER_ARMOR
 
 /obj/item/clothing/head/f13/ncr/storm //Whoever named these steelpots should go to get their eyes checked
 	name = "NCR storm helmet"
@@ -511,17 +520,20 @@
 	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
 	icon_state = "ncr_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	armor = ARMOR_VALUE_LEATHER_JACKET
 
 /obj/item/clothing/head/f13/ncr/patrol
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "ncr_ranger_patrol"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 
 /obj/item/clothing/head/f13/ncr/veteran
 	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ncr_ranger_veteran"
+	armor = ARMOR_VALUE_RIOT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -543,16 +555,19 @@
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "brotherhood_helmet_knight"
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	name = "brotherhood knight-captain helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Knight-Captain."
 	icon_state = "brotherhood_helmet_captain"
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
@@ -563,6 +578,7 @@
 	name = "reinforced knight helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/f13/boscap
 	name = "brotherhood formal cap"
@@ -584,6 +600,7 @@
 /obj/item/clothing/head/f13/town
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	armor = ARMOR_VALUE_DUSTER_ARMOR
 
 /obj/item/clothing/head/f13/town/deputy
 	name = "eastwood lawman's hat"
@@ -598,6 +615,7 @@
 /obj/item/clothing/head/helmet/f13/combat/town
 	name = "eastwood security helmet"
 	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "town_helmet"
@@ -607,6 +625,7 @@
 	name = "eastwood provost combat helmet"
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
 	icon_state = "town_marshal_riot"
+	armor = ARMOR_VALUE_RIOT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -629,6 +648,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20
@@ -685,6 +705,7 @@
 	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
 	icon_state = "khan_fullhelmet"
 	item_state = "khan_fullhelmet"
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
@@ -698,8 +719,10 @@
 	desc = "A helmet fastened from the skull of a deer. Something about it doesn't look right."
 	icon_state = "shamskull"
 	item_state = "shamskull"
+	armor = ARMOR_VALUE_TRIBAL
 
 /obj/item/clothing/head/f13/helmet/wayfarer
+	armor = ARMOR_VALUE_TRIBAL
 
 /obj/item/clothing/head/helmet/f13/wayfarer/hunter
 	name = "hunter headdress"
