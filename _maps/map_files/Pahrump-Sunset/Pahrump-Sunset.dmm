@@ -35858,7 +35858,6 @@
 "jaV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/varmint,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -74010,7 +74009,7 @@ qqO
 qqO
 aae
 aae
-aak
+aae
 aae
 aae
 aak
