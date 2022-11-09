@@ -1268,6 +1268,8 @@
 		/datum/crafting_recipe/healpoultice,
 		/datum/crafting_recipe/healpoultice5)
 
+/// Both books below are for alchemy use, just one is differently named the other, legion wise and tribal difference.
+
 /obj/item/book/granter/trait/spirit_teachings
 	name = "Teachings of the Gods"
 	desc = "A book all about tribal life among the Gods."
