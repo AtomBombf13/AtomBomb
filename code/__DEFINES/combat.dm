@@ -312,6 +312,21 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_DAMAGE_SHOTGUN_MAGNUM 21
 #define BULLET_DAMAGE_SHOTGUN_SLUG 50
 
+/// Bullet penetraion defines - For HEAVY and POWER ARMOR, low can't pen either, heavy can pierce heavy but not PA and absolute penetrates everything
+#define BULLET_PENETRATION_LOW 0
+#define BULLET_PENETRATION_HEAVY 0.10
+#define BULLET_PENETRATION_ABSOLUTE 0.20
+
+/// Bullet DT penetration defines - How much DT a bullet can straight up ignore, don't confuse with the armor penetration
+#define BULLET_DT_PENETRATION_PISTOL 0
+#define BULLET_DT_PENETRATION_SMALL 2
+#define BULLET_DT_PENETRATION_MEDIUM 4 //Small and medium is for lasers, think of ballistics as the "I ignore armor and straight up kill you with bleeding"
+#define BULLET_DT_PENETRATION_RIFLE 6 //While lasers are the I am gonna shoot you few times then watch you die agonizing death
+#define BULLET_DT_PENETRATION_SNIPER 10 //And plasma is just ballistic laser lets be real
+#define BULLET_DT_PENETRATION_AP 12
+#define BULLET_DT_PENETRATION_GAUSS 16
+#define BULLET_DT_PENETRATION_ABSOLUTE 20
+
 /// Bullet damage falloff per tile defines
 #define BULLET_FALLOFF "bullet falloff per tile"
 #define BULLET_FALLOFF_PISTOL_LIGHT 3
@@ -635,6 +650,9 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 /// Refire speed multiplier for manual action guns, cus we no longer care about your cock length
 #define GUN_RIFLEMAN_REFIRE_DELAY_MULT 0.8
 
+/// Refire speed multiplier for manual action guns if you're not a pr0 and click-to-cycle it
+#define GUN_AUTOPUMP_REFIRE_DELAY_MULT 1.8
+
 #define MAX_ACCURACY_OFFSET  45 //It's both how big gun recoil can build up, and how hard you can miss
 #define RECOIL_REDUCTION_TIME 1 SECOND
 
@@ -725,6 +743,13 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 /// Gun skill flags
 /// Gun is affected by rifleman skill
 #define AFFECTED_BY_FAST_PUMP (1<<0)
+/// If you autopump this gun, it'll have a debuff to its refire rate till you fire again
+#define AFFECTED_BY_AUTO_PUMP (1<<1)
+
+/// Gun cooldown mod flags
+/// Gun is slower to refire if you autopump it (without fast pump)
+#define GUN_AUTO_PUMPED (1<<0)
+
 
 /// Gun handedness defines -- for picking which direction to toss casings
 #define GUN_EJECTOR_RIGHT 1

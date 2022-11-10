@@ -340,11 +340,9 @@
 /obj/item/clothing/head/helmet/f13/power_armor/t45b,
 /obj/item/clothing/head/helmet/f13/power_armor/t45d,
 /obj/item/clothing/head/helmet/f13/power_armor/t51b,
-/obj/item/clothing/head/helmet/f13/power_armor/t60,
 /obj/item/clothing/suit/armor/power_armor/t45b,
 /obj/item/clothing/suit/armor/power_armor/t45d,
 /obj/item/clothing/suit/armor/power_armor/t51b,
-/obj/item/clothing/suit/armor/power_armor/t60,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/bos/programs/armory)
 "ch" = (
@@ -523,14 +521,37 @@
 /obj/item/clothing/suit/armor/heavy/riot/elite{
 	desc = "A heavily reinforced set of military grade armor, commonly seen in the Divide, now repurposed."
 	},
-/obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriot{
-	desc = "A heavily modified combat helmet once seen in the Divide.";
-	name = "elite riot helmet";
-	pixel_x = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/pod/light,
 /area/awaymission/vr/bos/casino)
+"dp" = (
+/obj/structure/rack,
+/obj/item/seeds/yucca,
+/obj/item/seeds/xander,
+/obj/item/seeds/lavaland/cactus,
+/obj/item/seeds/lavaland/ember,
+/obj/item/seeds/lavaland/inocybe,
+/obj/item/seeds/lavaland/polypore,
+/obj/item/seeds/lavaland/porcini,
+/obj/item/seeds/datura,
+/obj/item/seeds/agave,
+/obj/item/seeds/poppy/broc,
+/obj/item/seeds/buffalogourd,
+/obj/item/seeds/coyotetobacco,
+/obj/item/seeds/feracactus,
+/obj/item/seeds/fungus,
+/obj/item/seeds/horsenettle,
+/obj/item/seeds/mesquite,
+/obj/item/seeds/mutfruit,
+/obj/item/seeds/pinyon,
+/obj/item/seeds/pricklypear,
+/obj/item/seeds/punga,
+/obj/item/seeds/potato,
+/obj/item/seeds/tato,
+/obj/item/seeds/xander,
+/obj/item/seeds/yucca,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "dr" = (
 /obj/structure/rack,
 /obj/item/clothing/under/f13/recon,
@@ -552,7 +573,6 @@
 /area/awaymission/vr/bos/casino)
 "du" = (
 /obj/structure/rack,
-/obj/item/storage/belt/army,
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/clothing/shoes/combat/swat{
 	pixel_x = 7;
@@ -569,14 +589,12 @@
 /obj/item/clothing/suit/armor/medium/combat/enclave,
 /obj/item/clothing/suit/armor/medium/combat/swat,
 /obj/item/clothing/suit/armor/medium/vest/enclave,
-/obj/item/clothing/suit/armor/kit,
 /obj/item/clothing/suit/armor/light/leather,
 /obj/item/clothing/suit/armor/light/leather/leathermk2,
 /obj/item/clothing/suit/armor/medium/raider/badlands,
 /obj/item/clothing/suit/armor/medium/raider/blastmaster,
 /obj/item/clothing/suit/armor/medium/raider/iconoclast,
 /obj/item/clothing/suit/armor/light/raider/painspike,
-/obj/item/clothing/suit/armor/medium/raider/raidercombat,
 /obj/item/clothing/suit/armor/medium/raider/raidermetal,
 /obj/item/clothing/suit/armor/medium/raider/rebel,
 /obj/item/clothing/suit/armor/light/raider/sadist,
@@ -673,6 +691,11 @@
 /obj/item/clothing/shoes/f13/enclave/serviceboots,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/den/programs/armory)
+"dW" = (
+/obj/structure/table/wood,
+/obj/machinery/microwave,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "dX" = (
 /obj/machinery/teleport/hub,
 /turf/open/indestructible/binary,
@@ -1385,7 +1408,6 @@
 /area/awaymission/vr/bos/casino)
 "iJ" = (
 /obj/structure/rack,
-/obj/item/storage/belt/army,
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/clothing/shoes/combat/swat{
 	pixel_x = 7;
@@ -1454,6 +1476,11 @@
 /obj/machinery/light/floor,
 /turf/open/floor/pod,
 /area/awaymission/vr/bos/casino)
+"jb" = (
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/seed_extractor,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "jc" = (
 /obj/structure/frame/machine,
 /turf/open/floor/plating/tunnel{
@@ -1593,6 +1620,10 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/holodeck/bos/programs/medical)
+"ka" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "kh" = (
 /obj/machinery/door/poddoor{
 	id = "vrlock1";
@@ -1630,6 +1661,10 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/holodeck/bos/programs/medical)
+"kr" = (
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "ku" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -1702,10 +1737,8 @@
 /obj/item/gun/ballistic/automatic/bozar,
 /obj/item/gun/ballistic/automatic/m1garand/oldglory,
 /obj/item/gun/ballistic/automatic/m1garand/republicspride,
-/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high,
 /obj/item/gun/ballistic/revolver/colt357/lucky,
-/obj/item/gun/ballistic/automatic/varmint/ratslayer,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/den/programs/armory)
 "kR" = (
@@ -1717,7 +1750,6 @@
 /obj/item/gun/energy/laser/wattz,
 /obj/item/gun/energy/laser/wattz/magneto,
 /obj/item/gun/ballistic/rifle/hobo/lasmusket,
-/obj/item/gun/ballistic/rifle/hobo/plasmacaster,
 /obj/item/gun/energy/laser/plasma/glock,
 /obj/item/gun/energy/laser/plasma/glock/extended,
 /obj/item/gun/energy/laser/plasma/pistol,
@@ -1910,6 +1942,12 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/holodeck/followers/programs/medical)
+"lE" = (
+/obj/structure/rack,
+/obj/item/cultivator,
+/obj/item/shovel/spade,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "lO" = (
 /obj/structure/table/wood/poker,
 /obj/effect/decal/cleanable/dirt,
@@ -2001,7 +2039,6 @@
 /obj/item/gun/ballistic/automatic/pistol/pistol14,
 /obj/item/gun/ballistic/automatic/pistol/pistol14/compact,
 /obj/item/gun/ballistic/automatic/pistol/pistol22,
-/obj/item/gun/ballistic/automatic/pistol/sig,
 /obj/item/gun/ballistic/automatic/pistol/type17,
 /obj/item/gun/ballistic/automatic/hobo/zipgun,
 /obj/item/gun/ballistic/revolver,
@@ -2034,14 +2071,10 @@
 /obj/item/gun/ballistic/revolver/widowmaker,
 /obj/item/gun/ballistic/rifle/hunting,
 /obj/item/gun/ballistic/rifle/hunting/paciencia,
-/obj/item/gun/ballistic/rifle/hunting/remington,
 /obj/item/gun/ballistic/rifle/mag/antimateriel,
-/obj/item/gun/ballistic/automatic/varmint,
-/obj/item/gun/ballistic/rifle/mosin,
 /obj/item/gun/ballistic/rifle/repeater/brush,
 /obj/item/gun/ballistic/rifle/repeater/cowboy,
 /obj/item/gun/ballistic/shotgun/automatic/combat/auto5,
-/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever,
 /obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
 /obj/item/gun/ballistic/shotgun/hunting,
@@ -2091,6 +2124,11 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/holodeck/den/programs/medical)
+"mx" = (
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/biogenerator,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "my" = (
 /obj/item/ammo_casing/c9mm,
 /obj/effect/decal/cleanable/dirt,
@@ -2283,14 +2321,11 @@
 /obj/item/gun/ballistic/automatic/m1carbine/compact,
 /obj/item/gun/ballistic/automatic/m1garand,
 /obj/item/gun/ballistic/automatic/marksman,
-/obj/item/gun/ballistic/automatic/marksman/policerifle,
-/obj/item/gun/ballistic/automatic/marksman/sniper,
 /obj/item/gun/ballistic/automatic/r84,
 /obj/item/gun/ballistic/automatic/rangemaster,
 /obj/item/gun/ballistic/automatic/rangemaster/scoped,
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid,
 /obj/item/gun/ballistic/automatic/service,
-/obj/item/gun/ballistic/automatic/service/r82,
 /obj/item/gun/ballistic/automatic/type93,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/den/programs/armory)
@@ -2320,7 +2355,6 @@
 	},
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/smg/american180,
-/obj/item/gun/ballistic/automatic/smg/cg45,
 /obj/item/gun/ballistic/automatic/smg/greasegun,
 /obj/item/gun/ballistic/automatic/smg/mini_uzi,
 /obj/item/gun/ballistic/automatic/smg/mp5,
@@ -3308,7 +3342,6 @@
 /area/holodeck/followers/programs/garden)
 "vQ" = (
 /obj/structure/rack,
-/obj/item/storage/belt/army,
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/clothing/shoes/combat/swat{
 	pixel_x = 7;
@@ -3915,11 +3948,9 @@
 /obj/item/clothing/head/helmet/f13/power_armor/t45b,
 /obj/item/clothing/head/helmet/f13/power_armor/t45d,
 /obj/item/clothing/head/helmet/f13/power_armor/t51b,
-/obj/item/clothing/head/helmet/f13/power_armor/t60,
 /obj/item/clothing/suit/armor/power_armor/t45b,
 /obj/item/clothing/suit/armor/power_armor/t45d,
 /obj/item/clothing/suit/armor/power_armor/t51b,
-/obj/item/clothing/suit/armor/power_armor/t60,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/deathmatch/rooms/armory)
 "An" = (
@@ -3993,7 +4024,6 @@
 "AV" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/bundle/f13/mosin,
 /turf/open/floor/pod/dark,
 /area/awaymission/vr/bos/casino)
 "AX" = (
@@ -4149,6 +4179,13 @@
 	icon_state = "tunnelchess2"
 	},
 /area/awaymission/vr/bos/enclavebunker)
+"Cd" = (
+/obj/item/stack/sheet/sandblock/fifty,
+/obj/item/stack/sheet/sandblock/fifty,
+/obj/item/stack/sheet/sandblock/fifty,
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "Cf" = (
 /obj/item/storage/trash_stack{
 	icon_state = "trash_2"
@@ -4327,6 +4364,16 @@
 	icon_state = "redrustyfull"
 	},
 /area/awaymission/vr/bos/enclavebunker)
+"Ec" = (
+/obj/structure/table/wood,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "Ed" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/dirt,
@@ -4850,6 +4897,12 @@
 	icon_state = "tunnelchess2"
 	},
 /area/awaymission/vr/bos/enclavebunker)
+"IB" = (
+/obj/structure/chair/booth{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "IE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/fakelattice,
@@ -4910,7 +4963,6 @@
 /area/awaymission/vr/bos/deathmatch/red)
 "IU" = (
 /obj/structure/closet/crate/large,
-/obj/effect/spawner/bundle/f13/mosin,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
 /obj/effect/spawner/lootdrop/f13/armor/tier2,
@@ -4968,6 +5020,11 @@
 "Jp" = (
 /turf/open/floor/plasteel/blue,
 /area/awaymission/vr/public/deathmatch)
+"Jq" = (
+/obj/structure/frame/machine,
+/obj/item/circuitboard/machine/plantgenes,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "Ju" = (
 /turf/open/floor/plasteel/darkblue/side,
 /area/awaymission/vr/bos/deathmatch/blue)
@@ -5105,6 +5162,10 @@
 /obj/machinery/power/emitter/energycannon,
 /turf/open/floor/plating,
 /area/awaymission/vr/bos/deathmatch)
+"KA" = (
+/obj/machinery/vending/hydroseeds,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "KE" = (
 /obj/machinery/light/small,
 /turf/open/floor/plating/tunnel,
@@ -5143,6 +5204,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/awaymission/vr/bos/deathmatch/blue)
+"KR" = (
+/obj/structure/chair/booth{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "KS" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -5387,6 +5454,10 @@
 "Mx" = (
 /turf/open/indestructible/binary,
 /area/awaymission/vr/public)
+"Mz" = (
+/obj/machinery/vending/hydronutrients,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "MD" = (
 /turf/open/floor/plasteel/darkblue/corner{
 	dir = 1
@@ -5415,6 +5486,12 @@
 	dir = 8
 	},
 /area/awaymission/vr/public/deathmatch)
+"MM" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/drinkingglasses,
+/obj/item/storage/box/drinkingglasses,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "MN" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -6339,6 +6416,11 @@
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /turf/open/floor/carpet/green,
 /area/awaymission/vr/bos/casino)
+"Uz" = (
+/obj/structure/table/wood,
+/obj/item/storage/part_replacer/bluespace/tier4,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "UA" = (
 /obj/item/storage/trash_stack,
 /turf/open/floor/pod,
@@ -6789,6 +6871,11 @@
 	icon_state = "redrustyfull"
 	},
 /area/awaymission/vr/bos/enclavebunker)
+"XQ" = (
+/obj/structure/table/wood,
+/obj/machinery/chem_dispenser/drinks/fullupgrade,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "XR" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/ghoul,
@@ -6876,6 +6963,11 @@
 	icon_state = "housewood2"
 	},
 /area/awaymission/vr/bos/casino)
+"YQ" = (
+/obj/structure/table/wood,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/awaymission/vr/bos)
 "YR" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/darkred/side{
@@ -7053,16 +7145,16 @@ xD
 xD
 xD
 xD
-Gc
-Gc
-Gc
-Gc
-Gc
-Gc
-Gc
-Gc
-Gc
-Gc
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Gc
 Gc
 Gc
@@ -7310,16 +7402,16 @@ at
 at
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+at
+at
+at
+at
+at
+at
+at
+at
+xD
 Mx
 Mx
 Mx
@@ -7566,17 +7658,17 @@ VP
 VP
 VP
 at
+at
+at
+mx
+jb
+Jq
+KA
+Mz
+lE
+dp
+at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
 Mx
 Mx
 Mx
@@ -7822,18 +7914,18 @@ gS
 To
 gS
 To
+gS
+To
+To
+To
+To
+To
+To
+To
+To
+To
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
 Mx
 Mx
 Mx
@@ -8079,18 +8171,18 @@ gS
 To
 To
 gS
+To
+To
+To
+To
+To
+ka
+To
+ka
+To
+ka
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
 Mx
 Mx
 Mx
@@ -8336,18 +8428,18 @@ To
 To
 gS
 gS
+To
+To
+gS
+To
+To
+To
+To
+To
+To
+To
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
 Mx
 Mx
 Mx
@@ -8594,17 +8686,17 @@ dX
 ne
 To
 at
+at
+at
+Cd
+To
+ka
+To
+ka
+To
+ka
+at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
 Mx
 Mx
 Mx
@@ -8852,16 +8944,16 @@ at
 at
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+Uz
+To
+To
+To
+To
+To
+To
+at
+xD
 Mx
 Mx
 Mx
@@ -9109,16 +9201,16 @@ xe
 xe
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+Ec
+To
+To
+To
+To
+To
+To
+at
+xD
 Mx
 Mx
 Mx
@@ -9366,16 +9458,16 @@ Fd
 xe
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+To
+To
+To
+To
+To
+To
+MM
+at
+xD
 Mx
 Mx
 Mx
@@ -9623,16 +9715,16 @@ Fd
 xe
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+KR
+To
+KR
+To
+To
+To
+YQ
+at
+xD
 Mx
 Mx
 Mx
@@ -9880,16 +9972,16 @@ Fd
 xe
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+kr
+To
+kr
+To
+To
+To
+XQ
+at
+xD
 Mx
 Mx
 Mx
@@ -10137,16 +10229,16 @@ xe
 xe
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+IB
+To
+IB
+To
+To
+To
+dW
+at
+xD
 Mx
 Mx
 Mx
@@ -10394,16 +10486,16 @@ at
 at
 at
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+at
+at
+at
+at
+at
+at
+at
+at
+at
+xD
 Mx
 Mx
 Mx
@@ -10651,16 +10743,16 @@ xD
 xD
 xD
 xD
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
-Mx
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 Mx
 Mx
 Mx
