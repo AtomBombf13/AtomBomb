@@ -679,6 +679,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	name = "Legion Speculator"
@@ -736,7 +737,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
-
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
