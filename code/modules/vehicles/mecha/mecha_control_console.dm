@@ -1,4 +1,3 @@
-
 /obj/machinery/computer/mecha
 	name = "exosuit control console"
 	desc = "Used to remotely locate or lockdown exosuits."
@@ -86,8 +85,9 @@
 	var/obj/vehicle/sealed/mecha/chassis
 
 /**
-  * Returns a html formatted string describing attached mech status
-  */
+/  * Returns a html formatted string describing attached mech status
+/  */
+
 /obj/item/mecha_parts/mecha_tracking/proc/get_mecha_info()
 	if(!chassis)
 		return FALSE
@@ -126,8 +126,9 @@
 	chassis = M
 
 /**
-  * Attempts to EMP mech that the tracker is attached to, if there is one and tracker is not on cooldown
-  */
+/  * Attempts to EMP mech that the tracker is attached to, if there is one and tracker is not on cooldown
+/  */
+
 /obj/item/mecha_parts/mecha_tracking/proc/shock()
 	if(recharging)
 		return
@@ -137,8 +138,9 @@
 		recharging = TRUE
 
 /**
-  * Resets recharge variable, allowing tracker to be EMP pulsed again
-  */
+/  * Resets recharge variable, allowing tracker to be EMP pulsed again
+/  */
+
 /obj/item/mecha_parts/mecha_tracking/proc/recharge()
 	recharging = FALSE
 
