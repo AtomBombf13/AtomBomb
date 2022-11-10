@@ -20,6 +20,21 @@
 	REMOVE_TRAIT(owner, TRAIT_MUTE, TRAUMA_TRAIT)
 	..()
 
+/datum/brain_trauma/severe/deaf
+	name = "Deaf"
+	desc = "Patient is completely unable to hear."
+	scan_desc = "extensive damage to the ears"
+	gain_text = span_warning("You forget how to hear!")
+	lose_text = span_notice("You suddenly remember how to hear.")
+
+/datum/brain_trauma/severe/deaf/on_gain()
+	ADD_TRAIT(owner, TRAIT_DEAF, TRAUMA_TRAIT)
+	..()
+
+/datum/brain_trauma/severe/deaf/on_lose()
+	REMOVE_TRAIT(owner, TRAIT_DEAF, TRAUMA_TRAIT)
+	..()
+
 /datum/brain_trauma/severe/aphasia
 	name = "Aphasia"
 	desc = "Patient is unable to speak or understand any language."
