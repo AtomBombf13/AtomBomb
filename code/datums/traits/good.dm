@@ -1,3 +1,5 @@
+// Explosive / Chemistry Wiz
+
 GLOBAL_LIST_INIT(chemwhiz_recipes, list(
 	/datum/crafting_recipe/jet,
 	/datum/crafting_recipe/turbo,
@@ -33,6 +35,53 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	/datum/crafting_recipe/rocket_base,
 	/datum/crafting_recipe/strongrocket))
 
+/// Tribal globals
+
+GLOBAL_LIST_INIT(whitelegs_recipes, list(
+	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
+	/datum/crafting_recipe/tribalwar/whitelegs/armour, 
+	/datum/crafting_recipe/tribalwar/whitelegs/garb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
+
+GLOBAL_LIST_INIT(deadhorses_recipes, list(
+	/datum/crafting_recipe/tribalwar/deadhorses/lightarmour,
+	/datum/crafting_recipe/tribalwar/deadhorses/armour,
+	/datum/crafting_recipe/tribalwar/deadhorses/garb,
+	/datum/crafting_recipe/tribalwar/deadhorses/femalegarb,
+	/datum/crafting_recipe/tribalwar/deadhorses/heavyarmour))
+
+GLOBAL_LIST_INIT(sorrows_recipes, list(
+	/datum/crafting_recipe/tribalwar/sorrows/armour,
+	/datum/crafting_recipe/tribalwar/sorrows/garb,
+	/datum/crafting_recipe/tribalwar/sorrows/femalegarb,
+	/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet))
+
+GLOBAL_LIST_INIT(rustwalkers_recipes, list(
+	/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/armour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/garb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour))
+
+GLOBAL_LIST_INIT(eighties_recipes, list(
+	/datum/crafting_recipe/tribalwar/eighties/lightarmour,
+	/datum/crafting_recipe/tribalwar/eighties/armour,
+	/datum/crafting_recipe/tribalwar/eighties/garb,
+	/datum/crafting_recipe/tribalwar/eighties/femalegarb,
+	/datum/crafting_recipe/tribalwar/eighties/heavyarmour))
+
+GLOBAL_LIST_INIT(wayfarer_recipes, list(
+	/datum/crafting_recipe/tribalwar/lighttribe,
+	/datum/crafting_recipe/tribalwar/heavytribe,
+	/datum/crafting_recipe/warmace))
+
+GLOBAL_LIST_INIT(bone_dancer_recipes, list(
+	/datum/crafting_recipe/tribalwar/bone/lightarmour,
+	/datum/crafting_recipe/tribalwar/bone/armour, 
+	/datum/crafting_recipe/tribalwar/bone/heavyarmour,
+	/datum/crafting_recipe/tribalwar/bone/garb,
+	/datum/crafting_recipe/tribalwar/bone/helmet))
 
 //predominantly positive traits
 //this file is named weirdly so that positive traits are listed above negative ones
@@ -529,12 +578,17 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/whitelegstraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/whiteleg)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.whitelegs_recipes
+
 
 /datum/quirk/whitelegstraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/whiteleg)
-
+	if(H)
+		H.mind.learned_recipes -= GLOB.whitelegs_recipes
 
 /datum/quirk/deadhorsestraditions
 	name = "Dead Horses traditions and language comprehension"
@@ -548,11 +602,18 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/deadhorsestraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/deadhorses)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.deadhorses_recipes
+
 
 /datum/quirk/deadhorsestraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/deadhorses)
+	if(H)
+		H.mind.learned_recipes -= GLOB.deadhorses_recipes
+
 
 /datum/quirk/sorrowstraditions
 	name = "Sorrows traditions and language comprehension"
@@ -566,11 +627,16 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/sorrowstraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/sorrows)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.sorrows_recipes
 
 /datum/quirk/sorrowstraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/sorrows)
+	if(H)
+		H.mind.learned_recipes -= GLOB.sorrows_recipes
 
 /datum/quirk/rustwalkerstraditions
 	name = "Rust Walkers traditions and language comprehension"
@@ -584,11 +650,17 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/rustwalkerstraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/german)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.rustwalkers_recipes
+
 
 /datum/quirk/rustwalkerstraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/german)
+	if(H)
+		H.mind.learned_recipes -= GLOB.rustwalkers_recipes
 
 /datum/quirk/eightiestraditions
 	name = "Eighties traditions and language comprehension"
@@ -602,11 +674,17 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/eightiestraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.eighties_recipes
 
 /datum/quirk/eightiestraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/tribal)
+	if(H)
+		H.mind.learned_recipes -= GLOB.eighties_recipes
+
 
 /datum/quirk/wayfarertraditions
 	name = "Wayfarer traditions and language comprehension"
@@ -620,11 +698,18 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/wayfarertraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.wayfarer_recipes
+
 
 /datum/quirk/wayfarertraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/tribal)
+	if(H)
+		H.mind.learned_recipes -= GLOB.wayfarer_recipes
+
 
 /datum/quirk/bonedancertraditions
 	name = "Bone Dancer traditions and language comprehension"
@@ -638,8 +723,14 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 /datum/quirk/bonedancertraditions/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.bone_dancer_recipes
+
 
 /datum/quirk/bonedancertraditions/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/tribal)
+	if(H)
+		H.mind.learned_recipes -= GLOB.bone_dancer_recipes

@@ -477,6 +477,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 	var/datum/martial_art/rangertakedown/RT = new
 	RT.teach(H)
 
@@ -561,6 +562,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 	var/datum/martial_art/rangertakedown/RT = new
 	RT.teach(H)
 
