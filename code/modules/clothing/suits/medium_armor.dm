@@ -142,8 +142,6 @@
 	armor = ARMOR_VALUE_BALLISTIC_ARMOR
 	body_parts_hidden = CHEST
 
-
-=======
 /obj/item/clothing/suit/armor/medium/vest/bulletproof
 	name = "bulletproof vest"
 	desc = "This vest is in good shape, the layered kevlar lightweight yet very good at stopping bullets."
@@ -161,7 +159,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
-
 
 /obj/item/clothing/suit/armor/medium/vest/bulletproof
 	name = "bulletproof vest"
