@@ -19434,13 +19434,6 @@
 /obj/structure/flora/junglebush/large,
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
-"bWj" = (
-/obj/machinery/vending/boozeomat{
-	density = 0;
-	pixel_x = -32
-	},
-/turf/closed/wall/f13/wood/interior,
-/area/f13/building)
 "bWl" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -84168,7 +84161,7 @@ dHQ
 xrr
 xrr
 aYc
-bWj
+aqQ
 xrr
 bfE
 whb

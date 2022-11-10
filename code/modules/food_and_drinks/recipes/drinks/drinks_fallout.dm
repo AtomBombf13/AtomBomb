@@ -353,7 +353,7 @@
 	name = "Battle Brew"
 	id = "bbrew"
 	results = list(/datum/reagent/consumable/ethanol/bbrew = 2)
-	required_reagents = list(/datum/reagent/medicine/medx = 1, /datum/reagent/consumable/ethanol/vodka = 1)
+	required_reagents = list(/datum/reagent/medicine/charcoal = 1, /datum/reagent/consumable/ethanol/vodka = 1) // Charcoal for right now, as we do have mutant cave fungus but not in game yet, just code.
 
 /datum/chemical_reaction/bbrew2
 	name = "Blackwater Brew"
