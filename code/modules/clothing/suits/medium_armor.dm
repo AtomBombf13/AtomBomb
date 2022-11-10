@@ -160,16 +160,6 @@
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
 
-/obj/item/clothing/suit/armor/medium/vest/bulletproof
-	name = "bulletproof vest"
-	desc = "This vest is in good shape, the layered kevlar lightweight yet very good at stopping bullets."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "vest_bullet"
-	item_state = "vest_bullet"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
-
 /obj/item/clothing/suit/armor/medium/vest/bulletproof/big  /* more slowdown, less weaknesses, more DT, worse enviro protect */
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
