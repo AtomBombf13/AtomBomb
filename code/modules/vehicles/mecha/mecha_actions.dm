@@ -178,7 +178,7 @@
 	UpdateButtonIcon()
 
 /datum/action/vehicle/sealed/mecha/mech_smoke
-	name = "Smoke"
+	name = "Regenerative Smoke"
 	button_icon_state = "mech_smoke"
 
 /datum/action/vehicle/sealed/mecha/mech_smoke/Trigger()
@@ -186,7 +186,6 @@
 		return
 	if(!TIMER_COOLDOWN_CHECK(src, COOLDOWN_MECHA_SMOKE) && chassis.smoke_charges>0)
 		chassis.smoke_system.start()
-		chassis.smoke_charges--
 		TIMER_COOLDOWN_START(src, COOLDOWN_MECHA_SMOKE, chassis.smoke_cooldown)
 
 
@@ -203,7 +202,7 @@
 		chassis.log_message("Toggled zoom mode.", LOG_MECHA)
 		to_chat(owner, "[icon2html(chassis, owner)]<font color='[chassis.zoom_mode?"blue":"red"]'>Zoom mode [chassis.zoom_mode?"en":"dis"]abled.</font>")
 		if(chassis.zoom_mode)
-			owner.client.view_size.setTo(4.5)
+			owner.client.view_size.setTo(5.5)
 			SEND_SOUND(owner, sound('sound/mecha/imag_enh.ogg',volume=50))
 		else
 			owner.client.view_size.resetToDefault() //Let's not let this stack shall we?
