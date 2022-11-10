@@ -1247,6 +1247,20 @@
 /datum/component/construction/mecha/marauder
 	result = /obj/vehicle/sealed/mecha/combat/marauder
 	base_icon = "marauder"
+
+	circuit_control = /obj/item/circuitboard/mecha/marauder/main
+	circuit_periph = /obj/item/circuitboard/mecha/marauder/peripherals
+	circuit_weapon = /obj/item/circuitboard/mecha/marauder/targeting
+
+	inner_plating = /obj/item/stack/sheet/metal
+	inner_plating_amount = 5
+
+	outer_plating = /obj/item/mecha_parts/part/marauder_armor
+	outer_plating_amount = 1
+
+/datum/component/construction/mecha/marauder
+	result = /obj/vehicle/sealed/mecha/combat/marauder
+	base_icon = "marauder"
 	steps = list(
 		//1
 		list(
@@ -1539,6 +1553,19 @@
 		/obj/item/mecha_parts/part/clarke_left_tread,
 		/obj/item/mecha_parts/part/clarke_right_tread
 	)
+
+/datum/component/construction/mecha/clarke
+	result = /obj/vehicle/sealed/mecha/working/ripley/mkii/clarke
+	base_icon = "clarke"
+
+	circuit_control = /obj/item/circuitboard/mecha/clarke/main
+	circuit_periph = /obj/item/circuitboard/mecha/clarke/peripherals
+
+	inner_plating = /obj/item/stack/sheet/metal
+	inner_plating_amount = 5
+
+	outer_plating = /obj/item/stack/sheet/plasteel
+	outer_plating_amount = 10
 
 /datum/component/construction/mecha/clarke
 	result = /obj/vehicle/sealed/mecha/working/ripley/mkii/clarke
