@@ -725,24 +725,23 @@
 	desc = "Light armor vest template. You shouldnt see this normally."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	armor = ARMOR_VALUE_BALLISTIC_ARMOR
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
 	
-/obj/item/clothing/suit/armor/light/vest/flak /*no melee protection, more bomb, some bullet, no DT*/
+/obj/item/clothing/suit/armor/light/vest/flak /*low melee and laser, more bomb, below average bullet, some DT*/
 	name = "flak vest"
 	desc = "A vest made of ballistic nylon to stop spall, frag, and handgun rounds. It is much lighter and breathes easier than kevlar but a lot less sturdy. Smells faintly of napalm."
 	icon_state = "vest_flak"
 	item_state = "vest_flak"
-	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T3) 
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_DT_T3) 
 	
-/obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, no DT*/
+/obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, some DT*/
 	name = "light security vest"
 	desc = "a lightweight ballistic vest that combines protection and comfort."
 	icon_state = "blueshift"
 	item_state = "blueshift"
-	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T3) 
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T2) 
 	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 	
 ////////////////
