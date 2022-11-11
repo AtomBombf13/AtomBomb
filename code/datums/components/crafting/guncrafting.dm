@@ -33,7 +33,7 @@
 
 
 /obj/item/weaponcrafting/improvised_parts/shotgun_receiver
-	name = "shotgun reciever"
+	name = "shotgun receiver"
 	desc = "An improvised receiver to create a break-action breechloaded shotgun."  // removed some text implying that the item had more uses than it does
 	icon_state = "receiver_shotgun"
 	w_class = WEIGHT_CLASS_SMALL

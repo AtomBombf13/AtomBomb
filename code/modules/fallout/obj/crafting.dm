@@ -2,7 +2,7 @@
 //All of the items listed are useful only for crafting things.
 
 /*
-/obj/item/weaponcrafting/reciever
+/obj/item/weaponcrafting/receiver
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."
 	icon = 'icons/fallout/objects/crafting.dmi'
