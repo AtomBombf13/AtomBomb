@@ -927,7 +927,6 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/vaultie //Think of this as old citizens
 	name = "Vaultie"
 	uniform = /obj/item/clothing/under/f13/eastwood/vault
-	gloves = /obj/item/pda
 	belt = /obj/item/storage/belt
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -936,6 +935,7 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/ammo_box/magazine/pistol10mm = 2,
 	/obj/item/melee/onehanded/knife/survival = 1,
 	/obj/item/flashlight/flare = 1,
+	/obj/item/pda = 1
 	)
 
 /datum/outfit/loadout/farmer
