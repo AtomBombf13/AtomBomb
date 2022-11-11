@@ -330,7 +330,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/toy/crayon/white=1,
 		/obj/item/detective_scanner=1,
 		/obj/item/storage/box/gloves=1,
-		/obj/item/storage/box/evidence=1
+		/obj/item/storage/box/evidence=1,
 		/obj/item/ammo_box/loader/m44=1
 		)
 
