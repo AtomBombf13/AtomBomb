@@ -310,7 +310,7 @@ Fence
 
 /obj/machinery/mineral/wasteland_trader/gunbuyer
 	name = "Gun Repository"
-	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Recieve compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
+	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Receive compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
 	goods_list = list(/obj/item/gun/ballistic/automatic/hobo/zipgun = 5,
 						/obj/item/gun/ballistic/revolver/hobo = 5,
 						/obj/item/gun/ballistic/revolver/detective = 5,

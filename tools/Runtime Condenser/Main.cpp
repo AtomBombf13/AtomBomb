@@ -1,6 +1,6 @@
 /* Runtime Condenser by Nodrak
  * Cleaned up and refactored by MrStonedOne
- * This will sum up identical runtimes into one, giving a total of how many times it occured. The first occurance
+ * This will sum up identical runtimes into one, giving a total of how many times it occurred. The first occurance
  * of the runtime will log the source, usr and src, the rest will just add to the total. Infinite loops will
  * also be caught and displayed (if any) above the list of runtimes.
  *
