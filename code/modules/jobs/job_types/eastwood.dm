@@ -330,7 +330,9 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/toy/crayon/white=1,
 		/obj/item/detective_scanner=1,
 		/obj/item/storage/box/gloves=1,
-		/obj/item/storage/box/evidence=1)
+		/obj/item/storage/box/evidence=1
+		/obj/item/ammo_box/loader/m44=1
+		)
 
 /*--------------------------------------------------------------*/
 //Researcher
@@ -926,10 +928,14 @@ here's a tip, go search DEFINES/access.dm
 	name = "Vaultie"
 	uniform = /obj/item/clothing/under/f13/eastwood/vault
 	gloves = /obj/item/pda
+	belt = /obj/item/storage/belt
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/f13/leather
 	backpack_contents = list(
 	/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+	/obj/item/ammo_box/magazine/pistol10mm = 2,
+	/obj/item/melee/onehanded/knife/survival = 1,
+	/obj/item/flashlight/flare = 1,
 	)
 
 /datum/outfit/loadout/farmer
@@ -1007,6 +1013,8 @@ Roles should be limited and low since they should attempt to work within town ra
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
+		/obj/item/gun/ballistic/revolver/police = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/storage/bag/money/small/wastelander = 1)
 
 /datum/outfit/job/wasteland/f13enforcer/pre_equip(mob/living/carbon/human/H)
@@ -1098,6 +1106,8 @@ Roles should be limited and low since they should attempt to work within town ra
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/restraints/handcuffs=1, \
 		/obj/item/ammo_box/magazine/greasegun=2, \
+		/obj/item/gun/ballistic/revolver/police = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/storage/bag/money/small/raider/mobboss = 1, \
 		/obj/item/book/granter/crafting_recipe/manual/denvr = 1)
 
