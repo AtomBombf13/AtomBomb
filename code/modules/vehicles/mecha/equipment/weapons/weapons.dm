@@ -157,13 +157,6 @@
 	range = MECHA_MELEE|MECHA_RANGED
 	kickback = FALSE
 
-/obj/item/mecha_parts/mecha_equipment/weapon/honker/can_attach(obj/vehicle/sealed/mecha/mecha)
-	. = ..()
-	if(!.)
-		return
-	if(!istype(mecha, /obj/vehicle/sealed/mecha/combat/honker))
-		return FALSE
-
 
 /obj/item/mecha_parts/mecha_equipment/weapon/honker/action(mob/source, atom/target, params)
 	if(!action_checks(target))
@@ -425,12 +418,6 @@
 	projectile_energy_cost = 100
 	equip_cooldown = 20
 
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar/can_attach(obj/vehicle/sealed/mecha/combat/honker/M)
-	if(..())
-		if(istype(M))
-			return 1
-	return 0
-
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/mousetrap_mortar
 	name = "mousetrap mortar"
 	desc = "Equipment for clown exosuits. Launches armed mousetraps."
@@ -441,12 +428,6 @@
 	missile_speed = 1.5
 	projectile_energy_cost = 100
 	equip_cooldown = 10
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/mousetrap_mortar/can_attach(obj/vehicle/sealed/mecha/combat/honker/M)
-	if(..())
-		if(istype(M))
-			return 1
-	return 0
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/mousetrap_mortar/proj_init(obj/item/assembly/mousetrap/armed/M)
 	M.secured = 1
@@ -471,12 +452,6 @@
 	var/punch_damage = 35
 	/// TRUE - Can toggle between lethal and non-lethal || FALSE - Cannot toggle
 	var/can_toggle_lethal = TRUE
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/punching_glove/can_attach(obj/vehicle/sealed/mecha/combat/honker/M)
-	if(..())
-		if(istype(M))
-			return 1
-	return 0
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/punching_glove/get_equip_info()
 	if(!chassis)
