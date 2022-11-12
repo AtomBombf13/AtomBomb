@@ -186,7 +186,7 @@
 		visible_message(span_danger("[M.name] has hit [src]!"), \
 						span_userdanger("[M.name] has hit you!"), null, COMBAT_MESSAGE_RANGE, null,
 						M.occupants, span_danger("You hit [src] with your [M.name]!"))
-		log_combat(M.occupants, src, "attacked", M, "(INTENT: [uppertext(M.occupants.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
+		log_combat(M.occupants, src, "attacked", M, "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
 	else
 		step_away(src,M)
 		log_combat(M.occupants, src, "pushed", M)
