@@ -976,9 +976,9 @@
 			else
 				user.visible_message("<span class='notice'>[user] unfastens the external armor layer.</span>", "<span class='notice'>You unfasten the external armor layer.</span>")
 	return TRUE
-
+/*
 /datum/component/construction/unordered/mecha_chassis/honker
-//	result = /datum/component/construction/mecha/honker
+	result = /datum/component/construction/mecha/honker
 	steps = list(
 		/obj/item/mecha_parts/part/honker_torso,
 		/obj/item/mecha_parts/part/honker_left_arm,
@@ -1090,7 +1090,7 @@
 		if(16)
 			user.visible_message("<span class='notice'>[user] puts [I] on [parent].</span>", "<span class='notice'>You put [I] on [parent].</span>")
 	return TRUE
-
+*/
 /datum/component/construction/unordered/mecha_chassis/durand
 	result = /datum/component/construction/mecha/durand
 	steps = list(
