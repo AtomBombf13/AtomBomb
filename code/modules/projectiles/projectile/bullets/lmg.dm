@@ -6,7 +6,7 @@
 // Mech LMG
 
 /obj/item/projectile/bullet/lmg
-	damage = 22
+	damage = 23
 	icon_state = "mech_autocannon"
 	light_range = 2
 	light_power = 0.5
