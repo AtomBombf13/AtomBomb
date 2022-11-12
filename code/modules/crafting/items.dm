@@ -266,6 +266,8 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 		stoplag(1)
 	qdel(src)
 
+//to do: seperate calculations for tool and high salvage, so you do not get 5 advanced welders
+
 /obj/item/salvage/low
 	name = "Pre-war salvage"
 	desc = "Some pre-war salvage, it could contain some useful materials if dissasembled using a workbench..."
