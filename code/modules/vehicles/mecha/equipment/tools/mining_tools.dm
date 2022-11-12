@@ -35,7 +35,7 @@
 			return
 	target.visible_message("<span class='warning'>[chassis] starts to drill [target].</span>", \
 					"<span class='userdanger'>[chassis] starts to drill [target]...</span>", \
-					 "<span class='hear'>You hear drilling.</span>")
+					"<span class='hear'>You hear drilling.</span>")
 
 	if(do_after_cooldown(target, source))
 		log_message("Started drilling [target]", LOG_MECHA)
