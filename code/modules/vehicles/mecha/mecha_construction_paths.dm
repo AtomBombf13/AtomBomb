@@ -978,7 +978,7 @@
 	return TRUE
 
 /datum/component/construction/unordered/mecha_chassis/honker
-	result = /datum/component/construction/mecha/honker
+//	result = /datum/component/construction/mecha/honker
 	steps = list(
 		/obj/item/mecha_parts/part/honker_torso,
 		/obj/item/mecha_parts/part/honker_left_arm,
