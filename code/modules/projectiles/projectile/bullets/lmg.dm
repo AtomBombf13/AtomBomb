@@ -18,6 +18,8 @@
 
 /obj/item/projectile/bullet/incendiary/fnx99
 	damage = 34
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
 
 // Turrets
 
