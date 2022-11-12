@@ -239,11 +239,14 @@
 	. = TRUE
 	if(construction_state == MECHA_SECURE_BOLTS)
 		construction_state = MECHA_LOOSE_BOLTS
-		to_chat(user, "<span class='notice'>You undo the securing bolts.</span>")
+		move_resist = MOVE_RESIST_DEFAULT
+		to_chat(user, "<span class='notice'>You undo the securing bolts and carefully release the parking brake.</span>")
 		return
 	if(construction_state == MECHA_LOOSE_BOLTS)
 		construction_state = MECHA_SECURE_BOLTS
+		move_resist = initial(move_resist)
 		to_chat(user, "<span class='notice'>You tighten the securing bolts.</span>")
+		to_chat(user, "<span class='hear'>There's an audible click from the parking brake.</span>")
 
 /obj/vehicle/sealed/mecha/crowbar_act(mob/living/user, obj/item/I)
 	..()
