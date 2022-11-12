@@ -279,14 +279,14 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot
 	name = "\improper LBX AC 10 \"Scattershot\""
-	desc = "A weapon for combat exosuits. Shoots a spread of pellets."
+	desc = "A bulky shotgun that can only fit on exosuits. Intended for room clearing, this oversized shotgun can also engage a target at range."
 	icon_state = "mecha_scatter"
 	fire_sound = 'sound/weapons/sound_weapons_mech_shotgun.ogg'
 	equip_cooldown = 20
 	projectile = /obj/item/projectile/bullet/scattershot
-	projectiles = 40
-	projectiles_cache = 40
-	projectiles_cache_max = 160
+	projectiles = 50
+	projectiles_cache = 50
+	projectiles_cache_max = 200
 	projectiles_per_shot = 4
 	variance = 25
 	harmful = TRUE
@@ -308,14 +308,14 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	name = "\improper Ultra AC 2"
-	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
+	desc = "A lightweight rifle chambered in caseless 5.56 that's been fitted for exosuit use. Features a shortened barrel for close-quarters use. "
 	icon_state = "mecha_uac2"
 	fire_sound = 'sound/weapons/sound_weapons_mech_autocannon.ogg'
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/lmg
-	projectiles = 300
-	projectiles_cache = 300
-	projectiles_cache_max = 1200
+	projectiles = 180
+	projectiles_cache = 180
+	projectiles_cache_max = 540
 	projectiles_per_shot = 3
 	variance = 6
 	randomspread = 1
