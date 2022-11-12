@@ -162,8 +162,8 @@
 	..()
 
 
-/mob/living/mech_melee_attack(obj/vehicle/sealed/mecha/M)
-	if(M.occupants.a_intent == INTENT_HARM)
+/mob/living/mech_melee_attack(obj/vehicle/sealed/mecha/M, mob/user)
+	if(user.a_intent == INTENT_HARM)
 		if(HAS_TRAIT(M.occupants, TRAIT_PACIFISM))
 			to_chat(M.occupants, span_warning("You don't want to harm other living beings!"))
 			return
