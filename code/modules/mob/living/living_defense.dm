@@ -164,8 +164,8 @@
 
 /mob/living/mech_melee_attack(obj/vehicle/sealed/mecha/M, mob/user)
 	if(user.a_intent == INTENT_HARM)
-		if(HAS_TRAIT(M.occupants, TRAIT_PACIFISM))
-			to_chat(M.occupants, span_warning("You don't want to harm other living beings!"))
+		if(HAS_TRAIT(user, TRAIT_PACIFISM))
+			to_chat(user, span_warning("You don't want to harm other living beings!"))
 			return
 		M.do_attack_animation(src)
 		if(M.damtype == "brute")
