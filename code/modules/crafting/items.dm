@@ -292,6 +292,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 				/obj/item/crowbar/hightech,
 				/obj/item/screwdriver/hightech,
 				/obj/item/wrench/hightech,
+				/obj/item/wrench/power,
 				/obj/item/wirecutters/hightech,
 				/obj/item/multitool/advanced)
 
