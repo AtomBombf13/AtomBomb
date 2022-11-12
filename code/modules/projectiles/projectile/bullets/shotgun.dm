@@ -399,7 +399,7 @@
 // Mech Scattershots
 
 /obj/item/projectile/bullet/scattershot
-	damage = 28
+	damage = BULLET_DAMAGE_PISTOL_MEDIUM
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	icon_state = "mech_autocannon"
