@@ -12,9 +12,7 @@
 	mecha_flags = CANSTRAFE | IS_ENCLOSED | HAS_LIGHTS
 	max_equip = 5
 	var/squeak = TRUE
-
-// ADD deflection/reflection becuz honk?
-
+/*
 /obj/vehicle/sealed/mecha/combat/honker/get_stats_part(mob/user)
 	var/integrity = obj_integrity/max_integrity*100
 	var/cell_charge = get_charge()
@@ -128,12 +126,12 @@
 		output += "<div id='[REF(MT)]'>[MT.get_equip_info()]</div>"
 	output += "</div>"
 	return output
-
+*/
 /obj/vehicle/sealed/mecha/combat/honker/play_stepsound()
 	if(squeak)
 		playsound(src, "clownstep", 70, 1)
 	squeak = !squeak
-
+/*
 /obj/vehicle/sealed/mecha/combat/honker/Topic(href, href_list)
 	..()
 	if (href_list["play_sound"])
@@ -165,3 +163,4 @@
 			if("explosionfar")
 				playsound(src, 'sound/effects/explosionfar.ogg', 50)
 	return
+*/
