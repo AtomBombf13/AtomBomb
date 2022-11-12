@@ -870,7 +870,7 @@
 		"<span class='notice'>You have been uploaded to a mech's onboard computer.</span>")
 	to_chat(AI, "<span class='reallybig boldnotice'>Use Middle-Mouse to activate mech functions and equipment. Click normally for AI interactions.</span>")
 
-
+/* Bugged! If someone knows how to fix, please do!
 ///Handles an actual AI (simple_animal mecha pilot) entering the mech
 /obj/vehicle/sealed/mecha/proc/aimob_enter_mech(mob/living/simple_animal/hostile/syndicate/mecha_pilot/pilot_mob)
 	if(!pilot_mob?.Adjacent(src))
@@ -889,7 +889,7 @@
 		pilot_mob.mecha = null
 	pilot_mob.forceMove(get_turf(src))
 	update_icon()
-
+*/
 
 /////////////////////////////////////
 ////////  Atmospheric stuff  ////////
