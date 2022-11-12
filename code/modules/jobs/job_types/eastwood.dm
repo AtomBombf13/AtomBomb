@@ -935,7 +935,8 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/ammo_box/magazine/pistol10mm = 2,
 	/obj/item/melee/onehanded/knife/survival = 1,
 	/obj/item/flashlight/flare = 1,
-	/obj/item/pda = 1
+	/obj/item/pda = 1,
+	/obj/item/reagent_containers/food/drinks/flask = 1,
 	)
 
 /datum/outfit/loadout/farmer
