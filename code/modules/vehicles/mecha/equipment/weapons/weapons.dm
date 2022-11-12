@@ -313,9 +313,9 @@
 	fire_sound = 'sound/weapons/sound_weapons_mech_autocannon.ogg'
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/lmg
-	projectiles = 180
-	projectiles_cache = 180
-	projectiles_cache_max = 540
+	projectiles = 150
+	projectiles_cache = 150
+	projectiles_cache_max = 600
 	projectiles_per_shot = 3
 	variance = 6
 	randomspread = 1
