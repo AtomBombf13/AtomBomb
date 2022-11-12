@@ -310,7 +310,7 @@
 
 /obj/item/mecha_parts/chassis/honker
 	name = "\improper H.O.N.K chassis"
-	construct_type = /datum/component/construction/unordered/mecha_chassis/honker
+//	construct_type = /datum/component/construction/unordered/mecha_chassis/honker
 
 /obj/item/mecha_parts/part/honker_torso
 	name = "\improper H.O.N.K torso"
