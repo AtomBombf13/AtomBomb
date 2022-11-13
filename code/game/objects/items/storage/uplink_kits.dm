@@ -10,7 +10,7 @@
 			new /obj/item/camera_bug(src) // 1 tc
 			new /obj/item/multitool/ai_detect(src) // 1 tc
 			new /obj/item/encryptionkey/syndicate(src) // 2 tc
-			new /obj/item/reagent_containers/syringe/mulligan(src) // 4 tc
+///			new /obj/item/reagent_containers/syringe/mulligan(src) // 4 tc
 			new /obj/item/storage/fancy/cigarettes/cigpack_syndicate (src) // 2 tc this shit heals
 			new /obj/item/flashlight/emp(src) // 2 tc
 			new /obj/item/chameleon(src) // 7 tc
@@ -118,7 +118,6 @@
 			new /obj/item/book/granter/spell/summonitem(src)
 
 		if("sniper") //This shit is unique so can't really balance it around tc, also no silencer because getting killed without ANY indicator on what killed you sucks
-			new /obj/item/gun/ballistic/rifle/mosin(src) // 12 tc
 			new /obj/item/clothing/glasses/thermal/syndi(src)
 			new /obj/item/clothing/gloves/color/latex/nitrile(src)
 			new /obj/item/clothing/under/suit/black_really(src)
@@ -430,7 +429,7 @@
 				<li>Open the Syndicate Contract Uplink program.</li>
 				<li>Assign yourself.</li>
 				<li>Here, you can accept a contract, and redeem your TC payments from completed contracts.</li>
-				<li>The payment number shown in brackets is the bonus you'll recieve when bringing your target <b>alive</b>. You recieve the
+				<li>The payment number shown in brackets is the bonus you'll receive when bringing your target <b>alive</b>. You receive the
 				other number regardless of if they were alive or dead.</li>
 				<li>Contracts are completed by bringing the target to designated dropoff, calling for extraction, and putting them
 				inside the pod.</li>
@@ -471,7 +470,7 @@
 		/obj/item/pen/edagger,
 		/obj/item/pen/sleepy,
 		/obj/item/flashlight/emp,
-		/obj/item/reagent_containers/syringe/mulligan,
+///		/obj/item/reagent_containers/syringe/mulligan,
 		/obj/item/clothing/shoes/chameleon/noslip,
 		/obj/item/storage/firstaid/tactical,
 		/obj/item/encryptionkey/syndicate,

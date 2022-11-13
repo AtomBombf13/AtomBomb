@@ -41,6 +41,7 @@
 	overdose_threshold = 18 // So, someone drinking 20 units will FOR SURE get overdosed
 	taste_description = "horrific agony"
 	taste_mult = 0.9
+	can_synth = FALSE
 	var/datum/disease/fev_disease = /datum/disease/transformation/mutant
 
 /datum/reagent/toxin/FEV_solution/overdose_process(mob/living/carbon/C)
@@ -74,6 +75,8 @@
 	name = "FEV-II solution"
 	description = "A version of FEV that has been modified by radiation. It is suggested that only radiation-free humans use it."
 	fev_disease = /datum/disease/transformation/mutant/super
+	can_synth = FALSE
+
 
 /datum/reagent/toxin/FEV_solution/two/overdose_process(mob/living/carbon/C)
 	if(C.radiation < RAD_MOB_SAFE)

@@ -66,7 +66,7 @@
 
 /obj/item/storage/money_stack
 	name = "payroll safe"
-	desc = "a payroll safe. Use it every hour to recieve your pay."
+	desc = "a payroll safe. Use it every hour to receive your pay."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "safe"
 	anchored = TRUE

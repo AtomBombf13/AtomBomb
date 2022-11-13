@@ -65,24 +65,6 @@
 	var/emp_damage = round((maxHealth * 0.1) * (severity * 0.1)) // 10% of max HP * 10% of severity(Usually around 20-40)
 	adjustBruteLoss(emp_damage)
 
-/mob/living/simple_animal/hostile/eyebot/playable
-	ranged = FALSE
-	health = 200
-	maxHealth = 200
-	attack_verb_simple = "zaps"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	speed = -1
-
 /mob/living/simple_animal/hostile/eyebot/floatingeye
 	name = "floating eyebot"
 	desc = "A quick-observation robot commonly found in pre-War military installations.<br>The floating eyebot uses a powerful taser to keep intruders in line."
@@ -136,22 +118,6 @@
 	var/emp_damage = round((maxHealth * 0.1) * (severity * 0.1)) // 10% of max HP * 10% of severity(Usually around 20-40)
 	adjustBruteLoss(emp_damage)
 
-/mob/living/simple_animal/pet/dog/eyebot/playable
-	health = 200
-	maxHealth = 200
-	attack_verb_simple = "zaps"
-	aggrosound = null
-	speak_chance = 0
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	speed = -1
-
 //Junkers
 /mob/living/simple_animal/hostile/eyebot/reinforced
 	name = "reinforced eyebot"
@@ -161,7 +127,6 @@
 	health = 100
 	faction = list("raider", "wastebot")
 	extra_projectiles = 1
-	auto_fire_delay = GUN_AUTOFIRE_DELAY_SLOWER
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	minimum_distance = 4

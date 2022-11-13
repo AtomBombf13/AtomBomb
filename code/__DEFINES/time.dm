@@ -1,4 +1,6 @@
-#define MIDNIGHT_ROLLOVER		864000	//number of deciseconds in a day
+#define MIDNIGHT_ROLLOVER		864000	//number of deciseconds in a day / 36000 == 1 hour
+#define OFFSET_GAME_TIMER		37300	//So timer loops to 0 once round starts
+#define OFFSET_INGAME_TIMER		216000 //So ingame timer starts around 6 AM / Starts around 7-8 hours due to delay between roundstart and game
 
 ///displays the current time into the round, with a lot of extra code just there for ensuring it looks okay after an entire day passes
 #define ROUND_TIME ( "[world.time - SSticker.round_start_time > MIDNIGHT_ROLLOVER ? "[round(world.time - SSticker.round_start_time/MIDNIGHT_ROLLOVER)]:[worldtime2text()]" : worldtime2text()]" )
@@ -35,7 +37,7 @@ When using time2text(), please use "DDD" to find the weekday. Refrain from using
 */
 
 #define MONDAY		"Mon"
-#define TUESDAY	"Tue"
+#define TUESDAY		"Tue"
 #define WEDNESDAY	"Wed"
 #define THURSDAY	"Thu"
 #define FRIDAY		"Fri"

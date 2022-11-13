@@ -597,6 +597,12 @@
 	icon_state = "assaultbelt"
 	item_state = "security"
 
+/obj/item/storage/belt/military/waster
+	name = "leather belt"
+	desc = "A ragtag belt used by wasters."
+	icon_state = "cowboy"
+	item_state = "survival"
+
 /obj/item/storage/belt/military/legion
 	name = "legionnaire marching belt"
 	desc = "A belt capable of holding the necessities of a legionnaire."
@@ -753,9 +759,6 @@
 
 /obj/item/storage/belt/holster/ranger4570/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/sequoia(src)
-
-/obj/item/storage/belt/holster/ranger4570bayonet/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/sequoia/bayonet(src)
 
 ////////////////
 // Sheaths //

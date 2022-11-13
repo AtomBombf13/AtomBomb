@@ -719,7 +719,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							30),
 		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							40),
 		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							50),
-		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							150)
+		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							150),
+		new /datum/data/wasteland_equipment("Rifleman's Primer",				/obj/item/book/granter/trait/rifleman,							150)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								5),
@@ -727,7 +728,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							30),
 		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							40),
 		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							50),
-		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							150)
+		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							150),
+		new /datum/data/wasteland_equipment("Rifleman's Primer",				/obj/item/book/granter/trait/rifleman,							150)
 		)
 
 /obj/machinery/mineral/wasteland_vendor/general
@@ -850,12 +852,16 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	prize_list = list(
 		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
-		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25)
+		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25),
+		new /datum/data/wasteland_equipment("Vertical Foregrip",			/obj/item/gun_upgrade/underbarrel/foregrip,						25),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/gun_upgrade/muzzle/recoil_comp,						25),
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
-		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25)
+		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25),
+		new /datum/data/wasteland_equipment("Vertical Foregrip",			/obj/item/gun_upgrade/underbarrel/foregrip,						25),
+		new /datum/data/wasteland_equipment("Recoil Compensator",			/obj/item/gun_upgrade/muzzle/recoil_comp,						25),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/crafting

@@ -9,12 +9,6 @@
 	ckeywhitelist = list ("ExoticJazz")
 	cost = 0
 
-//Talon Company custom comat armor
-/datum/gear/donator/kits/talon
-	name = "Talon Company gearset"
-	path = /obj/item/storage/box/large/custom_kit/talon
-	ckeywhitelist = list()
-
 //Custom Mid-West PA for Mariya Sankinova / Rebel0
 /datum/gear/donator/kits/mariyasankinova
 	name = "Mariya Sankinova's belongings"

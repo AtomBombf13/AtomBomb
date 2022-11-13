@@ -19,6 +19,14 @@
 	pellets = 6
 	variance = 18
 
+/obj/item/ammo_casing/shotgun/magnum //Half the pellets, way more accurate and damaging for that
+	name = "magnum buckshot shell"
+	desc = "A 12 gauge magnum buckshot shell."
+	icon_state = "gshell"
+	projectile_type = /obj/item/projectile/bullet/pellet/shotgun_magnum
+	pellets = 3
+	variance = 6
+
 /obj/item/ammo_casing/shotgun/improvised
 	name = "improvised shell"
 	desc = "An extremely weak shotgun shell with multiple small pellets made out of metal shards."
@@ -39,7 +47,7 @@
 		/datum/material/iron = MATS_SHOTGUN_CASING + MATS_SHOTGUN_BULLET,
 		/datum/material/blackpowder = MATS_SHOTGUN_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
 
-obj/item/ammo_casing/shotgun/executioner
+/obj/item/ammo_casing/shotgun/executioner
 	name = "executioner slug"
 	desc = "A 12 gauge lead slug purpose built to annihilate flesh on impact."
 	icon_state = "stunshell"
@@ -175,14 +183,6 @@ obj/item/ammo_casing/shotgun/executioner
 	pellets = 12//double the pellets, but half the stun power of each, which makes this best for just dumping right in someone's face.
 	variance = 25
 	custom_materials = list(/datum/material/iron=4000)
-
-/obj/item/ammo_casing/shotgun/trainshot
-	name = "12 gauge trainshot shell"
-	desc = "It's a 12-gauge, 3-pellet tungsten trainshot shotgun shell. Sometimes referred to as the tungsten trinity."
-	icon_state = "magshell"
-	projectile_type = /obj/item/projectile/bullet/pellet/trainshot
-	pellets = 3
-	variance = 15
 
 // BETA STUFF // Obsolete
 /obj/item/ammo_casing/shotgun/buckshot/test

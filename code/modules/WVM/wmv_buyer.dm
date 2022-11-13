@@ -237,7 +237,7 @@ ORGAN SELLER
 		final_value = value_per
 
 	stored_caps += final_value
-	playsound(src, 'sound/vore/prey/squish_01.ogg', 60, 1)
+	playsound(src, 'sound/machines/machine_vend.ogg', 60, 1)
 	to_chat(usr, "You sell [final_value] bottle caps value to the [src]. Total caps: [stored_caps].")
 	qdel(I)
 	src.ui_interact(usr)
@@ -310,7 +310,7 @@ Fence
 
 /obj/machinery/mineral/wasteland_trader/gunbuyer
 	name = "Gun Repository"
-	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Recieve compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
+	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Receive compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
 	goods_list = list(/obj/item/gun/ballistic/automatic/hobo/zipgun = 5,
 						/obj/item/gun/ballistic/revolver/hobo = 5,
 						/obj/item/gun/ballistic/revolver/detective = 5,
@@ -322,11 +322,9 @@ Fence
 						/obj/item/gun/ballistic/automatic/pistol/n99 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/pistol22 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/ninemil = 8,
-						/obj/item/gun/ballistic/automatic/pistol/sig = 8,
 						/obj/item/gun/ballistic/automatic/pistol/m1911 = 8,
 						/obj/item/gun/ballistic/rifle/hunting = 10,
 						/obj/item/gun/ballistic/revolver/colt357 = 10,
-						/obj/item/gun/ballistic/rifle/mosin = 10,
 						/obj/item/gun/ballistic/revolver/caravan_shotgun = 10,
 						/obj/item/gun/ballistic/revolver/widowmaker = 10,
 						/obj/item/gun/ballistic/revolver/winchesterrebored = 10,

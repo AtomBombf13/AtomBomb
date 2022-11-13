@@ -1040,6 +1040,7 @@
 	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a follower of the legion."
 	icon_state = "legionmedallionprime"
 	assignment = "camp follower medallion"
+	access = list(ACCESS_LEGION)
 
 /obj/item/card/id/dogtag/legslavemaster
 	name = "slavemaster medallion"

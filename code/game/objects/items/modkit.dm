@@ -23,12 +23,6 @@
 // ! Player / Donar Modkits ! //
 ////////////////////////////////
 
-//Talon Company - da bad guys
-/obj/item/modkit/talon
-	name = "Talon Company Body modkit"
-	target_items = list(/obj/item/clothing/suit/armor/medium/combat)
-	result_item = /obj/item/clothing/suit/armor/medium/combat/talon
-
 //Mariya Sankinova - custom PA set
 /obj/item/modkit/mariarmor
 	name = "Modified Wid-west BoS Body modkit"

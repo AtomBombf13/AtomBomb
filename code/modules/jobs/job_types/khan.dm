@@ -22,7 +22,7 @@
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal
+	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/khan = 1
 		)
@@ -31,6 +31,13 @@
 	..()
 	if(visualsOnly)
 		return
+
+	if(!H.gang)
+		var/datum/gang/greatkhans/GK = GLOB.greatkhans
+		GLOB.all_gangs |= GK
+		GK.add_member(H)
+		H.gang = GK
+
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)

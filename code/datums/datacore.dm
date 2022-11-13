@@ -98,6 +98,7 @@
 	var/list/eastwood = list()
 	var/list/leg = list()
 	var/list/ncr = list()
+	var/list/outlaw = list()
 	var/list/was = list()
 	var/list/misc = list()
 	var/dat = {"
@@ -142,6 +143,9 @@
 		if(rank in GLOB.wasteland_positions)
 			was[name] = rank
 			department = 1
+		if(rank in GLOB.outlaw_positions)
+			outlaw[name] = rank
+			department = 1
 		if(!department && !(name in command))
 			misc[name] = rank
 	if(length(command))
@@ -149,13 +153,23 @@
 		for(var/name in command)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[command[name]]</td></tr>"
 			even = !even
+	if(length(ncr))
+		dat += "<tr><th colspan=3>New California Republic</th></tr>"
+		for(var/name in ncr)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[ncr[name]]</td></tr>"
+			even = !even
+	if(length(leg))
+		dat += "<tr><th colspan=3>Caesar's Legion</th></tr>"
+		for(var/name in leg)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[leg[name]]</td></tr>"
+			even = !even
 	if(length(bos))
 		dat += "<tr><th colspan=3>Brotherhood of Steel</th></tr>"
 		for(var/name in bos)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bos[name]]</td></tr>"
 			even = !even
 	if(length(enclave))
-		dat += "<tr><th colspan=3>Enclave</th></tr>"
+		dat += "<tr><th colspan=3>Enclave Remnants</th></tr>"
 		for(var/name in enclave)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[enclave[name]]</td></tr>"
 			even = !even
@@ -164,20 +178,15 @@
 		for(var/name in eastwood)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[eastwood[name]]</td></tr>"
 			even = !even
-	if(length(leg))
-		dat += "<tr><th colspan=3>Caesar's Legion</th></tr>"
-		for(var/name in leg)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[leg[name]]</td></tr>"
-			even = !even
-	if(length(ncr))
-		dat += "<tr><th colspan=3>New California Republic</th></tr>"
-		for(var/name in ncr)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[ncr[name]]</td></tr>"
-			even = !even
 	if(length(was))
 		dat += "<tr><th colspan=3>Wasteland</th></tr>"
 		for(var/name in was)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[was[name]]</td></tr>"
+			even = !even
+	if(length(outlaw))
+		dat += "<tr><th colspan=3>Outlaws</th></tr>"
+		for(var/name in outlaw)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[outlaw[name]]</td></tr>"
 			even = !even
 	// misc guys
 	if(length(misc))
