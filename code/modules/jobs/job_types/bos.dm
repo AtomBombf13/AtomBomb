@@ -602,7 +602,7 @@ Senior Scribe
 		)
 
 /datum/outfit/loadout/seniorscribebs
-	name = "Bunker Senior Scribe"
+	name = "Senior Bunker Scribe"
 	backpack_contents = list(
 		/obj/item/storage/belt/utility/bos=1,
 		/obj/item/clothing/gloves/color/yellow=1,
