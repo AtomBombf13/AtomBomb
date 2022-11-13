@@ -81,7 +81,8 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/equipment/necklace,
 		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,
-		/datum/gang_item/clothing/glasses/sunglasses
+		/datum/gang_item/clothing/glasses/sunglasses,
+		/datum/gang_item/equipment/greatkhanheadset
 	)
 /datum/gang/denmob
 	name = "Den Mob"

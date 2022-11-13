@@ -621,7 +621,7 @@
 
 /obj/item/clothing/glasses/f13/tribaleyepatch
 	name = "bandage eyepatch"
-	desc = "A set of heavy bandages wrapped around the head. Made to protect the eye from whatever injury occured."
+	desc = "A set of heavy bandages wrapped around the head. Made to protect the eye from whatever injury occurred."
 	icon_state = "eyepatch_white_r"
 	item_state = "eyepatch_white_r"
 

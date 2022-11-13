@@ -9036,7 +9036,7 @@
 	},
 /obj/structure/table/wood,
 /obj/machinery/blackbox_recorder{
-	desc = "The main machine of the Ham Radio that allows you to send and recieve messages from Ranger HQ.";
+	desc = "The main machine of the Ham Radio that allows you to send and receive messages from Ranger HQ.";
 	icon = 'icons/fallout/machines/radio.dmi';
 	icon_state = "gannets_machine21";
 	name = "Ham Radio";

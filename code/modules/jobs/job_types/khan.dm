@@ -31,6 +31,13 @@
 	..()
 	if(visualsOnly)
 		return
+
+	if(!H.gang)
+		var/datum/gang/greatkhans/GK = GLOB.greatkhans
+		GLOB.all_gangs |= GK
+		GK.add_member(H)
+		H.gang = GK
+
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
