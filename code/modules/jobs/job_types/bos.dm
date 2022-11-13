@@ -211,11 +211,6 @@ Head Scribe
 
 	exp_requirements = 1500
 
-	loadout_options = list(
-	/datum/outfit/loadout/hsstand,
-	/datum/outfit/loadout/hspract
-	)
-
 	outfit = /datum/outfit/job/bos/f13headscribe
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
@@ -251,9 +246,10 @@ Head Scribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
-	glasses =       /obj/item/clothing/glasses/sunglasses
+	glasses =       /obj/item/clothing/glasses/hud/health/sunglasses
 	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
-	belt = 			/obj/item/storage/belt/utility/full/engi
+	suit_store = 	/obj/item/gun/medbeam
+	belt = 			/obj/item/storage/belt/utility/bos
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
@@ -270,7 +266,10 @@ Head Scribe
 	name = "Administrative Leader"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/blueprint/research=2,
+		/obj/item/storage/firstaid/tactical/bosheadscribe=1,
+		/obj/item/clothing/mask/gas/adv/gasmask = 1,
 		)
 
 /*
@@ -543,6 +542,11 @@ Senior Scribe
 
 	exp_requirements = 900
 
+	loadout_options = list(
+	/datum/outfit/loadout/seniorscribefs,
+	/datum/outfit/loadout/seniorscribebs
+	)
+
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -596,8 +600,30 @@ Senior Scribe
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/reagent_containers/hypospray/CMO = 1
 	)
+
+/datum/outfit/loadout/seniorscribefs
+	name = "Senior Field Scribe"
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/CMO=1,
+		/obj/item/clothing/glasses/hud/health=1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
+		/obj/item/defibrillator/compact=1,
+		/obj/item/clothing/gloves/color/latex=1,
+		/obj/item/storage/belt/medical/surgery_belt_adv=1
+		)
+
+/datum/outfit/loadout/seniorscribebs
+	name = "Bunker Senior Scribe"
+	backpack_contents = list(
+		/obj/item/storage/belt/utility/bos=1,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/blueprint/research=2,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+		)
+
+
 
 /*
 Scribe
@@ -615,8 +641,10 @@ Scribe
 	exp_requirements = 300
 
 	loadout_options = list(
-	/datum/outfit/loadout/scribea,
-	/datum/outfit/loadout/scribeb
+	/datum/outfit/loadout/scribejfs,
+	/datum/outfit/loadout/scribefs,
+	/datum/outfit/loadout/scribejbs,
+	/datum/outfit/loadout/scribebs
 	)
 
 	outfit = /datum/outfit/job/bos/f13scribe
@@ -671,16 +699,47 @@ Scribe
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
-/datum/outfit/loadout/scribea
-	name = "Junior Scribe"
+/datum/outfit/loadout/scribejfs
+	name = "Junior Field Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorscribe = 1
+		/obj/item/reagent_containers/hypospray/CMO=1,
+		/obj/item/clothing/glasses/hud/health=1,
+		/obj/item/clothing/accessory/bos/juniorscribe=1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
+		/obj/item/defibrillator/compact=1,
+		/obj/item/clothing/gloves/color/latex=1,
 		)
 
-/datum/outfit/loadout/scribeb
-	name = "Scribe"
+/datum/outfit/loadout/scribefs
+	name = "Field Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/scribe = 1
+		/obj/item/reagent_containers/hypospray/CMO=1,
+		/obj/item/clothing/glasses/hud/health=1,
+		/obj/item/clothing/accessory/bos/scribe=1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
+		/obj/item/defibrillator/compact=1,
+		/obj/item/clothing/gloves/color/latex=1,
+		)
+
+/datum/outfit/loadout/scribejbs
+	name = "Junior Bunker Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/scribe=1,
+		/obj/item/storage/belt/utility/full=1,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/clothing/mask/gas/welding=1,
+		/obj/item/blueprint/research=1,
+		)
+
+
+/datum/outfit/loadout/scribebs
+	name = "Bunker Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorscribe=1,
+		/obj/item/storage/belt/utility/full=1,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/clothing/mask/gas/welding=1,
+		/obj/item/blueprint/research=1
 		)
 
 /*
