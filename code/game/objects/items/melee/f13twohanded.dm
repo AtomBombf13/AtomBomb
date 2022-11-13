@@ -503,7 +503,7 @@
 	icon_state = "hammer-war"
 	icon_prefix = "hammer-war"
 	wielded_icon = "hammer-war2"
-	attack_speed = MELEE_SPEED_NORMAL
+	attack_speed = MELEE_SPEED_SLOWEST
 	armour_penetration = PIERCING_MODERATE
 	throwforce = THROWING_POOR
 	throw_range = THROWRANGE_AVERAGE

@@ -11,14 +11,14 @@
 	var/earliest_start = 20 MINUTES	//The earliest world.time that an event can start (round-duration in deciseconds) default: 20 mins
 	var/min_players = 0				//The minimum amount of alive, non-AFK human players on server required to start the event.
 
-	var/occurrences = 0				//How many times this event has occured
+	var/occurrences = 0				//How many times this event has occurred
 	var/max_occurrences = 20		//The maximum number of times this event can occur (naturally), it can still be forced.
 									//By setting this to 0 you can effectively disable an event.
 
 	var/holidayID = ""				//string which should be in the SSeventss.holidays list if you wish this event to be holiday-specific
 									//anything with a (non-null) holidayID which does not match holiday, cannot run.
 	var/wizardevent = FALSE
-	var/random = FALSE				//If the event has occured randomly, or if it was forced by an admin or in-game occurance
+	var/random = FALSE				//If the event has occurred randomly, or if it was forced by an admin or in-game occurance
 	var/alert_observers = TRUE		//should we let the ghosts and admins know this event is firing
 									//should be disabled on events that fire a lot
 

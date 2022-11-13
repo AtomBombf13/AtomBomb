@@ -183,7 +183,7 @@
 
 /obj/item/radio/intercom/retro/pirate
 	name = "Pirate Radio Broadcaster"
-	desc = "A radio that has been hacked to send and recieve from any frequency."
+	desc = "A radio that has been hacked to send and receive from any frequency."
 	freerange = TRUE
 	canhear_range = 1
 

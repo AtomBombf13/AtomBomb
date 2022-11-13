@@ -107,7 +107,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 
 /obj/item/clothing/suit/armor/legion/prime
 	name = "legion prime armor"
-	desc = "Legion Primes have survived some skirmishes, and when promoted often recieve a set of armor, padded leather modeled on ancient baseball catcher uniforms and various plates of metal or boiled leather."
+	desc = "Legion Primes have survived some skirmishes, and when promoted often receive a set of armor, padded leather modeled on ancient baseball catcher uniforms and various plates of metal or boiled leather."
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 

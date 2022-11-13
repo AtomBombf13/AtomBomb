@@ -529,9 +529,9 @@
 
 /// Should the modifier MULTiply or ADD the value?
 GLOBAL_LIST_INIT(armor_token_operation_legend, list(
-		"melee" = "MULT",
-		"bullet" = "MULT",
-		"laser" = "MULT",
+		"melee" = "ADD",
+		"bullet" = "ADD",
+		"laser" = "ADD",
 		"linemelee" = "ADD",
 		"linebullet" = "ADD",
 		"linelaser" = "ADD",
