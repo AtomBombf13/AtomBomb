@@ -302,6 +302,13 @@
 					/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh)
 	crate_name = "energy crate"
 
+/datum/supply_pack/security/laserhightier
+	name = "Weapons - Premium Energy Weapon"
+	desc = "Contains one highly-powerful energy gun for all your vaporizing needs. One spare battery included, but with this that's all you'll need."
+	cost = 15000
+	contains = list(/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high)
+	crate_name = "prewar energy crate"
+
 /datum/supply_pack/security/mods
 	name = "Weapons - Gun Mods"
 	desc = "Contains four random gun and energy weapon mods, fun for the whole family!"
