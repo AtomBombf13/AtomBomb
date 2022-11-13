@@ -20,7 +20,6 @@
 	maxHealth = 104
 	healable = FALSE
 	stat_attack = CONSCIOUS
-	auto_fire_delay = GUN_AUTOFIRE_DELAY_SLOWER
 	melee_damage_lower = 14
 	melee_damage_upper = 28
 	robust_searching = TRUE
@@ -46,23 +45,6 @@
 
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three)
-
-/mob/living/simple_animal/hostile/handy/playable
-	health = 300
-	maxHealth = 300
-	attack_verb_simple = "shoots a burst of flame at"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = FALSE
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	ranged = FALSE
 
 /mob/living/simple_animal/hostile/handy/Initialize()
 	. = ..()
@@ -110,25 +92,6 @@
 		SP_DISTANT_SOUND(PLASMA_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PLASMA_RANGE_DISTANT)
 	)
-
-/mob/living/simple_animal/hostile/handy/gutsy/playable
-	health = 340
-	maxHealth = 340
-	speed = 1
-	attack_verb_simple = "shoots a burst of flame at"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 2 //can break lockers, but not walls
-	wander = FALSE
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	dextrous = TRUE
-	ranged = FALSE
 
 /mob/living/simple_animal/hostile/handy/gutsy/nsb //NSB + Raider Bunker specific
 	name = "mr. gutsy"
@@ -304,26 +267,6 @@
 		SP_DISTANT_RANGE(LASER_RANGE_DISTANT)
 	)
 
-/mob/living/simple_animal/hostile/handy/protectron/playable
-	ranged = FALSE
-	melee_damage_lower = 35
-	melee_damage_upper = 45
-	health = 400
-	maxHealth = 400
-	speed = 2
-	attack_verb_simple = "clamps"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 1 //can break lockers, but not walls
-	wander = FALSE
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-
 /mob/living/simple_animal/hostile/handy/protectron/nsb //NSB + Raider Bunker specific
 	name = "protectron"
 	aggro_vision_range = 15
@@ -382,22 +325,6 @@
 	aggro_vision_range = 15
 	faction = list("raider")
 	obj_damage = 300
-
-/mob/living/simple_animal/hostile/handy/assaultron/playable
-	see_in_dark = 8
-	force_threshold = 15
-	wander = 0
-	anchored = FALSE
-	del_on_death = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM, INTENT_GRAB, INTENT_DISARM)
-	dextrous = TRUE
-	deathmessage = "abruptly shuts down, falling to the ground!"
-
-/mob/living/simple_animal/hostile/handy/assaultron/playable/medical
-	name = "SA-S-E"
-	desc = "An Assaultron modified for the Medical field, SA-S-E forgoes the weaponry and deadliness of her military countarparts to save lives. Painted white with blue highlights, and a blue cross on the front of her visor, this robot comes equipped with what looks like modified medical gear. Her head has no eye-laser, instead a gently pulsing blue eye that scans people the analyze their health, a defibrilator on her back, and articulated hands to be able to use the myriad medical tools strapped to parts of her body under protective cases all show this model is meant to save lives. She's stockier than other Assaultrons due to all the added gear, and her legs seem much thicker than normal due to reinforced servos and gears."
-	icon_state = "assaultron_sase"
-	icon_dead = "assaultron_sase_dead"
 
 //Junkers
 /mob/living/simple_animal/hostile/handy/gutsy/flamer

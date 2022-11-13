@@ -3,7 +3,7 @@
 	name = "handheld transceiver"
 	icon_state = "walkietalkie"
 	item_state = "walkietalkie"
-	desc = "A basic handheld radio that can both broadcast and recieve signals."
+	desc = "A basic handheld radio that can both broadcast and receive signals."
 	dog_fashion = /datum/dog_fashion/back
 
 	flags_1 = CONDUCT_1 | HEAR_1

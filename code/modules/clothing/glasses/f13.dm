@@ -18,6 +18,9 @@
 /obj/item/clothing/glasses/legionpolarizing
 	icon_state = "legpolarizing"
 	item_state = "legpolarizing"
+	darkness_view = 1
+	flash_protect = 1
+	tint = 1
 
 /obj/item/clothing/glasses/night/polarizing
 	name = "polarizing goggles"

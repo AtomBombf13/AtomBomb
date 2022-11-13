@@ -56,6 +56,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	armor = ARMOR_VALUE_RAIDER_ARMOR
 	slowdown = 0
 
 /obj/item/clothing/head/helmet/f13/raider/supafly
@@ -98,7 +99,7 @@
 	desc = "A sturdy helmet to protect against both the elements and from harm, if only it was not looking in such poor condition."
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
@@ -172,6 +173,7 @@
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/f13/raidercombathelmet
 	name = "combat raider helmet"
@@ -181,12 +183,40 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = 0.025
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 
+/obj/item/clothing/head/helmet/f13/combat/mk2/raider
+	name = "customized raider combat helmet"
+	desc = "A reinforced combat helmet painted black with the laser designator removed."
+	icon_state = "combat_helmet_raider"
+	item_state = "combat_helmet_raider"
+
+//////////
+//COMBAT//
+//////////
+/obj/item/clothing/head/helmet/f13/combat/ncr
+	name = "NCR combat helmet"
+	desc = "An old military grade pre-war combat helmet with broken visor, repainted to the colour scheme of the New California Republic."
+	icon_state = "combat_helmet_ncr"
+
+/obj/item/clothing/head/helmet/f13/combat/legion
+	name = "legion combat helmet"
+	desc = "An old military grade pre-war combat helmet, repainted to the colour scheme of Caesar's Legion."
+	icon_state = "combat_helmet_legion"
+
+/obj/item/clothing/head/helmet/f13/combat/mk2/ncr
+	name = "reinforced NCR combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the New California Republic."
+	icon_state = "combat_helmet_ncr_mk2"
+	
+/obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	name = "reinforced legion combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of Caesar's Legion."
+	icon_state = "combat_helmet_legion_mk2"
 
 ///////////
 //ENCLAVE//
 ///////////
-
 
 /obj/item/clothing/head/f13/enclave
 	name = "officer hat"
@@ -194,10 +224,6 @@
 	icon_state = "enclave"
 	item_color = "enclave"
 
-/* /obj/item/clothing/head/helmet/soft/f13/enclave/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
 /obj/item/clothing/head/f13/enclave/peacekeeper
 	name = "peacekeeper cap"
 	desc = "Reinforced field cap issued to the soldiers of the Enclave."
@@ -237,33 +263,15 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
-/obj/item/clothing/head/helmet/f13/enclave/marine
-	name = "old United States Marine Corp helmet"
-	desc = "An advanced model of combat helmet worn by marines aboard the USS Democracy, second only to power armor in protection used by the USCM For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
-	icon_state = "enclave_marine"
-	item_state = "enclave_marine"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
-
-/* /obj/item/clothing/head/helmet/f13/enclave/marine/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
- */
-obj/item/clothing/head/helmet/f13/enclave/usmcriot
-	name = "old United States Marine Corp riot helmet"
-	desc = "A pre-war riot armor helmet used by the USCM For various tasks and operations, it's handled the nuclear wasteland somewhat better than the rest of the armors you've seen."
-	icon_state = "modified_usmc_riot"
-	item_state = "modified_usmc_riot"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/head/helmet/f13/combat/mk2/remnant
+/obj/item/clothing/head/helmet/f13/combat/enclave
 	name = "remnant combat helmet"
-	desc = "A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
-	icon_state = "remnant_helmet"
-	item_state = "remnant_helmet"
+	desc = "A dark maintained combat helmet bearing a small faded circle of stars encompassing an E."
+	icon_state = "enclave_helmet"
+
+/obj/item/clothing/head/helmet/f13/combat/mk2/enclave
+	name = "reinforced remnant combat helmet"
+	desc = "A dark maintained combat helmet bearing a small faded circle of stars encompassing an E. This one is meant for heavier duties."
+	icon_state = "enclave_helmet_mk2"
 
 // Lieutenant's hat
 /obj/item/clothing/head/helmet/f13/enclave/officer
@@ -283,8 +291,6 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "should not exist."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = ""
-	item_state = ""
 	lefthand_file = ""
 	righthand_file = ""
 	flags_inv = HIDEEARS|HIDEHAIR
@@ -292,6 +298,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
+	armor = ARMOR_VALUE_LEATHER_ARMOR
 
 ///////////
 /*SLAVES */
@@ -328,7 +335,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/helmet/f13/legion/prime
 	name = "legion prime helmet"
 	desc = "A helmet from reinforced leather with a red peak."
-	item_state = "leg_prime"
+	icon_state = "leg_prime"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/vet
@@ -337,6 +344,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "leg_vet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	flags_inv = HIDEEARS|HIDEHAIR
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_ARMOR
 
 ////////////////
 /*RECON/SCOUT */
@@ -399,6 +407,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "leg_cent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "legion centurion paladin-slayer helmet"
@@ -406,6 +415,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "leg_cent_paladin"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor = ARMOR_VALUE_SALVAGE
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
@@ -413,6 +423,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "leg_cent_ranger"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 //Don't give this to anything outside of event crap
 /obj/item/clothing/head/helmet/f13/legion/legate
@@ -438,6 +449,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "ncr_helmet"
 	strip_delay = 50
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
+	armor = ARMOR_VALUE_LEATHER_ARMOR
 
 /obj/item/clothing/head/f13/ncr/storm //Whoever named these steelpots should go to get their eyes checked
 	name = "NCR storm helmet"
@@ -508,17 +520,20 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
 	icon_state = "ncr_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	armor = ARMOR_VALUE_LEATHER_JACKET
 
 /obj/item/clothing/head/f13/ncr/patrol
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "ncr_ranger_patrol"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 
 /obj/item/clothing/head/f13/ncr/veteran
 	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ncr_ranger_veteran"
+	armor = ARMOR_VALUE_RIOT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -540,16 +555,19 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "brotherhood_helmet_knight"
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
 	name = "brotherhood knight-captain helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Knight-Captain."
 	icon_state = "brotherhood_helmet_captain"
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
@@ -560,6 +578,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	name = "reinforced knight helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/f13/boscap
 	name = "brotherhood formal cap"
@@ -581,29 +600,32 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 /obj/item/clothing/head/f13/town
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	armor = ARMOR_VALUE_DUSTER_ARMOR
 
 /obj/item/clothing/head/f13/town/deputy
-	name = "eastwood lawman hat"
+	name = "eastwood lawman's hat"
 	desc = "A stylish classic hat used by lawmen."
 	icon_state = "town_deputy"
 
 /obj/item/clothing/head/f13/town/sheriff
-	name = "eastwood marshal hat"
+	name = "eastwood provost's hat"
 	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
 	icon_state = "town_marshal"
 
 /obj/item/clothing/head/helmet/f13/combat/town
 	name = "eastwood security helmet"
 	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "town_helmet"
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/f13/town/riot //UN Glowie
-	name = "eastwood marshal combat helmet"
-	desc = "An old combat helmet in suprisingly good state, painted over with dark blue paint remining of times long gone."
-	icon_state = "town_marshal_riot" //In reality a placeholder
+	name = "eastwood provost combat helmet"
+	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
+	icon_state = "town_marshal_riot"
+	armor = ARMOR_VALUE_RIOT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -626,6 +648,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20
@@ -682,6 +705,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
 	icon_state = "khan_fullhelmet"
 	item_state = "khan_fullhelmet"
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
@@ -695,8 +719,10 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "A helmet fastened from the skull of a deer. Something about it doesn't look right."
 	icon_state = "shamskull"
 	item_state = "shamskull"
+	armor = ARMOR_VALUE_TRIBAL
 
 /obj/item/clothing/head/f13/helmet/wayfarer
+	armor = ARMOR_VALUE_TRIBAL
 
 /obj/item/clothing/head/helmet/f13/wayfarer/hunter
 	name = "hunter headdress"
@@ -891,7 +917,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 //IF PUT BACK INTO USE, PLEASE FILE IT BACK SOMEWHERE ABOVE
 
 //NCR
-
+/* COMMENT IT OUT WHEN YOU AREN'T GOING TO USE THE PATHS GODDAMN
 /obj/item/clothing/head/helmet/f13/combat/ncr
 	name = "NCR combat helmet"
 	desc = "An old military grade pre-war combat helmet, repainted to the colour scheme of the New California Republic."
@@ -986,3 +1012,4 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	desc = "An intimidating helmet that is issued with it's corresponding suit."
 	icon_state = "enclave_new"
 	item_state = "enclave_new"
+*/

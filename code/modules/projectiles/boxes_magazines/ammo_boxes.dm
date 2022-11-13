@@ -51,6 +51,12 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	icon_state = "gbox"
 
+/obj/item/ammo_box/shotgun/magnum
+	name = "Magnum Buckshot shotgun ammo box"
+	desc = "A box full of shotgun shells."
+	ammo_type = /obj/item/ammo_casing/shotgun/magnum
+	icon_state = "trainshotbox"
+
 /obj/item/ammo_box/shotgun/bean
 	name = "Beanbag shotgun ammo box"
 	desc = "A box full of shotgun shells."
@@ -76,12 +82,6 @@
 	desc = "A box full of incendiary shotgun shells."
 	ammo_type = /obj/item/ammo_casing/shotgun/incendiary
 	icon_state = "mbox"
-
-/obj/item/ammo_box/shotgun/trainshot
-	name = "trainshot shotshell ammo box"
-	desc = "A box full of trainshot shells. For hunting trains, you suppose."
-	ammo_type = /obj/item/ammo_casing/shotgun/trainshot
-	icon_state = "trainshotbox"
 
 //.22 LR
 /obj/item/ammo_box/m22
@@ -558,16 +558,6 @@
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/ammo_box/plasmamusket
-	name = "Canister box (Plasma musket)"
-	icon_state = "plasmusketbox"
-	multiple_sprites = 2
-	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
-	max_ammo = 6
-	caliber = list(CALIBER_MUSKET_PLASMA)
-	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
-	w_class = WEIGHT_CLASS_SMALL
-
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	caliber = "40mm"
@@ -745,6 +735,9 @@
 
 /obj/item/ammo_box/shotgun/loaded/buckshot
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+
+/obj/item/ammo_box/shotgun/loaded/magnum
+	ammo_type = /obj/item/ammo_casing/shotgun/magnum
 
 /obj/item/ammo_box/shotgun/loaded/beanbag
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag

@@ -4,8 +4,8 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher
 	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	name = "grenade rifle"
-	icon_state = "dshotgun-sawn"
-	item_state = "gun"
+	icon_state = "grenade_rifle"
+	item_state = "shotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
 	init_mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
@@ -46,7 +46,6 @@
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
 	mag_type = /obj/item/ammo_box/magazine/m75
 	init_mag_type = /obj/item/ammo_box/magazine/m75
-	burst_size = 1
 	fire_delay = 0
 	actions_types = list()
 	casing_ejector = FALSE
@@ -65,9 +64,7 @@
 	automatic_burst_overlay = FALSE
 	mag_type = /obj/item/ammo_box/magazine/internal/speargun
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
-	burst_size = 1
 	fire_delay = 0
-	select = 0
 	actions_types = list()
 	casing_ejector = FALSE
 
@@ -94,7 +91,6 @@
 	fire_sound = 'sound/weapons/rocketlaunch.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	can_suppress = FALSE
-	burst_size = 1
 	slowdown = 1
 	casing_ejector = FALSE
 	weapon_weight = GUN_TWO_HAND_ONLY

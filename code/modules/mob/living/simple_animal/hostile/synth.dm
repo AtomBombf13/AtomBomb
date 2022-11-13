@@ -49,17 +49,6 @@
 		SP_DISTANT_RANGE(LASER_RANGE_DISTANT)
 	)
 
-/mob/living/simple_animal/hostile/synth/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 2 //can smash walls
-	wander = 0
-	anchored = FALSE
-	dextrous = TRUE
-
 /mob/living/simple_animal/hostile/synth/mk2
 	name = "synth mk2"
 	icon_state = "synthmk2"
@@ -78,14 +67,3 @@
 		SP_DISTANT_SOUND(LASER_DISTANT_SOUND),
 		SP_DISTANT_RANGE(LASER_RANGE_DISTANT)
 	)
-
-/mob/living/simple_animal/hostile/synth/mk2/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 2 //can smash walls
-	wander = 0
-	anchored = FALSE
-	dextrous = TRUE

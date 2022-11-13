@@ -35,19 +35,6 @@
 	idlesound = list('sound/f13npc/dog/dog_bark1.ogg', 'sound/f13npc/dog/dog_bark2.ogg', 'sound/f13npc/dog/dog_bark3.ogg')
 	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
 
-/mob/living/simple_animal/hostile/wolf/playable
-	health = 150
-	maxHealth = 150
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	footstep_type = FOOTSTEP_MOB_BAREFOOT
-
 // Alpha dog
 /mob/living/simple_animal/hostile/wolf/alpha
 	name = "alpha feral dog"
@@ -61,18 +48,7 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 35
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-/mob/living/simple_animal/hostile/wolf/alpha/playable
-	health = 150
-	maxHealth = 150
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	footstep_type = FOOTSTEP_MOB_BAREFOOT
+
 // The first proper wolf, got to love just relabels without repathing.
 /mob/living/simple_animal/hostile/wolf/cold
 	name = "wolf"
@@ -87,22 +63,28 @@
 	melee_damage_upper = 35
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	
-//Unique Dogs - Guerilla for Khans is a Rottweiler, Brutus and Lupa german shepherds, Sniffs-the-Earth a sheepdog.
+//Unique Dogs - Guerilla for Khans is a Rottweiler, Brutus and Lupa forgerman shepherds, Sniffs-the-Earth a sheepdog.
 //Feel free to move or add code for different behaviours like sleep, some unused sprites prepped for that sort of thing.
 
-/mob/living/simple_animal/hostile/wolf/playable/rottweiler
+/mob/living/simple_animal/hostile/wolf/friendly
+	faction = list("neutral")
+
+/mob/living/simple_animal/hostile/wolf/rottweiler
+	faction = list("neutral")
 	icon_state = "rottweiler"
 	icon_living = "rottweiler"
 	icon_dead = "rottweiler_dead"
 	icon_gib = "gib"
 
-/mob/living/simple_animal/hostile/wolf/playable/sheepdog
+/mob/living/simple_animal/hostile/wolf/sheepdog
+	faction = list("neutral")
 	icon_state = "tippen"
 	icon_living = "tippen"
 	icon_dead = "tippen_dead"
 	icon_gib = "gib"
 
-/mob/living/simple_animal/hostile/wolf/playable/shepherd
+/mob/living/simple_animal/hostile/wolf/shepherd
+	faction = list("neutral")
 	icon_state = "shepherd"
 	icon_living = "shepherd"
 	icon_dead = "shepherd_dead"

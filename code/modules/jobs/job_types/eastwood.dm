@@ -92,7 +92,7 @@ here's a tip, go search DEFINES/access.dm
 //Marshal
 /*--------------------------------------------------------------*/
 //Brush gun, peacekeeper - Sheriff Coat
-//Citykiller, big 10mm revolver - NPD Coat
+//AK112, big 10mm revolver - Riot Helmet/coat
 
 /datum/job/eastwood/f13sheriff
 	title = "Provost Marshal"
@@ -130,6 +130,7 @@ here's a tip, go search DEFINES/access.dm
 	id = /obj/item/card/id/dogtag/sheriff
 	ears = /obj/item/radio/headset/headset_town/lawman
 	glasses  = /obj/item/clothing/glasses/sunglasses
+	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/army
 	uniform = /obj/item/clothing/under/f13/eastwood/vault/security
 	l_pocket = /obj/item/storage/bag/money/small/den
@@ -146,12 +147,10 @@ here's a tip, go search DEFINES/access.dm
 	name = "The Chief of Security"
 	suit = /obj/item/clothing/suit/armor/medium/town/riot
 	head = /obj/item/clothing/head/f13/town/riot
-	neck = /obj/item/storage/belt/webbing/security
 	gloves = /obj/item/clothing/gloves/f13/military
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller //I used the shotgun, wanna know why ?
+	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/worn
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/slug = 1,
-		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/ammo_box/magazine/m5mm = 3,
 		/obj/item/gun/ballistic/revolver/colt6520/Bigiron = 1
 		)
 
@@ -160,7 +159,6 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/eastwood/sheriff
 	suit = /obj/item/clothing/suit/armor/medium/duster/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
-	neck = /obj/item/storage/belt/holster/leg
 	gloves = /obj/item/clothing/gloves/rifleman
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
@@ -175,7 +173,6 @@ here's a tip, go search DEFINES/access.dm
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
@@ -242,9 +239,9 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/armor/medium/combat/town
 	mask = /obj/item/clothing/mask/gas/town
 	gloves = /obj/item/clothing/gloves/f13/military
-	r_hand = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
+	r_hand = /obj/item/gun/ballistic/automatic/combat
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m5mm=1,
+		/obj/item/ammo_box/magazine/greasegun = 1,
 		/obj/item/gun/ballistic/revolver/colt6520 = 1
 		)
 
@@ -528,26 +525,23 @@ here's a tip, go search DEFINES/access.dm
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policepistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/frag_shrapnel)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/high_explosive)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/explosive/shrapnelmine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/metal_guard)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/laserguide)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forged_barrel)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/overshootermod)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/fullauto)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_helmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combat_armor)
 
 /datum/outfit/job/eastwood/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

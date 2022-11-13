@@ -5,9 +5,9 @@
 /* Zero armor values
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ZERO list(\
-		"linemelee" = 0, \
-		"linebullet" = 0, \
-		"linelaser" = 0, \
+		"melee" = 0, \
+		"bullet" = 0, \
+		"laser" = 0, \
 		"energy" = 0, \
 		"bomb" = 0, \
 		"bio" = 0, \
@@ -22,32 +22,15 @@
  * Has some good fire resist, but thats about it
  * * * * * * * * * * * */
 #define ARMOR_VALUE_GENERIC_ITEM list(\
-		"linemelee" = 0, \
-		"linebullet" = 0, \
-		"linelaser" = 0, \
+		"melee" = 0, \
+		"bullet" = 0, \
+		"laser" = 0, \
 		"energy" = 0, \
 		"bomb" = 0, \
 		"bio" = 10, \
 		"rad" = 10, \
 		"fire" = 50, \
 		"acid" = 50, \
-		"wound" = 0, \
-		"damage_threshold" = 0)
-
-/* Basic clothing armor values
- * Mild environmental resistances
- * No actual defense
- * * * * * * * * * * * */
-#define ARMOR_VALUE_CLOTHES list(\
-		"linemelee" = 0, \
-		"linebullet" = 0, \
-		"linelaser" = 0, \
-		"energy" = 0, \
-		"bomb" = 0, \
-		"bio" = 10, \
-		"rad" = 10, \
-		"fire" = 10, \
-		"acid" = 10, \
 		"wound" = 0, \
 		"damage_threshold" = 0)
 
@@ -60,9 +43,9 @@
  * +20 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_LIGHT list(\
-		"linemelee" = 20, \
-		"linebullet" = 20, \
-		"linelaser" = 20, \
+		"melee" = 20, \
+		"bullet" = 20, \
+		"laser" = 20, \
 		"energy" = 0, \
 		"bomb" = 0, \
 		"bio" = 10, \
@@ -81,9 +64,9 @@
  * +35 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_MEDIUM list(\
-		"linemelee" = 35, \
-		"linebullet" = 35, \
-		"linelaser" = 35, \
+		"melee" = 35, \
+		"bullet" = 35, \
+		"laser" = 35, \
 		"energy" = 5, \
 		"bomb" = 10, \
 		"bio" = 25, \
@@ -102,9 +85,9 @@
  * +45 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_HEAVY list(\
-		"linemelee" = 45, \
-		"linebullet" = 45, \
-		"linelaser" = 45, \
+		"melee" = 45, \
+		"bullet" = 45, \
+		"laser" = 45, \
 		"energy" = 0, \
 		"bomb" = 25, \
 		"bio" = 25, \
@@ -114,42 +97,241 @@
 		"wound" = 35, \
 		"damage_threshold" = 5)
 
-/* Salvaged PA values
- * Next to no mobility
- * Good environmental resistances
- * Great defense
- * Lots of DT
- * * * * * * * * * * * */
+//////////////////////////////////////////////////
+
+#define ARMOR_VALUE_CLOTHES list(\
+		"melee" = 0, \
+		"bullet" = 0, \
+		"laser" = 0, \
+		"energy" = 0, \
+		"bomb" = 0, \
+		"bio" = 0, \
+		"rad" = 0, \
+		"fire" = 0, \
+		"acid" = 0, \
+		"wound" = 0, \
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_TRIBAL list(\
+		"melee" = 15, \
+		"bullet" = 0, \
+		"laser" = 0, \
+		"energy" = 0, \
+		"bomb" = 0, \
+		"bio" = 0, \
+		"rad" = 0, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 10, \
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_KIT list(\
+		"melee" = 5, \
+		"bullet" = 10, \
+		"laser" = 5, \
+		"energy" = 10, \
+		"bomb" = 0, \
+		"bio" = 0, \
+		"rad" = 0, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 5, \
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_LEATHER_JACKET list(\
+		"melee" = 10, \
+		"bullet" = 10, \
+		"laser" = 0, \
+		"energy" = 0, \
+		"bomb" = 0, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 5, \
+		"damage_threshold" = 2)
+
+#define ARMOR_VALUE_REINFORCED_LEATHER_JACKET list(\
+		"melee" = 15, \
+		"bullet" = 15, \
+		"laser" = 5, \
+		"energy" = 5, \
+		"bomb" = 5, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 5, \
+		"damage_threshold" = 4)
+
+#define ARMOR_VALUE_LEATHER_ARMOR list(\
+		"melee" = 15, \
+		"bullet" = 10, \
+		"laser" = 5, \
+		"energy" = 5, \
+		"bomb" = 5, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 10, \
+		"damage_threshold" = 4)
+
+#define ARMOR_VALUE_REINFORCED_LEATHER_ARMOR list(\
+		"melee" = 20, \
+		"bullet" = 15, \
+		"laser" = 10, \
+		"energy" = 5, \
+		"bomb" = 5, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 15, \
+		"damage_threshold" = 6)
+
+#define ARMOR_VALUE_BALLISTIC_ARMOR list(\
+		"melee" = 10, \
+		"bullet" = 35, \
+		"laser" = 5, \
+		"energy" = 5, \
+		"bomb" = 5, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 15, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_BULLETPROOF_ARMOR list(\
+		"melee" = 5, \
+		"bullet" = 45, \
+		"laser" = 5, \
+		"energy" = 5, \
+		"bomb" = 5, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 15, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_METAL_ARMOR list(\
+		"melee" = 30, \
+		"bullet" = 20, \
+		"laser" = 30, \
+		"energy" = 10, \
+		"bomb" = 25, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 15, \
+		"damage_threshold" = 6)
+
+#define ARMOR_VALUE_REINFORCED_METAL_ARMOR list(\
+		"melee" = 40, \
+		"bullet" = 20, \
+		"laser" = 40, \
+		"energy" = 15, \
+		"bomb" = 25, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 15, \
+		"damage_threshold" = 8)
+
+#define ARMOR_VALUE_DUSTER_ARMOR list(\
+		"melee" = 20, \
+		"bullet" = 20, \
+		"laser" = 10, \
+		"energy" = 5, \
+		"bomb" = 15, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 15, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_RAIDER_ARMOR list(\
+		"melee" = 20, \
+		"bullet" = 10, \
+		"laser" = 5, \
+		"energy" = 5, \
+		"bomb" = 10, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 10, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_COMBAT_ARMOR list(\
+		"melee" = 25, \
+		"bullet" = 25, \
+		"laser" = 25, \
+		"energy" = 15, \
+		"bomb" = 25, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 20, \
+		"acid" = 20, \
+		"wound" = 20, \
+		"damage_threshold" = 10)
+
+#define ARMOR_VALUE_REINFORCED_COMBAT_ARMOR list(\
+		"melee" = 30, \
+		"bullet" = 30, \
+		"laser" = 30, \
+		"energy" = 20, \
+		"bomb" = 30, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 25, \
+		"acid" = 25, \
+		"wound" = 20, \
+		"damage_threshold" = 12)
+
+#define ARMOR_VALUE_RIOT_ARMOR list(\
+		"melee" = 50, \
+		"bullet" = 40, \
+		"laser" = 25, \
+		"energy" = 20, \
+		"bomb" = 50, \
+		"bio" = 0, \
+		"rad" = 15, \
+		"fire" = 25, \
+		"acid" = 25, \
+		"wound" = 30, \
+		"damage_threshold" = 14)
+
 #define ARMOR_VALUE_SALVAGE list(\
-		"linemelee" = 70, \
-		"linebullet" = 70, \
-		"linelaser" = 60, \
+		"melee" = 50, \
+		"bullet" = 60, \
+		"laser" = 30, \
 		"energy" = 30, \
-		"bomb" = 60, \
+		"bomb" = 40, \
 		"bio" = 80, \
 		"rad" = 50, \
 		"fire" = 80, \
 		"acid" = 80, \
-		"wound" = 45, \
-		"damage_threshold" = 10)
+		"wound" = 40, \
+		"damage_threshold" = 16)
 
-/* Power armor values
- * High mobility
- * Amazing environmental resistances
- * OP defense
- * * * * * * * * * * * */
 #define ARMOR_VALUE_PA list(\
-		"linemelee" = 70, \
-		"linebullet" = 70, \
-		"linelaser" = 60, \
+		"melee" = 60, \
+		"bullet" = 70, \
+		"laser" = 40, \
 		"energy" = 30, \
-		"bomb" = 90, \
+		"bomb" = 40, \
 		"bio" = 100, \
 		"rad" = 50, \
 		"fire" = 70, \
 		"acid" = 95, \
-		"wound" = 100, \
-		"damage_threshold" = 12)
+		"wound" = 50, \
+		"damage_threshold" = 20)
 
 /* Armor Subclass multipliers
  * Modifies base armor slots by these values
@@ -247,25 +429,25 @@
  * T3 - Dedicated heavy bullet plates
  * * * * * * * * * * * */
 #define ARMOR_MODIFIER_UP_BULLET_T1 list(\
-		"linebullet" = 10)
+		"bullet" = 10)
 
 #define ARMOR_MODIFIER_UP_BULLET_T2 list(\
-		"linebullet" = 25)
+		"bullet" = 25)
 
 #define ARMOR_MODIFIER_UP_BULLET_T3 list(\
-		"linebullet" = 50)
+		"bullet" = 50)
 
 #define ARMOR_MODIFIER_DOWN_BULLET_T1 list(\
-		"linebullet" = -10)
+		"bullet" = -10)
 
 #define ARMOR_MODIFIER_DOWN_BULLET_T2 list(\
-		"linebullet" = -25)
+		"bullet" = -25)
 
 #define ARMOR_MODIFIER_DOWN_BULLET_T3 list(\
-		"linebullet" = -50)
+		"bullet" = -50)
 
 #define ARMOR_MODIFIER_DOWN_BULLET_T4 list(\
-		"linebullet" = -200)
+		"bullet" = -200)
 
 /* Melee armor
  * Adds on melee protection
@@ -274,22 +456,22 @@
  * T3 - Dedicated heavy plating
  * * * * * * * * * * * */
 #define ARMOR_MODIFIER_UP_MELEE_T1 list(\
-		"linemelee" = 10)
+		"melee" = 10)
 
 #define ARMOR_MODIFIER_UP_MELEE_T2 list(\
-		"linemelee" = 25)
+		"melee" = 25)
 
 #define ARMOR_MODIFIER_UP_MELEE_T3 list(\
-		"linemelee" = 50)
+		"melee" = 50)
 
 #define ARMOR_MODIFIER_DOWN_MELEE_T1 list(\
-		"linemelee" = -10)
+		"melee" = -10)
 
 #define ARMOR_MODIFIER_DOWN_MELEE_T2 list(\
-		"linemelee" = -25)
+		"melee" = -25)
 
 #define ARMOR_MODIFIER_DOWN_MELEE_T3 list(\
-		"linemelee" = -50)
+		"melee" = -50)
 
 /* Laser armor
  * Adds on laser protection
@@ -298,25 +480,25 @@
  * T3 - Dedicated polished mirror finish
  * * * * * * * * * * * */
 #define ARMOR_MODIFIER_UP_LASER_T1 list(\
-		"linelaser" = 10)
+		"laser" = 10)
 
 #define ARMOR_MODIFIER_UP_LASER_T2 list(\
-		"linelaser" = 25)
+		"laser" = 25)
 
 #define ARMOR_MODIFIER_UP_LASER_T3 list(\
-		"linelaser" = 50)
+		"laser" = 50)
 
 #define ARMOR_MODIFIER_DOWN_LASER_T1 list(\
-		"linelaser" = -10)
+		"laser" = -10)
 
 #define ARMOR_MODIFIER_DOWN_LASER_T2 list(\
-		"linelaser" = -25)
+		"laser" = -25)
 
 #define ARMOR_MODIFIER_DOWN_LASER_T3 list(\
-		"linelaser" = -50)
+		"laser" = -50)
 
 #define ARMOR_MODIFIER_DOWN_LASER_T4 list(\
-		"linelaser" = -200)
+		"laser" = -200)
 
 /* DT tokens
  * Adds on damage threshold
@@ -347,9 +529,9 @@
 
 /// Should the modifier MULTiply or ADD the value?
 GLOBAL_LIST_INIT(armor_token_operation_legend, list(
-		"melee" = "MULT",
-		"bullet" = "MULT",
-		"laser" = "MULT",
+		"melee" = "ADD",
+		"bullet" = "ADD",
+		"laser" = "ADD",
 		"linemelee" = "ADD",
 		"linebullet" = "ADD",
 		"linelaser" = "ADD",
@@ -469,7 +651,3 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 
 /// Damages DT is effective with
 GLOBAL_LIST_INIT(damage_threshold_valid_types, list("brute", "fire"))
-
-
-
-

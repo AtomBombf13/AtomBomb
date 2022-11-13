@@ -580,14 +580,6 @@
 	build_path = /obj/item/gun/energy/laser/practice/raygun
 	category = list("initial", "Pistols")
 
-/datum/design/am4c
-	name = "Foam Force AM4-C Rifle"
-	id = "foam_am4c"
-	materials = list(/datum/material/plastic = 4000, /datum/material/iron = 500)
-	build_path = /obj/item/gun/ballistic/automatic/AM4C
-	category = list("initial", "Rifles")
-	build_type = TOYLATHE | NO_PUBLIC_LATHE
-
 /datum/design/foam_f3
 	name = "Replica F3 Justicar"
 	id = "foam_f3"

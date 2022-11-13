@@ -144,7 +144,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/explosion_power = 35
 	///Time in 1/10th of seconds since the last sent warning
 	var/lastwarning = 0
-	///Refered to as eer on the moniter. This value effects gas output, heat, damage, and radiation.
+	///Referred to as eer on the moniter. This value effects gas output, heat, damage, and radiation.
 	var/power = 0
 	///Determines the rate of positve change in gas comp values
 	var/gas_change_rate = 0.05

@@ -166,7 +166,7 @@
   - tweak: AI now requires silicon playtime instead of crew playtime for roundstart
       role
   selea:
-  - bugfix: fixed runtime in logic circuits, which was occured  with invalid input
+  - bugfix: fixed runtime in logic circuits, which was occurred  with invalid input
       types.
 2018-04-12:
   Cobby:

@@ -39,21 +39,6 @@
 	aggrosound = list('sound/f13npc/gecko/gecko_alert.ogg', )
 	death_sound = 'sound/f13npc/gecko/gecko_death.ogg'
 
-/mob/living/simple_animal/hostile/gecko/playable
-	health = 200
-	maxHealth = 200
-	speed = 0
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	melee_damage_lower = 20
-	melee_damage_upper = 45
-	footstep_type = FOOTSTEP_MOB_CLAW
-
 
 //////////////////////////
 // NIGHTSTALKERS & PELT //
@@ -94,28 +79,16 @@
 	a_intent = INTENT_HARM
 	footstep_type = FOOTSTEP_MOB_CLAW
 
-/mob/living/simple_animal/hostile/stalker/playable
-	health = 300
-	maxHealth = 300
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	melee_damage_lower = 20
-	melee_damage_upper = 45
-
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.reagents.add_reagent(/datum/reagent/toxin/cazador_venom, 4)
 
-/mob/living/simple_animal/hostile/stalker/playable/legion				
+/mob/living/simple_animal/hostile/stalker/legion				
 	name = "legionstalker"
 	desc = "A nightstalker bred specifically for the legion under the use of combat and companionship. legionstalkers have the body and loyalty of a canine but the agility and deadlyness of rattlesnake."
+	faction = list("legion")
 	icon_state = "nightstalker-legion"
 	icon_living = "nightstalker-legion"
 	icon_dead = "nightstalker-legion-dead"
@@ -157,20 +130,6 @@
 	idlesound = list('sound/f13npc/nightstalker/idle1.ogg')
 	death_sound = 'sound/f13npc/nightstalker/death.ogg'
 	attack_sound = 'sound/f13npc/nightstalker/attack1.ogg'
-
-/mob/living/simple_animal/hostile/stalkeryoung/playable
-	health = 250
-	maxHealth = 250
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	anchored = FALSE
-	melee_damage_lower = 20
-	melee_damage_upper = 45
-	footstep_type = FOOTSTEP_MOB_CLAW
 
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()

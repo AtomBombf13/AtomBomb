@@ -1414,14 +1414,14 @@ list(/obj/item/stack/sheet/metal = 20,
 /obj/item/storage/box/shopkeeper/PopulateContents()
 	for(var/i in 1 to 4)
 		var/randomgun = pick(
-							/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
-							/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
-							/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
-							/obj/item/book/granter/crafting_recipe/blueprint/neostead,
-							/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-							/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+							/obj/item/book/granter/crafting_recipe/blueprint/marksman,
 							/obj/item/book/granter/crafting_recipe/blueprint/r91,
-							/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
-							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
+							/obj/item/book/granter/crafting_recipe/blueprint/sniper,
+							/obj/item/book/granter/crafting_recipe/blueprint/deagle,
+							/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
+							/obj/item/book/granter/crafting_recipe/blueprint/m1garand,
+							/obj/item/book/granter/crafting_recipe/blueprint/lsw,
+							/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
+							/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
 							)
 		new randomgun(src)

@@ -244,11 +244,11 @@
 	<br>
 	<b>Step 1
 	<br>
-	Aquire Xander root,broc flowers,barrel cactii and bottles of Sarsaparilla.
+	Acquire Xander root,broc flowers, barrel cactii and bottles of Sarsaparilla.
 	<br>
 	Step 2
-	<br> 
-	Ferment Xander root,barrel cactii and broc flowers seperate. 
+	<br>
+	Ferment Xander root, barrel cactii and broc flowers seperate.
 	<br>
 	<b>Step 3
 	<br>
