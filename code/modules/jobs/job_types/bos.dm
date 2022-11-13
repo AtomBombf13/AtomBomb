@@ -707,7 +707,6 @@ Scribe
 		/obj/item/clothing/glasses/hud/health=1,
 		/obj/item/clothing/accessory/bos/scribe=1,
 		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
-		/obj/item/defibrillator/compact=1,
 		/obj/item/clothing/gloves/color/latex=1,
 		/obj/item/storage/belt/medical/surgical=1,
 		)
