@@ -687,19 +687,8 @@ Scribe
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
-/*		You gotta be a bunker scribe before fieldscribe, so this is coded out.
-/datum/outfit/loadout/scribejfs
-	name = "Junior Field Scribe"
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/CMO=1,
-		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/clothing/accessory/bos/juniorscribe=1,
-		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
-		/obj/item/defibrillator/compact=1,
-		/obj/item/clothing/gloves/color/latex=1,
-		)
-*/
 
+//	You gotta be a bunker scribe before fieldscribe.
 /datum/outfit/loadout/scribefs
 	name = "Field Scribe"
 	backpack_contents = list(
