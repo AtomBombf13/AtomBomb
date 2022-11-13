@@ -16639,6 +16639,7 @@
 "bln" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
+/obj/item/paper/secretrecipe,
 /turf/open/floor/plasteel/f13/vault_floor/red/white/whiteredchess/whiteredchess2,
 /area/f13/ncr)
 "blp" = (
@@ -17001,6 +17002,7 @@
 /obj/structure/table/wood,
 /obj/structure/destructible/tribal_torch/wall/lit,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/paper/secretrecipe,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "bns" = (
@@ -19690,6 +19692,7 @@
 	req_one_access_txt = null
 	},
 /obj/item/book/granter/action/drink_fling,
+/obj/item/paper/secretrecipe,
 /turf/open/floor/wood_fancy/wood_fancy_dark{
 	icon_state = "fancy_dark-broken1"
 	},
@@ -32430,7 +32433,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/dirt{
 	icon_state = "dirt"
 	},
@@ -35685,6 +35687,7 @@
 	},
 /obj/item/kitchen/rollingpin,
 /obj/item/kitchen/knife/butcher,
+/obj/item/paper/secretrecipe,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/khanfort)
 "iXT" = (
@@ -44564,7 +44567,7 @@
 /area/f13/building)
 "naO" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/obj/machinery/mineral/wasteland_trader/brotherhood,
+/obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "nbb" = (

@@ -171,7 +171,7 @@ catch(Exception $e){
 		<title>TGUI .ract Compiler</title>
 	</head>
 	<body>
-		<?php if(isset($error)) echo '<h5><font color="red">An error occured:</font> ' . $error . '</h5><br><br>'; ?>
+		<?php if(isset($error)) echo '<h5><font color="red">An error occurred:</font> ' . $error . '</h5><br><br>'; ?>
 		<h1>Upload up to <?php echo $max_number_of_uploads; ?> .ract files<h2>
 		<h4>Based off revision: <?php echo isset($commit_url) ? '<a href="' . $commit_url . '">' . $revision . '</a>' : $revision; ?>
 		<form id='file_form' action = '' method = 'post' enctype='multipart/form-data'>
