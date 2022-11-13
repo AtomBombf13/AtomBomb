@@ -252,20 +252,6 @@ Head Scribe
 	belt = 			/obj/item/storage/belt/utility/bos
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
-		)
-
-/datum/outfit/loadout/hsstand
-	name = "Medicinal Expert"
-	backpack_contents = list(
-		/obj/item/gun/medbeam = 1,
-		/obj/item/reagent_containers/hypospray/CMO = 1
-		)
-
-/datum/outfit/loadout/hspract
-	name = "Administrative Leader"
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma/pistol = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		/obj/item/blueprint/research=2,
 		/obj/item/storage/firstaid/tactical/bosheadscribe=1,
