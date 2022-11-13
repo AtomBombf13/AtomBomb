@@ -193,7 +193,7 @@
 		))
 
 obj/item/storage/belt/medical/surgical
-	name = "primitive medical toolbelt"
+	name = "surgical medical toolbelt"
 	desc = "A belt designed for holding surigical tools."
 	content_overlays = FALSE
 

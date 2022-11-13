@@ -256,6 +256,8 @@ Head Scribe
 		/obj/item/blueprint/research=2,
 		/obj/item/storage/firstaid/tactical/bosheadscribe=1,
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/energy/laser/wattz = 1,
 		)
 
 /*
@@ -583,7 +585,7 @@ Senior Scribe
 	glasses =	/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/gun/energy/laser/wattz = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
@@ -658,7 +660,7 @@ Scribe
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/gun/energy/laser/wattz = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1
 		)
@@ -707,6 +709,7 @@ Scribe
 		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
 		/obj/item/defibrillator/compact=1,
 		/obj/item/clothing/gloves/color/latex=1,
+		/obj/item/storage/belt/medical/surgical=1,
 		)
 
 /datum/outfit/loadout/scribejbs
