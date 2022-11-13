@@ -586,6 +586,8 @@ Senior Scribe
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+
 	)
 
 /datum/outfit/loadout/seniorscribefs
@@ -605,8 +607,7 @@ Senior Scribe
 		/obj/item/storage/belt/utility/bos=1,
 		/obj/item/clothing/gloves/color/yellow=1,
 		/obj/item/blueprint/research=2,
-		/obj/item/clothing/gloves/color/yellow=1,
-		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+		/obj/item/clothing/gloves/color/yellow=1
 		)
 
 
@@ -627,7 +628,6 @@ Scribe
 	exp_requirements = 300
 
 	loadout_options = list(
-	/datum/outfit/loadout/scribejfs,
 	/datum/outfit/loadout/scribefs,
 	/datum/outfit/loadout/scribejbs,
 	/datum/outfit/loadout/scribebs
@@ -685,6 +685,7 @@ Scribe
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
+/*		You gotta be a bunker scribe before fieldscribe, so this is coded out.
 /datum/outfit/loadout/scribejfs
 	name = "Junior Field Scribe"
 	backpack_contents = list(
@@ -695,6 +696,7 @@ Scribe
 		/obj/item/defibrillator/compact=1,
 		/obj/item/clothing/gloves/color/latex=1,
 		)
+*/
 
 /datum/outfit/loadout/scribefs
 	name = "Field Scribe"

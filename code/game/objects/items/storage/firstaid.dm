@@ -229,11 +229,11 @@
 /obj/item/storage/firstaid/tactical/bosheadscribe/PopulateContents()
 	if(empty)
 		return
-	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/stack/medical/gauze/adv(src)
 	new /obj/item/defibrillator/compact/combat/loaded(src)
 	new /obj/item/hypospray/mkii/CMO(src)
-	new /obj/item/reagent_containers/medspray/styptic(src)
-	new /obj/item/reagent_containers/medspray/silver_sulf(src)
+	new /obj/item/stack/medical/suture/medicated(src)
+	new /obj/item/stack/medical/mesh/advanced(src)
 	new /obj/item/healthanalyzer/advanced(src)
 
 /*
