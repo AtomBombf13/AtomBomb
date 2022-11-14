@@ -85,6 +85,12 @@
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 1
 
+/datum/gear/suit/jamrock
+	name = "disco-ass blazer"
+	path = /obj/item/clothing/suit/armor/outfit/jacket/jamrock
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
+	cost = 1
+	
 /datum/gear/suit/flakjack
 	name = "Flak Jacket"
 	path = /obj/item/clothing/suit/armor/light/vest/flak
