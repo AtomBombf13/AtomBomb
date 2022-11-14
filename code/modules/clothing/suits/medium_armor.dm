@@ -184,23 +184,26 @@
 	icon_state = "vest_chicom"
 	item_state = "vest_chicom"
 
+//light armor in disguise with balanced 20 in all stats, 4 threshold, and less slowown
 /obj/item/clothing/suit/armor/medium/vest/alt
 	desc = "A thick armored vest that provides decent protection against most types of damage."
 	icon_state = "armor"
 	item_state = "armor"
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
+//joke armor, just like legion armor
 /obj/item/clothing/suit/armor/medium/vest/old
 	name = "degrading armor vest"
 	desc = "Older generation Type 1 armored vest. It looks like a fixer-upper, but it could still stop a bullet."
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT 
 	icon_state = "armor"
 	item_state = "armor"
-
-/obj/item/clothing/suit/armor/medium/vest/blueshirt
-	name = "large armor vest"
-	desc = "A large, yet comfortable piece of armor, protecting you from some threats."
-	icon_state = "blueshift"
-	item_state = "blueshift"
-	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/vest/warden
 	name = "warden's jacket"
