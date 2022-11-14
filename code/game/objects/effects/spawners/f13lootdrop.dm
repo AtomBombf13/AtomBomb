@@ -2013,7 +2013,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/reagent_containers/food/snacks/deadmouse = 50)
 
 /obj/effect/spawner/lootdrop/f13/traitbooks
-	name = "trait book spawner"
+	name = "good trait book spawner"
 	lootcount = 1
 	loot = list(/obj/item/book/granter/trait/lowsurgery = 10,
 				/obj/item/book/granter/trait/chemistry = 10,
@@ -2029,6 +2029,22 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/book/granter/crafting_recipe/gunsmith_five = 5
 				)
 
+/obj/effect/spawner/lootdrop/f13/traitbooks/cargo
+//no GnB5
+	name = "cargo  trait book spawner"
+	lootcount = 1
+	loot = list(/obj/item/book/granter/trait/lowsurgery = 10,
+				/obj/item/book/granter/trait/chemistry = 10,
+				/obj/item/book/granter/trait/trekking = 10,
+				/obj/item/book/granter/trait/techno = 10,
+				/obj/item/book/granter/trait/pa_wear = 1,
+				/obj/item/book/granter/trait/explosives = 10,
+				/obj/item/book/granter/trait/explosives_advanced = 5,
+				/obj/item/book/granter/trait/rifleman = 5,
+				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
+				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
+				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10,
+
 /obj/effect/spawner/lootdrop/f13/traitbooks/low
 	name = "low trait book spawner"
 	lootcount = 1
@@ -2042,6 +2058,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/book/granter/action/drink_fling = 10,
 				/obj/item/book/granter/crafting_recipe/gunsmith_one = 10,
 				)
+
 /obj/effect/spawner/lootdrop/f13/blueprintLow
 	name = "gun comps spawner"
 	icon_state = "blueprint_loot"
