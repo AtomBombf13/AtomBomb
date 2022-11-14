@@ -688,7 +688,7 @@ Scribe
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
 
-//	You gotta be a bunker scribe before fieldscribe.
+//	You gotta be a bunker scribe before fieldscribe
 /datum/outfit/loadout/scribefs
 	name = "Field Scribe"
 	backpack_contents = list(
