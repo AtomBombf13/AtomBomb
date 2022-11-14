@@ -89,6 +89,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_FEARLESS, src) //no phobias for legion!
 	ADD_TRAIT(H, TRAIT_BERSERKER, src)
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 
 /obj/item/storage/box/legate
 	name = "legate belongings"
@@ -655,7 +656,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
 		/obj/item/melee/onehanded/machete/gladius = 1,
-		/obj/item/book/granter/trait/rifleman = 1,
 		)
 
 //Speculator
@@ -679,7 +679,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
-	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	name = "Legion Speculator"
@@ -737,7 +736,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
-	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
 
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
