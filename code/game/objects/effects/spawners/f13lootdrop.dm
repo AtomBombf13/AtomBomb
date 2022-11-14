@@ -2043,7 +2043,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/book/granter/trait/rifleman = 5,
 				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
 				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
-				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10,
+				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10,)
 
 /obj/effect/spawner/lootdrop/f13/traitbooks/low
 	name = "low trait book spawner"
