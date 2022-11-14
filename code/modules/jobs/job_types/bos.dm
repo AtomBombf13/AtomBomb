@@ -703,7 +703,7 @@ Scribe
 /datum/outfit/loadout/scribejbs
 	name = "Junior Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/scribe=1,
+		/obj/item/clothing/accessory/bos/juniorscribe=1,
 		/obj/item/storage/belt/utility/full=1,
 		/obj/item/clothing/gloves/color/yellow=1,
 		/obj/item/clothing/mask/gas/welding=1,
@@ -714,7 +714,7 @@ Scribe
 /datum/outfit/loadout/scribebs
 	name = "Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorscribe=1,
+		/obj/item/clothing/accessory/bos/scribe=1,
 		/obj/item/storage/belt/utility/full=1,
 		/obj/item/clothing/gloves/color/yellow=1,
 		/obj/item/clothing/mask/gas/welding=1,
