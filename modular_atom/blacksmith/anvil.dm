@@ -158,7 +158,6 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	outrightfailchance = initial(outrightfailchance)
 	artifactrolled = FALSE
 	workpiece_state = FALSE
-
 	cut_overlay(image(icon= 'modular_atom/blacksmith/icons/blacksmith.dmi',icon_state="workpiece"))
 	SetBusy(FALSE, null)
 
@@ -224,12 +223,12 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			user.visible_message("<span class='notice'>[user] forcefully hammers out imperfections in the metal.</span>", \
 						"<span class='notice'>You forcefuly hammer out imperfections in the metal.</span>")
 		if("fold")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_double1.ogg',100)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_double1.ogg',95)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] folds the metal.</span>", \
 						"<span class='notice'>You fold the metal.</span>")
 		if("draw")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_double2.ogg',100)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_double2.ogg',95)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] hammers both sides of the metal, drawing it out.</span>", \
 						"<span class='notice'>You hammer both sides of the metal, drawing it out.</span>")
@@ -239,12 +238,12 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			user.visible_message("<span class='notice'>[user] flattens the metal, shrinking it.</span>", \
 						"<span class='notice'>You flatten the metal, shrinking it.</span>")
 		if("bend")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_single1.ogg',100)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_single1.ogg',85)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] bends the metal, using the rounded end of the anvil.</span>", \
 						"<span class='notice'>You bend the metal, using the rounded end of the anvil.</span>")
 		if("punch")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_single2.ogg',100)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_single2.ogg',95)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] uses the puncher to make holes in the metal.</span>", \
 						"<span class='notice'>You use the puncher to make holes in the metal.</span>")
@@ -267,15 +266,15 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	switch(stepdone)
 		if("weak hit")
 			currentsteps += 1
-			outrightfailchance += 5
+			outrightfailchance += 4
 			currentquality += 1
 		if("strong hit")
 			currentsteps += 2
-			outrightfailchance += 9.5
+			outrightfailchance += 8.5
 			currentquality += 2
 		if("heavy hit")
 			currentsteps += 3
-			outrightfailchance += 12.5
+			outrightfailchance += 13
 			currentquality += 3
 		if("fold")
 			stepsdone += "f"

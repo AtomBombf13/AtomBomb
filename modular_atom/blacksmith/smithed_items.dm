@@ -106,11 +106,11 @@
 			qualname =  "poor"
 		if(-1 to 1)
 			qualname = "normal"
-		if(12 to INFINITY)
+		if(13 to INFINITY)
 			qualname = "legendary"
-		if(11 to 12)
+		if(11 to 13)
 			qualname = "masterwork"
-		if(8 to 10)
+		if(8 to 11)
 			qualname = "excellent"
 		if(5 to 8)
 			qualname = "good"
@@ -435,19 +435,19 @@
 	desc = "Finish by attaching a chain to it."
 	icon_state = "ball"
 	finishingitem = CHAIN
-	finalitem = /obj/item/clothing/shoes/ballandchain
+	finalitem = /obj/item/restraints/legcuffs/ballandchain
 	throwforce = 15
 	throw_range = 2
 
 /obj/item/smithing/ballandchain/startfinish()
-	var/obj/item/smithing/ballandchain/finalforreal = new /obj/item/clothing/shoes/ballandchain(src)
-	finalitem = new /obj/item/clothing/shoes/ballandchain(src)
+	var/obj/item/smithing/ballandchain/finalforreal = new /obj/item/restraints/legcuffs/ballandchain(src)
+	finalitem = new /obj/item/restraints/legcuffs/ballandchain(src)
 	finalforreal.force += QUALITY_MODIFIER*2
 	finalitem = finalforreal
 	finalitem.icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
 	finalitem.icon_state = "ballandchain"
 	finalitem.name = "ball and chain"
-	finalitem.desc = "Clamp it on the prisoners bare feet. They won't be able to remove it themselves."
+	finalitem.desc = "Clamp it on the prisoners feet. They will need a long time to remove it themselves."
 	finalitem.material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	..()
 
