@@ -280,7 +280,7 @@
 	name = "Technical manuals"
 	desc = "A box crammed full of manuals, for reading. SCAV issues, Guns and Ammo, how to operate chem-machines, it's all here! Come in groups of three."
 	cost = 2500
-	contains = list(/obj/effect/spawner/lootdrop/f13/traitbooks,
+	contains = list(/obj/effect/spawner/lootdrop/f13/traitbooks/cargo,
 					/obj/effect/spawner/lootdrop/f13/traitbooks/low,
 					/obj/effect/spawner/lootdrop/f13/traitbooks/low)
 

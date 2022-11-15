@@ -20,6 +20,13 @@
 	item_state = "gasmask_enclave"
 	flash_protect = 2
 
+/obj/item/clothing/mask/gas/adv/gasmask
+	name = "explorer gas mask mk 2"
+	desc = "A military-grade gas mask that can be connected to an air supply. This set of explorer gas mask seems fairly advanced compared to the mining counterpart that isnt flash protected lenses."
+	icon_state = "gasmask_advanced"
+	item_state = "gasmask_advanced"
+	flash_protect = 2
+
 /obj/item/clothing/mask/gas/glass
 	name = "glass gas mask"
 	desc = "A face-covering mask that can be connected to an air supply. This one doesn't obscure your face however." //More accurate

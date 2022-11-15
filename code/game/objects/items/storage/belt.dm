@@ -104,7 +104,6 @@
 	new /obj/item/multitool(src)
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 
-
 /obj/item/storage/belt/utility/atmostech/PopulateContents()
 	new /obj/item/screwdriver(src)
 	new /obj/item/wrench(src)
@@ -192,6 +191,20 @@
 		/obj/item/reagent_containers/chem_pack,
 		/obj/item/stack/sticky_tape //surgical tape
 		))
+
+obj/item/storage/belt/medical/surgical
+	name = "surgical medical toolbelt"
+	desc = "A belt designed for holding surigical tools."
+	content_overlays = FALSE
+
+/obj/item/storage/belt/medical/primitive/PopulateContents()
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/scalpel(src)
+	new /obj/item/circular_saw(src)
+	new /obj/item/retractor(src)
+	new /obj/item/hemostat(src)
+	new /obj/item/cautery(src)
+	new /obj/item/bonesetter(src)
 
 /obj/item/storage/belt/medical/surgery_belt_adv
 	name = "surgical supply belt"

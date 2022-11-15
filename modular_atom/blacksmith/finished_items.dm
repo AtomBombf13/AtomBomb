@@ -247,7 +247,7 @@
 	item_state = "knife_smith"
 	obj_flags = UNIQUE_RENAME
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	force = WEAPON_FORCE_KNIFE
+	force = WEAPON_FORCE_KNIFE-2
 
 /obj/item/kitchen/knife/smithed/Initialize()
 	. = ..()
@@ -265,14 +265,14 @@
 //////////////////////////
 
 // ------------ BALL AND CHAIN ------------ //
-/obj/item/clothing/shoes/ballandchain
+/*/obj/item/clothing/shoes/ballandchain - Commented out until testing of legcuff version done. Looks like marked for death. Obsolete.
 	name = "ball and chain"
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
 	icon_state = "ballandchain"
 	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
 	item_state = "ballandchain"
 	obj_flags = UNIQUE_RENAME
-	strip_delay = 300
+	strip_delay = 200
 	equip_delay_other = 100
 	can_be_tied = FALSE
 	w_class = WEIGHT_CLASS_BULKY
@@ -288,6 +288,72 @@
 		to_chat(user, "<span class='warning'>The ball and chain are too hard to remove by yourself! You'll need help taking this off!</span>")
 		return
 	return ..()
+*/
+
+/obj/item/restraints/legcuffs/ballandchain
+	name = "ball and chain"
+	desc = "Use this to keep prisoners in line."
+	gender = PLURAL
+	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
+	icon_state = "ballandchain"
+	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	item_state = "ballandchain"
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
+	throwforce = 10
+	w_class = WEIGHT_CLASS_BULKY
+	slowdown = 4
+	breakouttime = 1200	//Deciseconds = 30s = 0.5 minute
+	strip_delay = 100
+	var/cuffsound = 'modular_atom/blacksmith/sound/chain.ogg'
+	var/trashtype = null //for disposable cuffs
+
+/obj/item/restraints/legcuffs/ballandchain/attack(mob/living/carbon/C, mob/living/user)
+	if(!istype(C))
+		return
+
+	if(iscarbon(user) && (HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50)))
+		to_chat(user, span_warning("Somehow I can't lock this..."))
+		return
+
+	if(!C.legcuffed)
+		if(C.get_num_legs(FALSE) >= 1 || C.get_leg_ignore())
+			C.visible_message(span_danger("[user] is trying to put [src.name] on [C]!"), \
+								span_userdanger("[user] is trying to put [src.name] on [C]!"))
+
+			playsound(loc, cuffsound, 50, 1, -2)
+			if(do_mob(user, C, 30) && (C.get_num_legs(FALSE) >= 1 || C.get_leg_ignore()))
+				if(iscyborg(user))
+					apply_legcuffs(C, user, TRUE)
+				else
+					apply_legcuffs(C, user)
+				to_chat(user, span_notice("You clamp irons on [C]."))
+				SSblackbox.record_feedback("tally", "handcuffs", 1, type)
+
+				log_combat(user, C, "clamped in irons")
+			else
+				to_chat(user, span_warning("You fail to clamp irons on [C]!"))
+		else
+			to_chat(user, span_warning("[C] doesn't have a leg..."))
+
+/obj/item/restraints/legcuffs/ballandchain/proc/apply_legcuffs(mob/living/carbon/target, mob/user, dispense = 0)
+	if(target.legcuffed)
+		return
+
+	if(!user.temporarilyRemoveItemFromInventory(src) && !dispense)
+		return
+
+	var/obj/item/restraints/legcuffs/ballandchain/cuffs = src
+	if(trashtype)
+		cuffs = new trashtype()
+	else if(dispense)
+		cuffs = new type()
+
+	target.equip_to_slot(cuffs, SLOT_LEGCUFFED)
+
+	if(trashtype && !dispense)
+		qdel(src)
+	return
 
 
 //////////////////////////////////
@@ -757,3 +823,21 @@
 	overlay = mutable_appearance(icon, "chain_bola")
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
+
+
+
+//////////////////////////////////////////////
+//											//
+//  			SMITHED ARMOR				//
+//											//
+//////////////////////////////////////////////
+
+/obj/item/clothing/suit/armor/heavy/metal/smithed
+	name = "smithed metal armor"
+	desc = "A set of plates with leather straps, protecting some vital areas."
+	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
+	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	icon_state = "smithed_armor_metal"
+	item_state = "smithed_armor_metal"
