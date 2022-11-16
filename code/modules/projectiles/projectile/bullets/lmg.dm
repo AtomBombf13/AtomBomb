@@ -6,7 +6,9 @@
 // Mech LMG
 
 /obj/item/projectile/bullet/lmg
-	damage = 25
+	damage = 23
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	icon_state = "mech_autocannon"
 	light_range = 2
 	light_power = 0.5
@@ -16,6 +18,8 @@
 
 /obj/item/projectile/bullet/incendiary/fnx99
 	damage = 34
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
 
 // Turrets
 

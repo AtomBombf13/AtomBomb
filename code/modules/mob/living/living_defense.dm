@@ -162,10 +162,10 @@
 	..()
 
 
-/mob/living/mech_melee_attack(obj/mecha/M)
-	if(M.occupant.a_intent == INTENT_HARM)
-		if(HAS_TRAIT(M.occupant, TRAIT_PACIFISM))
-			to_chat(M.occupant, span_warning("You don't want to harm other living beings!"))
+/mob/living/mech_melee_attack(obj/vehicle/sealed/mecha/M, mob/user)
+	if(user.a_intent == INTENT_HARM)
+		if(HAS_TRAIT(user, TRAIT_PACIFISM))
+			to_chat(user, span_warning("You don't want to harm other living beings!"))
 			return
 		M.do_attack_animation(src)
 		if(M.damtype == "brute")
@@ -185,14 +185,14 @@
 		updatehealth()
 		visible_message(span_danger("[M.name] has hit [src]!"), \
 						span_userdanger("[M.name] has hit you!"), null, COMBAT_MESSAGE_RANGE, null,
-						M.occupant, span_danger("You hit [src] with your [M.name]!"))
-		log_combat(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
+						M.occupants, span_danger("You hit [src] with your [M.name]!"))
+		log_combat(M.occupants, src, "attacked", M, "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
 	else
 		step_away(src,M)
-		log_combat(M.occupant, src, "pushed", M)
+		log_combat(M.occupants, src, "pushed", M)
 		visible_message(span_warning("[M] pushes [src] out of the way."), \
 			span_warning("[M] pushes you out of the way."), null, COMBAT_MESSAGE_RANGE, null,
-			M.occupant, span_warning("You push [src] out of the way with your [M.name]."))
+			M.occupants, span_warning("You push [src] out of the way with your [M.name]."))
 
 /mob/living/fire_act()
 	adjust_fire_stacks(3)
