@@ -12,6 +12,7 @@
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/beltslot_weapon.dmi'
 	force = WEAPON_FORCE_CLUB
 	throwforce = THROWING_POOR
 	throw_range = THROWRANGE_AVERAGE
@@ -34,10 +35,10 @@
 //////////////////////
 
 /obj/item/melee/onehanded/machete					//	[ Damage SWORD, Wounding] --------------
-	name = "simple machete"
+	name = "lawnmower machete"
 	desc = "A makeshift machete made of a lawn mower blade."
-	icon_state = "machete_imp"
-	item_state = "salvagedmachete"
+	icon_state = "machete_lawn"
+	item_state = "machete_lawn"
 	force = WEAPON_FORCE_SWORD
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_MODEST
@@ -48,6 +49,7 @@
 	name = "machete"
 	desc = "A forged machete made of high quality steel."
 	icon_state = "machete"
+	item_state = "machete"
 	force = WEAPON_FORCE_SWORD
 	block_chance = 8
 
@@ -55,6 +57,7 @@
 	name = "training machete"
 	desc = "A training machete made of tough wood."
 	icon_state = "machete_training"
+	item_state = "machete_training"
 	force = 1
 	throwforce = THROWING_PATHETIC
 	wound_bonus = -20
