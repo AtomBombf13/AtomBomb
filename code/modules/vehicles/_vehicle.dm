@@ -7,6 +7,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	density = TRUE
 	anchored = FALSE
+	COOLDOWN_DECLARE(cooldown_vehicle_move)
 	var/list/mob/occupants				//mob = bitflags of their control level.
 	var/max_occupants = 1
 	var/max_drivers = 1
@@ -24,6 +25,7 @@
 	var/list/mob/occupant_actions			//assoc list mob = list(type = action datum assigned to mob)
 	var/obj/vehicle/trailer
 	var/datum/looping_sound/motorcycle/soundloop //Given we only use motorbikes, for now, we'll just use this.
+	var/mouse_pointer //do we have a special mouse
 
 /obj/vehicle/Initialize(mapload)
 	. = ..()
@@ -122,9 +124,9 @@
 	vehicle_move(direction)
 
 /obj/vehicle/proc/vehicle_move(direction)
-	if(lastmove + movedelay > world.time)
+	if(!COOLDOWN_FINISHED(src, cooldown_vehicle_move))
 		return FALSE
-	lastmove = world.time
+	COOLDOWN_START(src, cooldown_vehicle_move, movedelay)
 	if(trailer)
 		var/dir_to_move = get_dir(trailer.loc, loc)
 		var/did_move = step(src, direction)
