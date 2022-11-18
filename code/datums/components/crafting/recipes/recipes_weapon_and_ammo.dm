@@ -146,6 +146,19 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/batteryboxplasma //plasmamusket ammo
+	name = "Plasma Can"
+	result = /obj/item/ammo_box/plasmamusket
+	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
+				/obj/item/stack/sheet/mineral/plasma = 5,
+				/obj/item/stack/sheet/mineral/silver = 1,
+				/obj/item/stock_parts/cell = 6,
+				/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/batterybox //lasmusket ammo
 	name = "Laser Musket battery pack"
 	result = /obj/item/ammo_box/lasmusket
@@ -504,6 +517,17 @@
 		/obj/item/stack/crafting/goodparts = 1,
 		)
 	tools = list(TOOL_WORKBENCH, TOOL_SAW, TOOL_SCREWDRIVER)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
+/datum/crafting_recipe/gun/plasmamusket
+	name = "Plasma musket"
+	result = /obj/item/gun/ballistic/rifle/hobo/plasmacaster
+	reqs = list(/obj/item/gun/ballistic/rifle/hobo/lasmusket = 1,
+				/obj/item/stack/crafting/electronicparts = 2,
+				/obj/item/advanced_crafting_components/conductors = 1)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
