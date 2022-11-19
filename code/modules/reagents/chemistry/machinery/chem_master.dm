@@ -522,7 +522,7 @@
 	desc = "Used to create condiments and other cooking supplies."
 	condi = TRUE
 
-// Repath to - /obj/machinery/chem_master/alchemy
+// Repath to - /obj/machinery/chem_master/alchemy so its all consistent:   This is used both to manufacture custom powder bags and as a tool for advanced tribal medicines. Can be stackcrafted from wood.
 /obj/machinery/chem_master/primitive
 	name = "alchemy table"
 	desc = "A table with a small containers with mysterious fluids in them, and other tools used in performing primitive chemistry."
@@ -534,8 +534,10 @@
 	flags_1 = NODECONSTRUCT_1
 	can_be_unanchored = TRUE
 	basereagents = 240
+	light_system = MOVABLE_LIGHT
 	light_color = LIGHT_COLOR_YELLOW
-	light_power = 0.1
+	light_power = 0.7
+	light_range = 1
 	machine_tool_behaviour = TOOL_ALCHEMY
 
 /obj/machinery/chem_master/primitive/update_icon_state()
