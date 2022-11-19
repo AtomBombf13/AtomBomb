@@ -276,16 +276,9 @@
 	can_charge = 0
 	selfcharge = 1
 	icon_state = "rechargerpistol"
-	w_class = WEIGHT_CLASS_SMALL
-	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/breeder
-	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
-
-	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
+	draw_time = GUN_DRAW_LONG //in NV, the gun starts at 0 and then has to charge
 
 //AEP 7 Laser pistol
 /obj/item/gun/energy/laser/pistol
