@@ -19887,9 +19887,9 @@
 /area/f13/brotherhood)
 "cgY" = (
 /obj/machinery/button/door{
-	pixel_x = -26;
+	id = "barhome";
 	name = "garage button";
-	id = "barhome"
+	pixel_x = -26
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
@@ -36162,11 +36162,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
 "jjg" = (
-/obj/structure/table/wood,
-/obj/item/hemostat/tribal,
-/obj/item/kitchen/knife/butcher/tribal,
-/obj/item/retractor/tribal,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_master/primitive,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "jjp" = (
@@ -46126,6 +46123,14 @@
 /obj/structure/flora/tallgrass2,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
+"nOd" = (
+/obj/structure/table/wood,
+/obj/item/hemostat/tribal,
+/obj/item/kitchen/knife/butcher/tribal,
+/obj/item/retractor/tribal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/legion)
 "nOi" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -56258,8 +56263,8 @@
 "sGu" = (
 /obj/structure/curtain{
 	color = "#5c131b";
-	pixel_y = 32;
-	density = 1
+	density = 1;
+	pixel_y = 32
 	},
 /turf/open/floor/f13{
 	icon_state = "whitegreenrustychess"
@@ -123597,7 +123602,7 @@ qXa
 dSU
 qXa
 qXa
-iEb
+nOd
 oSV
 sEB
 aqx

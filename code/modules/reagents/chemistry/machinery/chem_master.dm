@@ -10,7 +10,7 @@
 	idle_power_usage = 20
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	circuit = /obj/item/circuitboard/machine/chem_master
-	machine_tool_behaviour = TOOL_CHEMMASTER
+	machine_tool_behaviour = list(TOOL_CHEMMASTER, TOOL_ALCHEMY)
 
 	var/basereagents = 100
 	var/obj/item/reagent_containers/beaker = null
@@ -522,9 +522,11 @@
 	desc = "Used to create condiments and other cooking supplies."
 	condi = TRUE
 
+// Repath to - /obj/machinery/chem_master/alchemy
 /obj/machinery/chem_master/primitive
 	name = "alchemy table"
-	desc = "A wooden table with various bone mortars and pistles, as well as other tools."
+	desc = "A table with a small containers with mysterious fluids in them, and other tools used in performing primitive chemistry."
+	icon = 'icons/fallout/structures/alchemy.dmi'
 	icon_state = "alchemy_table"
 	primitive = TRUE
 	use_power = FALSE
@@ -532,6 +534,9 @@
 	flags_1 = NODECONSTRUCT_1
 	can_be_unanchored = TRUE
 	basereagents = 240
+	light_color = LIGHT_COLOR_YELLOW
+	light_power = 0.1
+	machine_tool_behaviour = TOOL_ALCHEMY
 
 /obj/machinery/chem_master/primitive/update_icon_state()
 	if(beaker)

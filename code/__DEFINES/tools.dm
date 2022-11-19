@@ -32,8 +32,9 @@
 #define TOOL_FWORKBENCH   	"finishing workbench"
 #define TOOL_BOTTLER		"bottler"
 #define TOOL_AWORKBENCH     "advanced workbench"
-#define TOOL_LOOM			"Loom"
+#define TOOL_LOOM			"loom"
 #define TOOL_CHEMMASTER		"ChemMaster / refinery"
+#define TOOL_ALCHEMY		"alchemy table"
 #define TOOL_METAL_BENCH	"metalworking bench"
 //
 #define TOOL_GUNTIER1		"Guns and Bullets: Part 1"
