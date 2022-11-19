@@ -73,7 +73,6 @@
 /obj/item/clothing/suit/armor/power_armor/proc/assign_traits(mob/user)
 	if(no_power) // Has no charge left
 		return
-	ADD_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
@@ -85,7 +84,6 @@
 		remove_traits(user)
 
 /obj/item/clothing/suit/armor/power_armor/proc/remove_traits(mob/user)
-	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
@@ -328,8 +326,7 @@
 	name = "T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-	armor_block_chance = 50
-	deflection_chance = 10
+	armor_block_chance = 10
 
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
@@ -337,8 +334,7 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
-	armor_block_chance = 50
-	deflection_chance = 10
+	armor_block_chance = 10
 
 /obj/item/clothing/suit/armor/power_armor/t45d/bos
 	name = "Brotherhood T-45d Power Armour"
@@ -353,8 +349,7 @@
 	item_state = "t51bpowerarmor"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
-	armor_block_chance = 60
-	deflection_chance = 10
+	armor_block_chance = 20
 
 /obj/item/clothing/suit/armor/power_armor/t51b/hardened
 	name = "Hardened T-51b power armor"
@@ -374,15 +369,13 @@
 	icon_state = "excavator"
 	item_state = "excavator"
 	armor_block_chance = 20
-	deflection_chance = 0
 
 /obj/item/clothing/suit/armor/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	armor_block_chance = 60
-	deflection_chance = 15
+	armor_block_chance = 25
 
 //Peacekeeper armor adjust as needed
 /obj/item/clothing/suit/armor/power_armor/advanced/x02
