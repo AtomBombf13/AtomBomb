@@ -313,7 +313,7 @@
 				)
 
 /obj/effect/spawner/bundle/f13/armor/laserproofmetal
-	name = "polsihed metal armor spawner"
+	name = "polished metal armor spawner"
 	items = list(
 				/obj/item/clothing/suit/armor/heavy/metal/polished,
 				/obj/item/clothing/head/helmet/f13/metalmask
@@ -755,9 +755,10 @@
 //Energy Weapon Spawners
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 40,
-				/obj/effect/spawner/bundle/f13/wattzm = 25,
-				/obj/effect/spawner/bundle/f13/laserpistol = 35
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 35,
+				/obj/effect/spawner/bundle/f13/wattzm = 15,
+				/obj/effect/spawner/bundle/f13/laserpistol = 30,
+				/obj/item/gun/energy/laser/wattz/recharger = 20,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
