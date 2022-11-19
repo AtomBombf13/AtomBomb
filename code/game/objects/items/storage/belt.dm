@@ -1032,6 +1032,7 @@ obj/item/storage/belt/medical/surgical
 		/obj/item/reagent_containers/spray/plantbgone,
 		/obj/item/reagent_containers/food/drinks/flask,
 		/obj/item/reagent_containers/glass/bottle/nutrient,
+		/obj/item/flashlight,
 		))
 
 // Primitive medical belt, meant to be part of a ghetto surgery improvement at some point
