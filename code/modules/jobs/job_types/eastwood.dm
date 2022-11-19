@@ -140,7 +140,8 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/grenade/flashbang = 1
+		/obj/item/grenade/flashbang = 1,
+		/obj/item/clothing/accessory/medal = 1,
 		)
 
 /datum/outfit/loadout/thechief
