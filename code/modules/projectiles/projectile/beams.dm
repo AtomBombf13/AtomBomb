@@ -427,7 +427,7 @@
 /obj/item/projectile/beam/laser/lasgun/hitscan/focused 
 	name = "overcharged laser beam"
 	damage = 34
-	damage_threshold_penetration = BULLET_DT_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
