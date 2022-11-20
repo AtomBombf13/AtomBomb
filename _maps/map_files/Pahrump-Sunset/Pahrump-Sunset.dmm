@@ -36162,8 +36162,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
 "jjg" = (
+/obj/structure/table/wood,
+/obj/item/hemostat/tribal,
+/obj/item/kitchen/knife/butcher/tribal,
+/obj/item/retractor/tribal,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/chem_master/primitive,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "jjp" = (
@@ -46124,11 +46127,8 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "nOd" = (
-/obj/structure/table/wood,
-/obj/item/hemostat/tribal,
-/obj/item/kitchen/knife/butcher/tribal,
-/obj/item/retractor/tribal,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_master/primitive,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "nOi" = (
