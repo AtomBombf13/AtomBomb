@@ -981,14 +981,6 @@
 	icon_state = "housewood1-broken"
 	},
 /area/f13/wasteland)
-"bDU" = (
-/obj/structure/table,
-/obj/effect/spawner/bundle/f13/greasegun,
-/obj/machinery/light/small,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/city)
 "bEk" = (
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated/green,
 /area/f13/wasteland)
@@ -1329,13 +1321,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/brotherhood/offices1st)
-"cfc" = (
-/obj/structure/table,
-/obj/item/gun/ballistic/automatic/combat,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/city)
 "cgW" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
@@ -1355,6 +1340,10 @@
 /obj/structure/chair/sofa/right{
 	dir = 8
 	},
+/turf/open/floor/f13/wood,
+/area/f13/city)
+"clJ" = (
+/obj/structure/table/wood,
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "cmg" = (
@@ -3536,11 +3525,6 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
-"gMM" = (
-/obj/machinery/light/small,
-/obj/structure/reagent_dispensers/water_cooler,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/city)
 "gOj" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/turf_decal/stripes/white/box,
@@ -3891,6 +3875,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
+"hud" = (
+/obj/machinery/light/small,
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/city)
 "hue" = (
 /obj/machinery/light/small,
 /turf/open/floor/f13{
@@ -5166,12 +5155,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
-"jOA" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/f13/wood,
-/area/f13/city)
 "jPp" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -5393,10 +5376,6 @@
 	},
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland/ncr)
-"ktb" = (
-/obj/structure/table/wood,
-/turf/open/floor/f13/wood,
-/area/f13/city)
 "ktd" = (
 /obj/structure/table/wood/settler,
 /obj/effect/decal/cleanable/dirt,
@@ -5488,12 +5467,6 @@
 "kEe" = (
 /turf/open/floor/carpet/orange,
 /area/f13/ncr)
-"kEW" = (
-/obj/item/kirbyplants/random,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/city)
 "kFN" = (
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
@@ -8004,6 +7977,14 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/legion)
+"oVH" = (
+/obj/structure/table,
+/obj/effect/spawner/bundle/f13/greasegun,
+/obj/machinery/light/small,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/city)
 "oWZ" = (
 /obj/structure/table,
 /obj/item/kirbyplants/random,
@@ -8048,12 +8029,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/dorms)
-"pae" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/city)
 "paq" = (
 /obj/structure/table/wood,
 /obj/item/clothing/under/shorts/polychromic/pantsu,
@@ -8719,6 +8694,12 @@
 /area/f13/building/massfusion)
 "qqU" = (
 /turf/open/floor/carpet/royalblack,
+/area/f13/city)
+"qsf" = (
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/transparent/openspace,
 /area/f13/city)
 "qsA" = (
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated/green,
@@ -9472,6 +9453,13 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"rMG" = (
+/obj/structure/table,
+/obj/item/gun/ballistic/automatic/combat,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/city)
 "rMZ" = (
 /obj/structure/barricade/wooden,
 /turf/closed/wall/f13/wood,
@@ -10307,6 +10295,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"tiy" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/city)
 "tiP" = (
 /turf/open/floor/wood_fancy,
 /area/f13/ncr)
@@ -11233,6 +11227,12 @@
 	dir = 1
 	},
 /area/f13/building/hospital)
+"viE" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/city)
 "vje" = (
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland/ncr)
@@ -35834,7 +35834,7 @@ wOl
 wOl
 paR
 paR
-jOA
+tiy
 wOl
 uiY
 lvE
@@ -38146,7 +38146,7 @@ uci
 uiY
 uiY
 uiY
-ktb
+clJ
 chU
 uci
 uiY
@@ -45087,7 +45087,7 @@ uNh
 itM
 uNh
 uNh
-gMM
+hud
 dYT
 wqF
 sdE
@@ -46369,7 +46369,7 @@ anv
 bbj
 mnN
 xVl
-kEW
+viE
 anv
 anv
 nSB
@@ -47397,7 +47397,7 @@ anv
 xev
 xMf
 wxo
-cfc
+rMG
 anv
 anv
 nSB
@@ -47654,7 +47654,7 @@ anv
 xCY
 wxo
 wxo
-bDU
+oVH
 anv
 anv
 nSB
@@ -47911,7 +47911,7 @@ anv
 xEh
 wxo
 wxo
-cfc
+rMG
 wUx
 iiB
 nSB
@@ -48426,7 +48426,7 @@ wca
 uMx
 wxo
 wxo
-kEW
+viE
 wUx
 iiB
 nSB
@@ -48942,7 +48942,7 @@ wxo
 anv
 anv
 anv
-pae
+qsf
 nSB
 wqF
 sdE
