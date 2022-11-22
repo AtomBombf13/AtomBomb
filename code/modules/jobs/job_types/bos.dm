@@ -311,15 +311,10 @@ Knight-Captain
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Knight-Captain"
 	jobtype = /datum/job/bos/f13knightcap
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
 	glasses =		/obj/item/clothing/glasses/night
 	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
 	belt =			/obj/item/storage/belt/military/army
@@ -337,21 +332,51 @@ Knight-Captain
 	name = "Standard"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/wattz2k = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 2
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
+		/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_five = 1
 	)
 
 /datum/outfit/loadout/capsap
 	name = "Close Support"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/rcw = 1,
-		/obj/item/stock_parts/cell/ammo/ecp = 2
+		/obj/item/stock_parts/cell/ammo/ecp = 2,
+		/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_five = 1
 	)
 
 /datum/outfit/loadout/capalt
 	name = "Warden-Defender"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead = 1,
-		/obj/item/ammo_box/shotgun/buck = 2
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/captain = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_five = 1
+	)
+
+	/datum/outfit/loadout/capmelee
+	name = "Point Assault"
+	backpack_contents = list(
+		/obj/item/twohanded/thermic_lance = 1,
+		/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/captain = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_five = 1
 	)
 
 /*
@@ -765,10 +790,6 @@ Senior Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -792,7 +813,11 @@ Senior Knight
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
-		/obj/item/ammo_box/magazine/pistol45/socom = 2
+		/obj/item/ammo_box/magazine/pistol45/socom = 2,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 
 /datum/outfit/loadout/sknightb
@@ -802,7 +827,11 @@ Senior Knight
 		/obj/item/gun/ballistic/shotgun/police = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/gun/energy/laser/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 
 /datum/outfit/loadout/sknightc
@@ -813,7 +842,11 @@ Senior Knight
 		/obj/item/gun/ballistic/automatic/assault_rifle = 1,
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/energy/laser/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 
 /datum/outfit/loadout/sknightd
@@ -821,7 +854,11 @@ Senior Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	backpack_contents = list(
 		/obj/item/melee/powered/ripper/prewar = 1,
-		/obj/item/shield/riot/bullet_proof = 1
+		/obj/item/shield/riot/bullet_proof = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 /*
 Knight
@@ -868,10 +905,6 @@ Knight
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
@@ -893,7 +926,11 @@ Knight
 		/obj/item/gun/energy/laser/aer9 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
-		/obj/item/ammo_box/magazine/pistol45/socom = 2
+		/obj/item/ammo_box/magazine/pistol45/socom = 2,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 
 /datum/outfit/loadout/knightb
@@ -902,7 +939,11 @@ Knight
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight = 1,
 		/obj/item/melee/powered/ripper = 1,
-		/obj/item/shield/riot/bullet_proof = 1
+		/obj/item/shield/riot/bullet_proof = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 
 
@@ -914,7 +955,11 @@ Knight
 		/obj/item/gun/energy/laser/aer9 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
-		/obj/item/ammo_box/magazine/pistol45/socom = 2
+		/obj/item/ammo_box/magazine/pistol45/socom = 2,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 
 /datum/outfit/loadout/knightd
@@ -923,7 +968,11 @@ Knight
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight = 1,
 		/obj/item/melee/powered/ripper = 1,
-		/obj/item/shield/riot/bullet_proof = 1
+		/obj/item/shield/riot/bullet_proof = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_one = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 /*
 Initiate

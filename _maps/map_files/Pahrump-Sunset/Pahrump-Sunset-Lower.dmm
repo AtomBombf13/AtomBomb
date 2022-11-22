@@ -26715,6 +26715,7 @@
 /obj/effect/turf_decal/stripes/box,
 /obj/item/book/granter/crafting_recipe/gunsmith_one,
 /obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_four,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},

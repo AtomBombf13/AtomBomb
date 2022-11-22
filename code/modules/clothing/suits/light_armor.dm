@@ -871,6 +871,12 @@
 	icon_state = "brotherhood_scout_senior"
 	item_state = "brotherhood_scout_senior"
 
+/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/captain
+	name = "brotherhood captain scout armor"
+	desc = "A pre-war set of combat armor with stripped armor plating, allowing for better mobility over their heavier combat armor mk 2 armor counterparts. It bears a golden stripe."
+	icon_state = "brotherhood_scout_captain"
+	item_state = "brotherhood_scout_captain"
+
 //////////////////////
 // Town of Eastwood //
 //////////////////////
