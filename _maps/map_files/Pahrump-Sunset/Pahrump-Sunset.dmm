@@ -482,7 +482,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood)
 "abY" = (
-/obj/structure/closet/crate/trashcart,
+/obj/structure/reagent_dispensers/barrel/explosive,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/city)
 "abZ" = (
@@ -1541,12 +1541,8 @@
 	},
 /area/f13/building/massfusion)
 "agC" = (
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	dir = 4;
-	footstep = "wood"
-	},
+/obj/structure/closet/crate/trashcart,
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/city)
 "agD" = (
 /obj/machinery/light{
@@ -2942,17 +2938,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "alM" = (
-/obj/structure/railing{
-	dir = 8;
-	layer = 4.1
-	},
-/obj/structure/railing{
-	dir = 1;
-	layer = 4.1
-	},
-/turf/open/indestructible/ground/outside/water{
-	desc = "Deep, poorly filtered gardening water.";
-	name = "stagnant water"
+/turf/open/floor/plasteel/stairs{
+	barefootstep = "woodbarefoot";
+	color = "#A47449";
+	dir = 4;
+	footstep = "wood"
 	},
 /area/f13/city)
 "alN" = (
@@ -6495,6 +6485,20 @@
 /obj/structure/simple_door/interior,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"azp" = (
+/obj/structure/railing{
+	dir = 8;
+	layer = 4.1
+	},
+/obj/structure/railing{
+	dir = 1;
+	layer = 4.1
+	},
+/turf/open/indestructible/ground/outside/water{
+	desc = "Deep, poorly filtered gardening water.";
+	name = "stagnant water"
+	},
+/area/f13/city)
 "azq" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -24335,6 +24339,7 @@
 	pixel_y = -6
 	},
 /obj/structure/rack,
+/obj/machinery/light/small/broken,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/city)
 "dUr" = (
@@ -57750,11 +57755,11 @@
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/stack/sheet/glass/five,
 /obj/item/stack/sheet/hay/twenty,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/cloth/five,
+/obj/machinery/light/small/broken{
+	dir = 1
+	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/city)
 "tLp" = (
@@ -91910,7 +91915,7 @@ kls
 msY
 adT
 drp
-abY
+agC
 iht
 iht
 enu
@@ -92167,7 +92172,7 @@ kls
 abB
 drp
 drp
-drp
+agC
 iht
 yco
 jeh
@@ -96288,8 +96293,8 @@ jeh
 qeT
 jeh
 jeh
-agC
 alM
+azp
 iht
 aiO
 tpP
