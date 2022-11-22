@@ -164,8 +164,14 @@
 /turf/open/floor/carpet/black,
 /area/f13/building)
 "afc" = (
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/caves)
+/obj/structure/railing{
+	dir = 4;
+	layer = 4.1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/tunnel)
 "afd" = (
 /obj/machinery/light/fo13colored/Aqua{
 	dir = 4;
@@ -573,15 +579,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/caves)
-"arJ" = (
-/obj/structure/railing{
-	dir = 4;
-	layer = 4.1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/tunnel)
 "arY" = (
 /obj/item/flashlight/flare,
 /obj/item/flashlight/flare,
@@ -34716,7 +34713,7 @@
 /area/f13/caves)
 
 (1,1,1) = {"
-afc
+aaa
 aaa
 aaa
 aaa
@@ -70091,7 +70088,7 @@ uuN
 uuN
 uuN
 uuN
-arJ
+afc
 wxS
 bsC
 bFF

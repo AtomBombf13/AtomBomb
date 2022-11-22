@@ -9193,6 +9193,16 @@
 	icon_state = "yellowrustysolid"
 	},
 /area/f13/building/massfusion)
+"aHX" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/item/defibrillator/primitive{
+	desc = "A Delco-brand pre-war car battery, with alligator clips and jumper cables to match. This could probably work as a makeshift defibrillator, in a pinch.";
+	name = "car battery"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/building)
 "aIa" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticalcorroded"
@@ -86262,7 +86272,7 @@ uNJ
 fiV
 pKY
 paJ
-hoM
+paJ
 paJ
 eEW
 aXy
@@ -93214,7 +93224,7 @@ skm
 skm
 aiO
 skm
-ojt
+qgS
 bwD
 lau
 tRW
@@ -93471,7 +93481,7 @@ uas
 iZS
 jOu
 aWS
-sXv
+bXQ
 imF
 bAA
 aer
@@ -93728,7 +93738,7 @@ sXv
 sXv
 jOu
 xsL
-sXv
+ppw
 sXv
 kxH
 wDX
@@ -93985,7 +93995,7 @@ cNs
 cNs
 sXv
 jOu
-sXv
+tQO
 imF
 aTw
 ayn
@@ -94242,7 +94252,7 @@ hvO
 qhx
 aiO
 hvO
-khV
+pQQ
 tws
 lau
 srN
@@ -99159,7 +99169,7 @@ egF
 jht
 svl
 nkU
-aYE
+aHX
 cmq
 pVH
 tpP
