@@ -107,8 +107,8 @@ Head Paladin
 	flag = F13HEADPALADIN
 	display_order = JOB_DISPLAY_ORDER_HEADPALADIN
 	head_announce = list("Security")
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the acting field commander until the Brotherhood regains its strength enough to place an Elder for the bunker. You are a veteran of many battles and sorties in pursuit of Brotherhood goals; your only weakness may just be your hubris. Your main goals are defense of the Chapter and surveillance of the surrounding region for technology."
 	supervisors = "the Elder"
 	selection_color = "#7f8c8d"
@@ -203,8 +203,8 @@ Head Scribe
 	flag = F13HEADSCRIBE
 	display_order = JOB_DISPLAY_ORDER_HEADSCRIBE
 	head_announce = list("Security")
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the foremost experienced scribe remaining in this bunker. Your role is to ensure the safekeeping and proper usage of technology within the Brotherhood. You are also the lead medical expert in this Chapter. Delegate your tasks to your Scribes."
 	supervisors = "the Elder"
 	selection_color = "#7f8c8d"
@@ -269,8 +269,8 @@ Knight-Captain
 	flag = F13KNIGHTCAPTAIN
 	display_order = JOB_DISPLAY_ORDER_KNIGHTCAPTAIN
 	head_announce = list("Security")
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the Knight-Captain, leader of your respective division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
 	supervisors = "the Elder and Head Paladin in external affairs"
 	selection_color = "#7f8c8d"
@@ -362,8 +362,8 @@ Senior Paladin
 	title = "Senior Paladin"
 	flag = F13SENIORPALADIN
 	display_order = JOB_DISPLAY_ORDER_SENIORPALADIN
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "As the Chapter's senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
 	supervisors = "the Head Paladin"
 
@@ -448,8 +448,8 @@ Paladin
 	title = "Paladin"
 	flag = F13PALADIN
 	display_order = JOB_DISPLAY_ORDER_PALADIN
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	supervisors = "the Head Paladin"
 	exp_requirements = 1200
@@ -523,8 +523,8 @@ Senior Scribe
 	title = "Senior Scribe"
 	flag = F13SENIORSCRIBE
 	display_order = JOB_DISPLAY_ORDER_SENIORSCRIBE
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the bunker's seniormost medical and scientific expert in the bunker, sans the Head Scribe themselves. You are trained in both medicine and engineering, while also having extensive studies of the old world to assist in pinpointing what technology would be useful to the Brotherhood and its interests."
 	supervisors = "the Head Scribe"
 
@@ -622,8 +622,8 @@ Scribe
 	title = "Scribe"
 	flag = F13SCRIBE
 	display_order = JOB_DISPLAY_ORDER_SCRIBE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer directly to the Senior Scribe, tasked with researching and reverse-engineering recovered technologies from the old world, while maintaining the brotherhoods scientific archives. You may also be given a trainee to assign duties to."
 	supervisors = "the Senior Scribe and Head Scribe"
 
@@ -729,8 +729,8 @@ Senior Knight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
 	display_order = JOB_DISPLAY_ORDER_SENIORKNIGHT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You report directly to the Knight-Captain. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	supervisors = "the Knight-Captain inside, Paladins outside"
 	exp_requirements = 900
@@ -831,8 +831,8 @@ Knight
 	title = "Knight"
 	flag = F13KNIGHT
 	display_order = JOB_DISPLAY_ORDER_KNIGHT
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
 	supervisors = "the Senior Knight and Knight-Captain"
 
@@ -933,8 +933,8 @@ Initiate
 	title = "Initiate"
 	flag = F13INITIATE
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior; doing so may result in exile or transferrence back the Valley."
 	supervisors = "the Scribes, Knights or Paladins"
 
@@ -1008,8 +1008,8 @@ Off Duty
 	title = "Brotherhood Off-Duty"
 	flag = F13OFFDUTYBOS
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "Whether operating in disguise or simply enjoying time from the off-shift, you are still a member of the Brotherhood and must abide by the Codex and follow the orders of your superiors. That being said, while off-duty your orders do not take precedence and you should resist issuing them when another of your rank is currently on duty, and if one does not exist, commit to going on-duty. You have a duty to safeguard what equipment you are given, especially your holotags. Ideally, you should be paired with one or more fellow off-duty members; and you would know where the bunker in the region is."
 	supervisors = "your Superior rank"
 

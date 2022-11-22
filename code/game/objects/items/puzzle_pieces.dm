@@ -14,6 +14,13 @@
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	var/puzzle_id = null
 
+//PLA Crashsite Ruin
+/obj/item/keycard/chinese
+	name = "rusted keycard"
+	desc = "It bears the sigil of the People's Liberation Army."
+	color = "#ff0000"
+	puzzle_id = "chinese"
+
 //Two test keys for use alongside the two test doors.
 /obj/item/keycard/cheese
 	name = "cheese keycard"

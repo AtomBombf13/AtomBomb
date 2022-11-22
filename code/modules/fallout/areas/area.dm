@@ -453,6 +453,9 @@
 	environment = 19
 	grow_chance = 5
 
+/area/f13/radiation/crashsite
+	name = "Qianjin Yingdi Crashsite"
+
 //Faction related areas
 
 /area/f13/raiders
