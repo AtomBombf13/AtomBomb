@@ -39581,10 +39581,6 @@
 /obj/structure/destructible/tribal_torch/wall/lit,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
-"lhV" = (
-/obj/structure/simple_door/interior,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/city)
 "liD" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -92950,7 +92946,7 @@ iht
 iht
 hEh
 iht
-lhV
+woE
 iht
 iht
 iht
