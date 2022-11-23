@@ -52,7 +52,7 @@
 
 /datum/crafting_recipe/blacksmith/furnace
 	name = "Furnace"
-	result = /obj/structure/blacksmith/furnace
+	result = /obj/structure/blacksmith/furnace/sandstone
 	time = 300
 	reqs = list(
 		/obj/item/stack/sheet/mineral/sandstone = 30,

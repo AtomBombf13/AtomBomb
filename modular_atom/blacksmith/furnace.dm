@@ -1,8 +1,10 @@
+// ----------------------- FURNACE -------------------------------
+
 /obj/structure/blacksmith/furnace
 	name = "furnace"
-	desc = "A furnace."
-	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
-	icon_state = "furnace0"
+	desc = "A furnace with fume protection and good ventilation for stoking the fire. Used for heating metal ingots."
+	icon = 'modular_atom/blacksmith/icons/furnace32x64.dmi'
+	icon_state = "furnace"
 	density = TRUE
 	anchored = TRUE
 	max_integrity = 700
@@ -34,23 +36,23 @@
 		working = TRUE
 		soundloop.start()
 		set_light_on(TRUE)
-		if(icon_state == "furnace0")
-			icon_state = "furnace1"
+		if(icon_state == "furnace")
+			icon_state = "furnace_stoked"
 
 	else
 		working = FALSE
 		soundloop.stop()
 		set_light_on(FALSE)
-		icon_state = "furnace0"
+		icon_state = "furnace"
 
 /obj/structure/blacksmith/furnace/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/blacksmith/ingot))
-		var/obj/item/blacksmith/ingot/notsword = I
+		var/obj/item/blacksmith/ingot/workpiece = I
 		if(working)
-			to_chat(user, "You heat the [notsword] in the [src].")
-			notsword.workability = "shapeable"
-			notsword.icon_state = "hot_ingot"
-			notsword.set_light_on(TRUE)
+			to_chat(user, "You heat the [workpiece] in the [src].")
+			workpiece.workability = "shapeable"
+			workpiece.icon_state = "hot_ingot"
+			workpiece.set_light_on(TRUE)
 			I.on_attack_hand(user)
 		else
 			to_chat(user, "The furnace isn't working!.")
@@ -74,3 +76,29 @@
 	mid_sounds = list('modular_atom/blacksmith/sound/furnace1.ogg'=1)
 	mid_length = 70
 	volume = 80
+
+
+// ----------------------- SANDSTONE FURNACE -------------------------------
+
+/obj/structure/blacksmith/furnace/sandstone // can be built from sandstone, less economical but same effect
+	name = "sandstone furnace"
+	desc = "A simply made furnace, not as fuel-efficient as more advanced ones. Used for heating metal ingots."
+	icon_state = "furnace_sandstone"
+	fueluse = 2
+
+/obj/structure/blacksmith/furnace/sandstone/process()
+	if(debug)
+		reagents.add_reagent(/datum/reagent/fuel, 1)
+		return TRUE
+	if(reagents.remove_reagent(/datum/reagent/fuel, fueluse))
+		working = TRUE
+		soundloop.start()
+		set_light_on(TRUE)
+		if(icon_state == "furnace_sandstone")
+			icon_state = "furnace_sandstone_stoked"
+
+	else
+		working = FALSE
+		soundloop.stop()
+		set_light_on(FALSE)
+		icon_state = "furnace_sandstone"
