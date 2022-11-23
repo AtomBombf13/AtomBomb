@@ -84,7 +84,7 @@
 // Fire Axe						[ Damage MASSIVE, Bonus against Window, Door ] ---------------
 /obj/item/twohanded/fireaxe
 	name = "fire axe"
-	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel. Excellent for smashing doors."
+	desc = "Heavy fireman axe from the old world, with its distinctive red colour and high quality steel. Excellent for smashing doors."
 	icon_state = "fireaxe"
 	icon_prefix = "fireaxe"
 	wielded_icon = "fireaxe2"
