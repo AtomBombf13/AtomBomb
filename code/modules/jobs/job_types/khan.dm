@@ -24,7 +24,7 @@
 	box = /obj/item/storage/survivalkit/tribal/chief
 	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
-		/obj/item/storage/bag/money/small/khan = 1
+		/obj/item/storage/bag/money/small/khan = 1,
 		/obj/item/melee/unarmed/brass/spiked = 1,
 		)
 
