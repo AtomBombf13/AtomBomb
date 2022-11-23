@@ -243,7 +243,7 @@
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	init_firemodes = list(
-		FULL_AUTO_450,
+		FULL_AUTO_600,
 		SEMI_AUTO_SMG
 	)
 
