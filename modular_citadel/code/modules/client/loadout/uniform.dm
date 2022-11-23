@@ -211,6 +211,14 @@
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
 	cost = 2
 
+/datum/gear/uniform/dress/housewife
+	name = "yellow pre-war dress"
+	path = /obj/item/clothing/under/f13/female/dress/fifties
+
+/datum/gear/uniform/dress/picnic
+	name = "pre-war picnic dress"
+	path = /obj/item/clothing/under/f13/female/dress
+
 /datum/gear/uniform/dress/sun/white
 	name = "white sundress"
 	path = /obj/item/clothing/under/dress/sundress/white
@@ -248,14 +256,6 @@
 /datum/gear/uniform/dress/flamenco
 	name = "flamenco dress"
 	path = /obj/item/clothing/under/dress/flamenco
-
-/datum/gear/uniform/dress/housewife
-	name = "yellow pre-war dress"
-	path = /obj/item/clothing/under/f13/housewifedress50s
-
-/datum/gear/uniform/dress/picnic
-	name = "red pre-war dress"
-	path = /obj/item/clothing/under/f13/picnicdress50s
 
 /datum/gear/uniform/dress/bandage
 	name = "bandage dress"

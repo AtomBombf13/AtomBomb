@@ -3,6 +3,56 @@
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_GENERAL
 	slot = SLOT_HEAD
 
+// Hats
+
+/datum/gear/head/vaquerohat
+	name = "vaquero hat"
+	path = /obj/item/clothing/head/helmet/f13/vaquerohat
+	cost = 2
+
+/datum/gear/head/sombrero
+	name = "sombrero"
+	path = /obj/item/clothing/head/sombrero
+
+/datum/gear/head/sombrerogreen
+	name = "green sombrero"
+	path = /obj/item/clothing/head/sombrero/green
+	cost = 2
+
+/datum/gear/head/scarecrow
+	name = "scarecrow hat"
+	path = /obj/item/clothing/head/fashion/hat_scarecrow
+
+/datum/gear/head/fedora
+	name = "fedora"
+	path = /obj/item/clothing/head/fedora
+	cost = 2
+
+/datum/gear/head/gambler
+	name = "gambler hat"
+	path = /obj/item/clothing/head/fluff/gambler
+
+/datum/gear/head/that
+	name = "top hat"
+	path = /obj/item/clothing/head/that
+	cost = 2
+
+/datum/gear/head/beaver
+	name = "beaverskin top hat"
+	path = /obj/item/clothing/head/f13/beaver
+	cost = 2
+
+/datum/gear/head/purpletophat
+	name = "purple tophat"
+	path = /obj/item/clothing/head/f13/purple
+	cost = 2
+
+// Misc
+
+/datum/gear/head/hairband
+	name = "yellow hairband"
+	path = /obj/item/clothing/head/fashion
+
 /datum/gear/head/baseball
 	name = "ballcap"
 	path = /obj/item/clothing/head/soft/mime
@@ -58,11 +108,6 @@
 	path = /obj/item/clothing/head/soft/f13/utility/tan
 	cost = 2
 
-/datum/gear/head/vaquerohat
-	name = "vaquero hat"
-	path = /obj/item/clothing/head/helmet/f13/vaquerohat
-	cost = 2
-
 /datum/gear/head/pirate
 	name = "pirate hat"
 	path = /obj/item/clothing/head/pirate
@@ -72,42 +117,9 @@
 	path = /obj/item/clothing/head/rice_hat
 	cost = 2
 
-/datum/gear/head/fedora
-	name = "fedora"
-	path = /obj/item/clothing/head/fedora
-	cost = 2
-
-/datum/gear/head/gambler
-	name = "gambler hat"
-	path = /obj/item/clothing/head/fluff/gambler
-
-/datum/gear/head/that
-	name = "top hat"
-	path = /obj/item/clothing/head/that
-	cost = 2
-
-/datum/gear/head/beaver
-	name = "beaverskin top hat"
-	path = /obj/item/clothing/head/f13/beaver
-	cost = 2
-
-/datum/gear/head/purpletophat
-	name = "purple tophat"
-	path = /obj/item/clothing/head/f13/purple
-	cost = 2
-
 /datum/gear/head/mailmanhat
 	name = "mailman's hat"
 	path = /obj/item/clothing/head/mailman
-
-/datum/gear/head/sombrero
-	name = "sombrero"
-	path = /obj/item/clothing/head/sombrero
-
-/datum/gear/head/sombrerogreen
-	name = "green sombrero"
-	path = /obj/item/clothing/head/sombrero/green
-	cost = 2
 
 /datum/gear/head/wig
 	name = "black wig"
@@ -123,10 +135,6 @@
 	name = "powdered wig"
 	path = /obj/item/clothing/head/powdered_wig
 	cost = 2
-
-/datum/gear/head/nurse
-	name = "nurse hat"
-	path = /obj/item/clothing/head/f13/nursehat
 
 /datum/gear/head/chef
 	name = "chef hat"
