@@ -85,9 +85,21 @@
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 1
 
+/datum/gear/suit/jamrock
+	name = "disco-ass blazer"
+	path = /obj/item/clothing/suit/armor/outfit/jacket/jamrock
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
+	cost = 1
+	
 /datum/gear/suit/flakjack
 	name = "Flak Jacket"
-	path = /obj/item/clothing/suit/flakjack
+	path = /obj/item/clothing/suit/armor/light/vest/flak
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
+	cost = 2
+
+/datum/gear/suit/marlowsuit
+	name = "wasteland ganger overcoat" 
+	path = /obj/item/clothing/suit/armor/marlowsuit 
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
@@ -173,7 +185,18 @@
 	restricted_roles = list("Citizen",
 							"Prospector",
 							)
-
+/datum/gear/suit/blueshirt
+	name = "Eastwood light armor vest"
+	path = /obj/item/clothing/suit/armor/light/vest/blueshirt
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
+	cost = 3
+	restricted_desc = "Eastwood PD, Eastwood officials"
+	restricted_roles = list("Mayor",
+								"Sheriff",
+								"Deputy",
+								"Shopkeeper",
+								"Secretary",
+								)
 
 // BEGIN_INTERNALS
 // END_INTERNALS

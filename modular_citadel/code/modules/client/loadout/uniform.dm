@@ -168,6 +168,11 @@
 	name = "charcoal Suit"
 	path = /obj/item/clothing/under/suit/charcoal
 	cost = 1
+	
+/datum/gear/uniform/suit/jamrock
+	name = "disco-ass Suit"
+	path = /obj/item/clothing/under/jamrock
+	cost = 1
 
 /datum/gear/uniform/suit/checkered_suit
 	name = "checkered Suit"

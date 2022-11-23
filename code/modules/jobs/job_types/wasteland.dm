@@ -504,7 +504,7 @@ Wastelander
 
 /datum/outfit/loadout/exmil
 	name = "Ex-Military"
-	suit = /obj/item/clothing/suit/flakjack
+	suit = /obj/item/clothing/suit/armor/light/vest/flak
 	uniform = /obj/item/clothing/under/f13/bdu
 	shoes = /obj/item/clothing/shoes/f13/military
 	head = /obj/item/clothing/head/flakhelm

@@ -452,7 +452,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	item_state = "usmc_riot_gear"
 
 /obj/item/clothing/suit/armor/marlowsuit //Raider armour reskin.
-	name = "Marlow gang overcoat"
+	name = "wasteland ganger overcoat"
 	desc = "A heavy raw buckskin overcoat littered with aged bullet holes and frays from regular wear-and-tear."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon_state = "marlowsuit"
