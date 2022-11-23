@@ -16,6 +16,7 @@
 	ears = /obj/item/radio/headset/headset_khans
 	head = /obj/item/clothing/head/helmet/f13/khan/bandana
 	shoes = /obj/item/clothing/shoes/f13/military/khan
+	gloves = /obj/item/melee/unarmed/brass/spiked
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/old
 	uniform = /obj/item/clothing/under/f13/khan
@@ -25,7 +26,6 @@
 	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/khan = 1,
-		/obj/item/melee/unarmed/brass/spiked = 1,
 		)
 
 /datum/outfit/job/khan/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
