@@ -250,11 +250,6 @@
 	cost = 10 
 	item_path = /obj/item/radio/headset/headset_khans
 
-/datum/gang_item/equipment/greatkhanarmorcoat
-	name = "Great Khan Armored Coat"
-	cost = 200
-	item_path = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
-
 ///////////////////
 //EQUIPMENT
 ///////////////////
