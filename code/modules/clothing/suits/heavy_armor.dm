@@ -406,8 +406,8 @@
 // Great Khans //
 ////////////////
 
-//khan heavy armor, metal armor with less slowdown
-//slowdown of 0.5 compared to 0.25 of medium armor and 0.75 of regular heavy armor
+//khan heavy armor, reinforced metal armor with less slowdown
+//slowdown of 0.6 compared to 0.25 of medium armor and 0.75 of regular heavy armor
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
 	name = "Great Khan battle coat"
 	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
@@ -421,5 +421,5 @@
 	max_integrity = 200
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
 	armor_tier_desc = ARMOR_CLOTHING_HEAVY
-	armor = ARMOR_VALUE_DUSTER_ARMOR
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
