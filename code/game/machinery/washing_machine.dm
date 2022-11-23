@@ -109,7 +109,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	. = ..()
 	if(!busy)
 		. += "<span class='notice'><b>Alt-click</b> it to start a wash cycle.</span>"
-
+/* Commented out to make the sound work in the kitchen_50s module.
 /obj/machinery/washing_machine/AltClick(mob/user)
 	. = ..()
 	if(!user.canUseTopic(src))
@@ -128,7 +128,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	addtimer(CALLBACK(src, .proc/wash_cycle), 200)
 	START_PROCESSING(SSfastprocess, src)
 	return TRUE
-
+*/
 /obj/machinery/washing_machine/process()
 	if (!busy)
 		animate(src, transform=matrix(), time=2)
