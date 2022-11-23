@@ -62,7 +62,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
-
+	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
 /datum/job/khan/greatkhan
 	title = "Great Khan"
 	flag = F13GREATKHAN
