@@ -15,13 +15,14 @@
 		"Leadership recommends the following goal for this week: Acquire or confiscate dangerous tech by any means necessary."
 		)
 
-GLOBAL_INIT_LIST(knight_gunsmith_recipes, list(
+
+GLOBAL_LIST_INIT(knight_gunsmith_recipes, list(
 	/datum/crafting_recipe/n99,
 	/datum/crafting_recipe/varmintrifle,
 	/datum/crafting_recipe/huntingshotgun,
 	/datum/crafting_recipe/smg10mm,
 	/datum/crafting_recipe/verminkiller, 
-	/obj/item/gun/ballistic/shotgun/trench, 
+	/datum/crafting_recipe/trench, 
 	/datum/crafting_recipe/huntingrifle,
 	/datum/crafting_recipe/scope,
 	/datum/crafting_recipe/ergonomic_grip,

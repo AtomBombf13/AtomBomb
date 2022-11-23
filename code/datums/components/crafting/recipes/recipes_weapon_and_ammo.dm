@@ -717,6 +717,21 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 
+//trench shotgun
+
+/datum/crafting_recipe/trench
+	name = "Trench Shotgun"
+	result = /obj/item/gun/ballistic/shotgun/trench
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/sheet/metal = 3,
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //marksman carbine
 /datum/crafting_recipe/marksmancarbine
 	name = "Marksman Carbine"
