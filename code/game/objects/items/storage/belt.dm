@@ -823,7 +823,7 @@ obj/item/storage/belt/medical/surgical
 	icon_state = "2sheath"
 	item_state = "quiver" //this'll do.
 	w_class = WEIGHT_CLASS_BULKY
-	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/melee/smith/twohand/katana, /obj/item/melee/bokken, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/twohanded/smithed/katana, /obj/item/melee/bokken, /obj/item/melee/smith)
 	starting_sword = null
 
 /obj/item/storage/belt/sabre/twin/ComponentInitialize()
@@ -850,8 +850,7 @@ obj/item/storage/belt/medical/surgical
 	STR.can_hold = typecacheof(list(
 		/obj/item/melee/smith,
 		/obj/item/melee/smith/wakizashi,
-		/obj/item/melee/smith/twohand,
-		/obj/item/melee/smith/twohand/katana,
+		/obj/item/twohanded/smithed/katana,
 		/obj/item/melee/powered/ripper,
 		/obj/item/melee/onehanded/machete,
 		/obj/item/melee/onehanded/machete/forgedmachete,
