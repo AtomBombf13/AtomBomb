@@ -25,6 +25,7 @@
 	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/khan = 1
+		/obj/item/melee/unarmed/brass/spiked = 1,
 		)
 
 /datum/outfit/job/khan/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -45,6 +46,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
+	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
 
 /datum/outfit/job/khan/greatkhan
 	jobtype = /datum/job/khan/greatkhan
@@ -91,7 +93,6 @@
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/melee/unarmed/brass/spiked = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2)
 
 /datum/outfit/loadout/khanskirmisher //Mid-range SMG user with an autoloader and a bola
