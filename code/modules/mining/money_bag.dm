@@ -101,7 +101,7 @@
 // Standard Great Khan money bag. Wealthy by raider standards. 100 + spare change
 /obj/item/storage/bag/money/small/khan/PopulateContents()
 	new /obj/item/stack/f13Cash/random/low(src)
-	new new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
 	
 // Standard Settler money bag. They are pretty wealthy, with NCR bucks and caps, no Legion money.
 /obj/item/storage/bag/money/small/settler/PopulateContents()
