@@ -241,14 +241,19 @@
 	item_path = /obj/item/grenade/f13/stinger
 
 /datum/gang_item/equipment/he
-	name = "High Explosive Grenade"
-	cost = 100
-	item_path = /obj/item/grenade/f13/explosive
+	name = "stick of dynamite"
+	cost = 75
+	item_path = /obj/item/grenade/f13/anarchist/dynamite
 
 /datum/gang_item/equipment/greatkhanheadset
 	name = "Great Khan Headset"
 	cost = 10 
 	item_path = /obj/item/radio/headset/headset_khans
+
+/datum/gang_item/equipment/greatkhanarmorcoat
+	name = "Great Khan Armored Coat"
+	cost = 200
+	item_path = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
 
 ///////////////////
 //EQUIPMENT
