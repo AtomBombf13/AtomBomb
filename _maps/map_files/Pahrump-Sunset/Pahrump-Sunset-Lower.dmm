@@ -171,7 +171,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
-/area/f13/tunnel)
+/area/f13/city)
 "afd" = (
 /obj/machinery/light/fo13colored/Aqua{
 	dir = 4;
@@ -32511,11 +32511,6 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/enclave)
-"wxS" = (
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/tunnel)
 "wxX" = (
 /turf/open/floor/plasteel/f13/vault_floor/yellow{
 	icon_state = "yellowdirtyfull"
@@ -32528,7 +32523,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
-/area/f13/tunnel)
+/area/f13/city)
 "wzF" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -68803,7 +68798,7 @@ uuN
 uuN
 uuN
 uuN
-xOM
+sKr
 bFF
 bFF
 bFF
@@ -69060,7 +69055,7 @@ uuN
 uuN
 vTP
 wbM
-bCt
+iCR
 bFF
 bFF
 bFF
@@ -69317,7 +69312,7 @@ uuN
 uuN
 uuN
 wdg
-xOM
+sKr
 bFF
 bFF
 bFF
@@ -69574,9 +69569,9 @@ uWL
 uuN
 iCR
 iCR
-bsC
-bsC
-bsC
+xgj
+xgj
+xgj
 bFF
 bFF
 bFF
@@ -69831,9 +69826,9 @@ sKr
 vEh
 iCR
 uuN
-wxS
-wxS
-bsC
+uuN
+uuN
+xgj
 bFF
 bFF
 bFF
@@ -70089,8 +70084,8 @@ uuN
 uuN
 uuN
 afc
-wxS
-bsC
+uuN
+xgj
 bFF
 fIB
 bFF
@@ -70346,8 +70341,8 @@ uuN
 uuN
 sKr
 wyS
-wxS
-bsC
+uuN
+xgj
 bFF
 bFF
 xTs
@@ -70602,9 +70597,9 @@ uuN
 uuN
 vQo
 sKr
-bsC
-bsC
-bsC
+xgj
+xgj
+xgj
 bFF
 bFF
 bFF
@@ -72137,7 +72132,7 @@ dYf
 tIQ
 rZE
 bCt
-bFF
+aae
 aae
 aae
 aak
@@ -72394,7 +72389,7 @@ uuK
 sWm
 sak
 bCt
-bFF
+aae
 aae
 aae
 aae
