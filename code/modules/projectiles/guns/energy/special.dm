@@ -12,6 +12,10 @@
 	flight_x_offset = 17
 	flight_y_offset = 9
 
+	init_firemodes = list(
+		SEMI_AUTO_PISTOL
+	)
+
 /obj/item/gun/energy/ionrifle/emp_act(severity)
 	return
 
