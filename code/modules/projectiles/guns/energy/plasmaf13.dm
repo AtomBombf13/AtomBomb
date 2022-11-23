@@ -63,7 +63,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock)
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
-
+	zoom_factor = 0.75
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
