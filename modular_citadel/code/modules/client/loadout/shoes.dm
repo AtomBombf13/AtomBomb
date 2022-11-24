@@ -31,10 +31,6 @@
 /datum/gear/shoes/pelt
 	name = "pelt boots"
 	path = /obj/item/clothing/shoes/f13/peltboots 
-	
-/datum/gear/shoes/jamrock
-	name = "green snakeskin boots"
-	path = /obj/item/clothing/shoes/f13/jamrock
 
 /datum/gear/shoes/footcloths
 	name = "footcloths"

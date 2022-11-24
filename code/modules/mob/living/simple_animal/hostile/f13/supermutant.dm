@@ -60,6 +60,26 @@
 	anchored = FALSE
 	..()
 
+/mob/living/simple_animal/pet/dog/mutant    //This is a supermutant, totally not a dog, and he is friendly
+	name = "Brah-Min"
+	desc = "A large, docile supermutant. Adopted by Kebab-town as a sort of watch dog for their brahmin herd."
+	icon = 'icons/fallout/mobs/supermutant.dmi'
+	icon_state = "hulk_brahmin_s"
+	icon_dead = "hulk_brahmin_s"
+	maxHealth = 240
+	health = 240
+	speak_chance = 7 //30 //Oh my god he never shuts up.
+	move_resist = MOVE_FORCE_OVERPOWERING
+	mob_size = MOB_SIZE_LARGE
+	speak = list("Hey! These my brahmins!", "And I say, HEY-YEY-AAEYAAA-EYAEYAA! HEY-YEY-AAEYAAA-EYAEYAA! I SAID HEY, what's going on?", "What do you want from my brahmins?!", "Me gonna clean brahmin poop again now!", "I love brahmins, brahmins are good, just poop much!", "Do not speak to my brahmins ever again, you hear?!", "Bad raiders come to steal my brahmins - I crush with shovel!", "Do not come to my brahmins! Do not touch my brahmins! Do not look at my brahmins!", "I'm watching you, and my brahmins watch too!", "Brahmins say moo, and I'm saying - hey, get your ugly face out of my way!", "I... I remember, before the fire... THERE WERE NO BRAHMINS!", "No! No wind brahmin here! Wind brahmin lie!")
+	speak_emote = list("shouts", "yells")
+	emote_hear = list("yawns", "mumbles","sighs")
+	emote_see = list("raises his shovel", "shovels some dirt away", "waves his shovel above his head angrily")
+	response_help_simple  = "touches"
+	response_disarm_simple = "pushes"
+	response_harm_simple   = "punches"
+//	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/bearsteak = 3)
+
 /mob/living/simple_animal/pet/dog/mutant/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
 	icon_state = icon_dead
@@ -449,24 +469,3 @@
 /mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant/rain/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/glow_heal, chosen_targets = /mob/living/simple_animal/hostile/supermutant, allow_revival = TRUE, restrict_faction = null, type_healing = BRUTELOSS | FIRELOSS)
-
-/mob/living/simple_animal/hostile/supermutant/friendly
-	name = "Brah-Min"
-	desc = "A large, docile supermutant. Adopted by Eastwood as a sort of watch dog for their brahmin herd."
-	icon = 'icons/fallout/mobs/supermutant.dmi'
-	icon_state = "hulk_special_s"
-	icon_dead = "hulk_special_s"
-	faction = list("neutral")
-	maxHealth = 240
-	health = 240
-	speak_chance = 7 //30 //Oh my god he never shuts up.
-	move_resist = MOVE_FORCE_OVERPOWERING
-	mob_size = MOB_SIZE_LARGE
-	speak = list("Hey! These my brahmins!", "And I say, HEY-YEY-AAEYAAA-EYAEYAA! HEY-YEY-AAEYAAA-EYAEYAA! I SAID HEY, what's going on?", "What do you want from my brahmins?!", "Me gonna clean brahmin poop again now!", "I love brahmins, brahmins are good, just poop much!", "Do not speak to my brahmins ever again, you hear?!", "Bad raiders come to steal my brahmins - I crush with shovel!", "Do not come to my brahmins! Do not touch my brahmins! Do not look at my brahmins!", "I'm watching you, and my brahmins watch too!", "Brahmins say moo, and I'm saying - hey, get your ugly face out of my way!", "I... I remember, before the fire... THERE WERE NO BRAHMINS!", "No! No wind brahmin here! Wind brahmin lie!")
-	speak_emote = list("shouts", "yells")
-	emote_hear = list("yawns", "mumbles","sighs")
-	emote_see = list("raises his shovel", "shovels some dirt away", "waves his shovel above his head angrily")
-	response_help_simple  = "touches"
-	response_disarm_simple = "pushes"
-	response_harm_simple   = "punches"
-//	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/bearsteak = 3)

@@ -116,10 +116,9 @@
 	name = "ripper"
 	desc = "The Ripper™ vibroblade is powered by a small energy cell wich allows it to easily cut through flesh and bone."
 	icon = 'icons/fallout/objects/melee/melee.dmi'
+	icon_state = "ripper"
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/beltslot_weapon.dmi'
-	icon_state = "ripper"
 	force = 10
 	wound_bonus = WOUNDING_BONUS_BIG
 	block_chance = 15

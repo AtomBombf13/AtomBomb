@@ -951,6 +951,17 @@
 	alternate_worn_layer = UNDER_HEAD_LAYER
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
+/obj/item/clothing/suit/flakjack
+	name = "flak jacket"
+	desc = "A dilapidated jacket made of ballistic nylon. Smells faintly of napalm."
+	icon_state = "flakjack"
+	item_state = "redtag"
+	blood_overlay_type = "armor"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS|HEAD
+	resistance_flags = NONE
+	armor = ARMOR_VALUE_LIGHT
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+
 /obj/item/clothing/suit/assu_suit
 	name = "DAB suit"
 	desc = "A cheap replica of old SWAT armor. On its back, it is written: \"<i>Desperate Assistance Battleforce</i>\"."
