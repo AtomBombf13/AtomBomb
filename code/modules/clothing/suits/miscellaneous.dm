@@ -566,7 +566,7 @@
 	desc = "A blue and yellow hood attached to a heavy winter jacket."
 	icon_state = "winterhood_captain"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
-	
+
 /obj/item/clothing/suit/hooded/wintercoat/hop
 	name = "head of personnel's winter coat"
 	desc = "A cozy winter coat, covered in thick fur. The breast features a proud yellow chevron, reminding everyone that you're the second banana."
@@ -949,17 +949,6 @@
 	flags_inv = HIDEGLOVES|HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS|HEAD
 	alternate_worn_layer = UNDER_HEAD_LAYER
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-
-/obj/item/clothing/suit/flakjack
-	name = "flak jacket"
-	desc = "A dilapidated jacket made of ballistic nylon. Smells faintly of napalm."
-	icon_state = "flakjack"
-	item_state = "redtag"
-	blood_overlay_type = "armor"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS|HEAD
-	resistance_flags = NONE
-	armor = ARMOR_VALUE_LIGHT
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
 /obj/item/clothing/suit/assu_suit
