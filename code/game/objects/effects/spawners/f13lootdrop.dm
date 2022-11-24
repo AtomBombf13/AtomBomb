@@ -758,7 +758,7 @@
 	loot = list(/obj/effect/spawner/bundle/f13/wattz = 35,
 				/obj/effect/spawner/bundle/f13/wattzm = 15,
 				/obj/effect/spawner/bundle/f13/laserpistol = 30,
-				/obj/item/gun/energy/laser/wattz/recharger = 20,
+				/obj/item/gun/energy/laser/recharger = 20,
 				)
 				
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
