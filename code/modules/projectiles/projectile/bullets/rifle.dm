@@ -66,7 +66,7 @@
 /obj/item/projectile/bullet/a556/improvised
 	name = "handloaded .223 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
+	armour_penetration = BULLET_PENETRATION_HEAVY 
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
@@ -404,6 +404,7 @@
  * High Velocity Light Rifle Bullet
  * Match - no surplus / improvised
  * Shock
+ * Specializes in anti-armor: low damage, has AP
  * * * * * * * */
 
 /* 5mm fmj
