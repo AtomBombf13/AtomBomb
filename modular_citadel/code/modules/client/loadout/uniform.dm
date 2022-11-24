@@ -175,12 +175,9 @@
 	cost = 1
 
 /datum/gear/uniform/suit/jamrock
-
-name = "disco-ass Suit"
-
-path = /obj/item/clothing/under/jamrock
-
-cost = 1
+	name = "disco-ass Suit"
+	path = /obj/item/clothing/under/jamrock
+	cost = 1
 
 /datum/gear/uniform/suit/navy
 	name = "navy suit"
