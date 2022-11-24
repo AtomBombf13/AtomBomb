@@ -21,7 +21,7 @@
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
-	armour_penetration = BULLET_PENETRATION_HEAVY
+	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
@@ -408,7 +408,7 @@
  * * * * * * * */
 
 /* 5mm fmj
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -417,7 +417,7 @@
 /obj/item/projectile/bullet/m5mm
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
+	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
@@ -430,7 +430,7 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
+/* 5mm match
  * DAMAGE: 31.25
  * STAMIN: 6.25
  * RECOIL: 1
@@ -451,8 +451,8 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
- * DAMAGE: 31.25
+/* 5mm improvised
+ * DAMAGE: 18.75
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
