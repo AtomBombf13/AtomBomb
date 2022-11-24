@@ -152,6 +152,14 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_BULLETPROOF_ARMOR
 
+/obj/item/clothing/suit/armor/medium/vest/flak
+	name = "ancient flak vest"
+	desc = "Poorly maintained, this patched vest will still still stop some bullets, but don't expect any miracles. The ballistic nylon used in its construction is inferior to kevlar, and very weak to acid, but still quite tough."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	icon_state = "vest_flak"
+	item_state = "vest_flak"
+
 /obj/item/clothing/suit/armor/medium/vest/kevlar
 	name = "kevlar vest"
 	desc = "Worn but serviceable, the vest is is effective against ballistic impacts."
@@ -160,15 +168,21 @@
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
 
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big  /* more slowdown, less weaknesses, more DT, worse enviro protect */
+/obj/item/clothing/suit/armor/medium/vest/bulletproof/armor
+	name = "armored vest"
+	desc = "Large bulletproof vest with ballistic plates."
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	icon_state = "vest_armor"
+	item_state = "vest_armor"
+
+/obj/item/clothing/suit/armor/medium/vest/bulletproof/big
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "vest_armor"
 	item_state = "vest_armor"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T3, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/light/vest/russian
 	name = "russian vest"
@@ -184,26 +198,23 @@
 	icon_state = "vest_chicom"
 	item_state = "vest_chicom"
 
-//light armor in disguise with balanced 20 in all stats, 4 threshold, and less slowown
 /obj/item/clothing/suit/armor/medium/vest/alt
 	desc = "A thick armored vest that provides decent protection against most types of damage."
 	icon_state = "armor"
 	item_state = "armor"
-	armor_tier_desc = ARMOR_CLOTHING_LIGHT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3)
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
-//joke armor, just like legion armor
 /obj/item/clothing/suit/armor/medium/vest/old
 	name = "degrading armor vest"
 	desc = "Older generation Type 1 armored vest. It looks like a fixer-upper, but it could still stop a bullet."
-	armor_tier_desc = ARMOR_CLOTHING_LIGHT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
-	slowdown = ARMOR_SLOWDOWN_LIGHT 
 	icon_state = "armor"
 	item_state = "armor"
+
+/obj/item/clothing/suit/armor/medium/vest/blueshirt
+	name = "large armor vest"
+	desc = "A large, yet comfortable piece of armor, protecting you from some threats."
+	icon_state = "blueshift"
+	item_state = "blueshift"
+	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/vest/warden
 	name = "warden's jacket"

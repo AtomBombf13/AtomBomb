@@ -371,7 +371,7 @@
 	name = "Hotel Secuirty"
 	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/light/vest/blueshirt
+	suit = /obj/item/clothing/suit/armor/medium/vest/blueshirt
 	head = /obj/item/clothing/head/helmet/blueshirt
 	back = /obj/item/storage/backpack/security
 
