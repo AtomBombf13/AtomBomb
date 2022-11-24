@@ -26,11 +26,6 @@
 	path = /obj/item/storage/crayons
 	cost = 2
 
-/datum/gear/backpack/bible
-	name = "Bible"
-	path = /obj/item/storage/book/bible
-	cost = 1
-
 
 // -------------------- COSMETICS ------------------------------
 
