@@ -177,12 +177,12 @@ datum/gear/suit/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 3
 	restricted_desc = "Eastwood PD, Eastwood officials"
-		restricted_roles = list("Mayor",
-								"Sheriff",
-								"Deputy",
-								"Shopkeeper",
-								"Secretary",
-								)
+	restricted_roles = list("Mayor",
+							"Sheriff",
+							"Deputy",
+							"Shopkeeper",
+							"Secretary",
+							)
 
 /datum/gear/suit/hazardvest
 	name = "Hazard Vest"
