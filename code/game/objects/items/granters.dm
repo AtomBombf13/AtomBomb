@@ -617,7 +617,7 @@
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 	crafting_recipe_types = list(/datum/crafting_recipe/smg10mm, /datum/crafting_recipe/verminkiller, /datum/crafting_recipe/trench, /datum/crafting_recipe/huntingrifle)
 
-/obj/item/book/granter/crafting_recipe/gunsmith_three
+/obj/item/book/granter/crafting_recipe/gunsmith_three //random note!! As of now, Knights have a list that applies all the current gunsmith recipes to them manually. I ask that if you change anything in these gunsmith magazines, that you also update the Knights list too. Please and thank you.
 	name = "Guns and Bullets, Part 3"
 	desc = "A rare issue of Guns and Bullets following up Part 2, explaining difficult ballistics theory and weapon mechanics, allowing the reader to craft weapon attachments. It's barely holding up, and looks like only one person can study the knowledge from it."
 	icon_state = "gab3"
