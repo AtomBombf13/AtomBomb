@@ -286,7 +286,6 @@
 
 // metal breastplates!
 // ++Melee, -Bullet, +laser, bit slower
-//higher threshold, lower resistances, lower slowdown versus the whole metal armor
 /obj/item/clothing/suit/armor/medium/vest/breastplate
 	name = "steel breastplate"
 	desc = "a steel breastplate, inspired by a pre-war design. It provides some protection against impacts, cuts, and medium-velocity bullets."
@@ -295,18 +294,17 @@
 	icon_state = "steel_bib"
 	item_state = "steel_bib"
 	armor = ARMOR_VALUE_METAL_ARMOR
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3,ARMOR_MODIFIER_DOWN_MELEE_T1,ARMOR_MODIFIER_DOWN_LASER_T1)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/medium/vest/breastplate/reinforced
 	name = "reinforced steel breastplate"
-	desc = "a steel breastplate inspired by a pre-war design. It provides some protection against impacts, cuts, and medium-velocity bullets. It's chest section has additional armor."
+	desc = "a steel breastplate inspired by a pre-war design. It provides some protection against impacts, cuts, and medium-velocity bullets. It's pressed steel construction feels heavy."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "steel_bib_heavy"
-	item_state = "steel_bib_heavy"
+	icon_state = "steel_bib"
+	item_state = "steel_bib"
 	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_ENV_T1)
 
 /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap
 	name = "scrap metal chestplate"
