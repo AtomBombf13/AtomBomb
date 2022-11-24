@@ -16,7 +16,6 @@
 		"acid" = 0, \
 		"wound" = 0, \
 		"damage_threshold" = 0)
-
 /* Generic item armor
  * Usually isnt actual armor
  * Has some good fire resist, but thats about it
@@ -47,7 +46,7 @@
 		"bullet" = 20, \
 		"laser" = 20, \
 		"energy" = 0, \
-		"bomb" = 0, \
+		"bomb" = 5, \
 		"bio" = 10, \
 		"rad" = 10, \
 		"fire" = 10, \
@@ -507,13 +506,13 @@
  * T3 - Dedicated armor reinforcements
  * * * * * * * * * * * */
 #define ARMOR_MODIFIER_UP_DT_T1 list(\
-		"damage_threshold" = 0.5)
-
-#define ARMOR_MODIFIER_UP_DT_T2 list(\
 		"damage_threshold" = 1)
 
-#define ARMOR_MODIFIER_UP_DT_T3 list(\
+#define ARMOR_MODIFIER_UP_DT_T2 list(\
 		"damage_threshold" = 2)
+
+#define ARMOR_MODIFIER_UP_DT_T3 list(\
+		"damage_threshold" = 3)
 
 #define ARMOR_MODIFIER_DOWN_DT_T1 list(\
 		"damage_threshold" = -1)

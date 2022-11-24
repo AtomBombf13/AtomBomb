@@ -871,10 +871,10 @@
 	always_available = FALSE
 
 
-//recharger pistol, followers of the apocalypse
+//recharger pistol, low-tier
 /datum/crafting_recipe/rechargerpistol
 	name = "recharger pistol"
-	result = /obj/item/gun/energy/laser/wattz/recharger
+	result = /obj/item/gun/energy/laser/recharger
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/advanced_crafting_components/flux = 1,
