@@ -1,12 +1,12 @@
 /obj/item/clothing/under/f13
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	fitted = FEMALE_UNIFORM_FULL // means a mob with gender female gets alpha mask deleting one pixel under each arm and one in the groin.
-	can_adjust = FALSE // Unless TRUE theres no alternative state for this clothing 
+	fitted = FEMALE_UNIFORM_FULL
+	can_adjust = FALSE
 	resistance_flags = NONE
 	mutantrace_variation = NONE // Temporal fix until digitigrade-adapted sprites are done
 	has_sensor = NO_SENSORS //kek
 
-/obj/item/clothing/under/f13/female // Use this so your dresses don't get the alpha mask hole in their groin without needing to duplicate the fitting var.
+/obj/item/clothing/under/f13/female
 	fitted = FEMALE_UNIFORM_TOP
 
 //ENCLAVE PEACEKEEPERS
@@ -37,6 +37,22 @@
 	item_state = "uniform_enclave_intel"
 
 //Vault
+
+/obj/item/clothing/under/f13/housewifedress50s
+	name = "50s style dress"
+	desc = "Fancy checkered yellow dress with small shoulder puffs."
+	icon_state = "dress50s"
+	item_state = "dress50s"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+
+/obj/item/clothing/under/f13/picnicdress50s
+	name = "50s style dress"
+	desc = "Cheery polkadot casual dress."
+	icon_state = "dresspicnic50s"
+	item_state = "dresspicnic50s"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
 
 /obj/item/clothing/under/f13/vault
 	name = "vault jumpsuit"

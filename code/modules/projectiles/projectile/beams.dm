@@ -27,8 +27,6 @@
 /obj/item/projectile/beam/laser/mech
 	hitscan = TRUE
 	wound_bonus = 0
-	armour_penetration = BULLET_PENETRATION_HEAVY
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
 
 // Low energy drain and cooldown
 /obj/item/projectile/beam/laser/mech/light
@@ -39,7 +37,6 @@
 /obj/item/projectile/beam/laser/mech/heavy
 	name = "heavy laser beam"
 	damage = 40
-	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -47,9 +44,7 @@
 // The highest energy drain and cooldown
 /obj/item/projectile/beam/laser/mech/pulse
 	name = "charged pulse beam"
-	damage = 50
-	armour_penetration = BULLET_PENETRATION_ABSOLUTE
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
+	damage = 49
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse

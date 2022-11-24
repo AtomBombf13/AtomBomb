@@ -662,12 +662,12 @@ Difficulty: Normal
 		if(monster_damage_boost && (ismegafauna(L) || istype(L, /mob/living/simple_animal/hostile/asteroid)))
 			L.adjustBruteLoss(damage)
 		log_combat(caster, L, "struck with a [name]")
-	for(var/obj/vehicle/sealed/mecha/M in T.contents - hit_things) //also damage mechs.
+	for(var/obj/mecha/M in T.contents - hit_things) //also damage mechs.
 		hit_things += M
-		if(M.occupants)
-			if(friendly_fire_check && caster && caster.faction_check_mob(M.occupants))
+		if(M.occupant)
+			if(friendly_fire_check && caster && caster.faction_check_mob(M.occupant))
 				continue
-			to_chat(M.occupants, span_userdanger("Your [M.name] is struck by a [name]!"))
+			to_chat(M.occupant, span_userdanger("Your [M.name] is struck by a [name]!"))
 		playsound(M,'sound/weapons/sear.ogg', 50, 1, -4)
 		M.take_damage(damage, BURN, 0, 0, null, 50)
 

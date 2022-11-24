@@ -327,6 +327,12 @@
 	desc = "A crown worn by only the highest emperors of the <s>land</s> space."
 	icon_state = "fancycrown"
 
+/obj/item/clothing/head/scarecrow_hat
+	name = "scarecrow hat"
+	desc = "A simple straw hat."
+	icon_state = "scarecrow_hat"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
+
 /obj/item/clothing/head/lobsterhat
 	name = "foam lobster head"
 	desc = "When everything's going to crab, protecting your head is the best choice."

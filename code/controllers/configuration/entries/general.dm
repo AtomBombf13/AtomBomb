@@ -519,7 +519,3 @@
 // via send2chat("Hello world.", CONFIG_GET(string/discord_channel_serverstatus))
 /datum/config_entry/string/discord_channel_serverstatus
 	config_entry_value = "server_status"
-
-/// log mech data
-/datum/config_entry/flag/log_mecha
-	config_entry_value = TRUE
