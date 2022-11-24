@@ -504,7 +504,7 @@ Wastelander
 
 /datum/outfit/loadout/exmil
 	name = "Ex-Military"
-	suit = /obj/item/clothing/suit/flakjack
+	suit = /obj/item/clothing/suit/armor/light/vest/flak
 	uniform = /obj/item/clothing/under/f13/bdu
 	shoes = /obj/item/clothing/shoes/f13/military
 	head = /obj/item/clothing/head/flakhelm
@@ -972,7 +972,7 @@ Wastelander
 
 
 
-/* Stash for whenever I decide to actually go throught with deserters or not 
+/* Stash for whenever I decide to actually go throught with deserters or not
 
 /datum/outfit/loadout/raider_ncr
 	name = "Outlaw Ranger"
