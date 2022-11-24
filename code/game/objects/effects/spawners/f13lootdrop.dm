@@ -1639,7 +1639,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/grenade/empgrenade,
 				/obj/item/grenade/f13/radiation,
 				/obj/item/grenade/f13/frag,
-				obj/item/grenade/f13/anarchist/dynamite,
+				/obj/item/grenade/f13/anarchist/dynamite,
 				/obj/effect/spawner/bundle/f13/grenadelauncher,
 				)
 /obj/effect/spawner/lootdrop/f13/bomb/top_tier
