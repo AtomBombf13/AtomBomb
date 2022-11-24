@@ -268,13 +268,14 @@
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_NORMAL
 
-//Breeder recharger pistol
+//recharger pistol, looks like but isnt actually the one from FNV
 /obj/item/gun/energy/laser/recharger
 	name = "Recharger Pistol"
 	desc = "A locally manufactured recharger pistol. As the name implies, it can recharge itself over time using a microfusion breeder."
 	can_remove = 0
 	can_charge = 0
 	selfcharge = 1
+	icon = 'icons/fallout/objects/guns/energy.dmi'
 	icon_state = "rechargerpistol"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
