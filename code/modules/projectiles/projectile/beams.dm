@@ -331,6 +331,17 @@
 	name = "laser beam"
 	damage = 35
 
+/obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
+	name = "recharger beam"
+	damage = 25
+	hitscan = TRUE
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+	light_color = LIGHT_COLOR_BLUE
+
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
 	damage = 33
@@ -516,17 +527,6 @@
 	tracer_type = /obj/effect/projectile/tracer/disabler
 	muzzle_type = /obj/effect/projectile/muzzle/disabler
 	impact_type = /obj/effect/projectile/impact/disabler
-
-/obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
-	name = "recharger beam"
-	damage = 25
-	hitscan = TRUE
-	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
-	tracer_type = /obj/effect/projectile/tracer/pulse
-	muzzle_type = /obj/effect/projectile/muzzle/pulse
-	impact_type = /obj/effect/projectile/impact/pulse
-	light_color = LIGHT_COLOR_BLUE
 
 /obj/item/projectile/beam/laser/ultra_pistol //unused
 	name = "laser beam"
