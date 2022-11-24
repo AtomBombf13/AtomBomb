@@ -755,10 +755,10 @@
 //Energy Weapon Spawners
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 40,
-				/obj/effect/spawner/bundle/f13/wattzm = 25,
-				/obj/effect/spawner/bundle/f13/laserpistol = 35
-				)
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 35,
+				/obj/effect/spawner/bundle/f13/wattzm = 15,
+				/obj/effect/spawner/bundle/f13/laserpistol = 30,
+				/obj/item/gun/energy/laser/wattz/recharger = 20,
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
 	name = "mid tier energy gun"
@@ -1624,10 +1624,11 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier2
 	loot = list(
-				/obj/item/grenade/f13/frag = 30,
-				/obj/item/grenade/flashbang,
-				/obj/item/grenade/f13/stinger,
-				/obj/item/grenade/empgrenade = 50
+				/obj/item/grenade/f13/frag = 3 ,
+				/obj/item/grenade/flashbang = 2,
+				/obj/item/grenade/f13/stinger = 1,
+				/obj/item/grenade/empgrenade = 1,
+				/obj/item/grenade/f13/anarchist/dynamite = 2,
 				)
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier3
@@ -1637,6 +1638,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/grenade/empgrenade,
 				/obj/item/grenade/f13/radiation,
 				/obj/item/grenade/f13/frag,
+				obj/item/grenade/f13/anarchist/dynamite,
 				/obj/effect/spawner/bundle/f13/grenadelauncher,
 				)
 /obj/effect/spawner/lootdrop/f13/bomb/top_tier
