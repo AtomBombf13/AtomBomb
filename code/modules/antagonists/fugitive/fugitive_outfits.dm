@@ -120,7 +120,7 @@
 	name = "Bounty Hunter - Hook"
 	uniform = /obj/item/clothing/under/rank/prisoner
 	back = /obj/item/storage/backpack
-	head = /obj/item/clothing/head/scarecrow_hat
+	head = /obj/item/clothing/head/fashion/hat_scarecrow
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	ears = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/jackboots

@@ -247,18 +247,6 @@
 	cold_protection = HEAD //This tam brings the warm reggae and Jamaican sun with it.
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
 
-/obj/item/clothing/head/f13/hairband
-	name = "hairband"
-	desc = "Pretty yellow hairband"
-	icon_state = "50shairband"
-	item_state = "50shairband"
-
-/obj/item/clothing/head/f13/nursehat
-	name = "nursehat"
-	desc = "White cloth headdress for nurses"
-	icon_state = "nursehat"
-	item_state = "nursehat"
-
 /obj/item/clothing/head/f13/beaver
 	name = "beaverkin"
 	desc = "A hat made from felted beaver fur which makes the wearer feel both comfortable and elegant."

@@ -408,7 +408,8 @@ here's a tip, go search DEFINES/access.dm
 	loadout_options = list(
 	/datum/outfit/loadout/vaultdoc,
 	/datum/outfit/loadout/barber,
-	/datum/outfit/loadout/follower
+	/datum/outfit/loadout/follower,
+	/datum/outfit/loadout/nurse
 	)
 
 	outfit = /datum/outfit/job/eastwood/f13dendoc
@@ -480,6 +481,12 @@ here's a tip, go search DEFINES/access.dm
 	uniform =	/obj/item/clothing/under/f13/followers
 	suit	=	/obj/item/clothing/suit/toggle/labcoat/followers
 	shoes 	=	/obj/item/clothing/shoes/f13/brownie
+
+/datum/outfit/loadout/nurse
+	name = "Nurse"
+	uniform =	/obj/item/clothing/under/f13/female/dress/nurse
+	head	=	/obj/item/clothing/head/fashion/hat_nurse
+	shoes 	=	/obj/item/clothing/shoes/laceup
 
 /*--------------------------------------------------------------*/
 //Merchant
