@@ -269,9 +269,9 @@
 	draw_time = GUN_DRAW_NORMAL
 
 //Breeder recharger pistol
-/obj/item/gun/energy/laser/wattz/recharger
+/obj/item/gun/energy/laser/recharger
 	name = "Recharger Pistol"
-	desc = "A recharger pistol manufactured by the Followers of the Apocalpyse. As the name implied, it charges its capacitor banks over time using radioactive decay."
+	desc = "A locally manufactured recharger pistol. As the name implies, it can recharge itself over time using a microfusion breeder."
 	can_remove = 0
 	can_charge = 0
 	selfcharge = 1
@@ -285,8 +285,8 @@
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-
+	draw_time = GUN_DRAW_LONG
+	
 //AEP 7 Laser pistol
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
