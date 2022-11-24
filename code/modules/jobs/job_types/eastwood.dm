@@ -113,8 +113,8 @@ here's a tip, go search DEFINES/access.dm
 	/datum/outfit/loadout/theoldguard
 	)
 
-	access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -140,8 +140,7 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/melee/classic_baton = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
-		/obj/item/grenade/flashbang = 1,
-		/obj/item/clothing/accessory/medal = 1,
+		/obj/item/grenade/flashbang = 1
 		)
 
 /datum/outfit/loadout/thechief
