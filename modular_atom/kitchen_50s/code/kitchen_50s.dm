@@ -330,6 +330,11 @@
 	icon_state = "spikeframe"
 	desc = "The frame of a meat spike. To assemble, wrench it in place and add four iron rods."
 
+/obj/structure/kitchenspike
+	name = "meat spike"
+	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
+	icon_state = "spike"
+	desc = "This allows more efficient butchery. Grab the animal by the neck and drag it up on the spike before cutting them up. Its polite to kill them before, but optional."
 
 // -------------- AREA -----------------  -adds a new area for food preparation, replacing the old unused base one thats too unclear what it does. Minor food bonus in area, for clean kitchen areas.
 
