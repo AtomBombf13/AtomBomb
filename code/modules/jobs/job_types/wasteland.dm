@@ -972,7 +972,7 @@ Wastelander
 
 
 
-/* Stash for whenever I decide to actually go throught with deserters or not 
+/* Stash for whenever I decide to actually go throught with deserters or not
 
 /datum/outfit/loadout/raider_ncr
 	name = "Outlaw Ranger"

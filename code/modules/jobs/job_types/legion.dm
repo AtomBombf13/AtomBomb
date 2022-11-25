@@ -1291,7 +1291,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	uniform = /obj/item/clothing/under/f13/doctor
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	suit = /obj/item/clothing/suit/curator
-	head = /obj/item/clothing/head/fashion/hat_scarecrow
+	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/color/black
 	glasses = /obj/item/clothing/glasses/welding
 	id = /obj/item/card/id/dogtag/town/legion

@@ -411,8 +411,8 @@
 		if(L.stat != CONSCIOUS)
 			return FALSE
 	if (ismecha(the_target))
-		var/obj/vehicle/sealed/mecha/M = the_target
-		if (M.occupants)
+		var/obj/mecha/M = the_target
+		if (M.occupant)
 			return FALSE
 	return TRUE
 

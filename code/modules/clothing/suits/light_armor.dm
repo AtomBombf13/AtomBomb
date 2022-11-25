@@ -708,19 +708,22 @@
 	item_state = "r_gear_rig"
 	body_parts_hidden = 0
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
-	
+
+
+
 /obj/item/clothing/suit/armor/marlowsuit //Raider armour reskin.
 	name = "wasteland ganger overcoat"
 	desc = "A heavy raw buckskin overcoat littered with aged bullet holes and frays from regular wear-and-tear."
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	icon_state = "marlowsuit"
+	armor = ARMOR_VALUE_LEATHER_ARMOR
 
 //////////////////////
 // Light Armor Vests//
 /////////////////////
 /* only protects vs a single type of damage and bomb damage, no or low DT */
 
-/obj/item/clothing/suit/armor/light/vest/
+/obj/item/clothing/suit/armor/light/vest
 	name = "light vest"
 	desc = "Light armor vest template. You shouldnt see this normally."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
@@ -728,22 +731,21 @@
 	armor = ARMOR_VALUE_BALLISTIC_ARMOR
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
-	
+
 /obj/item/clothing/suit/armor/light/vest/flak /*low melee and laser, more bomb, below average bullet, some DT*/
 	name = "flak vest"
 	desc = "A vest made of ballistic nylon to stop spall, frag, and handgun rounds. It is much lighter and breathes easier than kevlar but a lot less sturdy. Smells faintly of napalm."
 	icon_state = "vest_flak"
 	item_state = "vest_flak"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_DT_T3) 
-	
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_DT_T3)
+
 /obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, some DT*/
 	name = "light security vest"
 	desc = "a lightweight ballistic vest that combines protection and comfort. Perfect for checking for passports"
 	icon_state = "blueshift"
 	item_state = "blueshift"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T2) 
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T2)
 	custom_premium_price = PRICE_ABOVE_EXPENSIVE
-	
 ////////////////
 // ARMOR KITS //
 ////////////////
@@ -861,7 +863,7 @@
 
 //////////////////////////
 // Brotherhood of Steel //
-////////////////////////// 
+//////////////////////////
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe
 	name = "Brotherhood Scribe's robe"
@@ -928,7 +930,7 @@
 // Great Khans //
 ////////////////
 
-//These are from light jackets 
+//These are from light jackets
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."

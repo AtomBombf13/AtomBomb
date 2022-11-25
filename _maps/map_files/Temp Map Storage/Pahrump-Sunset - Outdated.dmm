@@ -21545,7 +21545,7 @@
 /obj/item/clothing/under/dress/sundress/white,
 /obj/item/clothing/under/f13/greendress,
 /obj/item/clothing/under/f13/pinkdress,
-/obj/item/clothing/under/f13/female/dress,
+/obj/item/clothing/under/f13/picnicdress50s,
 /obj/item/clothing/under/misc/black_dress,
 /obj/item/clothing/under/misc/pinktutu,
 /turf/open/floor/f13/wood,
@@ -21964,8 +21964,8 @@
 /obj/machinery/light{
 	pixel_x = -16
 	},
-/obj/item/clothing/under/f13/female/dress/fifties,
-/obj/item/clothing/under/f13/female/dress,
+/obj/item/clothing/under/f13/housewifedress50s,
+/obj/item/clothing/under/f13/picnicdress50s,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "iVh" = (
@@ -27591,7 +27591,7 @@
 /obj/item/clothing/head/beanie/yellow,
 /obj/item/clothing/head/beret,
 /obj/item/clothing/head/beret/blue,
-/obj/item/clothing/head/fashion,
+/obj/item/clothing/head/f13/hairband,
 /obj/effect/spawner/lootdrop/f13/cash_random_med,
 /turf/open/floor/f13/wood,
 /area/f13/building)

@@ -52,6 +52,7 @@
 	subcategory = LOADOUT_SUBCATEGORY_NECK_TIE
 	path = /obj/item/clothing/neck/jamrock
 
+
 /datum/gear/neck/choker
 	name = "choker"
 	path = /obj/item/clothing/neck/petcollar/choker

@@ -8,7 +8,7 @@
 	product = /obj/item/reagent_containers/food/snacks/grown/corn
 	maturation = 8
 	potency = 20
-	instability = 25
+	instability = 25 // Lower instability
 	growthstages = 3
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
 	icon_grow = "corn-grow" // Uses one growth icons set for all the subtypes

@@ -60,14 +60,6 @@
 	anchored = FALSE
 	..()
 
-/mob/living/simple_animal/pet/dog/mutant/death(gibbed)
-	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
-	icon_state = icon_dead
-	anchored = FALSE
-	if(!gibbed)
-		visible_message(span_danger("\the [src] shouts something incoherent about brahmins for the last time and stops moving..."))
-	..()
-
 /mob/living/simple_animal/hostile/supermutant/meleemutant
 	desc = "A huge and ugly mutant humanoid.  This one is brandishing a sledgehammer."
 	icon = 'icons/fallout/mobs/supermutant.dmi'

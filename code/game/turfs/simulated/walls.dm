@@ -93,11 +93,29 @@
 	if(!density)
 		..()
 
+
 /turf/closed/wall/blob_act(obj/structure/blob/B)
 	if(prob(50))
 		dismantle_wall()
 	else
 		add_dent(WALL_DENT_HIT)
+
+/turf/closed/wall/mech_melee_attack(obj/mecha/M)
+	M.do_attack_animation(src)
+	switch(M.damtype)
+		if(BRUTE)
+			playsound(src, 'sound/weapons/punch4.ogg', 50, 1)
+			visible_message(span_danger("[M.name] has hit [src]!"), null, null, COMBAT_MESSAGE_RANGE)
+			if(M.force >= hardness*0.8)
+				dismantle_wall(1)
+				playsound(src, 'sound/effects/meteorimpact.ogg', 100, 1)
+			else
+				add_dent(WALL_DENT_HIT)
+		if(BURN)
+			playsound(src, 'sound/items/welder.ogg', 100, 1)
+		if(TOX)
+			playsound(src, 'sound/effects/spray2.ogg', 100, 1)
+			return FALSE
 
 /turf/closed/wall/attack_paw(mob/living/user)
 	return attack_hand(user)

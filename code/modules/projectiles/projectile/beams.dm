@@ -27,8 +27,6 @@
 /obj/item/projectile/beam/laser/mech
 	hitscan = TRUE
 	wound_bonus = 0
-	armour_penetration = BULLET_PENETRATION_HEAVY
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
 
 // Low energy drain and cooldown
 /obj/item/projectile/beam/laser/mech/light
@@ -39,7 +37,6 @@
 /obj/item/projectile/beam/laser/mech/heavy
 	name = "heavy laser beam"
 	damage = 40
-	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -47,9 +44,7 @@
 // The highest energy drain and cooldown
 /obj/item/projectile/beam/laser/mech/pulse
 	name = "charged pulse beam"
-	damage = 50
-	armour_penetration = BULLET_PENETRATION_ABSOLUTE
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
+	damage = 49
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
@@ -336,6 +331,17 @@
 	name = "laser beam"
 	damage = 35
 
+/obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
+	name = "recharger beam"
+	damage = 25
+	hitscan = TRUE
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+	light_color = LIGHT_COLOR_BLUE
+
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
 	damage = 33
@@ -391,17 +397,6 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
-	name = "recharger beam"
-	damage = 25
-	hitscan = TRUE
-	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
-	tracer_type = /obj/effect/projectile/tracer/pulse
-	muzzle_type = /obj/effect/projectile/muzzle/pulse
-	impact_type = /obj/effect/projectile/impact/pulse
-	light_color = LIGHT_COLOR_BLUE
-
 /obj/item/projectile/beam/laser/pistol/hitscan //hitscan AEP7
 	name = "laser beam"
 	damage = 15
@@ -424,10 +419,10 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/beam/laser/lasgun/hitscan/focused 
+/obj/item/projectile/beam/laser/lasgun/hitscan/focused
 	name = "overcharged laser beam"
-	damage = 34
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	damage = 34
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
@@ -532,7 +527,6 @@
 	tracer_type = /obj/effect/projectile/tracer/disabler
 	muzzle_type = /obj/effect/projectile/muzzle/disabler
 	impact_type = /obj/effect/projectile/impact/disabler
-
 
 /obj/item/projectile/beam/laser/ultra_pistol //unused
 	name = "laser beam"

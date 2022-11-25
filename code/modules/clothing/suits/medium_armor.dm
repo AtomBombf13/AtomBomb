@@ -160,7 +160,7 @@
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
 
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big  /* more slowdown, less weaknesses, more DT, worse enviro protect */
+/obj/item/clothing/suit/armor/medium/vest/bulletproof/big
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
@@ -198,12 +198,11 @@
 /obj/item/clothing/suit/armor/medium/vest/old
 	name = "degrading armor vest"
 	desc = "Older generation Type 1 armored vest. It looks like a fixer-upper, but it could still stop a bullet."
-	armor_tier_desc = ARMOR_CLOTHING_LIGHT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
-	slowdown = ARMOR_SLOWDOWN_LIGHT 
 	icon_state = "armor"
 	item_state = "armor"
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/medium/vest/warden
 	name = "warden's jacket"
@@ -275,7 +274,6 @@
 
 // metal breastplates!
 // ++Melee, -Bullet, +laser, bit slower
-//higher threshold, lower resistances, lower slowdown versus the whole metal armor
 /obj/item/clothing/suit/armor/medium/vest/breastplate
 	name = "steel breastplate"
 	desc = "a steel breastplate, inspired by a pre-war design. It provides some protection against impacts, cuts, and medium-velocity bullets."
@@ -295,6 +293,7 @@
 	icon_state = "steel_bib_heavy"
 	item_state = "steel_bib_heavy"
 	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
+	
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap

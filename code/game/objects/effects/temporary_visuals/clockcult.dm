@@ -132,11 +132,11 @@
 		L.apply_damage(damage, BURN, "chest", L.run_armor_check("chest", "laser", "Your armor absorbs [src]!", "Your armor blocks part of [src]!", 0, "Your armor was penetrated by [src]!"))
 		log_combat(user, L, "struck with a volt blast")
 		hit_amount++
-	for(var/obj/vehicle/sealed/mecha/M in T)
-		if(M.occupants)
-			if(is_servant_of_ratvar(M.occupants))
+	for(var/obj/mecha/M in T)
+		if(M.occupant)
+			if(is_servant_of_ratvar(M.occupant))
 				continue
-			to_chat(M.occupants, span_userdanger("Your [M.name] is struck by a [name]!"))
+			to_chat(M.occupant, span_userdanger("Your [M.name] is struck by a [name]!"))
 		M.visible_message(span_warning("[M] is struck by a [name]!"))
 		M.take_damage(damage, BURN, 0, 0)
 		hit_amount++
