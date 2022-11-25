@@ -15,6 +15,25 @@
 		"Leadership recommends the following goal for this week: Acquire or confiscate dangerous tech by any means necessary."
 		)
 
+GLOBAL_LIST_INIT(knight_gunsmith_recipes, list(
+	/datum/crafting_recipe/n99,
+	/datum/crafting_recipe/varmintrifle,
+	/datum/crafting_recipe/huntingshotgun,
+	/datum/crafting_recipe/smg10mm,
+	/datum/crafting_recipe/verminkiller, 
+	/datum/crafting_recipe/trench, 
+	/datum/crafting_recipe/huntingrifle,
+	/datum/crafting_recipe/scope,
+	/datum/crafting_recipe/ergonomic_grip,
+	/datum/crafting_recipe/metal_guard,
+	/datum/crafting_recipe/forged_barrel,
+	/datum/crafting_recipe/booster,
+	/datum/crafting_recipe/sniperscope,
+	/datum/crafting_recipe/suppressor,
+	/datum/crafting_recipe/recoilcomp,
+	/datum/crafting_recipe/laserguide,
+	/datum/crafting_recipe/fullauto))
+
 /datum/outfit/job/bos
 	name = "bosdatums"
 	jobtype = 	/datum/job/bos
@@ -315,6 +334,8 @@ Knight-Captain
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Knight-Captain"
@@ -769,6 +790,9 @@ Senior Knight
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
+
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -872,6 +896,9 @@ Knight
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
+
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
