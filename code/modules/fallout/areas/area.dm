@@ -5,8 +5,8 @@
 	var/list/ambientmusic = list('sound/misc/null.ogg')
 //	var/ambience_area =  list('sound/f13ambience/wasteland.ogg')
 	ambientsounds = list('sound/misc/null.ogg')
-	var/environment = -1
-	var/grow_chance = 100
+	var/environment = -1 // What does this var even do?
+	var/grow_chance = 100 // And this one? Its not called anywhere? Confuse.
 
 /area/f13
 	name = "error"
@@ -701,3 +701,6 @@
 /area/f13/wasteland/khans
 	name = "Great Khan Encampment"
 	icon_state = "tribe"
+
+/area/f13/food_preparation // gives meat quality bonus, meant to represent a small clean area indoors suitable for making chef quality food.
+	icon_state = "cafeteria"

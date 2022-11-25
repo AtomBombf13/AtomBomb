@@ -1,5 +1,5 @@
 // Kitchen related items and structures, all suitable for Fallout, with correct perspective and color palettes, more or less.
-// Most are just art updates, redirecting the icon path here, chopping block and microwave got code changes necessary
+// Most are just art updates, redirecting the icon path here, chopping block and microwave got code changes necessary. Adds food prep area for minor butchering bonus.
 
 
 // chopping block, made with 2 planks, add rolling pin, bowl, kitchen knife and you got a food processor. Coded included
@@ -320,3 +320,21 @@
 	addtimer(CALLBACK(src, .proc/wash_cycle), 200)
 	START_PROCESSING(SSfastprocess, src)
 	return TRUE
+
+
+// -------------- KITCHEN SPIKE ----------------- - simply adds instructions for assembling so code diving isn't needed, and adds a edited icon so its not as painful to click
+
+/obj/structure/kitchenspike_frame
+	name = "meatspike frame"
+	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
+	icon_state = "spikeframe"
+	desc = "The frame of a meat spike. To assemble, wrench it in place and add four iron rods."
+
+
+// -------------- AREA -----------------  -adds a new area for food preparation, replacing the old unused base one thats too unclear what it does. Minor food bonus in area, for clean kitchen areas.
+
+// /area/crew_quarters/kitchen  replace in butchering with with ------>
+/area/f13/food_preparation
+	name = "food preparation area"
+	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
+	icon_state = "area_food_preparation"
