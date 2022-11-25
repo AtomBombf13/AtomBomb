@@ -174,6 +174,11 @@
 	path = /obj/item/clothing/under/suit/checkered
 	cost = 1
 
+/datum/gear/uniform/suit/jamrock
+	name = "disco-ass Suit"
+	path = /obj/item/clothing/under/jamrock
+	cost = 1
+
 /datum/gear/uniform/suit/navy
 	name = "navy suit"
 	path = /obj/item/clothing/under/suit/navy
@@ -678,7 +683,7 @@
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
 
-/// Brotherhood of Steel 
+/// Brotherhood of Steel
 
 /datum/gear/uniform/bos
 	name = "midwestern fatigues"

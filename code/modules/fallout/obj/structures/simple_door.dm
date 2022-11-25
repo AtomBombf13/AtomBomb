@@ -205,7 +205,7 @@
 			else
 				SwitchState(animate)
 				return 1
-	else if(istype(user, /obj/vehicle/sealed/mecha))
+	else if(istype(user, /obj/mecha))
 		SwitchState(animate)
 		return 1
 	return 0

@@ -9,11 +9,11 @@
 
 /obj/structure/destructible/clockwork/trap/trigger/pressure_sensor/mech/on_entered(atom/movable/AM)
 	..()
-	if(!istype(AM,/obj/vehicle/sealed/mecha/))
+	if(!istype(AM,/obj/mecha/))
 		return
 
-	var/obj/vehicle/sealed/mecha/M = AM
-	if(M.occupants && is_servant_of_ratvar(M.occupants))
+	var/obj/mecha/M = AM
+	if(M.occupant && is_servant_of_ratvar(M.occupant))
 		return
 	audible_message("<i>*click*</i>")
 	playsound(src, 'sound/items/screwdriver2.ogg', 50, TRUE)
