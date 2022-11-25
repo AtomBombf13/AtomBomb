@@ -2,7 +2,7 @@
  * ARMOR DEFINES
  */
 
-//Armor calcilation quick reference: apply threshold first then apply armor
+//Armor calculation quick reference: apply threshold first then apply armor
 //so 100 damage vs combat armor = 67.5 NOT 65
 //threshold beats small numbers (ie. machine guns) armor beats big numbers (rifles)
 
