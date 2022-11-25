@@ -55,8 +55,8 @@ Elder
 
 	exp_requirements = 3000
 
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 
 	outfit = /datum/outfit/job/bos/f13elder
 
@@ -147,6 +147,7 @@ Head Paladin
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
@@ -396,6 +397,7 @@ Senior Paladin
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
@@ -448,8 +450,8 @@ Paladin
 	title = "Paladin"
 	flag = F13PALADIN
 	display_order = JOB_DISPLAY_ORDER_PALADIN
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	supervisors = "the Head Paladin"
 	exp_requirements = 1200
@@ -481,6 +483,7 @@ Paladin
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
@@ -622,8 +625,8 @@ Scribe
 	title = "Scribe"
 	flag = F13SCRIBE
 	display_order = JOB_DISPLAY_ORDER_SCRIBE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 	description = "You answer directly to the Senior Scribe, tasked with researching and reverse-engineering recovered technologies from the old world, while maintaining the brotherhoods scientific archives. You may also be given a trainee to assign duties to."
 	supervisors = "the Senior Scribe and Head Scribe"
 
@@ -729,8 +732,8 @@ Senior Knight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
 	display_order = JOB_DISPLAY_ORDER_SENIORKNIGHT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You report directly to the Knight-Captain. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	supervisors = "the Knight-Captain inside, Paladins outside"
 	exp_requirements = 900
@@ -933,8 +936,8 @@ Initiate
 	title = "Initiate"
 	flag = F13INITIATE
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior; doing so may result in exile or transferrence back the Valley."
 	supervisors = "the Scribes, Knights or Paladins"
 
