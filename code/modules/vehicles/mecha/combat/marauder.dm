@@ -12,6 +12,25 @@
 	force = 50
 	max_equip = 4
 
+/obj/vehicle/sealed/mecha/combat/marauder/moved_inside(mob/living/carbon/human/H)
+	. = ..()
+	if(. && !HAS_TRAIT(H, TRAIT_MECHA_THERMAL || TRAIT_MECHA_NVG))
+		ADD_TRAIT(H, TRAIT_MECHA_THERMAL, VEHICLE_TRAIT)
+		H.update_sight()
+
+/obj/vehicle/sealed/mecha/combat/marauder/remove_occupant(mob/living/carbon/human/H)
+	if(isliving(H) && HAS_TRAIT_FROM(H, TRAIT_MECHA_THERMAL, VEHICLE_TRAIT))
+		REMOVE_TRAIT(H, TRAIT_MECHA_THERMAL, VEHICLE_TRAIT)
+		H.update_sight()
+	return ..()
+
+/obj/vehicle/sealed/mecha/combat/marauder/mmi_moved_inside(obj/item/mmi/M, mob/user)
+	. = ..()
+	if(. && !HAS_TRAIT(M, TRAIT_MECHA_THERMAL))
+		var/mob/living/brain/B = M.brainmob
+		ADD_TRAIT(B, TRAIT_MECHA_THERMAL, VEHICLE_TRAIT)
+		B.update_sight()
+
 /obj/vehicle/sealed/mecha/combat/marauder/generate_actions()
 	. = ..()
 	initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_smoke)
