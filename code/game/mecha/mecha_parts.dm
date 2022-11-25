@@ -9,7 +9,7 @@
 	w_class = WEIGHT_CLASS_GIGANTIC
 	flags_1 = CONDUCT_1
 
-/obj/item/mecha_parts/proc/try_attach_part(mob/user, obj/mecha/M) //For attaching parts to a finished mech
+/obj/item/mecha_parts/proc/try_attach_part(mob/user, obj/vehicle/sealed/mecha/M) //For attaching parts to a finished mech
 	if(!user.transferItemToLoc(src, M))
 		to_chat(user, span_warning("\The [src] is stuck to your hand, you cannot put it in \the [M]!"))
 		return FALSE
@@ -261,12 +261,6 @@
 	name = "\improper Marauder armor plates"
 	desc = "A set of armor plates for the Marauder. An encompassing plasteel-DU alloy designed to withstand extreme shock at the cost of mobility."
 	icon_state = "marauder_armour"
-
-////////// Firefighter
-
-/obj/item/mecha_parts/chassis/firefighter
-	name = "\improper Firefighter chassis"
-	construct_type = /datum/component/construction/unordered/mecha_chassis/firefighter
 
 ////////// Phazon
 

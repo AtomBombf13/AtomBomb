@@ -89,17 +89,17 @@
 
 
 /obj/item/mecha_parts/mecha_equipment/drill/proc/move_ores()
-	if(locate(/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp) in chassis.equipment && istype(chassis, /obj/mecha/working/ripley))
-		var/obj/mecha/working/ripley/R = chassis //we could assume that it's a ripley because it has a clamp, but that's ~unsafe~ and ~bad practice~
+	if(locate(/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp) in chassis.equipment && istype(chassis, /obj/vehicle/sealed/mecha/working/ripley))
+		var/obj/vehicle/sealed/mecha/working/ripley/R = chassis //we could assume that it's a ripley because it has a clamp, but that's ~unsafe~ and ~bad practice~
 		R.collect_ore()
 
-/obj/item/mecha_parts/mecha_equipment/drill/can_attach(obj/mecha/M as obj)
+/obj/item/mecha_parts/mecha_equipment/drill/can_attach(obj/vehicle/sealed/mecha/M as obj)
 	if(..())
-		if(istype(M, /obj/mecha/working) || istype(M, /obj/mecha/combat))
+		if(istype(M, /obj/vehicle/sealed/mecha/working) || istype(M, /obj/vehicle/sealed/mecha/combat))
 			return 1
 	return 0
 
-/obj/item/mecha_parts/mecha_equipment/drill/attach(obj/mecha/M)
+/obj/item/mecha_parts/mecha_equipment/drill/attach(obj/vehicle/sealed/mecha/M)
 	..()
 	var/datum/component/butchering/butchering = src.GetComponent(/datum/component/butchering)
 	butchering.butchering_enabled = TRUE
@@ -164,8 +164,8 @@
 	if(!loc)
 		STOP_PROCESSING(SSfastprocess, src)
 		qdel(src)
-	if(istype(loc, /obj/mecha/working) && scanning_time <= world.time)
-		var/obj/mecha/working/mecha = loc
+	if(istype(loc, /obj/vehicle/sealed/mecha/working) && scanning_time <= world.time)
+		var/obj/vehicle/sealed/mecha/working/mecha = loc
 		if(!mecha.occupant)
 			return
 		scanning_time = world.time + equip_cooldown

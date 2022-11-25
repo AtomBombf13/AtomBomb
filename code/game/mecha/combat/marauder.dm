@@ -3,7 +3,7 @@
 	Has the most attack force, but is also slower than other mechs and can't strafe
 */
 
-/obj/mecha/combat/marauder
+/obj/vehicle/sealed/mecha/combat/marauder
 	name = "\improper Marauder"
 	desc = "A retrofit of the orginal 'Durand' exosuit designed for extended combat operations, the shield projector has been replaced with a smoke-screen dispenser and a sophisticated sensor suite."
 	icon_state = "marauder"
@@ -19,17 +19,17 @@
 	force = 40 // Just don't go near that thing, or do, it can't strafe.
 	canstrafe = FALSE
 
-/obj/mecha/combat/marauder/GrantActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/marauder/GrantActions(mob/living/user, human_occupant = 0)
 	..()
 	smoke_action.Grant(user, src)
 	zoom_action.Grant(user, src)
 
-/obj/mecha/combat/marauder/RemoveActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/marauder/RemoveActions(mob/living/user, human_occupant = 0)
 	..()
 	smoke_action.Remove(user)
 	zoom_action.Remove(user)
 
-/obj/mecha/combat/marauder/loaded/Initialize()
+/obj/vehicle/sealed/mecha/combat/marauder/loaded/Initialize()
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse(src)
 	ME.attach(src)
@@ -41,7 +41,7 @@
 	ME.attach(src)
 	max_ammo()
 
-/obj/mecha/combat/marauder/seraph // Very OP adminbus mech.
+/obj/vehicle/sealed/mecha/combat/marauder/seraph // Very OP adminbus mech.
 	name = "\improper Seraph"
 	desc = "Heavy-duty, command-type exosuit. This is a custom model, utilized only by high-ranking military personnel."
 	icon_state = "seraph"
@@ -54,7 +54,7 @@
 	force = 65
 	max_equip = 5
 
-/obj/mecha/combat/marauder/seraph/Initialize()
+/obj/vehicle/sealed/mecha/combat/marauder/seraph/Initialize()
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot(src)
@@ -69,14 +69,14 @@
 	ME.attach(src)
 	max_ammo()
 
-/obj/mecha/combat/marauder/mauler // Evil adminbus variant of the marauder.
+/obj/vehicle/sealed/mecha/combat/marauder/mauler // Evil adminbus variant of the marauder.
 	desc = "Heavy-duty, combat exosuit, developed off of the existing Marauder model."
 	name = "\improper Mauler"
 	icon_state = "mauler"
 	wreckage = /obj/structure/mecha_wreckage/mauler
 	max_equip = 5
 
-/obj/mecha/combat/marauder/mauler/loaded/Initialize()
+/obj/vehicle/sealed/mecha/combat/marauder/mauler/loaded/Initialize()
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
 	ME.attach(src)

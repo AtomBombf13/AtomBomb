@@ -1,4 +1,4 @@
-/obj/mecha/medical/medigax
+/obj/vehicle/sealed/mecha/medical/medigax
 	name = "\improper Medical Gygax"
 	desc = "A pre-War medical exosuit based on the Gygax platform. It features a robust suspension to safetly transport patients over rough terrain. The exterior plating is advertised as able to withstand minor impacts and is anti-microbial to boot."
 	icon_state = "medigax"
@@ -10,20 +10,20 @@
 	internal_damage_threshold = 30
 	step_energy_drain = 30
 
-/obj/mecha/medical/medigax/moved_inside(mob/living/carbon/human/H)
+/obj/vehicle/sealed/mecha/medical/medigax/moved_inside(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 		hud.add_hud_to(H)
 
-/obj/mecha/medical/medigax/go_out()
+/obj/vehicle/sealed/mecha/medical/medigax/go_out()
 	if(isliving(occupant))
 		var/mob/living/carbon/human/L = occupant
 		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 		hud.remove_hud_from(L)
 	..()
 
-/obj/mecha/medical/medigax/mmi_moved_inside(obj/item/mmi/mmi_as_oc, mob/user)
+/obj/vehicle/sealed/mecha/medical/medigax/mmi_moved_inside(obj/item/mmi/mmi_as_oc, mob/user)
 	. = ..()
 	if(.)
 		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]

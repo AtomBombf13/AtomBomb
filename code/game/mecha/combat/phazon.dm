@@ -1,4 +1,4 @@
-/obj/mecha/combat/phazon
+/obj/vehicle/sealed/mecha/combat/phazon
 	name = "\improper Phazon"
 	desc = "This is a Phazon exosuit. The pinnacle of scientific research and pride of Nanotrasen, it uses cutting edge bluespace technology and expensive materials."
 	icon_state = "phazon"
@@ -17,13 +17,13 @@
 	max_equip = 3
 	phase_state = "phazon-phase"
 
-/obj/mecha/combat/phazon/GrantActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/phazon/GrantActions(mob/living/user, human_occupant = 0)
 	..()
 	switch_damtype_action.Grant(user, src)
 	phasing_action.Grant(user, src)
 
 
-/obj/mecha/combat/phazon/RemoveActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/phazon/RemoveActions(mob/living/user, human_occupant = 0)
 	..()
 	switch_damtype_action.Remove(user)
 	phasing_action.Remove(user)

@@ -91,18 +91,6 @@
 		var/mob/living/brain/B = M.brainmob
 		hud.add_hud_to(B)
 
-/obj/vehicle/sealed/mecha/working/ripley/firefighter
-	desc = "Autonomous Power Loader Unit MK-II-F. This model is refitted with additional thermal protection."
-	name = "\improper APLU \"Firefighter\""
-	icon_state = "firefighter"
-	movedelay = 3
-	max_temperature = 65000
-	max_integrity = 400
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	max_equip = 5
-	enclosed = TRUE
-	enter_delay = 40
-
 /obj/vehicle/sealed/mecha/working/ripley/deathripley
 	desc = "OH SHIT IT'S THE DEATHSQUAD WE'RE ALL GONNA DIE"
 	name = "\improper DEATH-RIPLEY"

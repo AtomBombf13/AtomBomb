@@ -11,17 +11,17 @@
 	tool_behaviour = TOOL_RETRACTOR
 	toolspeed = 0.8
 	var/dam_force = 20
-	var/obj/mecha/working/ripley/cargo_holder
+	var/obj/vehicle/sealed/mecha/working/ripley/cargo_holder
 	harmful = TRUE
 	mech_flags = EXOSUIT_MODULE_RIPLEY
 
-/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp/can_attach(obj/mecha/working/ripley/M as obj)
+/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp/can_attach(obj/vehicle/sealed/mecha/working/ripley/M as obj)
 	if(..())
 		if(istype(M))
 			return 1
 	return 0
 
-/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp/attach(obj/mecha/M as obj)
+/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp/attach(obj/vehicle/sealed/mecha/M as obj)
 	..()
 	cargo_holder = M
 	return
@@ -36,7 +36,7 @@
 	if(!cargo_holder)
 		return
 	if(ismecha(target))
-		var/obj/mecha/M = target
+		var/obj/vehicle/sealed/mecha/M = target
 		var/have_ammo
 		for(var/obj/item/mecha_ammo/box in cargo_holder.cargo)
 			if(istype(box, /obj/item/mecha_ammo) && box.rounds)
@@ -234,7 +234,7 @@
 /obj/item/mecha_parts/mecha_equipment/extinguisher/get_equip_info()
 	return "[..()] \[[src.reagents.total_volume]\]"
 
-/obj/item/mecha_parts/mecha_equipment/extinguisher/can_attach(obj/mecha/working/M as obj)
+/obj/item/mecha_parts/mecha_equipment/extinguisher/can_attach(obj/vehicle/sealed/mecha/working/M as obj)
 	if(..())
 		if(istype(M))
 			return 1
@@ -359,7 +359,7 @@
 	. = ..()
 	cable = new(src, 0)
 
-/obj/item/mecha_parts/mecha_equipment/cable_layer/can_attach(obj/mecha/working/M)
+/obj/item/mecha_parts/mecha_equipment/cable_layer/can_attach(obj/vehicle/sealed/mecha/working/M)
 	if(..())
 		if(istype(M))
 			return 1

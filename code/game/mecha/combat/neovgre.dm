@@ -1,4 +1,4 @@
-/obj/mecha/combat/neovgre
+/obj/vehicle/sealed/mecha/combat/neovgre
 	name = "Neovgre, the Anima Bulwark"
 	desc = "Nezbere's most powerful creation, a mighty war machine of unmatched power said to have ended wars in a single night."
 	icon = 'icons/mecha/neovgre.dmi'
@@ -18,35 +18,35 @@
 	stepsound = 'sound/mecha/neostep2.ogg'
 	turnsound = 'sound/mecha/powerloader_step.ogg'
 
-/obj/mecha/combat/neovgre/GrantActions(mob/living/user, human_occupant = 0) //No Eject action for you sonny jim, your life for Ratvar!
+/obj/vehicle/sealed/mecha/combat/neovgre/GrantActions(mob/living/user, human_occupant = 0) //No Eject action for you sonny jim, your life for Ratvar!
 	internals_action.Grant(user, src)
 	cycle_action.Grant(user, src)
 	lights_action.Grant(user, src)
 	stats_action.Grant(user, src)
 	strafing_action.Grant(user, src)
 
-/obj/mecha/combat/neovgre/RemoveActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/neovgre/RemoveActions(mob/living/user, human_occupant = 0)
 	internals_action.Remove(user)
 	cycle_action.Remove(user)
 	lights_action.Remove(user)
 	stats_action.Remove(user)
 	strafing_action.Remove(user)
 
-/obj/mecha/combat/neovgre/MouseDrop_T(mob/M, mob/user)
+/obj/vehicle/sealed/mecha/combat/neovgre/MouseDrop_T(mob/M, mob/user)
 	if(!is_servant_of_ratvar(user))
 		to_chat(user, span_neovgre("BEGONE HEATHEN!"))
 		return
 	else
 		..()
 
-/obj/mecha/combat/neovgre/moved_inside(mob/living/carbon/human/H)
+/obj/vehicle/sealed/mecha/combat/neovgre/moved_inside(mob/living/carbon/human/H)
 	var/list/Itemlist = H.get_contents()
 	for(var/obj/item/clockwork/slab/W in Itemlist)
 		to_chat(H, span_brass("You safely store [W] inside [src]."))
 		qdel(W)
 	. = ..()
 
-/obj/mecha/combat/neovgre/obj_destruction()
+/obj/vehicle/sealed/mecha/combat/neovgre/obj_destruction()
 	for(var/mob/M in src)
 		to_chat(M, span_brass("You are consumed by the fires raging within Neovgre..."))
 		M.dust()
@@ -54,15 +54,15 @@
 	src.visible_message("<span class = 'userdanger'>The reactor has gone critical, its going to blow!</span>")
 	addtimer(CALLBACK(src,.proc/go_critical),breach_time)
 
-/obj/mecha/combat/neovgre/proc/go_critical()
+/obj/vehicle/sealed/mecha/combat/neovgre/proc/go_critical()
 	explosion(get_turf(loc), 3, 5, 10, 20, 30)
 	Destroy(src)
 
-/obj/mecha/combat/neovgre/container_resist(mob/living/user)
+/obj/vehicle/sealed/mecha/combat/neovgre/container_resist(mob/living/user)
 	to_chat(user, span_brass("Neovgre requires a lifetime commitment friend, no backing out now!"))
 	return
 
-/obj/mecha/combat/neovgre/process()
+/obj/vehicle/sealed/mecha/combat/neovgre/process()
 	..()
 	if(!obj_integrity) //Integrity is zero but we would heal out of that state if we went into this before it recognises it being zero
 		return
@@ -82,7 +82,7 @@
 			obj_integrity += min(max_integrity - obj_integrity, max_integrity / 200)
 		CHECK_TICK
 
-/obj/mecha/combat/neovgre/Initialize()
+/obj/vehicle/sealed/mecha/combat/neovgre/Initialize()
 	.=..()
 	GLOB.neovgre_exists ++
 	var/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy/neovgre/N = new
@@ -99,7 +99,7 @@
 	desc = "Please re-attach this to neovgre and stop asking questions about why it looks like a normal Nanotrasen issue Solaris laser cannon - Nezbere"
 	fire_sound = 'sound/weapons/neovgre_laser.ogg'
 
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy/neovgre/can_attach(obj/mecha/combat/neovgre/M)
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy/neovgre/can_attach(obj/vehicle/sealed/mecha/combat/neovgre/M)
 	if(istype(M))
 		return 1
 	return 0

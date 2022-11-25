@@ -16,14 +16,14 @@
 	var/list/data = list()
 
 	var/list/trackerlist = list()
-	for(var/obj/mecha/MC in GLOB.mechas_list)
+	for(var/obj/vehicle/sealed/mecha/MC in GLOB.mechas_list)
 		trackerlist += MC.trackers
 
 	data["mechs"] = list()
 	for(var/obj/item/mecha_parts/mecha_tracking/MT in trackerlist)
 		if(!MT.chassis)
 			continue
-		var/obj/mecha/M = MT.chassis
+		var/obj/vehicle/sealed/mecha/M = MT.chassis
 		var/list/mech_data = list(
 			name = M.name,
 			integrity = round((M.obj_integrity / M.max_integrity) * 100),
@@ -35,8 +35,8 @@
 			emp_recharging = MT.recharging,
 			tracker_ref = REF(MT)
 		)
-		if(istype(M, /obj/mecha/working/ripley))
-			var/obj/mecha/working/ripley/RM = M
+		if(istype(M, /obj/vehicle/sealed/mecha/working/ripley))
+			var/obj/vehicle/sealed/mecha/working/ripley/RM = M
 			mech_data += list(
 				cargo_space = round((RM.cargo.len / RM.cargo_capacity) * 100)
 		)
@@ -55,7 +55,7 @@
 			if(!istype(MT))
 				return
 			var/message = stripped_input(usr, "Input message", "Transmit message")
-			var/obj/mecha/M = MT.chassis
+			var/obj/vehicle/sealed/mecha/M = MT.chassis
 			if(trim(message) && M)
 				M.occupant_message(message)
 				to_chat(usr, span_notice("Message sent."))
@@ -64,7 +64,7 @@
 			var/obj/item/mecha_parts/mecha_tracking/MT = locate(params["tracker_ref"])
 			if(!istype(MT))
 				return
-			var/obj/mecha/M = MT.chassis
+			var/obj/vehicle/sealed/mecha/M = MT.chassis
 			if(M)
 				MT.shock()
 				log_game("[key_name(usr)] has activated remote EMP on exosuit [M], located at [loc_name(M)], which is currently [M.occupant? "being piloted by [key_name(M.occupant)]." : "without a pilot."] ")
@@ -82,7 +82,7 @@
 	/// Cooldown variable for EMP pulsing
 	var/recharging = FALSE
 	/// The Mecha that this tracking beacon is attached to
-	var/obj/mecha/chassis
+	var/obj/vehicle/sealed/mecha/chassis
 
 /**
  * Returns a html formatted string describing attached mech status
@@ -99,8 +99,8 @@
 				<b>Pilot:</b> [chassis.occupant || "None"]<br>
 				<b>Location:</b> [get_area_name(chassis, TRUE) || "Unknown"]<br>
 				<b>Active Equipment:</b> [chassis.selected || "None"]"}
-	if(istype(chassis, /obj/mecha/working/ripley))
-		var/obj/mecha/working/ripley/RM = chassis
+	if(istype(chassis, /obj/vehicle/sealed/mecha/working/ripley))
+		var/obj/vehicle/sealed/mecha/working/ripley/RM = chassis
 		answer += "<br><b>Used Cargo Space:</b> [round((RM.cargo.len / RM.cargo_capacity * 100), 0.01)]%"
 
 	return answer
@@ -117,7 +117,7 @@
 	chassis = null
 	return ..()
 
-/obj/item/mecha_parts/mecha_tracking/try_attach_part(mob/user, obj/mecha/M)
+/obj/item/mecha_parts/mecha_tracking/try_attach_part(mob/user, obj/vehicle/sealed/mecha/M)
 	if(!..())
 		return
 	M.trackers += src

@@ -10,7 +10,7 @@
 	var/equip_cooldown = 0 // cooldown after use
 	var/equip_ready = 1 //whether the equipment is ready for use. (or deactivated/activated for static stuff)
 	var/energy_drain = 0
-	var/obj/mecha/chassis = null
+	var/obj/vehicle/sealed/mecha/chassis = null
 	/// Bitflag. Determines the range of the equipment.
 	var/range = MELEE
 	/// Bitflag. Used by exosuit fabricator to assign sub-categories based on which exosuits can equip this.
@@ -118,11 +118,11 @@
 	if(!chassis || 	chassis.loc != C || src != chassis.selected || !(get_dir(chassis, target)&chassis.dir))
 		return 0
 
-/obj/item/mecha_parts/mecha_equipment/proc/can_attach(obj/mecha/M)
+/obj/item/mecha_parts/mecha_equipment/proc/can_attach(obj/vehicle/sealed/mecha/M)
 	if(M.equipment.len<M.max_equip)
 		return 1
 
-/obj/item/mecha_parts/mecha_equipment/proc/attach(obj/mecha/M)
+/obj/item/mecha_parts/mecha_equipment/proc/attach(obj/vehicle/sealed/mecha/M)
 	M.equipment += src
 	chassis = M
 	forceMove(M)

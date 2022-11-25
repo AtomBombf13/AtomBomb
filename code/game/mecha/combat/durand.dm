@@ -3,7 +3,7 @@
 	Has less attack force than Marauder
 */
 
-/obj/mecha/combat/durand
+/obj/vehicle/sealed/mecha/combat/durand
 	name = "\improper Durand"
 	desc = "An aging combat exosuit utilized by the Vault-Tec corporation. A pre-War design, developed by Vault-Tec to combat post-War threats. It seems to have an experimental shield projector installed to minimize damage to the exosuit."
 	icon_state = "durand"
@@ -21,7 +21,7 @@
 
 	var/obj/durand_shield/shield
 
-/obj/mecha/combat/durand/Initialize()
+/obj/vehicle/sealed/mecha/combat/durand/Initialize()
 	shield = new/obj/durand_shield
 	shield.chassis = src
 	shield.layer = layer
@@ -29,33 +29,33 @@
 	RegisterSignal(src, COMSIG_PROJECTILE_PREHIT, .proc/prehit)
 	. = ..()
 
-/obj/mecha/combat/durand/Destroy()
+/obj/vehicle/sealed/mecha/combat/durand/Destroy()
 	if(shield)
 		QDEL_NULL(shield)
 	. = ..()
 
-/obj/mecha/combat/durand/process()
+/obj/vehicle/sealed/mecha/combat/durand/process()
 	. = ..()
 	if(defense_mode && !use_power(100))
 		defense_action.Activate(forced_state = TRUE)
 
-/obj/mecha/combat/durand/domove(direction)
+/obj/vehicle/sealed/mecha/combat/durand/domove(direction)
 	. = ..()
 	if(shield)
 		shield.forceMove(loc)
 		shield.dir = dir
 
-/obj/mecha/combat/durand/forceMove(turf/T)
+/obj/vehicle/sealed/mecha/combat/durand/forceMove(turf/T)
 	. = ..()
 	shield.forceMove(T)
 
-/obj/mecha/combat/durand/go_out(forced, atom/newloc = loc)
+/obj/vehicle/sealed/mecha/combat/durand/go_out(forced, atom/newloc = loc)
 	if(defense_mode)
 		defense_action.Activate(forced_state = TRUE)
 	. = ..()
 
 ///Relays the signal from the action button to the shield, and creates a new shield if the old one is MIA.
-/obj/mecha/combat/durand/proc/relay(datum/source, list/signal_args)
+/obj/vehicle/sealed/mecha/combat/durand/proc/relay(datum/source, list/signal_args)
 	if(!shield) //if the shield somehow got deleted
 		shield = new/obj/durand_shield
 		shield.chassis = src
@@ -65,14 +65,14 @@
 	SEND_SIGNAL(shield, COMSIG_MECHA_ACTION_ACTIVATE, source, signal_args)
 
 //Redirects projectiles to the shield if defense_check decides they should be blocked and returns true.
-/obj/mecha/combat/durand/proc/prehit(obj/item/projectile/source, list/signal_args)
+/obj/vehicle/sealed/mecha/combat/durand/proc/prehit(obj/item/projectile/source, list/signal_args)
 	if(defense_check(source.loc) && shield)
 		signal_args[2] = shield
 
 
 /**Checks if defense mode is enabled, and if the attacker is standing in an area covered by the shield.
 Expects a turf. Returns true if the attack should be blocked, false if not.*/
-/obj/mecha/combat/durand/proc/defense_check(turf/aloc)
+/obj/vehicle/sealed/mecha/combat/durand/proc/defense_check(turf/aloc)
 	if (!defense_mode || !shield || shield.switching)
 		return FALSE
 	. = FALSE
@@ -91,14 +91,14 @@ Expects a turf. Returns true if the attack should be blocked, false if not.*/
 				. = TRUE
 	return
 
-obj/mecha/combat/durand/attack_generic(mob/user, damage_amount = 0, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, armor_penetration = 0)
+obj/vehicle/sealed/mecha/combat/durand/attack_generic(mob/user, damage_amount = 0, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, armor_penetration = 0)
 	if(defense_check(user.loc))
 //		log_message("Attack absorbed by defense field. Attacker - [user].", LOG_MECHA, color="orange")
 		shield.attack_generic(user, damage_amount, damage_type, damage_flag, sound_effect, armor_penetration)
 	else
 		. = ..()
 
-/obj/mecha/combat/durand/blob_act(obj/structure/blob/B)
+/obj/vehicle/sealed/mecha/combat/durand/blob_act(obj/structure/blob/B)
 	if(defense_check(B.loc))
 //		log_message("Attack by blob. Attacker - [B].", LOG_MECHA, color="red")
 //		log_message("Attack absorbed by defense field.", LOG_MECHA, color="orange")
@@ -106,14 +106,14 @@ obj/mecha/combat/durand/attack_generic(mob/user, damage_amount = 0, damage_type 
 	else
 		. = ..()
 
-/obj/mecha/combat/durand/attackby(obj/item/W as obj, mob/user as mob, params)
+/obj/vehicle/sealed/mecha/combat/durand/attackby(obj/item/W as obj, mob/user as mob, params)
 	if(defense_check(user.loc))
 //		log_message("Attack absorbed by defense field. Attacker - [user], with [W]", LOG_MECHA, color="orange")
 		shield.attackby(W, user, params)
 	else
 		. = ..()
 
-/obj/mecha/combat/durand/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
+/obj/vehicle/sealed/mecha/combat/durand/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
 	if(defense_check(AM.loc))
 //		log_message("Impact with [AM] absorbed by defense field.", LOG_MECHA, color="orange")
 		shield.hitby(AM, skipcatch, hitpush, blocked, throwingdatum)
@@ -138,7 +138,7 @@ own integrity back to max. Shield is automatically dropped if we run out of powe
 	pixel_y = 4
 	max_integrity = 10000
 	obj_integrity = 10000
-	var/obj/mecha/combat/durand/chassis ///Our link back to the durand
+	var/obj/vehicle/sealed/mecha/combat/durand/chassis ///Our link back to the durand
 	var/switching = FALSE ///To keep track of things during the animation
 	anchored = TRUE
 
@@ -210,10 +210,10 @@ the shield is disabled by means other than the action button (like running out o
 	play_attack_sound()
 	. = ..()
 
-/obj/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
 	..()
 	defense_action.Grant(user, src)
 
-/obj/mecha/combat/durand/RemoveActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/combat/durand/RemoveActions(mob/living/user, human_occupant = 0)
 	..()
 	defense_action.Remove(user)

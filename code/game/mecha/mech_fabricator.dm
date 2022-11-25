@@ -48,7 +48,6 @@
 								"Cyborg",
 								"Clarke",
 								"Ripley",
-							//	"Firefighter",
 								"Odysseus",
 								"Gygax",
 								"Medical-Spec Gygax",
@@ -154,8 +153,6 @@
 				category_override = list()
 				if(mech_types & EXOSUIT_MODULE_RIPLEY)
 					category_override += "Ripley"
-				if(mech_types & EXOSUIT_MODULE_FIREFIGHTER)
-					category_override += "Firefighter"
 				if(mech_types & EXOSUIT_MODULE_ODYSSEUS)
 					category_override += "Odysseus"
 				if(mech_types & EXOSUIT_MODULE_GYGAX_MED)
@@ -166,7 +163,10 @@
 					category_override += "Durand"
 				if(mech_types & EXOSUIT_MODULE_PHAZON)
 					category_override += "Phazon"
-
+				if(mech_types & EXOSUIT_MODULE_CLARKE)
+					category_override += "Clarke"
+				if(mech_types & EXOSUIT_MODULE_MARAUDER)
+					category_override += "Marauder"
 
 	var/list/part = list(
 		"name" = D.name,

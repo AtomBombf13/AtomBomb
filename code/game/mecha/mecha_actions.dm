@@ -1,6 +1,6 @@
 //////////////////////////////////////// Action Buttons ///////////////////////////////////////////////
 
-/obj/mecha/proc/GrantActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/proc/GrantActions(mob/living/user, human_occupant = 0)
 	if(human_occupant)
 		eject_action.Grant(user, src)
 	internals_action.Grant(user, src)
@@ -12,7 +12,7 @@
 		strafing_action.Grant(user, src)
 
 
-/obj/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
+/obj/vehicle/sealed/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
 	if(human_occupant)
 		eject_action.Remove(user)
 	internals_action.Remove(user)
@@ -27,9 +27,9 @@
 /datum/action/innate/mecha
 	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUN | AB_CHECK_CONSCIOUS
 	icon_icon = 'icons/mob/actions/actions_mecha.dmi'
-	var/obj/mecha/chassis
+	var/obj/vehicle/sealed/mecha/chassis
 
-/datum/action/innate/mecha/Grant(mob/living/L, obj/mecha/M)
+/datum/action/innate/mecha/Grant(mob/living/L, obj/vehicle/sealed/mecha/M)
 	if(M)
 		chassis = M
 	..()
@@ -153,13 +153,13 @@
 
 	chassis.toggle_strafe()
 
-/obj/mecha/AltClick(mob/living/user)
+/obj/vehicle/sealed/mecha/AltClick(mob/living/user)
 	. = ..()
 	if((user == occupant) && user.canUseTopic(src) && canstrafe == TRUE)
 		toggle_strafe()
 		return TRUE
 
-/obj/mecha/proc/toggle_strafe()
+/obj/vehicle/sealed/mecha/proc/toggle_strafe()
 	strafe = !strafe
 
 	occupant_message("Toggled strafing mode [strafe?"on":"off"].")
