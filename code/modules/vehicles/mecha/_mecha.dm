@@ -1230,3 +1230,24 @@
 		else
 			to_chat(user, "<span class='notice'>None of the equipment on this exosuit can use this ammo!</span>")
 	return FALSE
+
+/obj/vehicle/sealed/mecha/moved_inside(mob/living/carbon/human/H)
+	. = ..()
+	if(. && !HAS_TRAIT(H, TRAIT_MECHA_NVG))
+		ADD_TRAIT(H, TRAIT_MECHA_NVG, VEHICLE_TRAIT)
+		H.update_sight()
+
+/obj/vehicle/sealed/mecha/remove_occupant(mob/living/carbon/human/H)
+	if(isliving(H) && HAS_TRAIT_FROM(H, TRAIT_MECHA_NVG, VEHICLE_TRAIT))
+		REMOVE_TRAIT(H, TRAIT_MECHA_NVG, VEHICLE_TRAIT)
+		H.update_sight()
+	return ..()
+
+//////Mechs give NVGs to occupants//////
+
+/obj/vehicle/sealed/mecha/mmi_moved_inside(obj/item/mmi/M, mob/user)
+	. = ..()
+	if(. && !HAS_TRAIT(M, TRAIT_MECHA_NVG))
+		var/mob/living/brain/B = M.brainmob
+		ADD_TRAIT(B, TRAIT_MECHA_NVG, VEHICLE_TRAIT)
+		B.update_sight()
