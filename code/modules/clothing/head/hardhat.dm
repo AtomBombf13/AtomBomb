@@ -65,6 +65,7 @@
 	icon_state = "hardhat0_purple"
 	item_state = "hardhat0_purple"
 	light_range = 5
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	custom_materials = list(/datum/material/iron = 4000, /datum/material/glass = 1000, /datum/material/plastic = 3000, /datum/material/silver = 500)
 	hat_type = "purple"
