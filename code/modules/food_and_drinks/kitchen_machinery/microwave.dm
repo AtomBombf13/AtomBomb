@@ -92,7 +92,7 @@
 		. += span_notice("The status display reads:")
 		. += "<span class='notice'>- Capacity: <b>[max_n_of_items]</b> items.<span>"
 		. += "<span class='notice'>- Cook time reduced by <b>[(productivity - 1) * 25]%</b>.<span>"
-
+/* commented out as a precaution due to edited version of the same in kitchen_50s module
 /obj/machinery/microwave/update_icon_state()
 	if(broken)
 		icon_state = "mwb"
@@ -106,7 +106,7 @@
 		icon_state = "mw-o"
 	else
 		icon_state = "mw"
-
+*/
 /obj/machinery/microwave/attackby(obj/item/O, mob/user, params)
 	if(operating)
 		return

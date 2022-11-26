@@ -1,3 +1,4 @@
+// Two sections commented out as a precaution, edited versions in the kitchen_50s module. Only uncomment those if that module is no longer included.
 //dye registry, add dye colors and their resulting output here if you want the sprite to change instead of just the color.
 GLOBAL_LIST_INIT(dye_registry, list(
 	DYE_REGISTRY_UNDER = list(
@@ -109,7 +110,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	. = ..()
 	if(!busy)
 		. += "<span class='notice'><b>Alt-click</b> it to start a wash cycle.</span>"
-
+/* Commented out to make the sound work in the kitchen_50s module.
 /obj/machinery/washing_machine/AltClick(mob/user)
 	. = ..()
 	if(!user.canUseTopic(src))
@@ -128,7 +129,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	addtimer(CALLBACK(src, .proc/wash_cycle), 200)
 	START_PROCESSING(SSfastprocess, src)
 	return TRUE
-
+*/
 /obj/machinery/washing_machine/process()
 	if (!busy)
 		animate(src, transform=matrix(), time=2)
@@ -245,7 +246,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	. = ..()
 	if(panel_open)
 		. += "wm_panel"
-
+/* Also commented out to prevent possible errors with the kitchen_50s module. If thats not present, uncomment.
 /obj/machinery/washing_machine/attackby(obj/item/W, mob/user, params)
 	if(panel_open && !busy && default_unfasten_wrench(user, W))
 		return
@@ -282,7 +283,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 
 	else
 		return ..()
-
+*/
 /obj/machinery/washing_machine/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	if(busy)
 		to_chat(user, span_warning("[src] is busy."))
