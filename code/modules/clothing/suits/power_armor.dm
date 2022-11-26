@@ -329,6 +329,7 @@
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
 	armor_block_chance = 20 //1-in-5
+	deflection_chance = 1 //to ensure it doesnt inherit deflect chance from anything above it
 
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
