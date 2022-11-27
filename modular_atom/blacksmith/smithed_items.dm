@@ -309,15 +309,13 @@
 	var/obj/item/pickaxe/smithed/finalforreal = new /obj/item/pickaxe/smithed(src)
 	finalforreal.force += quality/2
 	if(quality > 0)
-		finalforreal.toolspeed = max(0.05,(1-(quality/10)))
+		finalforreal.toolspeed = max(0.05,(1-(quality/15)))
 	else
 		finalforreal.toolspeed *= max(1, (quality * -1))
 	switch(quality)
-		if(10 to INFINITY)
+		if(13 to INFINITY)
 			finalforreal.digrange = 2
-		if(5 to 9)
-			finalforreal.digrange = 2
-		if(3,4)
+		if(3 to 13)
 			finalforreal.digrange = 1
 		else
 			finalforreal.digrange = 1
@@ -629,13 +627,13 @@
 	desc = "Attach a sword handle."
 	icon_state = "katana_smith"
 	finishingitem = SWORD_HANDLE
-	finalitem = /obj/item/melee/smith/twohand/katana
+	finalitem = /obj/item/twohanded/smithed/katana
 
 /obj/item/smithing/katanablade/startfinish()
-	var/obj/item/melee/smith/twohand/katana/finalforreal = new /obj/item/melee/smith/twohand/katana(src)
+	var/obj/item/twohanded/smithed/katana/finalforreal = new /obj/item/twohanded/smithed/katana(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield") // - icon_wielded basically makes the wield icon for direct click wield, sort of redundant if you change it to shift-x only
 	finalitem = finalforreal
 	..()
 
@@ -645,13 +643,13 @@
 	desc = "Attach a sword handle."
 	icon_state = "longsword_smith"
 	finishingitem = SWORD_HANDLE
-	finalitem = /obj/item/melee/smith/twohand/katana/longsword
+	finalitem = /obj/item/twohanded/smithed/katana/longsword
 
 /obj/item/smithing/longswordblade/startfinish()
-	var/obj/item/melee/smith/twohand/katana/longsword/finalforreal = new /obj/item/melee/smith/twohand/katana/longsword(src)
+	var/obj/item/twohanded/smithed/katana/longsword/finalforreal = new /obj/item/twohanded/smithed/katana/longsword(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalitem = finalforreal
 	..()
 
@@ -661,13 +659,13 @@
 	desc = "Wrap in leather strips."
 	icon_state = "scrap_smith"
 	finishingitem = LEATHER_STRIP
-	finalitem = /obj/item/melee/smith/twohand/katana/scrapblade
+	finalitem = /obj/item/twohanded/smithed/katana/scrapblade
 
 /obj/item/smithing/scrapblade/startfinish()
-	var/obj/item/melee/smith/twohand/katana/scrapblade/finalforreal = new /obj/item/melee/smith/twohand/katana/scrapblade(src)
+	var/obj/item/twohanded/smithed/katana/scrapblade/finalforreal = new /obj/item/twohanded/smithed/katana/scrapblade(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalitem = finalforreal
 	..()
 
@@ -676,41 +674,42 @@
 /obj/item/smithing/axehead
 	name = "smithed axehead"
 	icon_state = "axe_smith"
-	finalitem = /obj/item/melee/smith/twohand/axe
+	finalitem = /obj/item/twohanded/smithed/axe
 
 /obj/item/smithing/axehead/startfinish()
-	var/obj/item/melee/smith/twohand/axe/finalforreal = new /obj/item/melee/smith/twohand/axe(src)
+	var/obj/item/twohanded/smithed/axe/finalforreal = new /obj/item/twohanded/smithed/axe(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalitem = finalforreal
 	..()
+	finalitem.force += QUALITY_MODIFIER
 
 // ------------ WAR AXE ------------ //
 /obj/item/smithing/waraxehead
 	name = "smithed war-axehead"
 	icon_state = "waraxe_smith"
-	finalitem = /obj/item/melee/smith/twohand/axe/waraxe
+	finalitem = /obj/item/twohanded/smithed/axe/waraxe
 
 /obj/item/smithing/waraxehead/startfinish()
-	var/obj/item/melee/smith/twohand/axe/waraxe/finalforreal = new /obj/item/melee/smith/twohand/axe/waraxe(src)
+	var/obj/item/twohanded/smithed/axe/waraxe/finalforreal = new /obj/item/twohanded/smithed/axe/waraxe(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalitem = finalforreal
 	..()
 
 // ------------ GHOUL CRUSHER ------------ // - for those dry twig like limbs, snap snap.
 /obj/item/smithing/crusherhead
 	name = "smithed crusher head"
-	finalitem = /obj/item/melee/smith/twohand/crusher
+	finalitem = /obj/item/twohanded/smithed/crusher
 	icon_state = "crusher_smith"
 
 /obj/item/smithing/crusherhead/startfinish()
-	var/obj/item/melee/smith/twohand/crusher/finalforreal = new /obj/item/melee/smith/twohand/crusher(src)
+	var/obj/item/twohanded/smithed/crusher/finalforreal = new /obj/item/twohanded/smithed/crusher(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalitem = finalforreal
 	..()
 
@@ -718,14 +717,14 @@
 // ------------ SPEAR ------------ //
 /obj/item/smithing/spearhead
 	name = "smithed spearhead"
-	finalitem = /obj/item/melee/smith/twohand/spear
+	finalitem = /obj/item/twohanded/smithed/spear
 	icon_state = "spear_smith"
 
 /obj/item/smithing/spearhead/startfinish()
-	var/obj/item/melee/smith/twohand/spear/finalforreal = new /obj/item/melee/smith/twohand/spear(src)
+	var/obj/item/twohanded/smithed/spear/finalforreal = new /obj/item/twohanded/smithed/spear(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalforreal.throwforce = finalforreal.force
 	finalitem = finalforreal
 	..()
@@ -733,14 +732,14 @@
 // ------------ TRIDENT ------------ //
 /obj/item/smithing/tridenthead
 	name = "smithed tridenthead"
-	finalitem = /obj/item/melee/smith/twohand/spear/trident
+	finalitem = /obj/item/twohanded/smithed/spear/trident
 	icon_state = "trident_smith"
 
 /obj/item/smithing/tridenthead/startfinish()
-	var/obj/item/melee/smith/twohand/spear/trident/finalforreal = new /obj/item/melee/smith/twohand/spear/trident(src)
+	var/obj/item/twohanded/smithed/spear/trident/finalforreal = new /obj/item/twohanded/smithed/spear/trident(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalforreal.throwforce = finalforreal.force
 	finalitem = finalforreal
 	..()
@@ -748,14 +747,14 @@
 // ------------ LEGION LANCE ------------ //
 /obj/item/smithing/lancehead
 	name = "smithed lancehead"
-	finalitem = /obj/item/melee/smith/twohand/spear/lance
+	finalitem = /obj/item/twohanded/smithed/spear/lance
 	icon_state = "lance_smith"
 
 /obj/item/smithing/lancehead/startfinish()
-	var/obj/item/melee/smith/twohand/spear/lance/finalforreal = new /obj/item/melee/smith/twohand/spear/lance(src)
+	var/obj/item/twohanded/smithed/spear/lance/finalforreal = new /obj/item/twohanded/smithed/spear/lance(src)
 	finalforreal.force += QUALITY_MODIFIER
-	finalforreal.wield_force = finalforreal.force*finalforreal.wielded_mult
-	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.wield_force, icon_wielded="[icon_state]2")
+	finalforreal.force_wielded = finalforreal.force*finalforreal.wielded_mult
+	finalforreal.AddComponent(/datum/component/two_handed, force_unwielded=finalforreal.force, force_wielded=finalforreal.force_wielded, icon_wielded="[icon_state]_wield")
 	finalforreal.throwforce = finalforreal.force
 	finalitem = finalforreal
 	..()

@@ -857,7 +857,7 @@
 // Great Khans //
 /////////////////
 
-//takes from medium armor
+//has slowdown, good resistances and bad threshold
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
 	name = "Great Khan armored jacket"
 	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
@@ -873,22 +873,8 @@
 	max_integrity = 200
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor =  ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1)
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS
 
-//takes from duster
-/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
-	name = "Great Khan battle coat"
-	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
-	icon_state = "khan_heavy"
-	item_state = "khan_heavy"
-	cold_protection = CHEST|GROIN|LEGS|ARMS
-	heat_protection = CHEST|GROIN|LEGS|ARMS
-	strip_delay = 80
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-	equip_delay_other = 50
-	max_integrity = 200
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
-	armor = ARMOR_VALUE_DUSTER_ARMOR
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT

@@ -290,8 +290,8 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_SALVAGE
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
-	armor_block_chance = 25
-	deflection_chance = 5 //Trash compared to actual PA
+	armor_block_chance = 10
+	deflection_chance = 0 //Trash compared to actual PA
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(check_armor_penetration(object) <= 0.05 && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
@@ -401,3 +401,25 @@
 	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
 	icon_state = "leg_legate"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?
+
+//////////////////
+// Great Khans //
+////////////////
+
+//khan heavy armor, reinforced metal armor with less slowdown
+//slowdown of 0.6 compared to 0.25 of medium armor and 0.75 of regular heavy armor
+/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
+	name = "Great Khan battle coat"
+	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
+	icon_state = "khan_heavy"
+	item_state = "khan_heavy"
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	strip_delay = 80
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	equip_delay_other = 50
+	max_integrity = 200
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT

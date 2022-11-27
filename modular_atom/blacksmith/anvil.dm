@@ -161,14 +161,14 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	cut_overlay(image(icon= 'modular_atom/blacksmith/icons/blacksmith.dmi',icon_state="workpiece"))
 	SetBusy(FALSE, null)
 
-/obj/structure/blacksmith/anvil/proc/HandleIngot(obj/item/blacksmith/ingot/notsword, mob/user)
+/obj/structure/blacksmith/anvil/proc/HandleIngot(obj/item/blacksmith/ingot/workpiece, mob/user)
 	if(workpiece_state)
 		to_chat(user, "There's already a workpiece! Finish it or take it off.")
 		return FALSE
-	if(notsword.workability == "shapeable")
+	if(workpiece.workability == "shapeable")
 		workpiece_state = WORKPIECE_PRESENT
-		workpiece_material = notsword.custom_materials
-		to_chat(user, "You place the [notsword] on the [src].")
+		workpiece_material = workpiece.custom_materials
+		to_chat(user, "You place the [workpiece] on the [src].")
 
 		currentquality = initial(currentquality)
 
@@ -181,7 +181,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2
 		currentquality += skillmod
 
-		qdel(notsword)
+		qdel(workpiece)
 	else
 		to_chat(user, "The ingot isn't workable yet!")
 		return FALSE
@@ -228,7 +228,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			user.visible_message("<span class='notice'>[user] folds the metal.</span>", \
 						"<span class='notice'>You fold the metal.</span>")
 		if("draw")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_double2.ogg',95)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_double2.ogg',80)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] hammers both sides of the metal, drawing it out.</span>", \
 						"<span class='notice'>You hammer both sides of the metal, drawing it out.</span>")
@@ -238,7 +238,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			user.visible_message("<span class='notice'>[user] flattens the metal, shrinking it.</span>", \
 						"<span class='notice'>You flatten the metal, shrinking it.</span>")
 		if("bend")
-			playsound(src, 'modular_atom/blacksmith/sound/anvil_single1.ogg',85)
+			playsound(src, 'modular_atom/blacksmith/sound/anvil_single1.ogg',75)
 			do_smithing_sparks(1, TRUE, src)
 			user.visible_message("<span class='notice'>[user] bends the metal, using the rounded end of the anvil.</span>", \
 						"<span class='notice'>You bend the metal, using the rounded end of the anvil.</span>")
