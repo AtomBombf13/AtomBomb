@@ -5,11 +5,11 @@
 //////////////////////////////////////////
 // Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 12 Iron weapons.  
 
+
 /obj/item/melee/smith
 	name = "base class obj/item/melee/smith"
 	desc = "cringe"
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
-	icon_state = "claymore"
 	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
 	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
 	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
@@ -22,6 +22,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	obj_flags = UNIQUE_RENAME
+	flags_1 = CONDUCT_1
 	var/quality
 	var/overlay_state = "woodenrod"
 	var/mutable_appearance/overlay
@@ -38,7 +39,7 @@
 		force = 0
 
 
-/obj/item/melee/smith/twohand
+/obj/item/twohanded/smithed // compatible with the Eris wield stuff
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
 	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
 	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
@@ -52,23 +53,22 @@
 	w_class = WEIGHT_CLASS_BULKY
 	wielded = FALSE
 	total_mass = (TOTAL_MASS_MEDIEVAL_WEAPON * 1.5)
-	var/icon_prefix = null
+	max_integrity = 200
+	armor = ARMOR_VALUE_GENERIC_ITEM
+	flags_1 = CONDUCT_1
+	var/mutable_appearance/overlay
+	var/overlay_state = "woodenrod"
 	var/x_offset = null
 	var/y_offset = null
 
-/obj/item/melee/smith/twohand/Initialize()
+/obj/item/twohanded/smithed/Initialize()
 	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+	overlay = mutable_appearance(icon, overlay_state)
+	overlay.appearance_flags = RESET_COLOR
+	add_overlay(overlay)
+	if(force < 0)
+		force = 0
 
-/obj/item/melee/smith/twohand/proc/on_wield(obj/item/source, mob/user)
-	wielded = TRUE
-
-/obj/item/melee/smith/twohand/proc/on_unwield(obj/item/source, mob/user)
-	wielded = FALSE
-
-/obj/item/melee/smith/twohand/update_icon_state()
-	icon_state = "[icon_prefix]"
 
 
 //////////////////////
@@ -258,6 +258,7 @@
 	add_overlay(overlay)
 
 
+
 //////////////////////////
 //						//
 //  	OTHER ITEMS		//
@@ -265,30 +266,6 @@
 //////////////////////////
 
 // ------------ BALL AND CHAIN ------------ //
-/*/obj/item/clothing/shoes/ballandchain - Commented out until testing of legcuff version done. Looks like marked for death. Obsolete.
-	name = "ball and chain"
-	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
-	icon_state = "ballandchain"
-	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
-	item_state = "ballandchain"
-	obj_flags = UNIQUE_RENAME
-	strip_delay = 200
-	equip_delay_other = 100
-	can_be_tied = FALSE
-	w_class = WEIGHT_CLASS_BULKY
-	slowdown = 8
-	material_flags = MATERIAL_COLOR | MATERIAL_ADD_PREFIX
-	body_parts_covered = null
-	hitsound = 'modular_atom/blacksmith/sound/chain.ogg'
-	var/quality = null
-
-/obj/item/clothing/shoes/ballandchain/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-	if(loc == user && user.get_item_by_slot(SLOT_SHOES))
-		playsound(usr.loc, 'modular_atom/blacksmith/sound/chain.ogg', 75, 1)
-		to_chat(user, "<span class='warning'>The ball and chain are too hard to remove by yourself! You'll need help taking this off!</span>")
-		return
-	return ..()
-*/
 
 /obj/item/restraints/legcuffs/ballandchain
 	name = "ball and chain"
@@ -356,6 +333,7 @@
 	return
 
 
+
 //////////////////////////////////
 //								//
 //  		KNIVES				//
@@ -399,6 +377,7 @@
 	force = (FORCE_SMITH_LOW+2)
 
 
+
 //////////////////////////////////
 //								//
 //  	ONE HANDED SWORDS		//
@@ -434,6 +413,7 @@
 	overlay_state = "hilt_macheter"
 
 
+
 //////////////////////////////////
 //								//
 //  	MIXED ONEHANDERS		//
@@ -451,7 +431,6 @@
 	sharpness = SHARP_EDGED
 	item_flags = ITEM_CAN_PARRY
 	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
-
 
 /datum/block_parry_data/waki
 	parry_stamina_cost = 8
@@ -502,6 +481,7 @@
 	if(!istype(M))
 		return
 	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
+
 
 
 //////////////////////////////////
@@ -578,6 +558,7 @@
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
 
 
+
 //////////////////////////////////
 //								//
 //  		LONG SWORDS			//
@@ -585,10 +566,11 @@
 //////////////////////////////////
 
 // ------------ KATANA ------------ // [AP 0.2 Parry]
-/obj/item/melee/smith/twohand/katana
+/obj/item/twohanded/smithed/katana
 	name = "katana"
 	icon_state = "katana_smith"
 	icon_prefix = "katana_smith"
+	wielded_icon = "katana_smith_wield"
 	overlay_state = "hilt_katana"
 	force = (FORCE_SMITH_HIGH-1)
 	armour_penetration = PIERCING_MODERATE
@@ -616,32 +598,35 @@
 	parry_efficiency_perfect = 120
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
 
-/obj/item/melee/smith/twohand/katana/ComponentInitialize()
+/obj/item/twohanded/smithed/katana/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 130, 60) //pretty bad.
 	AddElement(/datum/element/sword_point)
 
 
 // ------------ LONGSWORD ------------ // [AP 0.2 Parry]
-/obj/item/melee/smith/twohand/katana/longsword
+/obj/item/twohanded/smithed/katana/longsword
 	name = "longsword"
 	icon_state = "longsword_smith"
 	icon_prefix = "longsword_smith"
+	wielded_icon = "longsword_smith_wield"
 	overlay_state = "hilt_longsword"
 
 
 // ------------ SCRAP BLADE ------------ // [AP 0.2 Parry]
-/obj/item/melee/smith/twohand/katana/scrapblade
+/obj/item/twohanded/smithed/katana/scrapblade
 	name = "scrap blade"
 	icon_state = "scrap_smith"
 	icon_prefix = "scrap_smith"
+	wielded_icon = "scrap_smith_wield"
 	overlay_state = "hilt_scrap"
 	attack_speed = MELEE_SPEED_SLOW
 	force = FORCE_SMITH_HIGH
 
-/obj/item/melee/smith/twohand/katana/scrapblade/ComponentInitialize()
+/obj/item/twohanded/smithed/katana/scrapblade/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 110, 75) //decent in a pinch, but pretty bad.
+
 
 
 //////////////////////////////////
@@ -651,9 +636,10 @@
 //////////////////////////////////
 
 // ------------ HEAVY AXE ------------ // [AP 0.1 Doorbusting]
-/obj/item/melee/smith/twohand/axe
+/obj/item/twohanded/smithed/axe
 	name = "heavy axe"
 	icon_state = "axe_smith"
+	wielded_icon = "axe_smith_wield"
 	icon_prefix = "axe_smith"
 	overlay_state = "shaft_axe"
 	force = FORCE_SMITH_LOW
@@ -663,7 +649,7 @@
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
 	slot_flags = ITEM_SLOT_BACK
 
-/obj/item/melee/smith/twohand/axe/afterattack(atom/A, mob/living/user, proximity)
+/obj/item/twohanded/smithed/axe/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
 	if(!proximity || !wielded || IS_STAMCRIT(user))
 		return
@@ -676,14 +662,16 @@
 
 
 // ------------ LEGION WAR AXE ------------ // [AP 0.1 Doorbusting]
-/obj/item/melee/smith/twohand/axe/waraxe
+/obj/item/twohanded/smithed/axe/waraxe
 	name = "war axe"
 	icon_state = "waraxe_smith"
+	icon_prefix = "waraxe_smith"
+	wielded_icon = "waraxe_smith_wield"
 	icon_prefix = "waraxe_smith"
 	overlay_state = "shaft_waraxe"
 	throwforce = THROWING_GOOD
 
-/obj/item/melee/smith/twohand/axe/waraxe/afterattack(atom/A, mob/living/user, proximity)
+/obj/item/twohanded/smithed/axe/waraxe/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
 	if(!proximity || !wielded || IS_STAMCRIT(user))
 		return
@@ -695,10 +683,13 @@
 		M.take_damage(20, BRUTE, "melee", 0)
 
 
-// ------------ GHOUL CRUSHER ------------ // [Ghoul bonus] - for those dry twig like limbs, snap snap..
-/obj/item/melee/smith/twohand/crusher
+// ------------ GHOUL CRUSHER ------------ // [Ghoul bonus] - for those dry twig like limbs, snap snap..(was meant to dislocate PC ghouls but code did not work properly so removed)
+/obj/item/twohanded/smithed/crusher
 	name = "crusher"
+	desc = "Affectionally known as the ghoul crusher, this club is easiest to swing two handed."
 	icon_state = "crusher_smith"
+	icon_prefix = "crusher_smith"
+	wielded_icon = "crusher_smith_wield"
 	icon_prefix = "crusher_smith"
 	overlay_state = "shaft_crusher"
 	attack_speed = MELEE_SPEED_SLOWER
@@ -707,15 +698,11 @@
 	throwforce = THROWING_PATHETIC
 	wound_bonus = WOUNDING_BONUS_HUGE
 	sharpness = SHARP_NONE
-	slot_flags = null
+	slot_flags = ITEM_SLOT_BACK
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
 	hitsound = 'modular_atom/blacksmith/sound/hit_mace.ogg'
 
-/obj/item/melee/smith/twohand/crusher/Initialize()
-	. = ..()
-	desc = "Affectionally known as the ghoul crusher, this club is easiest to swing two handed."
-
-/obj/item/melee/smith/twohand/crusher/afterattack(atom/A, mob/living/user, proximity)
+/obj/item/twohanded/smithed/crusher/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
 	if(!proximity || !wielded || IS_STAMCRIT(user))
 		return
@@ -723,17 +710,7 @@
 		var/mob/living/simple_animal/hostile/ghoul/D = A
 		D.apply_damage(25, BRUTE)
 
-// Issues with bane/extra wounds on PC ghouls, not functional. Mob bonus damage works.
-/*	if(iscarbon(A))
-		var/mob/living/carbon/human/species/ghoul/carbon_target = A
-		var/obj/item/bodypart/bodypart = pick(carbon_target.bodyparts)
-		var/datum/wound/blunt/moderate/moderate_wound = new
-		moderate_wound.apply_wound(bodypart)
 
-/obj/item/melee/smith/twohand/crusher/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/bane, /mob/living/carbon/human/species/ghoul, 1.1)
-*/
 
 //////////////////////////////////////
 //									//
@@ -742,9 +719,12 @@
 //////////////////////////////////////
 
 // ------------ SPEAR ------------ // [Reach]
-/obj/item/melee/smith/twohand/spear
+/obj/item/twohanded/smithed/spear
 	name = "spear"
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/64x64_lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/64x64_righthand.dmi'
 	icon_state = "spear_smith"
+	wielded_icon = "spear_smith_wield"
 	icon_prefix = "spear_smith"
 	overlay_state = "shaft_spear"
 	force = FORCE_SMITH_REACH
@@ -752,11 +732,16 @@
 	wielded_mult = 1.3
 	max_reach = 2
 	sharpness = SHARP_POINTY
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+
 
 // ------------ TRIDENT ------------ // [Reach Embed]
-/obj/item/melee/smith/twohand/spear/trident
+/obj/item/twohanded/smithed/spear/trident
 	name = "trident"
+	desc = "Made for spearing small lizard and fish, able to pin down the prey if thrown."
 	icon_state = "trident_smith"
+	wielded_icon = "trident_smith_wield"
 	icon_prefix = "trident_smith"
 	overlay_state = "shaft_trident"
 	attack_speed = MELEE_SPEED_SLOW
@@ -764,16 +749,15 @@
 	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 30, "ignore_throwspeed_threshold" = TRUE)
 	armour_penetration = 0
 
-/obj/item/melee/smith/twohand/spear/trident/Initialize()
-	. = ..()
-	desc = "Made for spearing small lizard and fish, able to pin down the prey if thrown."
 
 // ------------ LEGION LANCE ------------ // [Reach]
-/obj/item/melee/smith/twohand/spear/lance
+/obj/item/twohanded/smithed/spear/lance
 	name = "legion lance"
 	icon_state = "lance_smith"
+	wielded_icon = "lance_smith_wield"
 	icon_prefix = "lance_smith"
 	overlay_state = "shaft_lance"
+
 
 
 //////////////////////////////////////////////////
