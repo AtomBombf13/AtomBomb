@@ -636,6 +636,8 @@
 /////////
 
 //Army
+
+//melee: 15, bullet: 10, laser: 5, threshold: 6
 /obj/item/clothing/suit/armor/medium/vest/ncr
 	name = "NCR patrol vest"
 	desc = "A standard issue NCR Infantry vest."
@@ -645,6 +647,7 @@
 	item_state = "ncr_infantry_vest"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	armor = ARMOR_VALUE_LEATHER_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	name = "NCR mantle vest"
@@ -729,12 +732,14 @@
 	armor = ARMOR_VALUE_REINFORCED_LEATHER_ARMOR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
+// bullet: 35, melee: 35, laser: 25, threshold: 4
 /obj/item/clothing/suit/armor/medium/legion/vet
 	name = "legion veteran armor"
 	desc = "An armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
 	icon_state = "leg_vet"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
@@ -748,20 +753,22 @@
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "leg_orator"
 
-/obj/item/clothing/suit/armor/medium/legion/centurion //good all around
+/obj/item/clothing/suit/armor/medium/legion/centurion //reinforced combat armor
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "leg_cent"
-	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
 
-/obj/item/clothing/suit/armor/medium/legion/rangercent //speed and bullet resist, sacrifices all else
+//-10 to melee and laser and -2 threshold compared to stock, but has 50 bullet resist and less slowdown
+/obj/item/clothing/suit/armor/medium/legion/rangercent 
 	name = "legion centurion ranger-hunter armor"
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
 	icon_state = "leg_cent_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor = ARMOR_VALUE_METAL_ARMOR
+	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //////////////////////////
