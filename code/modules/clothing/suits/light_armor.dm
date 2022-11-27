@@ -871,7 +871,7 @@
 	name = "legion exactor armor"
 	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
 	icon_state = "leg_master"
-	armor = ARMOR_VALUE__LEATHER_JACKET
+	armor = ARMOR_VALUE_LEATHER_JACKET
 
 //////////////////////////
 // Brotherhood of Steel //
