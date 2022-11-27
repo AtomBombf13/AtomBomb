@@ -667,7 +667,7 @@ obj/item/book/granter/crafting_recipe/energy
 	desc = "A magazine series covering the latest trends in weapons technology. Though it probably seems a little out of date now"
 	oneuse = TRUE
 	remarks = list("Always keep the focusing lens on your laser weapons free of cracks", "Plasma gets hot! Always make sure the magnets on the weapon are in working order", "Laser weapons excel in precision but plasma can burn through almost any armor", "Energy weapons have few moving parts but they have very little tolerenace for their components getting knocked around.") 
-	crafting_recipe_types = list(/datum/crafting_recipe/AEP7, /datum/crafting_recipe/AER9, /datum/crafting_recipe/rechargerpistol, /datum/crafting_recipe/wattz2k)
+	crafting_recipe_types = list(/datum/crafting_recipe/wattz1k, /datum/crafting_recipe/AEP7, /datum/crafting_recipe/AER9, /datum/crafting_recipe/rechargerpistol, /datum/crafting_recipe/wattz2k)
 	
 // New Blueprints, yay! -Superballs
 /obj/item/book/granter/crafting_recipe/blueprint
