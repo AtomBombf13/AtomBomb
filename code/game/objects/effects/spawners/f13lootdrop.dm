@@ -2132,6 +2132,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
 		/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
 		/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
+		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHigh
@@ -2141,7 +2142,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/neostead,
 		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+		/obj/item/book/granter/crafting_recipe/blueprint/rcw,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics

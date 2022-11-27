@@ -777,6 +777,11 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/tribeam)
 
+/obj/item/book/granter/crafting_recipe/blueprint/rcw
+	name = "laser RCW blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/rcw)
+
 /obj/item/book/granter/crafting_recipe/blueprint/am_rifle
 	name = "anti-materiel rifle blueprint"
 	icon_state = "blueprint2"
