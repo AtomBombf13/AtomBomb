@@ -296,6 +296,29 @@
 	butcher_results = list(/obj/effect/gibspawner/robot = 1)
 	blood_volume = 0
 
+/mob/living/simple_animal/pet/dog/protectron/eastwood //Not an actual dog
+	name = "Eastwood Trading Protectron"
+	desc = "A standard RobCo RX2 V1.16.4 \"Trade-o-Vend\", loaded with Trade protocols.<br>Looks like it was kept operational for an indefinite period of time. Its body is covered in cracks and dents of various sizes.<br>As it has been repaired countless times, it's amazing the machine is still functioning at all."
+	icon = 'icons/fallout/mobs/robots/protectrons.dmi'
+	icon_state = "protectron_trade"
+	icon_living = "protectron_trade"
+	icon_dead = "protectron_trade_dead"
+	maxHealth = 200
+	health = 200
+	speak_chance = 5
+	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
+	faction = list("neutral", "silicon", "dog", "hostile", "pirate", "wastebot", "wolf", "plants", "turret", "enclave", "ghoul", "cazador", "supermutant", "gecko", "slime", "radscorpion", "skeleton", "carp", "bs", "bighorner")
+	speak = list("Howdy partner! How about you spend some of them there hard earned caps on at the Eastwood store!", "Welcome back partner! Come over to the Eastwood Store!", "Stop, this is a robbery! At these prices you are robbing me.", "Legion? NCR? Raider? Hell we don't care, as long as you got the caps.", "What a fine day partner. A fine day indeed.", "Reminds me of what my grandpappy used to say, make a snap decision now and never question it. You look like you could use some product there partner.", "Lotta critters out there want to chew you up partner, you could use a little hand with that now couldn't you? Only at the Eastwood Store!")
+	speak_emote = list()
+	emote_hear = list()
+	emote_see = list()
+	response_help_simple  = "shakes its manipulator"
+	response_disarm_simple = "pushes"
+	response_harm_simple  = "punches"
+	attack_sound = 'sound/voice/liveagain.ogg'
+	butcher_results = list(/obj/effect/gibspawner/robot = 1)
+	blood_volume = 0
+
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."

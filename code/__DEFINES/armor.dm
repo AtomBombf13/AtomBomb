@@ -2,6 +2,11 @@
  * ARMOR DEFINES
  */
 
+//Armor calculation quick reference: apply threshold first then apply armor
+//so 100 damage vs combat armor = 67.5 NOT 65
+//threshold beats small numbers (ie. machine guns) armor beats big numbers (rifles)
+
+
 /* Zero armor values
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ZERO list(\
@@ -16,7 +21,6 @@
 		"acid" = 0, \
 		"wound" = 0, \
 		"damage_threshold" = 0)
-
 /* Generic item armor
  * Usually isnt actual armor
  * Has some good fire resist, but thats about it
@@ -47,7 +51,7 @@
 		"bullet" = 20, \
 		"laser" = 20, \
 		"energy" = 0, \
-		"bomb" = 0, \
+		"bomb" = 5, \
 		"bio" = 10, \
 		"rad" = 10, \
 		"fire" = 10, \
@@ -507,13 +511,13 @@
  * T3 - Dedicated armor reinforcements
  * * * * * * * * * * * */
 #define ARMOR_MODIFIER_UP_DT_T1 list(\
-		"damage_threshold" = 0.5)
-
-#define ARMOR_MODIFIER_UP_DT_T2 list(\
 		"damage_threshold" = 1)
 
-#define ARMOR_MODIFIER_UP_DT_T3 list(\
+#define ARMOR_MODIFIER_UP_DT_T2 list(\
 		"damage_threshold" = 2)
+
+#define ARMOR_MODIFIER_UP_DT_T3 list(\
+		"damage_threshold" = 3)
 
 #define ARMOR_MODIFIER_DOWN_DT_T1 list(\
 		"damage_threshold" = -1)

@@ -9,7 +9,8 @@
 	light_color = "#FFCC66"
 	light_on = FALSE
 	var/hat_type = "yellow" //Determines used sprites: hardhat[light_on]_[hat_type] and hardhat[light_on]_[hat_type]2 (lying down sprite)
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_KIT
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 	flags_inv = 0
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	resistance_flags = FIRE_PROOF
@@ -64,6 +65,7 @@
 	icon_state = "hardhat0_purple"
 	item_state = "hardhat0_purple"
 	light_range = 5
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	custom_materials = list(/datum/material/iron = 4000, /datum/material/glass = 1000, /datum/material/plastic = 3000, /datum/material/silver = 500)
 	hat_type = "purple"

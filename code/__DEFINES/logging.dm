@@ -43,7 +43,6 @@
 #define LOG_VIRUS		(1 << 17)
 #define LOG_SHUTTLE		(1 << 18)
 #define LOG_TERMINAL	(1 << 19)
-#define LOG_MECHA (1 << 20)
 
 //Individual logging panel pages
 #define INDIVIDUAL_ATTACK_LOG		(LOG_ATTACK)

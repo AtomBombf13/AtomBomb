@@ -741,6 +741,21 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 
+//trench shotgun
+
+/datum/crafting_recipe/trench
+	name = "Trench Shotgun"
+	result = /obj/item/gun/ballistic/shotgun/trench
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/sheet/metal = 3,
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //marksman carbine
 /datum/crafting_recipe/marksmancarbine
 	name = "Marksman Carbine"
@@ -895,10 +910,10 @@
 	always_available = FALSE
 
 
-//recharger pistol, followers of the apocalypse
+//recharger pistol, low-tier
 /datum/crafting_recipe/rechargerpistol
 	name = "recharger pistol"
-	result = /obj/item/gun/energy/laser/wattz/recharger
+	result = /obj/item/gun/energy/laser/recharger
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/advanced_crafting_components/flux = 1,

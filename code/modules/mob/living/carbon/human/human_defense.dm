@@ -256,6 +256,48 @@
 	var/armor_block = run_armor_check(affecting, "melee")
 	apply_damage(damage, BRUTE, affecting, armor_block, wound_bonus=wound_mod)
 
+/mob/living/carbon/human/mech_melee_attack(obj/mecha/M)
+	if(M.occupant.a_intent == INTENT_HARM)
+		if(HAS_TRAIT(M.occupant, TRAIT_PACIFISM))
+			to_chat(M.occupant, span_warning("You don't want to harm other living beings!"))
+			return
+		M.do_attack_animation(src)
+		if(M.damtype == "brute")
+			step_away(src,M,15)
+		var/obj/item/bodypart/temp = get_bodypart(pick(BODY_ZONE_CHEST, BODY_ZONE_CHEST, BODY_ZONE_CHEST, BODY_ZONE_HEAD))
+		if(temp)
+			var/update = 0
+			var/dmg = rand(M.force/2, M.force)
+			var/atom/throw_target = get_edge_target_turf(src, M.dir)
+			switch(M.damtype)
+				if("brute")
+					if(M.force > 40) // durand and other heavy mechas
+						src.throw_at(throw_target, rand(1,5), 7)
+					else if(M.force >= 25 && CHECK_MOBILITY(src, MOBILITY_STAND)) // lightweight mechas like gygax
+						src.throw_at(throw_target, rand(1,3), 7)
+					update |= temp.receive_damage(dmg, 0)
+				if("fire")
+					update |= temp.receive_damage(0, dmg)
+				if("tox")
+					M.mech_toxin_damage(src)
+				else
+					return
+			playsound(src, M.attacksound, 50, 1)
+			if(M.attack_knockdown > 0)
+				DefaultCombatKnockdown(M.attack_knockdown)
+			if(update)
+				update_damage_overlays()
+			updatehealth()
+
+		visible_message(span_danger("[M.name] has hit [src]!"), \
+						span_userdanger("[M.name] has hit you!"), null, COMBAT_MESSAGE_RANGE, target = M,
+						target_message = span_danger("You have hit [src]!"))
+		log_combat(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
+
+	else
+		..()
+
+
 /mob/living/carbon/human/ex_act(severity, target, origin)
 	if(TRAIT_BOMBIMMUNE in dna.species.species_traits)
 		return

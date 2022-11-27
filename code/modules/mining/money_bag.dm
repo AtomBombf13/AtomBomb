@@ -87,7 +87,7 @@
 
 // Oasis reserves. Spawns with the Mayor.
 /obj/item/storage/bag/money/small/oasis/PopulateContents()
-	// exactly 1000 caps, and about 200 in foreign reserves
+	// exactly 1000 caps
 	new /obj/item/stack/f13Cash/caps/onezerozerozero(src)
 
 
@@ -98,9 +98,10 @@
 	new /obj/item/stack/f13Cash/random/low(src)
 
 
-// Standard Great Khan money bag. They have a little more caps than common raiders. Average 75.
+// Standard Great Khan money bag. Wealthy by raider standards. 100 + spare change
 /obj/item/storage/bag/money/small/khan/PopulateContents()
 	new /obj/item/stack/f13Cash/random/low(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
 	
 // Standard Settler money bag. They are pretty wealthy, with NCR bucks and caps, no Legion money.
 /obj/item/storage/bag/money/small/settler/PopulateContents()

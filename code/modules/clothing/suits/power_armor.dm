@@ -328,8 +328,8 @@
 	name = "T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-	armor_block_chance = 50
-	deflection_chance = 10
+	armor_block_chance = 20 //1-in-5
+	deflection_chance = 1 //to ensure it doesnt inherit deflect chance from anything above it
 
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
@@ -337,8 +337,8 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
-	armor_block_chance = 50
-	deflection_chance = 10
+	armor_block_chance = 25 //1-in-4
+	deflection_chance = 2
 
 /obj/item/clothing/suit/armor/power_armor/t45d/bos
 	name = "Brotherhood T-45d Power Armour"
@@ -353,14 +353,16 @@
 	item_state = "t51bpowerarmor"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
-	armor_block_chance = 60
-	deflection_chance = 10
+	armor_block_chance = 33 //1-in-3
+	deflection_chance = 5
 
 /obj/item/clothing/suit/armor/power_armor/t51b/hardened
 	name = "Hardened T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
+	armor_block_chance = 40 //2-in-5
+	deflection_chance = 7
 
 /obj/item/clothing/suit/armor/power_armor/t51b/bos
 	name = "Brotherhood T-51b Power Armour"
@@ -373,7 +375,7 @@
 	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"
 	item_state = "excavator"
-	armor_block_chance = 20
+	armor_block_chance = 5 //barely
 	deflection_chance = 0
 
 /obj/item/clothing/suit/armor/power_armor/advanced
@@ -381,8 +383,8 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	armor_block_chance = 60
-	deflection_chance = 15
+	armor_block_chance = 50 //every other shot
+	deflection_chance = 10
 
 //Peacekeeper armor adjust as needed
 /obj/item/clothing/suit/armor/power_armor/advanced/x02
