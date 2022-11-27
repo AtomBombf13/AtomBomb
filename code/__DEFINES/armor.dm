@@ -309,13 +309,13 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 30, \
-		"damage_threshold" = 14)
+		"damage_threshold" = 12)
 
 #define ARMOR_VALUE_SALVAGE list(\
-		"melee" = 50, \
-		"bullet" = 60, \
-		"laser" = 30, \
-		"energy" = 30, \
+		"melee" = 45, \
+		"bullet" = 45, \
+		"laser" = 45, \
+		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 80, \
 		"rad" = 50, \
@@ -325,17 +325,17 @@
 		"damage_threshold" = 16)
 
 #define ARMOR_VALUE_PA list(\
-		"melee" = 60, \
-		"bullet" = 70, \
-		"laser" = 40, \
-		"energy" = 30, \
+		"melee" = 50, \
+		"bullet" = 50, \
+		"laser" = 50, \
+		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 100, \
 		"rad" = 50, \
 		"fire" = 70, \
 		"acid" = 95, \
 		"wound" = 50, \
-		"damage_threshold" = 20)
+		"damage_threshold" = 18)
 
 /* Armor Subclass multipliers
  * Modifies base armor slots by these values
