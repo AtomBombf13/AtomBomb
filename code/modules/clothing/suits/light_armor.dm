@@ -840,26 +840,38 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	armor = ARMOR_VALUE_LEATHER_ARMOR
 
+//bullet: 25, melee: 25, laser: 5, threshold: 4 
+//NO SLOWDOWN
 /obj/item/clothing/suit/armor/light/legion/recruit
 	name = "legion recruit armor"
 	desc = "The most basic legion armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
 	icon_state = "leg_rec"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1,ARMOR_MODIFIER_UP_LASER_T1)
 
+//same but with more DT
 /obj/item/clothing/suit/armor/light/legion/prime
 	name = "legion prime armor"
 	desc = "It's a legion prime armor, the warrior has been granted some additional protective pieces to add to his suit."
 	icon_state = "leg_prime"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1,ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
+//same but with less melee and more laser protection
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
 	desc = "A light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
 	icon_state = "leg_explorer"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1,ARMOR_MODIFIER_UP_LASER_T2,)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
 
+//token armor, slaves dont fight back
 /obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
 	name = "legion exactor armor"
 	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
 	icon_state = "leg_master"
+	armor = ARMOR_VALUE__LEATHER_JACKET
 
 //////////////////////////
 // Brotherhood of Steel //
