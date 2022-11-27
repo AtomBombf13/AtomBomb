@@ -637,7 +637,7 @@
 
 //Army
 
-//melee: 15, bullet: 10, laser: 5, threshold: 6
+//melee: 20, bullet: 20, laser: 10, threshold: 7
 /obj/item/clothing/suit/armor/medium/vest/ncr
 	name = "NCR patrol vest"
 	desc = "A standard issue NCR Infantry vest."
@@ -646,7 +646,7 @@
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-	armor = ARMOR_VALUE_LEATHER_ARMOR
+	armor = ARMOR_VALUE_DUSTER_ARMOR
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/mant
