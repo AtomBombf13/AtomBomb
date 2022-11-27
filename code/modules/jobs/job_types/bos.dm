@@ -326,7 +326,7 @@ Knight-Captain
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m2405) // temporary as head scribe taken plasma pistol as they are more plasma / laser and knight is ballistic. Actually accurate?! for BOS?
@@ -756,8 +756,8 @@ Senior Knight
 	title = "Senior Knight"
 	flag = F13SENIORKNIGHT
 	display_order = JOB_DISPLAY_ORDER_SENIORKNIGHT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You report directly to the Knight-Captain. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	supervisors = "the Knight-Captain inside, Paladins outside"
 	exp_requirements = 900
@@ -789,7 +789,7 @@ Senior Knight
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
@@ -861,8 +861,8 @@ Knight
 	title = "Knight"
 	flag = F13KNIGHT
 	display_order = JOB_DISPLAY_ORDER_KNIGHT
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
 	supervisors = "the Senior Knight and Knight-Captain"
 
