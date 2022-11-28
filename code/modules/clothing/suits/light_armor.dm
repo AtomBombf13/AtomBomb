@@ -937,7 +937,6 @@
 	name = "eastwood armored trenchcoat"
 	desc = "A lightly armored stylish trenchcoat for low-grade lawmen."
 	icon_state = "town_security"
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 
 /////////////////
 // Great Khans //
