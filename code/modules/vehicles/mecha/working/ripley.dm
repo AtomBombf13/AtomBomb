@@ -71,38 +71,6 @@
 	wreckage = /obj/structure/mecha_wreckage/clarke
 	cargo_capacity = 10
 
-/obj/vehicle/sealed/mecha/working/clarke/moved_inside(mob/living/carbon/human/H)
-	. = ..()
-	if(.)
-		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_DIAGNOSTIC_ADVANCED]
-		hud.add_hud_to(H)
-
-/obj/vehicle/sealed/mecha/working/clarke/container_resist()
-	if(isliving(occupants))
-		var/mob/living/L = occupants
-		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_DIAGNOSTIC_ADVANCED]
-		hud.remove_hud_from(L)
-	return ..()
-
-/obj/vehicle/sealed/mecha/working/clarke/mmi_moved_inside(obj/item/mmi/M, mob/user)
-	. = ..()
-	if(.)
-		var/datum/atom_hud/hud = GLOB.huds[DATA_HUD_DIAGNOSTIC_ADVANCED]
-		var/mob/living/brain/B = M.brainmob
-		hud.add_hud_to(B)
-
-/obj/vehicle/sealed/mecha/working/ripley/firefighter
-	desc = "Autonomous Power Loader Unit MK-II-F. This model is refitted with additional thermal protection."
-	name = "\improper APLU \"Firefighter\""
-	icon_state = "firefighter"
-	movedelay = 3
-	max_temperature = 65000
-	max_integrity = 400
-	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
-	max_equip = 5
-	enclosed = TRUE
-	enter_delay = 40
-
 /obj/vehicle/sealed/mecha/working/ripley/deathripley
 	desc = "OH SHIT IT'S THE DEATHSQUAD WE'RE ALL GONNA DIE"
 	name = "\improper DEATH-RIPLEY"
