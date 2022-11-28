@@ -147,7 +147,7 @@
 
 /obj/machinery/workbench/forge/superheating
 	name = "superheating forge"
-	desc = "A reactor-heated megafurnace used for forging metal items such as swords, spears and shields and more.";
+	desc = "A reactor-heated megafurnace used for forging metal items such as swords, spears and shields and more."
 	icon = 'icons/fallout/machines/64x32.dmi'
 	icon_state = "generator_on"
 
