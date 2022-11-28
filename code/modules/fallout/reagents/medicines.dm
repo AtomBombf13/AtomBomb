@@ -124,6 +124,7 @@
 		M.AdjustStun(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
+		clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 		. = TRUE
 	..()
 
@@ -139,11 +140,6 @@
 	M.remove_movespeed_modifier(/datum/movespeed_modifier/super_stimpak_slowdown)
 	to_chat(M, span_notice("Your heart slows to a more reasonable pace, and your aching muscular fatigue fades.")) // tells you when it's safe to take another dose
 
-/// Seals up bleeds like a weaker sanguirite, doesnt do any passive heals though
-/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
-	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
-	. = TRUE
-	..()
 /datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
 		if(method in list(INGEST, VAPOR))
