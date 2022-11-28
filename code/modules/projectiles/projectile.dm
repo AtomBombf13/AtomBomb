@@ -334,6 +334,10 @@
 /obj/item/projectile/Bump(atom/A)
 	if(!trajectory)
 		return
+	if(!ignore_source_check && firer)
+		if((A == firer) || A == ismecha(firer.loc))
+			qdel(src)
+			return FALSE
 	var/turf/T = get_turf(A)
 	if(check_ricochet_flag(A) && check_ricochet(A)) //if you can ricochet, attempt to ricochet off the object
 		ricochets++

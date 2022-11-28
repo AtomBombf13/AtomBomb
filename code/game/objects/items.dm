@@ -1,4 +1,5 @@
 GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/effects/fire.dmi', "fire"))
+GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons/effects/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER, ABOVE_LIGHTING_PLANE))
 
 GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 // if true, everyone item when created will have its name changed to be
@@ -89,7 +90,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	var/body_parts_covered = 0 //see setup.dm for appropriate bit flags
 	/// The bodyparts *hidden* by the item, in case they should be different from what's covered. For things like open jackets and skimpy raider gear that should be a little bit revealing while still protective. Defaults to body_part_covered if not set
-	var/body_parts_hidden 
+	var/body_parts_hidden
 	var/gas_transfer_coefficient = 1 // for leaking gas from turf to mask and vice-versa (for masks right now, but at some point, i'd like to include space helmets)
 	var/permeability_coefficient = 1 // for chemicals/diseases
 	var/siemens_coefficient = 1 // for electrical admittance/conductance (electrocution checks and shit)
@@ -200,7 +201,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	if(w_class <= WEIGHT_CLASS_NORMAL) //pulling small items doesn't slow you down much
 		drag_delay = 0.05 SECONDS
-	
+
 	if(isnull(body_parts_hidden))
 		body_parts_hidden = body_parts_covered
 
@@ -818,7 +819,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		return ..()
 	return 0
 
-/obj/item/mech_melee_attack(obj/mecha/M)
+/obj/item/mech_melee_attack(obj/vehicle/sealed/mecha/M)
 	return 0
 
 /obj/item/burn()
@@ -1172,4 +1173,4 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 /obj/item/proc/refresh_upgrades()
 	return
-	
+
