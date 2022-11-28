@@ -102,7 +102,7 @@
 				if(FACTION_LEGION)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
 
-/datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
+/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M, method=INJECT, reac_volume)
 	if(M.health < 0)					//Functions as epinephrine.
 		M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -143,6 +143,13 @@
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
+	..()
+/datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+	if(iscarbon(M) && M.stat != DEAD)
+		if(method in list(INGEST, VAPOR))
+			M.adjustToxLoss(3.75*reac_volume*REAGENTS_EFFECT_MULTIPLIER) //increased from 0.5*reac_volume, which was amusingly low since stimpak heals toxins. now a pill at safe max crits and then heals back up to low health within a few seconds
+			if(show_message)
+				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
 	..()
 
 
