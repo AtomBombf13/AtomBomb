@@ -819,7 +819,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "town_command"
 
-/obj/item/clothing/suit/armor/medium/duster/sheriff
+/obj/item/clothing/suit/armor/medium/combat/sheriff
 	name = "eastwood provost's trenchcoat"
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
