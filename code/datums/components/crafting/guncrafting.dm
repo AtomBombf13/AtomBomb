@@ -145,6 +145,13 @@
 	bound_width = 64
 	machine_tool_behaviour = list(TOOL_METAL_BENCH)
 
+/obj/machinery/workbench/forge/superheating
+	name = "superheating forge"
+	desc = "A reactor-heated megafurnace used for forging metal items such as swords, spears and shields and more.";
+	icon = 'icons/fallout/machines/64x32.dmi'
+	icon_state = "generator_on"
+
+
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"
 	desc = "A prototype modular receiver and trigger assembly for a firearm."
