@@ -226,7 +226,7 @@
 		var/atom/movable/content = i
 		dat += " [content.type]"
 	log_game(dat)
-	ghostize()
+	ghostize(memorize_job = job_to_free)
 	qdel(src)
 
 /mob/living/carbon/human/Topic(href, href_list)
