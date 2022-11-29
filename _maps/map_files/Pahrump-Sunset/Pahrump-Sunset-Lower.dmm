@@ -7581,8 +7581,6 @@
 /obj/item/ammo_box/shotgun/buck,
 /obj/item/ammo_box/shotgun/buck,
 /obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/shotgun/bean,
-/obj/item/ammo_box/shotgun/bean,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
