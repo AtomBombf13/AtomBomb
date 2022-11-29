@@ -157,7 +157,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/theoldguard
 	name = "The Old Guard"
 	uniform = /obj/item/clothing/under/f13/eastwood/sheriff
-	suit = /obj/item/clothing/suit/armor/medium/duster/sheriff
+	suit = /obj/item/clothing/suit/armor/medium/combat/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
 	gloves = /obj/item/clothing/gloves/rifleman
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
