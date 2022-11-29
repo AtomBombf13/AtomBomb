@@ -37006,6 +37006,12 @@
 /obj/item/shovel/spade,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"jYM" = (
+/obj/machinery/light/sign/kebab_sign{
+	pixel_x = -18
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
 "jYO" = (
 /obj/structure/simple_door/metal/store,
 /obj/effect/decal/cleanable/dirt,
@@ -38247,12 +38253,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
-"kGz" = (
-/obj/machinery/light/sign/kebab_sign{
-	pixel_x = -18
-	},
-/turf/closed/wall/f13/wood,
-/area/f13/city)
 "kGH" = (
 /obj/structure/bonfire/dense,
 /obj/item/stack/rods/ten,
@@ -99254,8 +99254,8 @@ xvy
 iME
 jyb
 jyb
-kGz
-ean
+xvy
+jYM
 ean
 lKc
 laV
