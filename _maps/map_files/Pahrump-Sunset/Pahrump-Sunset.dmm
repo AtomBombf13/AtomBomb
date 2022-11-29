@@ -22284,6 +22284,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"daH" = (
+/obj/structure/sign/poster/official/medical_green_cross{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "daL" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/road{
@@ -27477,11 +27483,6 @@
 	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland)
-"fwf" = (
-/obj/machinery/chem_dispenser,
-/obj/structure/table,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "fwl" = (
 /obj/effect/decal/marking{
 	icon_state = "dottedverticalcorroded"
@@ -32998,9 +32999,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "igp" = (
-/obj/effect/landmark/start/bartender,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
+/obj/structure/sign/departments/medbay,
+/turf/closed/wall/f13/store{
+	desc = "A pre-War wall made of solid concrete.";
+	name = "concrete wall"
+	},
+/area/f13/followers)
 "igF" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop0"
@@ -40188,12 +40192,18 @@
 	},
 /area/f13/wasteland)
 "lCu" = (
-/obj/structure/sign/departments/medbay,
-/turf/closed/wall/f13/store{
-	desc = "A pre-War wall made of solid concrete.";
-	name = "concrete wall"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 9
 	},
-/area/f13/followers)
+/obj/structure/flora/rock/pile/largejungle{
+	pixel_x = -2;
+	pixel_y = -30
+	},
+/turf/open/indestructible/ground/outside/water{
+	desc = "Deep, poorly filtered gardening water.";
+	name = "stagnant water"
+	},
+/area/f13/wasteland)
 "lCw" = (
 /obj/structure/table/wood/poker,
 /obj/item/flashlight/lamp/green,
@@ -42526,9 +42536,12 @@
 	},
 /area/f13/legion)
 "mBa" = (
-/obj/effect/landmark/start/f13/barkeep,
-/turf/closed/wall/f13/wood,
-/area/f13/city)
+/obj/structure/sign/departments/custodian,
+/turf/closed/wall/f13/store{
+	desc = "A pre-War wall made of solid concrete.";
+	name = "concrete wall"
+	},
+/area/f13/followers)
 "mBq" = (
 /obj/structure/chair/f13chair2{
 	dir = 1
@@ -45392,18 +45405,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "nUB" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 9
-	},
-/obj/structure/flora/rock/pile/largejungle{
-	pixel_x = -2;
-	pixel_y = -30
-	},
-/turf/open/indestructible/ground/outside/water{
-	desc = "Deep, poorly filtered gardening water.";
-	name = "stagnant water"
-	},
-/area/f13/wasteland)
+/obj/machinery/mineral/wasteland_vendor/medical,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "nUD" = (
 /obj/structure/obstacle/barbedwire/end,
 /turf/open/indestructible/ground/inside/mountain,
@@ -45648,12 +45652,14 @@
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
 "oaT" = (
-/obj/structure/sign/departments/custodian,
-/turf/closed/wall/f13/store{
-	desc = "A pre-War wall made of solid concrete.";
-	name = "concrete wall"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
 	},
-/area/f13/followers)
+/turf/open/indestructible/ground/outside/water{
+	desc = "Deep, poorly filtered gardening water.";
+	name = "stagnant water"
+	},
+/area/f13/wasteland)
 "obe" = (
 /obj/structure/spacevine,
 /obj/structure/timeddoor,
@@ -48603,7 +48609,8 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/village)
 "pue" = (
-/obj/machinery/mineral/wasteland_vendor/medical,
+/obj/structure/table,
+/obj/machinery/cell_charger,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "pug" = (
@@ -49001,14 +49008,19 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "pAU" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/item/folder/red{
+	pixel_x = 6;
+	pixel_y = 6
 	},
-/turf/open/indestructible/ground/outside/water{
-	desc = "Deep, poorly filtered gardening water.";
-	name = "stagnant water"
+/obj/item/folder{
+	pixel_x = -6;
+	pixel_y = 6
 	},
-/area/f13/wasteland)
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "pBa" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2left"
@@ -49556,24 +49568,6 @@
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"pQk" = (
-/obj/structure/table,
-/obj/machinery/computer/terminal{
-	dir = 8;
-	termtag = "Projector"
-	},
-/obj/machinery/button/door{
-	id = "followersdoorshutters";
-	name = "desk shutters";
-	pixel_y = 34
-	},
-/obj/machinery/button/door{
-	id = "followersdeskshutters";
-	name = "desk shutters";
-	pixel_y = 24
-	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "pQx" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 6
@@ -49773,7 +49767,16 @@
 /area/f13/bunker)
 "pUJ" = (
 /obj/structure/table,
-/obj/machinery/cell_charger,
+/obj/machinery/computer/terminal{
+	pixel_x = 8;
+	termtag = "Projector"
+	},
+/obj/machinery/computer/security/bos{
+	circuit = /obj/item/circuitboard/computer/security;
+	name = "Eastwood police department camera terminal";
+	network = list("Eastwood");
+	pixel_x = -8
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "pUM" = (
@@ -49946,16 +49949,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/hospital)
 "qaf" = (
-/obj/structure/table,
-/obj/item/paper_bin,
-/obj/item/pen/fourcolor,
-/obj/item/folder/red{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/folder{
-	pixel_x = -6;
-	pixel_y = 6
+/obj/structure/stairs/north,
+/obj/structure/railing{
+	dir = 4;
+	layer = 4.1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -49978,16 +49975,11 @@
 /area/f13/building/mall)
 "qba" = (
 /obj/structure/table,
-/obj/machinery/computer/terminal{
-	pixel_x = 8;
-	termtag = "Projector"
+/obj/machinery/door/window{
+	dir = 8;
+	req_access_txt = "137"
 	},
-/obj/machinery/computer/security/bos{
-	circuit = /obj/item/circuitboard/computer/security;
-	name = "Eastwood police department camera terminal";
-	network = list("Eastwood");
-	pixel_x = -8
-	},
+/obj/structure/barricade/bars,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "qbe" = (
@@ -50132,10 +50124,11 @@
 	},
 /area/f13/building)
 "qeT" = (
-/obj/structure/stairs/north,
-/obj/structure/railing{
-	dir = 4;
-	layer = 4.1
+/obj/structure/chair/folding{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -50348,12 +50341,9 @@
 	},
 /area/f13/building)
 "qkl" = (
-/obj/structure/table,
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "137"
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/structure/barricade/bars,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "qkn" = (
@@ -52621,12 +52611,7 @@
 /turf/open/floor/wood_common,
 /area/f13/ncr)
 "rqH" = (
-/obj/structure/chair/folding{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "rqI" = (
@@ -52693,10 +52678,11 @@
 	},
 /area/f13/wasteland)
 "rsf" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/smartfridge/chemistry,
+/turf/closed/wall/f13/store{
+	desc = "A pre-War wall made of solid concrete.";
+	name = "concrete wall"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "rsy" = (
 /obj/structure/flora/tree/joshua,
@@ -53914,7 +53900,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/museum)
 "rYz" = (
-/obj/machinery/photocopier,
+/obj/machinery/reagentgrinder,
+/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "rZa" = (
@@ -54224,11 +54211,8 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "shU" = (
-/obj/machinery/smartfridge/chemistry,
-/turf/closed/wall/f13/store{
-	desc = "A pre-War wall made of solid concrete.";
-	name = "concrete wall"
-	},
+/obj/machinery/autolathe,
+/turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "shX" = (
 /obj/structure/chair/folding{
@@ -56944,8 +56928,15 @@
 	},
 /area/f13/wasteland)
 "tyO" = (
-/obj/machinery/reagentgrinder,
-/obj/structure/table,
+/obj/machinery/door/unpowered/securedoor{
+	max_integrity = 300;
+	obj_integrity = 300;
+	req_access_txt = "25"
+	},
+/obj/machinery/door/poddoor/shutters/old/preopen{
+	id = "followersdoorshutters";
+	name = "shutters"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "tyU" = (
@@ -57828,7 +57819,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "tQt" = (
-/obj/machinery/autolathe,
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "followersdeskshutters";
+	name = "followers shutters"
+	},
+/obj/structure/barricade/bars,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "tQu" = (
@@ -58213,15 +58209,7 @@
 	},
 /area/f13/wasteland)
 "tZf" = (
-/obj/machinery/door/unpowered/securedoor{
-	max_integrity = 300;
-	obj_integrity = 300;
-	req_access_txt = "25"
-	},
-/obj/machinery/door/poddoor/shutters/old/preopen{
-	id = "followersdoorshutters";
-	name = "shutters"
-	},
+/obj/machinery/sleeper,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "tZi" = (
@@ -62800,12 +62788,21 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "wmW" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	id = "followersdeskshutters";
-	name = "followers shutters"
+/obj/structure/table,
+/obj/machinery/computer/terminal{
+	dir = 8;
+	termtag = "Projector"
 	},
-/obj/structure/barricade/bars,
+/obj/machinery/button/door{
+	id = "followersdoorshutters";
+	name = "desk shutters";
+	pixel_y = 34
+	},
+/obj/machinery/button/door{
+	id = "followersdeskshutters";
+	name = "desk shutters";
+	pixel_y = 24
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "wnk" = (
@@ -63462,12 +63459,6 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland)
-"wDG" = (
-/obj/structure/sign/poster/official/medical_green_cross{
-	pixel_y = 31
-	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "wDH" = (
 /turf/closed/wall/f13/supermart,
 /area/f13/building/mall)
@@ -64944,7 +64935,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "xox" = (
-/obj/machinery/sleeper,
+/obj/machinery/chem_dispenser,
+/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "xoI" = (
@@ -94397,7 +94389,7 @@ seX
 tzo
 xwm
 xwm
-qeT
+qaf
 xoo
 kZc
 wWs
@@ -94650,19 +94642,19 @@ huu
 sqb
 pTz
 cIY
-nUB
+lCu
 kaj
 xwm
 xwm
 xwm
 rJw
 xwm
+qkl
+wWs
+rYz
+wWs
+wWs
 rsf
-wWs
-tyO
-wWs
-wWs
-shU
 wWs
 wWs
 wWs
@@ -94908,19 +94900,19 @@ cIY
 dKd
 lkD
 hvo
-pAU
+oaT
 xwm
 xwm
 xwm
 xwm
 xwm
-rYz
+rqH
 wWs
-tQt
+shU
 tkL
-fwf
+xox
 xwm
-rsf
+qkl
 wWs
 cbA
 sTr
@@ -95167,7 +95159,7 @@ xwm
 xwm
 xwm
 xwm
-pUJ
+pue
 vLd
 nVr
 xwm
@@ -95177,7 +95169,7 @@ vnK
 fDJ
 fud
 xwm
-wDG
+daH
 wWs
 wWs
 sTr
@@ -95424,11 +95416,11 @@ ejl
 pUM
 qWm
 xwm
-qaf
+pAU
 wWs
 wWs
 xwm
-shU
+rsf
 qUc
 xwm
 xwm
@@ -95681,14 +95673,14 @@ ggM
 qnC
 wWs
 xwm
-qba
+pUJ
 wZT
 wWs
 xwm
 wWs
 wWs
 xwm
-xox
+tZf
 xoo
 wWs
 wWs
@@ -95935,17 +95927,17 @@ hEh
 hEh
 xwm
 xwm
-oaT
+mBa
 sle
 xwm
 xwm
-qkl
+qba
 dcz
 rgB
 wWs
 dlE
 xwm
-xox
+tZf
 wWs
 wWs
 wWs
@@ -96201,7 +96193,7 @@ wWs
 wWs
 wWs
 wWs
-tZf
+tyO
 wWs
 wWs
 wWs
@@ -96458,7 +96450,7 @@ wWs
 wWs
 wWs
 wWs
-wmW
+tQt
 lcv
 fCp
 xwm
@@ -96706,17 +96698,17 @@ xJp
 xJp
 xJp
 xwm
-pue
+nUB
 pqv
 scj
 shZ
 wWs
 wWs
-rqH
+qeT
 dyG
 xLJ
 xwm
-pQk
+wmW
 nVr
 xwm
 aiO
@@ -96962,14 +96954,14 @@ ksO
 hEh
 hEh
 hEh
-lCu
+igp
 xwm
 xwm
 xwm
 xwm
 rdG
 rdG
-lCu
+igp
 xwm
 xwm
 xwm
@@ -100030,7 +100022,7 @@ bbT
 vOs
 xvy
 xvy
-mBa
+xvy
 xvy
 xvy
 xvy
@@ -102346,7 +102338,7 @@ doB
 bqb
 gEn
 vOs
-igp
+vOs
 eRX
 hgP
 vOs
@@ -102603,7 +102595,7 @@ bdB
 vOs
 vOs
 vOs
-igp
+vOs
 eRX
 hgP
 vOs
