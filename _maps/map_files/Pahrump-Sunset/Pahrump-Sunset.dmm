@@ -22830,9 +22830,13 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "dmV" = (
-/obj/structure/filingcabinet/security,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
+/obj/structure/chair/stool/bar,
+/obj/effect/landmark/start/f13/settler,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/city)
 "dmX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/destructible/tribal_torch/wall/lit,
@@ -28630,11 +28634,13 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "fYJ" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/window/fulltile/house,
+/obj/structure/curtain{
+	color = "#845f58"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/city)
 "fYQ" = (
 /obj/structure/barricade/wooden/strong,
 /turf/closed/mineral/random/low_chance,
@@ -37000,13 +37006,6 @@
 /obj/item/shovel/spade,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"jYM" = (
-/obj/structure/chair/office/dark{
-	dir = 4
-	},
-/obj/effect/landmark/start/f13/dendoc,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "jYO" = (
 /obj/structure/simple_door/metal/store,
 /obj/effect/decal/cleanable/dirt,
@@ -47331,11 +47330,6 @@
 /obj/effect/spawner/lootdrop/f13/bomb/tier1,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
-"oQn" = (
-/obj/structure/table/wood,
-/obj/machinery/light/small,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
 "oQp" = (
 /obj/item/storage/trash_stack,
 /obj/effect/decal/cleanable/dirt,
@@ -99257,9 +99251,9 @@ xvy
 xvy
 xvy
 xvy
-xvy
-xvy
-xvy
+iME
+jyb
+jyb
 kGz
 ean
 ean
@@ -99516,7 +99510,7 @@ tWQ
 xvy
 vOs
 cyA
-jFV
+pCs
 xvy
 huu
 ean
@@ -99773,8 +99767,8 @@ mSg
 xvy
 kSp
 jpO
-oQn
-xvy
+jpO
+kLP
 huu
 ean
 vPN
@@ -100031,7 +100025,7 @@ xvy
 vOs
 jvm
 phB
-xvy
+lcg
 huu
 ean
 eXN
@@ -100288,7 +100282,7 @@ sAv
 vOs
 cyA
 jFV
-xvy
+luV
 huu
 ean
 lWp
@@ -100544,8 +100538,8 @@ vOs
 heQ
 vOs
 jpO
-oQn
-xvy
+jpO
+fYJ
 huu
 aZw
 vPN
@@ -100799,9 +100793,9 @@ xvy
 xvy
 xvy
 xvy
-vOs
+kSp
 jvm
-phB
+pMu
 xvy
 bly
 huu
@@ -102854,7 +102848,7 @@ jpO
 jpO
 fhC
 eRX
-hgP
+dmV
 vOs
 jvm
 pMu
