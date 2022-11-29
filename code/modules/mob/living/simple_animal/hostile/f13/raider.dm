@@ -150,7 +150,7 @@
 	extra_projectiles = 3
 	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
-	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/medium/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/raider, /obj/item/clothing/suit/armor/medium/combat/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -317,7 +317,7 @@
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/junker
 	name = "Junker Footman"
-	desc = "A Junker raider, outfitted in reinforced combat raider armor with extra metal plates."
+	desc = "A Junker raider, outfitted in combat raider armor with extra metal plates."
 	icon_state = "junker_scrapper"
 	icon_living = "junker_scrapper"
 	icon_dead = "junker_dead"
