@@ -520,10 +520,7 @@
 
 /obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
 	damage = 7
-
-/obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
-	damage = 7
-
+	
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
 	damage = 10
