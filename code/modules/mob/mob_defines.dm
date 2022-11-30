@@ -182,3 +182,4 @@
 	/// How much DT does the mob ignore?
 	var/damage_threshold_penetration_mob = 0
 
+	var/previous_job // Used for tracking what a ghost's last job was

@@ -343,3 +343,8 @@
 	name = "food preparation area"
 	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
 	icon_state = "area_food_preparation"
+
+/* Commented out since edite basefile anyways
+/obj/structure/closet/crate/bin/trashbin
+	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
+*/
