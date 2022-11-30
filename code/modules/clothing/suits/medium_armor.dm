@@ -55,6 +55,7 @@
 	strip_delay = 30
 	equip_delay_other = 50
 	max_integrity = 200
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_ARMOR
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
