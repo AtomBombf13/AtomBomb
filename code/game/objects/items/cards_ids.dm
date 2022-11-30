@@ -1182,7 +1182,7 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINING)
+	access = list(ACCESS_KHAN)
 
 /obj/item/card/id/khantattoo/Initialize()
 	. = ..()
@@ -1196,7 +1196,7 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_CLINIC, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_CLONING)
+	access = list(ACCESS_KHAN)
 
 /obj/item/card/id/khanleadertattoo/Initialize()
 	. = ..()

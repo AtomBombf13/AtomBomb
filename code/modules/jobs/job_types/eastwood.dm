@@ -47,8 +47,8 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/eastwood/f13mayor
-	access = list(ACCESS_VTCC_SHOP,ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_VTCC_SHOP,ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SHOP,ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_VTCC_SHOP,ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -350,8 +350,8 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/eastwood/f13denres
-	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
-	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
+	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -411,8 +411,8 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 	outfit = /datum/outfit/job/eastwood/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
