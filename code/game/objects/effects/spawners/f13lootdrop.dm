@@ -753,14 +753,22 @@
 	icon_state = "gun_loot"
 
 //Energy Weapon Spawners
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/hobo
+	name = "very low tier energy gun"
+			loot = list(/obj/effect/spawner/bundle/f13/wattz,
+						/obj/item/gun/energy/laser/rechargerrifle,
+						/obj/item/gun/ballistic/rifle/hobo/lasmusket,
+						)
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 35,
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 25,
 				/obj/effect/spawner/bundle/f13/wattzm = 15,
-				/obj/effect/spawner/bundle/f13/laserpistol = 30,
-				/obj/item/gun/energy/laser/recharger = 20,
+				/obj/effect/spawner/bundle/f13/laserpistol = 20,
+				/obj/item/gun/energy/laser/recharger = 15,
+				/obj/item/gun/energy/laser/rechargerrifle = 25
 				)
-				
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
 	name = "mid tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 26,
