@@ -1449,6 +1449,7 @@
 /obj/item/shovel/spade,
 /obj/item/cultivator,
 /obj/item/reagent_containers/glass/bucket/wood,
+/obj/item/hatchet,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "cym" = (
