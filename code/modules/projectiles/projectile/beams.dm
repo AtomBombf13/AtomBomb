@@ -521,38 +521,6 @@
 /obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
 	damage = 7
 
-/obj/item/projectile/beam/laser/aer14/hitscan
-	damage = 30
-	armour_penetration = BULLET_PENETRATION_ABSOLUTE
-	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 20
-	bare_wound_bonus = 25
-	tracer_type = /obj/effect/projectile/tracer/pulse
-	muzzle_type = /obj/effect/projectile/muzzle/pulse
-	impact_type = /obj/effect/projectile/impact/pulse
-	hitscan = TRUE
-	hitscan_light_intensity = 3
-	hitscan_light_range = 0.75
-	hitscan_light_color_override = LIGHT_COLOR_BLUE
-	muzzle_flash_intensity = 6
-	muzzle_flash_range = 2
-	muzzle_flash_color_override = LIGHT_COLOR_BLUE
-	impact_light_intensity = 7
-	impact_light_range = 2.5
-	impact_light_color_override = LIGHT_COLOR_BLUE
-
-/obj/item/projectile/beam/laser/rcw/hitscan //RCW
-	name = "rapidfire beam"
-	icon_state = "emitter"
-	damage = 20 //Firerate for damage and wounds
-	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
-	hitscan = TRUE
-	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
-	tracer_type = /obj/effect/projectile/tracer/laser/emitter
-	impact_type = /obj/effect/projectile/impact/laser/emitter
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
-
 /obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
 	damage = 7
 
