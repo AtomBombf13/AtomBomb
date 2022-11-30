@@ -6,10 +6,6 @@
 	desc = "Your custom loadout items!"
 	w_class = WEIGHT_CLASS_BULKY
 
-//Talon Company
-/obj/item/storage/box/large/custom_kit/talon/PopulateContents()
-	new /obj/item/modkit/talon(src)
-
 //Mariya Sankinova - Rebel0
 /obj/item/storage/box/large/custom_kit/mariya/PopulateContents()
 	new /obj/item/modkit/mariarmor(src)

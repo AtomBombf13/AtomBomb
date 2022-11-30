@@ -240,6 +240,7 @@
 /obj/item/reagent_containers/syringe/lethal/execution
 	list_reagents = list(/datum/reagent/toxin/amatoxin = 15, /datum/reagent/toxin/formaldehyde = 15, /datum/reagent/toxin/cyanide = 10, /datum/reagent/toxin/acid/fluacid = 10) //Citadel edit, changing out plasma from lethals
 
+/*
 /obj/item/reagent_containers/syringe/mulligan
 	name = "Mulligan"
 	desc = "A syringe used to completely change the users identity."
@@ -253,6 +254,7 @@
 	amount_per_transfer_from_this = 1
 	volume = 1
 	list_reagents = list(/datum/reagent/gluttonytoxin = 1)
+*/
 
 /obj/item/reagent_containers/syringe/bluespace
 	name = "bluespace syringe"

@@ -42,9 +42,11 @@
 	light_color = LIGHT_COLOR_CYAN
 	circuit = /obj/item/circuitboard/computer/bos_entry_control
 	shuttleId = "entrance_elevator"
-	possible_destinations = "bos_entryway;bos_surface;"
+	possible_destinations = "bos_level_0;bos_level_1;bos_level_2;"
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+/// old possible destinations "bos_entryway;bos_surface;"
+
 
 /obj/machinery/computer/shuttle/bunkerelevator
 	name = "elevator controls"

@@ -15,6 +15,24 @@
 		"Leadership recommends the following goal for this week: Acquire or confiscate dangerous tech by any means necessary."
 		)
 
+GLOBAL_LIST_INIT(knight_gunsmith_recipes, list(
+	/datum/crafting_recipe/n99,
+	/datum/crafting_recipe/varmintrifle,
+	/datum/crafting_recipe/huntingshotgun,
+	/datum/crafting_recipe/smg10mm,
+	/datum/crafting_recipe/verminkiller, 
+	/datum/crafting_recipe/trench, 
+	/datum/crafting_recipe/huntingrifle,
+	/datum/crafting_recipe/scope,
+	/datum/crafting_recipe/ergonomic_grip,
+	/datum/crafting_recipe/metal_guard,
+	/datum/crafting_recipe/forged_barrel,
+	/datum/crafting_recipe/sniperscope,
+	/datum/crafting_recipe/suppressor,
+	/datum/crafting_recipe/recoilcomp,
+	/datum/crafting_recipe/laserguide,
+	/datum/crafting_recipe/fullauto))
+
 /datum/outfit/job/bos
 	name = "bosdatums"
 	jobtype = 	/datum/job/bos
@@ -211,11 +229,6 @@ Head Scribe
 
 	exp_requirements = 1500
 
-	loadout_options = list(
-	/datum/outfit/loadout/hsstand,
-	/datum/outfit/loadout/hspract
-	)
-
 	outfit = /datum/outfit/job/bos/f13headscribe
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
@@ -238,9 +251,11 @@ Head Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lightplasmapistol)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
@@ -251,26 +266,18 @@ Head Scribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
-	glasses =       /obj/item/clothing/glasses/sunglasses
+	glasses =       /obj/item/clothing/glasses/hud/health/sunglasses
 	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
-	belt = 			/obj/item/storage/belt/utility/full/engi
+	suit_store = 	/obj/item/gun/medbeam
+	belt = 			/obj/item/storage/belt/utility/bos
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
-		)
-
-/datum/outfit/loadout/hsstand
-	name = "Medicinal Expert"
-	backpack_contents = list(
-		/obj/item/gun/medbeam = 1,
-		/obj/item/reagent_containers/hypospray/CMO = 1
-		)
-
-/datum/outfit/loadout/hspract
-	name = "Administrative Leader"
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/plasma/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/blueprint/research=2,
+		/obj/item/storage/firstaid/tactical/bosheadscribe=1,
+		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/energy/laser/wattz = 1,
 		)
 
 /*
@@ -318,16 +325,18 @@ Knight-Captain
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lightplasmapistol)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m2405) // temporary as head scribe taken plasma pistol as they are more plasma / laser and knight is ballistic. Actually accurate?! for BOS?
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Knight-Captain"
@@ -543,6 +552,11 @@ Senior Scribe
 
 	exp_requirements = 900
 
+	loadout_options = list(
+	/datum/outfit/loadout/seniorscribefs,
+	/datum/outfit/loadout/seniorscribebs
+	)
+
 	outfit = /datum/outfit/job/bos/f13seniorscribe
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -580,6 +594,7 @@ Senior Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
@@ -593,11 +608,34 @@ Senior Scribe
 	glasses =	/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/gun/energy/laser/wattz = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/reagent_containers/hypospray/CMO = 1
+		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+
 	)
+
+/datum/outfit/loadout/seniorscribefs
+	name = "Senior Field Scribe"
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/CMO=1,
+		/obj/item/clothing/glasses/hud/health=1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
+		/obj/item/defibrillator/compact=1,
+		/obj/item/clothing/gloves/color/latex=1,
+		/obj/item/storage/belt/medical/surgery_belt_adv=1
+		)
+
+/datum/outfit/loadout/seniorscribebs
+	name = "Senior Bunker Scribe"
+	backpack_contents = list(
+		/obj/item/storage/belt/utility/bos=1,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/blueprint/research=2,
+		/obj/item/clothing/gloves/color/yellow=1
+		)
+
+
 
 /*
 Scribe
@@ -615,8 +653,9 @@ Scribe
 	exp_requirements = 300
 
 	loadout_options = list(
-	/datum/outfit/loadout/scribea,
-	/datum/outfit/loadout/scribeb
+	/datum/outfit/loadout/scribefs,
+	/datum/outfit/loadout/scribejbs,
+	/datum/outfit/loadout/scribebs
 	)
 
 	outfit = /datum/outfit/job/bos/f13scribe
@@ -644,7 +683,7 @@ Scribe
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/gun/energy/laser/wattz = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1
 		)
@@ -667,20 +706,43 @@ Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
-/datum/outfit/loadout/scribea
-	name = "Junior Scribe"
+
+//	You gotta be a bunker scribe before fieldscribe
+/datum/outfit/loadout/scribefs
+	name = "Field Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorscribe = 1
+		/obj/item/reagent_containers/hypospray/CMO=1,
+		/obj/item/clothing/glasses/hud/health=1,
+		/obj/item/clothing/accessory/bos/scribe=1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
+		/obj/item/clothing/gloves/color/latex=1,
+		/obj/item/storage/belt/medical/surgical=1,
 		)
 
-/datum/outfit/loadout/scribeb
-	name = "Scribe"
+/datum/outfit/loadout/scribejbs
+	name = "Junior Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/scribe = 1
+		/obj/item/clothing/accessory/bos/juniorscribe=1,
+		/obj/item/storage/belt/utility/full=1,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/clothing/mask/gas/welding=1,
+		/obj/item/blueprint/research=1,
+		)
+
+
+/datum/outfit/loadout/scribebs
+	name = "Bunker Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/scribe=1,
+		/obj/item/storage/belt/utility/full=1,
+		/obj/item/clothing/gloves/color/yellow=1,
+		/obj/item/clothing/mask/gas/welding=1,
+		/obj/item/blueprint/research=1
 		)
 
 /*
@@ -731,6 +793,9 @@ Senior Knight
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
+
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -834,6 +899,9 @@ Knight
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
+
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"

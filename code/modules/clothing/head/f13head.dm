@@ -51,9 +51,11 @@
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
 	desc = "An old military grade pre-war combat helmet."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -78,7 +80,7 @@
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
@@ -103,12 +105,6 @@
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
 
-/obj/item/clothing/head/helmet/f13/combat/mk2/raider
-	name = "customized raider combat helmet"
-	desc = "A reinforced combat helmet painted black with the laser designator removed."
-	icon_state = "combat_helmet_raider"
-	item_state = "combat_helmet_raider"
-
 /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	name = "broken riot helmet"
 	icon_state = "ranger_broken"
@@ -125,7 +121,6 @@
 	desc = "A prewar combat helmet issued to S.W.A.T. personnel."
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2)
 
 
 /obj/item/clothing/head/helmet/f13/combat/environmental
@@ -149,7 +144,7 @@
 	desc = "A sulphite raider helmet, affixed with thick anti-ballistic glass over the eyes."
 	icon_state = "sulphite_helm"
 	item_state = "sulphite_helm"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_FIRE_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
@@ -161,19 +156,20 @@
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/knight/f13/metal/reinforced
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_MELEE_T2)
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/knight/f13/rider
 	name = "rider helmet" //Not raider. Rider.
 	desc = "It's a fancy dark metal helmet with orange spray painted flames."
 	icon_state = "rider"
 	item_state = "rider"
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/f13/metalmask
 	name = "metal mask"
@@ -188,6 +184,7 @@
 	strip_delay = 80
 	actions_types = list(/datum/action/item_action/toggle)
 	toggle_cooldown = 0
+	armor = ARMOR_VALUE_METAL_ARMOR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
@@ -206,7 +203,7 @@
 	desc = "A reinforced metal hockey mask."
 	icon_state = "metal_mask2"
 	item_state = "metal_mask2"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_MELEE_T3)
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 
 /obj/item/clothing/head/helmet/f13/tesla
 	name = "tesla helmet"
@@ -214,6 +211,7 @@
 	icon_state = "tesla_helmet"
 	item_state = "tesla_helmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 	var/hit_reflect_chance = 20
 	protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 
@@ -232,7 +230,7 @@
 	icon_state = "tribal"
 	item_state = "tribal"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
+	armor = ARMOR_VALUE_COMBAT_ARMOR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	strip_delay = 30
 	dynamic_hair_suffix = ""
@@ -623,7 +621,7 @@
 
 /obj/item/clothing/glasses/f13/tribaleyepatch
 	name = "bandage eyepatch"
-	desc = "A set of heavy bandages wrapped around the head. Made to protect the eye from whatever injury occured."
+	desc = "A set of heavy bandages wrapped around the head. Made to protect the eye from whatever injury occurred."
 	icon_state = "eyepatch_white_r"
 	item_state = "eyepatch_white_r"
 

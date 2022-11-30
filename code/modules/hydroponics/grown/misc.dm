@@ -334,11 +334,14 @@
 			fusedactive = TRUE
 			defused = FALSE
 			playsound(src, 'sound/effects/fuse.ogg', 100, 0)
+			message_admins("[ADMIN_LOOKUPFLW(user)] ignited a coconut bomb for detonation at [ADMIN_VERBOSEJMP(user)] [pretty_string_from_reagent_list(reagents.reagent_list)]")
+			log_game("[key_name(user)] primed a coconut grenade for detonation at [AREACOORD(user)].")
 			addtimer(CALLBACK(src, .proc/prime), 5 SECONDS)
 			icon_state = "coconut_grenade_active"
 			desc = "RUN!"
 			if(!seed.get_gene(/datum/plant_gene/trait/glow))
-				set_light_on(TRUE)
+				light_color = "#FFCC66" //for the fuse
+				set_light(3, 0.8)
 			return
 
 	//ADDING A FUSE, NADE LOGIC
@@ -352,6 +355,7 @@
 			name = "coconut bomb"
 			return
 
+/*
 	//ADDING STRAW LOGIC
 	if (istype(W,/obj/item/stack/sheet/mineral/bamboo) && opened && !straw && fused)
 		user.show_message(span_notice("You add a bamboo straw to the coconut!"), 1)
@@ -360,6 +364,8 @@
 		icon_state += "_straw"
 		desc = "You can already feel like you're on a tropical vacation."
 		return
+*/
+
 	//OPENING THE NUT LOGIC
 	if (!carved && !chopped)
 		var/screwdrivered = W.tool_behaviour == TOOL_SCREWDRIVER

@@ -8,7 +8,6 @@
 	mag_type = /obj/item/ammo_box/magazine/mmag
 	fire_sound = 'sound/weapons/magrifle.ogg'
 	can_suppress = FALSE
-	burst_size = 1
 	actions_types = null
 	fire_delay = 3
 	casing_ejector = FALSE

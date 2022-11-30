@@ -228,6 +228,15 @@
 #define TRAIT_UNARMED_WEAPON	"unarmed_weapon"
 /// Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 #define TRAIT_HANDS_BLOCKED "handsblocked"
+#define TRAIT_ILLITERATE "illiterate"
+#define TRAIT_PAPER_SKIN "paper_skin"
+#define TRAIT_GLASS_BONES "glass_bones"
+
+/// Visual traits for mech pilots
+
+#define TRAIT_MECHA_MESON "mecha_meson"
+#define TRAIT_MECHA_THERMAL "mecha_thermal"
+#define TRAIT_MECHA_NVG "mecha_nvg"
 
 // mobility flag traits
 // IN THE FUTURE, IT WOULD BE NICE TO DO SOMETHING SIMILAR TO https://github.com/tgstation/tgstation/pull/48923/files (ofcourse not nearly the same because I have my.. thoughts on it)

@@ -16,9 +16,8 @@
 //backpack
 #define LOADOUT_CATEGORY_BACKPACK 				"In backpack"
 #define LOADOUT_SUBCATEGORY_BACKPACK_GENERAL 	"General" //basically anything that there's not enough of to have its own subcategory
-#define LOADOUT_SUBCATEGORY_BACKPACK_TOYS 		"Toys"
-#define LOADOUT_SUBCATEGORY_BACKPACK_BACKPACKS 	"Backpacks"
 #define LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS 	"Cosmetics"
+#define LOADOUT_SUBCATEGORY_BACKPACK_BACKPACKS 	"Backpacks"
 
 
 //neck
@@ -98,3 +97,8 @@
 //loadout item flags
 #define LOADOUT_CAN_NAME (1<<0) //renaming items
 #define LOADOUT_CAN_DESCRIPTION (1<<1) //adding a custom description to items
+
+///quirks
+#define QUIRK_POSITIVE	"Positive"
+#define QUIRK_NEGATIVE	"Negative"
+#define QUIRK_NEUTRAL	"Neutral"

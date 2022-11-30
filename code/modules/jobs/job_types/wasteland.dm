@@ -40,21 +40,15 @@ Raider
 		),
 	)
 	loadout_options = list(
-//	/datum/outfit/loadout/raider_sheriff,
-	/datum/outfit/loadout/raider_sadist,
-//	/datum/outfit/loadout/raider_mobster,
-	/datum/outfit/loadout/raider_tribal,
-	/datum/outfit/loadout/raider_supafly,
-	/datum/outfit/loadout/raider_yankee,
-	/datum/outfit/loadout/raider_blast,
-	/datum/outfit/loadout/raider_painspike,
-	/datum/outfit/loadout/raider_badlands,
-	// /datum/outfit/loadout/raider_smith,
-	/datum/outfit/loadout/raider_vault,
-	/datum/outfit/loadout/raider_ncr,
-	// /datum/outfit/loadout/raider_legion,
-	/datum/outfit/loadout/raider_bos,
-	/datum/outfit/loadout/quack_doctor
+	/datum/outfit/loadout/raider_badlands, 	//Service rifle, their armor and some chems, logically they would use looted weapons
+	/datum/outfit/loadout/raider_sadist,	//Fast melee build, lacerator and ton of traps/bolas to slow others down
+	/datum/outfit/loadout/raider_supafly,	//Varmint with a scope and .45 ballistic fist with smoke grenade
+	/datum/outfit/loadout/raider_yankee,	//louisville Slugger with some dynamite, melee focused more on damage than mobility
+	/datum/outfit/loadout/raider_blast,		//The explosives build, only has a cleaver for self defence and their armor
+	/datum/outfit/loadout/raider_painspike,	//Shotgunner build, goon out
+	/datum/outfit/loadout/quack_doctor,		//Raider doctor or doctor for raiders doesn't really matter how you call this
+	/datum/outfit/loadout/raider_smith,		//Raider smith or smith for raiders same thing as doctor, has arclight armor
+	/datum/outfit/loadout/raider_tribal		//Tribal raider, bone spear some bad armor and tradition, el classico
 	)
 
 
@@ -69,34 +63,23 @@ Raider
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	r_pocket = /obj/item/flashlight/flare
 	box = /obj/item/storage/survivalkit
-	box_two = /obj/item/storage/survivalkit/medical
+	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 2,
 		/obj/item/melee/onehanded/club = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/storage/bag/money/small/raider = 1,
-		/obj/item/radio = 1,
+		/obj/item/radio = 1
 		)
 
 /datum/outfit/job/wasteland/f13raider/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	uniform = pick(
-		/obj/item/clothing/under/f13/merca, \
-		/obj/item/clothing/under/f13/mercc, \
-		/obj/item/clothing/under/f13/cowboyb, \
-		/obj/item/clothing/under/f13/cowboyg, \
 		/obj/item/clothing/under/f13/raider_leather, \
 		/obj/item/clothing/under/f13/raiderrags, \
 		/obj/item/clothing/under/pants/f13/ghoul, \
 		/obj/item/clothing/under/jabroni)
-	suit = pick(
-		/obj/item/clothing/suit/armor/light/raider/supafly,\
-		/obj/item/clothing/suit/armor/medium/raider/yankee, \
-		/obj/item/clothing/suit/armor/light/raider/sadist, \
-		/obj/item/clothing/suit/armor/medium/raider/blastmaster, \
-		/obj/item/clothing/suit/armor/medium/raider/badlands, \
-		/obj/item/clothing/suit/armor/light/raider/painspike)
-	if(prob(10))
+	if(prob(80))
 		mask = pick(
 			/obj/item/clothing/mask/bandana/red,\
 			/obj/item/clothing/mask/bandana/blue,\
@@ -111,44 +94,9 @@ Raider
 			/obj/item/clothing/neck/mantle/poncho,\
 			/obj/item/clothing/neck/mantle/ragged,\
 			/obj/item/clothing/neck/mantle/brown,\
-			/obj/item/clothing/neck/mantle/gecko,\
-			/obj/item/clothing/neck/garlic_necklace)
-	head = pick(
-		/obj/item/clothing/head/sombrero,\
-		/obj/item/clothing/head/helmet/f13/raider,\
-		/obj/item/clothing/head/helmet/f13/raider/eyebot,\
-		/obj/item/clothing/head/helmet/f13/raider/arclight,\
-		/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
-		/obj/item/clothing/head/helmet/f13/raider/yankee,\
-		/obj/item/clothing/head/helmet/f13/raider/psychotic,\
-		/obj/item/clothing/head/helmet/f13/fiend,\
-		/obj/item/clothing/head/helmet/f13/hoodedmask,\
-			/obj/item/clothing/head/helmet/f13/motorcycle,\
-			/obj/item/clothing/head/helmet/f13/wastewarhat,\
-			/obj/item/clothing/head/helmet/f13/fiend,\
-			/obj/item/clothing/head/f13/bandit,\
-			/obj/item/clothing/head/f13/ranger_hat/banded,\
-			/obj/item/clothing/head/helmet/rus_ushanka,\
-			/obj/item/clothing/head/helmet/skull,\
-			/obj/item/clothing/head/collectable/petehat/gang,\
-			/obj/item/clothing/head/hunter,\
-			/obj/item/clothing/head/rice_hat,\
-			/obj/item/clothing/head/papersack/smiley,\
-			/obj/item/clothing/head/f13/pot,\
-			/obj/item/clothing/head/cone,\
-			/obj/item/clothing/head/kabuto,\
-			/obj/item/clothing/head/cowboyhat/sec,\
-			/obj/item/clothing/head/bomb_hood,\
-			/obj/item/clothing/head/cardborg,\
-			/obj/item/clothing/head/assu_helmet,\
-			/obj/item/clothing/head/chefhat,\
-			/obj/item/clothing/head/beret/headband,\
-			/obj/item/clothing/head/fedora,\
-			/obj/item/clothing/head/helmet/f13/bowler,\
-		)
-	shoes = pick(
-			/obj/item/clothing/shoes/jackboots,\
-			/obj/item/clothing/shoes/f13/raidertreads)
+			/obj/item/clothing/neck/mantle/gecko)
+
+	shoes = (/obj/item/clothing/shoes/f13/raidertreads)
 
 	suit_store = pick(
 		/obj/item/gun/ballistic/revolver/detective, \
@@ -157,52 +105,66 @@ Raider
 		/obj/item/gun/ballistic/automatic/pistol/type17, \
 		)
 
-
 /datum/outfit/job/wasteland/f13raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombatarmor)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombathelmetmk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raidercombatarmormk2)
 	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)
 
 	H.social_faction = FACTION_RAIDERS
 	add_verb(H, /mob/living/proc/creategang)
 
+/datum/outfit/loadout/raider_badlands
+	name = "Fiend"
+	suit = /obj/item/clothing/suit/armor/medium/raider/badlands
+	head = /obj/item/clothing/head/helmet/f13/fiend
+	r_hand = /obj/item/gun/ballistic/automatic/service
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle = 1,
+		/obj/item/reagent_containers/hypospray/medipen/psycho = 3,
+		/obj/item/reagent_containers/pill/patch/turbo = 2,
+		/obj/item/reagent_containers/hypospray/medipen/medx = 1)
+
 /datum/outfit/loadout/raider_sadist
 	name = "Sadist"
 	suit = /obj/item/clothing/suit/armor/light/raider/sadist
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
+	mask = /obj/item/clothing/mask/gas/explorer/folded
+	belt = /obj/item/storage/belt
+	r_hand = /obj/item/melee/unarmed/lacerator
 	backpack_contents = list(
-		/obj/item/restraints/legcuffs/bola=5,
-		/obj/item/clothing/mask/gas/explorer/folded=1,
-		/obj/item/storage/belt = 1,
+		/obj/item/restraints/legcuffs/bola/tactical = 2,
 		/obj/item/restraints/legcuffs/beartrap = 2,
 		/obj/item/reverse_bear_trap = 1,
-		/obj/item/melee/unarmed/lacerator = 1,
 		/obj/item/book/granter/trait/trekking = 1)
 
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
 	suit = /obj/item/clothing/suit/armor/light/raider/supafly
 	head = /obj/item/clothing/head/helmet/f13/raider/supafly
+	r_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/varmint = 1,
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
 		/obj/item/ammo_box/loader/acp45 = 2,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive = 1,
-		/obj/item/grenade/smokebomb = 2,
-		/obj/item/book/granter/trait/trekking = 1
+		/obj/item/grenade/smokebomb = 1
 		)
 
 /datum/outfit/loadout/raider_yankee
 	name = "Yankee"
 	suit = /obj/item/clothing/suit/armor/medium/raider/yankee
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
+	r_hand = /obj/item/twohanded/baseball/louisville
 	backpack_contents = list(
-		/obj/item/shishkebabpack = 1,
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
-		/obj/item/megaphone=1,
+		/obj/item/grenade/f13/anarchist/dynamite = 2, //What is more american than blowing stuff up
+		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1)
 
 /datum/outfit/loadout/raider_blast
@@ -218,23 +180,11 @@ Raider
 		/obj/item/book/granter/trait/explosives = 1
 		)
 
-/datum/outfit/loadout/raider_badlands
-	name = "Fiend"
-	suit = /obj/item/clothing/suit/armor/medium/raider/badlands
-	head = /obj/item/clothing/head/helmet/f13/fiend
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/wattz/magneto = 1,
-		/obj/item/gun/energy/laser/wattz = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/reagent_containers/hypospray/medipen/psycho = 3,
-		/obj/item/reagent_containers/pill/patch/turbo = 2,
-		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
-		/obj/item/book/granter/trait/bigleagues = 1)
-
 /datum/outfit/loadout/raider_painspike
 	name = "Painspike"
 	suit = /obj/item/clothing/suit/armor/light/raider/painspike
 	head = /obj/item/clothing/head/helmet/f13/raider/psychotic
+	neck = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
@@ -260,49 +210,9 @@ Raider
 		/obj/item/clothing/accessory/pocketprotector/full = 1,
 		)
 
-/datum/outfit/loadout/raider_ncr
-	name = "Outlaw Ranger"
-	suit = /obj/item/clothing/suit/armor/medium/raider/combatduster
-	uniform = /obj/item/clothing/under/f13/raider_leather
-	id = /obj/item/card/id/rusted
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/m1carbine = 1,
-		/obj/item/ammo_box/magazine/pistol10mm=2,
-		/obj/item/melee/onehanded/knife/bayonet = 1,
-		/obj/item/storage/box/ration/ranger_breakfast = 1,
-		/obj/item/book/granter/crafting_recipe/blueprint/service = 1)
-
-/*
-/datum/outfit/loadout/raider_legion
-	name = "Disgraced Legionnaire"
-	suit = /obj/item/clothing/suit/armor/exile/legexile
-	uniform = /obj/item/clothing/under/f13/exile/legion
-	id = /obj/item/card/id/rusted/rustedmedallion
-	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/gladius = 1,
-		/obj/item/storage/backpack/spearquiver = 1,
-		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
-		/obj/item/ammo_box/magazine/greasegun = 1,
-		/obj/item/book/granter/trait/trekking = 1
-		)
-*/
-
-/datum/outfit/loadout/raider_bos
-	name = "Brotherhood Exile"
-	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
-	id = /obj/item/card/id/rusted/brokenholodog
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
-		/obj/item/grenade/f13/frag = 2,
-		)
-
-
-/*
 /datum/outfit/loadout/raider_smith
 	name = "Raider Smith"
-	suit = /obj/item/clothing/suit/armor/heavy/metal/raider
+	suit = /obj/item/clothing/suit/armor/heavy/metal
 	uniform = /obj/item/clothing/under/f13/raider_leather
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
 	gloves = /obj/item/clothing/gloves/blacksmith_mittens
@@ -314,18 +224,6 @@ Raider
 		/obj/item/stack/sheet/mineral/sandstone = 50,
 		/obj/item/book/granter/trait/techno = 1,
 		/obj/item/book/granter/crafting_recipe/scav_one = 1,
-		)
-*/
-
-/datum/outfit/loadout/raider_vault
-	name = "Vault Renegade"
-	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
-	uniform = /obj/item/clothing/under/f13/exile/vault
-	id = /obj/item/card/id/rusted/fadedvaultid
-	gloves = /obj/item/pda
-	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/thatgun = 1,
-		/obj/item/pda=1,
 		)
 
 /datum/outfit/loadout/raider_tribal
@@ -342,23 +240,12 @@ Raider
 		/obj/item/book/granter/trait/tribaltraditions =1,
 		/obj/item/clothing/mask/cigarette/pipe = 1,
 		/obj/item/melee/onehanded/knife/bone = 1,
-		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/book/granter/trait/bigleagues = 1
 		)
 
-
-/datum/outfit/loadout/tribal_drifter
-	name = "Tribal Drifter"
-	uniform = /obj/item/clothing/under/pants/f13/ghoul
-	head = /obj/item/clothing/head/f13/headscarf
-	shoes = /obj/item/clothing/shoes/f13/rag
-	belt = /obj/item/melee/onehanded/machete/forgedmachete
-	gloves = /obj/item/clothing/gloves/bracer
-	l_hand = /obj/item/twohanded/spear/bonespear
-	neck = /obj/item/clothing/neck/mantle/ragged
-	backpack_contents = list(
-	/obj/item/book/granter/trait/tribaltraditions = 1,
-	/obj/item/book/granter/trait/selection/tribal = 1,
-	/obj/item/shovel/serrated = 1,)
+/*
+Wastelander
+*/
 
 /datum/job/wasteland/f13wastelander
 	title = "Wastelander"
@@ -413,9 +300,6 @@ Raider
 	/datum/outfit/loadout/aviator,
 	/datum/outfit/loadout/trapper,
 	/datum/outfit/loadout/trouper)
-//	/datum/outfit/loadout/ncrcitizen,
-//	/datum/outfit/loadout/legioncivilian,
-//	/datum/outfit/loadout/wastelander_desert_ranger)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -620,7 +504,7 @@ Raider
 
 /datum/outfit/loadout/exmil
 	name = "Ex-Military"
-	suit = /obj/item/clothing/suit/flakjack
+	suit = /obj/item/clothing/suit/armor/light/vest/flak
 	uniform = /obj/item/clothing/under/f13/bdu
 	shoes = /obj/item/clothing/shoes/f13/military
 	head = /obj/item/clothing/head/flakhelm
@@ -987,7 +871,6 @@ Raider
 		/obj/item/clothing/under/f13/female/eighties = 1,
 		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/gun/ballistic/automatic/smg/greasegun/worn = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 	)
@@ -1083,5 +966,61 @@ Raider
 
 	)
 
+
+*/
+
+
+
+
+/* Stash for whenever I decide to actually go throught with deserters or not
+
+/datum/outfit/loadout/raider_ncr
+	name = "Outlaw Ranger"
+	suit = /obj/item/clothing/suit/armor/medium/raider/combatduster
+	uniform = /obj/item/clothing/under/f13/raider_leather
+	id = /obj/item/card/id/rusted
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/m1carbine = 1,
+		/obj/item/ammo_box/magazine/pistol10mm=2,
+		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/storage/box/ration/ranger_breakfast = 1,
+		/obj/item/book/granter/crafting_recipe/blueprint/service = 1)
+
+/*
+/datum/outfit/loadout/raider_legion
+	name = "Disgraced Legionnaire"
+	suit = /obj/item/clothing/suit/armor/exile/legexile
+	uniform = /obj/item/clothing/under/f13/exile/legion
+	id = /obj/item/card/id/rusted/rustedmedallion
+	backpack_contents = list(
+		/obj/item/melee/onehanded/machete/gladius = 1,
+		/obj/item/storage/backpack/spearquiver = 1,
+		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
+		/obj/item/ammo_box/magazine/greasegun = 1,
+		/obj/item/book/granter/trait/trekking = 1
+		)
+*/
+
+/datum/outfit/loadout/raider_bos
+	name = "Brotherhood Exile"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
+	id = /obj/item/card/id/rusted/brokenholodog
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
+		/obj/item/grenade/f13/frag = 2,
+		)
+
+/datum/outfit/loadout/raider_vault
+	name = "Vault Renegade"
+	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
+	uniform = /obj/item/clothing/under/f13/exile/vault
+	id = /obj/item/card/id/rusted/fadedvaultid
+	gloves = /obj/item/pda
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/thatgun = 1,
+		/obj/item/pda=1,
+		)
 
 */

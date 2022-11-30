@@ -192,7 +192,7 @@
 	armour_penetration = PIERCING_MINOR
 	custom_materials = null
 
-obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast attack ] --------------------------
+/obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast attack ] --------------------------
 	name = "switchblade"
 	desc = "A sharp, concealable, spring-loaded knife."
 	icon_state = "knife_switch"
@@ -229,6 +229,7 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 		attack_verb = list("stubbed", "poked")
 		hitsound = 'sound/weapons/genhit.ogg'
 		sharpness = SHARP_NONE
+
 
 
 ////////////////////
@@ -844,6 +845,7 @@ obj/item/melee/onehanded/knife/switchblade		//	[ Damage KNIFE, Minor AP, Fast at
 /obj/item/kitchen/knife/butcher/tribal
 	name = "Carving Knife"
 	desc = "A simple, hand-fashioned carving knife meant for separating meat from bone. Hardly more than some sharpened, rusty metal stuck between a tied wooden handle."
+	icon = 'icons/fallout/objects/kitchen.dmi'	
 	icon_state = "knife_butcher_primal"
 	force = 13
 	throwforce = 7

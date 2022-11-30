@@ -33,8 +33,7 @@
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "russianranged"
 	icon_living = "russianranged"
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged,
-				/obj/item/gun/ballistic/rifle/mosin)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged)
 	ranged = 1
 	retreat_distance = 5
 	minimum_distance = 5
@@ -43,8 +42,7 @@
 
 
 /mob/living/simple_animal/hostile/russian/ranged/mosin
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged,
-				/obj/item/gun/ballistic/rifle/mosin)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged)
 	casingtype = /obj/item/ammo_casing/a762
 
 /mob/living/simple_animal/hostile/russian/ranged/trooper
@@ -53,8 +51,7 @@
 	maxHealth = 150
 	health = 150
 	casingtype = /obj/item/ammo_casing/shotgun/buckshot
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper,
-				/obj/item/gun/ballistic/rifle/mosin)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/trooper)
 
 /mob/living/simple_animal/hostile/russian/ranged/officer
 	name = "Russian Officer"
@@ -64,8 +61,7 @@
 	health = 65
 	rapid = 3
 	casingtype = /obj/item/ammo_casing/c9mm
-	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/officer,
-				/obj/item/gun/ballistic/rifle/mosin)
+	loot = list(/obj/effect/mob_spawn/human/corpse/russian/ranged/officer)
 
 /mob/living/simple_animal/hostile/russian/ranged/officer/Aggro()
 	..()

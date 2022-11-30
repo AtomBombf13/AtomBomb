@@ -607,7 +607,7 @@
 	icon_state = "gab1"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/ninemil, /datum/crafting_recipe/huntingrifle)
+	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/varmintrifle, /datum/crafting_recipe/huntingshotgun)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_two
 	name = "Guns and Bullets, Part 2"
@@ -615,7 +615,7 @@
 	icon_state = "gab2"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/huntingrifle, /datum/crafting_recipe/m1911, /datum/crafting_recipe/varmintrifle)
+	crafting_recipe_types = list(/datum/crafting_recipe/smg10mm, /datum/crafting_recipe/verminkiller, /datum/crafting_recipe/trench, /datum/crafting_recipe/huntingrifle)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_three
 	name = "Guns and Bullets, Part 3"
@@ -623,7 +623,7 @@
 	icon_state = "gab3"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/ergonomic_grip, /datum/crafting_recipe/metal_guard, /datum/crafting_recipe/forged_barrel, /datum/crafting_recipe/booster, /datum/crafting_recipe/laserguide, /datum/crafting_recipe/gigalens, /datum/crafting_recipe/battshunt, /datum/crafting_recipe/overdrivemod, /datum/crafting_recipe/overshootermod, /datum/crafting_recipe/ai_tool)
+	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/ergonomic_grip, /datum/crafting_recipe/metal_guard, /datum/crafting_recipe/forged_barrel, /datum/crafting_recipe/booster)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_four
 	name = "Guns and Bullets, Part 4"
@@ -631,7 +631,15 @@
 	icon_state = "gab4"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/flux, /datum/crafting_recipe/lenses, /datum/crafting_recipe/conductors, /datum/crafting_recipe/receiver, /datum/crafting_recipe/assembly, /datum/crafting_recipe/alloys)
+	crafting_recipe_types = list(/datum/crafting_recipe/sniperscope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/recoilcomp, /datum/crafting_recipe/laserguide, /datum/crafting_recipe/fullauto)
+
+/obj/item/book/granter/crafting_recipe/gunsmith_five //Keep this loot only
+	name = "Guns and Bullets, Part 5"
+	desc = "A rare issue of Guns and Bullets barely even making it out of printing press before the war, allowing skilled craftsmen to perfect their weapon. It's barely holding up, and looks like only one person can study the knowledge from it."
+	icon_state = "gab5"
+	oneuse = TRUE
+	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
+	crafting_recipe_types = list(/datum/crafting_recipe/gigalens, /datum/crafting_recipe/battshunt, /datum/crafting_recipe/overdrivemod, /datum/crafting_recipe/overshootermod, /datum/crafting_recipe/ai_tool)
 
 /obj/item/book/granter/crafting_recipe/scav_one
 	name = "SCAV! Issue 1"
@@ -654,6 +662,13 @@
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/autoaxe)
 
+obj/item/book/granter/crafting_recipe/energy
+	name = "Future Weapons Today!"
+	desc = "A magazine series covering the latest trends in weapons technology. Though it probably seems a little out of date now"
+	oneuse = TRUE
+	remarks = list("Always keep the focusing lens on your laser weapons free of cracks", "Plasma gets hot! Always make sure the magnets on the weapon are in working order", "Laser weapons excel in precision but plasma can burn through almost any armor", "Energy weapons have few moving parts but they have very little tolerenace for their components getting knocked around.") 
+	crafting_recipe_types = list(/datum/crafting_recipe/wattz1k, /datum/crafting_recipe/AEP7, /datum/crafting_recipe/AER9, /datum/crafting_recipe/rechargerpistol, /datum/crafting_recipe/wattz2k)
+	
 // New Blueprints, yay! -Superballs
 /obj/item/book/granter/crafting_recipe/blueprint
 	name = "blueprint"
@@ -769,6 +784,11 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/tribeam)
 
+/obj/item/book/granter/crafting_recipe/blueprint/rcw
+	name = "laser RCW blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/rcw)
+
 /obj/item/book/granter/crafting_recipe/blueprint/am_rifle
 	name = "anti-materiel rifle blueprint"
 	icon_state = "blueprint2"
@@ -814,11 +834,6 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/pps)
 
-/obj/item/book/granter/crafting_recipe/blueprint/commando
-	name = "commando carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/commando)
-
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
 	name = "guide to minelaying"
 	icon_state = "blueprint2"
@@ -861,9 +876,8 @@
 	name = "Weapons of the Vault Defense Force"
 	desc = "a book detailing weapons used in the region and by the local town, it has lithiographed pictures of hand-drawn schematics for each weapon type"
 	oneuse = TRUE
-	crafting_recipe_types = list(/datum/crafting_recipe/policepistol, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/policerifle, /datum/crafting_recipe/steelbib/heavy, /datum/crafting_recipe/armyhelmetheavy, /datum/crafting_recipe/huntingshotgun)
+	crafting_recipe_types = list(/datum/crafting_recipe/policepistol,/datum/crafting_recipe/policerifle, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/combatrifle, /datum/crafting_recipe/steelbib/heavy, /datum/crafting_recipe/armyhelmetheavy, /datum/crafting_recipe/huntingshotgun)
 	remarks = list("Looks like Eastwood hand-crafts replicas from a pre-war police armory", "Some of these weapons are more than 200 years old....", "Duct tape really can hold it together!", "So that is how you laminate armor sheets together", "Looks like you can beat metal into just the right shape to replace the bits")
-
 
 /obj/item/book/granter/trait/tagger
 	name = "Picket Fences"
@@ -948,8 +962,6 @@
 	traitname = "wirevision"
 	remarks = list("Troubleshooting is a systematic approach to problem solving, do not skip any steps in the process.", "Ensure you have all the required parts before you begin.", "Don't lose track of your tools, or you have a new problem to deal with.", "Make sure you check the colouring of wires extremely carefully- you don't want to be mixing up yellow and lime, or purple and indigo!")
 
-
-
 /obj/item/book/granter/trait/pa_wear
 	name = "US Army: Mechanized Infantry Handbook"
 	desc = "A battered olive-green handbook, detailing lessons to ancient mechanized US Army infantry units."
@@ -967,12 +979,12 @@
 	remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
 
 /obj/item/book/granter/trait/explosives
-	name = "Anarchist Cookbook"
-	desc = "An old manual for underground terrorist groups and liberation armies on how to leave their mark on their favorite regime."
+	name = "Patriot's Cookbook"
+	desc = "A magazine containing articles on explosives and how to make them. Look's like it was banned by the pre-war government."
 	oneuse = TRUE
 	granted_trait = TRAIT_EXPLOSIVE_CRAFTING
 	traitname = "explosive crafting"
-	remarks = list("If you want to get started making bombs, you're going to need a lot of igniters and black powder.", "Did a Follower write this book, or something?", "All thermite takes is some aluminum and iron.", "Coconut shells make acceptable grenade casings in a pinch.")
+	remarks = list("If you want to get started making bombs, you're going to need a lot of igniters and black powder.", "You can use abraxo cleaner as a source of nitrates?", "All thermite takes is some aluminum and iron.", "Coconut shells make acceptable grenade casings in a pinch.")
 	crafting_recipe_types = list(/datum/crafting_recipe/dynamite, /datum/crafting_recipe/pipebomb, /datum/crafting_recipe/smokebomb, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/flashbang, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket)
 
 /obj/item/book/granter/trait/explosives_advanced
@@ -1267,3 +1279,23 @@
 		/datum/crafting_recipe/bitterdrink5,
 		/datum/crafting_recipe/healpoultice,
 		/datum/crafting_recipe/healpoultice5)
+
+/// Both books below are for alchemy use..
+
+/obj/item/book/granter/trait/spirit_teachings
+	name = "Teachings of the Gods"
+	desc = "A book all about tribal life among the Gods."
+	icon_state = "ms_teachings"
+	oneuse = TRUE
+	granted_trait = TRAIT_MACHINE_SPIRITS
+	traitname = "The Machine Spirits"
+	remarks = list("There are ten Gods...", "Each govern an aspect of life...", "Always respect the Gods", "Never use them for selfish reasons", "Honor and love those blessed by the Gods.")
+
+/obj/item/book/granter/trait/mars_teachings
+	name = "Teachings of Mars"
+	desc = "A book all about Mars and the teachings he gives to the wise."
+	icon_state = "mars_teachings"
+	oneuse = TRUE
+	granted_trait = TRAIT_MARS_TEACH
+	traitname = "Mars' Teachings"
+	remarks = list("Remember the aeternit imperi of the Caesar's Legion...", "Do not abuse the knowledge of Mars to break his will, or be broken...", "Remember: In hoc signo taurus vinces.")

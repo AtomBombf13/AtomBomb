@@ -15,7 +15,29 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-	
+
+	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
+	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
+	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
+
+/* magnum buckshot pellet
+ * DAMAGE: 11
+ * STAMIN: 1
+ * RECOIL: 2
+ * WOUNDS: 0
+ * WNAKED: 0
+ */
+/obj/item/projectile/bullet/pellet/shotgun_magnum
+	name = "magnum buckshot pellet"
+	damage = BULLET_DAMAGE_SHOTGUN_MAGNUM * BULLET_SURPLUS_MULT
+	stamina = BULLET_STAMINA_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
+	spread = BULLET_SPREAD_SURPLUS
+	recoil = BULLET_RECOIL_SHOTGUN_SLUG
+
+	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
+	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
+	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
@@ -37,7 +59,7 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT
 	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	sharpness = SHARP_NONE
 	embedding = null
@@ -60,7 +82,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_HANDLOAD_MULT
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
@@ -95,7 +117,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
 	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
@@ -117,7 +139,7 @@
 	wound_bonus = 80
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	sharpness = SHARP_EDGED
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
@@ -140,7 +162,7 @@
 	wound_bonus = 80
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	sharpness = SHARP_NONE
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
@@ -163,52 +185,11 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
 	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	sharpness = SHARP_NONE
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION
-
-#define BULLET_TRAINSLUG_DAMAGE_MULT 0.4 // 3 shots, 1.2x damage? sure
-#define BULLET_TRAINSLUG_STAMINA_MULT 0.4
-#define BULLET_TRAINSLUG_WOUND_MULT 1
-#define BULLET_TRAINSLUG_NAKED_WOUND_MULT 1
-#define BULLET_TRAINSLUG_SPEED_MULT 0.9
-
-/* train
- * DAMAGE: 20
- * STAMIN: 4
- * RECOIL: 2
- * WOUNDS: 40
- * WNAKED: 30
- */
-/obj/item/projectile/bullet/pellet/trainshot
-	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_TRAINSLUG_DAMAGE_MULT
-	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_TRAINSLUG_STAMINA_MULT
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
-	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_TRAINSLUG_WOUND_MULT
-	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_TRAINSLUG_NAKED_WOUND_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
-	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG * BULLET_TRAINSLUG_SPEED_MULT
-	sharpness = SHARP_NONE //crunch
-	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
-	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
-
-/obj/item/projectile/bullet/pellet/trainshot/on_hit(atom/target)
-	. = ..()
-	if(ismovable(target) && prob(8))
-		var/atom/movable/M = target
-		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
-		M.safe_throw_at(throw_target, 2, 3)
-
-#undef BULLET_TRAINSLUG_DAMAGE_MULT
-#undef BULLET_TRAINSLUG_STAMINA_MULT
-#undef BULLET_TRAINSLUG_WOUND_MULT
-#undef BULLET_TRAINSLUG_NAKED_WOUND_MULT
-#undef BULLET_TRAINSLUG_SPEED_MULT
 
 /* 12g slug fire
  * DAMAGE: 25
@@ -227,7 +208,7 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_WOUND_FIRE
 	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	sharpness = SHARP_NONE
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
@@ -251,7 +232,7 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_WOUND_FIRE
 	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	sharpness = SHARP_NONE
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
@@ -279,7 +260,7 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_SURPLUS_MULT * BULLET_WOUND_FIRE
 	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_PELLET
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	sharpness = SHARP_NONE
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_PELLET
@@ -309,7 +290,7 @@
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT
 	bare_wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION
@@ -362,7 +343,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_METEORSLUG_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_METEORSLUG_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG * BULLET_METEORSLUG_SPEED_MULT
 	sharpness = SHARP_NONE
 	knockdown = 80
@@ -404,7 +385,7 @@
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_SURPLUS_MULT * BULLET_WOUND_EXPLOSIVE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_NAKED_WOUND_MULT * BULLET_NAKED_WOUND_EXPLOSIVE
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_SHOTGUN_SLUG
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	knockdown = 50
 	damage_falloff = BULLET_FALLOFF_DEFAULT_SHOTGUN_SLUG
@@ -418,7 +399,9 @@
 // Mech Scattershots
 
 /obj/item/projectile/bullet/scattershot
-	damage = 28
+	damage = 16
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	icon_state = "mech_autocannon"
 	light_range = 1.5
 	light_power = 0.3

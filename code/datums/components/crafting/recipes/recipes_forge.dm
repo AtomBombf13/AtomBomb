@@ -52,7 +52,7 @@
 
 /datum/crafting_recipe/blacksmith/furnace
 	name = "Furnace"
-	result = /obj/structure/blacksmith/furnace
+	result = /obj/structure/blacksmith/furnace/sandstone
 	time = 300
 	reqs = list(
 		/obj/item/stack/sheet/mineral/sandstone = 30,
@@ -81,6 +81,18 @@
 		/obj/item/stack/sheet/metal = 10,
 		)
 	time = 80
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
+/datum/crafting_recipe/blacksmith/smithed_armor_metal
+	name = "Metal armor set"
+	result = /obj/item/clothing/suit/armor/heavy/metal/smithed
+	reqs = list(
+		/obj/item/smithing/armor_piece = 2,
+		/obj/item/stack/sheet/leather = 2,
+		)
+	time = 200
+	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 

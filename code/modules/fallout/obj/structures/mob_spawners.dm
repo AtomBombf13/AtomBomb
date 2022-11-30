@@ -95,13 +95,13 @@
 	if(LAZYLEN(targeted_by)) // Don't let multiple people cover at the same time.
 		to_chat(user, span_warning("Someone's already covering \the [src]!"))
 		return
-	if(S.amount < 4)
-		to_chat(user, span_warning("You need four of [S.name] in order to cover \The [src]!"))
+	if(S.amount < 2)
+		to_chat(user, span_warning("You need two of [S.name] in order to cover \The [src]!"))
 		return
 	if(!do_after(user, 5 SECONDS, FALSE, src))
 		to_chat(user, span_warning("You must stand still to build the cover!"))
 		return
-	S.use(4)
+	S.use(2)
 	if(!made_loot)
 		made_loot = TRUE
 		new /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low(src.loc)

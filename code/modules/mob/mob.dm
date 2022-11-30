@@ -515,6 +515,10 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 		return
 
 	var/mob/dead/new_player/M = new /mob/dead/new_player()
+
+	if(src.previous_job)
+		M.previous_job = src.previous_job
+
 	if(!client)
 		log_game("[key_name(usr)] AM failed due to disconnect.")
 		qdel(M)
@@ -961,7 +965,7 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 		return
 	client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
 	if (ismecha(loc))
-		var/obj/mecha/M = loc
+		var/obj/vehicle/sealed/mecha/M = loc
 		if(M.mouse_pointer)
 			client.mouse_pointer_icon = M.mouse_pointer
 

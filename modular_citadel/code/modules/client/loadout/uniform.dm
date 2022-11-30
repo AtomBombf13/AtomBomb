@@ -174,6 +174,11 @@
 	path = /obj/item/clothing/under/suit/checkered
 	cost = 1
 
+/datum/gear/uniform/suit/jamrock
+	name = "disco-ass Suit"
+	path = /obj/item/clothing/under/jamrock
+	cost = 1
+
 /datum/gear/uniform/suit/navy
 	name = "navy suit"
 	path = /obj/item/clothing/under/suit/navy
@@ -678,7 +683,7 @@
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
 
-/// Brotherhood of Steel 
+/// Brotherhood of Steel
 
 /datum/gear/uniform/bos
 	name = "midwestern fatigues"
@@ -699,6 +704,48 @@
 							"Brotherhood Off-Duty"
 	)
 
+/// Legion
+
+/datum/gear/uniform/legion
+	name = "camp follower male robe"
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	path = /obj/item/clothing/under/f13/campfollowermale
+	restricted_desc = "Legion Camp Duties"
+	restricted_roles = list("Legion Off-Duty",
+							"Camp Follower"
+							)
+
+/datum/gear/uniform/legion/female
+	name = "camp follower female robe"
+	path = /obj/item/clothing/under/f13/campfollowerfemale
+	restricted_desc = "Legion Camp Duties"
+	restricted_roles = list("Legion Off-Duty",
+							"Camp Follower"
+							)
+
+/datum/gear/uniform/legion/auxilia
+	name = "male auxilia robes"
+	path = /obj/item/clothing/under/f13/legauxilia
+	restricted_desc = "Legion Camp Duties"
+	restricted_roles = list("Legion Off-Duty",
+							"Camp Follower"
+							)
+
+/datum/gear/uniform/legion/auxiliaf
+	name = "female auxilia robes"
+	path = /obj/item/clothing/under/f13/legauxiliaf
+	restricted_desc = "Legion Camp Duties"
+	restricted_roles = list("Legion Off-Duty",
+							"Camp Follower"
+							)
+
+/datum/gear/uniform/legion/roma
+	name = "roma auxilia robes"
+	path = /obj/item/clothing/under/f13/romaskirt/auxilia
+	restricted_desc = "Legion Camp Duties"
+	restricted_roles = list("Legion Off-Duty",
+							"Camp Follower"
+							)
 
 //Skirts
 
