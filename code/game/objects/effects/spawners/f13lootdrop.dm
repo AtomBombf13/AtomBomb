@@ -755,10 +755,10 @@
 //Energy Weapon Spawners
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/hobo
 	name = "very low tier energy gun"
-			loot = list(/obj/effect/spawner/bundle/f13/wattz,
-						/obj/item/gun/energy/laser/rechargerrifle,
-						/obj/item/gun/ballistic/rifle/hobo/lasmusket,
-						)
+	loot = list(/obj/effect/spawner/bundle/f13/wattz,
+					/obj/item/gun/energy/laser/rechargerrifle,
+					/obj/item/gun/ballistic/rifle/hobo/lasmusket,
+					)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
