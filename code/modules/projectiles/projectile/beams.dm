@@ -338,7 +338,7 @@
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
-	damage = 22
+	damage = 24
 	hitscan = TRUE
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
