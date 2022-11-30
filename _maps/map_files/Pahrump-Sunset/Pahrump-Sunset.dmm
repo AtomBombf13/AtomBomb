@@ -20650,8 +20650,10 @@
 	},
 /area/f13/city)
 "cqZ" = (
-/obj/machinery/light/small,
-/turf/open/indestructible/ground/inside/dirt,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "cra" = (
 /obj/structure/destructible/tribal_torch/wall/lit,
@@ -27536,6 +27538,10 @@
 	},
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/indestructible/ground/outside/water,
+/area/f13/wasteland)
+"fyE" = (
+/obj/structure/billboard/poseidenenergy1,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "fyF" = (
 /obj/effect/decal/marking{
@@ -35830,6 +35836,11 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	name = "Eastwood South Gate";
+	network = list("Eastwood")
+	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -37805,11 +37816,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "kvn" = (
-/obj/structure/billboard/poseidenenergy1,
-/turf/open/indestructible/ground/outside/roaddirt{
-	dir = 1;
-	icon_state = "innerpavement"
+/obj/machinery/light/small{
+	dir = 8
 	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "kvs" = (
 /obj/structure/barricade/wooden,
@@ -39347,10 +39357,9 @@
 	},
 /area/f13/village)
 "lgg" = (
-/obj/machinery/camera/autoname{
-	dir = 8;
-	name = "Eastwood South Gate";
-	network = list("Eastwood")
+/obj/machinery/door/airlock/grunge{
+	name = "security airlock";
+	req_access_txt = "137"
 	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
@@ -56635,9 +56644,6 @@
 	},
 /area/f13/wasteland)
 "tsQ" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/stairs/north,
 /obj/structure/railing/handrail{
 	dir = 8;
@@ -96674,7 +96680,7 @@ mbM
 iwj
 anR
 hkV
-aOk
+fyE
 aOk
 aOk
 aOk
@@ -98708,7 +98714,7 @@ xWX
 xWX
 xWX
 hEG
-kvn
+anR
 jnJ
 jnJ
 jnJ
@@ -98970,7 +98976,7 @@ jnJ
 jnJ
 jnJ
 jnJ
-cqZ
+jnJ
 kls
 aYj
 aYj
@@ -99228,7 +99234,7 @@ jnJ
 jnJ
 jnJ
 jnJ
-thh
+kls
 clv
 clv
 clv
@@ -99488,7 +99494,7 @@ jnJ
 kls
 kls
 tsQ
-lgg
+clv
 jus
 qIP
 kls
@@ -99745,7 +99751,7 @@ hEh
 kls
 kls
 kls
-kls
+lgg
 kls
 kls
 kls
@@ -99997,11 +100003,11 @@ ean
 ean
 ean
 ean
+cqZ
 ean
 ean
 ean
-ean
-ean
+kvn
 ean
 ean
 ean
