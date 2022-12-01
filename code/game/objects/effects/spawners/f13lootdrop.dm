@@ -796,7 +796,8 @@
 	name = "unique tier energy gun"
 	lootcount = 1
 
-	loot = list(/obj/item/gun/energy/laser/solar
+	loot = list(/obj/item/gun/energy/laser/solar,
+				/obj/item/gun/energy/laser/laer
 				)
 
 //Ballistic Weapon Spawners
