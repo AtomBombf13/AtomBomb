@@ -253,9 +253,7 @@
 	dir = 8
 	},
 /obj/structure/obstacle/barbedwire/end,
-/obj/structure/railing/corner{
-	dir = 8
-	},
+/obj/structure/railing,
 /turf/open/floor/plating/rust,
 /area/f13/wasteland)
 "atz" = (
@@ -515,11 +513,11 @@
 	},
 /area/f13/building)
 "aXB" = (
-/obj/structure/railing/corner{
-	dir = 4
+/obj/structure/obstacle/barbedwire,
+/obj/structure/railing{
+	dir = 8
 	},
-/obj/structure/railing/corner,
-/turf/open/transparent/openspace,
+/turf/open/floor/plating/rust,
 /area/f13/wasteland)
 "aXF" = (
 /obj/structure/rack/shelf_metal{
@@ -920,8 +918,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
 "bzl" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
+/obj/structure/fence/wooden{
+	dir = 1;
+	icon_state = "post_wood"
 	},
 /turf/open/floor/wood_common,
 /area/f13/city)
@@ -983,12 +982,9 @@
 	},
 /area/f13/building)
 "bFu" = (
-/obj/structure/obstacle/barbedwire,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/plating/rust,
-/area/f13/wasteland)
+/obj/structure/destructible/tribal_torch/lit,
+/turf/open/floor/wood_common,
+/area/f13/city)
 "bFw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/junk/oldpipes,
@@ -1239,10 +1235,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
 "ccV" = (
-/obj/structure/fence/wooden{
-	dir = 1;
-	icon_state = "post_wood"
-	},
+/obj/structure/closet/crate/bin,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "cde" = (
@@ -1803,7 +1796,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
 "dkw" = (
-/obj/structure/simple_door/metal/fence/wooden,
+/obj/structure/fence/corner/wooden{
+	dir = 8
+	},
 /turf/open/floor/wood_common,
 /area/f13/city)
 "dmE" = (
@@ -1857,6 +1852,13 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"dsM" = (
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = -13
+	},
+/turf/open/floor/wood_common,
+/area/f13/city)
 "dtb" = (
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -2273,6 +2275,19 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"elx" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 1;
+	pixel_x = 5
+	},
+/obj/structure/obstacle/barbedwire/end{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/rust,
+/area/f13/wasteland)
 "erz" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/chair/f13foldupchair{
@@ -2354,7 +2369,7 @@
 	},
 /area/f13/building)
 "ezW" = (
-/obj/structure/destructible/tribal_torch/lit,
+/obj/structure/simple_door/metal/fence/wooden,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "eAP" = (
@@ -2511,9 +2526,12 @@
 	},
 /area/f13/building/hospital)
 "ePl" = (
-/obj/machinery/biogenerator,
-/turf/open/floor/wood_common,
-/area/f13/city)
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/obj/structure/railing/corner,
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "ePI" = (
 /obj/machinery/light,
 /turf/closed/wall/rust,
@@ -2672,7 +2690,7 @@
 	},
 /area/f13/building/massfusion)
 "fdj" = (
-/obj/machinery/seed_extractor,
+/obj/machinery/biogenerator,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "fdq" = (
@@ -2716,17 +2734,7 @@
 /turf/open/floor/wood_common,
 /area/f13/building)
 "ffL" = (
-/obj/structure/rack,
-/obj/item/reagent_containers/glass/bucket/wood,
-/obj/item/cultivator,
-/obj/item/shovel/spade,
-/obj/item/storage/bag/plants,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/bag/plants,
-/obj/item/shovel/spade,
-/obj/item/cultivator,
-/obj/item/reagent_containers/glass/bucket/wood,
-/obj/item/hatchet,
+/obj/machinery/seed_extractor,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "fik" = (
@@ -8360,18 +8368,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "qqF" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 1;
-	pixel_x = 5
-	},
-/obj/structure/obstacle/barbedwire/end{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/plating/rust,
-/area/f13/wasteland)
+/obj/structure/destructible/tribal_torch/lit,
+/turf/open/floor/wood_common,
+/area/f13/city)
 "qqR" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/structure/rack/shelf_metal{
@@ -9471,13 +9470,19 @@
 /turf/open/water,
 /area/f13/brotherhood/offices1st)
 "srw" = (
-/obj/structure/window/fulltile/house{
-	dir = 2;
-	icon_state = "housewindowbroken"
-	},
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/closed/wall/f13/wood/house,
-/area/f13/building)
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/bucket/wood,
+/obj/item/cultivator,
+/obj/item/shovel/spade,
+/obj/item/storage/bag/plants,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/bag/plants,
+/obj/item/shovel/spade,
+/obj/item/cultivator,
+/obj/item/reagent_containers/glass/bucket/wood,
+/obj/item/hatchet,
+/turf/open/floor/wood_common,
+/area/f13/city)
 "srz" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/sandbags,
@@ -47767,7 +47772,7 @@ ant
 byT
 bOe
 vMz
-xsd
+ccV
 woa
 nSB
 eEi
@@ -48030,7 +48035,7 @@ ecy
 xsd
 xsd
 xsd
-xsd
+dsM
 fJi
 gLw
 fJi
@@ -48278,11 +48283,11 @@ oez
 oez
 oez
 ant
-bzl
-ccV
-ccV
-ccV
-bzl
+vMz
+ctY
+xsd
+xsd
+xsd
 xsd
 xsd
 xsd
@@ -48535,10 +48540,10 @@ oez
 oez
 oez
 ant
-bCp
-cxI
-cxI
-xsd
+dkw
+bzl
+bzl
+bzl
 dkw
 xsd
 xsd
@@ -48794,9 +48799,9 @@ oez
 ant
 bCp
 cxI
+cxI
 xsd
-xsd
-bCp
+ezW
 xsd
 xsd
 xsd
@@ -49050,16 +49055,16 @@ oez
 oez
 ant
 bCp
-xsd
+cxI
 xsd
 xsd
 bCp
-ezW
-ePl
-fdj
-ffL
 xsd
-ezW
+xsd
+xsd
+xsd
+xsd
+vMz
 tEW
 oez
 oez
@@ -49306,18 +49311,18 @@ oez
 oez
 oez
 arI
-bFu
-bFu
-bFu
-bFu
-bFu
-bFu
-bFu
-bFu
-bFu
-bFu
+bCp
+xsd
+xsd
+xsd
+bCp
 qqF
-cHi
+fdj
+ffL
+srw
+xsd
+qqF
+tEW
 oez
 oez
 oez
@@ -49562,19 +49567,19 @@ oez
 oez
 oez
 oez
-oez
-pZk
-geI
-geI
-geI
+rnq
 aXB
-geI
-geI
-geI
-ttz
-oez
-lvE
-oez
+aXB
+aXB
+aXB
+aXB
+aXB
+aXB
+aXB
+aXB
+aXB
+elx
+cHi
 oez
 oez
 oez
@@ -49819,17 +49824,17 @@ oez
 oez
 oez
 oez
-hMq
-hMq
-bcZ
-gCC
-xVd
-hMq
-eLn
-gCC
-nwX
-hMq
-hMq
+oez
+pZk
+geI
+geI
+geI
+ePl
+geI
+geI
+geI
+ttz
+oez
 lvE
 oez
 oez
@@ -50077,15 +50082,15 @@ oez
 oez
 pZk
 hMq
-qzj
-qzj
-qzj
-qzj
-qzj
-qzj
-qzj
-qzj
-qzj
+hMq
+bcZ
+gCC
+xVd
+hMq
+eLn
+gCC
+nwX
+hMq
 hMq
 lvE
 oez
@@ -50333,7 +50338,7 @@ oez
 oez
 oez
 fbK
-bcZ
+hMq
 qzj
 qzj
 qzj
@@ -50343,7 +50348,7 @@ qzj
 qzj
 qzj
 qzj
-bcZ
+hMq
 lvE
 oez
 oez
@@ -50600,7 +50605,7 @@ qzj
 qzj
 qzj
 qzj
-gEl
+bcZ
 lvE
 oez
 oez
@@ -50847,7 +50852,7 @@ oez
 oez
 oez
 fbK
-msZ
+bcZ
 qzj
 qzj
 qzj
@@ -50857,7 +50862,7 @@ qzj
 qzj
 qzj
 qzj
-srw
+gEl
 lvE
 oez
 oez

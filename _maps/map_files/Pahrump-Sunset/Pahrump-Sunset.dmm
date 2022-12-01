@@ -3031,12 +3031,6 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"amq" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/village)
 "amr" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 4;
@@ -22824,12 +22818,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/village)
-"doB" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_6"
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/village)
 "doI" = (
 /obj/structure/table,
 /obj/machinery/cell_charger{
@@ -36290,12 +36278,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
-"jGz" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_3"
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/village)
 "jGH" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -104340,17 +104322,17 @@ xLC
 pdm
 xLC
 xLC
-amq
-hhC
-hhC
-hhC
-hhC
-doB
-doB
-hhC
-hhC
-hhC
-jGz
+hyv
+aOk
+aOk
+aOk
+aOk
+biO
+biO
+aOk
+aOk
+aOk
+etg
 aiO
 hkg
 bqi
