@@ -32953,7 +32953,16 @@
 "ifY" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal{
+	pixel_x = 6;
 	termtag = "Projector"
+	},
+/obj/item/paper_bin{
+	pixel_x = -7;
+	pixel_y = 6
+	},
+/obj/item/pen/fourcolor{
+	pixel_x = -8;
+	pixel_y = 7
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
