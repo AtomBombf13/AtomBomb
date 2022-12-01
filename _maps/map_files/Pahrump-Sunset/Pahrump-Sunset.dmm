@@ -3926,7 +3926,7 @@
 /obj/structure/rack,
 /obj/item/mining_scanner,
 /obj/item/mining_scanner,
-/obj/item/pickaxe,
+/obj/item/pickaxe/drill,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/ncr)
 "aqp" = (
@@ -23594,7 +23594,7 @@
 	pixel_y = 4
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/f13/city)
+/area/f13/wasteland)
 "dFR" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/outside/dirt{
@@ -27411,6 +27411,9 @@
 /area/f13/city)
 "fvg" = (
 /obj/machinery/smartfridge/bottlerack/grownbin,
+/obj/structure/fireaxecabinet{
+	pixel_y = -30
+	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -30598,7 +30601,7 @@
 /obj/structure/rack,
 /obj/item/storage/bag/ore,
 /obj/item/storage/bag/ore,
-/obj/item/pickaxe,
+/obj/item/pickaxe/drill,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/ncr)
 "gWD" = (
@@ -43505,7 +43508,7 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
 	},
-/area/f13/city)
+/area/f13/wasteland)
 "mWD" = (
 /mob/living/simple_animal/hostile/bloatfly,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -43537,7 +43540,7 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
 	},
-/area/f13/city)
+/area/f13/wasteland)
 "mXz" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_3"
@@ -45697,7 +45700,7 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
-/area/f13/city)
+/area/f13/wasteland)
 "ocu" = (
 /obj/structure/flora/tree/cactus,
 /turf/open/indestructible/ground/outside/desert,
@@ -45775,7 +45778,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
 "oeB" = (
-/obj/item/storage/money_stack/ncr,
+/obj/item/storage/money_stack,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
 "oeC" = (
@@ -47702,7 +47705,7 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
-/area/f13/city)
+/area/f13/wasteland)
 "oZC" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
@@ -47832,7 +47835,7 @@
 "pcI" = (
 /obj/effect/turf_decal/trimline/white/line,
 /turf/open/indestructible/ground/outside/road,
-/area/f13/city)
+/area/f13/wasteland)
 "pdm" = (
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland33"
@@ -49949,7 +49952,7 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
-/area/f13/city)
+/area/f13/wasteland)
 "qbp" = (
 /obj/machinery/door/unpowered/securedoor/legion,
 /turf/open/indestructible/ground/outside/graveldirt,
@@ -58465,7 +58468,7 @@
 "uih" = (
 /obj/effect/turf_decal/trimline/white/line,
 /turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/city)
+/area/f13/wasteland)
 "uik" = (
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/graveldirt,
@@ -58501,7 +58504,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/white/line,
 /turf/open/indestructible/ground/outside/road,
-/area/f13/city)
+/area/f13/wasteland)
 "ujF" = (
 /obj/structure/cross,
 /turf/open/indestructible/ground/outside/desert,
@@ -98708,11 +98711,11 @@ och
 oZo
 qbe
 oZo
-qHy
+uNJ
 uih
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 anR
 jnJ
@@ -98961,15 +98964,15 @@ ean
 ean
 lKc
 mWT
-aEu
+pjP
 pcI
-qHy
+uNJ
 dFN
-qHy
+uNJ
 ujy
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 anR
 jnJ
@@ -99224,9 +99227,9 @@ qHy
 wNx
 aEu
 qHy
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 anR
 jnJ
@@ -99481,9 +99484,9 @@ qHy
 qHy
 wNx
 wNx
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 anR
 jnJ
@@ -99738,9 +99741,9 @@ qhP
 vuz
 sAz
 sAz
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 ksO
 hEh
@@ -99995,9 +99998,9 @@ qns
 rnX
 blf
 lAA
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 ean
 ean
@@ -100252,9 +100255,9 @@ qrr
 blf
 blf
 lAA
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 vPF
 xLy
 xLy
@@ -100509,9 +100512,9 @@ qHy
 qHy
 blf
 lAA
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 mfY
 wQp
@@ -100766,9 +100769,9 @@ aZY
 vuz
 qHy
 wNx
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 mfY
 uix
@@ -101023,9 +101026,9 @@ qns
 qJT
 qHy
 qHy
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 vGN
 mfY
 uix
@@ -101280,9 +101283,9 @@ aEu
 wNx
 xWX
 qHy
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 mBJ
 xLy
 wWy
@@ -101537,9 +101540,9 @@ qHy
 qHy
 xWX
 qHy
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 dHo
 rud
@@ -101794,9 +101797,9 @@ qhP
 vuz
 xWX
 uuZ
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 xLy
 gar
@@ -102051,9 +102054,9 @@ qns
 rnX
 xWX
 xWX
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 hEG
 xLy
 xLy
@@ -102308,9 +102311,9 @@ qrr
 blf
 xWX
 xWX
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 vPF
 xLy
 rFD
@@ -102565,9 +102568,9 @@ xWX
 xWX
 xWX
 xWX
-xWX
-xWX
-xWX
+nvn
+nvn
+nvn
 ohD
 xLy
 pfM
