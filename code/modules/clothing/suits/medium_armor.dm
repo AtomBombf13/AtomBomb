@@ -472,8 +472,8 @@
 /obj/item/clothing/suit/armor/medium/combat/swat
 	name = "SWAT combat armor"
 	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams."
-	icon_state = "armoralt"
-	item_state = "armoralt"
+	icon_state = "combat_armor_swat"
+	item_state = "combat_armor_swat"
 
 /obj/item/clothing/suit/armor/medium/combat/chinese
 	name = "chinese combat armor"
