@@ -375,7 +375,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/pistol45 = 2,
 		/obj/item/melee/classic_baton/militarypolice = 1,
 		/obj/item/ammo_box/magazine/m5mm = 1,
-		/obj/item/razor = 1
+		/obj/item/cosmetics/razor = 1
 		)
 
 // REPRESENATIVE
@@ -824,7 +824,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/melee/classic_baton/militarypolice = 1,
-		/obj/item/razor = 1
+		/obj/item/cosmetics/razor = 1
 		)
 
 /datum/outfit/job/ncr/f13mp/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
