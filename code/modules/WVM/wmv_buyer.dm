@@ -54,7 +54,7 @@
 								/obj/item/export/bottle/blazaam = 10,
 								/obj/item/export/bottle/trappist = 10,
 								/obj/item/export/bottle/minikeg = 10,
-								/obj/item/export/bottle/nukashine = 50,
+								/obj/item/export/bottle/nukashine = 10,
 								/obj/item/reagent_containers/hypospray/medipen/stimpak = 5,
 								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 20,
 								/obj/item/reagent_containers/food/snacks/pemmican = 100
