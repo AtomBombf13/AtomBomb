@@ -127,7 +127,7 @@
 	item_color = "ncr_dress"
 
 /obj/item/clothing/under/f13/ncrcf
-	name = "caravaneer outfit"
+	name = "NCRCF uniform"
 	desc = "A cheap blue shirt and slacks, the letters 'NCRCF' emblazened on the back. A meek reminder of who owns you."
 	can_adjust = TRUE
 	icon_state = "ncrcf"
@@ -466,31 +466,6 @@
 	item_color = "rag"
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
-
-
-//Roma Legion Legacy delete?
-
-/obj/item/clothing/under/f13/romaskirt
-	name = "roma legionary fatigues"
-	desc = "A worn and abused pair of fatigues, leftover from the legionary's service to Caesar."
-	icon_state = "roma_legion"
-	item_state = "roma_legion"
-	item_color = "roma_legion"
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/f13/romaskirt/auxilia
-	name = "roma auxilia fatigues"
-	desc = "A black skirt and a thick long sleeve cotton shirt."
-	icon_state = "roma_auxilia"
-	item_state = "roma_auxilia"
-	item_color = "roma_auxilia"
-	var/sleeves_adjusted = 0
-	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
-	alt_covers_chest = TRUE
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = TRUE
 
 // Generic
 
