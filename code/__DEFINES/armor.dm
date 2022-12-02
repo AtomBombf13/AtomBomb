@@ -337,7 +337,8 @@
 		"wound" = 50, \
 		"damage_threshold" = 18)
 		
-//**#define ARMOR_VALUE_APA list(\
+/*
+#define ARMOR_VALUE_APA list(\
 		"melee" = 55, \
 		"bullet" = 55, \
 		"laser" = 55, \
@@ -348,7 +349,8 @@
 		"fire" = 70, \
 		"acid" = 95, \
 		"wound" = 55, \
-		"damage_threshold" = 20)**//
+		"damage_threshold" = 20)
+*/
 
 /* Armor Subclass multipliers
  * Modifies base armor slots by these values
