@@ -798,8 +798,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	flag = F13MP
 	total_positions = 2
 	spawn_positions = 2
-	description = "You are NOT allowed to participate in front-line combat outside the base/embassy. You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening. Orders of arrests or diciplinary measures may be given to you from the Senior Enlisted Advisor or Officers unless they are in violation of COMJ."
-	supervisors = "NCRA Officers and the Senior Enlisted Advisor"
+	description = "You are NOT allowed to participate in front-line combat outside the base/embassy. You are tasked with the supervision of the NCRA to maintain internal order and disciplice and to prevent any warcrimes from happening. Orders of arrests or diciplinary measures may be given to you from the Sergeants or Officers unless they are in violation of COMJ."
+	supervisors = "NCRA Officers and the Sergeants"
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_MILITARY_POLICE
 	outfit = /datum/outfit/job/ncr/f13mp
@@ -811,7 +811,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	id = /obj/item/card/id/dogtag/ncrsergeant
 	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/ncr
-	accessory = /obj/item/clothing/accessory/armband/black
+	accessory = /obj/item/clothing/accessory/ncr/CPL
 	glasses	= /obj/item/clothing/glasses/sunglasses/big
 	head = /obj/item/clothing/head/f13/ncr/mp
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
