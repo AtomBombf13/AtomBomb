@@ -48,7 +48,8 @@ Raider
 	/datum/outfit/loadout/raider_painspike,	//Shotgunner build, goon out
 	/datum/outfit/loadout/quack_doctor,		//Raider doctor or doctor for raiders doesn't really matter how you call this
 	/datum/outfit/loadout/raider_smith,		//Raider smith or smith for raiders same thing as doctor, has arclight armor
-	/datum/outfit/loadout/raider_tribal		//Tribal raider, bone spear some bad armor and tradition, el classico
+	/datum/outfit/loadout/raider_tribal,	//Tribal raider, bone spear some bad armor and tradition, el classico
+	/datum/outfit/loadout/chinese_remnant   //ex chinese
 	)
 
 
@@ -242,6 +243,19 @@ Raider
 		/obj/item/melee/onehanded/knife/bone = 1,
 		/obj/item/book/granter/trait/bigleagues = 1
 		)
+
+/datum/outfit/loadout/chinese_remnant
+	name = "Chinese Remnant"
+	uniform = /obj/item/clothing/under/f13/chinese
+	suit = /obj/item/clothing/suit/armor/medium/vest/chinese
+	suit_store = /obj/item/gun/ballistic/automatic/type93/worn
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	back = /obj/item/storage/backpack/satchel/explorer
+	gloves = /obj/item/clothing/gloves/color/brown
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m556/rifle = 1)
+
+
 
 /*
 Wastelander
