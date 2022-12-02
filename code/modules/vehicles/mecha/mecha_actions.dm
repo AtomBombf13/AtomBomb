@@ -166,7 +166,7 @@
 	if(!chassis.leg_overload_mode)
 		button_icon_state = "mech_overload_on"
 		chassis.bumpsmash = TRUE
-		chassis.movedelay = min(1, round(chassis.movedelay * 0.5))
+		chassis.movedelay = max(1, round(chassis.movedelay *0.7, 0.25))
 		chassis.step_energy_drain = max(chassis.overload_step_energy_drain_min,chassis.step_energy_drain*chassis.leg_overload_coeff)
 		to_chat(owner, "[icon2html(chassis, owner)]<span class='danger'>You enable leg actuators overload.</span>")
 	else

@@ -1,4 +1,6 @@
 Rust-based atmospherics for Space Station 13 using [auxtools](https://github.com/willox/auxtools).
+## Atom Bomb
+Based and maintained from Citadel Station by way of Desert Rose, Fortuna, The Wasteland, Coyote Bayou, and Atom Bomb.
 
 Still quite early. Monstermos has an annoying anisotropy--it prefers to go left and right rather than up or down. Up and down are first in the adjacency bitfield (little endian wise), so this isn't *terribly* surprising, but it is annoying. Perhaps it's a problem with the algorithm--am I using a stack instead of a queue?
 

@@ -13863,7 +13863,6 @@
 /area/f13/wasteland)
 "aZR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/shotgun/bean,
 /obj/item/restraints/legcuffs/bola,
 /obj/item/restraints/legcuffs/bola,
 /obj/item/restraints/handcuffs,
@@ -24179,8 +24178,6 @@
 /area/f13/legion)
 "dSW" = (
 /obj/structure/closet,
-/obj/item/ammo_box/shotgun/bean,
-/obj/item/ammo_box/shotgun/bean,
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},

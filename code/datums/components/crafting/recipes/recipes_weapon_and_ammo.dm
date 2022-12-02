@@ -870,6 +870,22 @@
 	always_available = FALSE
 
 
+//wattz1000
+/datum/crafting_recipe/wattz1k
+	name = "wattz 1000 laser pistol"
+	result = /obj/item/gun/energy/laser/wattz
+	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/prewar = 5,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/electronicparts = 2
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 180
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //aep7
 /datum/crafting_recipe/AEP7
 	name = "AEP-7"
@@ -1264,7 +1280,7 @@
 
 				)
 	tools = list(TOOL_AWORKBENCH)
-	time = 120
+	time = 180
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
