@@ -10,8 +10,8 @@
 		else
 			enemies -= WEAKREF(L)
 	else if(ismecha(A))
-		var/obj/mecha/M = A
-		if(M.occupant)
+		var/obj/vehicle/sealed/mecha/M = A
+		if(M.occupants)
 			return A
 
 /mob/living/simple_animal/hostile/retaliate/ListTargets()
@@ -40,10 +40,10 @@
 			if(faction_check_mob(M) && attack_same || !faction_check_mob(M))
 				enemies |= WEAKREF(M)
 		else if(ismecha(A))
-			var/obj/mecha/M = A
-			if(M.occupant)
+			var/obj/vehicle/sealed/mecha/M = A
+			if(M.occupants)
 				enemies |= WEAKREF(M)
-				enemies |= WEAKREF(M.occupant)
+				enemies |= WEAKREF(M.occupants)
 
 	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
 		if(faction_check_mob(H) && !attack_same && !H.attack_same)
