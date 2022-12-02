@@ -323,7 +323,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	jobtype = /datum/job/ncr/f13sergeant
 	id = /obj/item/card/id/dogtag/ncrsergeant
 	accessory = /obj/item/clothing/accessory/ncr/SGT
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerlessf
+	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mantreinf
 	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/ncr
@@ -374,7 +374,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 2,
 		/obj/item/melee/classic_baton/militarypolice = 1,
-		/obj/item/ammo_box/magazine/m5mm = 1
+		/obj/item/ammo_box/magazine/m5mm = 1,
 		/obj/item/razor = 1
 		)
 
@@ -823,7 +823,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/pistol45 = 3,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
-		/obj/item/melee/classic_baton/militarypolice = 1
+		/obj/item/melee/classic_baton/militarypolice = 1,
 		/obj/item/razor = 1
 		)
 
