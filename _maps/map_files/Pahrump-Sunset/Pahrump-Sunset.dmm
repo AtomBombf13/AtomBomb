@@ -32070,6 +32070,13 @@
 /obj/item/circuitboard/computer/arcade/orion_trail,
 /turf/open/floor/carpet,
 /area/f13/building/mall)
+"hLb" = (
+/obj/machinery/jukebox{
+	density = 0;
+	pixel_y = 22
+	},
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/city)
 "hLg" = (
 /obj/structure/debris/v1,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
@@ -101773,7 +101780,7 @@ cnZ
 vOs
 eOo
 xvy
-kSp
+hLb
 vOs
 jpO
 jpO
