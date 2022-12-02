@@ -840,9 +840,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13combatmedic
 	title = "NCR Combat Medic"
 	flag = F13COMBATMEDIC
-	total_positions = 1
-	spawn_positions = 1
-	description = "You are a senior enlisted with a medical skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are no non-commissioned officers present."
+	total_positions = 2
+	spawn_positions = 2
+	description = "Your enlisted with a medical skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are no non-commissioned officers present."
 	supervisors = "Corporals and Above"
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
