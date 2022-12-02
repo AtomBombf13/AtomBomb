@@ -842,7 +842,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	flag = F13COMBATMEDIC
 	total_positions = 2
 	spawn_positions = 2
-	description = "Your enlisted with a medical skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are no non-commissioned officers present."
+	description = "You are enlisted with a medical skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are no non-commissioned officers present."
 	supervisors = "Corporals and Above"
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
