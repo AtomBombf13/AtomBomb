@@ -12,14 +12,14 @@
 	socks = "Short"
 	socks_color = random_clothing_dye()
 	use_custom_skin_tone = FALSE
-	skin_tone = pick("latino", "mediterranean")
-	hair_style = pick("Trimmed (Flat)", "Shave (Marine)")
-	facial_hair_style = pick("Beard (5 o\'Clock)", "Beard (3 o\'Clock)")
+	skin_tone = pick("latino", "mediterranean", "caucasion3","caucasian2","caucasion1","african","albino")
+	hair_style = pick("Trimmed (Flat)", "Shave (Marine)","Business (CIA)","Bob","Short", "Short (Afro)")
+	facial_hair_style = pick("Beard (5 o\'Clock)", "Beard (3 o\'Clock)", "Clean shave (Hairless)")
 	hair_color = random_hair_shade()
 	facial_hair_color = random_hair_shade()
-	left_eye_color = random_dark_shade()
-	right_eye_color = random_dark_shade()
-	age = (rand(20, 25))
+	left_eye_color = "#000000"()
+	right_eye_color = "#000000"()
+	age = (rand(20, 40))
 
 
 /datum/preferences/proc/update_preview_icon(current_tab)
