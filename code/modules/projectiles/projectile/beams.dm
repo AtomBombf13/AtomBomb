@@ -338,7 +338,7 @@
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
-	damage = 25
+	damage = 24
 	hitscan = TRUE
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
@@ -346,6 +346,18 @@
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
 	light_color = LIGHT_COLOR_BLUE
+
+
+/obj/item/projectile/beam/laser/rechargerrifle/hitscan //histcan recharger rifle
+	name = "recharger beam"
+	damage = 19
+	hitscan = TRUE
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+	light_color = LIGHT_COLOR_BLUEGREEN
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
@@ -508,7 +520,7 @@
 
 /obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
 	damage = 7
-
+	
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
 	damage = 10
