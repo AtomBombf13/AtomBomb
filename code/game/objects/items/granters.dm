@@ -662,6 +662,13 @@
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/autoaxe)
 
+obj/item/book/granter/crafting_recipe/energy
+	name = "Future Weapons Today!"
+	desc = "A magazine series covering the latest trends in weapons technology. Though it probably seems a little out of date now"
+	oneuse = TRUE
+	remarks = list("Always keep the focusing lens on your laser weapons free of cracks", "Plasma gets hot! Always make sure the magnets on the weapon are in working order", "Laser weapons excel in precision but plasma can burn through almost any armor", "Energy weapons have few moving parts but they have very little tolerenace for their components getting knocked around.") 
+	crafting_recipe_types = list(/datum/crafting_recipe/wattz1k, /datum/crafting_recipe/AEP7, /datum/crafting_recipe/AER9, /datum/crafting_recipe/rechargerpistol, /datum/crafting_recipe/wattz2k)
+	
 // New Blueprints, yay! -Superballs
 /obj/item/book/granter/crafting_recipe/blueprint
 	name = "blueprint"
@@ -972,12 +979,12 @@
 	remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
 
 /obj/item/book/granter/trait/explosives
-	name = "Anarchist Cookbook"
-	desc = "An old manual for underground terrorist groups and liberation armies on how to leave their mark on their favorite regime."
+	name = "Patriot's Cookbook"
+	desc = "A magazine containing articles on explosives and how to make them. Look's like it was banned by the pre-war government."
 	oneuse = TRUE
 	granted_trait = TRAIT_EXPLOSIVE_CRAFTING
 	traitname = "explosive crafting"
-	remarks = list("If you want to get started making bombs, you're going to need a lot of igniters and black powder.", "Did a Follower write this book, or something?", "All thermite takes is some aluminum and iron.", "Coconut shells make acceptable grenade casings in a pinch.")
+	remarks = list("If you want to get started making bombs, you're going to need a lot of igniters and black powder.", "You can use abraxo cleaner as a source of nitrates?", "All thermite takes is some aluminum and iron.", "Coconut shells make acceptable grenade casings in a pinch.")
 	crafting_recipe_types = list(/datum/crafting_recipe/dynamite, /datum/crafting_recipe/pipebomb, /datum/crafting_recipe/smokebomb, /datum/crafting_recipe/empgrenade, /datum/crafting_recipe/flashbang, /datum/crafting_recipe/rocket_base, /datum/crafting_recipe/weakrocket)
 
 /obj/item/book/granter/trait/explosives_advanced

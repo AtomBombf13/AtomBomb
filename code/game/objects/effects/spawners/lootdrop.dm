@@ -674,7 +674,6 @@
 	loot = list("" = 25,
 		/obj/item/ammo_box/magazine/wt550m9 = 1,
 		/obj/item/ammo_casing/shotgun/buckshot = 7,
-		/obj/item/ammo_casing/shotgun/rubbershot = 7,
 		/obj/item/ammo_casing/a762 = 15,
 		/obj/item/ammo_box/stripper/a762 = 15,
 		)
@@ -686,7 +685,6 @@
 	loot = list("" = 50,
 		/obj/item/ammo_box/magazine/wt550m9 = 2,
 		/obj/item/ammo_casing/shotgun/buckshot = 10,
-		/obj/item/ammo_casing/shotgun/rubbershot = 10,
 		/obj/item/ammo_casing/a762 = 7,
 		/obj/item/ammo_box/stripper/a762 = 7,
 		)
@@ -697,10 +695,8 @@
 	spawn_on_turf = FALSE
 	loot = list("" = 50,
 		/obj/item/ammo_box/shotgun/loaded/buckshot = 5,
-		/obj/item/ammo_box/shotgun/loaded/beanbag = 5,
 		/obj/item/ammo_box/shotgun/loaded/incendiary = 5,
 		/obj/item/ammo_casing/shotgun/buckshot = 8,
-		/obj/item/ammo_casing/shotgun/rubbershot = 9,
 		/obj/item/ammo_casing/shotgun = 8,
 		/obj/item/ammo_casing/shotgun/incendiary = 10,
 		)

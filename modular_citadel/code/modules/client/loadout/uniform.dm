@@ -759,14 +759,6 @@
 							"Camp Follower"
 							)
 
-/datum/gear/uniform/legion/roma
-	name = "roma auxilia robes"
-	path = /obj/item/clothing/under/f13/romaskirt/auxilia
-	restricted_desc = "Legion Camp Duties"
-	restricted_roles = list("Legion Off-Duty",
-							"Camp Follower"
-							)
-
 //Skirts
 
 /datum/gear/uniform/skirt/white
