@@ -218,7 +218,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 15, \
-		"damage_threshold" = 5)
+		"damage_threshold" = 6)
 
 #define ARMOR_VALUE_METAL_ARMOR list(\
 		"melee" = 30, \
@@ -231,7 +231,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 15, \
-		"damage_threshold" = 6)
+		"damage_threshold" = 7)
 
 #define ARMOR_VALUE_REINFORCED_METAL_ARMOR list(\
 		"melee" = 40, \
@@ -244,7 +244,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 15, \
-		"damage_threshold" = 8)
+		"damage_threshold" = 9)
 
 #define ARMOR_VALUE_DUSTER_ARMOR list(\
 		"melee" = 20, \
@@ -283,7 +283,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 20, \
-		"damage_threshold" = 10)
+		"damage_threshold" = 8)
 
 #define ARMOR_VALUE_REINFORCED_COMBAT_ARMOR list(\
 		"melee" = 30, \
@@ -296,7 +296,7 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 20, \
-		"damage_threshold" = 12)
+		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_RIOT_ARMOR list(\
 		"melee" = 50, \
@@ -309,7 +309,7 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 30, \
-		"damage_threshold" = 12)
+		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_SALVAGE list(\
 		"melee" = 45, \
