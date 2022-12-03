@@ -1942,9 +1942,13 @@
 	},
 /area/f13/building/massfusion)
 "bxo" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/closed/wall/r_wall/rust,
-/area/f13/clinic)
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/city)
 "bxs" = (
 /obj/structure/timeddoor/sixtyminute,
 /turf/closed/wall/r_wall/rust,
@@ -2070,9 +2074,16 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bBl" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/clinic)
+/obj/structure/table,
+/obj/machinery/computer/terminal{
+	dir = 4;
+	termtag = "Business"
+	},
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/city)
 "bBm" = (
 /obj/structure/simple_door/bunker,
 /turf/open/floor/plating/tunnel,
@@ -7612,7 +7623,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "djs" = (
-/obj/structure/wreck/trash/machinepiletwo,
+/obj/structure/chair/f13foldupchair{
+	dir = 8
+	},
+/obj/effect/landmark/start/f13/mobboss,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -7800,7 +7814,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/caves)
 "dqZ" = (
-/obj/structure/chair/f13foldupchair,
+/obj/machinery/door/airlock/wood{
+	req_access_txt = "87"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -7844,7 +7860,7 @@
 	},
 /area/f13/tunnel)
 "duv" = (
-/obj/item/kirbyplants/random,
+/obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -7990,9 +8006,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "dCJ" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/structure/table,
+/obj/item/storage/toolbox/mechanical/old,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -8018,7 +8033,9 @@
 /turf/open/water,
 /area/f13/tunnel)
 "dDJ" = (
-/obj/machinery/mineral/wasteland_vendor/denchem,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -8586,11 +8603,10 @@
 	},
 /area/f13/bunker)
 "dUl" = (
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/pill/patch/jet,
+/obj/machinery/autolathe,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -9003,11 +9019,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
 "elV" = (
-/obj/structure/chair/f13foldupchair{
-	pixel_y = 14
-	},
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "elZ" = (
@@ -9785,9 +9802,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/caves)
 "eLg" = (
-/obj/structure/bed/old,
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/structure/table,
+/obj/structure/closet/crate/large,
+/obj/item/stack/ore/blackpowder/twenty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/five,
+/obj/item/stack/sheet/hay/twenty,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/cloth/five,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "eLh" = (
@@ -9886,8 +9910,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "ePA" = (
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/machinery/smartfridge/bottlerack/drug_storage,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "ePW" = (
@@ -10681,14 +10709,9 @@
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
 "fxj" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/machinery/mineral/wasteland_vendor/denchem,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "fxo" = (
@@ -10830,9 +10853,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "fCT" = (
-/obj/structure/simple_door/metal/barred,
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/structure/rack/shelf_metal,
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/item/reagent_containers/pill/patch/jet,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "fDh" = (
@@ -10848,20 +10875,15 @@
 /obj/item/key/scollar,
 /obj/item/assembly/signaler,
 /obj/item/assembly/signaler,
-/turf/open/floor/f13{
-	dir = 10;
-	icon_state = "redmark"
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "fET" = (
-/obj/structure/guncase,
-/obj/item/gun/ballistic/revolver/caravan_shotgun,
-/obj/item/gun/ballistic/revolver/caravan_shotgun,
-/obj/item/gun/ballistic/automatic/pistol/ninemil,
-/obj/item/gun/ballistic/automatic/pistol/ninemil,
-/turf/open/floor/f13{
-	dir = 10;
-	icon_state = "redmark"
+/obj/machinery/workbench/bottler,
+/obj/structure/table,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "fFh" = (
@@ -11631,9 +11653,9 @@
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "glg" = (
-/obj/structure/bed/oldalt,
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/structure/closet/anchored,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "glo" = (
@@ -11976,11 +11998,13 @@
 	},
 /area/f13/city)
 "gzT" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/f13{
-	icon_state = "reddirtyfull"
+/obj/structure/rack/shelf_metal,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/magazine/m22smg,
+/obj/item/ammo_box/magazine/m22smg,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "gzX" = (
@@ -12661,14 +12685,13 @@
 	},
 /area/f13/enclave)
 "hbR" = (
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	pixel_x = -15
-	},
-/turf/open/floor/f13{
-	color = "#f7e8e1";
-	icon_state = "rampdowntop"
+/obj/structure/rack/shelf_metal,
+/obj/item/gun/ballistic/automatic/pistol/ninemil,
+/obj/item/gun/ballistic/automatic/pistol/ninemil,
+/obj/item/gun/ballistic/revolver/caravan_shotgun,
+/obj/item/gun/ballistic/revolver/caravan_shotgun,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "hcf" = (
@@ -12818,15 +12841,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/caves)
 "hil" = (
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	layer = 2.8;
-	pixel_x = 12
-	},
-/turf/open/floor/f13{
-	color = "#f7e8e1";
-	icon_state = "rampdowntop"
+/obj/machinery/workbench/forge,
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "hio" = (
@@ -14830,9 +14848,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "iLX" = (
-/obj/machinery/vending/cola,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
+/turf/open/floor/f13{
+	icon_state = "redrustyfull"
 	},
 /area/f13/city)
 "iMR" = (
@@ -15113,11 +15130,12 @@
 	},
 /area/f13/bunker)
 "iXS" = (
-/obj/machinery/door/airlock/wood{
-	req_access_txt = "87"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
+/obj/structure/barricade/bars,
+/obj/structure/table,
+/obj/item/lock_construct,
+/obj/item/key,
+/turf/open/floor/f13{
+	icon_state = "redrustyfull"
 	},
 /area/f13/city)
 "iXV" = (
@@ -15644,9 +15662,8 @@
 	},
 /area/f13/tunnel)
 "juq" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
 	},
 /area/f13/city)
 "jut" = (
@@ -15671,11 +15688,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/building/museum)
 "jvS" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
+/obj/structure/bed/old,
+/turf/open/floor/f13{
+	icon_state = "redrustyfull"
 	},
 /area/f13/city)
 "jwj" = (
@@ -15818,14 +15833,9 @@
 	},
 /area/f13/radiation)
 "jBB" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/magazine/m22smg,
-/obj/item/ammo_box/magazine/m22smg,
+/obj/structure/simple_door/metal/barred,
 /turf/open/floor/f13{
-	dir = 10;
-	icon_state = "redmark"
+	icon_state = "redrustyfull"
 	},
 /area/f13/city)
 "jBD" = (
@@ -15987,7 +15997,7 @@
 /area/f13/tunnel)
 "jIh" = (
 /obj/machinery/light/small,
-/obj/structure/table,
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -17680,12 +17690,6 @@
 	icon_state = "damaged3"
 	},
 /area/f13/caves)
-"kXe" = (
-/obj/structure/barricade/bars,
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
-	},
-/area/f13/city)
 "kXf" = (
 /obj/structure/simple_door/bunker,
 /obj/effect/decal/cleanable/dirt,
@@ -19291,16 +19295,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/radiation)
-"mky" = (
-/obj/structure/table,
-/obj/machinery/computer/terminal{
-	dir = 4;
-	termtag = "Business"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/city)
 "mkG" = (
 /obj/structure/closet/fridge,
 /obj/item/trash/f13/rotten,
@@ -20280,14 +20274,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"mYD" = (
-/obj/effect/turf_decal/stripes/red/line{
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/city)
 "mYS" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -23463,18 +23449,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/radiation)
-"pGJ" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	light_color = "red"
-	},
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
-	},
-/area/f13/city)
 "pGN" = (
 /obj/structure/barricade/wooden/strong,
 /obj/structure/barricade/wooden/strong,
@@ -29502,15 +29476,6 @@
 	icon_state = "tealwhrusty_chess2"
 	},
 /area/f13/enclave)
-"uoQ" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 8
-	},
-/obj/effect/landmark/start/f13/mobboss,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/city)
 "upm" = (
 /mob/living/simple_animal/hostile/renegade/guardian,
 /turf/open/floor/f13{
@@ -30249,11 +30214,6 @@
 /obj/item/storage/belt/holster,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
-"uMN" = (
-/turf/open/floor/f13{
-	icon_state = "reddirtyfull"
-	},
-/area/f13/city)
 "uMO" = (
 /obj/effect/landmark/start/f13/ncrtrooper,
 /obj/effect/landmark/start/f13/ncrtrooper,
@@ -64583,14 +64543,14 @@ kMC
 dGb
 bsC
 aae
-iCR
-iCR
-iCR
-iCR
-xhE
-iCR
-iCR
-iCR
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aae
 aae
 aae
@@ -64840,14 +64800,14 @@ bsC
 bsC
 bsC
 aae
-iCR
-djs
-dUl
-kXe
-ePA
-fxj
-glg
-iCR
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aae
 aae
 aae
@@ -65097,17 +65057,17 @@ bsC
 bsC
 bsC
 aae
-iCR
-dqZ
-uuN
-kXe
-ePA
-uMN
-ePA
-iCR
-iCR
-iCR
-iCR
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aae
 aae
 aae
@@ -65354,17 +65314,17 @@ bsC
 aae
 aae
 aae
-iCR
-duv
-uuN
-kXe
-kXe
-fCT
-kXe
-iCR
-iLX
-juq
-iCR
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aae
 aae
 aae
@@ -65611,17 +65571,17 @@ bsC
 aae
 aae
 aae
-iCR
-dCJ
-uuN
-uuN
-uuN
-uuN
-uuN
-hbR
-uuN
-uuN
-iCR
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aae
 aae
 aae
@@ -65868,17 +65828,17 @@ bsC
 aae
 aae
 aae
-iCR
-dDJ
-uuN
-uuN
-uuN
-uuN
-uuN
-hil
-uuN
-uuN
-iCR
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aae
 aae
 aae
@@ -66125,25 +66085,25 @@ bCt
 aae
 aae
 aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 iCR
 iCR
 iCR
-kXe
-kXe
-fCT
-kXe
 iCR
-dCJ
-jvS
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+iCR
+iCR
+iCR
+iCR
+xhE
+iCR
+iCR
 aae
 aae
 aae
@@ -66384,23 +66344,23 @@ aae
 aae
 aae
 aae
+aae
+aae
+aae
+aae
+aae
 iCR
-elV
-ePA
-ePA
-ePA
+jKk
+jKk
 iCR
-uuN
+dCJ
+fCT
+fEL
+fET
+iCR
+iLX
 jvS
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
 aae
 aae
 aae
@@ -66641,23 +66601,23 @@ aae
 aae
 aae
 aae
-iCR
-uMN
-uMN
-pGJ
-eLg
+aae
+aae
+aae
+aae
+aae
 iCR
 uuN
 duv
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+dDJ
+uuN
+uuN
+duv
+iCR
+iLX
+juq
+iCR
 aae
 aae
 aae
@@ -66898,23 +66858,23 @@ aae
 aae
 aae
 aae
+aae
+aae
+aae
 iCR
-xhE
 iCR
 iCR
-iCR
+uuN
+uuN
+dqZ
+uuN
+uuN
+uuN
+glg
 iCR
 iXS
+jBB
 iCR
-iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
 aae
 aae
 aae
@@ -67155,23 +67115,23 @@ aae
 aae
 aae
 aae
-xgj
-xgj
-iCR
+aae
+aae
+aae
 iCR
 sbr
-uuN
+bxo
 uuN
 jxv
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+vQo
+uuN
+uuN
+glg
+iCR
+dDJ
+uuN
+iCR
 aae
 aae
 aae
@@ -67412,23 +67372,23 @@ aae
 kKt
 xAD
 aae
-xgj
-xgj
-iCR
+aae
+aae
+aae
 iCR
 gzS
 uuN
 uuN
 jIh
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+dUl
+uuN
+uuN
+uuN
+dqZ
+uuN
+uuN
+iCR
 aae
 aae
 aae
@@ -67670,22 +67630,22 @@ aae
 xAD
 aae
 aae
-xgj
-iCR
+aae
+aae
 iCR
 iCR
 uuN
 uuN
 uuN
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+elV
+uuN
+uuN
+gzT
+iCR
+dDJ
+uuN
+iCR
 aae
 aae
 aae
@@ -67927,22 +67887,22 @@ aae
 aae
 xAD
 aae
-xgj
+aae
+aae
+aae
 iCR
-fEL
-gzT
-mYD
+uuN
 wGY
 wGY
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+eLg
+uuN
+uuN
+hbR
+iCR
+iXS
+jBB
+iCR
 aae
 aae
 aae
@@ -68184,22 +68144,22 @@ aae
 aae
 aae
 aae
-xgj
+aae
+aae
+aae
 iCR
-jBB
-uMN
-mYD
-mky
+uuN
 jKk
+bBl
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+ePA
+uuN
+uuN
+hil
+iCR
+iLX
+iLX
+iCR
 aae
 aae
 aae
@@ -68441,22 +68401,22 @@ aae
 aae
 aae
 aae
-xgj
+aae
+aae
+aae
 iCR
-fET
-uMN
-mYD
-uoQ
+uuN
+uuN
+djs
+iCR
+fxj
+uuN
+uuN
 uuN
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+juq
+jvS
+iCR
 aae
 aae
 aae
@@ -68698,7 +68658,9 @@ aae
 aae
 aae
 aae
-xgj
+aae
+aae
+aae
 iCR
 iCR
 iCR
@@ -68706,14 +68668,12 @@ iCR
 iCR
 iCR
 iCR
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+iCR
+iCR
+iCR
+xhE
+iCR
+iCR
 aae
 aae
 aae
