@@ -981,10 +981,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building)
-"bFu" = (
-/obj/structure/destructible/tribal_torch/lit,
-/turf/open/floor/wood_common,
-/area/f13/city)
 "bFw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/junk/oldpipes,
@@ -7833,15 +7829,14 @@
 	pixel_x = 6;
 	pixel_y = -3
 	},
-/obj/machinery/computer/terminal{
-	pixel_x = -7;
-	termtag = "Projector"
-	},
 /obj/machinery/computer/security/bos{
 	circuit = /obj/item/circuitboard/computer/security;
 	name = "Eastwood police department camera terminal";
 	network = list("Eastwood");
 	pixel_x = 8
+	},
+/obj/machinery/computer/secure_data/townrecords{
+	pixel_x = -8
 	},
 /turf/open/floor/carpet/red,
 /area/f13/city)

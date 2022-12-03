@@ -25385,16 +25385,15 @@
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
 "eAO" = (
-/obj/machinery/computer/terminal{
-	pixel_x = -8;
-	termtag = "Projector"
-	},
 /obj/structure/table,
 /obj/machinery/computer/security/bos{
 	circuit = /obj/item/circuitboard/computer/security;
 	name = "Eastwood police department camera terminal";
 	network = list("Eastwood");
 	pixel_x = 8
+	},
+/obj/machinery/computer/secure_data/townrecords{
+	pixel_x = -8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -48505,10 +48504,8 @@
 	network = list("Eastwood");
 	pixel_y = 8
 	},
-/obj/machinery/computer/terminal{
-	dir = 8;
-	pixel_y = -2;
-	termtag = "Projector"
+/obj/machinery/computer/secure_data/townrecords{
+	dir = 8
 	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
@@ -51251,17 +51248,17 @@
 /area/f13/building)
 "qIP" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/terminal{
-	dir = 1;
-	pixel_x = -8;
-	pixel_y = 4
-	},
 /obj/machinery/computer/security/bos{
 	circuit = /obj/item/circuitboard/computer/security;
 	dir = 1;
 	name = "Eastwood police department camera terminal";
 	network = list("Eastwood");
 	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/machinery/computer/secure_data/townrecords{
+	dir = 1;
+	pixel_x = -8;
 	pixel_y = 4
 	},
 /turf/open/floor/f13{
@@ -54273,12 +54270,12 @@
 	pixel_x = 8;
 	pixel_y = 4
 	},
-/obj/machinery/computer/terminal{
+/obj/structure/table/reinforced,
+/obj/machinery/computer/secure_data/townrecords{
 	dir = 1;
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/structure/table/reinforced,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -61600,14 +61597,13 @@
 /area/f13/building/massfusion)
 "vLd" = (
 /obj/structure/table,
-/obj/machinery/computer/terminal{
-	pixel_x = 8;
-	termtag = "Projector"
-	},
 /obj/machinery/computer/security/bos{
 	circuit = /obj/item/circuitboard/computer/security;
 	name = "Eastwood police department camera terminal";
 	network = list("Eastwood");
+	pixel_x = 8
+	},
+/obj/machinery/computer/secure_data/townrecords{
 	pixel_x = -8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
