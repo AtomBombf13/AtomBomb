@@ -218,7 +218,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 15, \
-		"damage_threshold" = 6)
+		"damage_threshold" = 5)
 
 #define ARMOR_VALUE_METAL_ARMOR list(\
 		"melee" = 30, \
@@ -244,7 +244,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 15, \
-		"damage_threshold" = 9)
+		"damage_threshold" = 8)
 
 #define ARMOR_VALUE_DUSTER_ARMOR list(\
 		"melee" = 20, \
