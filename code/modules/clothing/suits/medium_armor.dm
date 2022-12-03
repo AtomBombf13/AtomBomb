@@ -161,7 +161,7 @@
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
 
-//bullet: 50, melee: 25, laser: 15, threshold: 11
+//bullet: 50, melee: 25, laser: 15, threshold: 9
 /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
