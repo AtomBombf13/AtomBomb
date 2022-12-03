@@ -161,6 +161,7 @@
 	icon_state = "vest_kevlar"
 	item_state = "vest_kevlar"
 
+//bullet: 50, melee: 25, laser: 15, threshold: 9
 /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
@@ -169,7 +170,8 @@
 	icon_state = "vest_armor"
 	item_state = "vest_armor"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T3, ARMOR_MODIFIER_UP_DT_T3)
+	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/vest/russian
 	name = "russian vest"
@@ -637,6 +639,8 @@
 /////////
 
 //Army
+
+//melee: 20, bullet: 20, laser: 10, threshold: 7
 /obj/item/clothing/suit/armor/medium/vest/ncr
 	name = "NCR patrol vest"
 	desc = "A standard issue NCR Infantry vest."
@@ -645,7 +649,8 @@
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-	armor = ARMOR_VALUE_LEATHER_ARMOR
+	armor = ARMOR_VALUE_DUSTER_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	name = "NCR mantle vest"
@@ -730,39 +735,46 @@
 	armor = ARMOR_VALUE_REINFORCED_LEATHER_ARMOR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
+// bullet: 35, melee: 35, laser: 25, threshold: 4
 /obj/item/clothing/suit/armor/medium/legion/vet
 	name = "legion veteran armor"
 	desc = "An armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
 	icon_state = "leg_vet"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
+// bullet: 35, melee: 35, laser: 25, threshold: 6
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the flag of the Legion worn on the back."
 	icon_state = "leg_vex"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3, ARMOR_MODIFIER_DOWN_LASER_T1)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT //heavier
 
 /obj/item/clothing/suit/armor/medium/legion/orator
 	name = "legion orator armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "leg_orator"
 
-/obj/item/clothing/suit/armor/medium/legion/centurion //good all around
+/obj/item/clothing/suit/armor/medium/legion/centurion //reinforced combat armor
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "leg_cent"
-	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
+	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
 
-/obj/item/clothing/suit/armor/medium/legion/rangercent //speed and bullet resist, sacrifices all else
+//-10 to melee and laser and -2 threshold compared to stock, but has 50 bullet resist and less slowdown
+/obj/item/clothing/suit/armor/medium/legion/rangercent 
 	name = "legion centurion ranger-hunter armor"
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
 	icon_state = "leg_cent_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor = ARMOR_VALUE_METAL_ARMOR
+	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //////////////////////////
@@ -813,7 +825,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "town_command"
 
-/obj/item/clothing/suit/armor/medium/duster/sheriff
+/obj/item/clothing/suit/armor/medium/combat/sheriff
 	name = "eastwood provost's trenchcoat"
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
