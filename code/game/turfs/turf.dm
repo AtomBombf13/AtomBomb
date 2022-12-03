@@ -68,8 +68,9 @@
 		stack_trace("Warning: [src]([type]) initialized multiple times!")
 	flags_1 |= INITIALIZED_1
 
-	// by default, vis_contents is inherited from the turf that was here before
-	vis_contents.Cut()
+	// Checking length(vis_contents) in a proc this hot has huge wins for performance.
+	if(length(vis_contents))
+		vis_contents.Cut()
 
 	if(color)
 		add_atom_colour(color, FIXED_COLOUR_PRIORITY)
@@ -79,7 +80,9 @@
 	levelupdate()
 	if(smooth)
 		queue_smooth(src)
-	visibilityChanged()
+
+	if (!mapload)
+		visibilityChanged()
 
 	if(initial(opacity)) // Could be changed by the initialization of movable atoms in the turf.
 		base_opacity = initial(opacity)
@@ -159,6 +162,8 @@
 	flags_1 &= ~INITIALIZED_1
 	requires_activation = FALSE
 	..()
+	if (length(vis_contents))
+		vis_contents.Cut()
 
 /turf/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	user.Move_Pulled(src)
