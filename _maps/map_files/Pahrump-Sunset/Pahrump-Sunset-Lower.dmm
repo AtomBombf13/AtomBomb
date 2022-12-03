@@ -2074,12 +2074,9 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "bBl" = (
-/obj/structure/table,
-/obj/machinery/computer/terminal{
-	dir = 4;
-	termtag = "Business"
+/obj/structure/fireaxecabinet{
+	pixel_y = 30
 	},
-/obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -7623,10 +7620,12 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "djs" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 8
+/obj/structure/table,
+/obj/machinery/computer/terminal{
+	dir = 4;
+	termtag = "Business"
 	},
-/obj/effect/landmark/start/f13/mobboss,
+/obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -7814,9 +7813,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/caves)
 "dqZ" = (
-/obj/machinery/door/airlock/wood{
-	req_access_txt = "87"
+/obj/structure/chair/f13foldupchair{
+	dir = 8
 	},
+/obj/effect/landmark/start/f13/mobboss,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -8006,8 +8006,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "dCJ" = (
-/obj/structure/table,
-/obj/item/storage/toolbox/mechanical/old,
+/obj/machinery/door/airlock/wood{
+	req_access_txt = "87"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -8033,9 +8034,8 @@
 /turf/open/water,
 /area/f13/tunnel)
 "dDJ" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/structure/table,
+/obj/item/storage/toolbox/mechanical/old,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -8603,7 +8603,6 @@
 	},
 /area/f13/bunker)
 "dUl" = (
-/obj/machinery/autolathe,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -9019,10 +9018,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
 "elV" = (
-/obj/machinery/autolathe/ammo/unlocked_basic,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/book/granter/crafting_recipe/gunsmith_two,
-/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/machinery/autolathe,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -9802,14 +9801,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/caves)
 "eLg" = (
-/obj/structure/table,
-/obj/structure/closet/crate/large,
-/obj/item/stack/ore/blackpowder/twenty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/five,
-/obj/item/stack/sheet/hay/twenty,
+/obj/machinery/autolathe/ammo/unlocked_basic,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/cloth/five,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -9910,10 +9905,14 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "ePA" = (
-/obj/machinery/smartfridge/bottlerack/drug_storage,
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/structure/table,
+/obj/structure/closet/crate/large,
+/obj/item/stack/ore/blackpowder/twenty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/five,
+/obj/item/stack/sheet/hay/twenty,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/cloth/five,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -10709,7 +10708,10 @@
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
 "fxj" = (
-/obj/machinery/mineral/wasteland_vendor/denchem,
+/obj/machinery/smartfridge/bottlerack/drug_storage,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -10853,11 +10855,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "fCT" = (
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/pill/patch/jet,
-/obj/item/reagent_containers/pill/patch/jet,
+/obj/machinery/mineral/wasteland_vendor/denchem,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -10868,6 +10866,16 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/caves)
 "fEL" = (
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/structure/rack/shelf_metal,
+/obj/item/reagent_containers/pill/patch/jet,
+/obj/item/reagent_containers/pill/patch/jet,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/city)
+"fET" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/electropack/shockcollar,
 /obj/item/electropack/shockcollar,
@@ -10875,13 +10883,6 @@
 /obj/item/key/scollar,
 /obj/item/assembly/signaler,
 /obj/item/assembly/signaler,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/city)
-"fET" = (
-/obj/machinery/workbench/bottler,
-/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -11653,7 +11654,8 @@
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "glg" = (
-/obj/structure/closet/anchored,
+/obj/machinery/workbench/bottler,
+/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -11998,11 +12000,7 @@
 	},
 /area/f13/city)
 "gzT" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/magazine/m22smg,
-/obj/item/ammo_box/magazine/m22smg,
+/obj/structure/closet/anchored,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -12686,10 +12684,10 @@
 /area/f13/enclave)
 "hbR" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/gun/ballistic/automatic/pistol/ninemil,
-/obj/item/gun/ballistic/automatic/pistol/ninemil,
-/obj/item/gun/ballistic/revolver/caravan_shotgun,
-/obj/item/gun/ballistic/revolver/caravan_shotgun,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/magazine/m22smg,
+/obj/item/ammo_box/magazine/m22smg,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -12841,8 +12839,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/caves)
 "hil" = (
-/obj/machinery/workbench/forge,
-/obj/machinery/light/small,
+/obj/structure/rack/shelf_metal,
+/obj/item/gun/ballistic/automatic/pistol/ninemil,
+/obj/item/gun/ballistic/automatic/pistol/ninemil,
+/obj/item/gun/ballistic/revolver/caravan_shotgun,
+/obj/item/gun/ballistic/revolver/caravan_shotgun,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -14848,8 +14849,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "iLX" = (
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
+/obj/machinery/workbench/forge,
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/city)
 "iMR" = (
@@ -15130,10 +15133,6 @@
 	},
 /area/f13/bunker)
 "iXS" = (
-/obj/structure/barricade/bars,
-/obj/structure/table,
-/obj/item/lock_construct,
-/obj/item/key,
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
 	},
@@ -15662,8 +15661,12 @@
 	},
 /area/f13/tunnel)
 "juq" = (
+/obj/structure/barricade/bars,
+/obj/structure/table,
+/obj/item/lock_construct,
+/obj/item/key,
 /turf/open/floor/f13{
-	icon_state = "reddirtyfull"
+	icon_state = "redrustyfull"
 	},
 /area/f13/city)
 "jut" = (
@@ -15688,9 +15691,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/building/museum)
 "jvS" = (
-/obj/structure/bed/old,
 /turf/open/floor/f13{
-	icon_state = "redrustyfull"
+	icon_state = "reddirtyfull"
 	},
 /area/f13/city)
 "jwj" = (
@@ -15833,7 +15835,7 @@
 	},
 /area/f13/radiation)
 "jBB" = (
-/obj/structure/simple_door/metal/barred,
+/obj/structure/bed/old,
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
 	},
@@ -17690,6 +17692,12 @@
 	icon_state = "damaged3"
 	},
 /area/f13/caves)
+"kXe" = (
+/obj/structure/simple_door/metal/barred,
+/turf/open/floor/f13{
+	icon_state = "redrustyfull"
+	},
+/area/f13/city)
 "kXf" = (
 /obj/structure/simple_door/bunker,
 /obj/effect/decal/cleanable/dirt,
@@ -19295,6 +19303,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/radiation)
+"mky" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/item/folder{
+	pixel_y = 6
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/city)
 "mkG" = (
 /obj/structure/closet/fridge,
 /obj/item/trash/f13/rotten,
@@ -26594,17 +26613,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/tunnel)
-"sbr" = (
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	layer = 2.8;
-	pixel_x = 12
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/city)
 "sbJ" = (
 /obj/structure/simple_door/metal/barred,
 /obj/structure/lattice/catwalk,
@@ -30214,6 +30222,12 @@
 /obj/item/storage/belt/holster,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
+"uMN" = (
+/obj/structure/filingcabinet/security,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/city)
 "uMO" = (
 /obj/effect/landmark/start/f13/ncrtrooper,
 /obj/effect/landmark/start/f13/ncrtrooper,
@@ -66353,13 +66367,13 @@ iCR
 jKk
 jKk
 iCR
-dCJ
-fCT
+dDJ
 fEL
 fET
+glg
 iCR
-iLX
-jvS
+iXS
+jBB
 iCR
 aae
 aae
@@ -66610,13 +66624,13 @@ iCR
 uuN
 duv
 iCR
-dDJ
+dUl
 uuN
 uuN
 duv
 iCR
-iLX
-juq
+iXS
+jvS
 iCR
 aae
 aae
@@ -66861,19 +66875,19 @@ aae
 aae
 aae
 aae
+aae
 iCR
 iCR
+uuN
+uuN
+dCJ
+uuN
+uuN
+uuN
+gzT
 iCR
-uuN
-uuN
-dqZ
-uuN
-uuN
-uuN
-glg
-iCR
-iXS
-jBB
+juq
+kXe
 iCR
 aae
 aae
@@ -67119,7 +67133,7 @@ aae
 aae
 aae
 iCR
-sbr
+iCR
 bxo
 uuN
 jxv
@@ -67127,9 +67141,9 @@ iCR
 vQo
 uuN
 uuN
-glg
+gzT
 iCR
-dDJ
+dUl
 uuN
 iCR
 aae
@@ -67381,11 +67395,11 @@ uuN
 uuN
 jIh
 iCR
-dUl
+elV
 uuN
 uuN
 uuN
-dqZ
+dCJ
 uuN
 uuN
 iCR
@@ -67634,16 +67648,16 @@ aae
 aae
 iCR
 iCR
-uuN
+bBl
 uuN
 uuN
 iCR
-elV
+eLg
 uuN
 uuN
-gzT
+hbR
 iCR
-dDJ
+dUl
 uuN
 iCR
 aae
@@ -67889,19 +67903,19 @@ xAD
 aae
 aae
 aae
-aae
 iCR
+jKk
 uuN
 wGY
 wGY
 iCR
-eLg
+ePA
 uuN
 uuN
-hbR
+hil
 iCR
-iXS
-jBB
+juq
+kXe
 iCR
 aae
 aae
@@ -68146,19 +68160,19 @@ aae
 aae
 aae
 aae
-aae
 iCR
-uuN
 jKk
-bBl
+uuN
+mky
+djs
 iCR
-ePA
+fxj
 uuN
 uuN
-hil
+iLX
 iCR
-iLX
-iLX
+iXS
+iXS
 iCR
 aae
 aae
@@ -68403,19 +68417,19 @@ aae
 aae
 aae
 aae
-aae
 iCR
+uMN
 uuN
 uuN
-djs
+dqZ
 iCR
-fxj
+fCT
 uuN
 uuN
 uuN
 iCR
-juq
 jvS
+jBB
 iCR
 aae
 aae
@@ -68660,7 +68674,7 @@ aae
 aae
 aae
 aae
-aae
+iCR
 iCR
 iCR
 iCR
