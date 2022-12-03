@@ -326,7 +326,7 @@ Knight-Captain
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m2405) // temporary as head scribe taken plasma pistol as they are more plasma / laser and knight is ballistic. Actually accurate?! for BOS?
@@ -605,7 +605,6 @@ Senior Scribe
 /datum/outfit/job/bos/f13seniorscribe
 	name =	"Senior Scribe"
 	jobtype =	/datum/job/bos/f13seniorscribe
-	belt =	/obj/item/storage/belt/utility/full/engi
 	accessory =	/obj/item/clothing/accessory/bos/seniorscribe
 	suit =	/obj/item/clothing/suit/armor/light/duster/bos/scribe/seniorscribe
 	glasses =	/obj/item/clothing/glasses/sunglasses/big
@@ -681,7 +680,6 @@ Scribe
 /datum/outfit/job/bos/f13scribe
 	name = "Scribe"
 	jobtype = /datum/job/bos/f13scribe
-	belt = 			/obj/item/storage/belt/utility/full
 	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
@@ -789,7 +787,7 @@ Senior Knight
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
