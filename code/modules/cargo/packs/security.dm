@@ -331,7 +331,7 @@
 /datum/supply_pack/security/gunsuperhightier
 	name = "Weapons - Prewar Gun"
 	desc = "A sealed crate of a Prewar firearm, an exceptional weapon machined with lost technology."
-	cost = 10000
+	cost = 20000
 	contains = list(/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh)
 	crate_name = "prewar gun crate"
 

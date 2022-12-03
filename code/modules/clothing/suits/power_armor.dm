@@ -329,6 +329,7 @@
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
 	armor_block_chance = 20 //1-in-5
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T2)
 	deflection_chance = 1 //to ensure it doesnt inherit deflect chance from anything above it
 
 /obj/item/clothing/suit/armor/power_armor/t45d
@@ -337,6 +338,7 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T1)
 	armor_block_chance = 25 //1-in-4
 	deflection_chance = 2
 
@@ -353,6 +355,7 @@
 	item_state = "t51bpowerarmor"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 	armor_block_chance = 33 //1-in-3
 	deflection_chance = 5
 
@@ -361,6 +364,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	armor_block_chance = 40 //2-in-5
 	deflection_chance = 7
 
@@ -376,6 +380,7 @@
 	icon_state = "excavator"
 	item_state = "excavator"
 	armor_block_chance = 5 //barely
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T1)
 	deflection_chance = 0
 
 /obj/item/clothing/suit/armor/power_armor/advanced
@@ -383,6 +388,7 @@
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 	armor_block_chance = 50 //every other shot
 	deflection_chance = 10
 
