@@ -268,7 +268,10 @@
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_NORMAL
 
+
 //recharger pistol, looks like but isnt actually the one from FNV
+//20 shots, high damage and no AP
+//intended to be low tier
 /obj/item/gun/energy/laser/recharger
 	name = "Recharger Pistol"
 	desc = "A locally manufactured recharger pistol. As the name implies, it can recharge itself over time using a microfusion breeder."
@@ -277,17 +280,19 @@
 	selfcharge = 1
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	icon_state = "rechargerpistol"
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_NORMAL //not a holdout weapon
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/breeder
+	gun_tags = list()
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_LONG
-	
+	draw_time = GUN_DRAW_LONG
+
 //AEP 7 Laser pistol
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
@@ -577,6 +582,35 @@
 	init_firemodes = list(
 		FULL_AUTO_250
 	)
+
+//worse than the recharger pistol as per FNV, hobo-tier
+//it isnt the same as the one from FNV, sprite is different
+//8 shots, bulky, but infinite ammo, good for mob killing
+/obj/item/gun/energy/laser/rechargerrifle
+	name = "recharger rifle"
+	desc = "A locally produced copy of the recharger rifle. It's a bulky first-generation weapon designed to replenish its energy using radioactive decay."
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "rechargerrifle"
+	item_state = "rechargerrifle"
+	icon_prefix = "rechargerrifle"
+	gun_tags = list()
+	can_remove = 0
+	can_charge = 0
+	selfcharge = 1
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/rechargerrifle/hitscan)
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
+
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+
+////////////////////////
+//OTHER ENERGY WEAPONS//
+///////////////////////
 
 
 //Alien Blaster - UNIQUE; loot spawn
