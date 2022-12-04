@@ -248,12 +248,10 @@ Raider
 	name = "Chinese Remnant"
 	uniform = /obj/item/clothing/under/f13/chinese
 	suit = /obj/item/clothing/suit/armor/medium/vest/chinese
-	suit_store = /obj/item/gun/ballistic/automatic/type93/worn
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/type17
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	back = /obj/item/storage/backpack/satchel/explorer
 	gloves = /obj/item/clothing/gloves/color/brown
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 1)
 
 
 
