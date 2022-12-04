@@ -100,31 +100,28 @@
 	obj_damage = 300
 
 /mob/living/simple_animal/hostile/handy/liberator
-	name = "liberator mk.0"
+	name = "liberator"
 	desc = "A small pre-War droned used by the People's Liberation Army."
-	icon = 'icons/fallout/mobs/robots/weirdrobots.dmi'
 	icon_state = "liberator"
-	icon_living = "liberator"
+	icon_living = "leberator"
 	icon_dead = "liberator_d"
 	icon_gib = "liberator_g"
-	health = 30 //2 with a pistol, 1 with a magnum
-	maxHealth = 30
-	speed = -1 //speedy buggers
-	melee_damage_lower = 1 //they either hit your shin or your neck
-	melee_damage_upper = 20
-	attack_verb_simple = "slashes"
+	health = 64
+	maxHealth = 64
+	melee_damage_lower = 5
+	melee_damage_upper = 10
+	attack_verb_simple = "slaps"
 	projectilesound = 'sound/weapons/laser.ogg'
-	faction = list("china", "wastebots")
-	projectiletype = /obj/item/projectile/beam/laser/pistol/wattz/hitscan
-	extra_projectiles = 0 //hitscans shouldnt be spammed at a player
+	projectiletype = /obj/item/projectile/beam/laser/pistol
+	extra_projectiles = 1
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
 	check_friendly_fire = TRUE
-	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/ecp)
-	emote_taunt_sound = ('sound/f13npc/liberator/liberator_taunt1.ogg')
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
+	emote_taunt_sound = null
 	emote_taunt = list("levels its laser")
-	aggrosound = list('sound/f13npc/liberator/liberator_aggro1.ogg', 'sound/f13npc/liberator/liberator_aggro2.ogg')
+	aggrosound = null
 	idlesound = null
 	death_sound = null
 	attack_sound = null
@@ -140,13 +137,10 @@
 	)
 
 /mob/living/simple_animal/hostile/handy/liberator/yellow
-	name = "liberator mk.1"
-	desc = "A small pre-War droned used by the People's Liberation Army. This is a later model"
-	health = 51 //3 with a pistol, 2 with a magnum
-	maxHealth = 51
-	extra_projectiles = 1 //just a bit of spam
+	name = "liberator"
+	desc = "A small pre-War droned used by the People's Liberation Army."
 	icon_state = "liberator_y"
-	icon_living = "liberator_y"
+	icon_living = "leberator_y"
 	icon_dead = "liberator_y_d"
 
 /mob/living/simple_animal/hostile/handy/robobrain
@@ -225,7 +219,7 @@
 		/obj/item/stack/crafting/electronicparts/five
 		)
 	attack_phrase = list(
-		"Howdy pardner!",
+		"Howdy pardner!", 
 		"Engaging hostile target!",
 		"Warning! Overdue for maintence.",
 		"Please assume the position.",
@@ -383,4 +377,3 @@
 		SP_DISTANT_SOUND(LASER_DISTANT_SOUND),
 		SP_DISTANT_RANGE(LASER_RANGE_DISTANT)
 	)
-
