@@ -49,6 +49,14 @@
 					/obj/effect/spawner/lootdrop/f13/armor/tier3)
 	crate_name = "armor crate"
 
+/datum/supply_pack/security/raidersalvaged
+	name = "Armor - Salvaged"
+	desc = "This is the best we can do, we found it on some junkies outside El Paso... after we ran them over with a train. It's not quite salvaged power armor but it'll do the job in a pinch. Not sure why anybody would want it, but maybe you do."
+	cost = 25000
+	contains = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider)
+	crate_name = "armor crate"
+
 /datum/supply_pack/security/ec
 	name = "Ammo - Energy Cell"
 	desc = "Three fully charged energy cells."
@@ -320,6 +328,13 @@
 					/obj/item/gun/energy/disabler,
 					/obj/item/gun/energy/disabler)
 	crate_name = "disabler crate" */
+
+/datum/supply_pack/security/minigunlaser
+	name = "Weapons - Gatling Laser"
+	desc = "An exclusive, it arrived! A refurbished Glastinghouse Inc. X-25 gatling laser taken from the sorry scrap of some RobCo automaton. Uncompact, inconvenient and practically useless against armored targets, maybe you'll find some use for it."
+	cost = 50000
+	contains = list(/obj/item/minigunpack)
+	crate_name = "minigun crate"
 
 /datum/supply_pack/security/minigun5mm
 	name = "Weapons - Minigun"
