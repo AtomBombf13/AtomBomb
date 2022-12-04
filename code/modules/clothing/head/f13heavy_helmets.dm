@@ -27,12 +27,6 @@
 	icon_state = "t45bhelmet_ncr"
 	item_state = "t45bhelmet_ncr"
 
-/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/legion
-	name = "legion salvaged T-45b helmet"
-	desc = "It's a legion salvaged T-45b power armor helmet, better repaired than regular salvaged PA, and decorated with the Legion banner and other markings of the Legion."
-	icon_state = "t45bhelmet_legion"
-	item_state = "t45bhelmet_legion"
-
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod
 	name = "hotrod T-45b power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
