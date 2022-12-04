@@ -313,6 +313,12 @@
 	icon_state = "t45b_salvaged"
 	item_state = "t45b_salvaged"
 
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion
+	name = "salvaged Legion power armor"
+	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and bull painted onto the chestplate shows it belongs to the Legion."
+	icon_state = "legion_salvaged"
+	item_state = "legion_salvaged"
+
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider
 	name = "salvaged raider power armor"
 	desc = "A destroyed T-45b power armor has been brought back to life with the help of a welder and lots of scrap metal."
