@@ -10,9 +10,9 @@
 
 #define QUALITY_MODIFIER quality
 
-#define FORCE_SMITH_REACH 17
-#define FORCE_SMITH_LOW 21
-#define FORCE_SMITH_HIGH 28
+#define FORCE_SMITH_REACH 19
+#define FORCE_SMITH_LOW 24
+#define FORCE_SMITH_HIGH 29
 
 
 //////////////////////////////////////
@@ -77,6 +77,8 @@
 /datum/material/bronze
 	strength_modifier = 1
 
+/datum/material/adamantine
+	strength_modifier = 1.2
 
 // ------------ SLAG ------------------ Makes slag more suitable visually for the interactions with the anvil
 /obj/item/stack/ore/slag

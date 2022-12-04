@@ -90,6 +90,7 @@
 	attack_speed = MELEE_SPEED_SLOWEST
 	force = WEAPON_FORCE_CLUB
 	slot_flags = ITEM_SLOT_BELT
+	wound_bonus = WOUNDING_BONUS_SMALL
 	var/qualitymod = 0
 
 /obj/item/melee/smith/hammer/premade
@@ -456,7 +457,8 @@
 	name = "scrap saw"
 	icon_state = "saw_smith"
 	overlay_state = "handle_saw"
-	wound_bonus = WOUNDING_MALUS_SHALLOW
+	force = (FORCE_SMITH_HIGH-1)
+	wound_bonus = WOUNDING_BONUS_TINY
 	bare_wound_bonus = WOUNDING_BONUS_BIG
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
@@ -643,7 +645,7 @@
 	icon_prefix = "axe_smith"
 	overlay_state = "shaft_axe"
 	force = FORCE_SMITH_LOW
-	armour_penetration = PIERCING_MINOR
+	armour_penetration = PIERCING_MODERATE
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_BIG
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
@@ -694,7 +696,7 @@
 	overlay_state = "shaft_crusher"
 	attack_speed = MELEE_SPEED_SLOWER
 	force = FORCE_SMITH_LOW
-	armour_penetration = PIERCING_MODERATE
+	armour_penetration = PIERCING_MAJOR
 	throwforce = THROWING_PATHETIC
 	wound_bonus = WOUNDING_BONUS_HUGE
 	sharpness = SHARP_NONE

@@ -34,8 +34,7 @@
 	result = /obj/structure/blacksmith/anvil/obtainable
 	time = 450
 	reqs = list(
-		/obj/item/stack/sheet/metal = 50,
-		/obj/item/stack/sheet/mineral/titanium = 15,
+		/obj/item/stack/sheet/metal = 30,
 		)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER, TOOL_CROWBAR)
 	category = CAT_CRAFTING
