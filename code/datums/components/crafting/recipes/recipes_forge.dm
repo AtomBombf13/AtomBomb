@@ -220,7 +220,7 @@
 	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-/* Can be forged, makes little sense to keep as craft menu as well.
+
 /datum/crafting_recipe/scrapsabre
 	name = "Scrap sabre"
 	result = /obj/item/melee/onehanded/machete/scrapsabre
@@ -233,7 +233,7 @@
 	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-*/
+
 
 // LEGION
 /datum/crafting_recipe/legionshield
