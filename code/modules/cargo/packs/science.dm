@@ -97,6 +97,17 @@
 					/obj/item/clothing/gloves/color/latex/nitrile,
 					/obj/item/clothing/gloves/color/latex/nitrile)
 	crate_name = "nitrile gloves crate"
+	
+/datum/supply_pack/science/rndsetup
+	name = "Research and Development Starter Kit"
+	desc = "We took these from an abandoned Vault-Tec warehouse a while back and the OSI is on our ass about it. Could you just take it off our hands? Server not included."
+	cost = 50000
+	contains = list(/obj/item/circuitboard/computer/rdconsole,
+					/obj/item/circuitboard/machine/destructive_analyzer,
+					/obj/item/circuitboard/machine/circuit_imprinter,
+					/obj/item/circuitboard/machine/protolathe,
+					/obj/item/storage/box/stockparts/deluxe)
+	crate_name = "r&d starter kit"
 /*
 /datum/supply_pack/science/plasma
 	name = "Plasma Assembly Crate"
