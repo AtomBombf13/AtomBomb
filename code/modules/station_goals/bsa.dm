@@ -259,7 +259,7 @@
 	data["ready"] = cannon ? cannon.ready : FALSE
 	data["connected"] = cannon
 	data["notice"] = notice
-	data["unlocked"] = GLOB.bsa_unlock
+	data["unlocked"] = 1
 	if(target)
 		data["target"] = get_target_name()
 	return data
@@ -280,8 +280,6 @@
 	update_icon()
 
 /obj/machinery/computer/bsa_control/proc/calibrate(mob/user)
-	if(!GLOB.bsa_unlock)
-		return
 	var/list/gps_locators = list()
 	for(var/datum/component/gps/G in GLOB.GPS_list) //nulls on the list somehow
 		if(G.tracking)
