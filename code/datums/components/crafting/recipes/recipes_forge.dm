@@ -100,8 +100,8 @@
 	result = /obj/item/twohanded/sledgehammer/simple
 	time = 700
 	reqs = list(
-		/obj/item/stack/sheet/metal = 15,
-		/obj/item/stack/sheet/mineral/wood = 5,
+		/obj/item/stack/sheet/metal = 12,
+		/obj/item/stack/sheet/mineral/wood = 6,
 		)
 	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CRAFTING
@@ -220,7 +220,7 @@
 	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-
+/* Can be forged, makes little sense to keep as craft menu as well.
 /datum/crafting_recipe/scrapsabre
 	name = "Scrap sabre"
 	result = /obj/item/melee/onehanded/machete/scrapsabre
@@ -233,7 +233,7 @@
 	tools = list(TOOL_METAL_BENCH)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-
+*/
 
 // LEGION
 /datum/crafting_recipe/legionshield
