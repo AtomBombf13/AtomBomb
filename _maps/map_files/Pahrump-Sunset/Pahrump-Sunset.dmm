@@ -16216,8 +16216,11 @@
 /turf/open/floor/carpet/red,
 /area/f13/city)
 "bkP" = (
-/obj/machinery/food_cart,
-/turf/open/floor/plasteel/freezer,
+/obj/structure/chair/booth{
+	icon_state = "booth_west_south"
+	},
+/obj/machinery/light/small,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
 "bkT" = (
 /obj/structure/tires/two,
@@ -21235,12 +21238,12 @@
 	},
 /area/f13/ncr)
 "cyA" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_west_south"
+/obj/structure/window/fulltile/house,
+/obj/structure/curtain{
+	color = "#845f58"
 	},
-/obj/machinery/light/small,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
+/area/f13/wasteland)
 "cyD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -27154,7 +27157,10 @@
 	},
 /area/f13/wasteland)
 "fpO" = (
-/obj/structure/window/fulltile/house,
+/obj/structure/window/fulltile/house{
+	icon_state = "housewindowbroken"
+	},
+/obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/curtain{
 	color = "#845f58"
 	},
@@ -35881,10 +35887,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building/mall)
 "jvm" = (
-/obj/structure/window/fulltile/house{
-	icon_state = "housewindowbroken"
-	},
-/obj/structure/barricade/wooden/planks/pregame,
+/obj/structure/window/fulltile/house,
+/obj/structure/window/fulltile/house,
 /obj/structure/curtain{
 	color = "#845f58"
 	},
@@ -38362,10 +38366,10 @@
 /area/f13/building/museum)
 "kJA" = (
 /obj/structure/window/fulltile/house,
-/obj/structure/window/fulltile/house,
 /obj/structure/curtain{
 	color = "#845f58"
 	},
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/wasteland)
 "kJO" = (
@@ -38475,12 +38479,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "kLP" = (
-/obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#845f58"
+/obj/machinery/light/sign/kebab_sign{
+	pixel_x = -18
 	},
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
+/turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "kLZ" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -45485,10 +45487,11 @@
 /turf/open/floor/wood_common,
 /area/f13/village)
 "nWR" = (
-/obj/machinery/light/sign/kebab_sign{
-	pixel_x = -18
+/turf/open/floor/plasteel/stairs{
+	barefootstep = "woodbarefoot";
+	color = "#A47449";
+	footstep = "wood"
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "nXl" = (
 /obj/structure/chair/wood{
@@ -45508,13 +45511,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaloutermain0"
-	},
-/area/f13/wasteland)
-"nXB" = (
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood"
 	},
 /area/f13/wasteland)
 "nYk" = (
@@ -99213,7 +99209,7 @@ jyb
 jyb
 jyb
 fzM
-nWR
+kLP
 lKc
 laV
 qHy
@@ -99726,7 +99722,7 @@ kSp
 vOs
 jpO
 jpO
-fpO
+cyA
 huu
 vPN
 laV
@@ -99983,7 +99979,7 @@ vOs
 vOs
 phB
 lcg
-jvm
+fpO
 huu
 eXN
 wHJ
@@ -100240,7 +100236,7 @@ vOs
 vOs
 jFV
 luV
-kJA
+jvm
 huu
 lWp
 pAp
@@ -100497,7 +100493,7 @@ vOs
 vOs
 jpO
 jpO
-kLP
+kJA
 huu
 vPN
 pAp
@@ -100753,7 +100749,7 @@ xvy
 kSp
 vOs
 phB
-cyA
+bkP
 fzM
 bly
 vQv
@@ -101012,7 +101008,7 @@ vOs
 vOs
 vOs
 lwL
-nXB
+nWR
 aQZ
 wHJ
 qHy
@@ -101269,7 +101265,7 @@ vOs
 vOs
 vOs
 lwL
-nXB
+nWR
 trw
 pAp
 qHy
@@ -101782,7 +101778,7 @@ vOs
 vOs
 jpO
 jpO
-fpO
+cyA
 huu
 trw
 pAp
@@ -102039,7 +102035,7 @@ vOs
 vOs
 phB
 lcg
-jvm
+fpO
 huu
 aQZ
 pAp
@@ -102296,7 +102292,7 @@ vOs
 vOs
 jFV
 luV
-kJA
+jvm
 huu
 aQZ
 pAp
@@ -102553,7 +102549,7 @@ vOs
 vOs
 jpO
 jpO
-fpO
+cyA
 huu
 aQZ
 wHJ
@@ -102809,7 +102805,7 @@ mDx
 vOs
 vOs
 phB
-cyA
+bkP
 fzM
 huu
 lcr
@@ -103567,7 +103563,7 @@ aQG
 aiO
 xvy
 bbT
-bkP
+bbV
 chN
 xvy
 dyG

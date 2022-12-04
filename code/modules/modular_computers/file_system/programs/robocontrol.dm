@@ -4,7 +4,7 @@
 	filedesc = "Botkeeper"
 	program_icon_state = "robot"
 	extended_desc = "A remote controller used for giving basic commands to non-sentient robots."
-	transfer_access = ACCESS_ROBOTICS, ACCESS_BOS
+	transfer_access = list(ACCESS_ROBOTICS, ACCESS_BOS)
 	requires_ntnet = TRUE
 	size = 12
 	tgui_id = "NtosRoboControl"
