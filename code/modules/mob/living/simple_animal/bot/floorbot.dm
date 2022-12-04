@@ -411,7 +411,7 @@
 	..()
 
 /obj/machinery/bot_core/floorbot
-	req_one_access = list(ACCESS_CONSTRUCTION, ACCESS_ROBOTICS)
+	req_one_access = list(ACCESS_CONSTRUCTION, , ACCESS_BOS)
 
 /mob/living/simple_animal/bot/floorbot/UnarmedAttack(atom/A, proximity, intent = a_intent, flags = NONE)
 	if(isturf(A))

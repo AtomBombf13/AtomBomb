@@ -5904,6 +5904,20 @@
 	name = "stone floor"
 	},
 /area/f13/caves)
+"cgY" = (
+/obj/structure/filingcabinet/security,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
+"che" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "chh" = (
 /obj/structure/table/reinforced,
 /obj/structure/cable{
@@ -15741,6 +15755,13 @@
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
+"jzu" = (
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "jzA" = (
 /obj/structure/target_stake,
 /obj/item/target,
@@ -16263,8 +16284,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/museum)
 "jTk" = (
-/obj/structure/fluff/railing{
-	dir = 4
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/item/folder{
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
@@ -18517,7 +18541,7 @@
 /area/f13/clinic)
 "lFw" = (
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "29"
+	req_access_txt = "68"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkredfull"
@@ -19758,6 +19782,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/green/whitegreenfull,
 /area/f13/bunker)
+"mDN" = (
+/obj/machinery/photocopier,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "mDU" = (
 /obj/structure/closet/crate/medical/anchored,
 /obj/item/storage/box/medicine/stimpaks/stimpaks5,
@@ -24898,6 +24928,14 @@
 /obj/effect/spawner/lootdrop/f13/blueprintHigh,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
+"qDR" = (
+/obj/machinery/door/airlock/hatch{
+	req_access_txt = "68"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "qDU" = (
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -28642,6 +28680,17 @@
 	name = "metal plating"
 	},
 /area/f13/city)
+"tBG" = (
+/obj/structure/table/glass,
+/obj/machinery/door/window{
+	dir = 4;
+	req_access_txt = "68"
+	},
+/obj/structure/barricade/bars,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/vault)
 "tBM" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -63300,7 +63349,7 @@ xcJ
 xcJ
 cAq
 xcJ
-vVj
+qDR
 xcJ
 xcJ
 xcJ
@@ -63551,7 +63600,7 @@ bYt
 dPE
 esb
 fcB
-fjb
+xcJ
 xcJ
 xcJ
 wBa
@@ -63805,11 +63854,11 @@ bHE
 bsC
 xZB
 ydq
-dQV
-dQV
 ydq
 dQV
 dQV
+ydq
+tBG
 ydq
 ydq
 ydq
@@ -64062,11 +64111,11 @@ ceQ
 ceQ
 bCt
 aae
-aae
-aae
 aak
 aak
 ydq
+jTk
+che
 fvs
 gQg
 hTP
@@ -64319,16 +64368,16 @@ ceQ
 bPN
 bsC
 aae
-aae
-aae
 aak
 aak
 ydq
+jzu
+xcJ
 fXk
 xcJ
 hWB
 xcJ
-jzV
+ydq
 cAq
 xcJ
 xcJ
@@ -64578,17 +64627,17 @@ bsC
 aae
 aae
 aae
-aae
-aae
 ydq
+xcJ
+xcJ
 xcJ
 xcJ
 cAq
 xcJ
-jzV
-jTk
-jTk
-jTk
+vVj
+xcJ
+xcJ
+xcJ
 xcJ
 xcJ
 xcJ
@@ -64835,9 +64884,9 @@ bsC
 aae
 aae
 aae
-aae
-aae
 ydq
+cgY
+mDN
 fYi
 gRB
 hYW
@@ -65092,8 +65141,8 @@ bsC
 aae
 aae
 aae
-aae
-aae
+ydq
+ydq
 ydq
 ydq
 ydq

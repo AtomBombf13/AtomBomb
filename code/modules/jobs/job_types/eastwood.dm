@@ -411,8 +411,8 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 	outfit = /datum/outfit/job/eastwood/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER, ACCESS_ROBOTICS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER, ACCESS_ROBOTICS)
+	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -548,7 +548,7 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	 
+
 /datum/outfit/job/eastwood/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -591,7 +591,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Prospector"
 	jobtype = /datum/job/eastwood/f13prospector
 	id = /obj/item/card/id/dogtag/town
-	
+
 	ears = /obj/item/radio/headset/headset_town/commerce
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/lantern
@@ -701,8 +701,8 @@ here's a tip, go search DEFINES/access.dm
 	//datum/outfit/loadout/reaver			//FBoS: Tactics Reaver Movement
 	)
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
+	access = list(ACCESS_BAR)		//we can expand on this and make alterations as people suggest different loadouts
+	minimal_access = list(ACCESS_BAR)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
@@ -747,7 +747,7 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/jacket/leather
 	backpack_contents = list(
 	/obj/item/book/granter/trait/mormon = 1,
-	/obj/item/reagent_containers/food/snacks/store/bread/plain = 5	
+	/obj/item/reagent_containers/food/snacks/store/bread/plain = 5
 	)
 
 /datum/outfit/loadout/hubologist //Crackheads and horny fiends
@@ -755,7 +755,7 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/toggle/labcoat/robe_hubologist
 	backpack_contents = list(
 	/obj/item/reagent_containers/pill/patch/jet = 5,
-	/obj/item/reagent_containers/hypospray/medipen/psycho = 5	
+	/obj/item/reagent_containers/hypospray/medipen/psycho = 5
 	)
 
 /datum/outfit/loadout/preacheratom //Big hammer, big radiation energy
@@ -763,7 +763,7 @@ here's a tip, go search DEFINES/access.dm
 	r_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
 	uniform = /obj/item/clothing/under/f13/atomfaithful
 	backpack_contents = list(/obj/item/storage/pill_bottle/chem_tin/radx = 3) //You are going to need these buddy
-	
+
 /*
 /datum/outfit/loadout/reaver
 	name = "Reaver Follower"
