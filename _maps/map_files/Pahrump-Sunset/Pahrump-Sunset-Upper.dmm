@@ -6451,9 +6451,7 @@
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/stack/sheet/glass/five,
 /obj/item/stack/sheet/hay/twenty,
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/cloth/five,
 /turf/open/floor/f13{

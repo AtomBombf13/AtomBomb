@@ -21243,7 +21243,7 @@
 	color = "#845f58"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/wasteland)
+/area/f13/city)
 "cyD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -25688,12 +25688,6 @@
 	name = "concrete wall"
 	},
 /area/f13/ncr)
-"eIN" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_east_north"
-	},
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
 "eIR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/opshuttle,
@@ -27165,7 +27159,7 @@
 	color = "#845f58"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/wasteland)
+/area/f13/city)
 "fpV" = (
 /obj/machinery/light{
 	bulb_colour = "#BC8F8F";
@@ -35893,7 +35887,7 @@
 	color = "#845f58"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/wasteland)
+/area/f13/city)
 "jvx" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite{
@@ -38371,7 +38365,7 @@
 	},
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/wasteland)
+/area/f13/city)
 "kJO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -39964,7 +39958,7 @@
 "lwL" = (
 /obj/structure/simple_door/metal/fence/wooden,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/wasteland)
+/area/f13/city)
 "lwM" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_6"
@@ -45121,12 +45115,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/village)
-"nMB" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_west_north"
-	},
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
 "nMT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair{
@@ -99208,7 +99196,7 @@ iME
 jyb
 jyb
 jyb
-fzM
+xvy
 kLP
 lKc
 laV
@@ -99465,7 +99453,7 @@ vOs
 vOs
 jFV
 aZw
-fzM
+xvy
 huu
 vPN
 laV
@@ -100750,7 +100738,7 @@ kSp
 vOs
 phB
 bkP
-fzM
+xvy
 bly
 vQv
 pAp
@@ -101521,7 +101509,7 @@ vOs
 vOs
 jFV
 aZw
-fzM
+xvy
 bly
 aQZ
 pAp
@@ -102806,7 +102794,7 @@ vOs
 vOs
 phB
 bkP
-fzM
+xvy
 huu
 lcr
 bKh
@@ -103063,7 +103051,7 @@ iME
 iME
 jyb
 jyb
-fzM
+xvy
 huu
 huu
 aQZ
