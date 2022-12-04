@@ -17,8 +17,8 @@
 	facial_hair_style = pick("Beard (5 o\'Clock)", "Beard (3 o\'Clock)", "Clean shave (Hairless)")
 	hair_color = random_hair_shade()
 	facial_hair_color = random_hair_shade()
-	left_eye_color = "#000000"()
-	right_eye_color = "#000000"()
+	left_eye_color = "#000000"
+	right_eye_color = "#000000"
 	age = (rand(20, 40))
 
 
