@@ -134,6 +134,14 @@
 	item_state = "ncrcf"
 	item_color = "ncrcf"
 
+/obj/item/clothing/under/f13/ncr_sniper_fatigues
+	name = "NCR sniper fatigues"
+	desc = "A set of standard issue New California Republic sniper fatigues. "
+	can_adjust = TRUE
+	icon_state = "ncr_sniper"
+	item_state = "ncr_sniper"
+	item_color = "ncr_sniper"
+
 //Settlers
 
 /obj/item/clothing/under/f13/brahminm

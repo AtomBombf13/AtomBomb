@@ -3,8 +3,8 @@
 	selection_color = "#df80af"
 	faction = FACTION_KHAN
 	exp_type = EXP_TYPE_KHAN
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_MINING, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_MINING, ACCESS_GATEWAY)
+	access = list(ACCESS_KHAN)
+	minimal_access = list(ACCESS_KHAN)
 	forbids = "THE KHANATE DISCOURAGES: Dishonorable actions, Weakness, Abuse of power or status, sabotaging other Khans."
 	enforces = "THE KHANATE ENCOURAGES: Bravery, Honor, Displays of strenght, Brotherhood."
 

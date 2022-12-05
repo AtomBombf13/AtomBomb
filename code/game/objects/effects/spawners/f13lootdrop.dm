@@ -463,7 +463,7 @@
 			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
 			)
 
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid
+/obj/effect/spawner/lootdrop/f13/armor/random/high
 	name = "high tier random armor loot"
 	lootcount = 1
 
@@ -2173,7 +2173,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/r91 = 3,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84 = 3,
-		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle = 3,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster = 3,
 		/obj/item/advanced_crafting_components/flux,
 		/obj/item/advanced_crafting_components/lenses,

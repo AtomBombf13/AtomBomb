@@ -9,8 +9,8 @@
 	var/active = FALSE
 	var/list/rangers = list()
 	var/stop = 0
-	var/volume = 70
 	var/datum/track/selection = null
+	var/volume = 70
 
 /obj/machinery/jukebox/disco
 	name = "radiant dance machine mark IV"
@@ -64,7 +64,19 @@
 		to_chat(user,span_warning("Error: No music tracks have been authorized for your station. Petition Central Command to resolve this issue."))
 		playsound(src, 'sound/misc/compiler-failure.ogg', 25, TRUE)
 		return UI_CLOSE
-	return ..()
+	var/list/dat = list()
+	dat +="<div class='statusDisplay' style='text-align:center'>"
+	dat += "<b><A href='?src=[REF(src)];action=toggle'>[!active ? "BREAK IT DOWN" : "SHUT IT DOWN"]<b></A><br>"
+	dat += "</div><br>"
+	dat += "<A href='?src=[REF(src)];action=select'> Select Track</A><br>"
+	if(istype(selection))
+		dat += "Track Selected: [selection.song_name]<br>"
+		dat += "Track Length: [DisplayTimeText(selection.song_length)]<br><br>"
+	else
+		dat += "Track Selected: None!<br><br>"
+	var/datum/browser/popup = new(user, "vending", "[name]", 400, 350)
+	popup.set_content(dat.Join())
+	popup.open()
 
 /obj/machinery/jukebox/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -137,6 +149,45 @@
 			else if(text2num(new_volume) != null)
 				volume = text2num(new_volume)
 				return TRUE
+
+/obj/machinery/jukebox/Topic(href, href_list)
+	if(..())
+		return
+	add_fingerprint(usr)
+	switch(href_list["action"])
+		if("toggle")
+			if (QDELETED(src))
+				return
+			if(!active)
+				if(stop > world.time)
+					to_chat(usr, "<span class='warning'>Error: The device is still resetting from the last activation, it will be ready again in [DisplayTimeText(stop-world.time)].</span>")
+					playsound(src, 'sound/misc/compiler-failure.ogg', 50, 1)
+					return
+				if(!istype(selection))
+					to_chat(usr, "<span class='warning'>Error: Severe user incompetence detected.</span>")
+					playsound(src, 'sound/misc/compiler-failure.ogg', 50, 1)
+					return
+				if(!activate_music())
+					to_chat(usr, "<span class='warning'>Error: Generic hardware failure.</span>")
+					playsound(src, 'sound/misc/compiler-failure.ogg', 50, 1)
+					return
+				updateUsrDialog()
+			else if(active)
+				stop = 0
+				updateUsrDialog()
+		if("select")
+			if(active)
+				to_chat(usr, "<span class='warning'>Error: You cannot change the song until the current one is over.</span>")
+				return
+
+			var/list/available = list()
+			for(var/datum/track/S in SSjukeboxes.songs)
+				available[S.song_name] = S
+			var/selected = input(usr, "Choose your song", "Track:") as null|anything in available
+			if(QDELETED(src) || !selected || !istype(available[selected], /datum/track))
+				return
+			selection = available[selected]
+			updateUsrDialog()
 
 /obj/machinery/jukebox/proc/activate_music()
 	var/jukeboxslottotake = SSjukeboxes.addjukebox(src, selection, 2)
@@ -441,6 +492,8 @@
 /obj/machinery/jukebox/process()
 	if(active && world.time >= stop)
 		active = FALSE
+		SSjukeboxes.removejukebox(SSjukeboxes.findjukeboxindex(src))
+		STOP_PROCESSING(SSobj, src)
 		dance_over()
 		playsound(src,'sound/machines/terminal_off.ogg',50,1)
 		update_icon()
