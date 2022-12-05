@@ -1,5 +1,5 @@
 # Blacksmithing Fallout Edition v.1.4
-## Who made this module? 
+## Who made this module?
 Pebbles the 2nd. Credits at the end.
 
 ## What is this module?
@@ -10,10 +10,10 @@ Core principles:
 - Visual/audio feedback and mood important
 - Files sorted and defines used
 - All items should be useful in some way, trade offs, gimmicks added
-- Recipes organized so similar sorts of items use similar recipes (the more cutting, the more folds etc) 
+- Recipes organized so similar sorts of items use similar recipes (the more cutting, the more folds etc)
 - EVERYTHING must have icons AND inhands. No more terrible sword pikes.
 - As little reliant on outdated external stuff as possible. So no Ratvar, Narsie stuff.
-- Reduced duplication and redundancy. Forging should be made on a anvil. 
+- Reduced duplication and redundancy. Forging should be made on a anvil.
 
 ## Is it complete?
 Sort of. It works, but the following was planned, before time and heart ran out.
@@ -28,7 +28,7 @@ Sort of. It works, but the following was planned, before time and heart ran out.
 
 If you plan on adding or changing stuff ADD changelog to the end of this readme. Adjust damage by changing the define values first, not by messing with the formulas, for obvious reasons.
 
-## Whats new? 
+## Whats new?
 So much its hard to list
 Item quality much less impactful (this just means low quality items arent completely useless)
 
@@ -42,11 +42,11 @@ Forge mittens are sort of a stand-in for tongs, its what you use for touching ho
 
 Basic idea with the belt slot/back slot for weapons is that it makes sheath objects redundant, just make the correct slots for the item.
 
-Various effects added: Crusher harming ghoul mobs, axes extra damage to barricades, dagger eyestab (relies on the inheritance of eyecover objects to NOT be FUBAR to work well.), use of defines 
+Various effects added: Crusher harming ghoul mobs, axes extra damage to barricades, dagger eyestab (relies on the inheritance of eyecover objects to NOT be FUBAR to work well.), use of defines
 
 ## Known issues
 
-The anvil refactor Gremling did solved some issues but sadly had some side-effects, the elusive overlay not being cut properly on live servers being the main one. I am not able to replicate the issue offline and so cannot see any solution to it currently.
+The anvil refactor Gremling did solve some issues but sadly seems to have had some side-effects, the elusive overlay not being cut properly on live servers being the main one. I am not able to replicate the issue offline and so cannot see any solution to it currently.
 (when a workpiece is finished sometimes the overlay remains on the anvil, and occasionally the same happens when quenching.)
 Armor pieces made from smithing are not affected by quality and material currently. This is WAD but a bit crude.
 Some tools do not inherit the force calculated on quality correctly, notes in finished items about this.
@@ -61,10 +61,10 @@ Some tools do not inherit the force calculated on quality correctly, notes in fi
 
 ## Credits
 
-I want to be crystal clear. this module is my work, and it is a total rework of the entire old TG smithing systen, adding many features such as sound, sparks, text feedback, use of overlays, light system, etc, and replacing every asset, improving it in more ways than I can be bothered to list. The visually similar system floating around on some servers that lack this module are based on my old beta stuff, they are incomplete to say the least, but use my artwork. All the designs are mine, the primer, mittens, so on, the concepts, mechanics, and assets (code copy paste with edits tho) used to make leather strips, to make wooden rods from planks, to make chains, the smithed armor, the plates, ad nauseum. It could not exist without the base TG smithing code however, I am not a coder, I do design and art, and edit existing code, so if you want to give the coder people props look below. This module only exists because I was promised to be allowed to finish it without some smoothbrain breaking it mid-development, and so thanks to Raptor and Lamasmaster are in order for that.
+I wish to be clear. this module is my work, and it is a total rework of the entire old TG smithing systen, adding many features such as sound, sparks, text feedback, use of overlays, light system, etc, and replacing every asset. The visually similar system floating around on some servers that lack this module are based on my old beta stuff, they are incomplete and I can't really guarantee anything about them. All the designs are mine, the primer, mittens, so on, the concepts, mechanics, and assets (code copy paste with edits tho) used to make leather strips, to make wooden rods from planks, to make chains, the smithed armor, the plates, ad nauseum. It could not exist without the base TG smithing code however, I am not a coder, I do design and art, and edit/adapt existing code, so if you want to give the coder people props look below. For getting to finish it uninterrupted I'd like to thank Raptor and Lamasmaster.
 
 The base TG smithing code is still very much the core, made by lolman in 2019.
-GremlingSS refactored the code in anvil.dm in 2022, wich was adapted and then used for this module since it was easier to read than the old.
+GremlingSS refactored the code in anvil.dm in 2022, wich was adapted and then used for this module.
 
 Sounds: A few edited base FO13 ones, but the anvil sounds were made by me, they are from royalty free sampling from videvo.net edited a lot in Audacity.
 

@@ -3,7 +3,7 @@
 //		SMITHED ITEMS BASE CODE			//
 //										//
 //////////////////////////////////////////
-// Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 12 Iron weapons.  
+// Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 12 Iron weapons.
 
 
 /obj/item/melee/smith
@@ -224,7 +224,7 @@
 	obj_flags = UNIQUE_RENAME
 	sharpness = SHARP_POINTY
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	force = WEAPON_FORCE_CLUB 
+	force = WEAPON_FORCE_CLUB
 
 /obj/item/crowbar/smithedunitool/Initialize()
 	..()
@@ -371,7 +371,7 @@
 	AddComponent(/datum/component/butchering, 100, 100, 10)
 
 // ------------ BOWIE KNIFE ------------ // [Eyestab]
-/obj/item/melee/smith/dagger/bowie 
+/obj/item/melee/smith/dagger/bowie
 	name = "bowie knife"
 	icon_state = "bowie_smith"
 	overlay_state = "hilt_bowie"
@@ -452,17 +452,32 @@
 	AddComponent(/datum/component/butchering, 110, 70) //decent in a pinch, but pretty bad.
 
 
-// ------------ SCRAP SAW ------------ // [Parry]
+// ------------ SCRAP SAW ------------ // [Parry, stack damage experimental]
 /obj/item/melee/smith/wakizashi/scrapsaw
 	name = "scrap saw"
 	icon_state = "saw_smith"
 	overlay_state = "handle_saw"
-	force = (FORCE_SMITH_HIGH-1)
+	force = (FORCE_SMITH_HIGH-3)
 	wound_bonus = WOUNDING_BONUS_TINY
 	bare_wound_bonus = WOUNDING_BONUS_BIG
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
 	hitsound = 'sound/effects/butcher.ogg'
+	var/bleed_stacks_per_hit = 3
+
+/obj/item/melee/smith/wakizashi/scrapsaw/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(!isliving(target) || !proximity_flag)
+		return
+	var/mob/living/M = target
+	if(!(M.mob_biotypes & MOB_ORGANIC))
+		return
+	if(user.a_intent != INTENT_HARM)
+		var/datum/status_effect/stacking/saw_bleed/bloodletting/B = M.has_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting)
+		if(!B)
+			M.apply_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting, bleed_stacks_per_hit)
+		else
+			B.add_stacks(bleed_stacks_per_hit)
 
 
 // ------------ MACE ------------ //
@@ -747,7 +762,7 @@
 	icon_prefix = "trident_smith"
 	overlay_state = "shaft_trident"
 	attack_speed = MELEE_SPEED_SLOW
-	force = (FORCE_SMITH_REACH+1)	
+	force = (FORCE_SMITH_REACH+1)
 	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 30, "ignore_throwspeed_threshold" = TRUE)
 	armour_penetration = 0
 
