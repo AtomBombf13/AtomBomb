@@ -312,8 +312,10 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/effect/mob_spawn/human/skeleton/alive,
 /obj/effect/decal/cleanable/ash/large,
+/obj/effect/decal/remains{
+	icon_state = "remains"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
 "abo" = (
@@ -13724,11 +13726,12 @@
 	},
 /area/f13/building)
 "aZw" = (
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom0"
+/obj/structure/chair/booth{
+	icon_state = "booth_east_south"
 	},
-/area/f13/wasteland)
+/obj/machinery/light/small,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/city)
 "aZx" = (
 /obj/structure/cargocrate,
 /turf/open/indestructible/ground/outside/dirt,
@@ -16213,8 +16216,11 @@
 /turf/open/floor/carpet/red,
 /area/f13/city)
 "bkP" = (
-/obj/machinery/food_cart,
-/turf/open/floor/plasteel/freezer,
+/obj/structure/chair/booth{
+	icon_state = "booth_west_south"
+	},
+/obj/machinery/light/small,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
 "bkT" = (
 /obj/structure/tires/two,
@@ -21232,8 +21238,9 @@
 	},
 /area/f13/ncr)
 "cyA" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_east_north"
+/obj/structure/window/fulltile/house,
+/obj/structure/curtain{
+	color = "#845f58"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -25683,9 +25690,8 @@
 /area/f13/ncr)
 "eIN" = (
 /obj/structure/chair/booth{
-	icon_state = "booth_east_south"
+	icon_state = "booth_east_north"
 	},
-/obj/machinery/light/small,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
 "eIR" = (
@@ -27151,9 +27157,15 @@
 	},
 /area/f13/wasteland)
 "fpO" = (
-/obj/structure/curtain,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
+/obj/structure/window/fulltile/house{
+	icon_state = "housewindowbroken"
+	},
+/obj/structure/barricade/wooden/planks/pregame,
+/obj/structure/curtain{
+	color = "#845f58"
+	},
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/city)
 "fpV" = (
 /obj/machinery/light{
 	bulb_colour = "#BC8F8F";
@@ -35875,8 +35887,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building/mall)
 "jvm" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_west_north"
+/obj/structure/window/fulltile/house,
+/obj/structure/window/fulltile/house,
+/obj/structure/curtain{
+	color = "#845f58"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -36269,7 +36283,7 @@
 /area/f13/village)
 "jFV" = (
 /obj/structure/chair/booth{
-	icon_state = "booth_east_south"
+	icon_state = "booth_east_north"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -38351,7 +38365,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/museum)
 "kJA" = (
-/obj/structure/simple_door/metal/fence/wooden,
+/obj/structure/window/fulltile/house,
+/obj/structure/curtain{
+	color = "#845f58"
+	},
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
 "kJO" = (
@@ -38461,12 +38479,11 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "kLP" = (
-/obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#845f58"
+/obj/machinery/light/sign/kebab_sign{
+	pixel_x = -18
 	},
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/wasteland)
 "kLZ" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -39219,12 +39236,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/mall)
 "lcg" = (
-/obj/structure/window/fulltile/house{
-	icon_state = "housewindowbroken"
-	},
-/obj/structure/barricade/wooden/planks/pregame,
-/obj/structure/curtain{
-	color = "#845f58"
+/obj/structure/chair/booth{
+	icon_state = "booth_west_south"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -39881,10 +39894,8 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "luV" = (
-/obj/structure/window/fulltile/house,
-/obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#845f58"
+/obj/structure/chair/booth{
+	icon_state = "booth_east_south"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -39951,12 +39962,9 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "lwL" = (
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood"
-	},
-/area/f13/wasteland)
+/obj/structure/simple_door/metal/fence/wooden,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/city)
 "lwM" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_6"
@@ -40531,13 +40539,10 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/caves)
 "lIY" = (
-/obj/machinery/camera/autoname{
-	dir = 5;
-	name = "EPD Hospital Outer East";
-	network = list("Eastwood")
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalleftborderleft0"
+/turf/open/floor/plasteel/stairs{
+	barefootstep = "woodbarefoot";
+	color = "#A47449";
+	footstep = "wood"
 	},
 /area/f13/wasteland)
 "lJk" = (
@@ -45115,9 +45120,8 @@
 /area/f13/village)
 "nMB" = (
 /obj/structure/chair/booth{
-	icon_state = "booth_west_south"
+	icon_state = "booth_west_north"
 	},
-/obj/machinery/light/small,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
 "nMT" = (
@@ -45480,13 +45484,15 @@
 /turf/open/floor/wood_common,
 /area/f13/village)
 "nWR" = (
-/obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#845f58"
+/obj/machinery/camera/autoname{
+	dir = 5;
+	name = "EPD Hospital Outer East";
+	network = list("Eastwood")
 	},
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "nXl" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -45506,12 +45512,6 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaloutermain0"
 	},
-/area/f13/wasteland)
-"nXB" = (
-/obj/machinery/light/sign/kebab_sign{
-	pixel_x = -18
-	},
-/turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "nYk" = (
 /obj/structure/flora/grass/jungle,
@@ -48022,7 +48022,7 @@
 /area/f13/wasteland/khans)
 "phB" = (
 /obj/structure/chair/booth{
-	icon_state = "booth_west_south"
+	icon_state = "booth_west_north"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -95375,8 +95375,8 @@ xwm
 xgl
 xox
 xox
-xox
 ill
+xwm
 xwm
 xwm
 xwm
@@ -95633,7 +95633,7 @@ xox
 xox
 xox
 xox
-fpO
+sTr
 fcZ
 lpa
 xwm
@@ -97162,8 +97162,8 @@ skm
 skm
 skm
 skm
+nWR
 skm
-lIY
 skm
 skm
 skm
@@ -99205,11 +99205,11 @@ xvy
 xvy
 xvy
 iME
+iME
 jyb
 jyb
 xvy
-nXB
-ean
+kLP
 lKc
 laV
 qHy
@@ -99462,11 +99462,11 @@ xvy
 tWQ
 xvy
 vOs
-cyA
-eIN
+vOs
+jFV
+aZw
 xvy
 huu
-ean
 vPN
 laV
 aEu
@@ -99719,11 +99719,11 @@ xvy
 lZp
 xvy
 kSp
+vOs
 jpO
 jpO
-kLP
+cyA
 huu
-ean
 vPN
 laV
 wNx
@@ -99976,11 +99976,11 @@ xvy
 fio
 xvy
 vOs
-jvm
+vOs
 phB
 lcg
+fpO
 huu
-ean
 eXN
 wHJ
 lAA
@@ -100233,11 +100233,11 @@ vOs
 vOs
 sAv
 vOs
-cyA
+vOs
 jFV
 luV
+jvm
 huu
-ean
 lWp
 pAp
 iRK
@@ -100490,11 +100490,11 @@ cnb
 vOs
 heQ
 vOs
+vOs
 jpO
 jpO
-nWR
+kJA
 huu
-aZw
 vPN
 pAp
 lAA
@@ -100747,11 +100747,11 @@ xvy
 xvy
 xvy
 kSp
-jvm
-nMB
+vOs
+phB
+bkP
 xvy
 bly
-huu
 vQv
 pAp
 qHy
@@ -101006,9 +101006,9 @@ vOs
 vOs
 vOs
 vOs
-kJA
+vOs
 lwL
-huu
+lIY
 aQZ
 wHJ
 qHy
@@ -101263,9 +101263,9 @@ cnD
 vOs
 vOs
 vOs
-kJA
+vOs
 lwL
-huu
+lIY
 trw
 pAp
 qHy
@@ -101518,11 +101518,11 @@ uoS
 xvy
 aAi
 vOs
-cyA
-eIN
+vOs
+jFV
+aZw
 xvy
 bly
-huu
 aQZ
 pAp
 qHy
@@ -101775,11 +101775,11 @@ eOo
 xvy
 hLb
 vOs
+vOs
 jpO
 jpO
-kLP
+cyA
 huu
-ean
 trw
 pAp
 xWX
@@ -102032,11 +102032,11 @@ fhC
 eRX
 hgP
 vOs
-jvm
+vOs
 phB
 lcg
+fpO
 huu
-ean
 aQZ
 pAp
 xWX
@@ -102289,11 +102289,11 @@ vOs
 eRX
 hgP
 vOs
-cyA
+vOs
 jFV
 luV
+jvm
 huu
-ean
 aQZ
 pAp
 xWX
@@ -102546,11 +102546,11 @@ vOs
 eRX
 hgP
 vOs
+vOs
 jpO
 jpO
-kLP
+cyA
 huu
-ean
 aQZ
 wHJ
 xWX
@@ -102803,11 +102803,11 @@ fhC
 eRX
 mDx
 vOs
-jvm
-nMB
+vOs
+phB
+bkP
 xvy
 huu
-ean
 lcr
 bKh
 mHp
@@ -103060,10 +103060,10 @@ fio
 xvy
 xvy
 iME
+iME
 jyb
 jyb
 xvy
-huu
 huu
 huu
 aQZ
@@ -103563,7 +103563,7 @@ aQG
 aiO
 xvy
 bbT
-bkP
+bbV
 chN
 xvy
 dyG
