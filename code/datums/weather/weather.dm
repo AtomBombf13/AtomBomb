@@ -120,18 +120,26 @@
 				impacted_areas |= A
 				break
 	weather_duration = rand(weather_duration_lower, weather_duration_upper)
-	START_PROCESSING(SSweather, src)			//The reason this doesn't start and stop at main stage is because processing list is also used to see active running weathers (for example, you wouldn't want two ash storms starting at once.)
+	START_PROCESSING(SSweather, src)	//The reason this doesn't start and stop at main stage is because processing list is also used to see active running weathers (for example, you wouldn't want two ash storms starting at once.)
 	update_areas()
+	send_alert(telegraph_message, telegraph_sound)
+	addtimer(CALLBACK(src, .proc/start), telegraph_duration)
+
+// handles sending all alerts
+/datum/weather/proc/send_alert(alert_msg, alert_sfx)
 	for(var/z_level in impacted_z_levels)
 		for(var/mob/player as anything in SSmobs.clients_by_zlevel[z_level])
-			var/turf/mob_turf = get_turf(player)
-			if(!mob_turf)
+			if(!can_get_alert(player))
 				continue
-			if(telegraph_message)
-				to_chat(player, telegraph_message)
-			if(telegraph_sound)
-				SEND_SOUND(player, sound(telegraph_sound))
-	addtimer(CALLBACK(src, .proc/start), telegraph_duration)
+			if(alert_msg)
+				to_chat(player, alert_msg)
+			if(alert_sfx)
+				SEND_SOUND(player, sound(alert_sfx))
+
+// the checks for if a mob should recieve alerts, returns TRUE if can
+/datum/weather/proc/can_get_alert(mob/player)
+	var/turf/mob_turf = get_turf(player)
+	return !isnull(mob_turf)
 
 /**
  * Starts the actual weather and effects from it
@@ -146,15 +154,7 @@
 	SEND_GLOBAL_SIGNAL(COMSIG_WEATHER_START(type))
 	stage = MAIN_STAGE
 	update_areas()
-	for(var/z_level in impacted_z_levels)
-		for(var/mob/player as anything in SSmobs.clients_by_zlevel[z_level])
-			var/turf/mob_turf = get_turf(player)
-			if(!mob_turf)
-				continue
-			if(weather_message)
-				to_chat(player, weather_message)
-			if(weather_sound)
-				SEND_SOUND(player, sound(weather_sound))
+	send_alert(weather_message, weather_sound)
 	addtimer(CALLBACK(src, .proc/wind_down), weather_duration)
 
 /**
@@ -170,15 +170,7 @@
 	SEND_GLOBAL_SIGNAL(COMSIG_WEATHER_WINDDOWN(type))
 	stage = WIND_DOWN_STAGE
 	update_areas()
-	for(var/z_level in impacted_z_levels)
-		for(var/mob/player as anything in SSmobs.clients_by_zlevel[z_level])
-			var/turf/mob_turf = get_turf(player)
-			if(!mob_turf)
-				continue
-			if(end_message)
-				to_chat(player, end_message)
-			if(end_sound)
-				SEND_SOUND(player, sound(end_sound))
+	send_alert(end_message, end_sound)
 	addtimer(CALLBACK(src, .proc/end), end_duration)
 
 /**
