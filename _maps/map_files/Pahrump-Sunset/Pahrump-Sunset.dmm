@@ -16883,15 +16883,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
-"bpg" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/roaddirt{
-	dir = 4;
-	icon_state = "innerpavement"
-	},
-/area/f13/wasteland)
 "bpj" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /obj/effect/decal/cleanable/dirt,
@@ -25688,12 +25679,6 @@
 	name = "concrete wall"
 	},
 /area/f13/ncr)
-"eIN" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_east_north"
-	},
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
 "eIR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/opshuttle,
@@ -45118,12 +45103,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/village)
-"nMB" = (
-/obj/structure/chair/booth{
-	icon_state = "booth_west_north"
-	},
-/turf/open/floor/wood_fancy/wood_fancy_dark,
-/area/f13/city)
 "nMT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair{
@@ -96885,8 +96864,8 @@ aky
 gKt
 gKt
 aky
-bpg
-bpg
+hEh
+hEh
 hEh
 hEh
 hEh
