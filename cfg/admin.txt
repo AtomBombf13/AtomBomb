@@ -1,6 +1,9 @@
 honto335 role=admin
 adamblue role=admin
-atombombhost role=admin
 slraptor role=admin
 bobnewman role=admin
 ollieoxen role=admin
+kneesox role=admin
+isthatabird role=admin
+daemontinadel role=admin
+atombombhost role=admin
