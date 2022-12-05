@@ -1,6 +1,0 @@
-honto335 role=admin
-adamblue role=admin
-atombombhost role=admin
-slraptor role=admin
-bobnewman role=admin
-ollieoxen role=admin
