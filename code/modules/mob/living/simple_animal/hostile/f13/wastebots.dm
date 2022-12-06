@@ -101,7 +101,7 @@
 
 /mob/living/simple_animal/hostile/handy/liberator
 	name = "liberator mk.0"
-	desc = "A small pre-War drone airdropped by the People's Liberation Army all over the United States in the last days of the war. This one looks like an earlier model."
+	desc = "A small pre-War droned used by the People's Liberation Army. This one looks like an earlier model."
 	icon = 'icons/fallout/mobs/robots/weirdrobots.dmi'
 	icon_state = "liberator"
 	icon_living = "liberator"
@@ -141,13 +141,17 @@
 
 /mob/living/simple_animal/hostile/handy/liberator/yellow
 	name = "liberator mk.1"
-	desc = "A small pre-War drone airdropped by the People's Liberation Army all over the United States in the last days of the war. This is the main production model."
+	desc = "A small pre-War droned used by the People's Liberation Army. This is the main production model."
+	melee_damage_lower = 2 //still random
+	melee_damage_upper = 30
 	health = 51 //3 with a pistol, 2 with a magnum
 	maxHealth = 51
 	extra_projectiles = 1 //just a bit of spam
 	icon_state = "liberator_y"
 	icon_living = "liberator_y"
 	icon_dead = "liberator_y_d"
+
+//if anyone can give liberators a pounce ability, that would be neat
 
 /mob/living/simple_animal/hostile/handy/robobrain
 	name = "robobrain"
