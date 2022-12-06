@@ -101,7 +101,7 @@
 
 /mob/living/simple_animal/hostile/handy/liberator
 	name = "liberator mk.0"
-	desc = "A small pre-War droned used by the People's Liberation Army. This one looks like an earlier model."
+	desc = "A small pre-War drone airdropped by the People's Liberation Army all over the United States in the last days of the war. This one looks like an earlier model."
 	icon = 'icons/fallout/mobs/robots/weirdrobots.dmi'
 	icon_state = "liberator"
 	icon_living = "liberator"
@@ -141,7 +141,7 @@
 
 /mob/living/simple_animal/hostile/handy/liberator/yellow
 	name = "liberator mk.1"
-	desc = "A small pre-War droned used by the People's Liberation Army. This is the main production model."
+	desc = "A small pre-War drone airdropped by the People's Liberation Army all over the United States in the last days of the war. This is the main production model."
 	health = 51 //3 with a pistol, 2 with a magnum
 	maxHealth = 51
 	extra_projectiles = 1 //just a bit of spam
