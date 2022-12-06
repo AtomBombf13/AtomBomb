@@ -32844,11 +32844,13 @@
 	},
 /area/f13/building/firestation)
 "ied" = (
-/obj/structure/fence{
-	dir = 4
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "Town"
 	},
-/obj/structure/spacevine,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain0"
+	},
 /area/f13/wasteland)
 "iej" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier4,
@@ -34622,7 +34624,6 @@
 	},
 /area/f13/building/mall)
 "iRK" = (
-/obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "hole"
 	},
@@ -45654,15 +45655,6 @@
 	icon_state = "bar"
 	},
 /area/f13/caves)
-"ocf" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 4;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland)
 "och" = (
 /obj/structure/wreck/car{
 	dir = 4;
@@ -68795,7 +68787,7 @@ hEG
 anR
 aOk
 baR
-nCn
+hyv
 aQW
 aQW
 aQW
@@ -69052,7 +69044,7 @@ sTx
 anR
 fjI
 baR
-ied
+khO
 aQW
 vlN
 dxY
@@ -69309,7 +69301,7 @@ drC
 anR
 aOk
 baR
-nCn
+hyv
 aQW
 wnX
 aHe
@@ -69566,7 +69558,7 @@ gdZ
 anR
 aOk
 baR
-ied
+khO
 aQW
 qgB
 tfj
@@ -69823,7 +69815,7 @@ hEG
 anR
 aOk
 baR
-nCn
+hyv
 aQW
 wnX
 aJT
@@ -70080,7 +70072,7 @@ aQx
 aQO
 bfX
 bfX
-ied
+khO
 aQW
 aHe
 lps
@@ -70337,7 +70329,7 @@ hEG
 anR
 aOk
 baR
-nCn
+hyv
 aQW
 aQW
 aQW
@@ -70594,7 +70586,7 @@ hEG
 anR
 aOk
 baR
-ocf
+hyv
 aOk
 aOk
 aOk
@@ -97644,7 +97636,7 @@ qmG
 oBf
 bMM
 bMM
-sXv
+ied
 sXv
 bMM
 bMM
@@ -100219,7 +100211,7 @@ jvm
 huu
 lWp
 pAp
-iRK
+wNx
 blf
 qrr
 blf
@@ -101247,7 +101239,7 @@ lwL
 lIY
 trw
 pAp
-qHy
+iRK
 wNx
 aEu
 wNx
