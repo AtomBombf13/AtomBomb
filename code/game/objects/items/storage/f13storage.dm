@@ -316,7 +316,7 @@
 // -----------------------------------
 // STIMPAK BOX
 
-/obj/item/storage/box/medicine/stimpaks/stimpaks5 
+/obj/item/storage/box/medicine/stimpaks/stimpaks5
 	name = "box of stimpaks"
 	desc = "A box full of stimpaks."
 
@@ -375,3 +375,15 @@
 /obj/item/storage/box/medicine/bitterdrink5/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/bitterdrink(src)
+
+// -----------------------------------
+// NEEDLER CARTRIDGES
+
+/obj/item/storage/box/medicine/needler
+	name = "box of HN needler catridges"
+	desc = "A box full of needler ammo."
+
+/obj/item/storage/box/medicine/needler/PopulateContents()
+	for(var/i in 1 to 4)
+		new /obj/item/ammo_box/stripper/needle/improvised
+
