@@ -575,6 +575,7 @@
 		/obj/item/stack/sheet/plastic/twenty,
 		/obj/item/defibrillator/primitive,
 		/obj/item/reagent_containers/syringe/bluespace,
+		/obj/effect/spawner/bundle/f13/needler/weak
 		)
 
 
@@ -1194,6 +1195,12 @@
 	items = list(
 				/obj/item/gun/ballistic/revolver/needler,
 				/obj/item/ammo_box/stripper/needle
+				)
+
+/obj/effect/spawner/bundle/f13/needler/weak
+	items = list(
+				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle/improvised,
 				)
 
 /obj/effect/spawner/bundle/f13/trail
