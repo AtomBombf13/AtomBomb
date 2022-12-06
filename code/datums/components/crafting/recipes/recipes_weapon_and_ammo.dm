@@ -212,7 +212,7 @@
 
 /datum/crafting_recipe/needler
 	name = "box of four HN needler cartridges"
-	result = obj/item/storage/box/medicine/needler
+	result = /obj/item/storage/box/medicine/needler
 	reqs = list(/obj/item/stack/sheet/plastic/ = 10,
 				/obj/item/reagent_containers/syringe/xlarge = 20)
 	tools = list(TOOL_WORKBENCH)
