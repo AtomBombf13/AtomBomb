@@ -378,6 +378,7 @@
 
 // -----------------------------------
 // NEEDLER CARTRIDGES
+//technically medicine?
 
 /obj/item/storage/box/medicine/needler
 	name = "box of HN needler catridges"
