@@ -256,7 +256,11 @@ Head Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
+<<<<<<< Updated upstream
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
+=======
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
+>>>>>>> Stashed changes
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
@@ -597,7 +601,11 @@ Senior Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
+<<<<<<< Updated upstream
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
+=======
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
+>>>>>>> Stashed changes
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
@@ -707,7 +715,11 @@ Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
+<<<<<<< Updated upstream
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
+=======
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
+>>>>>>> Stashed changes
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
