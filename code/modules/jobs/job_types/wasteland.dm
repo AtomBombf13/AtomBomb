@@ -327,7 +327,7 @@ Wastelander
 		/obj/item/clothing/under/f13/wastelander/settler, \
 		/obj/item/clothing/under/f13/wastelander/brahmin, \
 		/obj/item/clothing/under/f13/wastelander/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
+		/obj/item/clothing/under/f13/wastelander/roving)
 	suit = pick(
 		/obj/item/clothing/suit/armor/light/kit, \
 		/obj/item/clothing/suit/armor/outfit/jacket/merc, \
@@ -393,7 +393,7 @@ Wastelander
 
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
-	uniform = /obj/item/clothing/under/f13/merchant
+	uniform = /obj/item/clothing/under/f13/wastelander/merchant
 	neck = /obj/item/clothing/neck/mantle/brown
 	shoes = /obj/item/clothing/shoes/f13/brownie
 	head = /obj/item/clothing/head/f13/stormchaser

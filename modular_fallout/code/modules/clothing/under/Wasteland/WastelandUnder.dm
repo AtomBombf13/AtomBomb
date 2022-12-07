@@ -88,10 +88,37 @@
 	item_state = "bl_suit"
 	item_color = "barmanalt"
 
-/obj/item/clothing/under/f13/lumberjack
+/obj/item/clothing/under/f13/wastelander/lumberjack
 	name = "lumberjack outfit"
 	desc = "Apparel of an old-time lumberjack."
 	icon_state = "lumberjack"
 	item_state = "lumberjack"
 	item_color = "lumberjack"
-	
+
+/obj/item/clothing/under/f13/wastelander/rustic
+	name = "rustic outfit"
+	desc = "Simple rustic clothes for your day to day life in the wastes."
+	icon_state = "vetranger"
+	item_state = "rustictown"
+	item_color = "rustictown"
+
+/obj/item/clothing/under/f13/wastelander/roving
+	name = "roving trader outfit "
+	desc = "It's an outfit commonly worn by the roving traders."
+	icon_state = "roving"
+	item_state = "roving"
+	item_color = "roving"
+
+/obj/item/clothing/under/f13/wastelander/caravaneer
+	name = "caravaneer outift"
+	desc = "A striped brown shirt, with a pair of dark blue pants on suspenders.<br>That type of outfit is commonly worn by caravaneers and travelers."
+	icon_state = "caravaneer"
+	item_state = "syndicate-blue"
+	item_color = "caravaneer"
+
+/obj/item/clothing/under/f13/wastelander/merchant
+	name = "merchant outfit "
+	desc = "An outfit commonly worn by various wastelanders - mostly wandering traders and merchants on the market.<br>So what do you say if I buy it from you with 10% discount?"
+	icon_state = "merchant"
+	item_state = "brownjsuit"
+	item_color = "merchant"

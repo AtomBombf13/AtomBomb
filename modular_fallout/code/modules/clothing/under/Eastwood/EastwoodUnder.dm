@@ -52,6 +52,14 @@
 	desc = "An expensive suit once used by lawmen of old west all complete with a waistcoat and a pocket watch. This one is for more discreet detectives."
 	icon_state = "detective"
 
+/obj/item/clothing/under/f13/eastwood/detective/alt
+	name = "fancy detective suit"
+	desc = "An immaculate white dress shirt, paired with a pair of fancy black dress pants, a red tie, and a charcoal vest."
+	icon_state = "detectivealt"
+	item_state = "bl_suit"
+	item_color = "detectivealt"
+	can_adjust = TRUE
+
 /obj/item/clothing/under/f13/eastwood/deputy
 	name = "eastwood deputy outfit"
 	desc = "An expensive suit once used by lawmen of old west all complete with a waistcoat and a pocket watch. This one is for hands-on deputies."

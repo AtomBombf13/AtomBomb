@@ -21037,8 +21037,8 @@
 /obj/item/clothing/under/f13/merca,
 /obj/item/clothing/under/f13/navy,
 /obj/item/clothing/under/f13/petrochico,
-/obj/item/clothing/under/f13/roving,
-/obj/item/clothing/under/f13/rustic,
+/obj/item/clothing/under/f13/wastelander/roving,
+/obj/item/clothing/under/f13/wastelander/rustic,
 /obj/item/clothing/under/f13/shiny{
 	desc = "The perfect outfit for a brave and reckless cowboy. Shiny!"
 	},
@@ -51864,7 +51864,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/clothing/under/f13/bennys,
-/obj/item/clothing/under/f13/detectivealt,
+/obj/item/clothing/under/f13/eastwood/detective/alt,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},

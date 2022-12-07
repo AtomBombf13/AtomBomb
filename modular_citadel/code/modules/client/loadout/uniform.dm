@@ -41,7 +41,7 @@
 
 /datum/gear/uniform/rustic
 	name = "rustic outfit"
-	path = /obj/item/clothing/under/f13/rustic
+	path = /obj/item/clothing/under/f13/wastelander/rustic
 
 /datum/gear/uniform/sleazeball
 	name = "loanshark outfit"
@@ -116,7 +116,7 @@
 
 /datum/gear/uniform/roving
 	name = "roving trader outfit"
-	path = /obj/item/clothing/under/f13/roving
+	path = /obj/item/clothing/under/f13/wastelander/roving
 
 /datum/gear/uniform/gear_harness
 	name = "gear harness outfit"
@@ -1005,7 +1005,7 @@
 
 /datum/gear/uniform/wasteland/merchant
 	name = "Merchant outfit"
-	path = /obj/item/clothing/under/f13/merchant
+	path = /obj/item/clothing/under/f13/wastelander/merchant
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
@@ -1131,7 +1131,7 @@
 
 /datum/gear/uniform/wasteland/roving
 	name = "Roving trader outfit"
-	path = /obj/item/clothing/under/f13/roving
+	path = /obj/item/clothing/under/f13/wastelander/roving
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 

@@ -214,7 +214,7 @@
 					/obj/item/clothing/under/f13/cowboyg = 2,
 					/obj/item/clothing/under/f13/wastelander/lumberjack = 2,
 					/obj/item/clothing/under/f13/machinist = 2,
-					/obj/item/clothing/under/f13/roving = 2,
+					/obj/item/clothing/under/f13/wastelander/roving = 2,
 					/obj/item/clothing/under/f13/wastelander/settler = 2,
 					/obj/item/clothing/shoes/sneakers/black = 5)
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 1)

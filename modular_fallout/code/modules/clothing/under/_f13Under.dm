@@ -1,3 +1,9 @@
+/*CONTAINED WITHIN FILE:
+- Base F13 Undershirt
+- Misc Items that can't fit into another category
+- Items pending deletion
+*/
+
 /obj/item/clothing/under/f13
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	fitted = FEMALE_UNIFORM_FULL
@@ -9,7 +15,7 @@
 /obj/item/clothing/under/f13/female
 	fitted = FEMALE_UNIFORM_TOP
 
-//Vault
+//Misc
 
 /obj/item/clothing/under/f13/housewifedress50s
 	name = "50s style dress"
@@ -26,14 +32,6 @@
 	item_state = "dresspicnic50s"
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
-
-
-/obj/item/clothing/under/f13/rustic
-	name = "rustic outfit"
-	desc = "Simple rustic clothes for your day to day life in the wastes."
-	icon_state = "vetranger"
-	item_state = "rustictown"
-	item_color = "rustictown"
 
 /obj/item/clothing/under/f13/sheriff
 	name = "sheriff outfit"
@@ -172,13 +170,6 @@
 	desc = "A jumpsuit that seems to come from another time."
 	icon_state = "xenon"
 	item_state = "xenon"
-
-/obj/item/clothing/under/f13/roving
-	name = "roving trader outfit "
-	desc = "It's an outfit commonly worn by the roving traders."
-	icon_state = "roving"
-	item_state = "roving"
-	item_color = "roving"
 
 /obj/item/clothing/under/f13/eastwood/follower
 	name = "follower volunteer uniform"
@@ -446,20 +437,6 @@
 	item_state = "centcom"
 	item_color = "petrochico"
 
-/obj/item/clothing/under/f13/wastelander/caravaneer
-	name = "caravaneer outift"
-	desc = "A striped brown shirt, with a pair of dark blue pants on suspenders.<br>That type of outfit is commonly worn by caravaneers and travelers."
-	icon_state = "caravaneer"
-	item_state = "syndicate-blue"
-	item_color = "caravaneer"
-
-/obj/item/clothing/under/f13/merchant
-	name = "merchant outfit "
-	desc = "An outfit commonly worn by various wastelanders - mostly wandering traders and merchants on the market.<br>So what do you say if I buy it from you with 10% discount?"
-	icon_state = "merchant"
-	item_state = "brownjsuit"
-	item_color = "merchant"
-
 /obj/item/clothing/under/f13/worn
 	name = "worn outfit "
 	desc = "A worn khaki shirt without any buttons left, and a ragged pair of jeans.<br>It may seem a bad outfit choice at first, yet there are wastelanders out there who can't afford even that."
@@ -518,13 +495,6 @@
 	item_state = "gy_suit"
 	item_color = "gentlesuit"
 
-/obj/item/clothing/under/f13/detectivealt
-	name = "fancy detective suit"
-	desc = "An immaculate white dress shirt, paired with a pair of fancy black dress pants, a red tie, and a charcoal vest."
-	icon_state = "detectivealt"
-	item_state = "bl_suit"
-	item_color = "detectivealt"
-	can_adjust = TRUE
 
 /obj/item/clothing/under/f13/spaceship
 	name = "crewman uniform"

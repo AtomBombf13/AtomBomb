@@ -727,7 +727,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/merchant
 	name = "Merchant outfit"
-	result = /obj/item/clothing/under/f13/merchant
+	result = /obj/item/clothing/under/f13/wastelander/merchant
 	reqs = list(/obj/item/stack/sheet/hay = 2,
 				/obj/item/stack/sheet/cloth = 3)
 	tools = list(TOOL_WORKBENCH)
@@ -893,7 +893,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/roving
 	name = "Roving Trader Outfit"
-	result = /obj/item/clothing/under/f13/roving
+	result = /obj/item/clothing/under/f13/wastelander/roving
 	reqs = list(/obj/item/stack/sheet/cloth = 4)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
