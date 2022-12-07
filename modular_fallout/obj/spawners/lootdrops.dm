@@ -214,4 +214,4 @@
 	/obj/item/clothing/head/helmet/power_armor/ncr = 1,
 	/obj/item/clothing/suit/armor/power_armor/t45d = 1,
 	/obj/item/clothing/suit/armor/power_armor/ncr = 1,
-	/obj/item/clothing/under/f13/recon = 1)*/
+	/obj/item/clothing/under/f13/bos = 1)*/

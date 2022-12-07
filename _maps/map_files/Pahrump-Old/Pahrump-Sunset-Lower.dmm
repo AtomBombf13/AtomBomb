@@ -358,18 +358,18 @@
 	anchored = 1;
 	name = "formal attire closet"
 	},
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -610,7 +610,7 @@
 /area/f13/bunker)
 "avu" = (
 /obj/structure/closet/crate/secure,
-/obj/item/clothing/under/f13/recon,
+/obj/item/clothing/under/f13/bos,
 /obj/item/clothing/suit/armor/power_armor/t45d,
 /obj/item/clothing/head/helmet/f13/power_armor/t45d,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -7176,8 +7176,8 @@
 	anchored = 1;
 	name = "formal attire cabinet"
 	},
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices2nd)
 "dXE" = (
@@ -12905,8 +12905,8 @@
 /obj/item/clothing/head/HoS/beret/syndicate{
 	name = "officer's beret"
 	},
-/obj/item/clothing/under/f13/bosformgold_m,
-/obj/item/clothing/under/f13/bosformgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
 	anchored = 1;
@@ -18095,16 +18095,16 @@
 /area/f13/caves)
 "kvw" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8
@@ -24838,8 +24838,8 @@
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
 /obj/item/clothing/under/syndicate/brotherhood,
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
 	anchored = 1;
@@ -25727,8 +25727,8 @@
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
 /obj/item/clothing/under/syndicate/brotherhood,
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
 	anchored = 1;
@@ -29672,12 +29672,12 @@
 	anchored = 1;
 	name = "formal attire closet"
 	},
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_f,
-/obj/item/clothing/under/f13/bosform_f,
-/obj/item/clothing/under/f13/bosform_f,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_f,
+/obj/item/clothing/under/f13/bos/form_f,
+/obj/item/clothing/under/f13/bos/form_f,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -36214,10 +36214,10 @@
 	},
 /area/f13/brotherhood/operations)
 "vSC" = (
-/obj/item/clothing/under/f13/bosformsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /obj/item/clothing/under/syndicate/brotherhood,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
@@ -37937,10 +37937,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/brotherhood/reactor)
 "wXV" = (
-/obj/item/clothing/under/f13/bosformsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /obj/item/clothing/under/syndicate/brotherhood,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{

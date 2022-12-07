@@ -332,7 +332,7 @@
 /area/holodeck/bos/programs/armory)
 "ce" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/recon,
+/obj/item/clothing/under/f13/bos,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 6;
 	icon_state = "warningline_red"
@@ -554,7 +554,7 @@
 /area/awaymission/vr/bos)
 "dr" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/recon,
+/obj/item/clothing/under/f13/bos,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 6;
 	icon_state = "warningline_red"
@@ -3940,7 +3940,7 @@
 /area/awaymission/vr/bos/casino)
 "Am" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/recon,
+/obj/item/clothing/under/f13/bos,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 6;
 	icon_state = "warningline_red"

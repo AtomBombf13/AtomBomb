@@ -2618,8 +2618,8 @@
 	anchored = 1;
 	name = "formal attire cabinet"
 	},
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices1st)
 "eZe" = (
@@ -6334,18 +6334,18 @@
 	anchored = 1;
 	name = "formal attire closet"
 	},
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -11631,12 +11631,12 @@
 	anchored = 1;
 	name = "formal attire closet"
 	},
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_f,
-/obj/item/clothing/under/f13/bosform_f,
-/obj/item/clothing/under/f13/bosform_f,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_f,
+/obj/item/clothing/under/f13/bos/form_f,
+/obj/item/clothing/under/f13/bos/form_f,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},

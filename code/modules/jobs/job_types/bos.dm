@@ -173,7 +173,7 @@ Head Paladin
 /datum/outfit/job/bos/f13headpaladin
 	name = "Head Paladin"
 	jobtype = /datum/job/bos/f13headpaladin
-	uniform = 		/obj/item/clothing/under/f13/recon
+	uniform = 		/obj/item/clothing/under/f13/bos
 	accessory = 	/obj/item/clothing/accessory/bos/headpaladin
 	glasses =       /obj/item/clothing/glasses/sunglasses
 	belt =			/obj/item/storage/belt/military/army
@@ -427,7 +427,7 @@ Senior Paladin
 	suit =	/obj/item/clothing/suit/armor/power_armor/t51b/bos
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
-	uniform =	/obj/item/clothing/under/f13/recon
+	uniform =	/obj/item/clothing/under/f13/bos
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/army
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
@@ -512,7 +512,7 @@ Paladin
 	jobtype =	/datum/job/bos/f13paladin
 	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
-	uniform =	/obj/item/clothing/under/f13/recon
+	uniform =	/obj/item/clothing/under/f13/bos
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/army
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin

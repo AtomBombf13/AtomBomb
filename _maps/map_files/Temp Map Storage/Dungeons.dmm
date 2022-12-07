@@ -1224,8 +1224,8 @@
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
 /obj/item/clothing/under/syndicate/brotherhood,
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
 	anchored = 1;
@@ -4311,12 +4311,12 @@
 	anchored = 1;
 	name = "formal attire closet"
 	},
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_m,
-/obj/item/clothing/under/f13/bosform_f,
-/obj/item/clothing/under/f13/bosform_f,
-/obj/item/clothing/under/f13/bosform_f,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_m,
+/obj/item/clothing/under/f13/bos/form_f,
+/obj/item/clothing/under/f13/bos/form_f,
+/obj/item/clothing/under/f13/bos/form_f,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -6810,8 +6810,8 @@
 /obj/item/clothing/head/HoS/beret/syndicate{
 	name = "officer's beret"
 	},
-/obj/item/clothing/under/f13/bosformgold_m,
-/obj/item/clothing/under/f13/bosformgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
 	anchored = 1;
@@ -7890,8 +7890,8 @@
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
 /obj/item/clothing/under/syndicate/brotherhood,
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
 	anchored = 1;
@@ -15422,8 +15422,8 @@
 	anchored = 1;
 	name = "formal attire cabinet"
 	},
-/obj/item/clothing/under/f13/bosformgold_f,
-/obj/item/clothing/under/f13/bosformgold_m,
+/obj/item/clothing/under/f13/bos/formgold_f,
+/obj/item/clothing/under/f13/bos/formgold_m,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices2nd)
 "nsN" = (
@@ -19126,18 +19126,18 @@
 	anchored = 1;
 	name = "formal attire closet"
 	},
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_m,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -20303,10 +20303,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/vault)
 "roa" = (
-/obj/item/clothing/under/f13/bosformsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /obj/item/clothing/under/syndicate/brotherhood,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
@@ -20988,10 +20988,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
 "rYr" = (
-/obj/item/clothing/under/f13/bosformsilver_m,
+/obj/item/clothing/under/f13/bos/formsilver_m,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/color/white/bos,
-/obj/item/clothing/under/f13/bosformsilver_f,
+/obj/item/clothing/under/f13/bos/formsilver_f,
 /obj/item/clothing/under/syndicate/brotherhood,
 /obj/item/clothing/head/f13/boscap,
 /obj/structure/closet/cabinet{
@@ -23692,16 +23692,16 @@
 /area/f13/enclave)
 "ulw" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
-/obj/item/clothing/under/f13/recon,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
+/obj/item/clothing/under/f13/bos,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8

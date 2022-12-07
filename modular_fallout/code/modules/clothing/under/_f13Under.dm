@@ -76,72 +76,6 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 
-
-//NCR
-
-/obj/item/clothing/under/f13/ncr
-	name = "NCR desert fatigues"
-	desc = "A set of standard issue New California Republic trooper fatigues."
-	icon_state = "ncr_uniform"
-	can_adjust = TRUE
-	item_state = "ncr_uniform"
-	item_color = "ncr_uniform"
-
-/obj/item/clothing/under/f13/ncr/ncr_officer
-	name = "NCR officer fatigues"
-	desc = "A standard service uniform for commissioned officers of the New California Republic."
-	can_adjust = TRUE
-	icon_state = "ncr_officer"
-	item_state = "ncr_officer"
-	item_color = "ncr_officer"
-
-/obj/item/clothing/under/f13/ncr/pants
-	name = "NCR fatigue pants"
-	desc = "A set of standard issue fatigue pants without the upper overcoat. For when you really need to show off your guns."
-	can_adjust = FALSE
-	icon_state = "ncr_fatigue_pants"
-	item_state = "ncr_fatigue_pants"
-	item_color = "ncr_fatigue_pants"
-
-/obj/item/clothing/under/f13/ncr/ncr_shorts
-	name = "NCR fatigue shorts"
-	desc = "A set of uniform shorts and lightweight shirt for NCR troopers deployed in hot climates."
-	can_adjust = TRUE
-	icon_state = "ncr_shorts"
-	item_state = "ncr_shorts"
-	item_color = "ncr_shorts"
-
-/obj/item/clothing/under/f13/ncrcaravan
-	name = "NCR caravaneer outfit"
-	desc = "A soft outfit commonly worn by NCR caravaneers."
-	icon_state = "caravaneer"
-	item_state = "caravaneer"
-	item_color = "caravaneer"
-
-/obj/item/clothing/under/f13/ncr/ncr_dress
-	name = "NCR dress uniform"
-	desc = "A crisp tan NCRA dress uniform, complete with tie."
-	can_adjust = TRUE
-	icon_state = "ncr_dress"
-	item_state = "ncr_dress"
-	item_color = "ncr_dress"
-
-/obj/item/clothing/under/f13/ncrcf
-	name = "NCRCF uniform"
-	desc = "A cheap blue shirt and slacks, the letters 'NCRCF' emblazened on the back. A meek reminder of who owns you."
-	can_adjust = TRUE
-	icon_state = "ncrcf"
-	item_state = "ncrcf"
-	item_color = "ncrcf"
-
-/obj/item/clothing/under/f13/ncr_sniper_fatigues
-	name = "NCR sniper fatigues"
-	desc = "A set of standard issue New California Republic sniper fatigues. "
-	can_adjust = TRUE
-	icon_state = "ncr_sniper"
-	item_state = "ncr_sniper"
-	item_color = "ncr_sniper"
-
 //Settlers
 
 /obj/item/clothing/under/f13/brahminm
@@ -246,82 +180,7 @@
 	desc = "An expensive suit once used by lawmen of old west all complete with a waistcoat. This one is for the man with the big iron."
 	icon_state = "sheriff"
 
-//Ranger
-/obj/item/clothing/under/f13/ranger
-	name = "ranger outfit"
-	desc = "Simple rustic clothes for a big iron packin' lawman."
-	icon_state = "ranger"
-	item_state = "ranger"
-	item_color = "ranger"
 
-/obj/item/clothing/under/f13/ranger/trail
-	name = "ranger outfit"
-	desc = "Simple rustic clothes for a big iron packin' lawman. Worn often by NCR rangers."
-	icon_state = "cowboyrang"
-	item_state = "cowboyrang"
-	item_color = "cowboyrang"
-
-/obj/item/clothing/under/f13/ranger/patrol
-	name = "patrol ranger outfit"
-	desc = "A pair of brown slacks and a breathable shirt, meant to be worn under NCR patrol ranger armour."
-	icon_state = "patrolranger"
-	item_state = "patrolranger"
-	item_color = "patrolranger"
-
-/obj/item/clothing/under/f13/ranger/vet
-	name = "ranger flannel outfit"
-	desc = "Simple rustic clothes for any big iron packin' ranger."
-	icon_state = "vetranger"
-	item_state = "vetranger"
-	item_color = "vetranger"
-
-/obj/item/clothing/under/f13/ranger/vet/foxflannel
-	name = "black ranger flannel outfit"
-	desc = "A black flannel ontop of a pair of slim-fitting pre-war jeans that were kept in excellent condition. The back leather panel is worn out but you can barely make out: '512'."
-	icon_state = "foxflannel"
-	item_state = "foxflannel"
-	item_color = "foxflannel"
-
-/obj/item/clothing/under/f13/ranger/vet/thaxflannel
-	name = "Thaxton's ranger flannel outfit"
-	desc = "A simple outfit for a burly, big iron packin' lawman. A golden belt-buckle in the rough shape of a medallion is proudly presented atop a leather gunbelt."
-	icon_state = "thaxflannel"
-	item_state = "thaxflannel"
-	item_color = "thaxflannel"
-
-/obj/item/clothing/under/f13/ranger/erin
-	name = "desert pants"
-	desc = "An old pair of beat up, Pre-War BDUs. These ones are emblazoned with desert patterns, and it has been reinforced around the left knee."
-	icon_state = "erin_pants"
-	item_state = "erin_pants"
-
-/obj/item/clothing/under/f13/ranger/blue
-	name = "blue ranger outfit"
-	desc = "Simple rustic clothes for a big iron packin' lawman. A blue collar shirt with tan slacks."
-	icon_state = "blueranger"
-	item_state = "blueranger"
-	item_color = "blueranger"
-
-/obj/item/clothing/under/f13/ncr_formal_uniform/majzirilli
-	name = "Major Zirilli's service uniform"
-	desc = "An immaculately maintained NCRA service uniform, weighted down with golden embellishments signifying their authority."
-	icon_state = "majzirilli"
-	item_state = "majzirilli"
-	item_color = "majzirilli"
-
-/obj/item/clothing/under/f13/ncr_female_officer
-	name = "NCR Officer Dress"
-	desc = "An immaculately maintained NCRA service uniform."
-	icon_state = "ncr_female_officer"
-	item_state = "ncr_female_officer"
-	item_color = "ncr_female_officer"
-
-/obj/item/clothing/under/f13/ranger/modif_ranger
-	name = "green ranger outfit"
-	desc = "A ranger outfit with a green cotton longshirt and dark grey jeans along with a black bandana around the neck."
-	icon_state = "modif_ranger"
-	item_state = "modif_ranger"
-	item_color = "modif_ranger"
 
 /obj/item/clothing/under/f13/rustic
 	name = "rustic outfit"
@@ -358,21 +217,7 @@
 	item_state = "chef"
 	item_color = "chef"
 
-//Brotherhood of Steel
 
-/obj/item/clothing/under/f13/recon
-	name = "recon bodysuit"
-	desc = "A vacuum-sealed asbestos jumpsuit covering the entire body."
-	icon_state = "recon"
-	item_state = "recon"
-	item_color = "recon"
-
-/obj/item/clothing/under/f13/recon/outcast
-	name = "recon bodysuit"
-	desc = "A vacuum-sealed asbestos jumpsuit covering the entire body, dyed and painted black with red markings."
-	icon_state = "recon_outcast"
-	item_state = "recon_outcast"
-	item_color = "recon"
 
 //Legion
 
@@ -1320,7 +1165,7 @@
 	name = "dictator's overcoat"
 	desc = "A grim looking overcoat - preferable standard for the ruler of Eastwood.<br>It's decorated with golden stars, each one adorned with a tree."
 
-/obj/item/clothing/under/f13/recon
+/obj/item/clothing/under/f13/bos
 	name = "recon armor"
 	desc = "Intended to serve as the under-armor of the T-45d power armor, the recon armor is a vacuum-sealed asbestos jumpsuit covering the entire body.<br>Attached to it is the interface and mounts for the power armor.<br>Its purpose is twofold - it allows the user to actually operate the armor and protect soft tissue from moving parts inside the suit and heat."
 	icon_state = "recon"
@@ -1443,103 +1288,6 @@
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
 
-/obj/item/clothing/under/f13/bos/fatigues
-	name = "Brotherhood fatigues"
-	desc = "A dry cleaned set of grey fatigues with a brown belt, commonly worn by the off-duty members of the Brotherhood of Steel."
-	icon_state = "bos_fatigues"
-	item_state = "bos_fatigues"
-
-/obj/item/clothing/under/f13/bos/bodysuit
-	name = "Brotherhood Knight fatigues"
-	desc = "A bodysuit worn by members of the Brotherhood of steel."
-	icon_state = "bos_bodysuit"
-	item_state = "bos_bodysuit"
-
-/obj/item/clothing/under/f13/bos/f/bodysuit
-	name = "Brotherhood bodysuit"
-	desc = "A bodysuit worn by members of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_f"
-	item_state = "bos_bodysuit_f"
-	body_parts_covered = CHEST
-
-/obj/item/clothing/under/f13/bos/bodysuit/knight
-	name = "Brotherhood Knight bodysuit"
-	desc = "A bodysuit worn by the Knights of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_navy"
-	item_state = "bos_bodysuit_navy"
-
-/obj/item/clothing/under/f13/bos/f/bodysuit/knight
-	name = "Brotherhood Knight bodysuit"
-	desc = "A bodysuit worn by the Knights of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_navy_f"
-	item_state = "bos_bodysuit_navy_f"
-
-/obj/item/clothing/under/f13/bos/bodysuit/scribe
-	name = "Brotherhood Scribe bodysuit"
-	desc = "A bodysuit worn by the Scribes of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_red"
-	item_state = "bos_bodysuit_red"
-
-/obj/item/clothing/under/f13/bos/f/bodysuit/scribe
-	name = "Brotherhood Scribe bodysuit"
-	desc = "A bodysuit worn by the Scribes of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_red_f"
-	item_state = "bos_bodysuit_red_f"
-
-/obj/item/clothing/under/f13/bos/bodysuit/paladin
-	name = "Brotherhood Paladin bodysuit"
-	desc = "A bodysuit worn by the Paladins of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_grey"
-	item_state = "bos_bodysuit_grey"
-
-/obj/item/clothing/under/f13/bos/f/bodysuit/paladin
-	name = "Brotherhood Scribe bodysuit"
-	desc = "A bodysuit worn by the Paladins of the Brotherhood of steel."
-	icon_state = "bos_bodysuit_grey_f"
-	item_state = "bos_bodysuit_grey_f"
-
-/obj/item/clothing/under/f13/bosform_f
-	name = "female initiate service uniform"
-	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one has no markings, and looks to be for a feminine person."
-	icon_state = "bosform_f"
-	item_state = "bosform_f"
-	item_color = "bosform_f"
-
-/obj/item/clothing/under/f13/bosform_m
-	name = "male initiate service uniform"
-	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one has no markings, and looks to be for a masculine person."
-	icon_state = "bosform_m"
-	item_state = "bosform_m"
-	item_color = "bosform_m"
-
-/obj/item/clothing/under/f13/bosformsilver_f
-	name = "female brotherhood service uniform"
-	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a silver chain, and looks to be for a feminine person."
-	icon_state = "bosformsilver_f"
-	item_state = "bosformsilver_f"
-	item_color = "bosformsilver_f"
-
-/obj/item/clothing/under/f13/bosformsilver_m
-	name = "male brotherhood service uniform"
-	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a silver chain, and looks to be for a masculine person."
-	icon_state = "bosformsilver_m"
-	item_state = "bosformsilver_m"
-	item_color = "bosformsilver_m"
-
-/obj/item/clothing/under/f13/bosformgold_f
-	name = "female ranking service uniform"
-	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a gold chain; denoting authority, and looks to be for a feminine person."
-	icon_state = "bosformgold_f"
-	item_state = "bosformgold_f"
-	item_color = "bosformgold_f"
-
-/obj/item/clothing/under/f13/bosformgold_m
-	name = "male ranking service uniform"
-	desc = "A dry-cleaned and fitted formal uniform of the Brotherhood of Steel, for special occasions. This one bears a gold chain; denoting authority, and looks to be for a masculine person."
-	icon_state = "bosformgold_m"
-	item_state = "bosformgold_m"
-	item_color = "bosformgold_m"
-
 /obj/item/clothing/under/f13/atomfaithful
 	name = "faithful attire"
 	desc = "The attire worn by those Faithful to the Division."
@@ -1548,7 +1296,6 @@
 	item_color = "atomfaithful"
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
-
 
 /obj/item/clothing/under/f13/atomwitchunder
 	name = "seers underclothes"
