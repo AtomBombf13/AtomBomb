@@ -156,14 +156,14 @@
 
 /datum/crafting_recipe/tribal/tribaloutfitfemale
 	name = "Female Tribal Outfit"
-	result = /obj/item/clothing/under/f13/female/tribal
+	result = /obj/item/clothing/under/f13/tribal/female
 	time = 20
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 2)
 	tools = list(TOOL_WORKBENCH)
 
 /datum/crafting_recipe/tribal/tribalarmoredcloth
 	name = "Patched Tribal Loincloth"
-	result = /obj/item/clothing/under/f13/wayfarer/hunter
+	result = /obj/item/clothing/under/f13/tribal/wayfarer/hunter
 	time = 20
 	reqs = list(/obj/item/stack/sheet/cloth = 3,
 				/obj/item/stack/sheet/leather = 1)
@@ -171,7 +171,7 @@
 
 /datum/crafting_recipe/tribal/tribalcloth
 	name = "Tribal Loincloth"
-	result = /obj/item/clothing/under/f13/wayfarer
+	result = /obj/item/clothing/under/f13/tribal/wayfarer
 	time = 15
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 	tools = list(TOOL_WORKBENCH)
@@ -257,14 +257,14 @@
 
 /datum/crafting_recipe/tribalwar/whitelegs/garb
 	name = "White Legs Garb"
-	result = /obj/item/clothing/under/f13/whitelegs
+	result = /obj/item/clothing/under/f13/tribal/whitelegs
 	time = 30
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 1,
 				/obj/item/stack/sheet/cloth = 2)
 
 /datum/crafting_recipe/tribalwar/whitelegs/femalegarb
 	name = "Female White Legs Garb"
-	result = /obj/item/clothing/under/f13/female/whitelegs
+	result = /obj/item/clothing/under/f13/tribal/whitelegs/female
 	time = 30
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 1,
 				/obj/item/stack/sheet/cloth = 2)
@@ -298,13 +298,13 @@
 
 /datum/crafting_recipe/tribalwar/rustwalkers/garb
 	name = "Rustwalkers Garb"
-	result = /obj/item/clothing/under/f13/rustwalkers
+	result = /obj/item/clothing/under/f13/tribal/rustwalkers
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
 /datum/crafting_recipe/tribalwar/rustwalkers/femalegarb
 	name = "Female Rustwalkers Garb"
-	result = /obj/item/clothing/under/f13/female/rustwalkers
+	result = /obj/item/clothing/under/f13/tribal/rustwalkers/female
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
@@ -338,13 +338,13 @@
 
 /datum/crafting_recipe/tribalwar/eighties/garb
 	name = "Eighties Garb"
-	result = /obj/item/clothing/under/f13/eighties
+	result = /obj/item/clothing/under/f13/tribal/eighties
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
 /datum/crafting_recipe/tribalwar/eighties/femalegarb
 	name = "Female Eighties Garb"
-	result = /obj/item/clothing/under/f13/female/eighties
+	result = /obj/item/clothing/under/f13/tribal/eighties/female
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
@@ -377,13 +377,13 @@
 
 /datum/crafting_recipe/tribalwar/deadhorses/garb
 	name = "Dead Horses Garb"
-	result = /obj/item/clothing/under/f13/deadhorses
+	result = /obj/item/clothing/under/f13/tribal/deadhorses
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
 /datum/crafting_recipe/tribalwar/deadhorses/femalegarb
 	name = "Female Dead Horses Garb"
-	result = /obj/item/clothing/under/f13/female/deadhorses
+	result = /obj/item/clothing/under/f13/tribal/deadhorses/female
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
@@ -401,13 +401,13 @@
 
 /datum/crafting_recipe/tribalwar/sorrows/garb
 	name = "Sorrows Garb"
-	result = /obj/item/clothing/under/f13/sorrows
+	result = /obj/item/clothing/under/f13/tribal/sorrows
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
 /datum/crafting_recipe/tribalwar/sorrows/femalegarb
 	name = "Female Sorrows Garb"
-	result = /obj/item/clothing/under/f13/female/sorrows
+	result = /obj/item/clothing/under/f13/tribal/sorrows/female
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 
@@ -450,7 +450,7 @@ datum/crafting_recipe/tribalwar/bone
 
 /datum/crafting_recipe/tribalwar/bone/garb
 	name = "Bone Dancer Garb"
-	result = /obj/item/clothing/under/f13/bone
+	result = /obj/item/clothing/under/f13/tribal/bone
 	time = 30
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 

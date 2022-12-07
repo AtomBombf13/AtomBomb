@@ -684,7 +684,7 @@
 /obj/item/clothing/under/f13/enclave/peacekeeper,
 /obj/item/clothing/under/f13/khan,
 /obj/item/clothing/under/f13/merca,
-/obj/item/clothing/under/f13/raider_leather,
+/obj/item/clothing/under/f13/raider/leather,
 /obj/item/clothing/under/f13/roving,
 /obj/item/clothing/under/f13/rustic,
 /obj/item/clothing/under/f13/worn,
@@ -3808,7 +3808,7 @@
 /area/awaymission/vr/bos/enclavebunker)
 "zh" = (
 /obj/structure/table,
-/obj/item/clothing/under/f13/enclave_officer,
+/obj/item/clothing/under/f13/enclave/officer,
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
 	},

@@ -30,7 +30,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
-	uniform = /obj/item/clothing/under/f13/rag
+	uniform = /obj/item/clothing/under/f13/wastelander/rag
 	suit = /obj/item/clothing/suit/armor/medium/raider/iconoclast
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -272,7 +272,7 @@
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
-	uniform = /obj/item/clothing/under/f13/raiderrags
+	uniform = /obj/item/clothing/under/f13/raider/rags
 	suit = /obj/item/clothing/suit/armor/light/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
 	mask = /obj/item/clothing/mask/facewrap

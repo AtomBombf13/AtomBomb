@@ -83,7 +83,7 @@
 	name = "Raider uniform"
 	id = "raider_uniform"
 	cost = 20
-	item_path = /obj/item/clothing/under/f13/raider_leather
+	item_path = /obj/item/clothing/under/f13/raider/leather
 
 /datum/gang_item/clothing/jester_uniform
 	name = "Jester suit"

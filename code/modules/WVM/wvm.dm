@@ -715,18 +715,18 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	icon_state = "armor_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								5),
-		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/settler,							15),
+		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/wastelander/settler,							15),
 		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							30),
-		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							40),
+		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/eastwood/followers,							40),
 		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							50),
 		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							150),
 		new /datum/data/wasteland_equipment("Rifleman's Primer",				/obj/item/book/granter/trait/rifleman,							150)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								5),
-		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/settler,							15),
+		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/wastelander/settler,							15),
 		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							30),
-		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							40),
+		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/eastwood/followers,							40),
 		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							50),
 		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							150),
 		new /datum/data/wasteland_equipment("Rifleman's Primer",				/obj/item/book/granter/trait/rifleman,							150)

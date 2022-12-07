@@ -863,7 +863,7 @@
 	anchored = 1;
 	name = "formal attire cabinet"
 	},
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/under/f13/ncr/ncr_officer,
 /turf/open/floor/carpet/royalblue,
@@ -1033,7 +1033,7 @@
 /area/f13/legion)
 "ey" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack,
 /obj/item/clothing/under/f13/ncr/ncr_dress,
@@ -1597,7 +1597,7 @@
 	},
 /area/f13/wasteland)
 "gU" = (
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/under/f13/ncr/ncr_officer,
 /obj/structure/decoration/rag{
@@ -2673,7 +2673,7 @@
 /area/f13/ncr)
 "lo" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/machinery/light/small{
 	dir = 8
@@ -2958,7 +2958,7 @@
 /area/f13/building)
 "ml" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /turf/open/floor/carpet/red,
 /area/f13/ncr)
@@ -3144,7 +3144,7 @@
 	name = "formal attire cabinet";
 	storage_capacity = 12
 	},
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/stamp/captain,
 /obj/item/clothing/suit/armor/outfit/jacket/battlecruiser,
 /obj/item/clothing/accessory/medal/conduct{
@@ -3999,7 +3999,7 @@
 /area/f13/building)
 "pZ" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/ncr_formal_uniform,
+/obj/item/clothing/under/f13/ncr/formal_uniform,
 /obj/item/clothing/shoes/laceup,
 /obj/machinery/light/small{
 	dir = 8
@@ -12055,10 +12055,10 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/building)
 "YH" = (
-/obj/item/clothing/under/f13/tribe,
+/obj/item/clothing/under/f13/tribal/wayfarer,
 /obj/structure/rack,
 /obj/item/clothing/head/helmet/f13/deathskull,
-/obj/item/clothing/under/f13/exile/tribal,
+/obj/item/clothing/under/f13/raider/exile/tribal,
 /turf/open/indestructible/ground/outside/woodalt,
 /area/f13/caves)
 "YJ" = (

@@ -110,7 +110,7 @@ Tribal Chief
 	name =	"Chief"
 	jobtype =	/datum/job/tribal/f13chief
 	head =	/obj/item/clothing/head/helmet/f13/wayfarer/chief/green
-	uniform =	/obj/item/clothing/under/f13/wayfarer
+	uniform =	/obj/item/clothing/under/f13/tribal/wayfarer
 	belt =	/obj/item/storage/backpack/spearquiver
 	neck =	/obj/item/clothing/neck/mantle/chief
 	id =	/obj/item/card/id/tribetattoo
@@ -168,7 +168,7 @@ Tribal Shaman
 /datum/outfit/job/tribal/f13shaman
 	name = "Shaman"
 	jobtype = /datum/job/tribal/f13shaman
-	uniform = /obj/item/clothing/under/f13/tribe
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
 	r_hand = /obj/item/twohanded/sledgehammer/shamanstaff
@@ -193,7 +193,7 @@ Tribal Shaman
 	name = "Invoker"
 	backpack_contents = list(
 		/obj/item/clothing/head/helmet/f13/wayfarer/shamanred=1,
-		/obj/item/clothing/under/f13/wayfarer/shamanred=1,
+		/obj/item/clothing/under/f13/tribal/wayfarer/shamanred=1,
 		/obj/item/melee/onehanded/knife/ritualdagger=1
 	)
 
@@ -201,7 +201,7 @@ Tribal Shaman
 	name = "Ascetic"
 	backpack_contents = list(
 		/obj/item/clothing/head/helmet/f13/wayfarer/shamanblue=1,
-		/obj/item/clothing/under/f13/wayfarer/shamanblue=1,
+		/obj/item/clothing/under/f13/tribal/wayfarer/shamanblue=1,
 		/obj/item/melee/onehanded/knife/ritualdagger=1
 	)
 
@@ -249,7 +249,7 @@ Tribal Head Hunter
 /datum/outfit/job/tribal/f13Hhunter
 	name = "Hunter"
 	jobtype = /datum/job/tribal/f13Hhunter
-	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer/hunter
 	suit = /obj/item/clothing/suit/hooded/cloak/shunter
 	belt = /obj/item/twohanded/spearaxe
 	id = /obj/item/card/id/tribetattoo
@@ -317,7 +317,7 @@ Druid
 	name = "Druid"
 	jobtype = /datum/job/tribal/f13druid
 	head = /obj/item/clothing/head/helmet/f13/wayfarer/antler
-	uniform = /obj/item/clothing/under/f13/wayfarer/acolyte
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer/acolyte
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
 	id = /obj/item/card/id/tribetattoo
@@ -405,7 +405,7 @@ Villager
 /datum/outfit/job/tribal/f13villager
 	name = "Villager"
 	jobtype = /datum/job/tribal/f13villager
-	uniform = /obj/item/clothing/under/f13/wayfarer
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
 	id = /obj/item/card/id/tribetattoo
@@ -515,7 +515,7 @@ Hunter
 	name = "Hunter"
 	jobtype = /datum/job/tribal/f13hunter
 	head = /obj/item/clothing/head/helmet/f13/wayfarer/hunter
-	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer/hunter
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
 	id = /obj/item/card/id/tribetattoo
@@ -582,7 +582,7 @@ Spirit-Pledged
 /datum/outfit/job/tribal/f13spiritpledged
 	name = "Spirit-Pledged"
 	jobtype = /datum/job/tribal/f13spiritpledged
-	uniform = /obj/item/clothing/under/f13/wayfarer
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer
 	id = /obj/item/card/id/tribetattoo
 
 /datum/outfit/loadout/gatherer
@@ -634,7 +634,7 @@ Guardian
 /datum/outfit/job/tribal/f13guardian
 	name = "Guardian"
 	jobtype = /datum/job/tribal/f13guardian
-	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
+	uniform = /obj/item/clothing/under/f13/tribal/wayfarer/hunter
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
 	suit = /obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer

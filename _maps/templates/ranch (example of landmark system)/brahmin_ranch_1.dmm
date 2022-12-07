@@ -140,7 +140,7 @@
 /obj/effect/spawner/lootdrop/clothing_middle,
 /obj/item/clothing/shoes/singery,
 /obj/item/clothing/under/singery,
-/obj/item/clothing/under/f13/bartenderalt,
+/obj/item/clothing/under/f13/wastelander/bartender_alt,
 /obj/item/clothing/shoes/f13/fancy,
 /obj/item/reagent_containers/food/drinks/flask,
 /obj/item/toy/clockwork_watch,

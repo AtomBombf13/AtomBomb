@@ -717,7 +717,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/settler
 	name = "Settler outfit"
-	result = /obj/item/clothing/under/f13/settler
+	result = /obj/item/clothing/under/f13/wastelander/settler
 	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/cloth = 3)
 	tools = list(TOOL_WORKBENCH)
@@ -766,7 +766,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/rag
 	name = "Slave rags"
-	result = /obj/item/clothing/under/f13/rag
+	result = /obj/item/clothing/under/f13/wastelander/rag
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	time = 5
 	category = CAT_CLOTHING
@@ -830,7 +830,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/westender
 	name = "Bartender outfit"
-	result = /obj/item/clothing/under/f13/westender
+	result = /obj/item/clothing/under/f13/wastelander/westender
 	reqs = list(/obj/item/stack/sheet/cloth = 4)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
@@ -911,7 +911,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/mercadv
 	name = "Merc Adventurer outfit"
-	result = /obj/item/clothing/under/f13/mercadv
+	result = /obj/item/clothing/under/f13/wastelander/merc
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
@@ -920,7 +920,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/fmercadv
 	name = "Female Merc Adventurer outfit"
-	result = /obj/item/clothing/under/f13/female/mercadv
+	result = /obj/item/clothing/under/f13/wastelander/merc/female
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
@@ -929,7 +929,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/brahmin
 	name = "Brahmin-skin outfit (male)"
-	result = /obj/item/clothing/under/f13/brahminm
+	result = /obj/item/clothing/under/f13/wastelander/brahmin
 	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 15
@@ -938,7 +938,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/fbrahmin
 	name = "Brahmin-skin outfit (female)"
-	result = /obj/item/clothing/under/f13/female/brahmin
+	result = /obj/item/clothing/under/f13/wastelander/brahmin/female
 	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 15

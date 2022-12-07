@@ -363,6 +363,6 @@
 
 /datum/outfit/job/enclave/f13enclavecitizen
 	name = "American Citizen (Role)"
-	uniform = /obj/item/clothing/under/f13/vault13
+	uniform = /obj/item/clothing/under/f13/vault/vault113
 	shoes = /obj/item/clothing/shoes/jackboots
 	id = /obj/item/card/id/dogtag/town/enclave

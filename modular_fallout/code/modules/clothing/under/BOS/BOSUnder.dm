@@ -5,11 +5,14 @@
 //Brotherhood Under Suits
 
 /obj/item/clothing/under/f13/bos
-	name = "recon bodysuit"
-	desc = "A vacuum-sealed asbestos jumpsuit covering the entire body."
+	name = "recon armor"
+	desc = "Intended to serve as the under-armor of the T-45d power armor, the recon armor is a vacuum-sealed asbestos jumpsuit covering the entire body.<br>Attached to it is the interface and mounts for the power armor.<br>Its purpose is twofold - it allows the user to actually operate the armor and protect soft tissue from moving parts inside the suit and heat."
 	icon_state = "recon"
-	item_state = "recon"
+	item_state = "rig_suit"
 	item_color = "recon"
+	flags_inv = HIDEHAIR
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 
 /obj/item/clothing/under/f13/bos/outcast
 	name = "recon bodysuit"

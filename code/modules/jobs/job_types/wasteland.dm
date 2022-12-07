@@ -75,8 +75,8 @@ Raider
 /datum/outfit/job/wasteland/f13raider/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	uniform = pick(
-		/obj/item/clothing/under/f13/raider_leather, \
-		/obj/item/clothing/under/f13/raiderrags, \
+		/obj/item/clothing/under/f13/raider/leather, \
+		/obj/item/clothing/under/f13/raider/rags, \
 		/obj/item/clothing/under/pants/f13/ghoul, \
 		/obj/item/clothing/under/jabroni)
 	if(prob(80))
@@ -213,7 +213,7 @@ Raider
 /datum/outfit/loadout/raider_smith
 	name = "Raider Smith"
 	suit = /obj/item/clothing/suit/armor/heavy/metal
-	uniform = /obj/item/clothing/under/f13/raider_leather
+	uniform = /obj/item/clothing/under/f13/raider/leather
 	head = /obj/item/clothing/head/helmet/f13/raider/arclight
 	gloves = /obj/item/clothing/gloves/blacksmith_mittens
 	backpack_contents = list(
@@ -228,7 +228,7 @@ Raider
 
 /datum/outfit/loadout/raider_tribal
 	name = "Tribal Outcast"
-	uniform = /obj/item/clothing/under/f13/exile/tribal
+	uniform = /obj/item/clothing/under/f13/raider/exile/tribal
 	suit = /obj/item/clothing/suit/hooded/outcast/tribal
 	suit_store = /obj/item/twohanded/spear/bonespear
 	shoes = /obj/item/clothing/shoes/sandal
@@ -324,9 +324,9 @@ Wastelander
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(
-		/obj/item/clothing/under/f13/settler, \
-		/obj/item/clothing/under/f13/brahminm, \
-		/obj/item/clothing/under/f13/lumberjack, \
+		/obj/item/clothing/under/f13/wastelander/settler, \
+		/obj/item/clothing/under/f13/wastelander/brahmin, \
+		/obj/item/clothing/under/f13/wastelander/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
 	suit = pick(
 		/obj/item/clothing/suit/armor/light/kit, \
@@ -355,7 +355,7 @@ Wastelander
 
 /datum/outfit/loadout/settler
 	name = "Settler"
-	uniform = /obj/item/clothing/under/f13/settler
+	uniform = /obj/item/clothing/under/f13/wastelander/settler
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	r_hand = /obj/item/pitchfork
 	l_hand = /obj/item/melee/onehanded/machete
@@ -375,7 +375,7 @@ Wastelander
 
 /datum/outfit/loadout/medic
 	name = "Wasteland Doctor"
-	uniform = /obj/item/clothing/under/f13/follower
+	uniform = /obj/item/clothing/under/f13/eastwood/follower
 	suit = /obj/item/clothing/suit/toggle/labcoat/followers
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/color/latex
@@ -434,7 +434,7 @@ Wastelander
 
 /datum/outfit/loadout/warrior
 	name = "Wasteland Warrior"
-	uniform = /obj/item/clothing/under/f13/settler
+	uniform = /obj/item/clothing/under/f13/wastelander/settler
 	shoes = /obj/item/clothing/shoes/f13/raidertreads
 	suit = /obj/item/clothing/suit/armor/medium/raider/wastewar
 	head = /obj/item/clothing/head/helmet/f13/wastewarhat
@@ -678,7 +678,7 @@ Wastelander
 	id = null
 	ears = null
 	belt = /obj/item/melee/onehanded/knife/bone
-	uniform = /obj/item/clothing/under/f13/settler
+	uniform = /obj/item/clothing/under/f13/wastelander/settler
 	shoes = /obj/item/clothing/shoes/sandal
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	r_hand = /obj/item/book/granter/trait/selection/tribal
@@ -737,7 +737,7 @@ Wastelander
 	name = "Lost Villager"
 	suit = /obj/item/clothing/suit/hooded/cloak
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/rag = 1,
+		/obj/item/clothing/under/f13/wastelander/rag = 1,
 		/obj/item/clothing/head/rice_hat = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		/obj/item/cultivator = 1,
@@ -765,8 +765,8 @@ Wastelander
 	name = "White Legs Storm-Drummer"
 	suit = /obj/item/clothing/suit/armor/light/tribal/whitelegs
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/whitelegs = 1,
-		/obj/item/clothing/under/f13/female/whitelegs = 1,
+		/obj/item/clothing/under/f13/tribal/whitelegs= 1,
+		/obj/item/clothing/under/f13/tribal/whitelegs/female = 1,
 		/obj/item/gun/ballistic/automatic/smg/tommygun/whitelegs = 1,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
@@ -776,8 +776,8 @@ Wastelander
 /datum/outfit/loadout/whitelegsshaman
 	name = "White Legs Arm-Makers"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/whitelegs = 1,
-		/obj/item/clothing/under/f13/female/whitelegs = 1,
+		/obj/item/clothing/under/f13/tribal/whitelegs = 1,
+		/obj/item/clothing/under/f13/tribal/whitelegs/female = 1,
 		/obj/item/twohanded/fireaxe = 1,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/book/granter/crafting_recipe/tribal/whitelegs = 1
@@ -788,8 +788,8 @@ Wastelander
 	name = "Dead Horses Stalker"
 	suit = /obj/item/clothing/suit/armor/light/tribal/deadhorses
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/deadhorses = 1,
-		/obj/item/clothing/under/f13/female/deadhorses = 1,
+		/obj/item/clothing/under/f13/tribal/deadhorses = 1,
+		/obj/item/clothing/under/f13/tribal/deadhorses/female = 1,
 		/obj/item/melee/onehanded/club/warclub = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2
@@ -799,8 +799,8 @@ Wastelander
 	name = "Dead Horses Disciple"
 	suit = /obj/item/clothing/suit/armor/medium/tribal/deadhorses
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/deadhorses = 1,
-		/obj/item/clothing/under/f13/female/deadhorses = 1,
+		/obj/item/clothing/under/f13/tribal/deadhorses = 1,
+		/obj/item/clothing/under/f13/tribal/deadhorses/female = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911=1,
 		/obj/item/ammo_box/magazine/pistol45 = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice =2
@@ -809,8 +809,8 @@ Wastelander
 /datum/outfit/loadout/deadhorsesshaman
 	name = "Dead Horses Shaman"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/deadhorses = 1,
-		/obj/item/clothing/under/f13/female/deadhorses = 1,
+		/obj/item/clothing/under/f13/tribal/deadhorses = 1,
+		/obj/item/clothing/under/f13/tribal/deadhorses/female = 1,
 		/obj/item/storage/bag/plants=1,
 		/obj/item/cultivator=1,
 		/obj/item/reagent_containers/glass/bucket/wood=1,
@@ -823,8 +823,8 @@ Wastelander
 	name = "Sorrows Hunter-Guardian"
 	suit = /obj/item/clothing/suit/armor/light/tribal/sorrows
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/sorrows = 1,
-		/obj/item/clothing/under/f13/female/sorrows = 1,
+		/obj/item/clothing/under/f13/tribal/sorrows = 1,
+		/obj/item/clothing/under/f13/tribal/sorrows/female = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/melee/unarmed/yaoguaigauntlet = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
@@ -836,8 +836,8 @@ Wastelander
 /datum/outfit/loadout/sorrowsshaman
 	name = "Sorrows Ink-Shaman"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/sorrows = 1,
-		/obj/item/clothing/under/f13/female/sorrows = 1,
+		/obj/item/clothing/under/f13/tribal/sorrows = 1,
+		/obj/item/clothing/under/f13/tribal/sorrows/female = 1,
 		/obj/item/storage/bag/plants = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket/wood = 1,
@@ -854,8 +854,8 @@ Wastelander
 	name = "Eighties Path-Maker"
 	suit = /obj/item/clothing/suit/armor/light/tribal/eighties
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/eighties = 1,
-		/obj/item/clothing/under/f13/female/eighties = 1,
+		/obj/item/clothing/under/f13/tribal/eighties = 1,
+		/obj/item/clothing/under/f13/tribal/eighties/female = 1,
 		/obj/item/gun/ballistic/shotgun/trench = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
@@ -867,8 +867,8 @@ Wastelander
 	name = "Eighties Road-Warrior"
 	suit = /obj/item/clothing/suit/armor/medium/tribal/eighties
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/eighties = 1,
-		/obj/item/clothing/under/f13/female/eighties = 1,
+		/obj/item/clothing/under/f13/tribal/eighties = 1,
+		/obj/item/clothing/under/f13/tribal/eighties/female = 1,
 		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/magazine/greasegun = 2,
@@ -879,8 +879,8 @@ Wastelander
 	name = "Eighties Lay-Mechanic"
 	suit = /obj/item/clothing/suit/armor/light/tribal/eighties
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/eighties = 1,
-		/obj/item/clothing/under/f13/female/eighties = 1,
+		/obj/item/clothing/under/f13/tribal/eighties = 1,
+		/obj/item/clothing/under/f13/tribal/eighties/female = 1,
 		/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 		/obj/item/ammo_box/shotgun/slug = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
@@ -893,7 +893,7 @@ Wastelander
 	name = "Wayfarer Warrior"
 	suit = /obj/item/clothing/suit/armor/light/tribal/geckocloak
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/wayfarer = 1,
+		/obj/item/clothing/under/f13/tribal/wayfarer = 1,
 		/obj/item/clothing/head/helmet/f13/wayfarer/hunter = 1,
 		/obj/item/twohanded/spear/bonespear = 1,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
@@ -919,8 +919,8 @@ Wastelander
 	name = "Rustwalkers Scipher"
 	suit = /obj/item/clothing/suit/armor/light/tribal/rustwalkers
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/rustwalkers = 1,
-		/obj/item/clothing/under/f13/female/rustwalkers = 1,
+		/obj/item/clothing/under/f13/tribal/rustwalkers = 1,
+		/obj/item/clothing/under/f13/tribal/rustwalkers/female = 1,
 		/obj/item/gun/ballistic/automatic/autopipe = 1,
 		/obj/item/ammo_box/magazine/autopipe = 2,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
@@ -931,8 +931,8 @@ Wastelander
 	name = "Rustwalkers Scrapper"
 	suit = /obj/item/clothing/suit/armor/light/tribal/rustwalkers
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/rustwalkers = 1,
-		/obj/item/clothing/under/f13/female/rustwalkers = 1,
+		/obj/item/clothing/under/f13/tribal/rustwalkers = 1,
+		/obj/item/clothing/under/f13/tribal/rustwalkers/female = 1,
 		/obj/item/gun/ballistic/revolver/hobo/pepperbox = 1,
 		/obj/item/ammo_box/c10mm = 1,
 		/obj/item/circular_saw = 1,
@@ -943,8 +943,8 @@ Wastelander
 /datum/outfit/loadout/rustwalkersshaman
 	name = "Rustwalkers Brain-Jack"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/rustwalkers = 1,
-		/obj/item/clothing/under/f13/female/rustwalkers = 1,
+		/obj/item/clothing/under/f13/tribal/rustwalkers = 1,
+		/obj/item/clothing/under/f13/tribal/rustwalkers/female = 1,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 1,
 		/obj/item/ammo_box/loader/acp45 = 2,
 		/obj/item/circular_saw = 1,
@@ -957,7 +957,7 @@ Wastelander
 /datum/outfit/loadout/bonedancerexile
 	name = "Bone Dancer Exile"
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/bone = 1,
+		/obj/item/clothing/under/f13/tribal/bone = 1,
 		/obj/item/clothing/head/helmet/skull/bone = 1,
 		/obj/item/book/granter/crafting_recipe/tribal/bone = 1,
 		/obj/item/twohanded/spear/bonespear = 1,
@@ -977,7 +977,7 @@ Wastelander
 /datum/outfit/loadout/raider_ncr
 	name = "Outlaw Ranger"
 	suit = /obj/item/clothing/suit/armor/medium/raider/combatduster
-	uniform = /obj/item/clothing/under/f13/raider_leather
+	uniform = /obj/item/clothing/under/f13/raider/leather
 	id = /obj/item/card/id/rusted
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m1carbine = 1,
@@ -990,7 +990,7 @@ Wastelander
 /datum/outfit/loadout/raider_legion
 	name = "Disgraced Legionnaire"
 	suit = /obj/item/clothing/suit/armor/exile/legexile
-	uniform = /obj/item/clothing/under/f13/exile/legion
+	uniform = /obj/item/clothing/under/f13/raider/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/gladius = 1,
@@ -1015,7 +1015,7 @@ Wastelander
 /datum/outfit/loadout/raider_vault
 	name = "Vault Renegade"
 	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
-	uniform = /obj/item/clothing/under/f13/exile/vault
+	uniform = /obj/item/clothing/under/f13/raider/exile/vault
 	id = /obj/item/card/id/rusted/fadedvaultid
 	gloves = /obj/item/pda
 	backpack_contents = list(

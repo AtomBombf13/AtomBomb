@@ -206,16 +206,16 @@
 	name = "Civilian ClothesMate"
 	desc = "A vending machine for civilian and waster disguises."
 	products = list(/obj/item/clothing/neck/mantle/poncho = 5,
-					/obj/item/clothing/under/f13/brahminf = 2,
-					/obj/item/clothing/under/f13/brahminm = 2,
-					/obj/item/clothing/under/f13/caravan = 2,
-					/obj/item/clothing/under/f13/caravaneer = 2,
+					/obj/item/clothing/under/f13/wastelander/brahmin/female = 2,
+					/obj/item/clothing/under/f13/wastelander/brahmin = 2,
+					/obj/item/clothing/under/f13/wastelander/caravan = 2,
+					/obj/item/clothing/under/f13/wastelander/caravaneer = 2,
 					/obj/item/clothing/under/f13/cowboyb = 2,
 					/obj/item/clothing/under/f13/cowboyg = 2,
-					/obj/item/clothing/under/f13/lumberjack = 2,
+					/obj/item/clothing/under/f13/wastelander/lumberjack = 2,
 					/obj/item/clothing/under/f13/machinist = 2,
 					/obj/item/clothing/under/f13/roving = 2,
-					/obj/item/clothing/under/f13/settler = 2,
+					/obj/item/clothing/under/f13/wastelander/settler = 2,
 					/obj/item/clothing/shoes/sneakers/black = 5)
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool = 1)
 
@@ -232,7 +232,7 @@
 	vend_reply = "Hurry back!"
 	products = list(/obj/item/clothing/under/f13/mprostitute = 5,
 					/obj/item/clothing/under/f13/fprostitute = 5,
-					/obj/item/clothing/under/f13/raiderharness = 3,
+					/obj/item/clothing/under/f13/raider = 3,
 					/obj/item/clothing/under/f13/ravenharness = 3,
 					/obj/item/clothing/suit/armor/outfit/overalls/sexymaid = 5,
 					/obj/item/clothing/head/maid = 5,

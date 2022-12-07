@@ -5840,7 +5840,7 @@
 /obj/structure/closet/anchored,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/under/f13/doctorf,
+/obj/item/clothing/under/f13/wastelander/doctor/female,
 /obj/item/clothing/suit/toggle/labcoat,
 /turf/open/floor/f13{
 	color = "#d9c4b9";

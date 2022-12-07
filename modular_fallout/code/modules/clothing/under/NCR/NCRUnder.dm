@@ -13,6 +13,20 @@
 	item_state = "ncr_uniform"
 	item_color = "ncr_uniform"
 
+/obj/item/clothing/under/f13/ncr/formal_uniform
+	name = "NCR pre-war uniform"
+	desc = "An old pre-war uniform repurposed for the NCR armed forces"
+	icon_state = "us_uniform"
+	item_state = "us_uniform"
+	item_color = "us_uniform"
+
+/obj/item/clothing/under/f13/ncr_camo
+	name = "NCR pre-war camo"
+	desc = "Old pre-war camo repurposed for the NCR armed forces"
+	icon_state = "nato_uniform"
+	item_state = "nato_uniform"
+	item_color = "nato_uniform"
+
 /obj/item/clothing/under/f13/ncr/ncr_officer
 	name = "NCR officer fatigues"
 	desc = "A standard service uniform for commissioned officers of the New California Republic."
@@ -68,7 +82,7 @@
 	item_state = "ncr_sniper"
 	item_color = "ncr_sniper"
 
-/obj/item/clothing/under/f13/ncr_formal_uniform/majzirilli
+/obj/item/clothing/under/f13/ncr/formal_uniform/majzirilli
 	name = "Major Zirilli's service uniform"
 	desc = "An immaculately maintained NCRA service uniform, weighted down with golden embellishments signifying their authority."
 	icon_state = "majzirilli"
@@ -81,6 +95,14 @@
 	icon_state = "ncr_female_officer"
 	item_state = "ncr_female_officer"
 	item_color = "ncr_female_officer"
+
+/obj/item/clothing/under/f13/ncr/torn
+	name = "torn overcoat"
+	desc = "Some time ago it looked like a regular NCR uniform, but now it looks like a total mess of ripped cloth."
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
+	icon_state = "tornovercoat"
+	item_color = "tornovercoat"
 
 // NCR RANGER UNDER SHIRTS
 

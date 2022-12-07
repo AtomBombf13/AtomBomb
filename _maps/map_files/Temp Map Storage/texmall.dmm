@@ -5276,7 +5276,7 @@
 "KT" = (
 /obj/structure/rack,
 /obj/item/clothing/under/f13/worn,
-/obj/item/clothing/under/f13/rag{
+/obj/item/clothing/under/f13/wastelander/rag{
 	pixel_x = 3;
 	pixel_y = -6
 	},

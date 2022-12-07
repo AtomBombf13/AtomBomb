@@ -3223,7 +3223,7 @@
 	},
 /area/f13/wasteland)
 "ani" = (
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "anj" = (
@@ -3315,7 +3315,7 @@
 /area/f13/wasteland)
 "anz" = (
 /obj/structure/closet,
-/obj/item/clothing/under/f13/doctor,
+/obj/item/clothing/under/f13/wastelander/doctor,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
 /obj/machinery/light/small/broken{
 	dir = 8
@@ -3600,7 +3600,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/item/clothing/under/f13/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "aoF" = (
@@ -5137,7 +5137,7 @@
 /area/f13/building)
 "auL" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -5351,7 +5351,7 @@
 /area/f13/building)
 "avs" = (
 /obj/effect/decal/remains/human,
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -12480,9 +12480,9 @@
 /obj/item/clothing/under/costume/kilt,
 /obj/item/clothing/under/color/grey,
 /obj/item/clothing/under/f13/combat,
-/obj/item/clothing/under/f13/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
 /obj/item/clothing/under/f13/mechanic,
-/obj/item/clothing/under/f13/lumberjack,
+/obj/item/clothing/under/f13/wastelander/lumberjack,
 /obj/item/clothing/under/f13/cowboyg,
 /obj/item/clothing/under/f13/cowboyb,
 /obj/item/clothing/under/f13/cowboyt,
@@ -12497,7 +12497,7 @@
 	},
 /obj/item/clothing/under/f13/sleazeball,
 /obj/item/clothing/under/f13/spring,
-/obj/item/clothing/under/f13/westender,
+/obj/item/clothing/under/f13/wastelander/westender,
 /obj/item/clothing/under/f13/worn,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -18852,7 +18852,7 @@
 "bRw" = (
 /obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
-/obj/item/clothing/under/f13/doctor,
+/obj/item/clothing/under/f13/wastelander/doctor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,
 /area/f13/building)
 "bRI" = (
@@ -32035,7 +32035,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/item/clothing/under/f13/doctorf,
+/obj/item/clothing/under/f13/wastelander/doctor/female,
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/building)
@@ -38149,7 +38149,7 @@
 /area/f13/wasteland)
 "kEQ" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/f13/raider_leather,
+/obj/item/clothing/under/f13/raider/leather,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -48869,7 +48869,7 @@
 "pyP" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/armor/costumes,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider,
 /obj/item/crafting/lunchbox,
 /turf/open/floor/f13{
 	icon_state = "bar"
@@ -56563,8 +56563,8 @@
 /area/f13/wasteland/khans)
 "try" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/f13/raiderharness,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider,
+/obj/item/clothing/under/f13/raider,
 /turf/open/floor/f13,
 /area/f13/building)
 "trF" = (
@@ -64417,8 +64417,8 @@
 /area/f13/building/massfusion)
 "xcN" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/caravaneer,
-/obj/item/clothing/under/f13/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,

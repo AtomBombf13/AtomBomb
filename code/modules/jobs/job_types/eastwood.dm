@@ -476,7 +476,7 @@ here's a tip, go search DEFINES/access.dm
 
 /datum/outfit/loadout/follower
 	name = "Follower"
-	uniform =	/obj/item/clothing/under/f13/followers
+	uniform =	/obj/item/clothing/under/f13/eastwood/followers
 	suit	=	/obj/item/clothing/suit/toggle/labcoat/followers
 	shoes 	=	/obj/item/clothing/shoes/f13/brownie
 

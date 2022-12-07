@@ -5691,7 +5691,7 @@
 /area/f13/brotherhood/rnd)
 "diR" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/raider_leather,
+/obj/item/clothing/under/f13/raider/leather,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "diX" = (
@@ -38084,7 +38084,7 @@
 /area/f13/caves)
 "xcm" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /area/f13/building)
 "xcW" = (
 /obj/structure/curtain{

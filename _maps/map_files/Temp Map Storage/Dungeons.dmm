@@ -5954,7 +5954,7 @@
 /obj/item/reagent_containers/food/drinks/mug,
 /obj/item/reagent_containers/food/drinks/mug,
 /obj/item/clothing/head/collectable/tophat,
-/obj/item/clothing/under/f13/bartenderalt,
+/obj/item/clothing/under/f13/wastelander/bartender_alt,
 /turf/open/floor/f13{
 	icon_state = "bar"
 	},
@@ -14227,7 +14227,7 @@
 /area/f13/brotherhood/dorms)
 "muI" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/vault/v113,
+/obj/item/clothing/under/f13/vault/vault113,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/gloves/color/captain,
 /obj/item/clothing/head/caphat/parade,
@@ -20671,9 +20671,9 @@
 /area/f13/brotherhood/operations)
 "rJm" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/vault/v113,
-/obj/item/clothing/under/f13/vault/v113,
-/obj/item/clothing/under/f13/vault/v113,
+/obj/item/clothing/under/f13/vault/vault113,
+/obj/item/clothing/under/f13/vault/vault113,
+/obj/item/clothing/under/f13/vault/vault113,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,
 /obj/item/clothing/shoes/sneakers/black,

@@ -237,7 +237,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
 
 /obj/effect/mob_spawn/human/corpse/raiderrangedsulphite
 	name = "Sulphite Raider Ranged Corpse"
-	uniform = /obj/item/clothing/under/f13/raiderharness
+	uniform = /obj/item/clothing/under/f13/raider
 	suit = /obj/item/clothing/suit/armor/heavy/metal/reinforced
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	head = /obj/item/clothing/head/helmet/f13/metalmask/mk2

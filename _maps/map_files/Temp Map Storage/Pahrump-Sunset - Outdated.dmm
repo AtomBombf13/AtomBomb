@@ -5068,7 +5068,7 @@
 /area/f13/building)
 "caK" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/f13/raider_leather,
+/obj/item/clothing/under/f13/raider/leather,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -7563,7 +7563,7 @@
 /area/f13/building)
 "diK" = (
 /obj/structure/closet,
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -10182,7 +10182,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/item/clothing/under/f13/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "elK" = (
@@ -16478,7 +16478,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/item/clothing/under/f13/doctorf,
+/obj/item/clothing/under/f13/wastelander/doctor/female,
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/building)
@@ -21398,9 +21398,9 @@
 /obj/item/clothing/under/costume/kilt,
 /obj/item/clothing/under/color/grey,
 /obj/item/clothing/under/f13/combat,
-/obj/item/clothing/under/f13/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
 /obj/item/clothing/under/f13/mechanic,
-/obj/item/clothing/under/f13/lumberjack,
+/obj/item/clothing/under/f13/wastelander/lumberjack,
 /obj/item/clothing/under/f13/cowboyg,
 /obj/item/clothing/under/f13/cowboyb,
 /obj/item/clothing/under/f13/cowboyt,
@@ -21415,7 +21415,7 @@
 	},
 /obj/item/clothing/under/f13/sleazeball,
 /obj/item/clothing/under/f13/spring,
-/obj/item/clothing/under/f13/westender,
+/obj/item/clothing/under/f13/wastelander/westender,
 /obj/item/clothing/under/f13/worn,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -31465,7 +31465,7 @@
 /area/f13/caves)
 "mVB" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/under/f13/tribe_Hhunter,
+/obj/item/clothing/under/f13/tribal/warfarer/Hhunter,
 /obj/item/clothing/suit/armor/light/tribal/strips,
 /obj/item/twohanded/fireaxe/boneaxe,
 /turf/open/indestructible/ground/outside/dirt,
@@ -31544,7 +31544,7 @@
 "mWK" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /obj/item/clothing/under/f13/shiny,
-/obj/item/clothing/under/f13/settler,
+/obj/item/clothing/under/f13/wastelander/settler,
 /obj/item/clothing/under/f13/relaxedwear,
 /obj/item/clothing/under/f13/spring,
 /obj/structure/closet/cabinet,
@@ -32979,8 +32979,8 @@
 /area/f13/wasteland)
 "nDW" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/f13/raiderharness,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider,
+/obj/item/clothing/under/f13/raider,
 /turf/open/floor/f13,
 /area/f13/building)
 "nEi" = (
@@ -36361,7 +36361,7 @@
 /area/f13/building)
 "pfk" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider,
 /obj/effect/decal/remains{
 	icon_state = "remains"
 	},
@@ -40577,7 +40577,7 @@
 /area/f13/wasteland)
 "qVp" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/f13/raiderrags,
+/obj/item/clothing/under/f13/raider/rags,
 /turf/open/floor/f13,
 /area/f13/building)
 "qVC" = (
@@ -41514,7 +41514,7 @@
 "rsA" = (
 /obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
-/obj/item/clothing/under/f13/doctor,
+/obj/item/clothing/under/f13/wastelander/doctor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,
 /area/f13/building)
 "rsH" = (
@@ -41842,7 +41842,7 @@
 /area/f13/village)
 "rAY" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/doctor,
+/obj/item/clothing/under/f13/wastelander/doctor,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "rBc" = (
@@ -48545,7 +48545,7 @@
 /area/f13/village)
 "uua" = (
 /obj/structure/closet,
-/obj/item/clothing/under/f13/doctor,
+/obj/item/clothing/under/f13/wastelander/doctor,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
 /obj/machinery/light/small/broken{
 	dir = 8
@@ -52159,8 +52159,8 @@
 /area/f13/building)
 "whP" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/under/f13/caravaneer,
-/obj/item/clothing/under/f13/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
+/obj/item/clothing/under/f13/wastelander/caravaneer,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
@@ -55137,7 +55137,7 @@
 "xuI" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/armor/costumes,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider,
 /obj/item/crafting/lunchbox,
 /turf/open/floor/f13{
 	icon_state = "bar"

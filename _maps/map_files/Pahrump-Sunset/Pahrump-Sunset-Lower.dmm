@@ -9670,8 +9670,8 @@
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/f13/female/flapper,
 /obj/effect/spawner/lootdrop/f13/armor/random,
-/obj/item/clothing/under/f13/raiderharness,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider,
+/obj/item/clothing/under/f13/raider,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "eGA" = (
@@ -13961,7 +13961,7 @@
 	dir = 8;
 	req_access_txt = "1"
 	},
-/obj/item/clothing/under/f13/vault13,
+/obj/item/clothing/under/f13/vault/vault113,
 /obj/item/storage/belt/durathread,
 /obj/item/storage/backpack/duffelbag/durathread,
 /obj/item/clothing/shoes/jackboots,
@@ -15055,7 +15055,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/caves)
 "iVo" = (
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "iVx" = (
@@ -15870,7 +15870,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/clothing/under/f13/vault13,
+/obj/item/clothing/under/f13/vault/vault113,
 /obj/item/storage/belt/durathread,
 /obj/item/storage/backpack/duffelbag/durathread,
 /obj/item/clothing/shoes/jackboots,
@@ -16627,8 +16627,8 @@
 "khg" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/clothing_low,
-/obj/item/clothing/under/f13/raider_leather,
-/obj/item/clothing/under/f13/raiderharness,
+/obj/item/clothing/under/f13/raider/leather,
+/obj/item/clothing/under/f13/raider,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "khs" = (
@@ -20734,7 +20734,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/clothing/under/f13/vault13,
+/obj/item/clothing/under/f13/vault/vault113,
 /obj/item/storage/belt/durathread,
 /obj/item/storage/backpack/duffelbag/durathread,
 /obj/item/clothing/shoes/jackboots,
@@ -24812,7 +24812,7 @@
 "qAw" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/clothing_low,
-/obj/item/clothing/under/f13/raider_leather,
+/obj/item/clothing/under/f13/raider/leather,
 /obj/effect/spawner/lootdrop/f13/armor/costumes,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
@@ -27678,7 +27678,7 @@
 /area/f13/tunnel)
 "sQM" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/radiation)
@@ -28953,7 +28953,7 @@
 /area/f13/caves)
 "tRm" = (
 /obj/structure/rack,
-/obj/item/clothing/under/f13/rag,
+/obj/item/clothing/under/f13/wastelander/rag,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "tRp" = (

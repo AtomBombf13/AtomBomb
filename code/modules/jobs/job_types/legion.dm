@@ -1288,7 +1288,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
 	name = "Legion Citizen (Role)"
-	uniform = /obj/item/clothing/under/f13/doctor
+	uniform = /obj/item/clothing/under/f13/wastelander/doctor
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	suit = /obj/item/clothing/suit/curator
 	head = /obj/item/clothing/head/scarecrow_hat
