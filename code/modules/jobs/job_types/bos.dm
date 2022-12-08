@@ -766,8 +766,8 @@ Senior Knight
 	exp_requirements = 900
 
 	loadout_options = list(
-	/datum/outfit/loadout/sknighta, //AER9
-	/datum/outfit/loadout/sknightb, //Browning Auto-5
+	/datum/outfit/loadout/sknighta, //AER12
+	/datum/outfit/loadout/sknightb, //Lever Action
 	/datum/outfit/loadout/sknightc, //R91
 	/datum/outfit/loadout/sknightd	//Ripper and Bulletproof Shield
 	)
