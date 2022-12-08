@@ -1194,12 +1194,14 @@
 	name = "needler and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle,
 				/obj/item/ammo_box/stripper/needle
 				)
 
 /obj/effect/spawner/bundle/f13/needler/weak
 	items = list(
 				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle/improvised,
 				/obj/item/ammo_box/stripper/needle/improvised,
 				)
 
