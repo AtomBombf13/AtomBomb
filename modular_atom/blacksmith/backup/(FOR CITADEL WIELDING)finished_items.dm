@@ -1,9 +1,11 @@
+// this file only exists so its easier to convert to citadel style wielding if a server using this module goes that way. Clunky but I lack the time to make it more elegant. No biggie if it gets purged.
+
 //////////////////////////////////////////
 //										//
 //		SMITHED ITEMS BASE CODE			//
 //										//
 //////////////////////////////////////////
-// Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 12 Iron weapons.
+// Values in brackets [37/39 (40) AP 0.2 Parry] are one handed/wielded (thrown) armour piercing, and abilities, for quality 12 Iron weapons.  
 
 
 /obj/item/melee/smith
@@ -37,9 +39,8 @@
 	add_overlay(overlay)
 	if(force < 0)
 		force = 0
-
-
-/obj/item/twohanded/smithed // compatible with the Eris wield stuff
+// to make it eris compatible
+/obj/item/twohanded/smithed
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
 	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
 	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
@@ -68,7 +69,53 @@
 	add_overlay(overlay)
 	if(force < 0)
 		force = 0
+/*
+/obj/item/melee/smith/twohand/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
 
+/obj/item/twohanded/smithed/proc/on_wield(obj/item/source, mob/user)
+	wielded = TRUE
+
+/obj/item/twohanded/smithed/proc/on_unwield(obj/item/source, mob/user)
+	wielded = FALSE
+
+/obj/item/twohanded/smithed/update_icon_state()
+	icon_state = "[icon_prefix]"
+*/
+
+/obj/item/melee/smith/twohand
+	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
+	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	attack_speed = MELEE_SPEED_SLOW
+	force = FORCE_SMITH_LOW
+	throwforce = THROWING_POOR
+	sharpness = SHARP_EDGED
+	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
+	wielded_mult = 1.5
+	w_class = WEIGHT_CLASS_BULKY
+	wielded = FALSE
+	total_mass = (TOTAL_MASS_MEDIEVAL_WEAPON * 1.5)
+	var/icon_prefix = null
+	var/x_offset = null
+	var/y_offset = null
+
+/obj/item/melee/smith/twohand/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+
+/obj/item/melee/smith/twohand/proc/on_wield(obj/item/source, mob/user)
+	wielded = TRUE
+
+/obj/item/melee/smith/twohand/proc/on_unwield(obj/item/source, mob/user)
+	wielded = FALSE
+
+/obj/item/melee/smith/twohand/update_icon_state()
+	icon_state = "[icon_prefix]"
 
 
 //////////////////////
@@ -90,7 +137,6 @@
 	attack_speed = MELEE_SPEED_SLOWEST
 	force = WEAPON_FORCE_CLUB
 	slot_flags = ITEM_SLOT_BELT
-	wound_bonus = WOUNDING_BONUS_SMALL
 	var/qualitymod = 0
 
 /obj/item/melee/smith/hammer/premade
@@ -224,7 +270,7 @@
 	obj_flags = UNIQUE_RENAME
 	sharpness = SHARP_POINTY
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
-	force = WEAPON_FORCE_CLUB
+	force = WEAPON_FORCE_CLUB 
 
 /obj/item/crowbar/smithedunitool/Initialize()
 	..()
@@ -257,7 +303,6 @@
 	overlay = mutable_appearance(icon, "hilt_knife")
 	overlay.appearance_flags = RESET_COLOR
 	add_overlay(overlay)
-
 
 
 //////////////////////////
@@ -334,7 +379,6 @@
 	return
 
 
-
 //////////////////////////////////
 //								//
 //  		KNIVES				//
@@ -371,12 +415,11 @@
 	AddComponent(/datum/component/butchering, 100, 100, 10)
 
 // ------------ BOWIE KNIFE ------------ // [Eyestab]
-/obj/item/melee/smith/dagger/bowie
+/obj/item/melee/smith/dagger/bowie 
 	name = "bowie knife"
 	icon_state = "bowie_smith"
 	overlay_state = "hilt_bowie"
 	force = (FORCE_SMITH_LOW+2)
-
 
 
 //////////////////////////////////
@@ -414,7 +457,6 @@
 	overlay_state = "hilt_macheter"
 
 
-
 //////////////////////////////////
 //								//
 //  	MIXED ONEHANDERS		//
@@ -432,6 +474,7 @@
 	sharpness = SHARP_EDGED
 	item_flags = ITEM_CAN_PARRY
 	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
+
 
 /datum/block_parry_data/waki
 	parry_stamina_cost = 8
@@ -452,32 +495,16 @@
 	AddComponent(/datum/component/butchering, 110, 70) //decent in a pinch, but pretty bad.
 
 
-// ------------ SCRAP SAW ------------ // [Parry, stack damage experimental]
+// ------------ SCRAP SAW ------------ // [Parry]
 /obj/item/melee/smith/wakizashi/scrapsaw
 	name = "scrap saw"
 	icon_state = "saw_smith"
 	overlay_state = "handle_saw"
-	force = (FORCE_SMITH_HIGH-3)
-	wound_bonus = WOUNDING_BONUS_TINY
+	wound_bonus = WOUNDING_MALUS_SHALLOW
 	bare_wound_bonus = WOUNDING_BONUS_BIG
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
 	hitsound = 'sound/effects/butcher.ogg'
-	var/bleed_stacks_per_hit = 3
-
-/obj/item/melee/smith/wakizashi/scrapsaw/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
-	. = ..()
-	if(!isliving(target) || !proximity_flag)
-		return
-	var/mob/living/M = target
-	if(!(M.mob_biotypes & MOB_ORGANIC))
-		return
-	if(user.a_intent != INTENT_HARM)
-		var/datum/status_effect/stacking/saw_bleed/bloodletting/B = M.has_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting)
-		if(!B)
-			M.apply_status_effect(/datum/status_effect/stacking/saw_bleed/bloodletting, bleed_stacks_per_hit)
-		else
-			B.add_stacks(bleed_stacks_per_hit)
 
 
 // ------------ MACE ------------ //
@@ -498,7 +525,6 @@
 	if(!istype(M))
 		return
 	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
-
 
 
 //////////////////////////////////
@@ -575,7 +601,6 @@
 	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
 
 
-
 //////////////////////////////////
 //								//
 //  		LONG SWORDS			//
@@ -587,7 +612,7 @@
 	name = "katana"
 	icon_state = "katana_smith"
 	icon_prefix = "katana_smith"
-	wielded_icon = "katana_smith_wield"
+// 	icon_wielded = "katana_smith2"
 	overlay_state = "hilt_katana"
 	force = (FORCE_SMITH_HIGH-1)
 	armour_penetration = PIERCING_MODERATE
@@ -626,7 +651,7 @@
 	name = "longsword"
 	icon_state = "longsword_smith"
 	icon_prefix = "longsword_smith"
-	wielded_icon = "longsword_smith_wield"
+// 	icon_wielded = "longsword_smith2"
 	overlay_state = "hilt_longsword"
 
 
@@ -635,7 +660,7 @@
 	name = "scrap blade"
 	icon_state = "scrap_smith"
 	icon_prefix = "scrap_smith"
-	wielded_icon = "scrap_smith_wield"
+// 	icon_wielded = "scrap_smith2"
 	overlay_state = "hilt_scrap"
 	attack_speed = MELEE_SPEED_SLOW
 	force = FORCE_SMITH_HIGH
@@ -643,7 +668,6 @@
 /obj/item/twohanded/smithed/katana/scrapblade/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 110, 75) //decent in a pinch, but pretty bad.
-
 
 
 //////////////////////////////////
@@ -656,11 +680,11 @@
 /obj/item/twohanded/smithed/axe
 	name = "heavy axe"
 	icon_state = "axe_smith"
-	wielded_icon = "axe_smith_wield"
 	icon_prefix = "axe_smith"
+// 	icon_wielded = "axe_smith2"
 	overlay_state = "shaft_axe"
 	force = FORCE_SMITH_LOW
-	armour_penetration = PIERCING_MODERATE
+	armour_penetration = PIERCING_MINOR
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_BIG
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
@@ -683,8 +707,7 @@
 	name = "war axe"
 	icon_state = "waraxe_smith"
 	icon_prefix = "waraxe_smith"
-	wielded_icon = "waraxe_smith_wield"
-	icon_prefix = "waraxe_smith"
+// 	icon_wielded = "waraxe_smith2"
 	overlay_state = "shaft_waraxe"
 	throwforce = THROWING_GOOD
 
@@ -703,21 +726,23 @@
 // ------------ GHOUL CRUSHER ------------ // [Ghoul bonus] - for those dry twig like limbs, snap snap..(was meant to dislocate PC ghouls but code did not work properly so removed)
 /obj/item/twohanded/smithed/crusher
 	name = "crusher"
-	desc = "Affectionally known as the ghoul crusher, this club is easiest to swing two handed."
 	icon_state = "crusher_smith"
 	icon_prefix = "crusher_smith"
-	wielded_icon = "crusher_smith_wield"
-	icon_prefix = "crusher_smith"
+// 	icon_wielded = "crusher_smith2"
 	overlay_state = "shaft_crusher"
 	attack_speed = MELEE_SPEED_SLOWER
 	force = FORCE_SMITH_LOW
-	armour_penetration = PIERCING_MAJOR
+	armour_penetration = PIERCING_MODERATE
 	throwforce = THROWING_PATHETIC
 	wound_bonus = WOUNDING_BONUS_HUGE
 	sharpness = SHARP_NONE
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = null
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2
 	hitsound = 'modular_atom/blacksmith/sound/hit_mace.ogg'
+
+/obj/item/twohanded/smithed/crusher/Initialize()
+	. = ..()
+	desc = "Affectionally known as the ghoul crusher, this club is easiest to swing two handed."
 
 /obj/item/twohanded/smithed/crusher/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -741,8 +766,8 @@
 	lefthand_file = 'modular_atom/blacksmith/icons/onmob/64x64_lefthand.dmi'
 	righthand_file = 'modular_atom/blacksmith/icons/onmob/64x64_righthand.dmi'
 	icon_state = "spear_smith"
-	wielded_icon = "spear_smith_wield"
 	icon_prefix = "spear_smith"
+	wielded_icon = "spear_smith2"
 	overlay_state = "shaft_spear"
 	force = FORCE_SMITH_REACH
 	throwforce = THROWING_GOOD
@@ -758,23 +783,25 @@
 	name = "trident"
 	desc = "Made for spearing small lizard and fish, able to pin down the prey if thrown."
 	icon_state = "trident_smith"
-	wielded_icon = "trident_smith_wield"
 	icon_prefix = "trident_smith"
+	wielded_icon = "trident_smith2"
 	overlay_state = "shaft_trident"
 	attack_speed = MELEE_SPEED_SLOW
-	force = (FORCE_SMITH_REACH+1)
+	force = (FORCE_SMITH_REACH+1)	
 	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 30, "ignore_throwspeed_threshold" = TRUE)
 	armour_penetration = 0
-
-
+/*
+/obj/item/twohanded/smithed/spear/trident/Initialize()
+	. = ..()
+	desc = "Made for spearing small lizard and fish, able to pin down the prey if thrown."
+*/
 // ------------ LEGION LANCE ------------ // [Reach]
 /obj/item/twohanded/smithed/spear/lance
 	name = "legion lance"
 	icon_state = "lance_smith"
-	wielded_icon = "lance_smith_wield"
 	icon_prefix = "lance_smith"
+	wielded_icon = "lance_smith2"
 	overlay_state = "shaft_lance"
-
 
 
 //////////////////////////////////////////////////
