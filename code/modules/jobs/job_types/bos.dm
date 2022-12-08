@@ -201,9 +201,9 @@ Head Paladin
 	name = "Heavy Head Paladin"
 	backpack_contents = list(
 		/obj/effect/spawner/bundle/f13/dkssniper = 1,
-		/obj/item/ammo_box/magazine/w308 = 2
+		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/energy/laser/plasma/glock = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		/obj/item/stock_parts/cell/ammo/ec = 2,
 	)
 
 /datum/outfit/loadout/hpgat
