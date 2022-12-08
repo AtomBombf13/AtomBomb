@@ -200,7 +200,7 @@ Head Paladin
 /datum/outfit/loadout/hpheavy
 	name = "Heavy Head Paladin"
 	backpack_contents = list(
-		/obj/effect/spawner/bundle/f13/dkssniper = 1,
+		/obj/item/gun/ballistic/automatic/sniper = 1,
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
@@ -362,7 +362,7 @@ Knight-Captain
 /datum/outfit/loadout/capstand
 	name = "Standard"
 	backpack_contents = list(
-		/obj/effect/spawner/bundle/f13/dkssniper = 1,
+		/obj/item/gun/ballistic/automatic/sniper = 1,
 		/obj/item/ammo_box/magazine/w308 = 2
 	)
 
@@ -832,7 +832,7 @@ Senior Knight
 	name = "Knight-Defender"
 	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	backpack_contents = list(
-		/obj/effect/spawner/bundle/f13/shotgunlever = 1,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
@@ -843,7 +843,7 @@ Senior Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	backpack_contents = list(
 		/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior = 1,
-		/obj/effect/spawner/bundle/f13/marksman = 1,
+		/obj/item/gun/ballistic/automatic/marksman = 1,
 		/obj/item/ammo_box/magazine/m556/rifle = 3,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
