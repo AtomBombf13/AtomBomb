@@ -16,6 +16,7 @@
 	/// var that tracks message cooldown
 	var/message_cooldown
 	var/list/loaded_coupons
+	var/list/job_req = list("Merchant")
 
 	light_color = "#E2853D"//orange
 
@@ -69,6 +70,10 @@
 	if(!ui)
 		ui = new(user, src, "Cargo", name)
 		ui.open()
+	if(LAZYLEN(job_req) && !(user.mind?.assigned_role in job_req))
+		to_chat(user, span_warning("You have no idea how to use it..."))
+		return
+	. = ..()
 
 /obj/machinery/computer/cargo/ui_data()
 	var/list/data = list()
