@@ -972,6 +972,23 @@
 	path = /obj/item/clothing/under/f13/locust
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+/datum/gear/uniform/wasteland/ncr_exile_fatigues
+    name = "Disheveled NCR fatigues"
+    path = /obj/item/clothing/under/f13/exile
+    cost = 2
+    subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/desert_ranger_scout
+    name = "Desert ranger scouting uniform"
+    path = /obj/item/clothing/under/f13/desert_ranger_scout
+    cost = 1
+    subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/legion_exile_fatigues
+    name = "Disheveled legion fatigues"
+    path = /obj/item/clothing/under/f13/exile/legion
+    cost = 2
+    subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/keksweater
 	name = "Red sweater"

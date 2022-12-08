@@ -741,7 +741,7 @@
 /obj/item/card/id/away/old/apc
 	name = "APC Access ID"
 	desc = "A special ID card that allows access to APC terminals."
-	access = list(ACCESS_ENGINE_EQUIP)
+	access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS)
 
 /obj/item/card/id/departmental_budget
 	name = "departmental card (FUCK)"
