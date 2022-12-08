@@ -1700,7 +1700,7 @@
 
 /obj/item/clothing/under/f13/desert_ranger_scout
 	name = "desert ranger scouting uniform"
-	desc = "A set of clothing worn by desert ranger scouts."
+	desc = "An old set of clothing worn by desert ranger scouts before they were absorbed by the NCR. Durable and comfortable, but rarely seen in the wastes anymore."
 	icon_state = "scoutclothes"
 	can_adjust = FALSE
 	item_state = "scoutclothes"
