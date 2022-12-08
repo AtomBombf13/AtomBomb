@@ -344,7 +344,7 @@
 	name = "Hydroponics Backpack Crate"
 	desc = "Bring on the flood with this high-capacity backpack crate. Contains 500 units of life-giving H2O. Requires hydroponics access to open."
 	cost = 1200
-	access = ACCESS_HYDROPONICS
+	access = list(ACCESS_HYDROPONICS, ACCESS_BOS)
 	contains = list(/obj/item/watertank)
 	crate_name = "hydroponics backpack crate"
 	crate_type = /obj/structure/closet/crate/secure
