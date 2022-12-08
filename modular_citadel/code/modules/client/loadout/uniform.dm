@@ -980,7 +980,7 @@
 
 /datum/gear/uniform/wasteland/desert_ranger_scout
     name = "Desert ranger scouting uniform"
-    path = /obj/item/clothing/under/f13/desert_ranger_scout
+    path = /obj/item/clothing/under/f13/wastelander/desert_ranger_scout
     cost = 1
     subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 

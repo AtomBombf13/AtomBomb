@@ -28,14 +28,6 @@
 	icon_state = "mutie_ranger_under"
 	item_state = "mutie_ranger_under"
 
-/obj/item/clothing/under/f13/desert_ranger_scout
-	name = "desert ranger scouting uniform"
-	desc = "A set of clothing worn by desert ranger scouts."
-	icon_state = "scoutclothes"
-	can_adjust = FALSE
-	item_state = "scoutclothes"
-	item_color = "scoutclothes"
-
 /obj/item/clothing/under/f13/densuit
 	name = "the den outfit"
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."
