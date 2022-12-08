@@ -115,6 +115,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost, togglemidroundantag)()
 /datum/verbs/menu/Settings/Ghost/togglemidroundantag/Get_checked(client/C)
 	return C.prefs.toggles & MIDROUND_ANTAG
 
+/*
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggletitlemusic)()
 	set name = "Hear/Silence Lobby Music"
 	set category = "Preferences"
@@ -164,7 +165,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_instruments)()
 	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Instruments", "[usr.client.prefs.toggles & SOUND_INSTRUMENTS ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /datum/verbs/menu/Settings/Sound/toggle_instruments/Get_checked(client/C)
 	return C.prefs.toggles & SOUND_INSTRUMENTS
-
+*/
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, Toggle_Soundscape)()
 	set name = "Hear/Silence Ambience"
