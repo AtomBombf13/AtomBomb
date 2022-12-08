@@ -375,16 +375,18 @@
 	armor = ARMOR_VALUE_LEATHER_JACKET
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/hooded/outcast/tribal
+/obj/item/clothing/suit/hooded/outcast/tribal // once upon a time there were two identical patched cloaks. Now this one is the one from the Fashion module instead. For my old style, just use the one above, easy.
 	name = "patched heavy leather cloak"
 	desc = "A robust cloak made from layered gecko skin patched with various bits of leather from dogs and other animals, able to absorb more force than one would expect from leather."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	icon_state = "cloak_outcast"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	item_state = "cloak_outcast"
+	icon = 'modular_atom/fashion/icons/clothing_fashion.dmi'
+	mob_overlay_icon = 'modular_atom/fashion/icons/onmob.dmi'
+	righthand_file = 'modular_atom/fashion/icons/onmobright.dmi'
+	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
+	icon_state = "suit_outcast"
+	item_state = "suit_outcast"
 	strip_delay = 40
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tribaloutcast
-	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS not sure why this is commented out
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LEATHER_JACKET
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
@@ -393,10 +395,16 @@
 /obj/item/clothing/head/hooded/cloakhood/tribaloutcast
 	name = "patched leather hood"
 	desc = "Thick layered leather, patched together."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	icon_state = "hood_tribaloutcast"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	item_state = "hood_tribaloutcast"
+	icon = 'modular_atom/fashion/icons/clothing_fashion.dmi'
+	mob_overlay_icon = 'modular_atom/fashion/icons/onmob.dmi'
+	righthand_file = 'modular_atom/fashion/icons/onmobright.dmi'
+	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
+	icon_state = "hood_outcast"
+	item_state = "hood_outcast"
+	dynamic_hair_suffix = "+hood" // hair sticks out a little
+	dynamic_fhair_suffix = "+hood"	//  beards too
+	flags_cover = null // lets you throw dust in their eyes or maybe not
+	alternate_worn_layer = (HAIR_LAYER+1) // makes the beard and hair drape over the chin correctly
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LEATHER_JACKET
