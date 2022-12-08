@@ -90,9 +90,8 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 
 /obj/structure/blacksmith/anvil
 	name = "anvil template"
-	desc = "Bugreport."
+	desc = "This should not be visible - please file a bug report."
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
-	icon_state = "noanvil"
 	density = TRUE
 	anchored = TRUE
 	max_integrity = 1000
