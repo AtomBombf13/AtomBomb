@@ -662,6 +662,8 @@ Scribe
 
 	outfit = /datum/outfit/job/bos/f13scribe
 
+	access = list(ACCESS_BOS)
+	minimal_access = list(ACCESS_BOS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -875,6 +877,8 @@ Knight
 
 	outfit = /datum/outfit/job/bos/f13knight
 
+	access = list(ACCESS_BOS)
+	minimal_access = list(ACCESS_BOS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,
@@ -979,6 +983,8 @@ Initiate
 
 	outfit = /datum/outfit/job/bos/f13initiate
 
+	access = list(ACCESS_BOS)
+	minimal_access = list(ACCESS_BOS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/bos,

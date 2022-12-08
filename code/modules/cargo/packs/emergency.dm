@@ -289,7 +289,7 @@
 	name = "Weed Control Crate"
 	desc = "Keep those invasive species OUT. Contains a scythe, gasmask, two sprays of Plant-B-Gone, and two anti-weed chemical grenades. Warranty void if used on ambrosia. Requires Hydroponics access to open."
 	cost = 1800
-	access = ACCESS_HYDROPONICS
+	access = list(ACCESS_HYDROPONICS, ACCESS_BOS)
 	contains = list(/obj/item/scythe,
 					/obj/item/clothing/mask/gas,
 					/obj/item/grenade/chem_grenade/antiweed,

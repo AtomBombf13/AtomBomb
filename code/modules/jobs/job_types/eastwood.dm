@@ -411,8 +411,8 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 	outfit = /datum/outfit/job/eastwood/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER, ACCESS_ROBOTICS)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER, ACCESS_ROBOTICS)
+	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -701,8 +701,8 @@ here's a tip, go search DEFINES/access.dm
 	//datum/outfit/loadout/reaver			//FBoS: Tactics Reaver Movement
 	)
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
+	access = list(ACCESS_BAR)		//we can expand on this and make alterations as people suggest different loadouts
+	minimal_access = list(ACCESS_BAR)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
