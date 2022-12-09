@@ -56,7 +56,7 @@
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
-/obj/screen/area_creator
+/*/obj/screen/area_creator
 	name = "create new area"
 	icon = 'icons/fallout/UI/screen_fallout2.dmi'
 	icon_state = "area_edit"
@@ -69,7 +69,7 @@
 	if(!A.outdoors)
 		to_chat(usr, span_warning("There is already a defined structure here."))
 		return TRUE
-	create_area(usr)
+	create_area(usr)*/
 
 /obj/screen/language_menu
 	name = "language menu"
