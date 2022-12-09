@@ -571,7 +571,7 @@
 /obj/item/projectile/bullet/a762
 	name = "7.62 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_MATCH_MULT
-	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
