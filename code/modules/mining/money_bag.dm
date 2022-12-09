@@ -51,10 +51,14 @@
 	STR.cant_hold = typecacheof(list(/obj/item/screwdriver/power))
 	STR.can_hold = GLOB.storage_wallet_can_hold
 
-// Legion reserves. Spawns with the Centurion.
+// Legion reserves. Spawns with the Centurion and a camp follower loadout (or auxillia)
 /obj/item/storage/bag/money/small/legion/PopulateContents()
-	// ~450ish worth of legion money
+	// 500 caps + change
 	new /obj/item/stack/f13Cash/random/low(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
 	
 // Legion enlisted. Spawns with the Legionnaires. Average 12 caps.
 /obj/item/storage/bag/money/small/legenlisted/PopulateContents()
