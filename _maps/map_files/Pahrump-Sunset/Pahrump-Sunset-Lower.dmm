@@ -22714,8 +22714,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
 "oqB" = (
-/obj/structure/closet,
-/obj/effect/spawner/lootdrop/clothing_high,
+/obj/structure/chair/office{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -26847,7 +26848,8 @@
 	},
 /area/f13/bunker)
 "rxo" = (
-/obj/structure/chair/office,
+/obj/structure/closet,
+/obj/effect/spawner/lootdrop/clothing_high,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -27396,7 +27398,7 @@
 /turf/open/floor/carpet/black,
 /area/f13/building)
 "rUe" = (
-/obj/machinery/mineral/wasteland_trader/organ,
+/obj/machinery/mineral/wasteland_trader/meat_o_mat,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -74333,7 +74335,7 @@ ccS
 bsC
 rxo
 rqX
-oFi
+iUK
 iUK
 oFi
 oqB
@@ -74588,12 +74590,12 @@ bJq
 rSF
 xgB
 bsC
-vRV
+rUe
 bGd
 uaR
-rqX
+iUK
 cvD
-rUe
+vRV
 bsC
 aae
 aae

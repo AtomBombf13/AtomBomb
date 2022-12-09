@@ -20826,7 +20826,7 @@
 /area/f13/legion)
 "csI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/mineral/wasteland_trader/general,
+/obj/machinery/mineral/wasteland_trader/trade_point,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outerborder"
 	},

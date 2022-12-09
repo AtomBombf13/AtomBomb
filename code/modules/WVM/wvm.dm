@@ -789,7 +789,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/pipboy
 	name = "Wasteland Pip-N-Walk"
-	icon_state = "generic_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "pipboy"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Pip-boy 3000",			/obj/item/pda,																25),
 		new /datum/data/wasteland_equipment("Reprogrammable ID",	/obj/item/card/id/selfassign,												20),
