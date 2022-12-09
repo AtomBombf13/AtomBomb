@@ -53,7 +53,7 @@
 
 // Legion reserves. Spawns with the Centurion and a camp follower loadout (or auxillia)
 /obj/item/storage/bag/money/small/legion/PopulateContents()
-	// 500 caps + change
+	// 400 caps + change
 	new /obj/item/stack/f13Cash/random/low(src)
 	new /obj/item/stack/f13Cash/caps/onezerozero(src)
 	new /obj/item/stack/f13Cash/caps/onezerozero(src)
