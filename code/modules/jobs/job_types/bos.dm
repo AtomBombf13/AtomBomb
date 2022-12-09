@@ -1057,18 +1057,6 @@ Off Duty
 
 	access = list(ACCESS_BOS)
 	minimal_access = list(ACCESS_BOS)
-	matchmaking_allowed = list(
-		/datum/matchmaking_pref/friend = list(
-			/datum/job/bos,
-		),
-		/datum/matchmaking_pref/rival = list(
-			/datum/job/bos,
-		),
-		/datum/matchmaking_pref/disciple = list(
-			/datum/job/bos/f13knight,
-			/datum/job/bos/f13scribe,
-		),
-	)
 
 /datum/outfit/job/bos/f13offduty
 	name = "BoS Off-Duty"
