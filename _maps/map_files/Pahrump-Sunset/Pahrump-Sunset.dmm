@@ -48762,7 +48762,7 @@
 	},
 /area/f13/wasteland/khans)
 "pxV" = (
-/obj/machinery/mineral/wasteland_trader,
+/obj/machinery/mineral/wasteland_trader/trade_point,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt"
@@ -65492,7 +65492,7 @@
 	},
 /area/f13/building/museum)
 "xCb" = (
-/obj/machinery/mineral/wasteland_trader,
+/obj/machinery/mineral/wasteland_trader/trade_point,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "xCm" = (
