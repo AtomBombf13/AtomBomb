@@ -332,7 +332,7 @@
 /datum/supply_pack/security/minigunlaser
 	name = "Weapons - Gatling Laser"
 	desc = "An exclusive, it arrived! A refurbished Glastinghouse Inc. X-25 gatling laser taken from the sorry scrap of some RobCo automaton. Uncompact, inconvenient and practically useless against armored targets, maybe you'll find some use for it."
-	cost = 50000
+	cost = 75000
 	contains = list(/obj/item/minigunpack)
 	crate_name = "minigun crate"
 
