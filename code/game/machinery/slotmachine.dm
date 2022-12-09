@@ -7,6 +7,7 @@
 #define SPIN_PRICE 25
 #define SMALL_PRIZE 600
 #define BIG_PRIZE 1500
+#define PAYOUT_JACKPOT 5000
 #define DEFAULT_JACKPOT 10000
 #define SPIN_TIME 65 //As always, deciseconds.
 #define REEL_DEACTIVATE_DELAY 7
@@ -222,7 +223,7 @@
 	var/linelength = get_lines()
 
 	if(reels[1][2] + reels[2][2] + reels[3][2] == "[SEVEN][SEVEN][SEVEN]")
-		visible_message("<b>[src]</b> says, 'JACKPOT! You win [money] caps!'")
+		visible_message("<b>[src]</b> says, 'JACKPOT! You win [PAYOUT_JACKPOT] caps!'")
 		jackpots += 1
 		give_money(money)
 		money = 0
