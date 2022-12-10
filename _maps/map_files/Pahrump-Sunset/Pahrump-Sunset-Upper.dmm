@@ -7688,6 +7688,7 @@
 /area/f13/building/hospital)
 "oYS" = (
 /obj/structure/chair/stool/bar,
+/obj/effect/landmark/start/f13/offduty,
 /turf/open/floor/carpet/red,
 /area/f13/brotherhood/leisure)
 "oYZ" = (
