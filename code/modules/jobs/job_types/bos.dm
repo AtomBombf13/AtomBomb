@@ -864,8 +864,8 @@ Knight
 	title = "Knight"
 	flag = F13KNIGHT
 	display_order = JOB_DISPLAY_ORDER_KNIGHT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
 	supervisors = "the Senior Knight and Knight-Captain"
 
@@ -971,8 +971,8 @@ Initiate
 	title = "Initiate"
 	flag = F13INITIATE
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior; doing so may result in exile or transferrence back the Valley."
 	supervisors = "the Scribes, Knights or Paladins"
 
@@ -1048,8 +1048,8 @@ Off Duty
 	title = "Brotherhood Off-Duty"
 	flag = F13OFFDUTYBOS
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	description = "Whether operating in disguise or simply enjoying time from the off-shift, you are still a member of the Brotherhood and must abide by the Codex and follow the orders of your superiors. That being said, while off-duty your orders do not take precedence and you should resist issuing them when another of your rank is currently on duty, and if one does not exist, commit to going on-duty. You have a duty to safeguard what equipment you are given, especially your holotags. Ideally, you should be paired with one or more fellow off-duty members; and you would know where the bunker in the region is."
 	supervisors = "your Superior rank"
 
