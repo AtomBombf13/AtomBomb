@@ -1042,12 +1042,6 @@
 	assignment = "camp follower medallion"
 	access = list(ACCESS_LEGION)
 
-/obj/item/card/id/dogtag/legslavemaster
-	name = "slavemaster medallion"
-	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to the dreaded Slavemaster."
-	icon_state = "legionmedallionprime"
-	assignment = "slavemaster medallion"
-
 /obj/item/card/id/dogtag/legauxilia
 	name = "auxilia medallion"
 	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a respected auxilia of the Legion."
@@ -1089,21 +1083,6 @@
 	icon_state = "legionmedallioncent"
 	item_state = "card-id_leg2"
 	assignment = "centurion medallion"
-
-/obj/item/card/id/dogtag/legvenator
-	name = "speculator medallion"
-	desc = "A golden disc awarded to the elite hunters of the legion. If you are close enough to read the insignia you won't be alive much longer."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "Speculator medallion"
-
-
-/obj/item/card/id/dogtag/legpriest
-	name = "priestess medallion"
-	desc = "A golden disc awarded to the trusted spiritual guide to the nearby Legion."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "priestess medallion"
 
 /obj/item/card/id/dogtag/legorator
 	name = "orator medallion"
