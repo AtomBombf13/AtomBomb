@@ -184,7 +184,7 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 
-/datum/crafting_recipe/ncrsalvagedarmorconversion
+/datum/crafting_recipe/legionsalvagedarmorconversion
 	name = "Salvaged Legion Power Armor"
 	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion
 	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b = 1,

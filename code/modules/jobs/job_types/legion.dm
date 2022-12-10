@@ -42,6 +42,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/datum/crafting_recipe/legioncombatarmor,
 		/datum/crafting_recipe/legioncombathelmetmk2,
 		/datum/crafting_recipe/legioncombatarmormk2,
+		/datum/crafting_recipe/legionsalvagedarmorconversion,
+		/datum/crafting_recipe/legionsalvagedhelmetconversion,
 		/datum/crafting_recipe/legionshield,
 		/datum/crafting_recipe/lever_action,
 		/datum/crafting_recipe/grease_gun,
