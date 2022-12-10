@@ -709,6 +709,43 @@
 	body_parts_hidden = 0
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
 
+
+
+/obj/item/clothing/suit/armor/marlowsuit //Raider armour reskin.
+	name = "wasteland ganger overcoat"
+	desc = "A heavy raw buckskin overcoat littered with aged bullet holes and frays from regular wear-and-tear."
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	icon_state = "marlowsuit"
+	armor = ARMOR_VALUE_LEATHER_ARMOR
+
+//////////////////////
+// Light Armor Vests//
+/////////////////////
+/* only protects vs a single type of damage and bomb damage, no or low DT */
+
+/obj/item/clothing/suit/armor/light/vest
+	name = "light vest"
+	desc = "Light armor vest template. You shouldnt see this normally."
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	armor = ARMOR_VALUE_BALLISTIC_ARMOR
+	icon_state = "vest_kevlar"
+	item_state = "vest_kevlar"
+
+/obj/item/clothing/suit/armor/light/vest/flak /*low melee and laser, more bomb, below average bullet, some DT*/
+	name = "flak vest"
+	desc = "A vest made of ballistic nylon to stop spall, frag, and handgun rounds. It is much lighter and breathes easier than kevlar but a lot less sturdy. Smells faintly of napalm."
+	icon_state = "vest_flak"
+	item_state = "vest_flak"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_DT_T3)
+
+/obj/item/clothing/suit/armor/light/vest/blueshirt /*Bullets and nothing else, some DT*/
+	name = "light security vest"
+	desc = "a lightweight ballistic vest that combines protection and comfort. Perfect for checking for passports"
+	icon_state = "blueshift"
+	item_state = "blueshift"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T2)
+	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 ////////////////
 // ARMOR KITS //
 ////////////////
@@ -803,30 +840,42 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	armor = ARMOR_VALUE_LEATHER_ARMOR
 
+//bullet: 25, melee: 25, laser: 5, threshold: 4 
+//NO SLOWDOWN
 /obj/item/clothing/suit/armor/light/legion/recruit
 	name = "legion recruit armor"
 	desc = "The most basic legion armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
 	icon_state = "leg_rec"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1,ARMOR_MODIFIER_UP_LASER_T1)
 
+//same but with more DT
 /obj/item/clothing/suit/armor/light/legion/prime
 	name = "legion prime armor"
 	desc = "It's a legion prime armor, the warrior has been granted some additional protective pieces to add to his suit."
 	icon_state = "leg_prime"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1,ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
+//same but with less melee and more laser protection
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
 	desc = "A light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
 	icon_state = "leg_explorer"
+	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1,ARMOR_MODIFIER_UP_LASER_T2,)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
 
+//token armor, slaves dont fight back
 /obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
 	name = "legion exactor armor"
 	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
 	icon_state = "leg_master"
+	armor = ARMOR_VALUE_LEATHER_JACKET
 
 //////////////////////////
 // Brotherhood of Steel //
-////////////////////////// 
+//////////////////////////
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe
 	name = "Brotherhood Scribe's robe"
@@ -892,8 +941,8 @@
 /////////////////
 // Great Khans //
 ////////////////
+//very good resistances for light armor, very bad threshold
 
-//These are from light jackets 
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
@@ -910,7 +959,8 @@
 	max_integrity = 100
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1)
 	armor_tier_desc = ARMOR_CLOTHING_LIGHT
 	stiffness = LIGHT_STIFFNESS
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets

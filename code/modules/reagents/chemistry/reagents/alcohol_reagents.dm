@@ -580,11 +580,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	to_chat(M, span_notice("You feel [tough_text]!"))
 	M.maxHealth += 10 //Brave Bull makes you sturdier, and thus capable of withstanding a tiny bit more punishment.
 	M.health += 10
+	ADD_TRAIT(M, TRAIT_FEARLESS, "[type]")
 
 /datum/reagent/consumable/ethanol/brave_bull/on_mob_end_metabolize(mob/living/M)
 	to_chat(M, span_notice("You no longer feel [tough_text]."))
 	M.maxHealth -= 10
 	M.health = min(M.health - 10, M.maxHealth) //This can indeed crit you if you're alive solely based on alchol ingestion
+	REMOVE_TRAIT(M, TRAIT_FEARLESS, "[type]")
 
 /datum/reagent/consumable/ethanol/tequila_sunrise
 	name = "Tequila Sunrise"

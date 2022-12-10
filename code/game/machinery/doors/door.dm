@@ -106,7 +106,6 @@
 				return
 			bumpopen(M)
 			return
-
 	return
 
 /obj/machinery/door/Move()

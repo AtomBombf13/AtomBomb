@@ -504,9 +504,7 @@ GLOBAL_LIST_INIT(loot_t5_melee, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t1_range, list(
-	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/gun/ballistic/revolver/caravan_shotgun,
-	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/ammo_box/stripper/a762,
 	/obj/item/gun/ballistic/revolver/police,
 	/obj/item/ammo_box/loader/c38,
@@ -626,7 +624,6 @@ GLOBAL_LIST_INIT(loot_unique_range, list(
 GLOBAL_LIST_INIT(loot_t1_ammo, list(
 	/obj/item/ammo_box/magazine/pistol9mm,
 	/obj/item/ammo_box/shotgun/buck,
-	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/ammo_box/loader/c38,
 	/obj/item/ammo_box/magazine/pistol10mm,
 	/obj/item/ammo_box/magazine/m556/rifle/small
@@ -932,7 +929,6 @@ GLOBAL_LIST_INIT(loot_t2_blueprint, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t3_blueprint, list(
-	/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
 	/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 	/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
 	/obj/item/book/granter/crafting_recipe/blueprint/bozar

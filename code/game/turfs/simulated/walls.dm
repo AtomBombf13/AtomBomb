@@ -93,6 +93,7 @@
 	if(!density)
 		..()
 
+
 /turf/closed/wall/blob_act(obj/structure/blob/B)
 	if(prob(50))
 		dismantle_wall()

@@ -845,6 +845,7 @@
 /obj/item/kitchen/knife/butcher/tribal
 	name = "Carving Knife"
 	desc = "A simple, hand-fashioned carving knife meant for separating meat from bone. Hardly more than some sharpened, rusty metal stuck between a tied wooden handle."
+	icon = 'icons/fallout/objects/kitchen.dmi'	
 	icon_state = "knife_butcher_primal"
 	force = 13
 	throwforce = 7

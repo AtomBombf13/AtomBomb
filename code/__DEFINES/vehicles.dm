@@ -2,6 +2,7 @@
 
 #define VEHICLE_CONTROL_PERMISSION 1
 
+
 //Car trait flags
 #define CAN_KIDNAP 1
 

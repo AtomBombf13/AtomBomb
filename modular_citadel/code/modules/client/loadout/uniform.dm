@@ -174,6 +174,11 @@
 	path = /obj/item/clothing/under/suit/checkered
 	cost = 1
 
+/datum/gear/uniform/suit/jamrock
+	name = "disco-ass Suit"
+	path = /obj/item/clothing/under/jamrock
+	cost = 1
+
 /datum/gear/uniform/suit/navy
 	name = "navy suit"
 	path = /obj/item/clothing/under/suit/navy
@@ -622,6 +627,26 @@
 							"NCR Lieutenant"
 						)
 
+/datum/gear/uniform/ncr_sniper_fatigues
+	name = "NCR sniper fatigues"
+	path = /obj/item/clothing/under/f13/ncr_sniper_fatigues
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Veteran Ranger",
+							"NCR Lieutenant",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+							"NCR Rear Echelon",
+							"NCR Off-Duty",
+							"NCR Ranger"
+						)
+
 /datum/gear/uniform/ranger
 	name = "ranger outfit"
 	path = /obj/item/clothing/under/f13/ranger
@@ -678,7 +703,7 @@
 	restricted_desc = "KHAN"
 	restricted_roles = list("Great Khan")
 
-/// Brotherhood of Steel 
+/// Brotherhood of Steel
 
 /datum/gear/uniform/bos
 	name = "midwestern fatigues"
@@ -729,14 +754,6 @@
 /datum/gear/uniform/legion/auxiliaf
 	name = "female auxilia robes"
 	path = /obj/item/clothing/under/f13/legauxiliaf
-	restricted_desc = "Legion Camp Duties"
-	restricted_roles = list("Legion Off-Duty",
-							"Camp Follower"
-							)
-
-/datum/gear/uniform/legion/roma
-	name = "roma auxilia robes"
-	path = /obj/item/clothing/under/f13/romaskirt/auxilia
 	restricted_desc = "Legion Camp Duties"
 	restricted_roles = list("Legion Off-Duty",
 							"Camp Follower"
@@ -955,6 +972,23 @@
 	path = /obj/item/clothing/under/f13/locust
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+/datum/gear/uniform/wasteland/ncr_exile_fatigues
+    name = "Disheveled NCR fatigues"
+    path = /obj/item/clothing/under/f13/exile
+    cost = 2
+    subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/desert_ranger_scout
+    name = "Desert ranger scouting uniform"
+    path = /obj/item/clothing/under/f13/desert_ranger_scout
+    cost = 1
+    subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/legion_exile_fatigues
+    name = "Disheveled legion fatigues"
+    path = /obj/item/clothing/under/f13/exile/legion
+    cost = 2
+    subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/keksweater
 	name = "Red sweater"

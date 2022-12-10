@@ -100,28 +100,31 @@
 	obj_damage = 300
 
 /mob/living/simple_animal/hostile/handy/liberator
-	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
+	name = "liberator mk.0"
+	desc = "A small pre-War drone airdropped by the People's Liberation Army all over the United States in the last days of the war. This is a prototype model."
+	icon = 'icons/fallout/mobs/robots/weirdrobots.dmi'
 	icon_state = "liberator"
-	icon_living = "leberator"
+	icon_living = "liberator"
 	icon_dead = "liberator_d"
 	icon_gib = "liberator_g"
-	health = 64
-	maxHealth = 64
-	melee_damage_lower = 5
-	melee_damage_upper = 10
-	attack_verb_simple = "slaps"
+	health = 30 //2 with a pistol, 1 with a magnum
+	maxHealth = 30
+	speed = -1 //speedy buggers
+	melee_damage_lower = 1 //they either hit your shin or your neck
+	melee_damage_upper = 20
+	attack_verb_simple = "slashes"
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol
-	extra_projectiles = 1
+	faction = list("china", "wastebots") //they will not shoot remnants
+	projectiletype = /obj/item/projectile/beam/laser/pistol/wattz/hitscan
+	extra_projectiles = 0 //hitscans shouldnt be spammed at a player
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
 	check_friendly_fire = TRUE
-	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/mfc)
-	emote_taunt_sound = null
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three, /obj/item/stock_parts/cell/ammo/ecp)
+	emote_taunt_sound = ('sound/f13npc/liberator/liberator_taunt1.ogg')
 	emote_taunt = list("levels its laser")
-	aggrosound = null
+	aggrosound = list('sound/f13npc/liberator/liberator_aggro1.ogg', 'sound/f13npc/liberator/liberator_aggro2.ogg')
 	idlesound = null
 	death_sound = null
 	attack_sound = null
@@ -137,11 +140,18 @@
 	)
 
 /mob/living/simple_animal/hostile/handy/liberator/yellow
-	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
+	name = "liberator mk.1"
+	desc = "A small pre-War drone airdropped by the People's Liberation Army all over the United States in the last days of the war. This is an early limited-production model."
+	melee_damage_lower = 2 //still random
+	melee_damage_upper = 30
+	health = 51 //3 with a pistol, 2 with a magnum
+	maxHealth = 51
+	extra_projectiles = 1 //just a bit of spam
 	icon_state = "liberator_y"
-	icon_living = "leberator_y"
+	icon_living = "liberator_y"
 	icon_dead = "liberator_y_d"
+
+//if anyone can give liberators a pounce ability, that would be neat
 
 /mob/living/simple_animal/hostile/handy/robobrain
 	name = "robobrain"
@@ -219,7 +229,7 @@
 		/obj/item/stack/crafting/electronicparts/five
 		)
 	attack_phrase = list(
-		"Howdy pardner!", 
+		"Howdy pardner!",
 		"Engaging hostile target!",
 		"Warning! Overdue for maintence.",
 		"Please assume the position.",
@@ -296,6 +306,29 @@
 	butcher_results = list(/obj/effect/gibspawner/robot = 1)
 	blood_volume = 0
 
+/mob/living/simple_animal/pet/dog/protectron/eastwood //Not an actual dog
+	name = "Eastwood Trading Protectron"
+	desc = "A standard RobCo RX2 V1.16.4 \"Trade-o-Vend\", loaded with Trade protocols.<br>Looks like it was kept operational for an indefinite period of time. Its body is covered in cracks and dents of various sizes.<br>As it has been repaired countless times, it's amazing the machine is still functioning at all."
+	icon = 'icons/fallout/mobs/robots/protectrons.dmi'
+	icon_state = "protectron_trade"
+	icon_living = "protectron_trade"
+	icon_dead = "protectron_trade_dead"
+	maxHealth = 200
+	health = 200
+	speak_chance = 5
+	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
+	faction = list("neutral", "silicon", "dog", "hostile", "pirate", "wastebot", "wolf", "plants", "turret", "enclave", "ghoul", "cazador", "supermutant", "gecko", "slime", "radscorpion", "skeleton", "carp", "bs", "bighorner")
+	speak = list("Howdy partner! How about you spend some of them there hard earned caps on at the Eastwood store!", "Welcome back partner! Come over to the Eastwood Store!", "Stop, this is a robbery! At these prices you are robbing me.", "Legion? NCR? Raider? Hell we don't care, as long as you got the caps.", "What a fine day partner. A fine day indeed.", "Reminds me of what my grandpappy used to say, make a snap decision now and never question it. You look like you could use some product there partner.", "Lotta critters out there want to chew you up partner, you could use a little hand with that now couldn't you? Only at the Eastwood Store!")
+	speak_emote = list()
+	emote_hear = list()
+	emote_see = list()
+	response_help_simple  = "shakes its manipulator"
+	response_disarm_simple = "pushes"
+	response_harm_simple  = "punches"
+	attack_sound = 'sound/voice/liveagain.ogg'
+	butcher_results = list(/obj/effect/gibspawner/robot = 1)
+	blood_volume = 0
+
 /mob/living/simple_animal/hostile/handy/assaultron
 	name = "assaultron"
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."
@@ -354,3 +387,4 @@
 		SP_DISTANT_SOUND(LASER_DISTANT_SOUND),
 		SP_DISTANT_RANGE(LASER_RANGE_DISTANT)
 	)
+

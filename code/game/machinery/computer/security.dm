@@ -20,6 +20,15 @@
 
 	light_color = LIGHT_COLOR_RED
 
+/obj/machinery/computer/secure_data/townrecords
+	name = "Eastwood Security Records"
+	desc = "Used to view and edit personnel's security records."
+	icon_state = "terminal"
+	icon_keyboard = "terminal_key"
+	icon_screen = "terminal_on_alt"
+	req_one_access = list(ACCESS_SECURITY, ACCESS_FORENSICS_LOCKERS, ACCESS_GATEWAY)
+	circuit = /obj/item/circuitboard/computer/secure_data
+
 /obj/machinery/computer/secure_data/syndie
 	icon_keyboard = "syndie_key"
 

@@ -328,11 +328,6 @@
 	unit_name = "working ripley"
 	export_types = list(/obj/vehicle/sealed/mecha/working/ripley)
 
-/datum/export/large/mech/firefighter
-	cost = 14000
-	unit_name = "working firefighter"
-	export_types = list(/obj/vehicle/sealed/mecha/working/ripley/firefighter)
-
 /datum/export/large/mech/gygax
 	cost = 19000
 	unit_name = "working gygax"

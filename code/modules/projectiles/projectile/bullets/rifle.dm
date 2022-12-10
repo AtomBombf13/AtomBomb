@@ -21,7 +21,7 @@
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
-	armour_penetration = BULLET_PENETRATION_HEAVY
+	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
@@ -66,7 +66,7 @@
 /obj/item/projectile/bullet/a556/improvised
 	name = "handloaded .223 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
+	armour_penetration = BULLET_PENETRATION_HEAVY 
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
@@ -404,10 +404,11 @@
  * High Velocity Light Rifle Bullet
  * Match - no surplus / improvised
  * Shock
+ * Specializes in anti-armor: low damage, has AP
  * * * * * * * */
 
 /* 5mm fmj
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -416,7 +417,7 @@
 /obj/item/projectile/bullet/m5mm
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
+	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
@@ -429,7 +430,7 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
+/* 5mm match
  * DAMAGE: 31.25
  * STAMIN: 6.25
  * RECOIL: 1
@@ -450,8 +451,8 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
- * DAMAGE: 31.25
+/* 5mm improvised
+ * DAMAGE: 18.75
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -1085,7 +1086,7 @@
 
 /obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	if(ismovable(target) && prob(50))
+	if(ismovable(target) && isliving(target) && prob(50))
 		var/atom/movable/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
 		M.safe_throw_at(throw_target, 2, 3)

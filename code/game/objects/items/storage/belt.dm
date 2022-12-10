@@ -823,7 +823,7 @@ obj/item/storage/belt/medical/surgical
 	icon_state = "2sheath"
 	item_state = "quiver" //this'll do.
 	w_class = WEIGHT_CLASS_BULKY
-	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/melee/smith/twohand/katana, /obj/item/melee/bokken, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/twohanded/smithed/katana, /obj/item/melee/bokken, /obj/item/melee/smith)
 	starting_sword = null
 
 /obj/item/storage/belt/sabre/twin/ComponentInitialize()
@@ -850,8 +850,7 @@ obj/item/storage/belt/medical/surgical
 	STR.can_hold = typecacheof(list(
 		/obj/item/melee/smith,
 		/obj/item/melee/smith/wakizashi,
-		/obj/item/melee/smith/twohand,
-		/obj/item/melee/smith/twohand/katana,
+		/obj/item/twohanded/smithed/katana,
 		/obj/item/melee/powered/ripper,
 		/obj/item/melee/onehanded/machete,
 		/obj/item/melee/onehanded/machete/forgedmachete,
@@ -1016,6 +1015,24 @@ obj/item/storage/belt/medical/surgical
 	icon = 'icons/fallout/clothing/belts.dmi'
 	icon_state = "gardener"
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	
+/obj/item/storage/belt/utility/gardener/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/shovel/spade,
+		/obj/item/cultivator,
+		/obj/item/hatchet,
+		/obj/item/plant_analyzer,
+		/obj/item/seeds,
+		/obj/item/clothing/gloves,
+		/obj/item/reagent_containers/spray/plantbgone,
+		/obj/item/reagent_containers/food/drinks/flask,
+		/obj/item/reagent_containers/glass/bottle/nutrient,
+		/obj/item/flashlight,
+		))
 
 // Primitive medical belt, meant to be part of a ghetto surgery improvement at some point
 /obj/item/storage/belt/medical/primitive

@@ -47,8 +47,8 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/eastwood/f13mayor
-	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SHOP,ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_VTCC_SHOP,ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -157,7 +157,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/theoldguard
 	name = "The Old Guard"
 	uniform = /obj/item/clothing/under/f13/eastwood/sheriff
-	suit = /obj/item/clothing/suit/armor/medium/duster/sheriff
+	suit = /obj/item/clothing/suit/armor/medium/combat/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
 	gloves = /obj/item/clothing/gloves/rifleman
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
@@ -350,8 +350,8 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/eastwood/f13denres
-	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
-	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
+	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -701,8 +701,8 @@ here's a tip, go search DEFINES/access.dm
 	//datum/outfit/loadout/reaver			//FBoS: Tactics Reaver Movement
 	)
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
+	access = list(ACCESS_BAR)		//we can expand on this and make alterations as people suggest different loadouts
+	minimal_access = list(ACCESS_BAR)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
