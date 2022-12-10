@@ -130,7 +130,7 @@
 							borrowed_health = 100
 						log_combat(M, M, "revived", src)
 						var/list/policies = CONFIG_GET(keyed_list/policy)
-						var/policy = policies[POLICYCONFIG_ON_DEFIB_LATE]	//Always causes memory loss due to the nature of synthtissue
+						var/policy = policies[POLICYCONFIG_ON_DEFIB_INTACT]
 						if(policy)
 							to_chat(C, policy)
 						C.log_message("revived using synthtissue, [tplus] deciseconds from time of death, considered late revival due to usage of synthtissue.", LOG_GAME)
