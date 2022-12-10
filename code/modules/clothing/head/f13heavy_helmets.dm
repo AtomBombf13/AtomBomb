@@ -15,12 +15,6 @@
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 
-/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/legion
-	name = "legion salvaged T-45b helmet"
-	desc = "It's a legion salvaged T-45b power armor helmet, better repaired than regular salvaged PA, and decorated with the Legion banner and other markings of the Legion."
-	icon_state = "t45bhelmet_legion"
-	item_state = "t45bhelmet_legion"
-
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider
 	name = "raider T-45b power helmet"
 	desc = "a raider's attempt to duplicate a power armor helmet. The result is a fuzed mass of metal and ceramic that nonetheless provides protection"
