@@ -187,7 +187,8 @@ Head Paladin
 		/obj/item/melee/powerfist/f13 = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /datum/outfit/loadout/hpstand
@@ -211,7 +212,6 @@ Head Paladin
 	backpack_contents = list(
 		/obj/item/minigunpack = 1
 	)
-
 
 /*
 Head Scribe
@@ -279,6 +279,7 @@ Head Scribe
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/energy/laser/plasma/glock = 1,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /*
@@ -356,7 +357,8 @@ Knight-Captain
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /datum/outfit/loadout/capstand
@@ -437,7 +439,8 @@ Senior Paladin
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/melee/onehanded/knife/hunting = 1
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/flashlight/seclite = 1
 	)
 
 /datum/outfit/loadout/spaladina
@@ -521,7 +524,8 @@ Paladin
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
-		/obj/item/melee/onehanded/knife/hunting = 1
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/flashlight/seclite = 1
 	)
 
 /datum/outfit/loadout/paladinc
@@ -617,6 +621,7 @@ Senior Scribe
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+		/obj/item/flashlight/seclite = 1
 
 	)
 
@@ -691,7 +696,8 @@ Scribe
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/storage/firstaid/regular = 1
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /datum/outfit/job/bos/f13scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -814,7 +820,8 @@ Senior Knight
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /datum/outfit/loadout/sknighta
@@ -874,6 +881,8 @@ Knight
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9 J
 	/datum/outfit/loadout/knightc, //AER9 S
+	/datum/outfit/loadout/knighte, //Engi J
+	/datum/outfit/loadout/knightf, //Engi S
 	/datum/outfit/loadout/knightb, //BF + Shield J
 	/datum/outfit/loadout/knightd //BF + Shield S
 	)
@@ -920,7 +929,8 @@ Knight
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /datum/outfit/loadout/knighta
@@ -965,6 +975,33 @@ Knight
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
+
+/datum/outfit/loadout/knighte
+	name = "Junior Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight = 1,
+		/obj/item/storage/belt/utility/full = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
+
+/datum/outfit/loadout/knightf
+	name = "Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight = 1,
+		/obj/item/storage/belt/utility/full = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
+
 /*
 Initiate
 */
@@ -1007,7 +1044,8 @@ Initiate
 	name = "Initiate"
 	jobtype = /datum/job/bos/f13initiate
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/survival = 1
+		/obj/item/melee/onehanded/knife/survival = 1,
+		/obj/item/flashlight/seclite = 1
 		)
 
 /datum/outfit/job/bos/f13initiate/post_equip(mob/living/carbon/human/H, visualsOnly)
