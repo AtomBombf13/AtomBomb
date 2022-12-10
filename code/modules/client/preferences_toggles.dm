@@ -248,6 +248,17 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_ooc)()
 /datum/verbs/menu/Settings/listen_ooc/Get_checked(client/C)
 	return C.prefs.chat_toggles & CHAT_OOC
 
+TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_dead)()
+	set name = "Show/Hide Dead chat"
+	set category = "Preferences"
+	set desc = "Toggles seeing dead chat"
+	usr.client.prefs.chat_toggles ^= CHAT_DEAD
+	usr.client.prefs.save_preferences()
+	to_chat(usr, "You will [(usr.client.prefs.chat_toggles & CHAT_DEAD) ? "now" : "no longer"] see messages on the dead chat channel.")
+	SSblackbox.record_feedback("nested tally", "preferences_verb", 1, list("Toggle Seeing Deadchat", "[usr.client.prefs.chat_toggles & CHAT_DEAD ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+/datum/verbs/menu/Settings/listen_dead/Get_checked(client/C)
+	return C.prefs.chat_toggles & CHAT_DEAD
+
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_looc)()
 	set name = "Show/Hide LOOC"
 	set category = "Preferences"
