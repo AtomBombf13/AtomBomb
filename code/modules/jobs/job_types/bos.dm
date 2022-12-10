@@ -874,8 +874,8 @@ Knight
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9 J
 	/datum/outfit/loadout/knightc, //AER9 S
-	/datum/outfit/loadout/knightb, //Shish J
-	/datum/outfit/loadout/knightd //Shish S
+	/datum/outfit/loadout/knightb, //BF + Shield J
+	/datum/outfit/loadout/knightd //BF + Shield S
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -939,7 +939,8 @@ Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight = 1,
-		/obj/item/shishkebabpack = 1,
+		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
 
@@ -960,7 +961,8 @@ Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight = 1,
-		/obj/item/shishkebabpack = 1,
+		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
 /*
@@ -971,8 +973,8 @@ Initiate
 	title = "Initiate"
 	flag = F13INITIATE
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior; doing so may result in exile or transferrence back the Valley."
 	supervisors = "the Scribes, Knights or Paladins"
 
