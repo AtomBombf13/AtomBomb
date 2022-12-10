@@ -89,7 +89,7 @@
 	item_state = "plasma"
 	icon_state = "plasma"
 	desc = "A miniaturized plasma caster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	ammo_type = list(/obj/item/projectile/plasmacarbine)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 
