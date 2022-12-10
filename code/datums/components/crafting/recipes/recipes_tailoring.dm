@@ -184,6 +184,26 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 
+/datum/crafting_recipe/ncrsalvagedarmorconversion
+	name = "Salvaged Legion Power Armor"
+	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion
+	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/legionsalvagedhelmetconversion
+	name = "Legion salvaged T-45b helmet"
+	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/legion
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 20
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
 /datum/crafting_recipe/boscombatarmor
 	name = "knight armor"
 	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood
