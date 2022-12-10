@@ -19603,6 +19603,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/building/museum)
+"lVD" = (
+/obj/structure/displaycase{
+	req_access = list(253);
+	start_showpiece_type = /obj/item/gun/ballistic/rifle/mag/antimateriel
+	},
+/turf/open/floor/f13/wood,
+/area/f13/ncr)
 "lVM" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/turf_decal/stripes/asteroid/line{
@@ -46207,7 +46214,7 @@ rJB
 uxw
 bzD
 vaz
-bzD
+lVD
 rJB
 aae
 aak
