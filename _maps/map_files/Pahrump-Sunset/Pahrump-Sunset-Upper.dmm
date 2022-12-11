@@ -1311,6 +1311,33 @@
 	dir = 1
 	},
 /area/f13/building/hospital)
+"cqH" = (
+/obj/structure/table/wood,
+/obj/item/folder/red{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/folder/white{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/folder/blue{
+	pixel_y = 6
+	},
+/obj/item/folder/yellow{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/folder{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/pen/fountain,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/f13/city)
 "cqK" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
@@ -1891,13 +1918,6 @@
 	},
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/brotherhood/leisure)
-"dyI" = (
-/obj/machinery/light/small{
-	dir = 8;
-	light_color = "#d8b1b1"
-	},
-/turf/open/floor/carpet/red,
-/area/f13/city)
 "dBt" = (
 /obj/structure/lattice{
 	density = 1
@@ -3350,6 +3370,25 @@
 /mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"gLS" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/card/town{
+	dir = 4;
+	pixel_y = 19
+	},
+/obj/machinery/computer/security/bos{
+	circuit = /obj/item/circuitboard/computer/security;
+	dir = 4;
+	name = "Eastwood police department camera terminal";
+	network = list("Eastwood");
+	pixel_y = 8
+	},
+/obj/machinery/computer/secure_data/townrecords{
+	dir = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "gMl" = (
 /obj/structure/chair/folding{
 	dir = 8
@@ -3910,6 +3949,13 @@
 "hTr" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
+/area/f13/city)
+"hUO" = (
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
+/turf/open/floor/carpet/red,
 /area/f13/city)
 "hWV" = (
 /obj/structure/lattice/catwalk,
@@ -4479,6 +4525,10 @@
 /obj/structure/dresser,
 /turf/open/floor/wood_fancy,
 /area/f13/ncr)
+"jbU" = (
+/obj/machinery/photocopier,
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "jck" = (
 /obj/structure/fluff/railing/corner{
 	dir = 4
@@ -4979,24 +5029,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
-"jSY" = (
-/obj/structure/table/wood,
-/obj/item/storage/box/deputy_badges{
-	pixel_x = -3;
-	pixel_y = 11
-	},
-/obj/item/paper_bin,
-/obj/item/pen/fourcolor,
-/obj/item/megaphone{
-	pixel_x = 5;
-	pixel_y = 12
-	},
-/obj/item/folder/red{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/turf/open/floor/carpet/red,
-/area/f13/city)
 "jUl" = (
 /obj/structure/railing{
 	dir = 8
@@ -5669,13 +5701,6 @@
 	},
 /turf/closed/wall/f13/wood/house,
 /area/f13/building/khanfort)
-"lwv" = (
-/obj/structure/filingcabinet,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/carpet/red,
-/area/f13/city)
 "lwT" = (
 /obj/structure/railing,
 /turf/open/transparent/openspace,
@@ -6025,6 +6050,10 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/ncr)
+"mdW" = (
+/obj/machinery/light/small,
+/turf/open/floor/carpet/royalblack,
+/area/f13/city)
 "meB" = (
 /obj/structure/flora/junglebush,
 /turf/open/indestructible/ground/outside/dirt,
@@ -6334,10 +6363,6 @@
 	sunlight_state = 1
 	},
 /area/f13/building/hospital)
-"mBu" = (
-/obj/machinery/photocopier,
-/turf/open/floor/carpet/red,
-/area/f13/city)
 "mBI" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
@@ -7182,10 +7207,6 @@
 	dir = 8
 	},
 /area/f13/building/hospital)
-"nXB" = (
-/obj/structure/closet/cabinet,
-/turf/open/floor/carpet/red,
-/area/f13/city)
 "nYe" = (
 /obj/structure/table{
 	layer = 2.9
@@ -7742,6 +7763,7 @@
 /area/f13/building/hospital)
 "oYS" = (
 /obj/structure/chair/stool/bar,
+/obj/effect/landmark/start/f13/offduty,
 /turf/open/floor/carpet/red,
 /area/f13/brotherhood/leisure)
 "oYZ" = (
@@ -7784,6 +7806,24 @@
 /obj/structure/simple_door/wood,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"pdA" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/deputy_badges{
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/item/megaphone{
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/obj/item/folder/red{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "peF" = (
 /obj/structure/lattice/catwalk,
 /obj/item/kirbyplants/random,
@@ -9289,6 +9329,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
+"rYQ" = (
+/obj/structure/closet/cabinet,
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "rZU" = (
 /obj/structure/sign/poster/prewar/poster60,
 /turf/closed/wall/f13/store{
@@ -9850,33 +9894,6 @@
 "sYU" = (
 /turf/closed/mineral/random/high_chance,
 /area/f13/wasteland)
-"sZS" = (
-/obj/structure/table/wood,
-/obj/item/folder/red{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/folder/white{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/folder/blue{
-	pixel_y = 6
-	},
-/obj/item/folder/yellow{
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/obj/item/folder{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/pen/fountain,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/carpet/royalblack,
-/area/f13/city)
 "tap" = (
 /obj/structure/sink{
 	dir = 4;
@@ -9948,25 +9965,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/leisure)
-"tdK" = (
-/obj/structure/table/wood,
-/obj/machinery/computer/card/town{
-	dir = 4;
-	pixel_y = 19
-	},
-/obj/machinery/computer/security/bos{
-	circuit = /obj/item/circuitboard/computer/security;
-	dir = 4;
-	name = "Eastwood police department camera terminal";
-	network = list("Eastwood");
-	pixel_y = 8
-	},
-/obj/machinery/computer/secure_data/townrecords{
-	dir = 4;
-	pixel_y = -4
-	},
-/turf/open/floor/carpet/red,
-/area/f13/city)
 "teM" = (
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
@@ -11471,6 +11469,13 @@
 /obj/machinery/light/small,
 /turf/open/water,
 /area/f13/brotherhood/dorms)
+"wrV" = (
+/obj/structure/filingcabinet,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "wse" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "storewindowhorizontal";
@@ -11662,10 +11667,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building)
-"wJt" = (
-/obj/machinery/light/small,
-/turf/open/floor/carpet/royalblack,
-/area/f13/city)
 "wJQ" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/firstaid/toxin{
@@ -33718,7 +33719,7 @@ plL
 nIv
 nQs
 oSd
-wJt
+mdW
 dYT
 oez
 oez
@@ -34230,7 +34231,7 @@ hYA
 dYT
 qOr
 nIv
-sZS
+cqH
 paU
 qMI
 dYT
@@ -34744,9 +34745,9 @@ bOA
 dYT
 qUE
 oGD
-dyI
+hUO
 wvW
-nXB
+rYQ
 dYT
 oez
 oez
@@ -35256,8 +35257,8 @@ lXP
 hYA
 mJq
 dYT
-mBu
-lwv
+jbU
+wrV
 otU
 pEE
 qQE
@@ -35515,8 +35516,8 @@ dYT
 dYT
 dYT
 dYT
-jSY
-tdK
+pdA
+gLS
 wvW
 dYT
 oez
