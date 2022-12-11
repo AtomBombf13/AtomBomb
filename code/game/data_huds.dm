@@ -209,7 +209,7 @@
 	else if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		if(tod)
 			var/tdelta = round(world.time - timeofdeath)
-			if(tdelta < (DEFIB_TIME_LIMIT * 10))
+			if(tdelta < (CONFIG_GET(number/death_revive_time) MINUTES))
 				var/obj/item/organ/heart/He = getorgan(/obj/item/organ/heart)
 				if(He)
 					holder.icon_state = "huddefib"
