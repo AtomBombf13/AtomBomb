@@ -7402,7 +7402,7 @@
 "aCu" = (
 /obj/machinery/door/airlock/security{
 	name = "Evidence Room";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -12269,7 +12269,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/city)
@@ -13315,7 +13315,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "275"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -20399,7 +20399,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -20631,8 +20631,8 @@
 /area/f13/wasteland)
 "cqY" = (
 /obj/machinery/door/airlock/security{
-	name = "Inmate Storage";
-	req_access_txt = "137"
+	name = "Inmate Property Holding";
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -22655,7 +22655,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "275"
 	},
 /turf/open/floor/plasteel/freezer,
 /area/f13/city)
@@ -27060,7 +27060,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /obj/machinery/door/poddoor/shutters/old/preopen{
 	id = "followersdoorshutters";
@@ -27383,7 +27383,7 @@
 "fuT" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
@@ -35442,7 +35442,7 @@
 "jjz" = (
 /obj/machinery/door/airlock/security{
 	name = "Reception";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -39355,7 +39355,7 @@
 "lgg" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
@@ -44492,7 +44492,7 @@
 "nvf" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -50943,7 +50943,7 @@
 "qAT" = (
 /obj/machinery/door/airlock/security{
 	name = "Eastwood Police Department";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
@@ -53546,7 +53546,7 @@
 "rTU" = (
 /obj/machinery/door/airlock/security{
 	name = "Lobby";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -54278,7 +54278,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -56168,7 +56168,7 @@
 "thh" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -56575,7 +56575,8 @@
 "trR" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
-	req_access_txt = "137"
+	req_access_txt = "281";
+	req_one_access = null
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -59768,7 +59769,8 @@
 "uQz" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
-	req_access_txt = "137"
+	req_access_txt = "281";
+	req_one_access = null
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
@@ -62863,7 +62865,7 @@
 "wqL" = (
 /obj/machinery/door/airlock/security{
 	name = "Hospital Security";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -64501,7 +64503,7 @@
 "xeY" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "141"
+	req_access_txt = "277"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -65425,7 +65427,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
-	req_access_txt = "68"
+	req_access_txt = "280"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)

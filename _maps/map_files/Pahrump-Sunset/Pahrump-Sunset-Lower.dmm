@@ -7674,7 +7674,7 @@
 /area/f13/bunker)
 "deC" = (
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "68"
+	req_access_txt = "280"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
@@ -9123,7 +9123,7 @@
 /area/f13/caves)
 "ejG" = (
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "68"
+	req_access_txt = "280"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/vault)
@@ -21525,7 +21525,7 @@
 /obj/structure/table,
 /obj/machinery/door/window{
 	dir = 4;
-	req_access_txt = "29"
+	req_access_txt = "279"
 	},
 /obj/structure/barricade/bars,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
@@ -22570,7 +22570,7 @@
 "okO" = (
 /obj/machinery/door/airlock/vault{
 	name = "Engine Access";
-	req_access_txt = "29"
+	req_access_txt = "279"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -27100,7 +27100,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "29"
+	req_access_txt = "279"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/vault)
@@ -32860,7 +32860,7 @@
 /area/f13/vault)
 "vVj" = (
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "29"
+	req_access_txt = "279"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"

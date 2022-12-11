@@ -29,7 +29,7 @@
 
 /obj/structure/closet/secure_closet/freezer/kitchen
 	name = "kitchen Cabinet"
-	req_access = list(ACCESS_KITCHEN)
+	req_access = list(ACCESS_KITCHEN, ACCESS_TOWN_BAR)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/PopulateContents()
 	..()

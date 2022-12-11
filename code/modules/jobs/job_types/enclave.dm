@@ -1,4 +1,15 @@
 //It looks like var/faction controls what becomes visible on setup. Should likely be fixed or something, but I'm not doing it.
+
+/*
+Access
+			Enclave Clearance 0 (All Access) - ACCESS_ENCLAVE 134
+			Enclave Clearance 1 (E1-E4) - ACCESS_ENCLAVE1 270
+			Enclave Clearance 2 (E5-E9) - ACCESS_ENCLAVE2 271
+			Enclave Clearance 3 (W1-O2) - ACCESS_ENCLAVE3 272
+			Enclave Clearance 4 (O3+) - ACCESS_ENCLAVE4 273
+
+			All Access for every role in every faction: ACCESS_PUBLIC 284
+*/
 /datum/job/enclave
 	department_flag = ENCLAVE
 	selection_color = "#8b8b8b"
@@ -59,7 +70,8 @@
 	selection_color = "#686666"
 	total_positions = 0
 	spawn_positions = 0
-	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_ENCLAVE2, ACCESS_ENCLAVE3, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_ENCLAVE2, ACCESS_ENCLAVE3, ACCESS_PUBLIC)
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavelt
@@ -107,7 +119,8 @@
 	total_positions = 0
 	spawn_positions = 0
 	selection_color = "#686666"
-	access = list(ACCESS_ENCLAVE, ACCESS_CHANGE_IDS)
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_ENCLAVE2, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_ENCLAVE2, ACCESS_PUBLIC)
 	description = "Second in command after Lieutenant, your role is to direct their orders directly to the sergeants and regular troops."
 	supervisors = "The Lieutenant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13gysergeant
@@ -169,6 +182,9 @@
 		/datum/outfit/loadout/sgt_ballistics,	// R91 Rifle
 		/datum/outfit/loadout/sgt_laser, 	// AER9
 		)
+	
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_ENCLAVE2, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_ENCLAVE2, ACCESS_PUBLIC)
 
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	name = "Enclave Sergeant"
@@ -223,6 +239,9 @@
 		/datum/outfit/loadout/combatmedic, // Medical Equipment
 		/datum/outfit/loadout/combatengie, // Grenade Launcher
 		)
+	
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
 
 /datum/outfit/job/enclave/peacekeeper/f13specialist
 	name = "Enclave Specialist"
@@ -276,6 +295,9 @@
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 600
 
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
+
 /datum/outfit/job/enclave/peacekeeper/enclavespy
 	name = "Enclave Private"
 	jobtype = /datum/job/enclave/enclavespy
@@ -307,6 +329,9 @@
 	supervisors = "Enclave Research and Development Division."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
 	exp_requirements = 1000
+
+	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
 
 /datum/outfit/job/enclave/noncombat/enclavesci
 	name = "Enclave Scientist"
@@ -357,8 +382,8 @@
 // Really only used for ID console
 /datum/job/enclave/f13enclavecitizen
 	title = "American Citizen"
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_ENCLAVE, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_ENCLAVE, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/enclave/f13enclavecitizen
 
 /datum/outfit/job/enclave/f13enclavecitizen
