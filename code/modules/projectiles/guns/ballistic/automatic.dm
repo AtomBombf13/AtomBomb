@@ -985,7 +985,7 @@
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	zoom_factor = 2
+	zoom_factor = 1.8
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),

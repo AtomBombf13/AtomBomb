@@ -10,9 +10,9 @@
 
 #define QUALITY_MODIFIER quality
 
-#define FORCE_SMITH_REACH 17
-#define FORCE_SMITH_LOW 21
-#define FORCE_SMITH_HIGH 28
+#define FORCE_SMITH_REACH 19
+#define FORCE_SMITH_LOW 24
+#define FORCE_SMITH_HIGH 29
 
 
 //////////////////////////////////////
@@ -77,6 +77,8 @@
 /datum/material/bronze
 	strength_modifier = 1
 
+/datum/material/adamantine
+	strength_modifier = 1.2
 
 // ------------ SLAG ------------------ Makes slag more suitable visually for the interactions with the anvil
 /obj/item/stack/ore/slag
@@ -176,7 +178,7 @@
 				</ol>
 				<p>
 
-	
+
 				<h3>Some secret smithing recipes.</h3>
 
 				These are some of the items that can be made with hot iron and a steady hand. Results are not always the same depending on the anvil used.
@@ -189,7 +191,7 @@
 				<li>Prospecting pick: (BFS) Bend the metal, then fold it into shape and shrink it, then add a wooden rod. Useful for finding mineral deposits.</li>
 				<li>Kitchen knife: (BSD) Bend the metal, shrink and draw it, then add a knife handle. A perfect gift for women.</li>
 				<li>Universal tool: (BBU) Want a crowbar with a blade forgewelded on? Bend it twice, upset, then wrap it in leather strips when tempered.</li>
-				<li>Bonesaw: (FFSU) Fold twice, shrink and upset, wrap it with a leather strip once tempered. If you want a ugly ass saw, here you go. You could probably try to catch a blade with it I guess. </li>
+				<li>Scrapsaw: (FFSU) Fold twice, shrink and upset, wrap it with a leather strip once tempered. If you want a ugly ass saw, here you go. You could probably try to catch a blade with it I guess. </li>
 
 				<li>Rings: (SSS) Tiny things, my fingers hurt when I try to work it, but if you youngsters want to make one just shrink the metal to shape. Might cheer you up.</li>
 				<li>Ball and chain: (PBU) Punch the metal, bend and upset it. Add a chain and then snap it on the slaves leg, and laugh while they hobble about. Silly slave.</li>
@@ -214,8 +216,8 @@
 				<li>Heavy axe: (UDSP) Upset the hot metal, draw it, shrink it, punch holes in it. Add a wooden rod, then go chop down some wood or enemies. Easy. </li>
 				<li>Crusher: (UUPP) Upset the hot metal, then use the puncher to make holes for the fittings. Add a wooden rod and crush those disgusting ghouls like twigs. </li>
 
-				<li>Spear: (DDDF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>		
-				<li>Trident: (DDBF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>	
+				<li>Spear: (DDDF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>
+				<li>Trident: (DDBF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>
 
 				<li>Javelin: (SDU) Shrink, draw, upset, add a wooden rod and throw it in someones face.</li>
 				<li>Throwing knife: (SDD) Shrink and draw the metal twice, then add leather strips and there you go.</li>

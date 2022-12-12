@@ -259,6 +259,10 @@
 	config_entry_value = 3000
 	min_val = 0
 
+/datum/config_entry/number/death_revive_time
+	config_entry_value = 15
+	min_val = 0
+
 /datum/config_entry/number/afk_period/ValidateAndSet(str_val)
 	. = ..()
 	if(.)

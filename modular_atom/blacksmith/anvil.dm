@@ -90,9 +90,8 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 
 /obj/structure/blacksmith/anvil
 	name = "anvil template"
-	desc = "Bugreport."
+	desc = "This should not be visible - please file a bug report."
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
-	icon_state = "anvil"
 	density = TRUE
 	anchored = TRUE
 	max_integrity = 1000
@@ -397,6 +396,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 /obj/structure/blacksmith/anvil/obtainable
 	name = "anvil"
 	desc = "Made from solid steel, you wont be moving this around any time soon."
+	icon_state = "anvil"
 	anvilquality = -1 //This was causing balance problems to where you could get high levels of blacksmithing in 1-2 items
 
 // Best anvil
