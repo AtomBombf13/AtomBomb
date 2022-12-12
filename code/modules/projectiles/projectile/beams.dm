@@ -430,8 +430,8 @@
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	hitscan = TRUE
-	wound_bonus = 5
-	bare_wound_bonus = 10
+	wound_bonus = 15
+	bare_wound_bonus = 20
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -470,8 +470,8 @@
 	damage = 25
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 10
-	bare_wound_bonus = 15
+	wound_bonus = 20
+	bare_wound_bonus = 25
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
@@ -490,8 +490,8 @@
 	damage = 30
 	armour_penetration = BULLET_PENETRATION_ABSOLUTE
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 20
-	bare_wound_bonus = 25
+	wound_bonus = 25
+	bare_wound_bonus = 30
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
