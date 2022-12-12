@@ -43926,9 +43926,7 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "nhM" = (
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_y = 15
-	},
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
 	icon_state = "horizontaltopborderbottom2right"
