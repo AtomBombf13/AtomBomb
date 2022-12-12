@@ -3,6 +3,14 @@
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_GENERAL
 	slot = SLOT_HEAD
 
+/datum/gear/head/hairband // added from the Fashion module
+	name = "yellow hairband"
+	path = /obj/item/clothing/head/fashion/hairband
+
+/datum/gear/head/hat_scarecrow // added from the Fashion module
+	name = "scarecrow hat"
+	path = /obj/item/clothing/head/helmet/fashion/scarecrow
+
 /datum/gear/head/baseball
 	name = "ballcap"
 	path = /obj/item/clothing/head/soft/mime
@@ -123,10 +131,6 @@
 	name = "powdered wig"
 	path = /obj/item/clothing/head/powdered_wig
 	cost = 2
-
-/datum/gear/head/nurse
-	name = "nurse hat"
-	path = /obj/item/clothing/head/f13/nursehat
 
 /datum/gear/head/chef
 	name = "chef hat"
