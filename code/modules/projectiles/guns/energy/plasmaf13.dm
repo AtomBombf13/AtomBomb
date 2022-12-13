@@ -42,6 +42,7 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 
+//someone make the FO4 plasma pistol sprite for this please
 /obj/item/gun/energy/laser/plasma/pistol/worn
 	name ="shoddy plasma pistol"
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one's internal parts have loose seals and corroded electronics."
@@ -83,13 +84,13 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 
-//Plasma Rifle
+//urban Plasma Rifle
 /obj/item/gun/energy/laser/plasma
 	name ="plasma rifle"
 	item_state = "plasma"
 	icon_state = "plasma"
-	desc = "A miniaturized plasma caster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	desc = "A miniaturized plasmacaster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/urban)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 

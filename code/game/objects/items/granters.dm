@@ -653,7 +653,7 @@
 	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
 	oneuse = TRUE
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
-	crafting_recipe_types = list(/datum/crafting_recipe/steelsaw)
+	crafting_recipe_types = list(/datum/crafting_recipe/steelsaw, /datum/crafting_recipe/needler)
 
 /obj/item/book/granter/crafting_recipe/scav_three
 	name = "SCAV! Issue 3"
@@ -938,6 +938,7 @@ obj/item/book/granter/crafting_recipe/energy
 	granted_trait = TRAIT_SURGERY_MID
 	traitname = "intermediate surgery"
 	remarks = list("Sterilization is essential before and after surgery.", "Keep track of all your tools, double check body cavities.", "Ensure complete focus while operating on the patient.", "Cauterize incisions once the operation concludes.", "Spare organs and blood must be kept at a low temperature.", "Most prosthesis come with significant trade-offs, and maintenance costs.",)
+	crafting_recipe_types = list(/datum/crafting_recipe/needler)
 
 /obj/item/book/granter/trait/midsurgery/already_known(mob/user)
 	if(HAS_TRAIT(user, TRAIT_SURGERY_HIGH))
@@ -1158,7 +1159,7 @@ obj/item/book/granter/crafting_recipe/energy
 	time_per_page = 0
 
 /obj/item/book/granter/trait/tribaltraditions/attack_self(mob/user)
-	var/list/choices = list("Dead Horses traditions","White Legs traditions","Rustwalkers traditions","Eighties traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")	
+	var/list/choices = list("Dead Horses traditions","White Legs traditions","Rustwalkers traditions","Eighties traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)
@@ -1168,7 +1169,7 @@ obj/item/book/granter/crafting_recipe/energy
 				traitname = "White Legs traditions"
 				languages_granted = list(/datum/language/whiteleg)
 				granted_trait = TRAIT_WHITELEGS_TRAD
-				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb, 
+				crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb,
 				/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour)
 			if("Dead Horses traditions")
 				traitname = "Dead Horses traditions"
@@ -1212,7 +1213,7 @@ obj/item/book/granter/crafting_recipe/energy
 	desc = "An instruction manual for mormons on how to communicate with tribals!"
 
 /obj/item/book/granter/trait/mormon/attack_self(mob/user)
-	var/list/choices = list("Dead Horses Language","Sorrows Language")	
+	var/list/choices = list("Dead Horses Language","Sorrows Language")
 	if(granted_trait == null)
 		var/choice = input("Choose a trait:") in choices
 		switch(choice)
