@@ -13863,6 +13863,7 @@
 	pixel_y = -5
 	},
 /obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
 	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
 	name = "fuel pump";
@@ -50157,6 +50158,7 @@
 /area/f13/wasteland)
 "qhP" = (
 /obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
 	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
 	name = "fuel pump";
@@ -50406,6 +50408,7 @@
 	pixel_x = -16
 	},
 /obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
 	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
 	name = "fuel pump";
