@@ -1879,6 +1879,9 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/city)
+"dky" = (
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/followers)
 "dmE" = (
 /obj/item/binoculars,
 /obj/structure/table/wood/junk,
@@ -2314,6 +2317,14 @@
 	name = "floor"
 	},
 /area/f13/brotherhood/offices1st)
+"eeq" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood3-broken"
+	},
+/area/f13/city)
 "efJ" = (
 /obj/machinery/button/door{
 	id = "bosdorm6";
@@ -2407,6 +2418,11 @@
 	dir = 16
 	},
 /area/f13/building/hospital)
+"etC" = (
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2-broken"
+	},
+/area/f13/city)
 "etP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -2434,6 +2450,7 @@
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/f13/fprostitute,
 /obj/item/clothing/under/f13/mprostitute,
+/obj/item/clothing/under/f13/female/flapper,
 /turf/open/floor/wood_common/wood_common_light,
 /area/f13/city)
 "eyV" = (
@@ -3415,8 +3432,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "gFs" = (
-/obj/structure/table/glass,
+/obj/structure/table/survival_pod,
 /obj/item/gun/ballistic/automatic/pistol/n99,
+/obj/item/reagent_containers/food/drinks/flask,
 /turf/open/floor/carpet/vault,
 /area/f13/city)
 "gGk" = (
@@ -5173,9 +5191,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
 /area/f13/followers)
 "jVv" = (
-/obj/machinery/mineral/wasteland_vendor/followerterminal,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
-/area/f13/followers)
+/turf/open/floor/f13/wood{
+	icon_state = "housewood3-broken"
+	},
+/area/f13/city)
 "jVE" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/fence/handrail{
@@ -9552,10 +9571,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "rWz" = (
-/obj/structure/closet/cabinet,
+/obj/structure/closet,
 /obj/item/clothing/under/f13/eastwood/vault,
 /obj/item/clothing/suit/armor/light/kit/shoulder,
 /obj/item/clothing/shoes/jackboots,
+/obj/item/card/id{
+	name = "souvenir ID card"
+	},
 /turf/open/floor/carpet/vault,
 /area/f13/city)
 "rXj" = (
@@ -10122,8 +10144,9 @@
 	},
 /area/f13/city)
 "sUr" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/food/drinks/flask,
+/obj/structure/chair/comfy/modern{
+	dir = 8
+	},
 /turf/open/floor/carpet/vault,
 /area/f13/city)
 "sUD" = (
@@ -11272,10 +11295,9 @@
 	},
 /area/f13/building/hospital)
 "viw" = (
-/obj/structure/chair/comfy/modern{
-	dir = 1
+/turf/open/floor/f13/wood{
+	icon_state = "housewood1-broken"
 	},
-/turf/open/floor/carpet/vault,
 /area/f13/city)
 "vje" = (
 /turf/closed/mineral/random/low_chance,
@@ -11500,6 +11522,11 @@
 /obj/item/toy/cards/deck/unum,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/followers)
+"vMy" = (
+/turf/open/floor/f13/wood{
+	icon_state = "housewood4-broken"
+	},
+/area/f13/city)
 "vMz" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood_common,
@@ -12085,6 +12112,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/table/glass,
 /turf/open/floor/carpet/vault,
 /area/f13/city)
 "wQG" = (
@@ -34111,9 +34139,9 @@ paR
 uiY
 uiY
 uiY
-uxG
+eeq
 paR
-paR
+vMy
 uiY
 lvE
 oez
@@ -34364,7 +34392,7 @@ oez
 uiY
 pmg
 paR
-paR
+viw
 uiY
 uiY
 pyS
@@ -35909,7 +35937,7 @@ xEh
 xKz
 xKz
 xKz
-paR
+viw
 paR
 uTi
 xKz
@@ -36168,7 +36196,7 @@ xKz
 rSI
 xKz
 paR
-paR
+vMy
 xKz
 uiY
 lvE
@@ -37197,7 +37225,7 @@ uiY
 uiY
 vub
 uiY
-paR
+vMy
 uiY
 lvE
 oez
@@ -37704,7 +37732,7 @@ wpu
 wpu
 uiY
 tXn
-paR
+etC
 cqy
 uiY
 uiY
@@ -37968,7 +37996,7 @@ uiY
 uiY
 uxG
 paR
-paR
+jVv
 uiY
 lvE
 oez
@@ -40525,7 +40553,7 @@ fbK
 hBS
 vLL
 jUl
-jVv
+vLL
 yiL
 hIb
 hIb
@@ -41557,9 +41585,9 @@ yiL
 qhz
 qhz
 qhz
-qhz
-qhz
-qhz
+yiL
+yiL
+yiL
 yiL
 yiL
 kdI
@@ -41814,10 +41842,10 @@ nfh
 uyL
 vMs
 hen
+qhz
 gyJ
-uyL
-peZ
-jRC
+gyJ
+gyJ
 yiL
 hIb
 alJ
@@ -42071,7 +42099,7 @@ gyJ
 gyJ
 gyJ
 gyJ
-gyJ
+qhz
 gyJ
 gyJ
 gyJ
@@ -42324,14 +42352,14 @@ iTZ
 vLL
 yiL
 gyJ
+uyL
+peZ
+jRC
+dky
+qhz
 gyJ
 gyJ
-gyJ
-gyJ
-gyJ
-gyJ
-gyJ
-gyJ
+yiL
 yiL
 yiL
 yiL
@@ -42585,10 +42613,10 @@ gyJ
 gyJ
 gyJ
 gyJ
+yiL
 gyJ
 gyJ
-gyJ
-gyJ
+yiL
 cIu
 cIu
 jAs
@@ -42842,10 +42870,10 @@ gyJ
 kiv
 kiv
 gyJ
-kiv
-kiv
-kiv
-gyJ
+yiL
+yiL
+yiL
+yiL
 cIu
 uKh
 uKh
@@ -46924,7 +46952,7 @@ oez
 ait
 woa
 gFs
-viw
+bFG
 rWz
 woa
 njD
@@ -47181,7 +47209,7 @@ oez
 ant
 ylr
 sUr
-viw
+bFG
 bFG
 eWC
 qJI
