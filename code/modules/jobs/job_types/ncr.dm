@@ -776,10 +776,10 @@ Access
 	jobtype = /datum/job/ncr/f13combatengineer
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	uniform = /obj/item/clothing/under/f13/ncr
-	head = /obj/item/clothing/head/f13/ncr/storm
+	head = /obj/item/clothing/head/hardhat/ncr
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/reinf
 	gloves = /obj/item/clothing/gloves/color/yellow
-	accessory =	/obj/item/clothing/accessory/ncr/SPC
+	accessory =	/obj/item/clothing/accessory/armband/engine/ncr
 	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/ncr/engineer
 	backpack_contents = list(
@@ -834,7 +834,7 @@ Access
 	id = /obj/item/card/id/dogtag/ncrsergeant
 	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/ncr
-	accessory = /obj/item/clothing/accessory/ncr/CPL
+	accessory = /obj/item/clothing/accessory/armband/black
 	glasses	= /obj/item/clothing/glasses/sunglasses/big
 	head = /obj/item/clothing/head/f13/ncr/mp
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant

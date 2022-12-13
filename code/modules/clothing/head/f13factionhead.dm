@@ -490,10 +490,43 @@
 	desc = "A standard issue NCR pth helmet with the addition of decalling signifying a medic."
 	icon_state = "ncr_helmet_medic"
 
+/obj/item/clothing/head/hardhat/ncr
+	name = "NCR engineer helmet"
+	desc = "A standard issue NCR Infantry helmet, modified with a head lamp for engineers."
+	icon_state = "hardhat0_ncr"
+	item_state = "hardhat0_ncr"
+	item_color = "ncr"
+	hat_type = "ncr"
+	flags_inv = HIDEEARS
+
 /obj/item/clothing/head/f13/ncr/mp
 	name = "NCR military police helmet"
 	desc = "A standard issue NCR pith helmet emblazoned with the initials of the military police."
 	icon_state = "ncr_helmet_mp"
+
+/obj/item/clothing/head/f13/ncr/flapcap
+	name = "NCR field cap"
+	desc = "A special issue canvas NCR field cap with cotton neckflap, for sun protection in arid climates."
+	icon_state = "ncr_flapcap"
+	item_state = "ncr_flapcap"
+
+/obj/item/clothing/head/f13/ncr/slouch
+	name = "NCR slouch hat"
+	desc = "An irregular issue NCR sun hat, the left side of the brim is pinned to the crown for ease with shouldering rifles."
+	icon_state = "ncr_slouch"
+	item_state = "ncr_slouch"
+
+/obj/item/clothing/head/f13/ncr/garrison
+	name = "NCR garrison cap"
+	desc = "A simple cloth garrison cap to be worn when a helmet isn't necessary."
+	icon_state = "ncr_cap"
+	item_state = "ncr_cap"
+
+/obj/item/clothing/head/f13/ncr/campaign
+	name = "NCR campaign hat"
+	desc = "A khaki campaign hat, popularly used by senior NCOs in the NCRA."
+	icon_state = "ncr_campaign"
+	item_state = "ncr_campaign"
 
 /obj/item/clothing/head/beret/ncr
 	name = "NCR officer beret"
@@ -506,6 +539,24 @@
 	name = "NCR medical beret"
 	desc = "A white beret, issued to officers of the medical corps."
 	icon_state = "ncr_beret_medical"
+
+/obj/item/clothing/head/beret/ncr/ncr_sapper
+	name = "NCR Sapper beret"
+	desc = "A grey beret, issued to troopers that have passed Sapper School."
+	icon_state = "ncr_sapper_beret"
+	item_state = "ncr_sapper_beret"
+
+/obj/item/clothing/head/beret/ncr_dresscap
+	name = "NCR peaked cap"
+	desc = "A tan peaked cap with silver pin, designated for enlisted NCRA personnel."
+	icon_state = "ncr_dresscap"
+	item_state = "ncr_dresscap"
+
+/obj/item/clothing/head/beret/ncr_codresscap
+	name = "NCR peaked cap"
+	desc = "A tan peaked cap with golden pin, designated for commissioned NCRA personnel."
+	icon_state = "ncr_codresscap"
+	item_state = "ncr_codresscap"
 
 //This thing is a meme don't you dare actually put it into loadouts
 /obj/item/clothing/head/beret/ncr/recon
