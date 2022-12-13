@@ -1060,7 +1060,7 @@ Off Duty
 */
 
 /datum/job/bos/f13offduty
-	title = "Brotherhood Off-Duty"
+	title = "BoS Off-Duty"
 	flag = F13OFFDUTYBOS
 	display_order = JOB_DISPLAY_ORDER_INITIATE
 	total_positions = 4
@@ -1073,9 +1073,11 @@ Off Duty
 
 	outfit = /datum/outfit/job/bos/f13offduty
 
+	access = list(ACCESS_BOS)
+	minimal_access = list(ACCESS_BOS)
 
 /datum/outfit/job/bos/f13offduty
-	name = "Brotherhood Off-Duty"
+	name = "BoS Off-Duty"
 	jobtype = /datum/job/bos/f13offduty
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1

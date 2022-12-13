@@ -13863,8 +13863,10 @@
 	pixel_y = -5
 	},
 /obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
 	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
+	name = "fuel pump";
 	pixel_y = 5
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -30576,14 +30578,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood)
-"gWi" = (
-/obj/effect/decal/cleanable/oil/streak{
-	pixel_x = -10
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/wasteland)
 "gWr" = (
 /obj/structure/rack,
 /obj/item/storage/bag/ore,
@@ -45484,14 +45478,6 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"nXq" = (
-/obj/effect/decal/cleanable/oil/streak{
-	pixel_x = -10
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalinnermain0"
-	},
-/area/f13/wasteland)
 "nXv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -50172,8 +50158,10 @@
 /area/f13/wasteland)
 "qhP" = (
 /obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
 	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
+	name = "fuel pump";
 	pixel_y = 5
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -50420,8 +50408,10 @@
 	pixel_x = -16
 	},
 /obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
 	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
+	name = "fuel pump";
 	pixel_y = 5
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -60178,14 +60168,6 @@
 	icon_state = "bar"
 	},
 /area/f13/building)
-"vad" = (
-/obj/effect/decal/cleanable/oil/streak{
-	pixel_x = -10
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalrightborderleft0"
-	},
-/area/f13/wasteland)
 "vai" = (
 /obj/structure/flora/grass/wasteland{
 	layer = 4.2;

@@ -19147,7 +19147,7 @@
 /area/f13/clinic)
 "lFw" = (
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "68"
+	req_access_txt = "280"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkredfull"
@@ -32445,7 +32445,7 @@
 "vEh" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"

@@ -415,5 +415,5 @@
 							"Knight",
 							"Scribe",
 							"Initiate",
-							"Brotherhood Off-Duty"
+							"BoS Off-Duty"
 	)
