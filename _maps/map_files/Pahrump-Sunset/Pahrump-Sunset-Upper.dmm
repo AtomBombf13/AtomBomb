@@ -6790,9 +6790,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
-"nnv" = (
-/turf/open/floor/carpet/royalblack,
-/area/f13/city)
 "nnw" = (
 /obj/structure/toilet{
 	dir = 4;

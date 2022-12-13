@@ -32445,7 +32445,7 @@
 "vEh" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
