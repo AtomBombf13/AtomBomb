@@ -210,6 +210,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/needler
+	name = "box of four HN needler cartridges"
+	result = /obj/item/storage/box/medicine/needler
+	reqs = list(/obj/item/stack/sheet/plastic/ = 10,
+				/obj/item/reagent_containers/syringe/xlarge = 20)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+	time = 5
+	always_available = FALSE
+
 /datum/crafting_recipe/c38boxincin
 	name = ".38 incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c38box/incendiary

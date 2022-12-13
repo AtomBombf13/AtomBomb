@@ -5,7 +5,7 @@
 	icon_state = "jukebox"
 	verb_say = "states"
 	density = TRUE
-	req_one_access = list(ACCESS_BAR, ACCESS_KITCHEN, ACCESS_HYDROPONICS, ACCESS_ENGINE, ACCESS_CARGO, ACCESS_THEATRE, ACCESS_BOS)
+	req_one_access = list(ACCESS_BAR, ACCESS_KITCHEN, ACCESS_HYDROPONICS, ACCESS_ENGINE, ACCESS_CARGO, ACCESS_THEATRE, ACCESS_BOS, ACCESS_PUBLIC)
 	var/active = FALSE
 	var/list/rangers = list()
 	var/stop = 0
@@ -16,7 +16,7 @@
 	name = "radiant dance machine mark IV"
 	desc = "The first three prototypes were discontinued after mass casualty incidents."
 	icon_state = "disco"
-	req_access = list(ACCESS_ENGINE, ACCESS_BOS, ACCESS_BAR)
+	req_access = list(ACCESS_ENGINE, ACCESS_BOS, ACCESS_BAR, ACCESS_PUBLIC)
 	anchored = FALSE
 	var/list/spotlights = list()
 	var/list/sparkles = list()

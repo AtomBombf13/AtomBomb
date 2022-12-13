@@ -122,8 +122,12 @@
 /obj/item/clothing/suit/armor/outfit/overalls/farmer
 	name = "farmer overalls"
 	desc = "A set of denim overalls suitable for farming."
-	icon = 'icons/fallout/clothing/suits_utility.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
+//	icon = 'icons/fallout/clothing/suits_utility.dmi'
+//	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi' Commented out, below added with Fashion module
+	icon = 'modular_atom/fashion/icons/clothing_fashion.dmi'
+	mob_overlay_icon = 'modular_atom/fashion/icons/onmob.dmi'
+	righthand_file = 'modular_atom/fashion/icons/onmobright.dmi'
+	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
 	icon_state = "overalls_farmer"
 	item_state = "overalls_farmer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/service/overalls

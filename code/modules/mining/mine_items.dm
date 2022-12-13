@@ -44,7 +44,7 @@
 /obj/structure/closet/secure_closet/miner
 	name = "miner's equipment"
 	icon_state = "mining"
-	req_access = list(ACCESS_MINING)
+	req_access = list(ACCESS_MINING, ACCESS_TOWN_PROSP)
 
 /obj/structure/closet/secure_closet/miner/unlocked
 	locked = FALSE
@@ -72,7 +72,7 @@
 /obj/machinery/computer/shuttle/mining
 	name = "mining shuttle console"
 	desc = "Used to call and send the mining shuttle."
-	req_access = list(ACCESS_MINING)
+	req_access = list(ACCESS_MINING, ACCESS_TOWN_PROSP)
 	circuit = /obj/item/circuitboard/computer/mining_shuttle
 	shuttleId = "mining"
 	possible_destinations = "mining_home;mining_away;landing_zone_dock;mining_public"

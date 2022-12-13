@@ -120,7 +120,7 @@
 				C.adjustCloneLoss(-healing_factor)
 				borrowed_health += (preheal_brute - C.getBruteLoss()) + (preheal_burn - C.getFireLoss()) + (preheal_tox - C.getToxLoss()) + ((preheal_oxy - C.getOxyLoss()) / 2)	//Ironically this means that while slimes get damaged by the toxheal, it will reduce borrowed health and longterm effects. Funky!
 				C.updatehealth()
-				if(data["grown_volume"] > 135 && ((C.health + C.oxyloss)>=80))
+				/*if(data["grown_volume"] > 135 && ((C.health + C.oxyloss)>=80))
 					var/tplus = world.time - M.timeofdeath
 					if(C.can_revive(ignore_timelimit = TRUE, maximum_brute_dam = MAX_REVIVE_BRUTE_DAMAGE / 2, maximum_fire_dam = MAX_REVIVE_FIRE_DAMAGE / 2, ignore_heart = TRUE) && C.revive())
 						C.grab_ghost()
@@ -133,7 +133,7 @@
 						var/policy = policies[POLICYCONFIG_ON_DEFIB_INTACT]
 						if(policy)
 							to_chat(C, policy)
-						C.log_message("revived using synthtissue, [tplus] deciseconds from time of death, considered late revival due to usage of synthtissue.", LOG_GAME)
+						C.log_message("revived using synthtissue, [tplus] deciseconds from time of death, considered late revival due to usage of synthtissue.", LOG_GAME)*/
 			else
 				var/preheal_brute = C.getBruteLoss()
 				var/preheal_burn = C.getFireLoss()

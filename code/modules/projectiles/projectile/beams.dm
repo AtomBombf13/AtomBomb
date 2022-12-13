@@ -430,8 +430,8 @@
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	hitscan = TRUE
-	wound_bonus = 5
-	bare_wound_bonus = 10
+	wound_bonus = 15
+	bare_wound_bonus = 20
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -470,8 +470,8 @@
 	damage = 25
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 10
-	bare_wound_bonus = 15
+	wound_bonus = 20
+	bare_wound_bonus = 25
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
@@ -490,8 +490,8 @@
 	damage = 30
 	armour_penetration = BULLET_PENETRATION_ABSOLUTE
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 20
-	bare_wound_bonus = 25
+	wound_bonus = 25
+	bare_wound_bonus = 30
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
@@ -572,25 +572,33 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/f13plasma //Plasma rifle
+///////////////
+//F13 Plasma///
+///////////////
+//Why isnt this in the plasma folder?//
+
+
+/obj/item/projectile/f13plasma //Plasma caster
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 60 //fucc you normies
 	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	flag = "energy" //checks vs. energy protection
 	wound_bonus = 90 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second =  TILES_TO_PIXELS(10) //same as 40mm grenade
 
-/obj/item/projectile/plasmacarbine //Plasma carbine
+/obj/item/projectile/plasmacarbine //urban plasma rifle
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 40
+	damage = 45
 	flag = "energy" //checks vs. energy protection
-	wound_bonus = 50 //let's not make the carbine horrifying // nah lets make it horrifying
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE //ignores below combat armor, combat armor greatly reduced
+	wound_bonus = 75 //almost as bad as the plasma caster
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second = TILES_TO_PIXELS(10)

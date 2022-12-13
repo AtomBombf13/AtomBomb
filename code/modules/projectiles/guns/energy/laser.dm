@@ -600,7 +600,7 @@
 	can_charge = 0
 	selfcharge = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/rechargerrifle/hitscan)
-	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	cell_type = /obj/item/stock_parts/cell/ammo/breeder/rifle
 	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI

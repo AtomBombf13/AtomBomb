@@ -7402,7 +7402,7 @@
 "aCu" = (
 /obj/machinery/door/airlock/security{
 	name = "Evidence Room";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -9232,7 +9232,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "aIw" = (
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak{
+	pixel_x = -10
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain1"
 	},
@@ -12269,7 +12271,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/city)
@@ -13172,7 +13174,7 @@
 /area/f13/building/massfusion)
 "aWx" = (
 /obj/structure/tires,
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "aWy" = (
@@ -13315,7 +13317,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "275"
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
@@ -13856,14 +13858,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/khanfort)
 "aZY" = (
-/obj/structure/reagent_dispensers/fueltank{
-	anchored = 1;
-	icon_state = "retrofuelpumppe";
-	pixel_y = 5
-	},
 /obj/structure/wreck/car/bike{
 	pixel_x = -35;
 	pixel_y = -5
+	},
+/obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
+	icon = 'icons/obj/objects.dmi';
+	icon_state = "retrofuelpumppe";
+	name = "fuel pump";
+	pixel_y = 5
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright2bottom"
@@ -14572,9 +14576,14 @@
 	},
 /area/f13/wasteland)
 "bdP" = (
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/open/indestructible/ground/outside/road,
-/area/f13/wasteland)
+/obj/structure/wreck/car/bike{
+	pixel_x = -35;
+	pixel_y = -5
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain2top"
+	},
+/area/f13/city)
 "bdQ" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
@@ -16945,7 +16954,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "bpX" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -20390,7 +20399,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -20622,8 +20631,8 @@
 /area/f13/wasteland)
 "cqY" = (
 /obj/machinery/door/airlock/security{
-	name = "Inmate Storage";
-	req_access_txt = "137"
+	name = "Inmate Property Holding";
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -22646,7 +22655,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "275"
 	},
 /turf/open/floor/plasteel/freezer,
 /area/f13/city)
@@ -25790,7 +25799,7 @@
 	},
 /area/f13/wasteland)
 "eLZ" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/desert,
@@ -27045,7 +27054,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /obj/machinery/door/poddoor/shutters/old/preopen{
 	id = "followersdoorshutters";
@@ -27368,7 +27377,7 @@
 "fuT" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
@@ -27750,7 +27759,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/museum)
 "fDX" = (
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
 	},
@@ -28981,7 +28990,7 @@
 	},
 /area/f13/ncr)
 "gns" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -30554,14 +30563,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood)
-"gWi" = (
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_x = -10
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/wasteland)
 "gWr" = (
 /obj/structure/rack,
 /obj/item/storage/bag/ore,
@@ -31084,7 +31085,6 @@
 /area/f13/building/museum)
 "hiN" = (
 /obj/structure/simple_door/wood,
-/obj/effect/decal/cleanable/oil/slippery,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/ncr)
 "hiV" = (
@@ -35427,7 +35427,7 @@
 "jjz" = (
 /obj/machinery/door/airlock/security{
 	name = "Reception";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -36303,7 +36303,7 @@
 /area/f13/ncr)
 "jHl" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -37848,7 +37848,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "kwq" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -39340,7 +39340,7 @@
 "lgg" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
@@ -39881,7 +39881,7 @@
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontalcorroded"
 	},
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -41492,12 +41492,6 @@
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 8;
 	icon_state = "dirt"
-	},
-/area/f13/wasteland)
-"mdr" = (
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontaltopborderbottom0"
 	},
 /area/f13/wasteland)
 "mdN" = (
@@ -43301,7 +43295,7 @@
 	},
 /area/f13/building/massfusion)
 "mTj" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -43906,9 +43900,7 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "nhM" = (
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_y = 15
-	},
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
 	icon_state = "horizontaltopborderbottom2right"
@@ -44367,7 +44359,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "nsQ" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/dirt,
@@ -44472,7 +44464,7 @@
 "nvf" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -45466,12 +45458,6 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"nXq" = (
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalinnermain0"
-	},
-/area/f13/wasteland)
 "nXv" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -45508,12 +45494,6 @@
 /obj/structure/flora/grass/coyote/one,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"nYK" = (
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/ncr)
 "nYO" = (
 /obj/effect/decal/marking,
 /obj/effect/decal/cleanable/dirt,
@@ -45550,7 +45530,7 @@
 	},
 /area/f13/building)
 "nZO" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -46412,7 +46392,7 @@
 	},
 /area/f13/wasteland)
 "ovw" = (
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop3"
 	},
@@ -46632,7 +46612,7 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/village)
 "oCi" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -48098,9 +48078,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "plg" = (
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_x = -10
-	},
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright2"
 	},
@@ -49458,10 +49436,10 @@
 	},
 /area/f13/caves)
 "pNn" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2"
 	},
@@ -49483,7 +49461,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "pOY" = (
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright2top"
 	},
@@ -50159,9 +50137,11 @@
 	},
 /area/f13/wasteland)
 "qhP" = (
-/obj/structure/reagent_dispensers/fueltank{
-	anchored = 1;
+/obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
+	icon = 'icons/obj/objects.dmi';
 	icon_state = "retrofuelpumppe";
+	name = "fuel pump";
 	pixel_y = 5
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -50376,7 +50356,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "qmZ" = (
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
 	icon_state = "horizontalinnermain2left"
@@ -50400,17 +50380,19 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/khanfort)
 "qns" = (
-/obj/structure/reagent_dispensers/fueltank{
-	anchored = 1;
-	icon_state = "retrofuelpumppe";
-	pixel_y = 5
-	},
 /obj/structure/railing/wood/post{
 	pixel_x = -16;
 	pixel_y = -20
 	},
 /obj/structure/railing/wood/post{
 	pixel_x = -16
+	},
+/obj/structure/junk/small/table{
+	desc = "Time and the elements has degraded this fuel pump beyond repair.";
+	icon = 'icons/obj/objects.dmi';
+	icon_state = "retrofuelpumppe";
+	name = "fuel pump";
+	pixel_y = 5
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
@@ -50923,7 +50905,7 @@
 "qAT" = (
 /obj/machinery/door/airlock/security{
 	name = "Eastwood Police Department";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
@@ -52564,7 +52546,7 @@
 	},
 /area/f13/wasteland/khans)
 "rrU" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -53526,7 +53508,7 @@
 "rTU" = (
 /obj/machinery/door/airlock/security{
 	name = "Lobby";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -54258,7 +54240,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "273"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -55553,7 +55535,7 @@
 	},
 /area/f13/followers)
 "sTx" = (
-/obj/effect/decal/cleanable/oil/slippery,
+/obj/effect/decal/cleanable/oil/streak,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom2left"
 	},
@@ -56148,7 +56130,7 @@
 "thh" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -56555,7 +56537,8 @@
 "trR" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
-	req_access_txt = "137"
+	req_access_txt = "281";
+	req_one_access = null
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -57964,7 +57947,10 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "tWa" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
+	pixel_x = -10
+	},
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -58027,7 +58013,7 @@
 	},
 /area/f13/city)
 "tWR" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -58181,10 +58167,9 @@
 	},
 /area/f13/building/khanfort)
 "ubQ" = (
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
@@ -59748,7 +59733,8 @@
 "uQz" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
-	req_access_txt = "137"
+	req_access_txt = "281";
+	req_one_access = null
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
@@ -60162,14 +60148,6 @@
 	icon_state = "bar"
 	},
 /area/f13/building)
-"vad" = (
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_x = -10
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalrightborderleft0"
-	},
-/area/f13/wasteland)
 "vai" = (
 /obj/structure/flora/grass/wasteland{
 	layer = 4.2;
@@ -61029,7 +61007,7 @@
 /area/f13/village)
 "vwZ" = (
 /obj/effect/decal/marking,
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -62843,7 +62821,7 @@
 "wqL" = (
 /obj/machinery/door/airlock/security{
 	name = "Hospital Security";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -64481,7 +64459,7 @@
 "xeY" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "141"
+	req_access_txt = "277"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -64734,10 +64712,6 @@
 /obj/structure/junk/small/table,
 /obj/item/trash/chips,
 /turf/open/floor/f13/wood,
-/area/f13/ncr)
-"xmz" = (
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/closed/wall/r_wall/rust,
 /area/f13/ncr)
 "xmP" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -65103,15 +65077,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "xuD" = (
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_x = -27;
-	pixel_y = 2
-	},
-/obj/effect/decal/cleanable/oil/slippery{
-	pixel_x = -27;
-	pixel_y = 2
-	},
-/obj/effect/decal/cleanable/oil/slippery{
+/obj/effect/decal/cleanable/oil/streak{
 	pixel_x = -10
 	},
 /turf/open/indestructible/ground/outside/road{
@@ -65405,7 +65371,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
-	req_access_txt = "68"
+	req_access_txt = "280"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -69008,7 +68974,7 @@ qRw
 cjh
 cjh
 kgQ
-nYK
+cjh
 cld
 cld
 eKD
@@ -71583,7 +71549,7 @@ vWT
 oIT
 eEg
 hPL
-xmz
+pxI
 kGV
 pxI
 pxI
@@ -72854,7 +72820,7 @@ uDh
 snb
 bGP
 shs
-mdr
+mHp
 mGE
 qmG
 uNJ
@@ -72878,7 +72844,7 @@ aiN
 aQZ
 mHp
 aIw
-bdP
+uNJ
 uNJ
 uNJ
 mGE
@@ -74132,7 +74098,7 @@ aQJ
 evq
 srN
 ppw
-nXq
+nZO
 imF
 sXv
 evq
@@ -91127,7 +91093,7 @@ sXv
 blV
 evq
 qmG
-gWi
+ubQ
 nvn
 bAA
 wVA
@@ -100201,7 +100167,7 @@ lWp
 pAp
 wNx
 blf
-qrr
+bdP
 blf
 blf
 lAA
@@ -102458,7 +102424,7 @@ xLC
 hEG
 aFN
 mHp
-gWi
+ubQ
 igF
 eWr
 ixn
@@ -107456,7 +107422,7 @@ biV
 aQZ
 mHp
 cNs
-vad
+xuD
 cNs
 cHs
 cNs
@@ -109493,7 +109459,7 @@ nvn
 nvn
 oPh
 nvn
-gWi
+ubQ
 tRk
 nvn
 hEG
@@ -112059,7 +112025,7 @@ oSe
 bFF
 mHp
 nvn
-gWi
+ubQ
 kDp
 bge
 rAm

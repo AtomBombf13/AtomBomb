@@ -575,6 +575,7 @@
 		/obj/item/stack/sheet/plastic/twenty,
 		/obj/item/defibrillator/primitive,
 		/obj/item/reagent_containers/syringe/bluespace,
+		/obj/effect/spawner/bundle/f13/needler/weak
 		)
 
 
@@ -849,6 +850,7 @@
 	loot = list(/obj/effect/spawner/bundle/f13/n99,
 				/obj/effect/spawner/bundle/f13/cowboy,
 				/obj/effect/spawner/bundle/f13/mk23,
+				/obj/effect/spawner/bundle/f13/needler,
 				/obj/effect/spawner/bundle/f13/hunting,
 				/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
@@ -875,7 +877,6 @@
 	name = "high-mid tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/mp5,
 				/obj/effect/spawner/bundle/f13/smg10mm,
-				/obj/effect/spawner/bundle/f13/needler,
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
 				/obj/effect/spawner/bundle/f13/shotgunlever,
@@ -1193,7 +1194,15 @@
 	name = "needler and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle,
 				/obj/item/ammo_box/stripper/needle
+				)
+
+/obj/effect/spawner/bundle/f13/needler/weak
+	items = list(
+				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle/improvised,
+				/obj/item/ammo_box/stripper/needle/improvised,
 				)
 
 /obj/effect/spawner/bundle/f13/trail
@@ -1540,7 +1549,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/stripper/a308,
 				/obj/item/ammo_box/magazine/pistol10mm,
 				/obj/item/ammo_box/magazine/m556/rifle,
-				/obj/item/ammo_box/loader/c38,
+				/obj/item/ammo_box/stripper/needle/improvised,
 				/obj/item/ammo_box/magazine/pistol9mm,
 				/obj/item/ammo_box/loader/m44,
 				/obj/item/ammo_box/tube/a357,
