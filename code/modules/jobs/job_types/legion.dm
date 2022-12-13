@@ -1143,6 +1143,7 @@ Access
 		/obj/item/paper/natural = 2,
 		/obj/item/pen/fountain = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
+		/obj/item/blacksmith/ingot/gold = 1,
 		/obj/item/taperecorder = 1,
 		)
 
