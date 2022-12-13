@@ -26,7 +26,7 @@
 	icon_state = "terminal"
 	icon_keyboard = "terminal_key"
 	icon_screen = "terminal_on_alt"
-	req_one_access = list(ACCESS_SECURITY, ACCESS_FORENSICS_LOCKERS, ACCESS_GATEWAY)
+	req_one_access = list(ACCESS_SECURITY, ACCESS_FORENSICS_LOCKERS, ACCESS_GATEWAY, ACCESS_TOWN_SEC, ACCESS_TOWN_HOS, ACCESS_TOWN_COMMAND)
 	circuit = /obj/item/circuitboard/computer/secure_data
 
 /obj/machinery/computer/secure_data/syndie
