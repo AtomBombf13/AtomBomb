@@ -66,8 +66,8 @@
 /obj/item/projectile/bullet/a556/improvised
 	name = "handloaded .223 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
-	armour_penetration = BULLET_PENETRATION_HEAVY 
-	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -420,7 +420,7 @@
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
+	spread = BULLET_SPREAD_SURPLUS * 0.75 //high velocity means less spread
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
 
 	wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_SURPLUS_MULT
@@ -452,7 +452,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm improvised
- * DAMAGE: 18.75
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -460,7 +460,7 @@
  */
 /obj/item/projectile/bullet/m5mm/improvised
 	name = "5mm bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT 
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
@@ -475,7 +475,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm simple
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -525,7 +525,7 @@
 //////////////////////////
 
 /* 5mm fmj
- * DAMAGE: 20
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
