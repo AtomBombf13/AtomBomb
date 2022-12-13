@@ -19147,7 +19147,7 @@
 /area/f13/clinic)
 "lFw" = (
 /obj/machinery/door/airlock/hatch{
-	req_access_txt = "68"
+	req_access_txt = "279"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkredfull"
