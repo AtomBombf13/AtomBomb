@@ -3,6 +3,14 @@
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_GENERAL
 	slot = SLOT_HEAD
 
+/datum/gear/head/hairband // added from the Fashion module
+	name = "yellow hairband"
+	path = /obj/item/clothing/head/fashion/hairband
+
+/datum/gear/head/hat_scarecrow // added from the Fashion module
+	name = "scarecrow hat"
+	path = /obj/item/clothing/head/helmet/fashion/scarecrow
+
 /datum/gear/head/baseball
 	name = "ballcap"
 	path = /obj/item/clothing/head/soft/mime
@@ -123,10 +131,6 @@
 	name = "powdered wig"
 	path = /obj/item/clothing/head/powdered_wig
 	cost = 2
-
-/datum/gear/head/nurse
-	name = "nurse hat"
-	path = /obj/item/clothing/head/f13/nursehat
 
 /datum/gear/head/chef
 	name = "chef hat"
@@ -272,7 +276,55 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
-							"NCR Sergeant First Class",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+						)
+
+/datum/gear/head/ncr_fieldcap
+	name = "NCR field cap"
+	path = /obj/item/clothing/head/f13/ncr/flapcap
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+							"NCR Off-Duty"
+						)
+
+/datum/gear/head/ncr_slouchhat
+	name = "NCR slouch hat"
+	path = /obj/item/clothing/head/f13/ncr/slouch
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+							"NCR Off-Duty"
+						)						
+
+/datum/gear/head/ncr_garrisoncap
+	name = "NCR garrison cap"
+	path = /obj/item/clothing/head/f13/ncr/garrison
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
@@ -281,6 +333,27 @@
 							"NCR Combat Medic",
 							"NCR Trooper",
 						)
+
+/datum/gear/head/ncr_campaignhat
+	name = "NCR campaign hat"
+	path = /obj/item/clothing/head/f13/ncr/campaign
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Military Police"
+						)
+
+/datum/gear/head/ncr_sapper
+	name = "NCR Sapper beret"
+	path = /obj/item/clothing/head/beret/ncr/ncr_sapper
+	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
+	cost = 2
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Combat Engineer",
+							"NCR Off-Duty"
+						)		
 
 /// Eastwood
 
@@ -295,7 +368,7 @@
 							"Mayor",
 							"Detective",
 							"Secretary",
-							"Shopkeeper",
+							"Shopkeeper"
 						)
 
 /// Khan

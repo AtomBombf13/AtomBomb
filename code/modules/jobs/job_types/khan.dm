@@ -1,12 +1,19 @@
+/*
+		Access
+				Great Khans - ACCESS_KHAN 125
+
+				All Access for every role in every faction: ACCESS_PUBLIC 284
+
+*/
 /datum/job/khan //do NOT use this for anything, it's just to store faction datums
 	department_flag = KHAN
 	selection_color = "#df80af"
 	faction = FACTION_KHAN
 	exp_type = EXP_TYPE_KHAN
-	access = list(ACCESS_KHAN)
-	minimal_access = list(ACCESS_KHAN)
-	forbids = "THE KHANATE DISCOURAGES: Dishonorable actions, Weakness, Abuse of power or status, sabotaging other Khans."
-	enforces = "THE KHANATE ENCOURAGES: Bravery, Honor, Displays of strenght, Brotherhood."
+	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_KHAN, ACCESS_PUBLIC)
+	forbids = "THE KHANATE DISCOURAGES: Dishonorable actions, weakness, abuse of power or status, and sabotaging other Khans."
+	enforces = "THE KHANATE ENCOURAGES: Bravery, honor, displays of strength, and brotherhood."
 
 /datum/outfit/job/khan
 	name = "Khan"

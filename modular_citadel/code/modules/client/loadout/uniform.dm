@@ -154,6 +154,21 @@
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SUITS
 	cost = 1
 
+/datum/gear/uniform/suit/burgundy // new art from Fashion module
+	name = "burgundy suit"
+	path = /obj/item/clothing/under/f13/fashion/suit_and_tie
+	cost = 1
+
+/datum/gear/uniform/suit/suit_checkered // added from Fashion module
+	name = "Fancy checkered suit"
+	path = /obj/item/clothing/under/f13/fashion/suit_and_tie/benny
+	cost = 1
+
+/datum/gear/uniform/suit/bennys // Benny
+	name = "Fancy suit"
+	path = /obj/item/clothing/under/f13/bennys
+	cost = 1
+
 /datum/gear/uniform/suit/green
 	name = "green suit"
 	path = /obj/item/clothing/under/suit/green
@@ -182,11 +197,6 @@
 /datum/gear/uniform/suit/navy
 	name = "navy suit"
 	path = /obj/item/clothing/under/suit/navy
-	cost = 1
-
-/datum/gear/uniform/suit/burgundy
-	name = "burgundy suit"
-	path = /obj/item/clothing/under/suit/burgundy
 	cost = 1
 
 /datum/gear/uniform/suit/tan
@@ -251,11 +261,11 @@
 
 /datum/gear/uniform/dress/housewife
 	name = "yellow pre-war dress"
-	path = /obj/item/clothing/under/f13/housewifedress50s
+	path = /obj/item/clothing/under/f13/fashion/fifties_dress // added from the Fashion module
 
 /datum/gear/uniform/dress/picnic
 	name = "red pre-war dress"
-	path = /obj/item/clothing/under/f13/picnicdress50s
+	path = /obj/item/clothing/under/f13/fashion/picnic_dress // added from the Fashion module
 
 /datum/gear/uniform/dress/bandage
 	name = "bandage dress"
@@ -1108,12 +1118,6 @@
 	name = "Pre-war relax outfit"
 	path = /obj/item/clothing/under/f13/relaxedwear
 	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/bennys
-	name = "Fancy suit"
-	path = /obj/item/clothing/under/f13/bennys
-	cost = 2
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/batter

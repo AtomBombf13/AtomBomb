@@ -1311,6 +1311,33 @@
 	dir = 1
 	},
 /area/f13/building/hospital)
+"cqH" = (
+/obj/structure/table/wood,
+/obj/item/folder/red{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/folder/white{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/folder/blue{
+	pixel_y = 6
+	},
+/obj/item/folder/yellow{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/folder{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/pen/fountain,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/f13/city)
 "cqK" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
@@ -2639,7 +2666,7 @@
 "eZk" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
@@ -2693,7 +2720,7 @@
 /obj/machinery/door/unpowered/securedoor{
 	max_integrity = 300;
 	obj_integrity = 300;
-	req_access_txt = "25"
+	req_access_txt = "275"
 	},
 /turf/open/floor/wood_common,
 /area/f13/city)
@@ -3343,6 +3370,25 @@
 /mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"gLS" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/card/town{
+	dir = 4;
+	pixel_y = 19
+	},
+/obj/machinery/computer/security/bos{
+	circuit = /obj/item/circuitboard/computer/security;
+	dir = 4;
+	name = "Eastwood police department camera terminal";
+	network = list("Eastwood");
+	pixel_y = 8
+	},
+/obj/machinery/computer/secure_data/townrecords{
+	dir = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "gMl" = (
 /obj/structure/chair/folding{
 	dir = 8
@@ -3904,6 +3950,13 @@
 /obj/structure/window/fulltile/house,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/city)
+"hUO" = (
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "hWV" = (
 /obj/structure/lattice/catwalk,
 /turf/open/transparent/openspace{
@@ -4388,7 +4441,8 @@
 "iQr" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
-	req_access_txt = "137"
+	req_access_txt = "281";
+	req_one_access = null
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
@@ -4471,6 +4525,10 @@
 /obj/structure/dresser,
 /turf/open/floor/wood_fancy,
 /area/f13/ncr)
+"jbU" = (
+/obj/machinery/photocopier,
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "jck" = (
 /obj/structure/fluff/railing/corner{
 	dir = 4
@@ -5992,6 +6050,10 @@
 	icon_state = "darkdirtysolid"
 	},
 /area/f13/ncr)
+"mdW" = (
+/obj/machinery/light/small,
+/turf/open/floor/carpet/royalblack,
+/area/f13/city)
 "meB" = (
 /obj/structure/flora/junglebush,
 /turf/open/indestructible/ground/outside/dirt,
@@ -6304,7 +6366,8 @@
 "mBI" = (
 /obj/machinery/door/airlock/security{
 	name = "Brig";
-	req_access_txt = "137"
+	req_access_txt = "281";
+	req_one_access = null
 	},
 /turf/open/floor/f13{
 	icon_state = "redmark"
@@ -6728,8 +6791,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
 "nnv" = (
-/obj/item/kirbyplants/random,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "nnw" = (
 /obj/structure/toilet{
@@ -6818,7 +6880,7 @@
 "ntm" = (
 /obj/machinery/door/airlock/grunge{
 	name = "shop airlock";
-	req_access_txt = "139"
+	req_access_txt = "276"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -6969,10 +7031,8 @@
 /turf/open/transparent/openspace,
 /area/f13/ncr)
 "nIv" = (
-/obj/machinery/door/airlock/centcom{
-	req_access_txt = "137"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/obj/structure/chair/f13foldupchair,
+/turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "nIQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6992,7 +7052,10 @@
 	},
 /area/f13/building/massfusion)
 "nKs" = (
-/obj/machinery/photocopier,
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#d8b1b1"
+	},
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "nLw" = (
@@ -7041,7 +7104,13 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "nQs" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/item/storage/box/citizenship_permits{
+	pixel_x = 9;
+	pixel_y = 11
+	},
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "nQy" = (
@@ -7120,7 +7189,8 @@
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "nWv" = (
-/obj/structure/chair/f13foldupchair,
+/obj/structure/table/wood,
+/obj/machinery/computer/card/town,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "nXm" = (
@@ -7376,8 +7446,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
 "opu" = (
-/obj/structure/chair/f13foldupchair,
-/turf/open/floor/carpet/red,
+/obj/machinery/door/airlock/centcom{
+	req_access_txt = "283";
+	req_one_access = null
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
 "osk" = (
 /obj/structure/railing/corner{
@@ -7393,6 +7466,9 @@
 /area/f13/building)
 "otU" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/f13foldupchair{
+	dir = 4
+	},
 /turf/open/floor/carpet/red,
 /area/f13/city)
 "ovS" = (
@@ -7518,7 +7594,7 @@
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/city)
 "oGD" = (
-/obj/machinery/photocopier,
+/obj/structure/table/wood,
 /turf/open/floor/carpet/red,
 /area/f13/city)
 "oGZ" = (
@@ -7615,7 +7691,6 @@
 /turf/open/indestructible,
 /area/f13/wasteland/ncr)
 "oSd" = (
-/obj/structure/filingcabinet,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "oSq" = (
@@ -7692,13 +7767,10 @@
 /turf/open/floor/carpet/red,
 /area/f13/brotherhood/leisure)
 "oYZ" = (
-/obj/structure/table/wood,
-/obj/item/paper_bin,
-/obj/item/pen/fourcolor,
-/obj/item/storage/box/citizenship_permits{
-	pixel_x = 9;
-	pixel_y = 11
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
 	},
+/obj/effect/landmark/start/f13/mayor,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "oZa" = (
@@ -7728,15 +7800,30 @@
 /area/f13/city)
 "paU" = (
 /obj/structure/table/wood,
-/obj/machinery/computer/terminal{
-	termtag = "Projector"
-	},
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "pcM" = (
 /obj/structure/simple_door/wood,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"pdA" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/deputy_badges{
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/item/megaphone{
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/obj/item/folder/red{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "peF" = (
 /obj/structure/lattice/catwalk,
 /obj/item/kirbyplants/random,
@@ -7799,45 +7886,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "plD" = (
-/obj/structure/table/wood,
-/obj/item/folder/red{
-	pixel_x = 6;
-	pixel_y = 6
+/obj/machinery/door/airlock/centcom{
+	req_access_txt = "282"
 	},
-/obj/item/folder/white{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/folder/blue{
-	pixel_y = 6
-	},
-/obj/item/folder/yellow{
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/obj/item/folder{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/pen/fountain,
-/turf/open/floor/carpet/royalblack,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/city)
 "plL" = (
-/obj/structure/table/wood,
-/obj/item/folder/red{
-	pixel_x = 6;
-	pixel_y = -3
+/obj/machinery/light/small{
+	dir = 1
 	},
-/obj/machinery/computer/security/bos{
-	circuit = /obj/item/circuitboard/computer/security;
-	name = "Eastwood police department camera terminal";
-	network = list("Eastwood");
-	pixel_x = 8
-	},
-/obj/machinery/computer/secure_data/townrecords{
-	pixel_x = -8
-	},
-/turf/open/floor/carpet/red,
+/turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "pmz" = (
 /obj/machinery/door/airlock/grunge{
@@ -7997,16 +8055,8 @@
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland/ncr)
 "pEE" = (
-/obj/structure/table/wood,
-/obj/item/storage/box/deputy_badges{
-	pixel_x = -14;
-	pixel_y = 11
-	},
-/obj/item/paper_bin,
-/obj/item/pen/fourcolor,
-/obj/item/megaphone{
-	pixel_x = 5;
-	pixel_y = 12
+/obj/structure/chair/f13foldupchair{
+	dir = 4
 	},
 /turf/open/floor/carpet/red,
 /area/f13/city)
@@ -8053,7 +8103,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
 "pIy" = (
-/obj/structure/filingcabinet,
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/obj/effect/landmark/start/f13/sheriff,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/carpet/red,
 /area/f13/city)
 "pIR" = (
@@ -8463,7 +8519,7 @@
 /turf/open/floor/carpet/red,
 /area/f13/brotherhood/leisure)
 "qzu" = (
-/obj/machinery/light/small,
+/obj/machinery/photocopier,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "qzP" = (
@@ -8608,21 +8664,17 @@
 	},
 /area/f13/building/massfusion)
 "qMI" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/obj/effect/landmark/start/f13/mayor,
+/obj/structure/filingcabinet,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "qOm" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "qOr" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/obj/effect/landmark/start/f13/sheriff,
-/turf/open/floor/carpet/red,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/royalblack,
 /area/f13/city)
 "qOL" = (
 /obj/structure/simple_door/metal/store,
@@ -8680,7 +8732,7 @@
 	},
 /area/f13/building/hospital)
 "qUE" = (
-/obj/structure/closet/cabinet,
+/obj/structure/rack,
 /turf/open/floor/carpet/red,
 /area/f13/city)
 "qWm" = (
@@ -9277,6 +9329,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
+"rYQ" = (
+/obj/structure/closet/cabinet,
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "rZU" = (
 /obj/structure/sign/poster/prewar/poster60,
 /turf/closed/wall/f13/store{
@@ -10301,7 +10357,7 @@
 "tWV" = (
 /obj/machinery/door/airlock/grunge{
 	name = "security airlock";
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/wasteland)
@@ -11413,6 +11469,13 @@
 /obj/machinery/light/small,
 /turf/open/water,
 /area/f13/brotherhood/dorms)
+"wrV" = (
+/obj/structure/filingcabinet,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
+/area/f13/city)
 "wse" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "storewindowhorizontal";
@@ -33395,8 +33458,8 @@ lXP
 hYA
 nSB
 dYT
-nnv
-dYT
+oSd
+oSd
 nKs
 oSd
 qqU
@@ -33652,11 +33715,11 @@ lZx
 hYA
 nSB
 nkA
-hYA
+plL
 nIv
 nQs
-nQs
-nQs
+oSd
+mdW
 dYT
 oez
 oez
@@ -33908,9 +33971,9 @@ dYT
 mbb
 hYA
 mHD
-nkA
-bOA
-dYT
+opu
+qOm
+nIv
 nWv
 oYZ
 qzu
@@ -34165,10 +34228,10 @@ dYT
 mbb
 hYA
 hYA
-iQr
-lta
 dYT
-nWv
+qOr
+nIv
+cqH
 paU
 qMI
 dYT
@@ -34420,14 +34483,14 @@ geI
 geI
 dYT
 dYT
+iQr
+dYT
+nkA
+nkA
 dYT
 dYT
 dYT
-lta
 dYT
-nWv
-plD
-qOm
 dYT
 oez
 oez
@@ -34678,13 +34741,13 @@ uKh
 dYT
 mck
 hYA
-hYA
-lta
-lta
+bOA
 dYT
-dYT
-dYT
-dYT
+qUE
+oGD
+hUO
+wvW
+rYQ
 dYT
 oez
 oez
@@ -34936,12 +34999,12 @@ iQr
 lta
 hYA
 hYA
-lta
-bOA
-dYT
-opu
-plL
-qOr
+plD
+wvW
+wvW
+wvW
+wvW
+wvW
 dYT
 oez
 oez
@@ -35193,9 +35256,9 @@ dYT
 lXP
 hYA
 mJq
-hYA
-hYA
-nIv
+dYT
+jbU
+wrV
 otU
 pEE
 qQE
@@ -35453,9 +35516,9 @@ dYT
 dYT
 dYT
 dYT
-otU
-otU
-otU
+pdA
+gLS
+wvW
 dYT
 oez
 oez
@@ -35712,7 +35775,7 @@ nnw
 dYT
 oGD
 pIy
-qUE
+wvW
 dYT
 oez
 oez
