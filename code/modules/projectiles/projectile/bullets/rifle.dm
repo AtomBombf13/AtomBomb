@@ -36,16 +36,15 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5.56 sport
- * DAMAGE: 25
+ * DAMAGE: 31.25
  * STAMIN: 5
  * RECOIL: 1
  * WOUNDS: 6.5
  * WNAKED: 3.75
  */
-/obj/item/projectile/bullet/a556/sport
+/obj/item/projectile/bullet/a556/sport //same as 5.56, but with less pen
 	name = "surplus .223 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL //no armor pen
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL 
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
