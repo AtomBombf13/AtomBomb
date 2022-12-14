@@ -22,6 +22,19 @@
 		)
 	I.gun_loc_tag = GUN_UNDERBARREL
 
+/obj/item/gun_upgrade/underbarrel/foregrip
+	name = "vertical foregrip"
+	desc = "A classic polymer grip used since long before the war it helps the operator stabilize recoil to something more reasonable."
+	icon_state = "foregrip"
+
+/obj/item/gun_upgrade/underbarrel/foregrip/New()
+	..()
+	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
+	I.weapon_upgrades = list(
+		GUN_UPGRADE_RECOIL = 0.8
+		)
+	I.gun_loc_tag = GUN_UNDERBARREL
+
 //Silences the weapon, reduces damage multiplier slightly, Legacy port.
 /obj/item/gun_upgrade/muzzle/silencer
 	name = "silencer"
@@ -36,12 +49,26 @@
 		GUN_UPGRADE_SILENCER = TRUE,
 		GUN_UPGRADE_MUZZLEFLASH = 0.8,
 		GUN_UPGRADE_DAMAGE_PLUS = -0.1,
-		GUN_UPGRADE_RECOIL = 0.9
+		GUN_UPGRADE_RECOIL = 0.7
 		)
 	I.gun_loc_tag = GUN_MUZZLE
 	I.req_gun_tags = list(GUN_SILENCABLE)
 
-//Decreases fire delay. Acquired through loot spawns
+/obj/item/gun_upgrade/muzzle/recoil_comp
+	name = "recoil compensator"
+	desc = "An extension of a barrel that helps hide muzzle flash and outcoming recoil."
+	icon_state = "recoil"
+
+/obj/item/gun_upgrade/muzzle/recoil_comp/New()
+	..()
+	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
+	I.weapon_upgrades = list(
+		GUN_UPGRADE_MUZZLEFLASH = 0.5,
+		GUN_UPGRADE_RECOIL = 0.8
+		)
+	I.gun_loc_tag = GUN_MUZZLE
+	I.req_gun_tags = list(GUN_PROJECTILE)
+
 /obj/item/gun_upgrade/barrel/forged
 	name = "forged barrel"
 	desc = "Despite pre-war advancements in weapon manufacture, a properly forged steel barrel is still a great addition to any gun."
@@ -51,13 +78,14 @@
 	..()
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
-		GUN_UPGRADE_FIRE_DELAY_MULT = 0.8
+		GUN_UPGRADE_PROJ_SPEED_MULT = 1.2,
+		GUN_UPGRADE_RECOIL = 1.1
 		)
 	I.gun_loc_tag = GUN_BARREL
 	I.req_gun_tags = list(GUN_PROJECTILE)
 
 /obj/item/gun_upgrade/barrel/blender
-	name = "Makeshift \"Bullet Blender\" barrel"
+	name = "makeshift \"Bullet Blender\" barrel"
 	desc = "A curious-looking barrel bearing a faded insignia. A small label reads \"No refunds for any collateral damage caused\"."
 	icon_state = "Penetrator"
 
@@ -67,7 +95,6 @@
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_PEN_MULT = 0.2,
 		GUN_UPGRADE_RICO_MULT = 5,
-		GUN_UPGRADE_PROJ_SPEED_MULT = 1.4,
 		GUN_UPGRADE_RECOIL = 1.4
 		)
 	I.gun_loc_tag = GUN_BARREL
@@ -91,25 +118,9 @@
 
 /obj/item/gun_upgrade/trigger
 
-//Disables the ability to toggle the safety, toggles the safety permanently off, decreases fire delay. Acquired through loot spawns
-/obj/item/gun_upgrade/trigger/dangerzone
-	name = "Raider trigger"
-	desc = "Who needs safeties anyways?"
-	icon_state = "Danger_Zone"
-
-
-/obj/item/gun_upgrade/trigger/dangerzone/New()
-	..()
-	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
-	I.weapon_upgrades = list(
-		GUN_UPGRADE_FIRE_DELAY_MULT = 0.8,
-		GUN_UPGRADE_FORCESAFETY = FALSE
-		)
-	I.gun_loc_tag = GUN_TRIGGER
-
 //Disables the ability to toggle the safety, toggles the safety permanently on, takes 2 minutes to remove (yikes). Acquired through loot spawns
 /obj/item/gun_upgrade/trigger/cop_block
-	name = "Secured trigger"
+	name = "secured trigger"
 	desc = "A simpler way of making a weapon display-only."
 	icon_state = "Cop_Block"
 
@@ -127,7 +138,7 @@
 
 //Adds +3 to the internal magazine of a weapon. Acquired through loot spawns.
 /obj/item/gun_upgrade/mechanism/overshooter
-	name = "Extended internal magazine kit"
+	name = "extended internal magazine kit"
 	desc = "A method of overloading a weapon's internal magazine, fitting more ammunition within the weapon."
 	icon_state = "Overshooter"
 
@@ -159,17 +170,18 @@
 	I.gun_loc_tag = GUN_MECHANISM*/
 
 //Lets the SOL be made into a fully automatic weapon, but increases recoil. Acquirable through Frozen Star Guns&Ammo Vendor
-/obj/item/gun_upgrade/mechanism/weintraub
-	name = "Full auto kit"
-	desc = "A fully automatic receiver for rifles"
+/obj/item/gun_upgrade/mechanism/autosear
+	name = "full auto kit"
+	desc = "An M2 automatic conversion kit once belonging to the US Army now widely available to any home-defender."
 	icon_state = "Weintraub"
 
-/obj/item/gun_upgrade/mechanism/weintraub/New()
+/obj/item/gun_upgrade/mechanism/autosear/New()
 	..()
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_FULLAUTO = TRUE,
-		GUN_UPGRADE_RECOIL = 1.2
+		GUN_UPGRADE_DAMAGE_MULT = 0.9,
+		GUN_UPGRADE_RECOIL = 1.4
 	)
 	I.req_gun_tags = list(GUN_FA_MODDABLE)
 	I.gun_loc_tag = GUN_MECHANISM
@@ -191,7 +203,7 @@
 	I.gun_loc_tag = GUN_MECHANISM
 
 /obj/item/gun_upgrade/trigger/boom
-	name = "Rigged trigger"
+	name = "rigged trigger"
 	desc = "A trapped trigger mechanism, wired to cause an energy gun to short-circuit when it's pulled."
 	icon_state = "Boom"
 
@@ -232,7 +244,7 @@
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_RECOIL = 1.3,
-		GUN_UPGRADE_ZOOM = 2
+		GUN_UPGRADE_ZOOM = 1.7
 		)
 	I.gun_loc_tag = GUN_SCOPE
 	I.req_gun_tags = list(GUN_SCOPE)

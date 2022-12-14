@@ -33,7 +33,7 @@
 
 
 /obj/item/weaponcrafting/improvised_parts/shotgun_receiver
-	name = "shotgun reciever"
+	name = "shotgun receiver"
 	desc = "An improvised receiver to create a break-action breechloaded shotgun."  // removed some text implying that the item had more uses than it does
 	icon_state = "receiver_shotgun"
 	w_class = WEIGHT_CLASS_SMALL
@@ -144,6 +144,13 @@
 	icon_state = "bench_metal"
 	bound_width = 64
 	machine_tool_behaviour = list(TOOL_METAL_BENCH)
+
+/obj/machinery/workbench/forge/superheating
+	name = "superheating forge"
+	desc = "A reactor-heated megafurnace used for forging metal items such as swords, spears and shields and more."
+	icon = 'icons/fallout/machines/64x32.dmi'
+	icon_state = "generator_on"
+
 
 /obj/item/weaponcrafting/receiver
 	name = "modular receiver"

@@ -144,7 +144,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/explosion_power = 35
 	///Time in 1/10th of seconds since the last sent warning
 	var/lastwarning = 0
-	///Refered to as eer on the moniter. This value effects gas output, heat, damage, and radiation.
+	///Referred to as eer on the moniter. This value effects gas output, heat, damage, and radiation.
 	var/power = 0
 	///Determines the rate of positve change in gas comp values
 	var/gas_change_rate = 0.05
@@ -965,7 +965,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	playsound(T, 'sound/effects/supermatter.ogg', 50, 1)
 	T.visible_message(span_danger("[T] smacks into [src] and rapidly flashes to ash."),\
 	span_italic("You hear a loud crack as you are washed with a wave of heat."))
-	CALCULATE_ADJACENT_TURFS(T)
+	T.ImmediateCalculateAdjacentTurfs()
 
 //Do not blow up our internal radio
 /obj/machinery/power/supermatter_crystal/contents_explosion(severity, target)

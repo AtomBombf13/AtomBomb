@@ -34,7 +34,6 @@
 	minimum_distance = 1
 	retreat_distance = 4
 	extra_projectiles = 2
-	auto_fire_delay = GUN_AUTOFIRE_DELAY_SLOW
 	ranged_ignores_vision = TRUE
 	attack_verb_simple = "punches"
 	attack_sound = "punch"
@@ -75,11 +74,13 @@
 			return
 		var/obj/item/grenade/S
 		switch(rand(1,10))
-			if(1)
+			if(1 to 2)
 				S = new /obj/item/grenade/flashbang/sentry(flashbang_turf)
-			if(2)
+			if(3)
+				S = new /obj/item/grenade/f13/frag(flashbang_turf)
+			if(4)
 				S = new /obj/item/grenade/stingbang(flashbang_turf)
-			if(3 to 10)
+			if(5 to 10)
 				S = new /obj/item/grenade/smokebomb(flashbang_turf)
 		visible_message(span_danger("\The [src] releases a defensive [S]!"))
 		S.preprime(user = null)
@@ -122,8 +123,8 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot_dead"
-	health = 168
-	maxHealth = 168
+	health = 251 //11 hits of .223
+	maxHealth = 251
 	del_on_death = FALSE
 	melee_damage_lower = 28
 	melee_damage_upper = 65
@@ -209,25 +210,6 @@
 		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
 		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
 	)
-
-//Playable Sentrybot
-/mob/living/simple_animal/hostile/securitron/sentrybot/playable
-	health = 750   //El Beef
-	maxHealth = 750
-	speed = 1
-	attack_verb_simple = "clamps"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	ranged = FALSE
-	see_in_dark = 8
-	environment_smash = 2 //can smash walls
-	wander = 0
-	force_threshold = 15
-
-/mob/living/simple_animal/hostile/securitron/sentrybot/playable/death()
-	return ..()
 
 //Junkers
 /mob/living/simple_animal/hostile/securitron/sentrybot/suicide

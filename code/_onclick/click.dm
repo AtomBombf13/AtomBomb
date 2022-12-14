@@ -34,7 +34,7 @@
 		FlushCurrentAction()
 	else
 		DiscardCurrentAction()
-	
+
 /*
 	Standard mob ClickOn()
 	Handles exceptions: Buildmode, middle click, modified clicks, mech actions
@@ -80,11 +80,6 @@
 
 	if(!modifiers["catcher"] && A.IsObscured())
 		return
-
-	if(ismecha(loc))
-		var/obj/mecha/M = loc
-		M.click_action(A,src,params)
-		return TRUE
 
 	if(restrained())
 		DelayNextAction(CLICK_CD_HANDCUFFED)

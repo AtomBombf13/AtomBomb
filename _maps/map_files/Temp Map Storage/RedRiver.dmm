@@ -380,13 +380,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"amX" = (
-/mob/living/simple_animal/hostile/wolf/playable,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontalinnermain0"
-	},
-/area/f13/wasteland)
 "amY" = (
 /obj/structure/barricade/wooden/strong,
 /turf/closed/wall/f13/wood,
@@ -20750,10 +20743,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"poY" = (
-/mob/living/simple_animal/hostile/wolf/playable,
-/turf/open/indestructible/ground/outside/savannah,
-/area/f13/wasteland)
 "ppv" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
@@ -35611,7 +35600,7 @@ gMW
 gMW
 gMW
 iiT
-iiT
+gMW
 gMW
 gMW
 gMW
@@ -41187,7 +41176,7 @@ pca
 ymf
 eQa
 eQa
-poY
+eQa
 sMZ
 lmY
 eWO
@@ -42728,7 +42717,7 @@ oMa
 oMa
 oMa
 oMa
-amX
+pVV
 czN
 vGR
 ePp

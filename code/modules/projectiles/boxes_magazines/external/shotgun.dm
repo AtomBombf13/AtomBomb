@@ -55,7 +55,21 @@
 	max_ammo = 12
 	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_SHOTGUN_MAGAZINE)
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/magazine/d12g/empty
+	start_empty = 1
+
+/obj/item/ammo_box/magazine/city12g
+	name = "shotgun stick magazine (12g slugs)"
+	desc = "A 12g stick magazine."
+	icon_state = "citymag"
+	ammo_type = /obj/item/ammo_casing/shotgun
+	caliber = list(CALIBER_SHOTGUN)
+	max_ammo = 10
+	multiple_sprites = 2
+	custom_materials = list(/datum/material/iron = MATS_SHOTGUN_MAGAZINE)
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/ammo_box/magazine/city12g/empty
 	start_empty = 1

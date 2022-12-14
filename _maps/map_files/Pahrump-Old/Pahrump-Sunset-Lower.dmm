@@ -1539,11 +1539,6 @@
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
-"aWO" = (
-/obj/structure/lattice/catwalk,
-/mob/living/simple_animal/hostile/handy/playable,
-/turf/open/water,
-/area/f13/tunnel)
 "aWQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced{
@@ -1826,7 +1821,6 @@
 "bdp" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/clothing/under/syndicate/brotherhood,
-/obj/item/storage/belt/shoulderholster,
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior,
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior,
 /obj/item/clothing/gloves/combat,
@@ -3666,11 +3660,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "caK" = (
-/obj/machinery/workbench/forge{
-	desc = "A reactor-heated megafurnace used for forging metal items such as swords, spears and shields and more.";
-	icon_state = "generator_on";
-	name = "superheating forge"
-	},
+/obj/machinery/workbench/forge/superheating,
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "darkrustysolid"
 	},
@@ -9474,7 +9464,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/brotherhood/leisure)
 "fgP" = (
-/obj/item/clothing/suit/armor/rangercombat/foxcustom,
 /obj/item/clothing/head/helmet/f13/ncr/rangercombat/foxcustom,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
@@ -12168,8 +12157,6 @@
 /obj/item/ammo_box/shotgun/buck,
 /obj/item/ammo_box/shotgun/buck,
 /obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/shotgun/bean,
-/obj/item/ammo_box/shotgun/bean,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
@@ -14326,7 +14313,6 @@
 	network = list("Vault")
 	},
 /obj/structure/rack,
-/obj/item/clothing/head/helmet/riot/vaultsec,
 /obj/item/clothing/glasses/sunglasses,
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/bunker)
@@ -15240,9 +15226,6 @@
 /obj/item/ammo_box/shotgun/buck,
 /obj/item/ammo_box/shotgun/buck,
 /obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/shotgun/rubber,
-/obj/item/ammo_box/shotgun/rubber,
-/obj/item/ammo_box/shotgun/rubber,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "iDw" = (
@@ -15319,8 +15302,6 @@
 /obj/effect/decal/fakelattice{
 	pixel_x = -17
 	},
-/obj/item/gun/ballistic/automatic/service/policerifle,
-/obj/item/gun/ballistic/automatic/service/policerifle,
 /turf/open/floor/plasteel/f13/vault_floor/dark{
 	icon_state = "darkrusty"
 	},
@@ -16740,17 +16721,6 @@
 /obj/structure/wreck/trash/engine,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
-"jEP" = (
-/obj/machinery/door/window/brigdoor/security/cell/northleft{
-	dir = 2;
-	id = "vaultc2";
-	name = "Cell 2"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/mineral/plastitanium,
-/area/f13/bunker)
 "jFd" = (
 /obj/machinery/light/broken,
 /obj/item/ammo_casing/shotgun/improvised,
@@ -17375,10 +17345,6 @@
 /area/f13/tunnel)
 "kaj" = (
 /obj/structure/rack,
-/obj/item/storage/belt/army/security,
-/obj/item/storage/belt/army/security,
-/obj/item/storage/belt/army/security,
-/obj/item/storage/belt/army/security,
 /obj/effect/decal/fakelattice{
 	pixel_y = -17
 	},
@@ -17499,12 +17465,6 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/den)
-"kce" = (
-/obj/machinery/door/window/brigdoor/security/cell/northleft{
-	dir = 4
-	},
-/turf/open/floor/mineral/plastitanium,
-/area/f13/bunker)
 "kcf" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -18843,11 +18803,6 @@
 /area/f13/brotherhood/leisure)
 "kVP" = (
 /obj/structure/rack,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
-/obj/item/storage/belt/army,
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/clothing/mask/gas/sechailer,
@@ -23485,12 +23440,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/bunker)
-"nTD" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/mob/living/simple_animal/hostile/handy/playable,
-/turf/open/water,
-/area/f13/tunnel)
 "nTG" = (
 /obj/structure/sign/painting/library_secure{
 	persistence_id = "brotherhood_secure";
@@ -23844,11 +23793,6 @@
 "oei" = (
 /obj/item/ammo_casing/shotgun/improvised,
 /turf/open/floor/plasteel/freezer,
-/area/f13/bunker)
-"oen" = (
-/obj/structure/bed,
-/obj/item/bedsheet/blue,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker)
 "oev" = (
 /obj/structure/closet,
@@ -25205,7 +25149,6 @@
 	pixel_y = -17
 	},
 /obj/structure/rack,
-/obj/item/clothing/suit/armor/medium/vest/oasis,
 /obj/item/clothing/head/helmet/blueshirt,
 /obj/item/clothing/under/rank/security/officer/blueshirt,
 /turf/open/floor/plasteel/f13/vault_floor/dark{
@@ -27130,17 +27073,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/enclave)
-"qkt" = (
-/obj/machinery/door/window/brigdoor/security/cell/northleft{
-	dir = 2;
-	id = "vaultc1";
-	name = "Cell 1"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/mineral/plastitanium,
-/area/f13/bunker)
 "qkC" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/glass{
@@ -27189,7 +27121,6 @@
 "qmj" = (
 /obj/structure/closet,
 /obj/item/clothing/under/f13/vault,
-/obj/item/clothing/suit/armor/kit,
 /turf/open/floor/carpet/vault,
 /area/f13/building)
 "qml" = (
@@ -31969,7 +31900,6 @@
 	pixel_x = 26;
 	specialfunctions = 4
 	},
-/obj/item/storage/belt/army/assault,
 /turf/open/floor/wood_common,
 /area/f13/bunker)
 "tev" = (
@@ -34535,10 +34465,6 @@
 /obj/item/clothing/under/f13/police/officer,
 /obj/item/clothing/under/f13/police/officer,
 /obj/item/clothing/under/f13/police/officer,
-/obj/item/clothing/head/f13/town/officer,
-/obj/item/clothing/head/f13/town/officer,
-/obj/item/clothing/head/f13/town/officer,
-/obj/item/clothing/head/f13/town/officer,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "uPT" = (
@@ -36679,7 +36605,6 @@
 	},
 /area/f13/bunker)
 "wgA" = (
-/obj/machinery/door/window/northleft,
 /obj/machinery/shower{
 	dir = 1
 	},
@@ -37273,7 +37198,6 @@
 /obj/item/clothing/suit/armor/light/leather/leather_jacket,
 /obj/item/clothing/suit/armor/light/leather/leather_jacket,
 /obj/item/clothing/suit/armor/light/leather/leather_jacket,
-/obj/item/clothing/suit/armor/harpercoat,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -38480,8 +38404,6 @@
 /area/f13/brotherhood/offices2nd)
 "xlL" = (
 /obj/structure/table/wood/fancy/black,
-///obj/item/construction/rcd/loaded,
-/obj/item/construction/rld,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
 /turf/open/floor/carpet/black,
@@ -39128,22 +39050,6 @@
 /obj/structure/sign/poster/official/safety_eye_protection,
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/rnd)
-"xFz" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/bot,
-/obj/item/storage/belt/army/assault,
-/obj/structure/window/reinforced,
-/obj/machinery/door/window/brigdoor{
-	dir = 8;
-	req_access_txt = "1"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/darkred/side{
-	dir = 4
-	},
-/area/f13/bunker)
 "xFA" = (
 /obj/effect/decal/waste{
 	icon_state = "goo8"
@@ -40973,7 +40879,7 @@ vPg
 vPg
 vPg
 vPg
-aoj
+vPg
 vPg
 eLE
 "}
@@ -55783,7 +55689,7 @@ hfK
 vfU
 fDH
 cSE
-nTD
+lCq
 vfU
 hfK
 weW
@@ -56295,7 +56201,7 @@ weW
 weW
 qcW
 vfU
-aWO
+cSE
 cSE
 cSE
 jxp
@@ -95126,7 +95032,7 @@ vPx
 xLe
 mfB
 gPr
-xFz
+ovt
 ovt
 qSP
 mUz
@@ -96420,7 +96326,7 @@ mhs
 erz
 xLe
 lZJ
-kce
+eDX
 xLe
 vPg
 vPg
@@ -96672,7 +96578,7 @@ jHb
 lle
 bkG
 mLU
-qkt
+bkG
 paW
 gdH
 dRg
@@ -97700,7 +97606,7 @@ uYA
 lle
 bkG
 bkG
-jEP
+bkG
 xuq
 rwE
 xLe
@@ -101819,7 +101725,7 @@ vPg
 xwr
 osY
 eSW
-oen
+uWA
 xRy
 hDo
 eSW

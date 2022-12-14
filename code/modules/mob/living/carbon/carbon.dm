@@ -666,6 +666,15 @@
 		sight |= (SEE_TURFS|SEE_MOBS|SEE_OBJS)
 		see_in_dark = max(see_in_dark, 8)
 
+	if(HAS_TRAIT(src, TRAIT_MECHA_NVG))
+		lighting_alpha = min(lighting_alpha, LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE)
+
+	if(HAS_TRAIT(src, TRAIT_MECHA_THERMAL))
+		sight |= (SEE_MOBS)
+
+	if(HAS_TRAIT(src, TRAIT_MECHA_NVG))
+		sight |= (SEE_TURFS)
+
 	if(see_override)
 		see_invisible = see_override
 	. = ..()
@@ -879,12 +888,12 @@
 	update_hud_handcuffed()
 
 /mob/living/carbon/proc/can_revive(ignore_timelimit = FALSE, maximum_brute_dam = MAX_REVIVE_BRUTE_DAMAGE, maximum_fire_dam = MAX_REVIVE_FIRE_DAMAGE, ignore_heart = FALSE)
-	//var/tlimit = DEFIB_TIME_LIMIT * 10
+	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	var/obj/item/organ/heart = getorgan(/obj/item/organ/heart)
 	if(suiciding || hellbound || HAS_TRAIT(src, TRAIT_HUSK) || AmBloodsucker(src))
 		return
-	/* if(!ignore_timelimit && (world.time - timeofdeath) > tlimit)
-		return */
+	if(!ignore_timelimit && (world.time - timeofdeath) > tlimit)
+		return 
 	if((getBruteLoss() >= maximum_brute_dam) || (getFireLoss() >= maximum_fire_dam))
 		return
 	if(!ignore_heart && (!heart || (heart.organ_flags & ORGAN_FAILING)))

@@ -34,8 +34,7 @@
 	result = /obj/structure/blacksmith/anvil/obtainable
 	time = 450
 	reqs = list(
-		/obj/item/stack/sheet/metal = 50,
-		/obj/item/stack/sheet/mineral/titanium = 15,
+		/obj/item/stack/sheet/metal = 30,
 		)
 	tools = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER, TOOL_CROWBAR)
 	category = CAT_CRAFTING
@@ -52,7 +51,7 @@
 
 /datum/crafting_recipe/blacksmith/furnace
 	name = "Furnace"
-	result = /obj/structure/blacksmith/furnace
+	result = /obj/structure/blacksmith/furnace/sandstone
 	time = 300
 	reqs = list(
 		/obj/item/stack/sheet/mineral/sandstone = 30,
@@ -84,13 +83,25 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_FORGING
 
+/datum/crafting_recipe/blacksmith/smithed_armor_metal
+	name = "Metal armor set"
+	result = /obj/item/clothing/suit/armor/heavy/metal/smithed
+	reqs = list(
+		/obj/item/smithing/armor_piece = 2,
+		/obj/item/stack/sheet/leather = 2,
+		)
+	time = 200
+	tools = list(TOOL_METAL_BENCH)
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+
 /datum/crafting_recipe/tools/forged/sledge // metalworking bench
 	name = "Sledgehammer"
 	result = /obj/item/twohanded/sledgehammer/simple
 	time = 700
 	reqs = list(
-		/obj/item/stack/sheet/metal = 15,
-		/obj/item/stack/sheet/mineral/wood = 5,
+		/obj/item/stack/sheet/metal = 12,
+		/obj/item/stack/sheet/mineral/wood = 6,
 		)
 	tools = list(TOOL_METAL_BENCH)
 	category = CAT_CRAFTING

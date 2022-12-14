@@ -171,7 +171,6 @@ GLOBAL_LIST_INIT(trash_part, list(
 GLOBAL_LIST_INIT(trash_clothing, list(
 	/obj/item/clothing/glasses/sunglasses/big = 5,
 	/obj/item/clothing/glasses/sunglasses = 5,
-	/obj/item/clothing/suit/armor/medium/vest/breastplate/light = 5,
 	/obj/item/clothing/head/helmet/knight/f13/rider = 5,
 	/obj/item/clothing/shoes/f13/cowboy = 5,
 	/obj/item/clothing/shoes/f13/explorer = 5,
@@ -216,8 +215,7 @@ GLOBAL_LIST_INIT(trash_craft, list(
 GLOBAL_LIST_INIT(trash_gun, list(
 	/obj/item/gun/ballistic/automatic/hobo/zipgun = 2,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox = 2,
-	/obj/item/gun/ballistic/automatic/varmint = 1,
-	/obj/item/gun/ballistic/automatic/sportcarbine = 1,
+	/obj/item/gun/ballistic/rifle/mag/sportcarbine = 1,
 	/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
 	/obj/item/gun/ballistic/revolver/widowmaker = 1
@@ -277,13 +275,11 @@ GLOBAL_LIST_INIT(trash_misc, list(
 
 GLOBAL_LIST_INIT(trash_attachment, list(
 	/obj/item/gun_upgrade/scope/watchman = 1,
-	/obj/item/gun_upgrade/trigger/dangerzone = 1,
 	/obj/item/tool_upgrade/productivity/ergonomic_grip = 1,
 	/obj/item/tool_upgrade/refinement/ported_barrel = 1,
 	/obj/item/tool_upgrade/refinement/stabilized_grip = 1,
 	/obj/item/tool_upgrade/refinement/laserguide = 1,
-	/obj/item/tool_upgrade/productivity/booster = 1,
-	/obj/item/tool_upgrade/productivity/red_paint = 2
+	/obj/item/tool_upgrade/productivity/booster = 1
 ))
 
 GLOBAL_LIST_INIT(loot_prewar_clothing, list(
@@ -508,10 +504,7 @@ GLOBAL_LIST_INIT(loot_t5_melee, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t1_range, list(
-	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/gun/ballistic/revolver/caravan_shotgun,
-	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/gun/ballistic/rifle/mosin,
 	/obj/item/ammo_box/stripper/a762,
 	/obj/item/gun/ballistic/revolver/police,
 	/obj/item/ammo_box/loader/c38,
@@ -525,9 +518,9 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/ammo_box/magazine/pistol9mm,
 	/obj/item/gun/ballistic/automatic/pistol/n99,
 	/obj/item/ammo_box/magazine/pistol10mm,
-	/obj/item/gun/ballistic/automatic/varmint,
+	/obj/item/gun/ballistic/rifle/mag/varmint,
 	/obj/item/ammo_box/magazine/m556/rifle/small,
-	/obj/item/gun/ballistic/automatic/sportcarbine,
+	/obj/item/gun/ballistic/rifle/mag/sportcarbine,
 	/obj/item/ammo_box/magazine/pistol22/extended,
 	/obj/item/ammo_box/m22
 ))
@@ -553,7 +546,6 @@ GLOBAL_LIST_INIT(loot_t2_range, list(
 	/obj/item/stock_parts/cell/ammo/ec,
 	/obj/item/gun/ballistic/automatic/m1carbine,
 	/obj/item/ammo_box/magazine/pistol10mm,
-	/obj/item/gun/ballistic/automatic/delisle,
 	/obj/item/ammo_box/magazine/pistol9mm/doublestack
 ))
 
@@ -632,7 +624,6 @@ GLOBAL_LIST_INIT(loot_unique_range, list(
 GLOBAL_LIST_INIT(loot_t1_ammo, list(
 	/obj/item/ammo_box/magazine/pistol9mm,
 	/obj/item/ammo_box/shotgun/buck,
-	/obj/item/ammo_box/shotgun/bean,
 	/obj/item/ammo_box/loader/c38,
 	/obj/item/ammo_box/magazine/pistol10mm,
 	/obj/item/ammo_box/magazine/m556/rifle/small
@@ -884,7 +875,8 @@ GLOBAL_LIST_INIT(loot_skillbook, list(
 	/obj/item/book/granter/crafting_recipe/gunsmith_one,
 	/obj/item/book/granter/crafting_recipe/gunsmith_two,
 	/obj/item/book/granter/crafting_recipe/gunsmith_three,
-	/obj/item/book/granter/crafting_recipe/gunsmith_four
+	/obj/item/book/granter/crafting_recipe/gunsmith_four,
+	/obj/item/book/granter/crafting_recipe/gunsmith_five
 ))
 
 GLOBAL_LIST_INIT(loot_craft_advanced, list(
@@ -898,13 +890,11 @@ GLOBAL_LIST_INIT(loot_craft_advanced, list(
 
 GLOBAL_LIST_INIT(loot_attachment, list(
 	/obj/item/gun_upgrade/scope/watchman = 1,
-	/obj/item/gun_upgrade/trigger/dangerzone = 1,
 	/obj/item/tool_upgrade/productivity/ergonomic_grip = 1,
 	/obj/item/tool_upgrade/refinement/ported_barrel = 1,
 	/obj/item/tool_upgrade/refinement/stabilized_grip = 1,
 	/obj/item/tool_upgrade/refinement/laserguide = 1,
 	/obj/item/tool_upgrade/productivity/booster = 1,
-	/obj/item/tool_upgrade/productivity/red_paint = 1
 ))
 
 GLOBAL_LIST_INIT(loot_attachment_advanced, list(
@@ -916,7 +906,7 @@ GLOBAL_LIST_INIT(loot_attachment_advanced, list(
 	/obj/item/tool_upgrade/productivity/motor = 1,
 	/obj/item/gun_upgrade/mechanism/overdrive = 1,
 	/obj/item/gun_upgrade/mechanism/battery_shunt = 1,
-	/obj/item/gun_upgrade/mechanism/weintraub = 1,
+	/obj/item/gun_upgrade/mechanism/autosear = 1,
 	/obj/item/gun_upgrade/barrel/excruciator = 1
 ))
 
@@ -939,7 +929,6 @@ GLOBAL_LIST_INIT(loot_t2_blueprint, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t3_blueprint, list(
-	/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
 	/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 	/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
 	/obj/item/book/granter/crafting_recipe/blueprint/bozar

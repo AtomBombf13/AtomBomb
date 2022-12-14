@@ -4094,11 +4094,7 @@
 	},
 /area/f13/bunker)
 "dFd" = (
-/obj/machinery/workbench/forge{
-	desc = "A reactor-heated megafurnace used for forging metal items such as swords, spears and shields and more.";
-	icon_state = "generator_on";
-	name = "superheating forge"
-	},
+/obj/machinery/workbench/forge/superheating,
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "darkrustysolid"
 	},

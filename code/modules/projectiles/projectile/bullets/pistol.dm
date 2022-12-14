@@ -402,45 +402,56 @@
 /////////////
 
 /* * * * * * * *
- * TBD Light Pistol Bullet
- * Needle that... I guess does a fuckload of wounding?
- * TBD for sure
+ * anti-armor pistol
+ * low damage, high capacity, ignores a lot of damage threshold
+ * HN has incredible wounding, HN AP cannot be produced but has higher base damage
+ * HN is the standard round
  * * * * * * * */
 
-#define BULLET_NEEDLE_DAMAGE_MULT 0.5 // little damage~
 #define BULLET_NEEDLE_STAMINA_MULT 0.5 // Its a needle
-#define BULLET_NEEDLE_WOUND_MULT 10 // That RIPS AND TEARS
-#define BULLET_NEEDLE_NAKED_WOUND_MULT 15 // Okay maybe a flechette then
+#define BULLET_NEEDLE_WOUND_MULT 10 // only on HN needles
+#define BULLET_NEEDLE_NAKED_WOUND_MULT 15
 #define BULLET_NEEDLE_SPEED_MULT 0.8
 #define BULLET_NEEDLE_RECOIL_MULT 0.2 // tiny needle
 
-/* needle
- * DAMAGE: 10
+/* HN AP needle
+ * DAMAGE: 25
  * STAMIN: 5
  * RECOIL: 0
- * WOUNDS: 50
- * WNAKED: 58
+ * WOUNDS: 5
+ * WNAKED: 3.75
  */
-/obj/item/projectile/bullet/needle
-	name = "needle"
+/obj/item/projectile/bullet/needle //strictly better than HN cartridges, but cannot be produced ever
+	name = "HN AP dart"
 	icon_state = "cbbolt"
-	damage = BULLET_DAMAGE_PISTOL_LIGHT * BULLET_SURPLUS_MULT * BULLET_NEEDLE_DAMAGE_MULT
+	damage = BULLET_WOUND_PISTOL_LIGHT * BULLET_MATCH_MULT
 	stamina = BULLET_STAMINA_PISTOL_LIGHT * BULLET_SURPLUS_MULT * BULLET_NEEDLE_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_LIGHT * BULLET_NEEDLE_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_PISTOL_LIGHT * BULLET_SURPLUS_MULT * BULLET_NEEDLE_WOUND_MULT // terrible idea I know
-	bare_wound_bonus = BULLET_WOUND_PISTOL_LIGHT * BULLET_NAKED_WOUND_MULT * BULLET_NEEDLE_NAKED_WOUND_MULT
+	wound_bonus = BULLET_WOUND_PISTOL_LIGHT * BULLET_SURPLUS_MULT  // terrible idea I know
+	bare_wound_bonus = BULLET_WOUND_PISTOL_LIGHT * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
+
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_AP
 
 	pixels_per_second = BULLET_SPEED_PISTOL_LIGHT * BULLET_NEEDLE_SPEED_MULT
 	var/piercing = FALSE // not sure what this does
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+/*
+* HN needle
+ * DAMAGE: 15
+ * STAMIN: 5
+ * RECOIL: 0
+ * WOUNDS: 50
+ * WNAKED: 53
+*/
 
 /obj/item/projectile/bullet/needle/improvised
-	name = "nail flechette"
+	name = "HN dart"
 	icon_state = "cbbolt"
-	damage = BULLET_DAMAGE_PISTOL_LIGHT * BULLET_HANDLOAD_MULT * BULLET_NEEDLE_DAMAGE_MULT
+	damage = BULLET_WOUND_PISTOL_LIGHT * BULLET_HANDLOAD_MULT
 	stamina = BULLET_STAMINA_PISTOL_LIGHT * BULLET_HANDLOAD_MULT * BULLET_NEEDLE_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_LIGHT * BULLET_NEEDLE_RECOIL_MULT
@@ -452,7 +463,6 @@
 	pixels_per_second = BULLET_SPEED_PISTOL_LIGHT * BULLET_NEEDLE_SPEED_MULT
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
 
-#undef BULLET_NEEDLE_DAMAGE_MULT
 #undef BULLET_NEEDLE_STAMINA_MULT
 #undef BULLET_NEEDLE_WOUND_MULT
 #undef BULLET_NEEDLE_NAKED_WOUND_MULT

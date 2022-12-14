@@ -49,7 +49,7 @@
  * - Buck
  * 
  * SLUG SHELLS
- * - Slug, Trainshot, etc
+ * - Slug, etc
  * 
  * * *
  */

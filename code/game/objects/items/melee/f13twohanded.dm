@@ -36,9 +36,9 @@
 //						//
 //			AXES		//		[ Bonus against Window, Door ]
 //						//
-//////////////////////////	
+//////////////////////////
 
-// Legion Axe					[ Damage MASSIVE, Bonus against Window, Door ] -why on earth make this a copy paste instead of a fireaxe child? Or just a reskin. 
+// Legion Axe					[ Damage MASSIVE, Bonus against Window, Door ] -why on earth make this a copy paste instead of a fireaxe child? Or just a reskin.
 /obj/item/twohanded/legionaxe
 	name = "War Honed Axe"
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
@@ -187,7 +187,7 @@
 //						//
 //			SPEARS		//		[ Reach ]
 //						//
-//////////////////////////	
+//////////////////////////
 
 // Metal Spear						[ Damage SPEAR WIELDED, Reach ] ---------------
 /obj/item/twohanded/spear
@@ -368,13 +368,13 @@
 	sharpness = SHARP_EDGED
 
 
-	
+
 
 //////////////////////////---------------------------------------------------------
 //						//
 //		HEAVY CLUBS		//		[ Bonus damage STAMINA ]
 //						//
-//////////////////////////	
+//////////////////////////
 
 // Baseball Bat				[ Damage CLUB WIELDED, Bonus damage STAMINA ] ---------------
 /obj/item/twohanded/baseball
@@ -464,7 +464,7 @@
 //							//
 //		SLEDGEHAMMERS		//		[ bonus damage to structures, barricades. Slow attack ]
 //							//
-//////////////////////////////	
+//////////////////////////////
 
 // Template hammer, can't be used for crafting/smithing and lacks the demolishing bonus so avoid using it
 /obj/item/twohanded/sledgehammer
@@ -503,14 +503,14 @@
 	icon_state = "hammer-war"
 	icon_prefix = "hammer-war"
 	wielded_icon = "hammer-war2"
-	attack_speed = MELEE_SPEED_NORMAL
+	attack_speed = MELEE_SPEED_SLOWEST
 	armour_penetration = PIERCING_MODERATE
 	throwforce = THROWING_POOR
 	throw_range = THROWRANGE_AVERAGE
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 
 
-// Shaman staff				[ Damage CLUB, Bonus damage STAMINA, TRIBAL ] ---------------------------- 
+// Shaman staff				[ Damage CLUB, Bonus damage STAMINA, TRIBAL ] ----------------------------
 /obj/item/twohanded/sledgehammer/shamanstaff
 	name = "shaman staff"
 	desc = "An intricate staff, carried for centuries by the shaman class of the Wayfayer Tribe."
@@ -633,10 +633,11 @@
 	force = WEAPON_FORCE_SPEAR
 	force_on = WEAPON_FORCE_SPEAR_WIELDED
 	armour_penetration = 0.7
+	damage_threshold_penetration = 5 //unique penetration into threshold
 	throwforce = THROWING_POOR
 	throwforce_on = THROWING_GOOD
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = null
+	slot_flags = ITEM_SLOT_BACK //why cant you put an axe on your back?
 
 /obj/item/melee/transforming/energy/axe/protonaxe/ComponentInitialize()
 	. = ..()

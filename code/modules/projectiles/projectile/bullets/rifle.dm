@@ -21,6 +21,8 @@
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -42,6 +44,8 @@
 /obj/item/projectile/bullet/a556/sport
 	name = "surplus .223 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -62,6 +66,8 @@
 /obj/item/projectile/bullet/a556/improvised
 	name = "handloaded .223 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -82,6 +88,8 @@
 /obj/item/projectile/bullet/a556/rubber
 	name = "5.56 rubber bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = RUBBERY_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -104,6 +112,8 @@
 /obj/item/projectile/bullet/a556/microshrapnel
 	name = "5.56 microshrapnel bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * BULLET_DAMAGE_MICROSHRAPNEL
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT * BULLET_STAMINA_MICROSHRAPNEL
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -394,10 +404,11 @@
  * High Velocity Light Rifle Bullet
  * Match - no surplus / improvised
  * Shock
+ * Specializes in anti-armor: low damage, has AP
  * * * * * * * */
 
 /* 5mm fmj
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -406,8 +417,10 @@
 /obj/item/projectile/bullet/m5mm
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
+	spread = BULLET_SPREAD_SURPLUS * 0.75 //high velocity means less spread
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
 
 	wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_SURPLUS_MULT
@@ -416,9 +429,8 @@
 
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
-	armour_penetration = 0.15
 
-/* 5mm fmj
+/* 5mm match
  * DAMAGE: 31.25
  * STAMIN: 6.25
  * RECOIL: 1
@@ -439,8 +451,8 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
- * DAMAGE: 31.25
+/* 5mm improvised
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -448,7 +460,9 @@
  */
 /obj/item/projectile/bullet/m5mm/improvised
 	name = "5mm bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT 
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -461,7 +475,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm simple
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -511,7 +525,7 @@
 //////////////////////////
 
 /* 5mm fmj
- * DAMAGE: 20
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -521,6 +535,8 @@
 /obj/item/projectile/bullet/c5mm
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -545,21 +561,28 @@
  * Microshrapnel
  * * * * * * * */
 
+#define BULLET_762_DAMAGE_MULT 0.80
+#define BULLET_762_STAMINA_MULT 0.9
+#define BULLET_762_WOUND_MULT 0.50
+#define BULLET_762_RECOIL_MULT 1.1
+
 /* 7.62mm fmj
- * DAMAGE: 56
- * STAMIN: 56
+ * DAMAGE: 40
+ * STAMIN: 45
  * RECOIL: 2
- * WOUNDS: 25
+ * WOUNDS: 12.5
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/a762
 	name = "7.62 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_MATCH_MULT
-	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_MATCH_MULT * BULLET_762_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
+	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_MATCH_MULT * BULLET_762_STAMINA_MULT
 	spread = BULLET_SPREAD_MATCH
-	recoil = BULLET_RECOIL_RIFLE_MEDIUM
+	recoil = BULLET_RECOIL_RIFLE_MEDIUM * BULLET_762_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_MATCH_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_MATCH_MULT * BULLET_762_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_MEDIUM
 
@@ -567,20 +590,22 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* 7.62mm surplus
- * DAMAGE: 45
- * STAMIN: 45
+ * DAMAGE: 36
+ * STAMIN: 40
  * RECOIL: 2
- * WOUNDS: 25
+ * WOUNDS: 12.5
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/a762/sport
 	name = "surplus .308 bullet"
-	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
-	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
+	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * BULLET_762_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * BULLET_762_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_RIFLE_MEDIUM
+	recoil = BULLET_RECOIL_RIFLE_MEDIUM * BULLET_762_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * BULLET_762_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_MEDIUM
 
@@ -590,17 +615,19 @@
  * DAMAGE: 33
  * STAMIN: 33
  * RECOIL: 2
- * WOUNDS: 15
+ * WOUNDS: 7.5
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/a762/improvised
 	name = "handloaded .308 bullet"
 	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
-	recoil = BULLET_RECOIL_RIFLE_MEDIUM
+	recoil = BULLET_RECOIL_RIFLE_MEDIUM * BULLET_762_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT * BULLET_762_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_MEDIUM
 
@@ -617,6 +644,8 @@
 /obj/item/projectile/bullet/a762/rubber
 	name = "7.62 rubber bullet"
 	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = RUBBERY_STAMINA_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_MEDIUM
@@ -639,6 +668,8 @@
 /obj/item/projectile/bullet/a762/microshrapnel
 	name = "7.62 microshrapnel bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * BULLET_DAMAGE_MICROSHRAPNEL
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT * BULLET_STAMINA_MICROSHRAPNEL
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_MEDIUM
@@ -662,6 +693,8 @@
 /obj/item/projectile/bullet/a762/sport/simple //for simple mobs, separate to allow balancing
 	name = ".308 bullet"
 	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_MEDIUM
@@ -706,6 +739,8 @@
 /obj/item/projectile/bullet/a50MG
 	name = "match .50MG slug"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_AP
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -727,6 +762,8 @@
 /obj/item/projectile/bullet/a50MG/surplus
 	name = "surplus .50MG slug"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_SURPLUS_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -747,6 +784,8 @@
 /obj/item/projectile/bullet/a50MG/improvised
 	name = "handloaded .50MG slug"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_HANDLOAD_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -821,6 +860,8 @@
 /obj/item/projectile/bullet/a50MG/rubber
 	name = "rubber .50MG slug"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = RUBBERY_STAMINA_RIFLE_HEAVY * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -844,6 +885,8 @@
 /obj/item/projectile/bullet/a50MG/penetrator
 	name = "penetrator .50MG slug"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_GAUSS
 	stamina = RUBBERY_STAMINA_RIFLE_HEAVY * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -932,6 +975,8 @@
 /obj/item/projectile/bullet/c4570
 	name = ".45-70 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_SURPLUS_MULT * BULLET_4570_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_SURPLUS_MULT * BULLET_4570_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_HEAVY * BULLET_4570_RECOIL_MULT
@@ -952,6 +997,8 @@
 /obj/item/projectile/bullet/c4570/improvised
 	name = ".45-70 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_HANDLOAD_MULT * BULLET_4570_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_HANDLOAD_MULT * BULLET_4570_STAMINA_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_HEAVY * BULLET_4570_RECOIL_MULT
@@ -1044,7 +1091,7 @@
 
 /obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	if(ismovable(target) && prob(50))
+	if(ismovable(target) && isliving(target) && prob(50))
 		var/atom/movable/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
 		M.safe_throw_at(throw_target, 2, 3)
@@ -1081,6 +1128,8 @@
 /obj/item/projectile/bullet/c2mm
 	name = "2mm gauss projectile"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_GAUSS_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_GAUSS
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_GAUSS_STAMINA_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_HEAVY
@@ -1102,6 +1151,8 @@
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town
 	name = "2mm blender projectile"
 	damage = BULLET_DAMAGE_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_GAUSS_DAMAGE_MULT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_ABSOLUTE
 	stamina = BULLET_STAMINA_RIFLE_HEAVY * BULLET_MATCH_MULT * BULLET_GAUSS_STAMINA_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_HEAVY

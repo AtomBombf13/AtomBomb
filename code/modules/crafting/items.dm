@@ -259,12 +259,14 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	if(!place_to_put_it || !isturf(place_to_put_it))
 		place_to_put_it = get_turf(src) //just dump it on the floor you filthy animal
 	// base 1 loot roll, +1 if technophreak, 50% for +1, and 25% for +1
-	var/loot_rolls = 1 + (HAS_TRAIT(user, TRAIT_TECHNOPHREAK)) + (prob(50)) + (prob(25))
+	var/loot_rolls = 2 + (prob(50)) + (HAS_TRAIT(user, TRAIT_TECHNOPHREAK)) + (prob(50)) + (prob(25)) + (prob(8))
 	for(var/i in 1 to loot_rolls)
 		var/obj/I = pick(src.Loot)
 		new I (place_to_put_it)
 		stoplag(1)
 	qdel(src)
+
+//to do: seperate calculations for tool and high salvage, so you do not get 5 advanced welders
 
 /obj/item/salvage/low
 	name = "Pre-war salvage"
@@ -290,6 +292,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 				/obj/item/crowbar/hightech,
 				/obj/item/screwdriver/hightech,
 				/obj/item/wrench/hightech,
+				/obj/item/wrench/power,
 				/obj/item/wirecutters/hightech,
 				/obj/item/multitool/advanced)
 

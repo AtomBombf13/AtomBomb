@@ -291,7 +291,6 @@
 #define POCKET_STRIP_DELAY			40	//time taken (in deciseconds) to search somebody's pockets
 #define DOOR_CRUSH_DAMAGE	15	//the amount of damage that airlocks deal when they crush you
 
-#define THIRST_FACTOR		0.2	//factor at which mob thrist decreases
 #define	HUNGER_FACTOR		0.1	//factor at which mob nutrition decreases
 #define	ETHEREAL_CHARGE_FACTOR	0.08 //factor at which ethereal's charge decreases
 #define	REAGENTS_METABOLISM 0.4	//How many units of reagent are consumed per tick, by default.
@@ -342,7 +341,7 @@
 #define HIDE_OFFLINE_INDICATOR (1<<0)
 
 //Respawn timer
-#define RESPAWN_TIMER 1
+#define RESPAWN_TIMER 6000 //6000 = 10 minutes, take that as you will
 
 ///Define for spawning megafauna instead of a mob for cave gen
 #define SPAWN_MEGAFAUNA "bluh bluh huge boss"

@@ -18,12 +18,16 @@
 	icon_state = "[initial(icon_state)]"
 
 /obj/item/ammo_casing/caseless/needle
-	name = "A needler round."
+	name = "an HN AP round."
 	desc = "A dart for use in needler pistols."
 	icon_state = "needler-casing"
 	caliber = CALIBER_NEEDLE
 	projectile_type = /obj/item/projectile/bullet/needle
 	var/reagent_amount = 15
+
+/obj/item/ammo_casing/caseless/needle/improvised
+	name = "an HN round."
+	projectile_type = /obj/item/projectile/bullet/needle/improvised
 
 /obj/item/ammo_casing/caseless/musketball
 	name = "Musketball"

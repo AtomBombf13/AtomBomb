@@ -188,7 +188,7 @@
 	build_path = /obj/item/ammo_box/c38box/rubber
 	category = list("initial", "Simple Ammo")
 
-/datum/design/ammolathe/beanbag
+/*/datum/design/ammolathe/beanbag
 	name = "beanbag shotgun box"
 	id = "beanbag"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
@@ -200,7 +200,7 @@
 	id = "rubbershot"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
 	build_path = /obj/item/ammo_box/shotgun/rubber
-	category = list("initial", "Simple Ammo")
+	category = list("initial", "Simple Ammo")*/
 
 /datum/design/ammolathe/lethalshot
 	name = "buckshot shotgun box"
@@ -458,11 +458,11 @@
 	build_path = /obj/item/ammo_box/tube/c4570/empty
 	category = list("initial", "Intermediate Magazines")
 
-/datum/design/ammolathe/d12g
-	name = "empty shotgun drum magazine (12g)"
-	id = "d12g"
+/datum/design/ammolathe/city12g
+	name = "empty shotgun stick magazine (12g)"
+	id = "city12g"
 	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/magazine/d12g/empty
+	build_path = /obj/item/ammo_box/magazine/city12g/empty
 	category = list("initial", "Intermediate Magazines")
 
 /datum/design/ammolathe/rev308
@@ -536,6 +536,13 @@
 	build_path = /obj/item/ammo_box/c4570box
 	category = list("initial", "Intermediate Ammo")
 
+/datum/design/ammolathe/slugshot
+	name = "magnum buckshot shotgun box"
+	id = "magnumshot"
+	materials = list(/datum/material/iron = 15000, /datum/material/blackpowder = 1500)
+	build_path = /obj/item/ammo_box/shotgun/magnum
+	category = list("initial", "Intermediate Ammo")
+
 /datum/design/ammolathe/a50mg
 	name = ".50 MG (rifle) ammo box"
 	id = "a50mg"
@@ -572,6 +579,13 @@
 	id = "tommygunm45"
 	materials = list(/datum/material/iron = 8000)
 	build_path = /obj/item/ammo_box/magazine/tommygunm45/empty
+	category = list("initial", "Advanced Magazines")
+
+/datum/design/ammolathe/d12g
+	name = "empty shotgun drum magazine (12g)"
+	id = "d12g"
+	materials = list(/datum/material/iron = 4000)
+	build_path = /obj/item/ammo_box/magazine/d12g/empty
 	category = list("initial", "Advanced Magazines")
 
 /datum/design/ammolathe/m473s
@@ -824,7 +838,7 @@
 	build_path = /obj/item/ammo_box/shotgun/improvised
 	category = list("initial", "Handloaded Ammo")
 
-/datum/design/ammolathe/improvised/beanbag
+/*/datum/design/ammolathe/improvised/beanbag
 	name = "beanbag shotgun box"
 	id = "handloader_beanbag"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
@@ -836,7 +850,7 @@
 	id = "handloader_rubbershot"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
 	build_path = /obj/item/ammo_box/shotgun/rubber
-	category = list("initial", "Handloaded Ammo")
+	category = list("initial", "Handloaded Ammo")*/
 
 /datum/design/ammolathe/improvised/a223
 	name = ".223 bag"

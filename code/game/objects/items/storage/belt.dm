@@ -104,7 +104,6 @@
 	new /obj/item/multitool(src)
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 
-
 /obj/item/storage/belt/utility/atmostech/PopulateContents()
 	new /obj/item/screwdriver(src)
 	new /obj/item/wrench(src)
@@ -192,6 +191,20 @@
 		/obj/item/reagent_containers/chem_pack,
 		/obj/item/stack/sticky_tape //surgical tape
 		))
+
+obj/item/storage/belt/medical/surgical
+	name = "surgical medical toolbelt"
+	desc = "A belt designed for holding surigical tools."
+	content_overlays = FALSE
+
+/obj/item/storage/belt/medical/primitive/PopulateContents()
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/scalpel(src)
+	new /obj/item/circular_saw(src)
+	new /obj/item/retractor(src)
+	new /obj/item/hemostat(src)
+	new /obj/item/cautery(src)
+	new /obj/item/bonesetter(src)
 
 /obj/item/storage/belt/medical/surgery_belt_adv
 	name = "surgical supply belt"
@@ -597,6 +610,12 @@
 	icon_state = "assaultbelt"
 	item_state = "security"
 
+/obj/item/storage/belt/military/waster
+	name = "leather belt"
+	desc = "A ragtag belt used by wasters."
+	icon_state = "cowboy"
+	item_state = "survival"
+
 /obj/item/storage/belt/military/legion
 	name = "legionnaire marching belt"
 	desc = "A belt capable of holding the necessities of a legionnaire."
@@ -754,9 +773,6 @@
 /obj/item/storage/belt/holster/ranger4570/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/sequoia(src)
 
-/obj/item/storage/belt/holster/ranger4570bayonet/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/sequoia/bayonet(src)
-
 ////////////////
 // Sheaths //
 ////////////////
@@ -807,7 +823,7 @@
 	icon_state = "2sheath"
 	item_state = "quiver" //this'll do.
 	w_class = WEIGHT_CLASS_BULKY
-	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/melee/smith/twohand/katana, /obj/item/melee/bokken, /obj/item/melee/smith, /obj/item/melee/smith/twohand)
+	fitting_swords = list(/obj/item/melee/smith/wakizashi, /obj/item/twohanded/smithed/katana, /obj/item/melee/bokken, /obj/item/melee/smith)
 	starting_sword = null
 
 /obj/item/storage/belt/sabre/twin/ComponentInitialize()
@@ -834,8 +850,7 @@
 	STR.can_hold = typecacheof(list(
 		/obj/item/melee/smith,
 		/obj/item/melee/smith/wakizashi,
-		/obj/item/melee/smith/twohand,
-		/obj/item/melee/smith/twohand/katana,
+		/obj/item/twohanded/smithed/katana,
 		/obj/item/melee/powered/ripper,
 		/obj/item/melee/onehanded/machete,
 		/obj/item/melee/onehanded/machete/forgedmachete,
@@ -1000,6 +1015,24 @@
 	icon = 'icons/fallout/clothing/belts.dmi'
 	icon_state = "gardener"
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+	
+/obj/item/storage/belt/utility/gardener/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/shovel/spade,
+		/obj/item/cultivator,
+		/obj/item/hatchet,
+		/obj/item/plant_analyzer,
+		/obj/item/seeds,
+		/obj/item/clothing/gloves,
+		/obj/item/reagent_containers/spray/plantbgone,
+		/obj/item/reagent_containers/food/drinks/flask,
+		/obj/item/reagent_containers/glass/bottle/nutrient,
+		/obj/item/flashlight,
+		))
 
 // Primitive medical belt, meant to be part of a ghetto surgery improvement at some point
 /obj/item/storage/belt/medical/primitive

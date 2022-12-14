@@ -130,7 +130,7 @@
 	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
-	toolspeed = 1.5
+	toolspeed = 0.8 //as good as a circular saw
 	resistance_flags = FIRE_PROOF
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 	var/on_item_state = "ripper_on"
@@ -167,6 +167,26 @@
 		attack_verb = list("poked", "scraped")
 	add_fingerprint(user)
 
+
+/obj/item/melee/powered/ripper/afterattack(atom/A, mob/living/user, proximity)
+	. = ..()
+	if(!proximity || !wielded || IS_STAMCRIT(user))
+		return
+	if(istype(A, /obj/structure/window)) //destroys windows and grilles in one hit (or more if it has a ton of health like plasmaglass)
+		var/obj/structure/window/W = A
+		W.take_damage(100, BRUTE, "melee", 0)
+	else if(istype(A, /obj/structure/barricade/bars))
+		var/obj/structure/barricade/bars/B = A
+		B.take_damage(155, BRUTE, "melee", 0) //200 damage, 2-shot vs metal bars
+	else if(istype(A, /obj/structure/grille))
+		var/obj/structure/grille/G = A
+		G.take_damage(40, BRUTE, "melee", 0)
+	else if(istype(A, /obj/machinery/door))
+		var/obj/machinery/door/D = A
+		D.take_damage(20, BRUTE, "melee", 0)
+	else if(istype(A, /obj/structure/simple_door))
+		var/obj/structure/simple_door/M = A
+		M.take_damage(20, BRUTE, "melee", 0)
 
 //Warhammer chainsword			Keywords: Damage 10/50, Wound bonus, Block, Bonus AP + 0.15
 /obj/item/melee/powered/ripper/prewar

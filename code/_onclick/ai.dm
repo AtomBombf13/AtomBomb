@@ -56,8 +56,8 @@
 		CtrlShiftClickOn(A)
 		return
 	if(modifiers["middle"])
-		if(controlled_mech) //Are we piloting a mech? Placed here so the modifiers are not overridden.
-			controlled_mech.click_action(A, src, params) //Override AI normal click behavior.
+//		if(controlled_mech) //Are we piloting a mech? Placed here so the modifiers are not overridden.
+//			controlled_mech.click_action(A, src, params) //Override AI normal click behavior.
 		return
 
 	if(modifiers["shift"])
@@ -113,7 +113,7 @@
 	A.AICtrlClick(src)
 /mob/living/silicon/ai/AltClickOn(atom/A)
 	A.AIAltClick(src)
-	
+
 
 /*
 	The following criminally helpful code is just the previous code cleaned up;

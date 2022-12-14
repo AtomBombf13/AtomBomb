@@ -222,6 +222,20 @@
 	//new /obj/item/reagent_containers/syringe/lethal/choral(src) // what the fuck does anyone use this piece of shit for
 	new /obj/item/clothing/glasses/hud/health/night/syndicate(src)
 
+/obj/item/storage/firstaid/tactical/bosheadscribe
+	name = "head scribe medical kit"
+	desc = "A first aid medical kit with equipment for a head scribe, bunker related."
+
+/obj/item/storage/firstaid/tactical/bosheadscribe/PopulateContents()
+	if(empty)
+		return
+	new /obj/item/stack/medical/gauze/adv(src)
+	new /obj/item/defibrillator/compact/combat/loaded(src)
+	new /obj/item/hypospray/mkii/CMO(src)
+	new /obj/item/stack/medical/suture/medicated(src)
+	new /obj/item/stack/medical/mesh/advanced(src)
+	new /obj/item/healthanalyzer/advanced(src)
+
 /*
  * Pill Bottles
  */

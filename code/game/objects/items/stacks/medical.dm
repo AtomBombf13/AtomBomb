@@ -278,6 +278,7 @@
 /obj/item/stack/medical/gauze/improvised
 	name = "improvised gauze"
 	singular_name = "improvised gauze"
+	icon_state = "makeshift_gauze"
 	heal_brute = 3
 	desc = "A roll of cloth. Useful for staunching bleeding, healing burns, and reversing infection, but not THAT useful."
 	self_delay = 20
@@ -296,6 +297,7 @@
 	name = "sterilized medical gauze"
 	singular_name = "sterilized medical gauze"
 	desc = "A roll of elastic sterilized cloth that is extremely effective at stopping bleeding and covering burns. "
+	icon_state = "sterilized_gauze"
 	heal_brute = 5
 	self_delay = 20
 	other_delay = 10

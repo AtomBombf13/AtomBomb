@@ -1,12 +1,19 @@
+/*
+		Access
+				Great Khans - ACCESS_KHAN 125
+
+				All Access for every role in every faction: ACCESS_PUBLIC 284
+
+*/
 /datum/job/khan //do NOT use this for anything, it's just to store faction datums
 	department_flag = KHAN
 	selection_color = "#df80af"
 	faction = FACTION_KHAN
 	exp_type = EXP_TYPE_KHAN
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_MINING, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_MINING, ACCESS_GATEWAY)
-	forbids = "THE KHANATE DISCOURAGES: Dishonorable actions, Weakness, Abuse of power or status, sabotaging other Khans."
-	enforces = "THE KHANATE ENCOURAGES: Bravery, Honor, Displays of strenght, Brotherhood."
+	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_KHAN, ACCESS_PUBLIC)
+	forbids = "THE KHANATE DISCOURAGES: Dishonorable actions, weakness, abuse of power or status, and sabotaging other Khans."
+	enforces = "THE KHANATE ENCOURAGES: Bravery, honor, displays of strength, and brotherhood."
 
 /datum/outfit/job/khan
 	name = "Khan"
@@ -16,21 +23,29 @@
 	ears = /obj/item/radio/headset/headset_khans
 	head = /obj/item/clothing/head/helmet/f13/khan/bandana
 	shoes = /obj/item/clothing/shoes/f13/military/khan
+	gloves = /obj/item/melee/unarmed/brass/spiked
 	backpack =	/obj/item/storage/backpack/satchel/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/old
 	uniform = /obj/item/clothing/under/f13/khan
 	r_hand = /obj/item/book/granter/trait/selection
 	r_pocket = /obj/item/flashlight/flare
 	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal
+	box_two = /obj/item/storage/survivalkit/medical/raider
 	backpack_contents = list(
-		/obj/item/storage/bag/money/small/khan = 1
+		/obj/item/storage/bag/money/small/khan = 1,
 		)
 
 /datum/outfit/job/khan/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+
+	if(!H.gang)
+		var/datum/gang/greatkhans/GK = GLOB.greatkhans
+		GLOB.all_gangs |= GK
+		GK.add_member(H)
+		H.gang = GK
+
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
@@ -38,6 +53,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
+	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
 
 /datum/outfit/job/khan/greatkhan
 	jobtype = /datum/job/khan/greatkhan
@@ -53,7 +69,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/uzi)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
-
+	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
 /datum/job/khan/greatkhan
 	title = "Great Khan"
 	flag = F13GREATKHAN
@@ -84,7 +100,6 @@
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/melee/unarmed/brass/spiked = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2)
 
 /datum/outfit/loadout/khanskirmisher //Mid-range SMG user with an autoloader and a bola

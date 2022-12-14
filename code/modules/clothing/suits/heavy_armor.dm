@@ -44,7 +44,8 @@
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
+	armor = ARMOR_VALUE_BULLETPROOF_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
 
 //////////////////////
 //// TRIBAL ARMOR ////
@@ -58,8 +59,8 @@
 	icon_state = "tribal_heavy"
 	item_state = "tribal_heavy"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
+	armor = ARMOR_VALUE_METAL_ARMOR
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 
 /obj/item/clothing/suit/armor/heavy/tribal/bone
@@ -71,7 +72,6 @@
 	item_state = "bone_dancer_armor_heavy"
 	blood_overlay_type = "armor"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1)
-
 
 /obj/item/clothing/suit/armor/heavy/tribal/metal
 	name = "metal armor suit"
@@ -133,18 +133,7 @@
 	icon_state = "metal_chestplate"
 	item_state = "metal_chestplate"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
-	mutantrace_variation = STYLE_PAW_TAURIC
-
-/obj/item/clothing/suit/armor/heavy/metal/polished
-	name = "polished metal armor"
-	desc = "A set of plates formed together to form a crude chestplate. These have been waxed and buffed to a mirror finish, but it looks a bit thinner."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
-	icon_state = "armor_enclave_peacekeeper"
-	item_state = "armor_enclave_peacekeeper"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_ENV_T1)
-	mutantrace_variation = NONE
+	armor = ARMOR_VALUE_METAL_ARMOR
 
 /obj/item/clothing/suit/armor/heavy/metal/polished/actually_laserproof // also actually_unobtainable
 	name = "reflector vest"
@@ -212,7 +201,7 @@
 	icon_state = "metal_chestplate2"
 	item_state = "metal_chestplate2"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
 	mutantrace_variation = STYLE_PAW_TAURIC
 
 /obj/item/clothing/suit/armor/heavy/metal/mutant
@@ -229,7 +218,6 @@
 	icon_state = "mutie_metal_armour_mk2"
 	item_state = "mutie_metal_armour_mk2"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
 	mutantrace_variation = NONE
 
 /obj/item/clothing/suit/armor/heavy/metal/sulphite
@@ -241,7 +229,7 @@
 	icon_state = "sulphite"
 	item_state = "sulphite"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_FIRE_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_FIRE_T3)
 	mutantrace_variation = NONE
 
 ////////////////////
@@ -256,7 +244,8 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	blocks_shove_knockdown = TRUE
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T3, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_RIOT_ARMOR
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_FIRE_T3, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/heavy/riot/combat
 	name = "combat riot armor"
@@ -269,12 +258,6 @@
 	icon_state = "bulletproof_heavy"
 	item_state = "bulletproof_heavy"
 	desc = "Heavy armor with ballistic inserts, sewn into a padded riot police coat."
-
-/obj/item/clothing/suit/armor/heavy/riot/vault
-	name = "VTCC riot armour"
-	desc = "(VII) A suit of riot armour adapted from the design of the pre-war U.S.M.C. armour, painted blue and white."
-	icon_state = "vtcc_riot_gear"
-	item_state = "vtcc_riot_gear"
 
 /obj/item/clothing/suit/armor/heavy/riot/marine
 	name = "old United States Marine Corp riot suit"
@@ -307,6 +290,21 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_SALVAGE
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
+	armor_block_chance = 10
+	deflection_chance = 0 //Trash compared to actual PA
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	if(check_armor_penetration(object) <= 0.05 && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+		if(prob(armor_block_chance))
+			var/ratio = rand(0,100)
+			if(ratio <= deflection_chance)
+				block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
+				return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+			if(ismob(loc))
+				to_chat(loc, span_warning("Your power armor absorbs the projectile's impact!"))
+			block_return[BLOCK_RETURN_SET_DAMAGE_TO] = 0
+			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+	return ..()
 
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
@@ -314,6 +312,12 @@
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
 	icon_state = "t45b_salvaged"
 	item_state = "t45b_salvaged"
+	
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion
+	name = "salvaged Legion power armor"
+	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and bull painted onto the chestplate shows it belongs to the Legion."
+	icon_state = "legion_salvaged"
+	item_state = "legion_salvaged"
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider
 	name = "salvaged raider power armor"
@@ -336,7 +340,6 @@
 	item_state = "tribal_power_armor"
 	// body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
@@ -344,7 +347,6 @@
 	desc = "T-45d power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t45d_salvaged"
 	item_state = "t45d_salvaged"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 // T-51B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
@@ -352,7 +354,7 @@
 	desc = "T-51b power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t51b_salvaged"
 	item_state = "t51b_salvaged"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 
 
 // X-02
@@ -361,7 +363,7 @@
 	desc = "X-02 power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3)
 
 
 // Just generic PA I guess??
@@ -369,7 +371,6 @@
 	name = "recycled power armor"
 	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
 	icon_state = "recycled_power"
-
 
 ///////////////////////////
 // !!!FACTION SECTION!!! //
@@ -394,6 +395,7 @@
 /obj/item/clothing/suit/armor/heavy/legion
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
+	armor = ARMOR_VALUE_SALVAGE
 
 /obj/item/clothing/suit/armor/heavy/legion/palacent //laser resist spec
 	name = "legion centurion paladin-slayer armor"
@@ -405,3 +407,25 @@
 	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
 	icon_state = "leg_legate"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?
+
+//////////////////
+// Great Khans //
+////////////////
+
+//khan heavy armor, reinforced metal armor with less slowdown
+//slowdown of 0.6 compared to 0.25 of medium armor and 0.75 of regular heavy armor
+/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
+	name = "Great Khan battle coat"
+	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
+	icon_state = "khan_heavy"
+	item_state = "khan_heavy"
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	strip_delay = 80
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	equip_delay_other = 50
+	max_integrity = 200
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT

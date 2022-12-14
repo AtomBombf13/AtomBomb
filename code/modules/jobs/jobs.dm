@@ -132,6 +132,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight",
 	"Scribe",
 	"Initiate",
+	"BoS Off-Duty"
 ))
 
 GLOBAL_LIST_INIT(eastwood_positions, list(
@@ -179,6 +180,7 @@ GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Captain",
 	"NCR Lieutenant",
+	"NCR Medical Officer",
 	"NCR Representative",
 	"NCR Veteran Ranger",
 	"NCR Ranger",
