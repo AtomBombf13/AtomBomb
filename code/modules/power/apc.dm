@@ -58,7 +58,7 @@
 	var/damage_deflection = 10
 	resistance_flags = FIRE_PROOF
 	armor = ARMOR_VALUE_MEDIUM
-	req_access = list(ACCESS_ENGINE_EQUIP, , ACCESS_TOWN_SCIENCE)
+	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 	interaction_flags_machine = INTERACT_MACHINE_WIRES_IF_OPEN | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OPEN_SILICON
 
 	var/lon_range = 1.5
