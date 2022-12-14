@@ -81,23 +81,32 @@
 
 /obj/machinery/computer/slot_machine/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/stack/f13Cash))
-		var/obj/item/stack/f13Cash/currency = I
-		if(!user.temporarilyRemoveItemFromInventory(currency))
-			return
-		to_chat(user, span_notice("You insert [currency] into [src]'s slot!"))
-		give_money(round(currency.value * currency.amount))
-		qdel(currency)
+		var/obj/item/stack/f13Cash/Currency = I
+		if(prob(2))
+			if(!user.transferItemToLoc(Currency, drop_location()))
+				return
+			Currency.throw_at(user, 3, 10)
+			if(prob(10))
+				balance = max(balance - SPIN_PRICE, 0)
+			to_chat(user, "<span class='warning'>[src] spits your caps back out!</span>")
+
+		else
+			if(!user.temporarilyRemoveItemFromInventory(Currency))
+				return
+			to_chat(user, "<span class='notice'>You insert [Currency] into [src]'s slot!</span>")
+			give_money(round(Currency.value * Currency.amount))
+			qdel(Currency)
 	else
 		return ..()
 
 /obj/machinery/computer/slot_machine/ui_interact(mob/living/user)
 	. = ..()
 	var/reeltext = {"<center><font face=\"courier new\">
-	/*****^*****^*****^*****^*****\\<BR>
-	| \[[reels[1][1]]\] | \[[reels[2][1]]\] | \[[reels[3][1]]\] | \[[reels[4][1]]\] | \[[reels[5][1]]\] |<BR>
-	| \[[reels[1][2]]\] | \[[reels[2][2]]\] | \[[reels[3][2]]\] | \[[reels[4][2]]\] | \[[reels[5][2]]\] |<BR>
-	| \[[reels[1][3]]\] | \[[reels[2][3]]\] | \[[reels[3][3]]\] | \[[reels[4][3]]\] | \[[reels[5][3]]\] |<BR>
-	\\*****v*****v*****v*****v*****/<BR>
+	/*****^*****^*****\\<BR>
+	| \[[reels[1][1]]\] | \[[reels[2][1]]\] | \[[reels[3][1]]\] |<BR>
+	| \[[reels[1][2]]\] | \[[reels[2][2]]\] | \[[reels[3][2]]\] |<BR>
+	| \[[reels[1][3]]\] | \[[reels[2][3]]\] | \[[reels[3][3]]\] |<BR>
+	\\*****v*****v*****/<BR>
 	</center></font>"}
 
 	var/dat
@@ -114,7 +123,7 @@
 		<BR>
 		[reeltext]
 		<BR>
-		<font size='1'><A href='?src=[REF(src)];refund=1'>Refund balance</A><BR>"}
+		<font size='3'><A href='?src=[REF(src)];refund=[balance]'>Refund balance</A><BR>"}
 	var/datum/browser/popup = new(user, "slotmachine", "Slot Machine")
 	popup.set_content(dat)
 	popup.open()
@@ -212,35 +221,31 @@
 /obj/machinery/computer/slot_machine/proc/give_prizes(mob/user)
 	var/linelength = get_lines()
 
-	if(reels[1][2] + reels[2][2] + reels[3][2] + reels[4][2] + reels[5][2] == "[SEVEN][SEVEN][SEVEN][SEVEN][SEVEN]")
+	if(reels[1][2] + reels[2][2] + reels[3][2] == "[SEVEN][SEVEN][SEVEN]")
 		visible_message("<b>[src]</b> says, 'JACKPOT! You win [money] caps!'")
 		jackpots += 1
 		give_money(money)
 		money = 0
 
-	else if(linelength == 5)
+	else if(linelength == 3)
 		visible_message("<b>[src]</b> says, 'Big Winner! You win [BIG_PRIZE] caps!'")
 		give_money(BIG_PRIZE)
 
-	else if(linelength == 4)
+	else if(linelength == 2)
 		visible_message("<b>[src]</b> says, 'Winner! You win [SMALL_PRIZE] caps!'")
 		give_money(SMALL_PRIZE)
 
-	else if(linelength == 3)
-		to_chat(user, span_notice("You win three free games!"))
-		give_money(SPIN_PRICE * 4)
-		money = max(money - SPIN_PRICE * 4, money)
-
 	else
 		to_chat(user, span_warning("No luck!"))
+
 /obj/machinery/computer/slot_machine/proc/get_lines()
 	var/amountthesame
 	for(var/i = 1, i <= 3, i++)
-		var/inputtext = reels[1][i] + reels[2][i] + reels[3][i] + reels[4][i] + reels[5][i]
+		var/inputtext = reels[1][i] + reels[2][i] + reels[3][i]
 		for(var/symbol in symbols)
-			var/j = 3 //The lowest value we have to check for.
+			var/j = 2 //The lowest value we have to check for.
 			var/symboltext = symbol + symbol + symbol
-			while(j <= 5)
+			while(j <= 3)
 				if(findtext(inputtext, symboltext))
 					amountthesame = max(j, amountthesame)
 				j++

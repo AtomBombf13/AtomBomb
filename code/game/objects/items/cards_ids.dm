@@ -741,7 +741,7 @@
 /obj/item/card/id/away/old/apc
 	name = "APC Access ID"
 	desc = "A special ID card that allows access to APC terminals."
-	access = list(ACCESS_ENGINE_EQUIP)
+	access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS)
 
 /obj/item/card/id/departmental_budget
 	name = "departmental card (FUCK)"
@@ -874,6 +874,9 @@
 			registered_name = living_user.real_name
 			assignment = living_user.job
 			update_label()
+			LAZYCLEARLIST(access)
+			var/datum/job/player_job = SSjob.GetJob(user.mind.assigned_role)
+			src.access |= player_job.access
 			to_chat(user, span_notice("You successfully forge the ID card."))
 			return
 	..()
@@ -897,7 +900,7 @@
 	assignment = "Deputy"
 	icon_state = "deputy"
 	item_state = "badge-deputy"
-	access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	access = list(ACCESS_TOWN, ACCESS_TOWN_SEC)
 
 /obj/item/card/id/dogtag/deputy/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/dogtag/sheriff))
@@ -921,7 +924,7 @@
 	icon_state = "doctor"
 	item_state = "card-doctor"
 	assignment = "citizenship permit"
-	access = list(ACCESS_BAR)
+	access = list(ACCESS_TOWN, ACCESS_TOWN_CIV)
 
 /obj/item/card/id/dogtag/vaultiecard
 	name = "vault Citizenship"
@@ -961,7 +964,7 @@
 	item_state = "card-doctor"
 	assignment = "Settler"
 	obj_flags = UNIQUE_RENAME
-	access = list(ACCESS_BAR)
+	access = list(ACCESS_TOWN)
 
 /obj/item/card/id/dogtag/town/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/silver/mayor))
@@ -1040,7 +1043,7 @@
 	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a follower of the legion."
 	icon_state = "legionmedallionprime"
 	assignment = "camp follower medallion"
-	access = list(ACCESS_LEGION)
+	access = list(ACCESS_LEGION, ACCESS_LEGION1, ACCESS_LEGION2)
 
 /obj/item/card/id/dogtag/legslavemaster
 	name = "slavemaster medallion"
@@ -1134,6 +1137,14 @@
 
 ///OUTLAW TAGS////
 
+/obj/item/card/id/raider
+	name = "Raider tattoo"
+	desc = "A tattoo of the symbol of the raider."
+	icon_state = null
+	item_state = null
+	uses_overlays = FALSE
+	access = list(ACCESS_RAIDER, ACCESS_PUBLIC)
+
 /obj/item/card/id/rusted
 	name = "rusted tags"
 	desc = "Decrepit uncared for NCR dogtags, kept as a reminder to something."
@@ -1171,7 +1182,7 @@
 	desc = "A certificate declaring your loyalty to the gang"
 	assignment = "gang tattoo"
 
-	access = list(ACCESS_DEN)
+	access = list(ACCESS_DEN, ACCESS_PUBLIC)
 
 
 /obj/item/card/id/khantattoo
@@ -1182,7 +1193,7 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINING)
+	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
 
 /obj/item/card/id/khantattoo/Initialize()
 	. = ..()
@@ -1196,7 +1207,7 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_CLINIC, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_CLONING)
+	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
 
 /obj/item/card/id/khanleadertattoo/Initialize()
 	. = ..()
@@ -1226,7 +1237,7 @@
 	assignment = "tribe tattoo"
 	uses_overlays = FALSE
 
-	access = list(ACCESS_TRIBE)
+	access = list(ACCESS_TRIBE, ACCESS_PUBLIC)
 
 /obj/item/card/id/tribetattoo/Initialize()
 	. = ..()

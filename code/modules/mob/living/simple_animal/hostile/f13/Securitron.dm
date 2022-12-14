@@ -74,11 +74,13 @@
 			return
 		var/obj/item/grenade/S
 		switch(rand(1,10))
-			if(1)
+			if(1 to 2)
 				S = new /obj/item/grenade/flashbang/sentry(flashbang_turf)
-			if(2)
+			if(3)
+				S = new /obj/item/grenade/f13/frag(flashbang_turf)
+			if(4)
 				S = new /obj/item/grenade/stingbang(flashbang_turf)
-			if(3 to 10)
+			if(5 to 10)
 				S = new /obj/item/grenade/smokebomb(flashbang_turf)
 		visible_message(span_danger("\The [src] releases a defensive [S]!"))
 		S.preprime(user = null)
@@ -121,8 +123,8 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot_dead"
-	health = 168
-	maxHealth = 168
+	health = 251 //11 hits of .223
+	maxHealth = 251
 	del_on_death = FALSE
 	melee_damage_lower = 28
 	melee_damage_upper = 65

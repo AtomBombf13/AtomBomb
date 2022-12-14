@@ -21,7 +21,7 @@
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
-	armour_penetration = BULLET_PENETRATION_HEAVY
+	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
@@ -67,7 +67,7 @@
 	name = "handloaded .223 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -404,10 +404,11 @@
  * High Velocity Light Rifle Bullet
  * Match - no surplus / improvised
  * Shock
+ * Specializes in anti-armor: low damage, has AP
  * * * * * * * */
 
 /* 5mm fmj
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -416,10 +417,10 @@
 /obj/item/projectile/bullet/m5mm
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
+	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	spread = BULLET_SPREAD_SURPLUS
+	spread = BULLET_SPREAD_SURPLUS * 0.75 //high velocity means less spread
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
 
 	wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_SURPLUS_MULT
@@ -429,7 +430,7 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
+/* 5mm match
  * DAMAGE: 31.25
  * STAMIN: 6.25
  * RECOIL: 1
@@ -450,8 +451,8 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT * 2
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
-/* 5mm fmj
- * DAMAGE: 31.25
+/* 5mm improvised
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -459,7 +460,7 @@
  */
 /obj/item/projectile/bullet/m5mm/improvised
 	name = "5mm bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT 
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
@@ -474,7 +475,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm simple
- * DAMAGE: 31.25
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -524,7 +525,7 @@
 //////////////////////////
 
 /* 5mm fmj
- * DAMAGE: 20
+ * DAMAGE: 25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -560,23 +561,28 @@
  * Microshrapnel
  * * * * * * * */
 
+#define BULLET_762_DAMAGE_MULT 0.80
+#define BULLET_762_STAMINA_MULT 0.9
+#define BULLET_762_WOUND_MULT 0.50
+#define BULLET_762_RECOIL_MULT 1.1
+
 /* 7.62mm fmj
- * DAMAGE: 56
- * STAMIN: 56
+ * DAMAGE: 40
+ * STAMIN: 45
  * RECOIL: 2
- * WOUNDS: 25
+ * WOUNDS: 12.5
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/a762
 	name = "7.62 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_MATCH_MULT * BULLET_762_DAMAGE_MULT
 	armour_penetration = BULLET_PENETRATION_ABSOLUTE
 	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
-	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_MATCH_MULT
+	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_MATCH_MULT * BULLET_762_STAMINA_MULT
 	spread = BULLET_SPREAD_MATCH
-	recoil = BULLET_RECOIL_RIFLE_MEDIUM
+	recoil = BULLET_RECOIL_RIFLE_MEDIUM * BULLET_762_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_MATCH_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_MATCH_MULT * BULLET_762_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_MEDIUM
 
@@ -584,22 +590,22 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* 7.62mm surplus
- * DAMAGE: 45
- * STAMIN: 45
+ * DAMAGE: 36
+ * STAMIN: 40
  * RECOIL: 2
- * WOUNDS: 25
+ * WOUNDS: 12.5
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/a762/sport
 	name = "surplus .308 bullet"
-	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
+	damage = BULLET_DAMAGE_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * BULLET_762_DAMAGE_MULT
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
-	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
+	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * BULLET_762_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_RIFLE_MEDIUM
+	recoil = BULLET_RECOIL_RIFLE_MEDIUM * BULLET_762_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_SURPLUS_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_SURPLUS_MULT * BULLET_762_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_MEDIUM
 
@@ -609,7 +615,7 @@
  * DAMAGE: 33
  * STAMIN: 33
  * RECOIL: 2
- * WOUNDS: 15
+ * WOUNDS: 7.5
  * WNAKED: 15
  */
 /obj/item/projectile/bullet/a762/improvised
@@ -619,9 +625,9 @@
 	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	stamina = BULLET_STAMINA_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT
 	spread = BULLET_SPREAD_HANDLOAD
-	recoil = BULLET_RECOIL_RIFLE_MEDIUM
+	recoil = BULLET_RECOIL_RIFLE_MEDIUM * BULLET_762_RECOIL_MULT
 
-	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT
+	wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_HANDLOAD_MULT * BULLET_762_WOUND_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_MEDIUM * BULLET_NAKED_WOUND_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_MEDIUM
 
@@ -1085,7 +1091,7 @@
 
 /obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	if(ismovable(target) && prob(50))
+	if(ismovable(target) && isliving(target) && prob(50))
 		var/atom/movable/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
 		M.safe_throw_at(throw_target, 2, 3)

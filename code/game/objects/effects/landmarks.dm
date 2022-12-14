@@ -765,7 +765,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Shopkeeper"
 
 /obj/effect/landmark/start/f13/barkeep
-	name = "Barkeep"
+	name = "Barkeeper"
 	icon_state = "Barkeep"
 
 /obj/effect/landmark/start/f13/preacher

@@ -387,7 +387,7 @@ GENETICS SCANNER
 	if(M.tod && (M.stat == DEAD || ((HAS_TRAIT(M, TRAIT_FAKEDEATH)) && !advanced)))
 		msg += "<span class='info'>Time of Death:</span> [M.tod]\n"
 		var/tdelta = round(world.time - M.timeofdeath)
-		if(tdelta < (DEFIB_TIME_LIMIT * 10))
+		if(tdelta < (CONFIG_GET(number/death_revive_time) MINUTES))
 			if(heart_ded)
 				msg += span_danger("Subject died [DisplayTimeText(tdelta)] ago, heart requires surgical intervention for defibrillation.")
 			else

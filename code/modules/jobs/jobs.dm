@@ -132,6 +132,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight",
 	"Scribe",
 	"Initiate",
+	"BoS Off-Duty"
 ))
 
 GLOBAL_LIST_INIT(eastwood_positions, list(

@@ -127,12 +127,20 @@
 	item_color = "ncr_dress"
 
 /obj/item/clothing/under/f13/ncrcf
-	name = "caravaneer outfit"
+	name = "NCRCF uniform"
 	desc = "A cheap blue shirt and slacks, the letters 'NCRCF' emblazened on the back. A meek reminder of who owns you."
 	can_adjust = TRUE
 	icon_state = "ncrcf"
 	item_state = "ncrcf"
 	item_color = "ncrcf"
+
+/obj/item/clothing/under/f13/ncr_sniper_fatigues
+	name = "NCR sniper fatigues"
+	desc = "A set of standard issue New California Republic sniper fatigues. "
+	can_adjust = TRUE
+	icon_state = "ncr_sniper"
+	item_state = "ncr_sniper"
+	item_color = "ncr_sniper"
 
 //Settlers
 
@@ -466,31 +474,6 @@
 	item_color = "rag"
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
-
-
-//Roma Legion Legacy delete?
-
-/obj/item/clothing/under/f13/romaskirt
-	name = "roma legionary fatigues"
-	desc = "A worn and abused pair of fatigues, leftover from the legionary's service to Caesar."
-	icon_state = "roma_legion"
-	item_state = "roma_legion"
-	item_color = "roma_legion"
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = FALSE
-
-/obj/item/clothing/under/f13/romaskirt/auxilia
-	name = "roma auxilia fatigues"
-	desc = "A black skirt and a thick long sleeve cotton shirt."
-	icon_state = "roma_auxilia"
-	item_state = "roma_auxilia"
-	item_color = "roma_auxilia"
-	var/sleeves_adjusted = 0
-	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
-	alt_covers_chest = TRUE
-	fitted = FEMALE_UNIFORM_TOP
-	can_adjust = TRUE
 
 // Generic
 
@@ -827,16 +810,24 @@
 	item_state = "vault_exile"
 	item_color = "vault_exile"
 
-/obj/item/clothing/under/f13/exile/tribal
+/obj/item/clothing/under/f13/exile/tribal // redone art from Fashion module, also switched default to the female version, since it makes more sense to "wear it casually" means discarding stuff, not adding
 	name = "disheveled loincloth"
-	desc = "Fine handcrafted tribal clothing, now torn and faded. A simple lointcloth that comes with a piece of cloth to cover the chest with as well."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	icon_state = "clothing_tribalout"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	item_state = "clothing_tribalout"
+	desc = "Fine handcrafted tribal clothing, now torn and faded. A simple lointcloth and chestwrap, male tribal normally discard the chestpiece and wear additonal leather strips on their arms."
+	icon = 'modular_atom/fashion/icons/clothing_fashion.dmi'
+	mob_overlay_icon = 'modular_atom/fashion/icons/onmob.dmi'
+	righthand_file = 'modular_atom/fashion/icons/onmobright.dmi'
+	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
+	icon_state = "uniform_outcast"
+	item_state = "uniform_outcast"
 	body_parts_covered = GROIN
-	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = TRUE
+	fitted = NO_FEMALE_UNIFORM
+//	icon = 'icons/fallout/clothing/uniforms.dmi'  Commented out old art paths
+//	icon_state = "clothing_tribalout"
+//	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+//	item_state = "clothing_tribalout"
+//	fitted = FEMALE_UNIFORM_TOP this is not a good idea
+
 
 /obj/item/clothing/under/f13/exile/enclave
 	name = "disheveled peacekeeper uniform"
@@ -1717,7 +1708,7 @@
 
 /obj/item/clothing/under/f13/desert_ranger_scout
 	name = "desert ranger scouting uniform"
-	desc = "A set of clothing worn by desert ranger scouts."
+	desc = "An old set of clothing worn by desert ranger scouts before they were absorbed by the NCR. Durable and comfortable, but rarely seen in the wastes anymore."
 	icon_state = "scoutclothes"
 	can_adjust = FALSE
 	item_state = "scoutclothes"

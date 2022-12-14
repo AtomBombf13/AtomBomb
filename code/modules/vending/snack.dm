@@ -27,7 +27,7 @@
 					/obj/item/storage/box/donkpockets = 1)
 
 	refill_canister = /obj/item/vending_refill/snack
-	canload_access_list = list(ACCESS_KITCHEN)
+	canload_access_list = list(ACCESS_KITCHEN, ACCESS_TOWN_BAR)
 	default_price = PRICE_REALLY_CHEAP
 	extra_price = PRICE_ALMOST_CHEAP
 	payment_department = ACCOUNT_SRV

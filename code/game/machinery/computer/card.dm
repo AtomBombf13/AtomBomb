@@ -5,8 +5,9 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 /obj/machinery/computer/card
 	name = "identification console"
 	desc = "You can use this to manage jobs and ID access."
-	icon_screen = "id"
-	icon_keyboard = "id_key"
+	icon_state = "terminal"
+	icon_keyboard = "terminal_key"
+	icon_screen = "terminal_on_alt"
 	req_one_access = list(ACCESS_HEADS, ACCESS_CHANGE_IDS)
 	circuit = /obj/item/circuitboard/computer/card
 	var/mode = 0
@@ -235,16 +236,23 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=0'><font color=\"6bc473\">[replacetext(get_bos_access_desc(A), " ", "&nbsp")]</font></a> "
 				else
 					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=1'>[replacetext(get_bos_access_desc(A), " ", "&nbsp")]</a> "
+		else if(istype(src, /obj/machinery/computer/card/town))
+			accesses += "<h5>Eastwood:</h5>"
+			for(var/A in get_all_town_access())
+				if(A in inserted_modify_id.access)
+					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=0'><font color=\"6bc473\">[replacetext(get_town_access_desc(A), " ", "&nbsp")]</font></a> "
+				else
+					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=1'>[replacetext(get_town_access_desc(A), " ", "&nbsp")]</a> "
 		else
 			accesses += {"<div align='center'><b>Access</b></div>
 				<table style='width:100%'>
 				<tr>"}
-			for(var/i = 1; i <= 7; i++)
+			for(var/i = 1; i <= 6; i++)
 				if(authenticated == 1 && !(i in region_access))
 					continue
 				accesses += "<td style='width:14%'><b>[get_region_accesses_name(i)]:</b></td>"
 			accesses += "</tr><tr>"
-			for(var/i = 1; i <= 7; i++)
+			for(var/i = 1; i <= 6; i++)
 				if(authenticated == 1 && !(i in region_access))
 					continue
 				accesses += "<td style='width:14%' valign='top'>"
@@ -360,6 +368,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 						access_types = get_all_enclave_access()
 					else if(istype(src, /obj/machinery/computer/card/bos))
 						access_types = get_all_bos_access()
+					else if(istype(src, /obj/machinery/computer/card/town))
+						access_type = get_all_town_access()
 					else
 						access_types = get_all_accesses()
 
@@ -546,4 +556,24 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"Head Paladin",
 		"Head Scribe",
 		"Knight-Captain",
+		)
+
+/obj/machinery/computer/card/town
+	name = "\improper Eastwood identification console"
+	circuit = /obj/item/circuitboard/computer/card/town
+	job_list = list(
+		"Provost Marshal",
+		"Deputy Marshal",
+		"Detective",
+		"Researcher",
+		"Town Doctor",
+		"Preacher",
+		"Merchant",
+		"Prospector",
+		"Barkeeper",
+		"Citizen"
+		)
+	job_req = list(
+		"Mayor",
+		"Provost Marshal",
 		)

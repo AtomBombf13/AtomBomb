@@ -558,6 +558,16 @@
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/ammo_box/plasmamusket
+	name = "Canister box (Plasma musket)"
+	icon_state = "plasmusketbox"
+	multiple_sprites = 2
+	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
+	max_ammo = 6
+	caliber = list(CALIBER_MUSKET_PLASMA)
+	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
+	w_class = WEIGHT_CLASS_SMALL
+
 /obj/item/ammo_box/a40mm
 	name = "ammo box (40mm grenades)"
 	caliber = "40mm"
@@ -654,7 +664,7 @@
 	caliber = list(CALIBER_762)
 	ammo_type = /obj/item/ammo_casing/a762/sport
 	max_ammo = 10
-	
+
 /obj/item/ammo_box/loader/rev308/empty
 	start_empty = TRUE
 
@@ -782,12 +792,18 @@
 
 
 //Needler
+//HN AP needles, the rarekind
 /obj/item/ammo_box/stripper/needle
-	name = "needler stripper clip (needle darts)"
+	name = "HN AP needler cartridge"
 	icon_state = "needler"
 	caliber = "needle"
 	ammo_type = /obj/item/ammo_casing/caseless/needle
 	caliber = list(CALIBER_NEEDLE)
+
+//HN needles, the regular kind
+/obj/item/ammo_box/stripper/needle/improvised
+	name = "HN needler cartridge"
+	ammo_type = /obj/item/ammo_casing/caseless/needle/improvised
 
 //.50 BMG
 /obj/item/ammo_box/a50MG

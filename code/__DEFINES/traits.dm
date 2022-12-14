@@ -232,6 +232,12 @@
 #define TRAIT_PAPER_SKIN "paper_skin"
 #define TRAIT_GLASS_BONES "glass_bones"
 
+/// Visual traits for mech pilots
+
+#define TRAIT_MECHA_MESON "mecha_meson"
+#define TRAIT_MECHA_THERMAL "mecha_thermal"
+#define TRAIT_MECHA_NVG "mecha_nvg"
+
 // mobility flag traits
 // IN THE FUTURE, IT WOULD BE NICE TO DO SOMETHING SIMILAR TO https://github.com/tgstation/tgstation/pull/48923/files (ofcourse not nearly the same because I have my.. thoughts on it)
 // BUT FOR NOW, THESE ARE HOOKED TO DO update_mobility() VIA COMSIG IN living_mobility.dm

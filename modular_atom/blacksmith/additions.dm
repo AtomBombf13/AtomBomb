@@ -1,5 +1,5 @@
 
-#define GLOW_BRIGHT 1.5
+#define GLOW_BRIGHT 2.5
 #define GLOW_MODERATE 0.75
 #define GLOW_WEAK 0.4
 
@@ -10,9 +10,9 @@
 
 #define QUALITY_MODIFIER quality
 
-#define FORCE_SMITH_REACH 17
-#define FORCE_SMITH_LOW 21
-#define FORCE_SMITH_HIGH 28
+#define FORCE_SMITH_REACH 19
+#define FORCE_SMITH_LOW 24
+#define FORCE_SMITH_HIGH 29
 
 
 //////////////////////////////////////
@@ -54,20 +54,20 @@
 
 /obj/structure/blacksmith/quenching/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/blacksmith/ingot))
-		var/obj/item/blacksmith/ingot/notsword = I
-		if(notsword.workability == FALSE)
+		var/obj/item/blacksmith/ingot/workpiece = I
+		if(workpiece.workability == FALSE)
 			playsound(src, 'modular_atom/blacksmith/sound/water_splash2.ogg',50, 1)
 			return
-		to_chat(user, "You cool the [notsword] in the water.")
+		to_chat(user, "You cool the [workpiece] in the water.")
 		playsound(src, 'modular_atom/blacksmith/sound/steam_short.ogg',70, 1)
 		flick("quench_boil",src)
 		var/datum/effect_system/steam_spread/puff = new /datum/effect_system/steam_spread/()
 		puff.effect_type = /obj/effect/particle_effect/steam
 		puff.set_up(1, 0, src)
 		puff.start()
-		notsword.workability = FALSE
-		notsword.icon_state = "ingot"
-		notsword.set_light_on(FALSE)
+		workpiece.workability = FALSE
+		workpiece.icon_state = "ingot"
+		workpiece.set_light_on(FALSE)
 		I.on_attack_hand(user)
 	else
 		. = ..()
@@ -77,11 +77,16 @@
 /datum/material/bronze
 	strength_modifier = 1
 
-// Makes slag more suitable visually for the interactions with the anvil
+/datum/material/adamantine
+	strength_modifier = 1.2
+
+// ------------ SLAG ------------------ Makes slag more suitable visually for the interactions with the anvil
 /obj/item/stack/ore/slag
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
 
-// Mittens, since finger gloves and heat insulation is a lame combo
+
+// ------------ BLACKSMITH MITTENS ------------------	Mittens, since finger gloves and heat insulation is a lame combo
+
 /obj/item/clothing/gloves/blacksmith_mittens
 	name = "forge mittens"
 	desc = "A pair of heavy duty leather mittens designed to protect the wearer when metalforging. Unsuited for tasks requiring manual dexterity."
@@ -104,6 +109,19 @@
 	REMOVE_TRAIT(user, TRAIT_CLUMSY, CLOTHING_TRAIT)
 
 
+// ------------ SLEDGEHAMMER (SIMPLE) ------------------ Just a art redirect, since the sledgehammer/simple is integral to blacksmithing I want the art to match
+
+/obj/item/twohanded/sledgehammer/simple
+	name = "sledgehammer"
+	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
+	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
+	icon_state = "sledgehammer"
+	icon_prefix = "sledgehammer"
+	wielded_icon = "sledgehammer2"
+	qualitymod = 0
+
 
 ///////////////////////////////////
 // ADVICE FOR BLACKSMITH ROOKIES //
@@ -114,6 +132,8 @@
 	name = "The Forgemasters Primer"
 	desc = "A thin book with some basic advice on how to use a hammer and anvil, copied by hand."
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
 	icon_state = "advice_smithing"
 	author = "Forgemaster Gallius"
 	title = "Advice on Blacksmithing - For hotheaded whelps"
@@ -132,7 +152,7 @@
 
 				<h3>How to work a hammer and anvil and produce basic tools.</h3>
 
-				The needed tools are: good gloves, metal ingots, a furnace, wood planks, an anvil, quenching trough and a special hammer.
+				The needed tools are: forging mittens, metal ingots, a furnace, wood planks, an anvil, quenching trough and a suitable hammer.
 				<p>
 				<ol>
 				<li>Forging mittens: Only very thick mittens are really reliable enough for touching red-hot metal. Make some from leather if you need to.</li>
@@ -158,7 +178,7 @@
 				</ol>
 				<p>
 
-	
+
 				<h3>Some secret smithing recipes.</h3>
 
 				These are some of the items that can be made with hot iron and a steady hand. Results are not always the same depending on the anvil used.
@@ -171,7 +191,7 @@
 				<li>Prospecting pick: (BFS) Bend the metal, then fold it into shape and shrink it, then add a wooden rod. Useful for finding mineral deposits.</li>
 				<li>Kitchen knife: (BSD) Bend the metal, shrink and draw it, then add a knife handle. A perfect gift for women.</li>
 				<li>Universal tool: (BBU) Want a crowbar with a blade forgewelded on? Bend it twice, upset, then wrap it in leather strips when tempered.</li>
-				<li>Bonesaw: (FFSU) Fold twice, shrink and upset, wrap it with a leather strip once tempered. If you want a ugly ass saw, here you go. You could probably try to catch a blade with it I guess. </li>
+				<li>Scrapsaw: (FFSU) Fold twice, shrink and upset, wrap it with a leather strip once tempered. If you want a ugly ass saw, here you go. You could probably try to catch a blade with it I guess. </li>
 
 				<li>Rings: (SSS) Tiny things, my fingers hurt when I try to work it, but if you youngsters want to make one just shrink the metal to shape. Might cheer you up.</li>
 				<li>Ball and chain: (PBU) Punch the metal, bend and upset it. Add a chain and then snap it on the slaves leg, and laugh while they hobble about. Silly slave.</li>
@@ -196,8 +216,8 @@
 				<li>Heavy axe: (UDSP) Upset the hot metal, draw it, shrink it, punch holes in it. Add a wooden rod, then go chop down some wood or enemies. Easy. </li>
 				<li>Crusher: (UUPP) Upset the hot metal, then use the puncher to make holes for the fittings. Add a wooden rod and crush those disgusting ghouls like twigs. </li>
 
-				<li>Spear: (DDDF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>		
-				<li>Trident: (DDBF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>	
+				<li>Spear: (DDDF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>
+				<li>Trident: (DDBF) Draw the metal thrice then fold it. Add a rod, and enjoy a simple but effective weapon.</li>
 
 				<li>Javelin: (SDU) Shrink, draw, upset, add a wooden rod and throw it in someones face.</li>
 				<li>Throwing knife: (SDD) Shrink and draw the metal twice, then add leather strips and there you go.</li>
@@ -217,6 +237,16 @@
 				</body>
 				</html>
 				"}
+
+
+// ------------ METALWORKING BENCH ------------------ Part of the module, for metalworking that doesnt need a whole forge setup
+
+/obj/machinery/workbench/forge // should be repathed to worbench/metal
+	name = "metalworking bench"
+	desc = "A workbench with a drill press, a makeshift blowtorch setup, and various tools for making crude weapons and tools."
+	icon = 'modular_atom/blacksmith/icons/workbench64x32.dmi'
+	icon_state = "bench_metal"
+
 
 // ------------------------------- TG Remnants ------------------------------
 // Ingots are for smithing. Only metals can be heated and beaten on a metal anvil. Below are pointless in practice.

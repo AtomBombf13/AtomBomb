@@ -221,7 +221,7 @@
  * Uzi 9mm SMG
  * Light 9mm SMG
  * 9mm
- * Faster firing
+ * Very Fast Firing Rate
  * Less damage
  * One-handed
  * Akimbo!
@@ -243,7 +243,7 @@
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_600,
 		SEMI_AUTO_SMG
 	)
 
@@ -985,7 +985,7 @@
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	zoom_factor = 2
+	zoom_factor = 1.8
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),

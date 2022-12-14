@@ -1,12 +1,19 @@
 /*
 Town access doors
-Sheriff/Deputy, Gatehouse etc: 62 ACCESS_GATEWAY
-General access: 25 ACCESS_BAR
-Clinic surgery/storage: 68 ACCESS_CLONING
-Shopkeeper: 34 ACCESS_CARGO_BOT
-Barkeep : 28 ACCESS_KITCHEN - you jebronis made default bar for no reason bruh
-Prospector : 48 ACCESS_MINING
-Detective : 4 ACCESS_FORENSICS_LOCKERS
+Mayor: ACCESS_TOWN_COMMAND 283
+Provost Marshal: ACCESS_TOWN_HOS 282
+Deputy, Detective: ACCESS_TOWN_SEC 281
+General access: ACCESS_TOWN 273
+Doctor: ACCESS_TOWN_DOC 280
+Researcher: ACCESS_TOWN_SCIENCE 279
+Barkeeper: ACCESS_TOWN_BAR 275
+Prospector : ACCESS_TOWN_PROSP 277
+Citizen: ACCESS_TOWN_CIV 274
+Preacher: ACCESS_TOWN_PREACH 278
+Merchant: ACCESS_TOWN_MERCH 276
+
+All Access for every role in every faction: ACCESS_PUBLIC 284
+
 here's a tip, go search DEFINES/access.dm
 */
 
@@ -47,8 +54,8 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/eastwood/f13mayor
-	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS,ACCESS_ROBOTICS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TOWN_CIV, ACCESS_TOWN_DOC, ACCESS_TOWN_PROSP, ACCESS_TOWN_PREACH, ACCESS_TOWN_MERCH, ACCESS_TOWN_SCIENCE, ACCESS_TOWN_COMMAND, ACCESS_CHANGE_IDS)
+	minimal_access = list(ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_ROBOTICS, ACCESS_FORENSICS_LOCKERS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TOWN_CIV, ACCESS_TOWN_DOC, ACCESS_TOWN_PROSP, ACCESS_TOWN_PREACH, ACCESS_TOWN_MERCH, ACCESS_TOWN_SCIENCE, ACCESS_TOWN_COMMAND, ACCESS_CHANGE_IDS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -113,8 +120,8 @@ here's a tip, go search DEFINES/access.dm
 	/datum/outfit/loadout/theoldguard
 	)
 
-	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TOWN_CIV, ACCESS_TOWN_DOC, ACCESS_TOWN_PROSP, ACCESS_TOWN_PREACH, ACCESS_TOWN_HOS, ACCESS_CHANGE_IDS)
+	minimal_access = list(ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TOWN_CIV, ACCESS_TOWN_DOC, ACCESS_TOWN_PROSP, ACCESS_TOWN_PREACH, ACCESS_TOWN_HOS,  ACCESS_CHANGE_IDS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -157,7 +164,7 @@ here's a tip, go search DEFINES/access.dm
 /datum/outfit/loadout/theoldguard
 	name = "The Old Guard"
 	uniform = /obj/item/clothing/under/f13/eastwood/sheriff
-	suit = /obj/item/clothing/suit/armor/medium/duster/sheriff
+	suit = /obj/item/clothing/suit/armor/medium/combat/sheriff
 	head = /obj/item/clothing/head/f13/town/sheriff
 	gloves = /obj/item/clothing/gloves/rifleman
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/brush
@@ -204,8 +211,8 @@ here's a tip, go search DEFINES/access.dm
 	)
 
 	outfit = /datum/outfit/job/eastwood/f13deputy
-	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
-	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_GATEWAY)
+	access = list(ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN)
+	minimal_access = list(ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -295,8 +302,8 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/eastwood/f13detective
 
-	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN)
+	minimal_access = list(ACCESS_VTCC_SEC, ACCESS_BAR, ACCESS_FORENSICS_LOCKERS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
@@ -350,8 +357,8 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/eastwood/f13denres
-	access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
-	minimal_access = list(ACCESS_VTCC_RESEARCH, ACCESS_BAR, ACCESS_CLONING)
+	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC)
+	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -384,6 +391,7 @@ here's a tip, go search DEFINES/access.dm
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
@@ -407,12 +415,13 @@ here's a tip, go search DEFINES/access.dm
 	loadout_options = list(
 	/datum/outfit/loadout/vaultdoc,
 	/datum/outfit/loadout/barber,
-	/datum/outfit/loadout/follower
+	/datum/outfit/loadout/follower,
+	/datum/outfit/loadout/nurse
 	)
 
 	outfit = /datum/outfit/job/eastwood/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING, ACCESS_FOLLOWER)
+	access = list(ACCESS_CLONING, ACCESS_TOWN_DOC, ACCESS_PUBLIC, ACCESS_TOWN)
+	minimal_access = list(ACCESS_CLONING, ACCESS_TOWN_DOC, ACCESS_PUBLIC, ACCESS_TOWN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -460,6 +469,7 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
@@ -473,12 +483,20 @@ here's a tip, go search DEFINES/access.dm
 	uniform = /obj/item/clothing/under/f13/eastwood/doctor
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/f13/military/leather
+	r_hand = /obj/item/melee/onehanded/straight_razor
 
 /datum/outfit/loadout/follower
 	name = "Follower"
 	uniform =	/obj/item/clothing/under/f13/followers
 	suit	=	/obj/item/clothing/suit/toggle/labcoat/followers
 	shoes 	=	/obj/item/clothing/shoes/f13/brownie
+
+/datum/outfit/loadout/nurse
+	name = "Nurse"
+	head =		/obj/item/clothing/head/fashion/hat_nurse
+	uniform =	/obj/item/clothing/under/f13/fashion/nurse_uniform
+	shoes 	=	/obj/item/clothing/shoes/laceup/alternative
+
 
 /*--------------------------------------------------------------*/
 //Merchant
@@ -498,8 +516,8 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 300
 
 	outfit = /datum/outfit/job/eastwood/f13shopkeeper
-	access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_VTCC_SHOP, ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	access = list(ACCESS_CARGO_BOT, ACCESS_TOWN_MERCH, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_PROSP)
+	minimal_access = list(ACCESS_CARGO_BOT, ACCESS_TOWN_MERCH, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_PROSP)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -527,6 +545,7 @@ here's a tip, go search DEFINES/access.dm
 	..()
 	if(visualsOnly)
 		return
+
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
@@ -548,7 +567,8 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	 
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
+
 /datum/outfit/job/eastwood/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -571,8 +591,8 @@ here's a tip, go search DEFINES/access.dm
 
 	outfit = /datum/outfit/job/eastwood/f13prospector
 
-	access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
-	minimal_access = list(ACCESS_VTCC_ROADIE, ACCESS_BAR, ACCESS_CARGO_BOT)
+	access = list( ACCESS_CARGO_BOT, ACCESS_TOWN_PROSP, ACCESS_PUBLIC, ACCESS_TOWN)
+	minimal_access = list(ACCESS_CARGO_BOT, ACCESS_TOWN_PROSP, ACCESS_PUBLIC, ACCESS_TOWN)
 
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -591,7 +611,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Prospector"
 	jobtype = /datum/job/eastwood/f13prospector
 	id = /obj/item/card/id/dogtag/town
-	
+
 	ears = /obj/item/radio/headset/headset_town/commerce
 	l_pocket = /obj/item/storage/bag/money/small/settler
 	r_pocket = /obj/item/flashlight/lantern
@@ -649,8 +669,8 @@ here's a tip, go search DEFINES/access.dm
 
 	outfit = /datum/outfit/job/eastwood/f13barkeep
 
-	access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	access = list(ACCESS_TOWN_BAR, ACCESS_PUBLIC, ACCESS_TOWN)
+	minimal_access = list(ACCESS_TOWN_BAR, ACCESS_PUBLIC, ACCESS_TOWN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -701,8 +721,8 @@ here's a tip, go search DEFINES/access.dm
 	//datum/outfit/loadout/reaver			//FBoS: Tactics Reaver Movement
 	)
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
+	access = list(ACCESS_TOWN, ACCESS_TOWN_PREACH, ACCESS_PUBLIC)		//we can expand on this and make alterations as people suggest different loadouts
+	minimal_access = list(ACCESS_TOWN, ACCESS_TOWN_PREACH, ACCESS_PUBLIC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
@@ -747,7 +767,7 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/jacket/leather
 	backpack_contents = list(
 	/obj/item/book/granter/trait/mormon = 1,
-	/obj/item/reagent_containers/food/snacks/store/bread/plain = 5	
+	/obj/item/reagent_containers/food/snacks/store/bread/plain = 5
 	)
 
 /datum/outfit/loadout/hubologist //Crackheads and horny fiends
@@ -755,7 +775,7 @@ here's a tip, go search DEFINES/access.dm
 	suit = /obj/item/clothing/suit/toggle/labcoat/robe_hubologist
 	backpack_contents = list(
 	/obj/item/reagent_containers/pill/patch/jet = 5,
-	/obj/item/reagent_containers/hypospray/medipen/psycho = 5	
+	/obj/item/reagent_containers/hypospray/medipen/psycho = 5
 	)
 
 /datum/outfit/loadout/preacheratom //Big hammer, big radiation energy
@@ -763,7 +783,7 @@ here's a tip, go search DEFINES/access.dm
 	r_hand = /obj/item/twohanded/sledgehammer/atomsjudgement
 	uniform = /obj/item/clothing/under/f13/atomfaithful
 	backpack_contents = list(/obj/item/storage/pill_bottle/chem_tin/radx = 3) //You are going to need these buddy
-	
+
 /*
 /datum/outfit/loadout/reaver
 	name = "Reaver Follower"
@@ -887,8 +907,8 @@ here's a tip, go search DEFINES/access.dm
 		/datum/outfit/loadout/vaultie,
 		/datum/outfit/loadout/farmer
 	)
-	access = list(ACCESS_BAR)
-	minimal_access = list(ACCESS_BAR)
+	access = list(ACCESS_TOWN, ACCESS_TOWN_CIV, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_TOWN, ACCESS_TOWN_CIV, ACCESS_PUBLIC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -991,8 +1011,8 @@ Roles should be limited and low since they should attempt to work within town ra
 
 	outfit = /datum/outfit/job/wasteland/f13enforcer
 
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
+	access = list(ACCESS_DEN, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_DEN, ACCESS_PUBLIC)
 
 	loadout_options = list(
 		/datum/outfit/loadout/hitman,
@@ -1076,8 +1096,8 @@ Roles should be limited and low since they should attempt to work within town ra
 
 	outfit = /datum/outfit/job/wasteland/f13mobboss
 
-	access = list(ACCESS_DEN)
-	minimal_access = list(ACCESS_DEN)
+	access = list(ACCESS_DEN, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_DEN, ACCESS_PUBLIC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/eastwood/f13mayor,

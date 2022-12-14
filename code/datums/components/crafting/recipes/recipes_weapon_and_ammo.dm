@@ -146,6 +146,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/batteryboxplasma //plasmamusket ammo
+	name = "Plasma Can"
+	result = /obj/item/ammo_box/plasmamusket
+	reqs = list(/obj/item/stack/crafting/electronicparts = 2,
+				/obj/item/stack/sheet/glass = 3,
+				/obj/item/stack/sheet/metal = 3)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
+	time = 20
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+
 /datum/crafting_recipe/batterybox //lasmusket ammo
 	name = "Laser Musket battery pack"
 	result = /obj/item/ammo_box/lasmusket
@@ -197,6 +209,17 @@
 	time = 5
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/needler
+	name = "box of four HN needler cartridges"
+	result = /obj/item/storage/box/medicine/needler
+	reqs = list(/obj/item/stack/sheet/plastic/ = 10,
+				/obj/item/reagent_containers/syringe/xlarge = 20)
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+	time = 5
+	always_available = FALSE
 
 /datum/crafting_recipe/c38boxincin
 	name = ".38 incendiary-tipped ammo box"
@@ -508,6 +531,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
+/datum/crafting_recipe/gun/plasmamusket
+	name = "Plasma musket"
+	result = /obj/item/gun/ballistic/rifle/hobo/plasmacaster
+	reqs = list(/obj/item/gun/ballistic/rifle/hobo/lasmusket = 1,
+				/obj/item/stack/crafting/electronicparts = 2,
+				/obj/item/advanced_crafting_components/conductors = 1)
+	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/gun/lasmusket
 	name = "Laser musket"
 	result = /obj/item/gun/ballistic/rifle/hobo/lasmusket
@@ -687,6 +721,20 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 
+/datum/crafting_recipe/commando
+	name = "DeLisle Commando Carbine"
+	result = /obj/item/gun/ballistic/rifle/mag/commando
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 2,
+				/obj/item/stack/crafting/metalparts = 1,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/advanced_crafting_components/receiver = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //infiltrator
 /datum/crafting_recipe/infiltrator
 	name = "Infiltrator Carbine"
@@ -709,6 +757,21 @@
 	result = /obj/item/gun/ballistic/shotgun/hunting
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/sheet/metal = 3,
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
+//trench shotgun
+
+/datum/crafting_recipe/trench
+	name = "Trench Shotgun"
+	result = /obj/item/gun/ballistic/shotgun/trench
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+				/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/metal = 3,
 	)
 	tools = list(TOOL_WORKBENCH)
@@ -855,6 +918,22 @@
 	always_available = FALSE
 
 
+//wattz1000
+/datum/crafting_recipe/wattz1k
+	name = "wattz 1000 laser pistol"
+	result = /obj/item/gun/energy/laser/wattz
+	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/prewar = 5,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/electronicparts = 2
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 180
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //aep7
 /datum/crafting_recipe/AEP7
 	name = "AEP-7"
@@ -871,10 +950,10 @@
 	always_available = FALSE
 
 
-//recharger pistol, followers of the apocalypse
+//recharger pistol, low-tier
 /datum/crafting_recipe/rechargerpistol
 	name = "recharger pistol"
-	result = /obj/item/gun/energy/laser/wattz/recharger
+	result = /obj/item/gun/energy/laser/recharger
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/lenses = 1,
 				/obj/item/advanced_crafting_components/flux = 1,
@@ -1249,7 +1328,7 @@
 
 				)
 	tools = list(TOOL_AWORKBENCH)
-	time = 120
+	time = 180
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	always_available = FALSE
