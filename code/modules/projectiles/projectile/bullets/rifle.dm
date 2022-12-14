@@ -3,7 +3,8 @@
 ////////////////////
 
 /* * * * * * * *
- * Baseline Light Rifle Bullet
+ * Baseline Rifle Bullet
+ * Jack of all trades round
  * Match
  * Surplus
  * Improvised
@@ -12,7 +13,7 @@
  * * * * * * * */
 
 /* 5.56 match
- * DAMAGE: 37
+ * DAMAGE: 31.25
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -20,9 +21,9 @@
  */
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT  //a bit stronger than 5mm, weaker than 7.62mm
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL //token armor pen
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -35,7 +36,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5.56 sport
- * DAMAGE: 30
+ * DAMAGE: 25
  * STAMIN: 5
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -43,9 +44,8 @@
  */
 /obj/item/projectile/bullet/a556/sport
 	name = "surplus .223 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	damage = BULLET_DAMAGE_RIFLE_LIGHT
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL //no armor pen
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -57,7 +57,7 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT
 
 /* 5.56 handload
- * DAMAGE: 22
+ * DAMAGE: 25
  * STAMIN: 3.75
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -65,7 +65,7 @@
  */
 /obj/item/projectile/bullet/a556/improvised
 	name = "handloaded .223 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
@@ -460,7 +460,7 @@
  */
 /obj/item/projectile/bullet/m5mm/improvised
 	name = "5mm bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT 
+	damage = BULLET_DAMAGE_RIFLE_LIGHT
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
