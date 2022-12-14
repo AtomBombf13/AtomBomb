@@ -1251,6 +1251,14 @@
 	assignment = "mayoral permit"
 	uses_overlays = FALSE
 
+/obj/item/card/id/f13towncmo
+	name = "doctor's name badge"
+	desc = "A plastic-sealed name badge certifying the medical expertise of its holder."
+	icon_state = "doctor"
+	item_state = "card-doctor"
+	assignment = "name badge"
+	uses_overlays = FALSE
+
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
 	desc = "A plastic-sealed name badge certifying the medical expertise of its holder."

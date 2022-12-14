@@ -225,6 +225,16 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1, RADIO_CHANNEL_TOWN_MAYOR = 1)
 
+/obj/item/encryptionkey/headset_town/cmo
+	name = "Eastwood Director radio encryption key"
+	desc = "An encryption key for a radio headset.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood mayor, use :y.\
+		\nTo access the Eastwood security, use :s.\
+		\nTo access the Eastwood commerce channel, use :j"
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1, RADIO_CHANNEL_TOWN_MAYOR = 1)
+
 /obj/item/encryptionkey/headset_den
 	name = "Den radio encryption key"
 	desc = "An encryption key for a radio headset. To access the Den channel, use :j."
