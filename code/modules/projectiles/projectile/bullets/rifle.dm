@@ -23,7 +23,7 @@
 	name = "5.56 FMJ bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT *  GUN_EXTRA_DAMAGE_T1 * BULLET_MATCH_MULT  //a bit stronger than 5mm, weaker than 7.62mm
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL //token armor pen
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -417,7 +417,7 @@
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	armour_penetration = BULLET_PENETRATION_HEAVY
-	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	damage_threshold_penetration =  BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS * 0.75 //high velocity means less spread
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
