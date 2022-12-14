@@ -1029,7 +1029,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0 //baseline 5.56, deals baseline 31 damage
+	damage_multiplier = GUN_EXTRA_DAMAGE_0 //baseline 5.56, deals 34.375 damage with 5.56
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(1.1)
 	init_firemodes = list(
@@ -1077,7 +1077,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1 //34 damage, 1 less shot to kill against unarmored targets at full hp
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1 //38dmg
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(1.2) //kick
 	init_firemodes = list(

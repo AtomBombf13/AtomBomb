@@ -13,7 +13,7 @@
  * * * * * * * */
 
 /* 5.56 match
- * DAMAGE: 31.25
+ * DAMAGE: 34.375
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -21,7 +21,7 @@
  */
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT  //a bit stronger than 5mm, weaker than 7.62mm
+	damage = BULLET_DAMAGE_RIFLE_LIGHT *  GUN_EXTRA_DAMAGE_T1 * BULLET_MATCH_MULT  //a bit stronger than 5mm, weaker than 7.62mm
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL //token armor pen
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
@@ -44,7 +44,7 @@
  */
 /obj/item/projectile/bullet/a556/sport //same as 5.56, but with less pen
 	name = "surplus .223 FMJ bullet"
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL 
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
