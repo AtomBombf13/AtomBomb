@@ -193,7 +193,7 @@ Access
 	backpack_contents = list(
 		/obj/item/binoculars = 1,
 		/obj/item/ammo_box/loader/a357 = 2,
-		/obj/item/reagent_containers/pill/bitterdrink = 2,
+		/obj/item/reagent_containers/pill/bitterdrink = 2
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -229,9 +229,9 @@ Access
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// 10mm SMG, Goliath, CQC
-		/datum/outfit/loadout/rangerhunter,	// Hunting Revolver, DKS, Spatha
-		/datum/outfit/loadout/centurion,	// M1919, Hunting Revolver
+		/datum/outfit/loadout/palacent,		// BAR, Goliath, 10mm pistol
+		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, Sniper, Spatha
+		/datum/outfit/loadout/centurion,	// City-Killer shotgun, 14mm pistol
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -267,7 +267,7 @@ Access
 		/obj/item/warpaint_bowl = 1,
 		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/binoculars = 1,
+		/obj/item/binoculars = 1
 		)
 
 /datum/outfit/loadout/palacent
@@ -279,7 +279,7 @@ Access
 		/obj/item/ammo_box/magazine/m762 = 3,
 		/obj/item/melee/powerfist/f13/goliath = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
-		/obj/item/ammo_box/magazine/pistol10mm = 2,
+		/obj/item/ammo_box/magazine/pistol10mm = 2
 		)
 
 /datum/outfit/loadout/rangerhunter
@@ -291,7 +291,7 @@ Access
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/ammo_box/loader/c4570 = 3,
 		/obj/item/gun/ballistic/revolver/hunting = 1,
-		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/melee/onehanded/machete/spatha = 1
 		)
 
 /datum/outfit/loadout/centurion
@@ -325,7 +325,7 @@ Access
 		/datum/outfit/loadout/decvetbull,	// Supersledge, 10mm SMG, Smokebomb
 		/datum/outfit/loadout/decvetwolf,	// Thermic lance, .45 revoler, Extra Bitter
 		/datum/outfit/loadout/decvetsnake, // Brush gun, Ripper, Extra Bitters
-		/datum/outfit/loadout/decvetbrave, // trench shotgun, 44 revolver, ballistic fist
+		/datum/outfit/loadout/decvetbrave // Trench shotgun, .44 revolver, Ballistic fist
 		)
 
 
@@ -358,7 +358,7 @@ Access
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/storage/bag/money/small/legofficers = 1,
-		/obj/item/binoculars = 1,
+		/obj/item/binoculars = 1
 		)
 
 /datum/outfit/loadout/decvetbull
@@ -368,7 +368,7 @@ Access
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
 		/obj/item/ammo_box/magazine/pistol10mm/extended = 2,
-		/obj/item/grenade/smokebomb = 1,
+		/obj/item/grenade/smokebomb = 1
 		)
 
 /datum/outfit/loadout/decvetwolf
@@ -378,7 +378,7 @@ Access
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/reagent_containers/pill/bitterdrink = 2,
+		/obj/item/reagent_containers/pill/bitterdrink = 2
 		)
 
 /datum/outfit/loadout/decvetsnake
@@ -419,9 +419,9 @@ Access
 	exp_requirements = 360
 
 	loadout_options = list(	//ALL: Gladius, Smokebomb
-		/datum/outfit/loadout/decprimfront,	// Lever action, .357 Revolver, Legion lance, Throwing knives
+		/datum/outfit/loadout/decprimfront,	// Lever action, .44 revolver, Legion lance, Throwing knives
 		/datum/outfit/loadout/decprimrear,	// Legion shield, Ballistic fist
-		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 Revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimboom // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
 		)
 
 	matchmaking_allowed = list(
@@ -461,7 +461,7 @@ Access
 		/obj/item/storage/bag/money/small/legofficers = 1,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/binoculars = 1,
-		/obj/item/reagent_containers/pill/bitterdrink = 1,
+		/obj/item/reagent_containers/pill/bitterdrink = 1
 		)
 
 /datum/outfit/loadout/decprimfront
@@ -482,7 +482,7 @@ Access
 		/obj/item/shield/riot/legion = 1,
 		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/restraints/legcuffs/bola = 1,
+		/obj/item/restraints/legcuffs/bola = 1
 		)
 
 /datum/outfit/loadout/decprimboom
@@ -493,7 +493,7 @@ Access
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/loader/m44 = 3,
 		/obj/item/grenade/f13/frag = 2,
-		/obj/item/grenade/homemade/coffeepotbomb = 1,
+		/obj/item/grenade/homemade/coffeepotbomb = 1
 		)
 
 
@@ -514,7 +514,7 @@ Access
 
 	loadout_options = list(
 		/datum/outfit/loadout/recdeclegion,	// Uzi, Bumper sword, Smokebomb
-		/datum/outfit/loadout/recdectribal,	// M1 Garand, Throwing spears, Reinforced machete, Bottlecap mine
+		/datum/outfit/loadout/recdectribal	// M1 Garand, Throwing spears, Reinforced machete, Bottlecap mine
 		)
 
 	matchmaking_allowed = list(
@@ -548,7 +548,7 @@ Access
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
 		/obj/item/restraints/handcuffs = 1,
-		/obj/item/storage/bag/money/small/legofficers = 1,
+		/obj/item/storage/bag/money/small/legofficers = 1
 		)
 
 /datum/outfit/loadout/recdeclegion
@@ -585,8 +585,8 @@ Access
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	title = "Legion Vexillarius"
 	flag = F13VEXILLARIUS
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are a Veteran of proven bravery. When not fighting, relay orders from the commander and act as a bodyguard."
 	supervisors = "the Veteran Decanus and Centurion"
 	display_order = JOB_DISPLAY_ORDER_VEXILLARIUS
@@ -596,9 +596,9 @@ Access
 	exp_requirements = 360
 
 	loadout_options = list(
-		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his ripper: .223 pistol, Ripper
-		/datum/outfit/loadout/vexfox,	//	Classic New Vegas Vex with his 10mm SMG: 14mm SMG, Spartha
-		/datum/outfit/loadout/vexnight, //  Classic and Iconic long range vex with a trail carbine
+		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his Ripper and Tiger claws
+		/datum/outfit/loadout/vexfox,	//	Classic New Vegas Vex with his 14mm SMG and Spartha
+		/datum/outfit/loadout/vexnight //  Classic and Iconic long range vex with a Trail carbine
 		)
 
 	matchmaking_allowed = list(
@@ -636,7 +636,7 @@ Access
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/megaphone/cornu = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/warpaint_bowl = 1,
+		/obj/item/warpaint_bowl = 1
 		)
 
 /datum/outfit/loadout/vexbear
@@ -646,7 +646,7 @@ Access
 	backpack_contents = list(
 		/obj/item/melee/unarmed/tigerclaw = 1,
 		/obj/item/melee/powered/ripper = 1,
-		/obj/item/book/granter/martial/berserker = 1,
+		/obj/item/book/granter/martial/berserker = 1
 		)
 
 /datum/outfit/loadout/vexfox
@@ -656,7 +656,7 @@ Access
 	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/smg14 = 2,
-		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/melee/onehanded/machete/spatha = 1
 		)
 
 /datum/outfit/loadout/vexnight
@@ -666,55 +666,7 @@ Access
 	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
-		/obj/item/melee/onehanded/machete/gladius = 1,
-		)
-
-//Speculator
-
-/datum/job/CaesarsLegion/Legionnaire/f13venator
-	title = "Legion Speculator"
-	flag = F13VENATOR
-	total_positions = 1
-	spawn_positions = 1
-	description = "You are a member of the Legion Speculatores. With your powerful rifle and your many years of experience, you are a killing machine, capable of taking down even the most formidable targets. Note that you are not a rank-and-file legionary, and you should not be operating as such -- your job is special operations, not fighting alongside the hordes of the Legion."
-	supervisors = "the Decani and Centurion"
-	display_order = JOB_DISPLAY_ORDER_ASSASSIN
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	exp_requirements = 750
-
-	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
-	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
-	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
-	name = "Legion Speculator"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
-	id = /obj/item/card/id/dogtag/legvenator
-	head = /obj/item/clothing/head/helmet/f13/legion/assassin
-	suit = /obj/item/clothing/suit/armor/medium/legion/vet
-	shoes = /obj/item/clothing/shoes/f13/military/plated
-	neck = /obj/item/storage/belt/holster
-	glasses = /obj/item/clothing/glasses/night/polarizing
-	gloves = /obj/item/clothing/gloves/legion/plated
-	ears = /obj/item/radio/headset/headset_legion
-	r_pocket = /obj/item/binoculars
-	box_two = /obj/item/storage/survivalkit/medical/tribal/adv
-	suit_store = /obj/item/gun/ballistic/automatic/sniper/snipervenator
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/w308 = 3,
-		/obj/item/melee/onehanded/machete/gladius = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 3,
-		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/loader/acp45 = 3,
+		/obj/item/melee/onehanded/machete/gladius = 1
 		)
 
 //EXPLORER
@@ -731,8 +683,8 @@ Access
 	exp_requirements = 150
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
-		/datum/outfit/loadout/expambusher,	// lever-action shotgun, Bottlecap mine, MP5
-		/datum/outfit/loadout/expsniper,	// Commando Carbine, Smokebomb, C4
+		/datum/outfit/loadout/expambusher,	// Lever-action shotgun, Bottlecap mine, MP5
+		/datum/outfit/loadout/expsniper	// Commando Carbine, Smokebomb, C4
 		)
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -771,7 +723,7 @@ Access
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/machete = 1,
-		/obj/item/restraints/handcuffs = 1,
+		/obj/item/restraints/handcuffs = 1
 		)
 
 /datum/outfit/loadout/expambusher
@@ -782,7 +734,7 @@ Access
 		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
 		/obj/item/bottlecap_mine = 1,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/restraints/legcuffs/bola/tactical = 1,
+		/obj/item/restraints/legcuffs/bola/tactical = 1
 		)
 
 /datum/outfit/loadout/expsniper
@@ -816,7 +768,7 @@ Access
 		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
 		/datum/outfit/loadout/vetsmg, 		// 10mm SMG, .357 Revolver
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
-		/datum/outfit/loadout/vetrifle,		// Trail gun, .357 Revolver
+		/datum/outfit/loadout/vetrifle		// Trail gun, .357 Revolver, Throwing knives
 		)
 	
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -880,7 +832,7 @@ Access
 		/obj/item/ammo_box/magazine/pistol10mm/extended = 2,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/ammo_box/loader/a357 = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 /datum/outfit/loadout/vetberserker
@@ -892,7 +844,7 @@ Access
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/twohanded/spear/lance = 1,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
-		/obj/item/restraints/legcuffs/bola = 2,
+		/obj/item/restraints/legcuffs/bola = 2
 		)
 
 /datum/outfit/loadout/vetrifle
@@ -905,7 +857,7 @@ Access
 		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/melee/onehanded/knife/throwing = 2,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
-		/obj/item/restraints/legcuffs/beartrap = 1,
+		/obj/item/restraints/legcuffs/beartrap = 1
 		)
 
 // PRIME
@@ -922,9 +874,9 @@ Access
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(	//ALL: Forged Machete
-		/datum/outfit/loadout/primelancer,	// .357 Revolver, Buckler, Bola.
-		/datum/outfit/loadout/primerifle,	// Cowboy Repeater, Firebomb
-		/datum/outfit/loadout/primebrave,	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primelancer,	// .357 revolver, Buckler, Bola
+		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Firebomb
+		/datum/outfit/loadout/primebrave	// Hunting shotgun, Throwing spears
 		)
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -958,7 +910,7 @@ Access
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
-		/obj/item/melee/onehanded/machete/forgedmachete = 1,
+		/obj/item/melee/onehanded/machete/forgedmachete = 1
 		)
 
 /datum/outfit/loadout/primelancer
@@ -968,7 +920,7 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/loader/a357 = 3,
 		/obj/item/restraints/legcuffs/bola = 2,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 /datum/outfit/loadout/primerifle
@@ -977,7 +929,7 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/loader/a357 = 3,
 		/obj/item/grenade/homemade/firebomb = 2,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 /datum/outfit/loadout/primebrave
@@ -987,7 +939,7 @@ Access
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 // RECRUIT
@@ -1006,8 +958,8 @@ Access
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 
 	loadout_options = list(	//ALL: Machete
-		/datum/outfit/loadout/recruittribal,	// Fire Axe, Bola, Trekking
-		/datum/outfit/loadout/recruitlegion,	// .357 Revolver, 2 x prefilled Molotovs
+		/datum/outfit/loadout/recruittribal,	// Gladius, Bola, Trekking
+		/datum/outfit/loadout/recruitlegion	// Winchester Widowmaker, 2 x prefilled Molotovs, Machete
 		)
 
 	matchmaking_allowed = list(
@@ -1037,7 +989,7 @@ Access
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 1
 		)
 
 /datum/outfit/loadout/recruittribal
@@ -1118,7 +1070,7 @@ Access
 		/obj/item/storage/box/bowls = 1,
 		/obj/item/reagent_containers/glass/beaker/large = 1,
 		/obj/item/soap/homemade = 1,
-		/obj/item/lighter = 1,
+		/obj/item/lighter = 1
 		)
 
 /datum/outfit/loadout/worker
@@ -1132,7 +1084,7 @@ Access
 		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/soap/homemade = 1,
-		/obj/item/shovel/spade = 1,
+		/obj/item/shovel/spade = 1
 		)
 
 /datum/outfit/loadout/treasurer
@@ -1144,7 +1096,7 @@ Access
 		/obj/item/pen/fountain = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
 		/obj/item/blacksmith/ingot/gold = 1,
-		/obj/item/taperecorder = 1,
+		/obj/item/taperecorder = 1
 		)
 
 /datum/outfit/loadout/forgemaster
@@ -1157,7 +1109,7 @@ Access
 		/obj/item/stack/sheet/metal/twenty = 1,
 		/obj/item/stack/sheet/mineral/wood/twenty = 1,
 		/obj/item/stack/sheet/leather/twenty = 1,
-		/obj/item/stack/sheet/cloth/thirty = 1,
+		/obj/item/stack/sheet/cloth/thirty = 1
 		)
 
 /datum/outfit/loadout/headmedicus
@@ -1235,7 +1187,7 @@ Access
 
 	loadout_options = list(
 		/datum/outfit/loadout/slaveservant,
-		/datum/outfit/loadout/slaveworker,
+		/datum/outfit/loadout/slaveworker
 		)
 	
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION1)
@@ -1292,7 +1244,7 @@ Access
 		/obj/item/storage/box/bowls = 1,
 		/obj/item/reagent_containers/glass/beaker/large = 1,
 		/obj/item/soap/homemade = 1,
-		/obj/item/lighter = 1,
+		/obj/item/lighter = 1
 		)
 
 /datum/outfit/loadout/slaveworker
@@ -1306,7 +1258,7 @@ Access
 		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/soap/homemade = 1,
-		/obj/item/shovel/spade = 1,
+		/obj/item/shovel/spade = 1
 		)
 
 // Legion Citizen
@@ -1326,5 +1278,5 @@ Access
 	id = /obj/item/card/id/dogtag/town/legion
 	l_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/melee/onehanded/machete/spatha = 1
 		)
