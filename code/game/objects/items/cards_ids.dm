@@ -741,7 +741,7 @@
 /obj/item/card/id/away/old/apc
 	name = "APC Access ID"
 	desc = "A special ID card that allows access to APC terminals."
-	access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS)
+	access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 
 /obj/item/card/id/departmental_budget
 	name = "departmental card (FUCK)"
@@ -1249,6 +1249,14 @@
 	icon_state = "silver"
 	item_state = "silver_id"
 	assignment = "mayoral permit"
+	uses_overlays = FALSE
+
+/obj/item/card/id/f13towncmo
+	name = "doctor's name badge"
+	desc = "A plastic-sealed name badge certifying the medical expertise of its holder."
+	icon_state = "doctor"
+	item_state = "card-doctor"
+	assignment = "name badge"
 	uses_overlays = FALSE
 
 /obj/item/card/id/dendoctor

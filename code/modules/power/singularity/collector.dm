@@ -12,7 +12,7 @@
 	icon_state = "ca"
 	anchored = FALSE
 	density = TRUE
-	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS)
+	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 //	use_power = NO_POWER_USE
 	max_integrity = 350
 	integrity_failure = 0.2

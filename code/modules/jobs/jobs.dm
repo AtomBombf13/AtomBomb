@@ -59,6 +59,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Mayor",
 	"Provost Marshal",
+	"Director",
 
 	"Desperado Leader",
 
@@ -97,6 +98,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Mayor",
 "Sheriff",
+"Director",
 "Deputy",
 "Shopkeeper",
 "Doctor",
@@ -138,6 +140,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Mayor",
 	"Provost Marshal",
+	"Director",
 	"Deputy Marshal",
 	"Detective",
 	"Merchant",
