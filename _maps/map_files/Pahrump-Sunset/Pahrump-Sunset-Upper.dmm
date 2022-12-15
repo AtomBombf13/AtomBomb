@@ -1922,9 +1922,8 @@
 	},
 /area/f13/brotherhood/offices1st)
 "dpP" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/food/snacks/chocolatebar,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
+/obj/item/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/followers)
 "dsb" = (
 /obj/structure/chair/folding{
@@ -2297,6 +2296,14 @@
 "ebv" = (
 /turf/open/transparent/openspace,
 /area/f13/legion)
+"ebQ" = (
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Clinic Director";
+	req_access_txt = "287"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "ecy" = (
 /obj/structure/railing{
 	dir = 8
@@ -2758,6 +2765,10 @@
 /obj/item/clothing/under/f13/bosformgold_m,
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices1st)
+"eXI" = (
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "eZe" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/f13/wood,
@@ -4268,6 +4279,12 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
+"img" = (
+/obj/structure/chair/f13foldupchair{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/followers)
 "imL" = (
 /obj/structure/railing{
 	dir = 8
@@ -4328,10 +4345,11 @@
 	},
 /area/f13/building/massfusion)
 "ipP" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 4
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowleft"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
+/obj/structure/barricade/bars,
+/turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "ipY" = (
 /obj/structure/flora/wasteplant/wild_fungus,
@@ -4353,10 +4371,7 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland/ncr)
 "iqB" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/food/snacks/f13/fancylads,
-/obj/item/reagent_containers/food/snacks/f13/fancylads,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/followers)
 "iqT" = (
 /obj/machinery/vr_sleeper/bos{
@@ -4487,10 +4502,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/brotherhood/leisure)
 "iAB" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 8
-	},
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
+/obj/structure/rack/shelf_metal,
+/obj/item/radio/headset/headset_town/commerce,
+/obj/item/radio/headset/headset_town/commerce,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/followers)
 "iBQ" = (
 /obj/structure/sink{
@@ -4657,10 +4672,10 @@
 	},
 /area/f13/wasteland)
 "iTZ" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 1
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/followers)
 "iUG" = (
 /obj/item/storage/bag/trash,
@@ -4684,10 +4699,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "jaq" = (
-/obj/machinery/light{
-	dir = 4
+/obj/structure/chair/f13chair2{
+	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
+/obj/effect/landmark/start/f13/towncmo,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/followers)
 "jbS" = (
 /obj/structure/dresser,
@@ -5037,6 +5053,10 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/wasteland)
+"jBB" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "jCY" = (
 /obj/structure/table,
 /obj/item/toy/cards/deck,
@@ -8341,7 +8361,9 @@
 	},
 /area/f13/brotherhood/offices1st)
 "pDH" = (
-/turf/open/floor/plasteel/stage_bleft,
+/obj/structure/table/glass,
+/obj/item/reagent_containers/food/snacks/chocolatebar,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/followers)
 "pEr" = (
 /obj/structure/fluff/railing/corner{
@@ -11591,7 +11613,8 @@
 /area/f13/followers)
 "vMs" = (
 /obj/structure/table/glass,
-/obj/item/toy/cards/deck/unum,
+/obj/item/reagent_containers/food/snacks/f13/fancylads,
+/obj/item/reagent_containers/food/snacks/f13/fancylads,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/followers)
 "vMz" = (
@@ -12080,6 +12103,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/brotherhood/offices1st)
+"wFE" = (
+/obj/structure/chair/f13chair2{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "wGG" = (
 /turf/closed/wall/f13/tentwall,
 /area/f13/village)
@@ -12152,6 +12181,13 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/building)
+"wNd" = (
+/obj/structure/chair/f13foldupchair{
+	desc = "A folding chair, missing half the seat, probably for dropping something through it.";
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/followers)
 "wOl" = (
 /obj/structure/bed,
 /turf/open/floor/carpet/red,
@@ -40361,7 +40397,7 @@ oez
 oez
 fbK
 hBS
-pDH
+vLL
 jEj
 yiL
 yiL
@@ -40373,7 +40409,7 @@ vLL
 qpi
 yiL
 hIb
-alJ
+hIb
 yiL
 yiL
 yiL
@@ -40630,7 +40666,7 @@ vLL
 ubj
 yiL
 hIb
-gQj
+jBB
 yiL
 hIb
 alJ
@@ -41900,15 +41936,15 @@ oez
 oez
 yiL
 yiL
-ipP
-vLL
-vLL
+yiL
+ebQ
+yiL
 yiL
 gyJ
 uyL
 vMs
-hen
-gyJ
+pDH
+wNd
 kxx
 lOP
 jRC
@@ -42156,15 +42192,15 @@ oez
 oez
 oez
 fbK
-hBS
+ipP
 dpP
-iTZ
-vLL
+iqB
+wFE
 yiL
 gyJ
 gyJ
-gyJ
-gyJ
+img
+img
 gyJ
 kxx
 jRC
@@ -42413,10 +42449,10 @@ oez
 oez
 oez
 fbK
-hBS
+ipP
 iqB
-iTZ
-vLL
+iqB
+eXI
 yiL
 kfE
 gyJ
@@ -42670,9 +42706,9 @@ oez
 oez
 oez
 fbK
-hBS
+ipP
 iAB
-vLL
+iTZ
 jaq
 yiL
 gyJ
