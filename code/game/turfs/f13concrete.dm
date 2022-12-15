@@ -209,6 +209,7 @@ GLOBAL_LIST_INIT(concrete_recipes, list ( \
 	max_integrity = 450 //170 integ stronger than sandbags.
 	proj_pass_rate = 20
 	pass_flags = LETPASSTHROW
+	pass_flags_self = LETPASSTHROW
 	climbable = TRUE
 	smooth = SMOOTH_TRUE
 
