@@ -22,8 +22,7 @@
 	layer = TABLE_LAYER
 	climbable = TRUE
 	obj_flags = CAN_BE_HIT|SHOVABLE_ONTO
-	pass_flags = LETPASSTHROW //You can throw objects over this, despite it's density.")
-	pass_flags_self = PASSTABLE
+	pass_flags_self = PASSTABLE | LETPASSTHROW
 	attack_hand_speed = CLICK_CD_MELEE
 	attack_hand_is_action = TRUE
 	var/frame = /obj/structure/table_frame
