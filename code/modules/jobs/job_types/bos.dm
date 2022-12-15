@@ -874,8 +874,8 @@ Knight
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9 J
 	/datum/outfit/loadout/knightc, //AER9 S
-	/datum/outfit/loadout/knightb, //Ripper J
-	/datum/outfit/loadout/knightd //Ripper S
+	/datum/outfit/loadout/knightb, //Shishkebab J
+	/datum/outfit/loadout/knightd //Shishkebab
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
