@@ -173,12 +173,6 @@
 "ahs" = (
 /turf/open/floor/carpet/red,
 /area/f13/legion)
-"aht" = (
-/obj/structure/chair/f13foldupchair{
-	dir = 8
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/followers)
 "aib" = (
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
@@ -2093,12 +2087,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/wasteland)
-"dKr" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
-/area/f13/followers)
 "dLq" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -2615,6 +2603,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/khanfort)
+"eJK" = (
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowleft"
+	},
+/obj/structure/barricade/bars,
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/followers)
 "eJY" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /obj/item/reagent_containers/food/drinks/sillycup,
@@ -3755,6 +3750,13 @@
 /obj/machinery/light/small,
 /turf/open/water,
 /area/f13/brotherhood/dorms)
+"hhd" = (
+/obj/structure/sign/departments/medbay/alt,
+/turf/closed/wall/f13/store{
+	desc = "A pre-War wall made of solid concrete.";
+	name = "concrete wall"
+	},
+/area/f13/followers)
 "hjt" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light{
@@ -4306,6 +4308,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building/hospital)
+"ioy" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "ioD" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -4339,11 +4347,8 @@
 	},
 /area/f13/building/massfusion)
 "ipP" = (
-/obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/f13/store{
-	desc = "A pre-War wall made of solid concrete.";
-	name = "concrete wall"
-	},
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
 "ipY" = (
 /obj/structure/flora/wasteplant/wild_fungus,
@@ -4365,11 +4370,7 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland/ncr)
 "iqB" = (
-/obj/structure/window/fulltile/store{
-	icon_state = "storewindowleft"
-	},
-/obj/structure/barricade/bars,
-/turf/open/floor/plasteel/f13/vault_floor/white,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/followers)
 "iqT" = (
 /obj/machinery/vr_sleeper/bos{
@@ -4671,7 +4672,9 @@
 	},
 /area/f13/wasteland)
 "iTZ" = (
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/obj/structure/table/glass,
+/obj/item/reagent_containers/food/snacks/chocolatebar,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/followers)
 "iUG" = (
 /obj/item/storage/bag/trash,
@@ -4753,6 +4756,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/city)
+"jeo" = (
+/obj/structure/chair/f13chair2{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "jeP" = (
 /obj/structure/chair/sofa/right{
 	color = "#800000";
@@ -4820,13 +4829,6 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
-"jkI" = (
-/obj/structure/chair/f13foldupchair{
-	desc = "A folding chair, missing half the seat, probably for dropping something through it.";
-	dir = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/followers)
 "jlI" = (
 /obj/machinery/computer/arcade/battle,
 /obj/machinery/light/small{
@@ -4949,11 +4951,6 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/hospital)
-"jty" = (
-/obj/structure/table/glass,
-/obj/item/pen/blue,
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
-/area/f13/followers)
 "juL" = (
 /obj/machinery/light{
 	dir = 4
@@ -7000,14 +6997,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
-"ngl" = (
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Clinic Director";
-	req_access_txt = "287"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
-/area/f13/followers)
 "ngm" = (
 /obj/structure/table,
 /obj/item/storage/box/handcuffs{
@@ -8373,10 +8362,10 @@
 	},
 /area/f13/brotherhood/offices1st)
 "pDH" = (
-/obj/structure/chair/f13chair2{
-	dir = 4
+/obj/structure/chair/f13foldupchair{
+	dir = 8
 	},
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/followers)
 "pEr" = (
 /obj/structure/fluff/railing/corner{
@@ -8627,6 +8616,13 @@
 	icon_state = "neutralrustyfull"
 	},
 /area/f13/brotherhood/leisure)
+"qdF" = (
+/obj/structure/chair/f13foldupchair{
+	desc = "A folding chair, missing half the seat, probably for dropping something through it.";
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/followers)
 "qfx" = (
 /obj/structure/railing/corner,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -8736,6 +8732,11 @@
 /obj/item/clothing/neck/mantle/bos/right,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"qni" = (
+/obj/structure/table/glass,
+/obj/item/pen/blue,
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "qnj" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -10837,6 +10838,16 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess/neutralchess2,
 /area/f13/followers)
+"ubK" = (
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Clinic Director";
+	req_access_txt = "287";
+	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 75, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 25, "acid" = 25, "wound" = 25, "damage_threshold" = 3);
+	desc = "It opens and closes. This one looks heavily fortified"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/area/f13/followers)
 "ubN" = (
 /obj/machinery/plantgenes,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -11028,11 +11039,6 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/caves)
-"uvm" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/food/snacks/chocolatebar,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/followers)
 "uvM" = (
 /obj/structure/window/reinforced{
 	color = "#3e3d42";
@@ -11894,10 +11900,6 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ncr)
-"wje" = (
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/followers)
 "wjJ" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/f13{
@@ -40675,7 +40677,7 @@ vLL
 ubj
 yiL
 hIb
-wje
+ipP
 yiL
 hIb
 alJ
@@ -41946,14 +41948,14 @@ oez
 yiL
 yiL
 yiL
-ngl
-ipP
+ubK
+hhd
 yiL
 gyJ
 uyL
 vMs
-uvm
-jkI
+iTZ
+qdF
 kxx
 lOP
 jRC
@@ -42201,15 +42203,15 @@ oez
 oez
 oez
 fbK
-iqB
+eJK
 dpP
-iTZ
-pDH
+iqB
+jeo
 yiL
 gyJ
 gyJ
-aht
-aht
+pDH
+pDH
 gyJ
 kxx
 jRC
@@ -42458,10 +42460,10 @@ oez
 oez
 oez
 fbK
+eJK
 iqB
-iTZ
-iTZ
-jty
+iqB
+qni
 yiL
 kfE
 gyJ
@@ -42715,9 +42717,9 @@ oez
 oez
 oez
 fbK
-iqB
+eJK
 iAB
-dKr
+ioy
 jaq
 yiL
 gyJ
