@@ -101,7 +101,7 @@
 	desc = "Cave fungus is an edible mushroom which has the ability to purge bodily toxins."
 	icon_state = "fungus"
 	filling_color = "#FF6347"
-	distill_reagent = /datum/reagent/consumable/cavefungusjuice
+	distill_reagent = /datum/reagent/consumable/cavefungus_fermented
 
 /obj/item/seeds/glow
 	name = "pack of glowing fungus seeds"

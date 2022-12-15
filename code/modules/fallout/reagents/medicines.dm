@@ -709,7 +709,7 @@
 		var/datum/wound/W = thing
 		var/obj/item/bodypart/wounded_part = W.limb
 		if(wounded_part)
-			wounded_part.heal_damage(125, 125)//Does this even work? AAAAAAAAAAAAAAAAA
+			wounded_part.heal_damage(10)//Does this even work? AAAAAAAAAAAAAAAAA -sort of. If you have a datum/wound it heals 125 brute + 125 burn per tick wich makes you a immortal God. Adjusting it down.
 	..()
 
 /datum/reagent/medicine/hydra/overdose_process(mob/living/M)
