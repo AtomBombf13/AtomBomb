@@ -1,4 +1,4 @@
-
+// - I find this design confusing, burns are not the same as infections, and infestation is something else again. Sometimes its treated as interchangeable, sometimes not.
 
 // TODO: well, a lot really, but specifically I want to add potential fusing of clothing/equipment on the affected area, and limb infections, though those may go in body part code
 /datum/wound/burn
@@ -32,7 +32,7 @@
 	. = ..()
 	if(strikes_to_lose_limb == 0)
 		if(prob(1))
-			victim.visible_message(span_danger("The infection on the remnants of [victim]'s [limb.name] shift and bubble nauseatingly!"), span_warning("You can feel the infection on the remnants of your [limb.name] coursing through your veins!"))
+			victim.visible_message(span_danger("The skin on [victim]'s [limb.name] blisters and blackens."), span_warning("You can feel the infection on the remnants of your [limb.name] coursing through your veins!"))
 		return
 
 	if(victim.reagents)
@@ -263,14 +263,14 @@
 // we don't even care about first degree burns, straight to second
 /datum/wound/burn/moderate
 	name = "Second Degree Burns"
-	desc = "Patient is suffering considerable burns with mild skin penetration, weakening limb integrity and increased burning sensations."
+	desc = "Patient is suffering considerable burns with significant skin damage and severe pain."
 	treat_text = "Apply penicillin, miner's salve, abraxo cleaner to clear infection, and use bandages, synthetic flesh, ointment, or regenerative mesh to heal the damaged tissue."
 	examine_desc = "is badly burned and breaking out in blisters"
 	occur_text = "breaks out with violent red burns"
 	severity = WOUND_SEVERITY_MODERATE
 	damage_mulitplier_penalty = 1.05
 	threshold_minimum = 50
-	threshold_penalty = 30 // burns cause significant decrease in limb integrity compared to other wounds
+	threshold_penalty = 30 // burns cause significant decrease in limb integrity compared to other wounds - This seems strange but ok, balance I guess?
 	status_effect_type = /datum/status_effect/wound/burn/moderate
 	flesh_damage = 5
 	scar_keyword = "burnmoderate"
@@ -278,7 +278,7 @@
 /datum/wound/burn/severe
 	name = "Third Degree Burns"
 	desc = "Patient is suffering extreme burns with full skin penetration, creating serious risk of infection and greatly reduced limb integrity."
-	treat_text = "Apply penicillin, miner's salve, abraxo cleaner to clear infection, and use bandages, synthetic flesh, ointment, or regenerative mesh to heal the damaged tissue. Surgery will help treat infection, but not the burn itself."
+	treat_text = "Apply penicillin to clear infection, and use bandages, synthetic flesh, ointment, or regenerative mesh to heal the damaged tissue. Surgery will help treat infection, but not the burn itself."
 	examine_desc = "appears seriously charred, with aggressive red splotches"
 	occur_text = "chars rapidly, exposing ruined tissue and spreading angry red burns"
 	severity = WOUND_SEVERITY_SEVERE
