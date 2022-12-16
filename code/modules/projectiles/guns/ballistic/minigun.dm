@@ -95,7 +95,7 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_LESS_DAMAGE_T5
+	damage_multiplier = GUN_LESS_DAMAGE_T3
 	init_recoil = LMG_RECOIL(0.5)
 	init_firemodes = list(
 		FULL_AUTO_800
