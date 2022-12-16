@@ -424,7 +424,7 @@
 /obj/item/projectile/bullet/needle //strictly better than HN cartridges, but cannot be produced ever
 	name = "HN AP dart"
 	icon_state = "cbbolt"
-	damage = BULLET_WOUND_PISTOL_LIGHT * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_PISTOL_LIGHT * BULLET_MATCH_MULT
 	stamina = BULLET_STAMINA_PISTOL_LIGHT * BULLET_SURPLUS_MULT * BULLET_NEEDLE_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_LIGHT * BULLET_NEEDLE_RECOIL_MULT
@@ -451,7 +451,7 @@
 /obj/item/projectile/bullet/needle/improvised
 	name = "HN dart"
 	icon_state = "cbbolt"
-	damage = BULLET_WOUND_PISTOL_LIGHT * BULLET_HANDLOAD_MULT
+	damage = BULLET_DAMAGE_PISTOL_LIGHT * BULLET_HANDLOAD_MULT
 	stamina = BULLET_STAMINA_PISTOL_LIGHT * BULLET_HANDLOAD_MULT * BULLET_NEEDLE_STAMINA_MULT
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_LIGHT * BULLET_NEEDLE_RECOIL_MULT
