@@ -102,7 +102,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/scatter/tribeam
 	projectile_type = /obj/item/projectile/beam/laser/tribeam
 	pellets = 3
-	variance = 14
+	variance = 5
 	select_name = "scatter"
 	e_cost = 180 //11 shots
 	fire_sound = 'sound/f13weapons/tribeamfire.ogg'

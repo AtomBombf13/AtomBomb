@@ -211,16 +211,16 @@
 
 /* * * * * * * *
  * Light Rifle Bullet that ive never seen ingame
- * Match - no surplus / improvised
+ * Only comes in standard rounds, no match or bulk rounds
  * Rubber
  * Incendiary
- * Anti-mob?
+ * Extreme anti-armor skew, Gauss-penetration but pistol damage
  * Explosive
  * High velocity?
  * * * * * * * */
 
 /* 4.73 fmj
- * DAMAGE: 31.25
+ * DAMAGE: 22.5
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -228,10 +228,12 @@
  */
 /obj/item/projectile/bullet/a473
 	name = "4.73 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT * GUN_LESS_DAMAGE_T1
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_GAUSS
 
 	wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_MATCH_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_NAKED_WOUND_MULT
@@ -241,7 +243,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 4.73 rubber
- * DAMAGE: 2.5
+ * DAMAGE: 2
  * STAMIN: 12
  * RECOIL: 1
  * WOUNDS: 7.5
@@ -249,7 +251,7 @@
  */
 /obj/item/projectile/bullet/a473/rubber
 	name = "4.73 polyurethane bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT * GUN_LESS_DAMAGE_T1
 	stamina = RUBBERY_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -263,7 +265,7 @@
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
 
 /* 4.73 fire
- * DAMAGE: 12.5
+ * DAMAGE: LESS
  * STAMIN: 12
  * RECOIL: 1
  * WOUNDS: 6.25
@@ -300,7 +302,7 @@
 */
 
 /* 4.73 dumdum
- * DAMAGE: 31.25 * 2 vs mobs
+ * DAMAGE: 22.5 * 2 vs mobs
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
