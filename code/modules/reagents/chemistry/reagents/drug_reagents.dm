@@ -3,6 +3,8 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	taste_description = "bitterness"
 	var/trippy = TRUE //Does this drug make you trip?
+	can_synth = FALSE
+
 
 /datum/reagent/drug/on_mob_end_metabolize(mob/living/M)
 	if(trippy)
@@ -65,6 +67,8 @@
 	addiction_threshold = 10
 	pH = 10
 	value = REAGENT_VALUE_UNCOMMON
+	can_synth = FALSE
+
 
 /datum/reagent/drug/crank/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
@@ -112,6 +116,8 @@
 	addiction_threshold = 15
 	pH = 9
 	value = REAGENT_VALUE_UNCOMMON
+	can_synth = FALSE
+
 
 
 /datum/reagent/drug/krokodil/on_mob_life(mob/living/carbon/M)
@@ -164,6 +170,8 @@
 	addiction_threshold = 20
 	pH = 9
 	value = REAGENT_VALUE_UNCOMMON
+	can_synth = FALSE
+
 
 
 /datum/reagent/drug/heroin/on_mob_life(mob/living/carbon/M)
@@ -212,6 +220,8 @@
 	var/confusion = TRUE
 	pH = 5
 	value = REAGENT_VALUE_UNCOMMON
+	can_synth = FALSE
+
 
 /datum/reagent/drug/methamphetamine/on_mob_metabolize(mob/living/L)
 	..()
@@ -297,6 +307,8 @@
 	brain_damage = FALSE
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
+	can_synth = FALSE
+
 
 /datum/reagent/drug/bath_salts
 	name = "Bath Salts"
@@ -310,6 +322,8 @@
 	pH = 8.2
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
+	can_synth = FALSE
+
 
 /datum/reagent/drug/bath_salts/on_mob_metabolize(mob/living/L)
 	..()
@@ -407,6 +421,8 @@
 	color = "#78FFF0"
 	pH = 9.2
 	value = REAGENT_VALUE_RARE
+	can_synth = FALSE
+
 
 /datum/reagent/drug/aranesp/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel amped up.", "You feel ready.", "You feel like you can push it to the limit.")
@@ -429,6 +445,7 @@
 	overdose_threshold = 20
 	pH = 10.5
 	value = REAGENT_VALUE_RARE
+	can_synth = FALSE
 
 /datum/reagent/drug/happiness/on_mob_add(mob/living/L)
 	..()
@@ -509,6 +526,7 @@
 	addiction_stage4_end = 240
 	pH = 12.5
 	value = REAGENT_VALUE_EXCEPTIONAL
+	can_synth = FALSE
 
 /datum/reagent/drug/skooma/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -581,6 +599,7 @@
 	overdose_threshold = 6
 	value = REAGENT_VALUE_VERY_RARE
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/syndicateadrenals/on_mob_life(mob/living/M)
 	M.adjustStaminaLoss(-5*REM)
@@ -606,5 +625,3 @@
 		var/mob/living/carbon/C = M
 		if(!C.undergoing_cardiac_arrest())
 			C.set_heartattack(TRUE)
-
-//GO OUTSIDE HOLY HELL

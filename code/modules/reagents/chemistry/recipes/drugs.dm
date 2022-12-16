@@ -55,6 +55,7 @@
 	required_reagents = list(/datum/reagent/nitrous_oxide = 2, /datum/reagent/medicine/epinephrine = 1, /datum/reagent/consumable/ethanol = 1)
 	required_catalysts = list(/datum/reagent/toxin/plasma = 5)
 
+/* Disabled; Better turbo.
 /datum/chemical_reaction/skooma
 	name = "Getaway"
 	id = /datum/reagent/drug/skooma
@@ -69,3 +70,4 @@
 	results = list(/datum/reagent/moonsugar = 1, /datum/reagent/medicine/morphine = 2.5)
 	required_temp = 315 //a little above normal body temperature
 	required_reagents = list(/datum/reagent/drug/skooma = 1)
+*/
