@@ -314,7 +314,6 @@
 	desc = "An intimidating tribal helmet, it doesn't look very comfortable."
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2)
 	icon_state = "skull"
 	item_state = "skull"
 	strip_delay = 100
