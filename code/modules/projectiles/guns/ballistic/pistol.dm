@@ -476,6 +476,45 @@
 	draw_time = GUN_DRAW_NORMAL
 	init_recoil = HANDGUN_RECOIL(1.2)
 
+/* * * * * * * * * * *
+ * PPK12 Gauss Pistol
+ * Superpistol
+ * 2mmEC
+ * Rare
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/pistol/ppk12
+	name = "PPK12 gauss pistol"
+	desc = "Praised for its range and stopping power, the PPK12 Gauss Pistol is of German design. The pistol uses a weak electromagnetic field to propel rounds at tremendous speed and punch through almost any armor."
+	icon_state = ""
+	item_state = ""
+	mag_type = /obj/item/ammo_box/magazine/m2mm/pistol
+	init_mag_type = /obj/item/ammo_box/magazine/m2mm/pistol
+
+	slowdown = GUN_SLOWDOWN_SMG_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_LESS_DAMAGE_T5
+	init_recoil = RIFLE_RECOIL(1.6)
+
+	init_firemodes = list(
+		SEMI_AUTO_SNIPER
+	)
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+
+	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(GAUSS_VOLUME),
+		SP_VOLUME_SILENCED(GAUSS_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(GAUSS_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(GAUSS_DISTANT_SOUND),
+		SP_DISTANT_RANGE(GAUSS_RANGE_DISTANT)
+	)
+
 //////////////////
 //UNIQUE SECTION//
 //////////////////
