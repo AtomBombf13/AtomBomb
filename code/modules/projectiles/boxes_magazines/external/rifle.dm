@@ -191,3 +191,14 @@
 	ammo_type = /obj/item/ammo_casing/c2mm/blender
 	max_ammo = 10
 	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m2mm/pistol
+	name = "2mm electromagnetic pistol magazine"
+	max_ammo = 5
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m2mm/pistol/blender
+	name = "2mm \"Blender\" electromagnetic pistol magazine"
+	ammo_type = /obj/item/ammo_casing/c2mm/blender
+	max_ammo = 5
+	multiple_sprites = 2
