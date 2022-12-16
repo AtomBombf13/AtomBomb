@@ -66,7 +66,7 @@
 	var/mob/living/simple_animal/critter = M
 	if(M.stat == DEAD)
 		to_chat(user, span_notice(" [M] is dead. You can not help [M.p_them()]!"))
-		return 
+		return
 	if (!(critter.healable))
 		to_chat(user, span_warning("[M] cannot be healed!"))
 		return FALSE
@@ -85,7 +85,7 @@
 		return
 	if(!user.can_inject(C, TRUE))
 		return
-	
+
 	var/list/heal_operations = pick_a_bodypart(C, user)
 	if(!islist(heal_operations))
 		to_chat(user, span_phobia("Uh oh! [src] didnt return a list! This is a bug, probably! Report this pls~ =3"))
@@ -173,12 +173,12 @@
 	// limb is missing, output a message and move on
 	if(do_these_things == BODYPART_INORGANIC)
 		to_chat(user, span_warning("[C]'s [parse_zone(user.zone_selected)] is robotic! Let's try another part..."))
-	
+
 	// If our operations are a number, and that number corresponds to operations to do, good! output what we're working on and what to do
 	if(isnum(do_these_things) && do_these_things > BODYPART_FINE)
 		output_heal_instructions = list("bodypart" = first_choice, "operations" = do_these_things)
 		return output_heal_instructions
-	
+
 	// Part wasn't there, or needed no healing. Lets find one that does need healing!
 	var/obj/item/bodypart/affecting
 	for(var/limb_slot_to_check in GLOB.main_body_parts)
@@ -196,12 +196,12 @@
 	switch(which_message)
 		if("start")
 			user.visible_message(
-				span_warning("[user] begins applying \a [src] to [target]'s wounds..."), 
+				span_warning("[user] begins applying \a [src] to [target]'s wounds..."),
 				span_warning("You begin applying \a [src] to [user == target ? "your" : "[target]'s"] wounds..."))
 
 		if("end")
 			user.visible_message(
-				span_green("[user] applies \a [src] to [target]'s wounds.</span>"), 
+				span_green("[user] applies \a [src] to [target]'s wounds.</span>"),
 				span_green("You apply \a [src] to [user == target ? "your" : "[target]'s"] wounds."))
 
 /obj/item/stack/medical/get_belt_overlay()
@@ -549,13 +549,13 @@
 
 
 // ------------------
-// MOURNING DUST   (should be repathed to be less misleading at some point)
+// MOURNING DUST
 // ------------------
 
-/obj/item/stack/medical/poultice
+/obj/item/stack/medical/mourning_dust
 	name = "mourning dust"
 	singular_name = "mourning dust"
-	desc = "A type of primitive herbal powder.\nWhile traditionally used to prepare corpses for the mourning feast, it can also treat scrapes and burns on the living, however, it is liable to cause shortness of breath when employed in this manner.\nIt is imbued with ancient wisdom."
+	desc = "A type of primitive herbal powder.\nWhile traditionally used to prepare corpses for the mourning feast, it can also treat minor scrapes and burns on the living." // Edited so it doesnt refer to oxyloss unless that can be fixed.
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "mourningdust"
 	amount = 15
@@ -564,16 +564,16 @@
 	heal_burn = 10
 	self_delay = 40
 	other_delay = 10
-	merge_type = /obj/item/stack/medical/poultice
+	merge_type = /obj/item/stack/medical/mourning_dust
 	novariants = TRUE
 
-/obj/item/stack/medical/poultice/ten
+/obj/item/stack/medical/mourning_dust/ten
 	amount = 10
 
-/obj/item/stack/medical/poultice/five
+/obj/item/stack/medical/mourning_dust/five
 	amount = 5
 
-/obj/item/stack/medical/poultice/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/user)
+/obj/item/stack/medical/mourning_dust/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/user) // Does not work as intended it seems
 	. = ..()
 	healed_mob.adjustOxyLoss(amount_healed)
 
@@ -586,4 +586,4 @@
 /datum/chemical_reaction/mourningpoultice/on_reaction(datum/reagents/holder, multiplier)
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= multiplier, i++)
-		new /obj/item/stack/medical/poultice/five(location)
+		new /obj/item/stack/medical/mourning_dust/five(location)
