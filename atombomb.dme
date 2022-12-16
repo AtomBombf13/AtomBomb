@@ -3735,6 +3735,7 @@
 #include "modular_atom\fashion\code\clothing_fashion.dm"
 #include "modular_atom\fashion\code\cosmetics.dm"
 #include "modular_atom\kitchen_50s\code\kitchen_50s.dm"
+#include "modular_atom\legio_invicta\code\legio_invicta.dm"
 #include "modular_citadel\code\datums\components\souldeath.dm"
 #include "modular_citadel\code\datums\status_effects\chems.dm"
 #include "modular_citadel\code\game\objects\cit_screenshake.dm"

@@ -617,10 +617,16 @@ obj/item/storage/belt/medical/surgical
 	item_state = "survival"
 
 /obj/item/storage/belt/military/legion
-	name = "legionnaire marching belt"
-	desc = "A belt capable of holding the necessities of a legionnaire."
-	icon_state = "legion_belt"
-	item_state = "legion_belt"
+	name = "legion marching belt"
+	desc = "A belt capable of holding various supplies a warrior might need. Comes with a red sash."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "belt_legion"
+	item_state = "belt_legion"
+//	icon_state = "legion_belt"
+//	item_state = "legion_belt"
 
 /obj/item/storage/belt/military/ncr
 	name = "NCR patrol belt"
