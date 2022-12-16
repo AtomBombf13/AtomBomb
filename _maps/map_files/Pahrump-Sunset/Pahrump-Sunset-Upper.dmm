@@ -12207,11 +12207,6 @@
 /obj/machinery/door/unpowered/securedoor/legion,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
-"wOS" = (
-/obj/structure/bed/mattress,
-/obj/effect/landmark/start/f13/venator,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
 "wOT" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria{
 	icon_state = "tealwhrusty_chess2"
@@ -71060,7 +71055,7 @@ xZD
 pGD
 iEW
 iEW
-wOS
+jmO
 jmO
 xZD
 noT
@@ -73116,7 +73111,7 @@ xZD
 bxB
 iEW
 iEW
-wOS
+jmO
 jmO
 xZD
 wZn

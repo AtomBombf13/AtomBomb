@@ -691,7 +691,7 @@
 	var/static/list/alchemyrack_typecache = typecacheof(list(
 		/obj/item/reagent_containers/pill/patch,
 		/obj/item/reagent_containers/glass/bottle/primitive,
-		/obj/item/stack/medical/poultice,
+		/obj/item/stack/medical/mourning_dust,
 		/obj/item/smelling_salts
 	))
 	if(is_type_in_typecache(O, alchemyrack_typecache))
@@ -846,10 +846,10 @@
 		/obj/item/book/granter/crafting_recipe/gunsmith_two = 1,
 		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1)
 
-/obj/machinery/smartfridge/bottlerack/lootshelf/condiment 
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment
 	desc = "A rusted pre-war shelf, this one has a faded label about condiments. "
 
-/obj/machinery/smartfridge/bottlerack/lootshelf/condiment 
+/obj/machinery/smartfridge/bottlerack/lootshelf/condiment
 	chance_initial_contents = list(
 		/obj/item/reagent_containers/food/condiment/ketchup = 1,
 		/obj/item/reagent_containers/food/condiment/mustard = 1,

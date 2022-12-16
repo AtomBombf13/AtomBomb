@@ -17109,15 +17109,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/building/khanfort)
-"brh" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 12
-	},
-/obj/effect/landmark/start/f13/slavemaster,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
 "bri" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -26950,12 +26941,6 @@
 /turf/open/floor/plating/f13/outside/road{
 	dir = 8;
 	icon_state = "crossborder"
-	},
-/area/f13/wasteland)
-"fkE" = (
-/obj/effect/landmark/start/f13/priestess,
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
 	},
 /area/f13/wasteland)
 "fkI" = (
@@ -40943,11 +40928,6 @@
 /obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/f13,
 /area/f13/building)
-"lQD" = (
-/obj/effect/landmark/start/f13/slavemaster,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
 "lQE" = (
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
@@ -126039,7 +126019,7 @@ aqx
 aqx
 aqx
 aqx
-fkE
+xOD
 aOk
 aOk
 eBH
@@ -128876,7 +128856,7 @@ piW
 tNt
 aii
 pzb
-lQD
+csG
 tCj
 csG
 hrE
@@ -129133,7 +129113,7 @@ csG
 csG
 csG
 qya
-brh
+gGz
 csG
 wqo
 vBU
@@ -129390,7 +129370,7 @@ csG
 oOD
 xPS
 hrE
-lQD
+csG
 csG
 fjq
 vBU

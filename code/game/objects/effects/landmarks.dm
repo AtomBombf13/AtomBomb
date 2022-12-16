@@ -599,9 +599,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/immune
 	name = "Legion Immune"
 
-/obj/effect/landmark/start/f13/priestess
-	name = "Priestess of Mars"
-
 /obj/effect/landmark/start/f13/decanvet
 	name = "Legion Veteran Decanus"
 	icon_state = "Decanus"
@@ -630,15 +627,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Recruit Legionnaire"
 	icon_state = "Legionary"
 
-/obj/effect/landmark/start/f13/slavemaster
-	name = "Legion Slavemaster"
-
 /obj/effect/landmark/start/f13/explorer
 	name = "Legion Explorer"
-	icon_state = "Legionary"
-
-/obj/effect/landmark/start/f13/venator
-	name = "Legion Assassin"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/campfollower
