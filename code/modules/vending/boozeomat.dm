@@ -1,6 +1,6 @@
 /obj/machinery/vending/boozeomat
 	name = "\improper Platinum Inebriater"
-	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one."
+	desc = "Platinum Inebriater was a brand of alcoholic beverages before the Great War across America."
 	icon_state = "boozeomat"
 	icon_deny = "boozeomat-deny"
 	products = list(/obj/item/reagent_containers/food/drinks/drinkingglass = 30,

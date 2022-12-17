@@ -1,8 +1,8 @@
 //map and direction signs
 
 /obj/structure/sign/map
-	name = "station map"
-	desc = "A framed picture of the station."
+	name = "Yuma map"
+	desc = "A framed picture of the local surroundings."
 	max_integrity = 500
 
 /obj/structure/sign/map/left

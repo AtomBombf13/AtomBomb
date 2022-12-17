@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox
 	name = "toolbox"
-	desc = "Danger. Very robust."
+	desc = "A bland toolbox."
 	icon_state = "toolbox_default"
 	item_state = "toolbox_default"
 	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
@@ -95,7 +95,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	can_rubberify = FALSE
 
 /obj/item/storage/toolbox/mechanical/old/heirloom
-	name = "old, robust toolbox" //this will be named "X family toolbox"
+	name = "old toolbox" //this will be named "X family toolbox"
 	desc = "It's seen better days."
 	//Citadel change buffed to base levels
 	total_mass = 2
@@ -201,24 +201,6 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	slab_type = /obj/item/clockwork/slab/debug
 	fabricator_type = /obj/item/clockwork/replica_fabricator/scarab/debug
 
-/obj/item/storage/toolbox/plastitanium
-	name = "plastitanium toolbox"
-	desc = "A toolbox made out of plastitanium. Probably packs a massive punch."
-	total_mass = 5
-	icon_state = "blue"
-	item_state = "toolbox_blue"
-	w_class = WEIGHT_CLASS_HUGE		//heyo no bohing this!
-	force = 18		//spear damage
-	can_rubberify = FALSE
-
-/obj/item/storage/toolbox/plastitanium/afterattack(atom/A, mob/user, proximity)
-	. = ..()
-	if(proximity && isobj(A) && !isitem(A))
-		var/obj/O = A
-		//50 total object damage but split up for stuff like damage deflection.
-		O.take_damage(22)
-		O.take_damage(10)
-
 /obj/item/storage/toolbox/artistic
 	name = "artistic toolbox"
 	desc = "A toolbox painted bright green. Why anyone would store art supplies in a toolbox is beyond you, but it has plenty of extra space."
@@ -244,9 +226,9 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	new /obj/item/stack/cable_coil/cyan(src)
 	new /obj/item/stack/cable_coil/white(src)
 
-/obj/item/storage/toolbox/plastitanium/gold_real
+/obj/item/storage/toolbox/gold_real
 	name = "golden toolbox"
-	desc = "A larger then normal toolbox made of gold plated plastitanium."
+	desc = "A larger then normal toolbox made of real gold."
 	icon_state = "gold"
 	item_state = "toolbox_gold"
 	has_latches = FALSE

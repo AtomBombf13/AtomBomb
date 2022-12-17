@@ -1,7 +1,7 @@
 /obj/machinery/vending/dinnerware
-	name = "\improper Plasteel Chef's Dinnerware Vendor"
-	desc = "A kitchen and restaurant equipment vendor."
-	product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks.;Woo, utensils.;You don't really need these..."
+	name = "\improper DeMarco-Boyle Housewares"
+	desc = "DeMarco-Boyle Housewares was a chain of furniture stores that sold home appliances and other housewares."
+	product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks!"
 	icon_state = "dinnerware"
 	products = list(/obj/item/reagent_containers/glass/bowl = 30,
 					/obj/item/storage/bag/tray = 8,
