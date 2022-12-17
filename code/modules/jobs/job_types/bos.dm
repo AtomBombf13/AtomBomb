@@ -1065,7 +1065,3 @@ Off Duty
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1
 		)
-
-		/* 
-		They're broken so until its fixed, its gone
-		*/
