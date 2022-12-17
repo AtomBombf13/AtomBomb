@@ -167,7 +167,6 @@
 	value = REAGENT_VALUE_UNCOMMON
 	can_synth = FALSE
 
-
 /datum/reagent/drug/heroin/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel like you're floating.", "Life feels like a beautiful dream.", "Everything seems right with the world.")
 	if(prob(5))
