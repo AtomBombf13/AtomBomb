@@ -117,7 +117,6 @@
 	can_synth = FALSE
 
 
-
 /datum/reagent/drug/krokodil/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel calm.", "You feel collected.", "You feel like you need to relax.")
 	if(prob(5))
@@ -169,7 +168,6 @@
 	pH = 9
 	value = REAGENT_VALUE_UNCOMMON
 	can_synth = FALSE
-
 
 
 /datum/reagent/drug/heroin/on_mob_life(mob/living/carbon/M)
@@ -322,7 +320,6 @@
 	ghoulfriendly = TRUE
 	can_synth = FALSE
 
-
 /datum/reagent/drug/bath_salts/on_mob_metabolize(mob/living/L)
 	..()
 	ADD_TRAIT(L, TRAIT_STUNIMMUNE, type)
@@ -420,7 +417,6 @@
 	pH = 9.2
 	value = REAGENT_VALUE_RARE
 	can_synth = FALSE
-
 
 /datum/reagent/drug/aranesp/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel amped up.", "You feel ready.", "You feel like you can push it to the limit.")
