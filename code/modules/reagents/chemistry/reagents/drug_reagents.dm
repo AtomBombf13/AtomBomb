@@ -67,7 +67,6 @@
 	value = REAGENT_VALUE_UNCOMMON
 	can_synth = FALSE
 
-
 /datum/reagent/drug/crank/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
 		var/high_message = pick("You feel jittery.", "You feel like you gotta go fast.", "You feel like you need to step it up.")
@@ -115,7 +114,6 @@
 	pH = 9
 	value = REAGENT_VALUE_UNCOMMON
 	can_synth = FALSE
-
 
 /datum/reagent/drug/krokodil/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("You feel calm.", "You feel collected.", "You feel like you need to relax.")
@@ -304,7 +302,6 @@
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
 	can_synth = FALSE
-
 
 /datum/reagent/drug/bath_salts
 	name = "Bath Salts"
