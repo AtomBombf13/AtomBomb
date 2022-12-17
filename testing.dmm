@@ -1901,7 +1901,7 @@
 "ZT" = (/obj/structure/barricade/sandbags,/turf/open/indestructible/ground/outside/sidewalk{dir = 10; icon_state = "outerpavement"},/area/space)
 "ZU" = (/obj/structure/table/booth,/obj/effect/decal/cleanable/dirt,/obj/effect/spawner/lootdrop/f13/crafting,/turf/open/indestructible/ground/inside/dirt,/area/space)
 "ZV" = (/obj/structure/window/fulltile/house{dir = 2; icon_state = "storewindowleft"},/turf/open/floor/f13{icon_state = "floorrusty"},/area/space)
-"ZY" = (/obj/machinery/mineral/wasteland_trader/general{icon_state = "trade_idle"},/turf/open/indestructible/ground/outside/sidewalk,/area/space)
+"ZY" = (/obj/machinery/mineral/wasteland_trader/trade_point{icon_state = "trade_idle"},/turf/open/indestructible/ground/outside/sidewalk,/area/space)
 "ZZ" = (/obj/structure/lamp_post{dir = 4},/turf/open/indestructible/ground/outside/sidewalk{icon_state = "verticalleftborderleft0"},/area/space)
 
 (1,1,1) = {"

@@ -1,14 +1,11 @@
-/obj/machinery/mineral/wasteland_trader
-	name = "Trading point"
-	desc = "Trading point at which you can sell select goods for caps."
-	icon = 'icons/WVM/machines.dmi'
-	icon_state = "weapon_idle"
-
+/obj/machinery/mineral/wasteland_trader  // base item template, do not use
+	name = "Template, bugreport"
+	icon = 'icons/WVM/new_vendors.dmi'
 	density = TRUE
 	use_power = FALSE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	can_be_unanchored = FALSE
-	layer = 2.9
+	layer = BELOW_OBJ_LAYER
 
 	var/stored_caps = 0	// store caps
 	var/expected_price = 0
@@ -30,19 +27,20 @@
 								/obj/item/reagent_containers/food/snacks/grown/agave = 2.5,
 								/obj/item/reagent_containers/pill/patch/jet = 10,
 								/obj/item/reagent_containers/pill/patch/healingpowder = 5,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak = 5,
 								/obj/item/reagent_containers/hypospray/medipen/psycho = 10,
 								/obj/item/reagent_containers/hypospray/medipen/medx = 15,
 								/obj/item/reagent_containers/pill/patch/healpoultice = 20,
+								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 20,
+								/obj/item/reagent_containers/food/snacks/pemmican = 20,
 								/obj/item/export/bottle/gin = 10,
 								/obj/item/export/bottle/wine = 10,
 								/obj/item/export/bottle/whiskey = 10,
 								/obj/item/export/bottle/vodka = 10,
 								/obj/item/export/bottle/tequila = 10,
-								/obj/item/export/bottle/patron = 35,
 								/obj/item/export/bottle/rum = 10,
 								/obj/item/export/bottle/vermouth = 10,
 								/obj/item/export/bottle/kahlua = 10,
-								/obj/item/export/bottle/goldschlager = 45,
 								/obj/item/export/bottle/hcider = 10,
 								/obj/item/export/bottle/cognac = 10,
 								/obj/item/export/bottle/absinthe = 10,
@@ -55,15 +53,9 @@
 								/obj/item/export/bottle/trappist = 10,
 								/obj/item/export/bottle/minikeg = 10,
 								/obj/item/export/bottle/nukashine = 10,
-								/obj/item/reagent_containers/hypospray/medipen/stimpak = 5,
-								/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 20,
-								/obj/item/reagent_containers/food/snacks/pemmican = 100
+								/obj/item/export/bottle/patron = 35,
+								/obj/item/export/bottle/goldschlager = 45,
 								)
-
-/obj/machinery/mineral/wasteland_trader/general
-	name = "Trading point"
-	icon_state = "generic_idle"
-	prize_list = list()
 
 /*
 /datum/data/wasteland_equipment
@@ -91,13 +83,14 @@
 	dat += "Gold Bars: 10 caps<br>"
 	dat += "Cut Diamonds : 15 caps<br>"
 	dat += "Jet/Psycho/MedX : 10/15 caps<br>"
-	dat += "Healing Powder/Healing Paultice : 5/20 caps<br>"
+	dat += "Healing Powder/Healing Poultice : 5/20 caps<br>"
 	dat += "Stimpak/Super Stimpak : 5/20 caps<br>"
+	dat += "Pemmican : 20 caps<br>"
 	dat += "Sealed Bottle of Alcohol: 10-50 caps<br>"
 	dat += ""
 	dat += "</div>"
 
-	var/datum/browser/popup = new(user, "tradingvendor", "Trading point", 400, 500)
+	var/datum/browser/popup = new(user, "tradingvendor", "Trade Point", 400, 500)
 	popup.set_content(dat)
 	popup.open()
 	return
@@ -168,28 +161,56 @@
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
 	src.ui_interact(usr)
 
-/*
 
-ORGAN SELLER
 
-*/
+//////////////////////////////////
+//								//	* Generic buying vendor, using the above list
+//			TRADE POINT			//
+//								//
+//////////////////////////////////
 
-/obj/machinery/mineral/wasteland_trader/organ
-	name = "Organ Grinder"
+/obj/machinery/mineral/wasteland_trader/trade_point
+	name = "Trade point" // renamed since it shorter was easier to make look good on the sprite and may as well be consistent
+	desc = "Trade point at which you can sell select goods for caps."
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "trade_general"
+	prize_list = list()
+
+
+
+//////////////////////////////////
+//								//	* Old organseller with new art and some added goods buying
+//			MEAT-O-MAT			//	* Helps clean up map a  bit, offer alternative ways to earn a little money
+//								//
+//////////////////////////////////
+
+/obj/machinery/mineral/wasteland_trader/meat_o_mat
+	name = "Meat-O-Mat"
 	desc = "Organs go in, caps come out. How does it work? Nobody knows."
-	icon = 'icons/WVM/machines.dmi'
-	icon_state = "organs"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "trade_meat"
 
-	goods_list = list( /obj/item/organ/heart = 30,
-								/obj/item/organ/ears = 5,
-								/obj/item/organ/eyes = 5,
-								/obj/item/organ/liver = 15,
-								/obj/item/organ/lungs = 25,
-								/obj/item/organ/stomach = 15,
-								/obj/item/organ/tongue = 5
-								)
+	goods_list = list(	/obj/item/stack/sheet/sinew = 1,
+						/obj/item/stack/sheet/bone = 1,
+						/obj/item/reagent_containers/food/snacks/meat/slab/human = 2, // have to include all subtypes since infinite synthmeat exists. That or write up a blacklist thing.
+						/obj/item/reagent_containers/food/snacks/meat/slab/molerat = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/gecko = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/radroach_meat = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/ant_meat = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/bloatfly_meat = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/cazador_meat = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk = 2,
+						/obj/item/reagent_containers/food/snacks/meat/slab/wolf = 2,								
+						/obj/item/organ/tongue = 5,
+						/obj/item/organ/ears = 5,
+						/obj/item/organ/eyes = 5,
+						/obj/item/organ/liver = 15,
+						/obj/item/organ/stomach = 15,
+						/obj/item/organ/lungs = 25,					
+						/obj/item/organ/heart = 30
+						)
 
-/obj/machinery/mineral/wasteland_trader/organ/ui_interact(mob/user)
+/obj/machinery/mineral/wasteland_trader/meat_o_mat/ui_interact(mob/user)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
@@ -205,20 +226,23 @@ ORGAN SELLER
 	dat += "Eyes : 5 caps<br>"
 	dat += "Ears : 5 caps<br>"
 	dat += "Tongue : 5 caps<br>"
+	dat += "Meat : 2 caps<br>"
+	dat += "Bone : 1 cap<br>"
+	dat += "Sinew : 1 cap<br>"
 	dat += "Brain : UNAVAILABLE<br>"
 	dat += ""
 	dat += "</div>"
 
-	var/datum/browser/popup = new(user, "tradingvendor", "Organ Grinder", 400, 500)
+	var/datum/browser/popup = new(user, "tradingvendor", "Meat-O-Mat", 400, 500)
 	popup.set_content(dat)
 	popup.open()
 	return
 
-/obj/machinery/mineral/wasteland_trader/organ/attackby(obj/item/I, mob/user, params)
+/obj/machinery/mineral/wasteland_trader/meat_o_mat/attackby(obj/item/I, mob/user, params)
 	add_caps_squish(I)
 
 /* Adding a caps to caps storage and release vending item. */
-/obj/machinery/mineral/wasteland_trader/organ/proc/add_caps_squish(obj/item/I)
+/obj/machinery/mineral/wasteland_trader/meat_o_mat/proc/add_caps_squish(obj/item/I)
 	var/final_value = 0
 	var/value_per = 0
 
@@ -242,11 +266,68 @@ ORGAN SELLER
 	qdel(I)
 	src.ui_interact(usr)
 
+
+
+//////////////////////////////////
+//								//	* Buys some guns
+//		GUN REPOSITORY			//
+//								//
+//////////////////////////////////
+
+/obj/machinery/mineral/wasteland_trader/gunbuyer
+	name = "Gun Repository"
+	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Receive compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "trade_gun"
+	goods_list = list(/obj/item/gun/ballistic/automatic/hobo/zipgun = 5,
+						/obj/item/gun/ballistic/revolver/hobo = 5,
+						/obj/item/gun/ballistic/revolver/detective = 5,
+						/obj/item/gun/ballistic/revolver/hobo = 8,
+						/obj/item/gun/ballistic/revolver/hobo/piperifle = 8,
+						/obj/item/gun/ballistic/revolver/hobo/knifegun = 8,
+						/obj/item/gun/ballistic/revolver/hobo/pepperbox = 8,
+						/obj/item/gun/ballistic/revolver/single_shotgun = 8,
+						/obj/item/gun/ballistic/automatic/pistol/n99 = 8,
+						/obj/item/gun/ballistic/automatic/pistol/pistol22 = 8,
+						/obj/item/gun/ballistic/automatic/pistol/ninemil = 8,
+						/obj/item/gun/ballistic/automatic/pistol/m1911 = 8,
+						/obj/item/gun/ballistic/rifle/hunting = 10,
+						/obj/item/gun/ballistic/revolver/colt357 = 10,
+						/obj/item/gun/ballistic/revolver/caravan_shotgun = 10,
+						/obj/item/gun/ballistic/revolver/widowmaker = 10,
+						/obj/item/gun/ballistic/revolver/winchesterrebored = 10,
+						/obj/item/gun/ballistic/automatic/autopipe = 15,
+						/obj/item/gun/ballistic/rifle/hobo/lasmusket = 15,
+						)
+
+/obj/machinery/mineral/wasteland_trader/gunbuyer/ui_interact(mob/user)
+	. = ..()
+	var/dat
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "</div>"
+	dat += "<br>"
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Disarming the Wasteland one gun at a time.</b><br>"
+	dat += "<b>Warning: The automated system cannot guarantee an accurate appraisal of value.</b><br>"
+	dat += "<b>Accepted goods and prices:</b><br>"
+	dat += "Pistols and revolvers: 5-10 caps<br>"
+	dat += "Rifles and Shotguns : 10-15 caps<br>"
+	dat += "Does not accept weapons of historical or artisanal value. Those belong in a musuem."
+	dat += ""
+	dat += "</div>"
+
+	var/datum/browser/popup = new(user, "tradingvendor", "Gun Repository", 400, 500)
+	popup.set_content(dat)
+	popup.open()
+	return
+
+
+
 /*
 
-Fence
+Fence CURRENTLY NOT USED!  Its some sort of pun joke vendor. Commented out so mappers dont add it by accident.
 
-*/
 
 /obj/machinery/mineral/wasteland_trader/brotherhood
 	name = "Brotherhood of Steal"
@@ -307,49 +388,4 @@ Fence
 	popup.set_content(dat)
 	popup.open()
 	return
-
-/obj/machinery/mineral/wasteland_trader/gunbuyer
-	name = "Gun Repository"
-	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Receive compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
-	goods_list = list(/obj/item/gun/ballistic/automatic/hobo/zipgun = 5,
-						/obj/item/gun/ballistic/revolver/hobo = 5,
-						/obj/item/gun/ballistic/revolver/detective = 5,
-						/obj/item/gun/ballistic/revolver/hobo = 8,
-						/obj/item/gun/ballistic/revolver/hobo/piperifle = 8,
-						/obj/item/gun/ballistic/revolver/hobo/knifegun = 8,
-						/obj/item/gun/ballistic/revolver/hobo/pepperbox = 8,
-						/obj/item/gun/ballistic/revolver/single_shotgun = 8,
-						/obj/item/gun/ballistic/automatic/pistol/n99 = 8,
-						/obj/item/gun/ballistic/automatic/pistol/pistol22 = 8,
-						/obj/item/gun/ballistic/automatic/pistol/ninemil = 8,
-						/obj/item/gun/ballistic/automatic/pistol/m1911 = 8,
-						/obj/item/gun/ballistic/rifle/hunting = 10,
-						/obj/item/gun/ballistic/revolver/colt357 = 10,
-						/obj/item/gun/ballistic/revolver/caravan_shotgun = 10,
-						/obj/item/gun/ballistic/revolver/widowmaker = 10,
-						/obj/item/gun/ballistic/revolver/winchesterrebored = 10,
-						/obj/item/gun/ballistic/automatic/autopipe = 15,
-						/obj/item/gun/ballistic/rifle/hobo/lasmusket = 15,
-						)
-
-/obj/machinery/mineral/wasteland_trader/gunbuyer/ui_interact(mob/user)
-	. = ..()
-	var/dat
-	dat +="<div class='statusDisplay'>"
-	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
-	dat += "</div>"
-	dat += "<br>"
-	dat +="<div class='statusDisplay'>"
-	dat += "<b>Disarming the Wasteland one gun at a time.</b><br>"
-	dat += "<b>Warning: The automated system cannot guarantee an accurate appraisal of value.</b><br>"
-	dat += "<b>Accepted goods and prices:</b><br>"
-	dat += "Pistols and revolvers: 5-10 caps<br>"
-	dat += "Rifles and Shotguns : 10-15 caps<br>"
-	dat += "Does not accept weapons of historical or artisanal value. Those belong in a musuem."
-	dat += ""
-	dat += "</div>"
-
-	var/datum/browser/popup = new(user, "tradingvendor", "Trading point", 400, 500)
-	popup.set_content(dat)
-	popup.open()
-	return
+*/
