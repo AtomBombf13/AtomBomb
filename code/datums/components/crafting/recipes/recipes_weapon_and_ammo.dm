@@ -536,7 +536,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	
-	/datum/crafting_recipe/gun/knucklegun
+/datum/crafting_recipe/gun/knucklegun
 	name = "Knucklegun (.45)"
 	result = /obj/item/gun/ballistic/revolver/hobo/knucklegun
 	reqs = list(/obj/item/stack/sheet/metal = 5,
