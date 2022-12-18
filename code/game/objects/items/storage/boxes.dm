@@ -1452,5 +1452,3 @@ They can have any recipe that they'd realistically have. Armors, Weapons, Meds a
 							/obj/item/blueprint/research,
 							)
 		new randomgun(src)	
-
-	
