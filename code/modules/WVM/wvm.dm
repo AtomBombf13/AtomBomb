@@ -1,5 +1,6 @@
 /* Code by Tienn */
 /* Sprites by Moonmandoom*/
+/* new_vendors.dmi by Pebbles*/
 
 #define STATE_IDLE 0
 #define STATE_SERVICE 1
@@ -19,8 +20,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /obj/machinery/trading_machine
 	name = "Wasteland Vending Machine"
 	desc = "Wasteland Vending Machine! Unlock with a key, load your goods, and profit!"
-
-	icon = 'icons/WVM/machines.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/WVM/machines.dmi'
 	icon_state = "custom_idle"
 	obj_flags = UNIQUE_RENAME
 	var/idle_icon_state = "custom_idle"
@@ -56,7 +57,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /* Weapon Vending Machine*/
 /obj/machinery/trading_machine/weapon
 	name = "Weapon Vending Machine"
-	icon = 'icons/WVM/machines.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/WVM/machines.dmi'
 	icon_state = "weapon_idle"
 	idle_icon_state = "weapon_idle"
 	service_icon_state = "weapon_service"
@@ -65,7 +67,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /* Ammo Vending Machine*/
 /obj/machinery/trading_machine/ammo
 	name = "Ammo Vending Machine"
-	icon = 'icons/WVM/machines.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/WVM/machines.dmi'
 	icon_state = "ammo_idle"
 	idle_icon_state = "ammo_idle"
 	service_icon_state = "ammo_service"
@@ -74,7 +77,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /* Armor Vending Machine*/
 /obj/machinery/trading_machine/armor
 	name = "Armor Vending Machine"
-	icon = 'icons/WVM/machines.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/WVM/machines.dmi'
 	icon_state = "armor_idle"
 	idle_icon_state = "armor_idle"
 	service_icon_state = "armor_service"
@@ -83,7 +87,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /* Medical Vending Machine*/
 /obj/machinery/trading_machine/medical
 	name = "Medicine Vending Machine"
-	icon = 'icons/WVM/machines.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/WVM/machines.dmi'
 	icon_state = "med_idle"
 	idle_icon_state = "med_idle"
 	service_icon_state = "med_service"
@@ -655,7 +660,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/weapons
 	name = "Wasteland Vending Machine - Weapons"
-	icon_state = "weapon_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "seller_weapoms"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							70),
 		new /datum/data/wasteland_equipment(".22 Pistol",					/obj/item/gun/ballistic/automatic/pistol/pistol22,					30),
@@ -688,7 +694,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/ammo
 	name = "Wasteland Vending Machine - Ammo n Bombs"
-	icon_state = "ammo_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "generic_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Handgun magazine (.45)",		/obj/item/ammo_box/magazine/pistol45,									50),
 		new /datum/data/wasteland_equipment("9mm pistol magazine (9mm)",	/obj/item/ammo_box/magazine/pistol9mm/doublestack,						50),
@@ -712,7 +719,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/clothing
 	name = "Wasteland Vending Machine - Clothing"
-	icon_state = "armor_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "generic_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								5),
 		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/settler,							15),
@@ -734,6 +742,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/general
 	name = "Wasteland Vending Machine - General"
+	icon = 'icons/WVM/new_vendors.dmi'
 	icon_state = "generic_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Drinking glass",				/obj/item/reagent_containers/food/drinks/drinkingglass,				5),
@@ -827,7 +836,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/advcomponents
 	name = "Wasteland Vending Machine - Components"
-	icon_state = "generic_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "seller_components"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Advanced Modular Receiver",		/obj/item/advanced_crafting_components/receiver,					75),
 		new /datum/data/wasteland_equipment("Weapon Assembly",					/obj/item/advanced_crafting_components/assembly,					75),
@@ -847,7 +857,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/attachments
 	name = "Wasteland Vending Machine - Attachments"
-	icon_state = "generic_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "seller_attachments"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
@@ -865,7 +876,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor/crafting
 	name = "Wasteland Vending Machine - Crafting"
-	icon_state = "generic_idle"
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "seller_crafting"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Sacks of Concrete x 10",			/obj/item/stack/sheet/mineral/concrete/ten,							25),
 		new /datum/data/wasteland_equipment("Art Canvas 19x19",					/obj/item/canvas/nineteenXnineteen,									20),
@@ -889,6 +901,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		
 /obj/machinery/mineral/wasteland_vendor/mining
 	name = "Wasteland Vending Machine - Mining"
+	icon = 'icons/WVM/new_vendors.dmi'
 	icon_state = "generic_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("Pickaxe",					/obj/item/pickaxe,											10),
