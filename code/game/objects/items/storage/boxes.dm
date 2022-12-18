@@ -1436,7 +1436,7 @@ They can have any recipe that they'd realistically have. Armors, Weapons, Meds a
 	desc = "A box used by the BoS to store Blueprints"
 	
 /obj/item/storage/box/bos/PopulateContents()
-	for(1 to 2)
+	for(var/i in 1 to 2)
 		var/randomgun = pick(
 							/obj/item/book/granter/crafting_recipe/blueprint/marksman,
 							/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
