@@ -33,3 +33,9 @@
 	caliber = list(CALIBER_50MG)
 	max_ammo = 4
 	multiload = 0 //one bullet at a time
+
+/obj/item/ammo_box/magazine/internal/boltaction/hobomat
+	ammo_type = /obj/item/ammo_casing/a50MG
+	caliber = list(CALIBER_50MG)
+	max_ammo = 3
+	multiload = 0 //one bullet at a time
