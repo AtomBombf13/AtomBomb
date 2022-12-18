@@ -1,6 +1,6 @@
 /obj/machinery/vending/engivend
-	name = "\improper Engi-Vend"
-	desc = "Spare tool vending. What? Did you expect some witty description?"
+	name = "\improper Schlocket Industries."
+	desc = "Schlocket Industries (also written as simply Schlocket) was a tool and machining company in the pre-War United States."
 	icon_state = "engivend"
 	icon_deny = "engivend-deny"
 	products = list(/obj/item/clothing/glasses/meson/engine = 5,

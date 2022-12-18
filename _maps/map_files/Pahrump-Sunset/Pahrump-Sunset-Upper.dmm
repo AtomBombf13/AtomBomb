@@ -1291,7 +1291,7 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland/khans)
 "cmX" = (
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
 "cnx" = (
@@ -1616,7 +1616,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/leisure)
 "cTb" = (
@@ -7067,7 +7067,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -11719,11 +11719,6 @@
 /area/f13/city)
 "wOD" = (
 /obj/machinery/door/unpowered/securedoor/legion,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
-"wOS" = (
-/obj/structure/bed/mattress,
-/obj/effect/landmark/start/f13/venator,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "wOT" = (
@@ -70534,7 +70529,7 @@ xZD
 pGD
 iEW
 iEW
-wOS
+jmO
 jmO
 xZD
 noT
@@ -72590,7 +72585,7 @@ xZD
 bxB
 iEW
 iEW
-wOS
+jmO
 jmO
 xZD
 wZn

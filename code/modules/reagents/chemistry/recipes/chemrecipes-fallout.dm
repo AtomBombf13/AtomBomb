@@ -61,7 +61,7 @@
 	name = "Psycho"
 	id = /datum/reagent/drug/psycho
 	results = list(/datum/reagent/drug/psycho = 3)
-	required_reagents = list(/datum/reagent/toxin/acid = 1, /datum/reagent/consumable/cavefungusjuice = 1, /datum/reagent/ash = 1, /datum/reagent/drug/methamphetamine = 1)
+	required_reagents = list(/datum/reagent/toxin/acid = 1, /datum/reagent/consumable/cavefungus_fermented = 1, /datum/reagent/ash = 1, /datum/reagent/drug/methamphetamine = 1)
 	OptimalTempMin 		= 223
 	OptimalTempMax		= 303
 	ExplodeTemp			= 323

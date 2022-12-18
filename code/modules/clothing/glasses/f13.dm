@@ -2,6 +2,7 @@
 
 /obj/item/clothing/glasses/f13
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	icon = 'icons/fallout/clothing/glasses.dmi'
 
 /obj/item/clothing/glasses/f13/biker
 	name = "biker goggles"
@@ -9,19 +10,19 @@
 	icon_state = "biker"
 	item_state = "biker"
 
-/obj/item/clothing/glasses/legiongoggles
+/obj/item/clothing/glasses/legiongoggles // obsolete, marked for death, use the one above?
 	name = "sandstorm goggles"
 	desc = "Simple, tight-fitting goggles useful for protecting your eyes from flying debris."
 	icon_state = "legion"
 	item_state = "legion"
 
-/obj/item/clothing/glasses/legionpolarizing
+/obj/item/clothing/glasses/legionpolarizing // just flash protect version of below, kind of confusing. Old art.
 	icon_state = "legpolarizing"
 	item_state = "legpolarizing"
 	darkness_view = 1
 	flash_protect = 1
 	tint = 1
-
+/* Better version in Legio Invita used
 /obj/item/clothing/glasses/night/polarizing
 	name = "polarizing goggles"
 	desc = "Fancy goggles with rare polarizing glass from some old cache, usually reserved for commanders and a few select scouts."
@@ -30,6 +31,7 @@
 	darkness_view = 12
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
+*/
 
 /obj/item/clothing/glasses/night/f13/enclave
 	name = "\improper pilot goggles"
@@ -45,11 +47,22 @@
 	item_state = "bigsunglasses"
 
 
-//Fallout 13 sunglasses
+//Fallout 13 sunglasses Reason this exists is to inherit armor and correct icon location I guess
 
-/obj/item/clothing/glasses/sunglasses/f13
+/obj/item/clothing/glasses/f13/sunglasses
+	name = "sunglasses"
+	desc = "Makes the strong desert sun a lot more bearable. Some protection against blinding lights is a bonus."
 	icon = 'icons/fallout/clothing/glasses.dmi'
-	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	icon_state = "sun"
+	item_state = "sunglasses"
+	darkness_view = 1
+	flash_protect = 1
+	tint = 1
+	glass_colour_type = /datum/client_colour/glass_colour/gray
+
+/obj/item/clothing/glasses/f13/sunglasses/big
+	icon_state = "bigsunglasses"
+	item_state = "bigsunglasses"
 
 
 //Fallout 13 thermals

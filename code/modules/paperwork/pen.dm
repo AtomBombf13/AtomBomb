@@ -11,8 +11,8 @@
  * Pens
  */
 /obj/item/pen
-	desc = "It's a normal black ink pen. Alt-click to change your grip on the pen."
 	name = "pen"
+	desc = "It's a normal black ink pen. Alt-click to change your grip on the pen."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "pen"
 	item_state = "pen"
@@ -96,7 +96,7 @@
 	category = CAT_PRIMAL
 
 /obj/item/pen/fountain/captain
-	name = "captain's fountain pen"
+	name = "expensive fountain pen"
 	desc = "It's an expensive Oak fountain pen. The nib is quite sharp."
 	icon_state = "pen-fountain-o"
 	force = 5

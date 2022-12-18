@@ -396,7 +396,7 @@
 
 /obj/item/projectile/beam/laser/pistol/wattz/hitscan //hitscan wattz
 	name = "weak laser beam"
-	damage = 10
+	damage = 12
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	hitscan = TRUE
@@ -406,10 +406,10 @@
 
 /obj/item/projectile/beam/laser/pistol/wattz/magneto/hitscan
 	name = "penetrating laser beam"
-	damage = 15
+	damage = 12
 	hitscan = TRUE
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -418,7 +418,7 @@
 	name = "laser beam"
 	damage = 15
 	armour_penetration = BULLET_PENETRATION_HEAVY
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
