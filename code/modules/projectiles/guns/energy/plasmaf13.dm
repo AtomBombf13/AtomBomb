@@ -142,6 +142,11 @@
 /obj/item/gun/ballistic/automatic/pistol/plasma
 	name ="short plasma gun"
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one loads plasma canisters rather than the usual MF cell."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	item_state = "plasma-pistol"
+	icon_state = "plasmafo4"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/fo4plasma
 	damage_multiplier = 0.5 //30 damage, with 30 shots it probably should not deal 60 damage
 
