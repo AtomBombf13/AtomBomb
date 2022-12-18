@@ -539,7 +539,7 @@
 	/datum/crafting_recipe/gun/knucklegun
 	name = "Knucklegun (.45)"
 	result = /obj/item/gun/ballistic/revolver/hobo/knucklegun
-	reqs = list(/obj/item/stack/metal = 5,
+	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/rods = 4,
 				/obj/item/ammo_casing/c45 = 4,
 				/obj/item/stack/crafting/metalparts = 1)
