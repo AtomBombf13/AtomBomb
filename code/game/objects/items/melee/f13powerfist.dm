@@ -91,7 +91,7 @@
 	item_state = "mole_miner_g"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	hitsound = 'sound/weapons/bap.ogg'
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	force = 15
 	throw_distance = 5
 	throwforce = THROWING_POOR
