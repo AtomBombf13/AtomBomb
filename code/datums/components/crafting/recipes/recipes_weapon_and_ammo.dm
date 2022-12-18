@@ -524,7 +524,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	
-/datum/crafting_recipe/gun/zipgun
+/datum/crafting_recipe/gun/knifegun
 	name = "Knife gun (.44)"
 	result = /obj/item/gun/ballistic/revolver/hobo/knifegun
 	reqs = list(/obj/item/scalpel = 1,
@@ -536,7 +536,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 	
-	/datum/crafting_recipe/gun/zipgun
+	/datum/crafting_recipe/gun/knucklegun
 	name = "Knucklegun (.45)"
 	result = /obj/item/gun/ballistic/revolver/hobo/knucklegun
 	reqs = list(/obj/item/stack/metal = 5,
