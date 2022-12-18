@@ -179,7 +179,7 @@ Access
 	backpack_contents = list(
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/ammo_box/magazine/m762 = 3,
-		/obj/item/melee/powerfist/f13/goliath = 1,
+		/obj/item/melee/unarmed/powerfist/goliath = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2
 		)
@@ -1138,7 +1138,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
 	r_pocket = /obj/item/storage/bag/money/small/legion
 	l_pocket = /obj/item/flashlight/lantern
-	r_hand = /obj/item/melee/powerfist/f13/goliath
+	r_hand = /obj/item/melee/unarmed/powerfist/goliath
 	l_hand = /obj/item/tank/internals/oxygen
 	backpack = null
 	satchel = null
