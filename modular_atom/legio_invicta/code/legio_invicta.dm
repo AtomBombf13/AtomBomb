@@ -232,7 +232,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 
-/obj/item/melee/unarmed/powerfist/goliath
+/obj/item/melee/powerfist/f13/goliath
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
 	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'

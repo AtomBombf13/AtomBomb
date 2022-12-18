@@ -194,7 +194,7 @@ Head Paladin
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/melee/unarmed/powerfist = 1,
+		/obj/item/melee/powerfist/f13 = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
@@ -471,7 +471,7 @@ Senior Paladin
 /datum/outfit/loadout/spaladind
 	name = "Senior Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/unarmed/powerfist = 1,
+		/obj/item/melee/powerfist/f13 = 1,
 		/obj/item/twohanded/sledgehammer/supersledge = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
 		
@@ -550,7 +550,7 @@ Paladin
 /datum/outfit/loadout/paladind
 	name = "Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/unarmed/powerfist = 1,
+		/obj/item/melee/powerfist/f13 = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/clothing/accessory/bos/paladin = 1
