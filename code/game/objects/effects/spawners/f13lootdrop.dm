@@ -482,9 +482,11 @@
 
 /obj/effect/spawner/lootdrop/f13/medical
 	name = "medical spawners - DO NOT USE THIS"
+	icon_state = "debug_loot"
 
 /obj/effect/spawner/lootdrop/f13/medical/surgical
 	name = "surgical item spawner"
+	icon_state = "surgery_loot"
 	lootcount = 1
 
 	loot = list(
@@ -502,6 +504,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/surgical/blood
 	name = "blood spawner"
+	icon_state = "blood_loot"
 	lootcount = 1
 
 	loot = list(
@@ -513,6 +516,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/equipment
 	name = "vault medical equipment spawner"
+	icon_state = "vaultmed_loot"
 	lootcount = 1
 
 	loot = list(
@@ -524,6 +528,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
 	name = "vault medical meds spawner"
+	icon_state = "med_loot"
 	lootcount = 1
 
 	loot = list(
@@ -538,6 +543,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds //remove equipment, has nothing on it
 	name = "wasteland meds spawner"
+	icon_state = "med_loot"
 	lootcount = 1
 
 	loot = list(/obj/item/reagent_containers/pill/patch/healingpowder,
@@ -552,6 +558,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug //remove equipment, has nothing on it
 	name = "wasteland drugs spawner"
+	icon_state = "chem_loot"
 	lootcount = 1
 
 	loot = list(
@@ -567,6 +574,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/rnd/mid
 	name = "mid dungeon science loot"	//to replace guns as treasure in slightly protected areas
+	icon_state = "sci1_loot"
 	lootcount = 1
 
 	loot = list(
@@ -583,6 +591,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	name = "good dungeon science loot"	//to replace guns as treasure in heavily guarded areas
+	icon_state = "sci2_loot"
 	lootcount = 1
 
 	loot = list(
@@ -605,6 +614,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/random_fev
 	name = "random FEV bottle"	//for when you can't decide what is worse
+	icon_state = "fev_loot"
 	lootcount = 1
 
 	loot = list(
@@ -2092,6 +2102,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/cash_random_low
 	name = "low value cash spawner"
+	icon_state = "money_loot"
 	lootcount = 1
 
 	loot = list(
@@ -2103,6 +2114,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/cash_random_med
 	name = "medium value cash spawner"
+	icon_state = "money_loot"
 	lootcount = 1
 
 	loot = list(
@@ -2122,6 +2134,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/cash_random_high
 	name = "high value cash spawner"
+	icon_state = "money_loot"
 	lootcount = 1
 
 	loot = list(
