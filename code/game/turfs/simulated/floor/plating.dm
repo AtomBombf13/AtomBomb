@@ -67,6 +67,8 @@
 					to_chat(user, span_notice("You reinforce the floor."))
 				return
 
+/* Atom Bomb Edit: glass floors disabled
+
 	if(istype(C, /obj/item/stack/sheet/glass))
 		if(broken || burnt)
 			to_chat(user, span_warning("Repair the plating first!"))
@@ -101,6 +103,7 @@
 					RG.use(2)
 					to_chat(user, span_notice("You add reinforced glass to the floor."))
 				return
+*/
 
 	else if(istype(C, /obj/item/stack/tile))
 		if(!broken && !burnt)
