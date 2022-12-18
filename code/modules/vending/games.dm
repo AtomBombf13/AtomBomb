@@ -1,7 +1,7 @@
 /obj/machinery/vending/games
-	name = "\improper Good Clean Fun"
-	desc = "Vends things that the Captain is probably not going to appreciate you fiddling with instead of your job..."
-	product_ads = "Escape to a fantasy world!;Fuel your gambling addiction!;Ruin your friendships!;Roll for initiative!;Elves and dwarves!;Paranoid computers!;Totally not satanic!;Fun times forever!"
+	name = "\improper Cat's Paw"
+	desc = "Cat's Paw was a pre-War publisher of adult magazines and other entertainment items in the United States."
+	product_ads = "Escape the real world for a bit!;Fuel your gambling addiction!;Ruin your friendships!;Paranoid people!;Totally not illegal!;Fun times forever!"
 	icon_state = "games"
 	products = list(/obj/item/toy/cards/deck = 5,
 					/obj/item/storage/box/dice = 10,
@@ -18,5 +18,5 @@
 	cost_multiplier_per_dept = list(ACCOUNT_SRV = 0)
 
 /obj/item/vending_refill/games
-	machine_name = "\improper Good Clean Fun"
+	machine_name = "\improper Cat's Paw"
 	icon_state = "refill_games"

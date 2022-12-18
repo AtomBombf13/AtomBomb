@@ -21,7 +21,7 @@
 
 /obj/structure/flora/timber
 	name = "old timber"
-	desc = "A slightly decayed piece of timber"
+	desc = "A slightly decayed piece of timber."
 	icon = 'icons/obj/flora/twigs.dmi'
 	icon_state = "timber"
 	anchored = TRUE
@@ -35,28 +35,28 @@
 
 /obj/structure/flora/branch
 	name = "branch"
-	desc = "pokey"
+	desc = "A tree branch."
 	icon = 'icons/obj/flora/twigs.dmi'
 	icon_state = "branch"
 	anchored = TRUE
 
 /obj/structure/flora/branch_broken
 	name = "broken branch"
-	desc = "pokey."
+	desc = "A broken branch."
 	icon = 'icons/obj/flora/twigs.dmi'
 	icon_state = "branch_broken"
 	anchored = TRUE
 
 /obj/structure/flora/brushwood
 	name = "brush wood"
-	desc = "several pokeys"
+	desc = "Several small branches."
 	icon = 'icons/obj/flora/twigs.dmi'
 	icon_state = "brushwood"
 	anchored = TRUE
 
 /obj/structure/flora/brushwoodalt
 	name = "brush wood"
-	desc = "several pokeys"
+	desc = "Several small branches."
 	icon = 'icons/obj/flora/twigs.dmi'
 	icon_state = "brushwood_alt"
 	anchored = TRUE
@@ -64,77 +64,77 @@
 //stuff from CIV 13
 /obj/structure/flora/tree/oak_one
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "tree_1"
 	anchored = TRUE
 
 /obj/structure/flora/tree/oak_two
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "tree_2"
 	anchored = TRUE
 
 /obj/structure/flora/tree/oak_three
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "tree_3"
 	anchored = TRUE
 
 /obj/structure/flora/tree/oak_four
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "tree_4"
 	anchored = TRUE
 
 /obj/structure/flora/tree/oak_five
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "tree_5"
 	anchored = TRUE
 
 /obj/structure/flora/tree/cactus_alt
 	name = "cactus"
-	desc = "least this one doesn't talk"
+	desc = "A cactus, watch out for the thornes!"
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "cactus"
 	anchored = TRUE
 
 /obj/structure/flora/tree/african_acacia
 	name = "acacia tree"
-	desc = "That sure is a tree."
+	desc = "That's a tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "african_acacia"
 	anchored = TRUE
 
 /obj/structure/flora/tree/african_acacia_dead
 	name = "acacia tree"
-	desc = "That sure is a tree."
+	desc = "That's a tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "african_acacia_dead"
 	anchored = TRUE
 
 /obj/structure/flora/tree/african_acacia_alt
 	name = "acacia tree"
-	desc = "That sure is a tree."
+	desc = "That's a tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "african_acaciaX"
 	anchored = TRUE
 
 /obj/structure/flora/tree/med_pine
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "med_pine"
 	anchored = TRUE
 
 /obj/structure/flora/tree/med_pine_dead
 	name = "tree"
-	desc = "woody"
+	desc = "A tree."
 	icon = 'modular_coyote/icons/objects/flora.dmi'
 	icon_state = "med_pine_dead"
 	anchored = TRUE
