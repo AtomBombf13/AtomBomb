@@ -1442,7 +1442,6 @@ They can have any recipe that they'd realistically have. Armors, Weapons, Meds a
 							/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
 							/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 							/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-							/obj/item/book/granter/crafting_recipe/blueprint/infiltrator,
 							/obj/item/book/granter/crafting_recipe/blueprint/aer9,
 							/obj/item/book/granter/crafting_recipe/blueprint/aep7,
 							/obj/item/book/granter/crafting_recipe/blueprint/lsw,
