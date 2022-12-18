@@ -639,9 +639,8 @@ Senior Scribe
 /datum/outfit/loadout/seniorscribebs
 	name = "Senior Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/storage/belt/utility/bos = 1,
 		/obj/item/clothing/gloves/color/yellow = 1,
-		/obj/item/blueprint/research = 3,
+		/obj/item/blueprint/research = 5,
 		/obj/item/clothing/gloves/color/yellow = 1,
 		/obj/item/storage/box/bos = 1
 		)
