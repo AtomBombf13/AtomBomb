@@ -7,7 +7,7 @@
 	access = list(ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS)
 	minimal_access = list(ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS)
 	forbids = "The Brotherhood of Steel Forbids: Unethical human experimentation. Violence beyond what is needed to accomplish Brotherhood goals, and cruel torture or experiments on the minds or bodies of prisoners."
-	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
+	enforces = "The Brotherhood of Steel Expects: Obeying the Codex - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research. https://docs.google.com/document/d/1muRNg7-7QwH7rf8Uw7nYNUgp16_v1ETGz624TejHAH0/edit?usp=sharing"
 
 	objectivesList = list(
 		"Leadership recommends the following goal for this week: Establish an outpost at the radio tower",
@@ -279,6 +279,7 @@ Head Scribe
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/energy/laser/plasma/glock = 1,
+		/obj/item/storage/box/bos = 1
 		)
 
 /*
@@ -397,7 +398,7 @@ Senior Paladin
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //5mm minigun
-		/datum/outfit/loadout/spaladinc,  //Aer14 + pistol
+		/datum/outfit/loadout/spaladinc,  //Aer12 + pistol
 		/datum/outfit/loadout/spaladind //Sledge and fist
 		)
 
@@ -460,10 +461,8 @@ Senior Paladin
 /datum/outfit/loadout/spaladind
 	name = "Senior Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
 		/obj/item/twohanded/sledgehammer/supersledge = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
-		
 		)
 
 
@@ -478,7 +477,7 @@ Paladin
 	total_positions = 2
 	spawn_positions = 2
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
-	supervisors = "the Head Paladin"
+	supervisors = "the Head Paladin and the Senior Paladin"
 	exp_requirements = 1200
 
 	loadout_options = list(
@@ -600,10 +599,16 @@ Senior Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2k)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz1k)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/magnetowattz)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 
 /datum/outfit/job/bos/f13seniorscribe
 	name =	"Senior Scribe"
@@ -623,21 +628,22 @@ Senior Scribe
 /datum/outfit/loadout/seniorscribefs
 	name = "Senior Field Scribe"
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/CMO=1,
-		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
-		/obj/item/defibrillator/compact=1,
-		/obj/item/clothing/gloves/color/latex=1,
-		/obj/item/storage/belt/medical/surgery_belt_adv=1
+		/obj/item/reagent_containers/hypospray/CMO = 1,
+		/obj/item/clothing/glasses/hud/health = 1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat = 1,
+		/obj/item/defibrillator/compact = 1,
+		/obj/item/clothing/gloves/color/latex = 1,
+		/obj/item/storage/belt/medical/surgery_belt_adv = 1
 		)
 
 /datum/outfit/loadout/seniorscribebs
 	name = "Senior Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/storage/belt/utility/bos=1,
-		/obj/item/clothing/gloves/color/yellow=1,
-		/obj/item/blueprint/research=6,
-		/obj/item/clothing/gloves/color/yellow=1
+		/obj/item/storage/belt/utility/bos = 1,
+		/obj/item/clothing/gloves/color/yellow = 1,
+		/obj/item/blueprint/research = 3,
+		/obj/item/clothing/gloves/color/yellow = 1,
+		/obj/item/storage/box/bos = 1
 		)
 
 
@@ -712,10 +718,16 @@ Scribe
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/booster)
+
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 
 
 //	You gotta be a bunker scribe before fieldscribe
@@ -793,8 +805,8 @@ Senior Knight
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/commando)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
@@ -875,7 +887,9 @@ Knight
 	/datum/outfit/loadout/knighta, //AER9 J
 	/datum/outfit/loadout/knightc, //AER9 S
 	/datum/outfit/loadout/knightb, //Shishkebab J
-	/datum/outfit/loadout/knightd //Shishkebab
+	/datum/outfit/loadout/knightd, //Shishkebab
+	/datum/outfit/loadout/knighte, //GnB 3/4 + Full toolbelt
+	/datum/outfit/loadout/knightf, //GnB 3/4 + Full toolbelt
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -901,12 +915,9 @@ Knight
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
-	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
 		H.mind.teach_crafting_recipe(recipe)
 
@@ -962,6 +973,26 @@ Knight
 		/obj/item/clothing/accessory/bos/knight = 1,
 		/obj/item/shishkebabpack = 1,
 		/obj/item/shield/riot/bullet_proof = 1
+		)
+
+/datum/outfit/loadout/knighte
+	name = "Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
+		)
+
+/datum/outfit/loadout/knightf
+	name = "Junior Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_three = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1
 		)
 /*
 Initiate

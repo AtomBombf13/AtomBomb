@@ -1425,3 +1425,32 @@ list(/obj/item/stack/sheet/metal = 20,
 							/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
 							)
 		new randomgun(src)
+
+/* Gives this to the HS as a pre-set and SS as a loadout
+Make sure not to give them shit thats TOO good. Please.
+They can have any recipe that they'd realistically have. Armors, Weapons, Meds anything you think is good for a scribe
+*/
+
+/obj/item/storage/box/bos
+	name = "Dusty Blueprints"
+	desc = "A box used by the BoS to store Blueprints"
+	
+/obj/item/storage/box/bos/PopulateContents()
+	for(var/i in 1 to 2)
+		var/randomgun = pick(
+							/obj/item/book/granter/crafting_recipe/blueprint/marksman,
+							/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
+							/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
+							/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
+							/obj/item/book/granter/crafting_recipe/blueprint/rcw,
+							/obj/item/book/granter/crafting_recipe/blueprint/infiltrator,
+							/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+							/obj/item/book/granter/crafting_recipe/blueprint/aep7,
+							/obj/item/book/granter/crafting_recipe/blueprint/lsw,
+							/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
+							/obj/item/book/granter/crafting_recipe/blueprint/r84,
+							/obj/item/blueprint/research,
+							)
+		new randomgun(src)	
+
+	
