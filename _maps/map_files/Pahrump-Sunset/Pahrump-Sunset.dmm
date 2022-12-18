@@ -59482,7 +59482,7 @@
 	},
 /area/f13/ncr)
 "uJp" = (
-/obj/machinery/mineral/wasteland_vendor/attachments
+/obj/machinery/mineral/wasteland_vendor/attachments,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
