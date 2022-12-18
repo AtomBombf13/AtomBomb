@@ -514,10 +514,10 @@
 	..()
 
 /obj/item/gun/ballistic/rifle/hobo/hobomat/attackby(obj/item/A, mob/user, params)
-    ..()
-    if(istype(A, /obj/item/wrench))
-        if(do_after(user, 20, target = src))
-            pump(user, TRUE)
+	..()
+	if(istype(A, /obj/item/wrench))
+		if(do_after(user, 20, target = src))
+			pump(user, TRUE)
 
 /obj/item/gun/ballistic/rifle/hobo/hobomat/update_icon_state()
 	if(chambered)
