@@ -661,7 +661,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /obj/machinery/mineral/wasteland_vendor/weapons
 	name = "Wasteland Vending Machine - Weapons"
 	icon = 'icons/WVM/new_vendors.dmi'
-	icon_state = "seller_weapoms"
+	icon_state = "seller_weapons"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							70),
 		new /datum/data/wasteland_equipment(".22 Pistol",					/obj/item/gun/ballistic/automatic/pistol/pistol22,					30),
