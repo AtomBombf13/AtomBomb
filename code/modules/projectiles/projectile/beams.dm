@@ -297,17 +297,6 @@
 	hitscan = TRUE
 	pixels_per_second = TILES_TO_PIXELS(50)
 
-//plasma caster
-/obj/item/projectile/f13plasma/plasmacaster
-	name = "plasma bolt"
-	icon_state = "plasma_clot"
-	damage_type = BURN
-	damage = 60
-	flag = "energy"
-	eyeblur = 0
-	is_reflectable = TRUE
-	pixels_per_second = TILES_TO_PIXELS(50)
-
 //Securitrons Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 15 //quantity over quality
@@ -520,7 +509,7 @@
 
 /obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
 	damage = 7
-	
+
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
 	damage = 10
@@ -590,6 +579,22 @@
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second =  TILES_TO_PIXELS(10) //same as 40mm grenade
+
+
+//ghetoo plasma rounds
+/obj/item/projectile/f13plasma/plasmaghetto
+	name = "plasma bolt"
+	icon_state = "plasma_clot"
+	damage_type = BURN
+	armour_penetration = 0
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM //-4 threshold
+	damage = 60 //it burns!!
+	flag = "energy"
+	wound_bonus = 50 //higher wounding than real plasma rifle
+	bare_wound_bonus = 10
+	eyeblur = 0
+	is_reflectable = TRUE
+	pixels_per_second = TILES_TO_PIXELS(50) //way faster than regular plasma for soem reason
 
 /obj/item/projectile/plasmacarbine //urban plasma rifle
 	name = "plasma bolt"
