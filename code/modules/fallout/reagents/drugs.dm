@@ -5,6 +5,7 @@
 	overdose_threshold = 20
 	addiction_threshold = 12.5
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/drug/jet/on_mob_add(mob/living/carbon/human/M)
 	..()
@@ -93,6 +94,7 @@
 	addiction_threshold = 9
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)
 	..()
@@ -179,7 +181,7 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
-
+	can_synth = FALSE
 
 /datum/reagent/drug/psycho/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("<br><font color='#FF0000'><b>FUCKING KILL!</b></font>", "<br><font color='#FF0000'><b>RAAAAR!</b></font>", "<br><font color='#FF0000'><b>BRING IT!</b></font>")
@@ -283,6 +285,7 @@
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/drug/buffout/on_mob_add(mob/living/carbon/human/M)
 	..()
@@ -384,6 +387,7 @@
 	addiction_threshold = 9 //Addicted on the first dose
 	metabolization_rate = 0.8 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/drug/steady/on_mob_add(mob/living/M)
 	..()
