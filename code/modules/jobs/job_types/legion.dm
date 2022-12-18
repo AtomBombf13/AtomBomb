@@ -21,6 +21,13 @@ Access
 			All Access for every role in every faction: ACCESS_PUBLIC 284
 */
 
+
+			//////////////////////////////
+			//							//
+//----------// 		GENERAL TEMPLATES	//-----------------------
+			//							//
+			//////////////////////////////
+
 /datum/job/CaesarsLegion
 	department_flag = LEGION
 	selection_color = "#fdb8b8"
@@ -36,8 +43,8 @@ Access
 	minimal_access = list(ACCESS_LEGION)
 
 /datum/outfit/job/CaesarsLegion
-	ears = null
-	box = null
+	ears = /obj/item/radio/headset/headset_legion
+	box = /obj/item/storage/survivalkit/legion_rations
 
 /datum/outfit/job/CaesarsLegion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -67,14 +74,12 @@ Access
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/military/legion
-	ears = /obj/item/radio/headset/headset_legion
-	backpack = /obj/item/storage/backpack/explorer
-	satchel = /obj/item/storage/backpack/satchel/explorer
+	backpack = /obj/item/storage/backpack/satchel/explorer
+	satchel = /obj/item/storage/backpack/marching_satchel
 	uniform = /obj/item/clothing/under/f13/legskirt
 	shoes = /obj/item/clothing/shoes/f13/military/legion
 	gloves = /obj/item/clothing/gloves/legion
-	box = /obj/item/storage/survivalkit/tribal
-	box_two = /obj/item/storage/survivalkit/medical/tribal
+	box_two = /obj/item/storage/survivalkit/medical/legion
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -98,118 +103,16 @@ Access
 	ADD_TRAIT(H, TRAIT_FEARLESS, src) //no phobias for legion!
 	ADD_TRAIT(H, TRAIT_BERSERKER, src)
 
-/obj/item/storage/box/legate
-	name = "legate belongings"
-	icon_state = "secbox"
-	illustration = "flashbang"
-
-/obj/item/storage/box/legate/PopulateContents()
-	. = ..()
-	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
-	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
-	new /obj/item/ammo_box/magazine/pistol14mm(src)
-	new /obj/item/ammo_box/magazine/pistol14mm(src)
-	new /obj/item/ammo_box/magazine/pistol14mm(src)
 
 
-///////////////////
-/// Admin Roles ///
-///////////////////
 
-// LEGATE
+//......................//////////////////////////////////................................................
+						//								//
+						// 		LEGION OFFICERS			//
+						//								//
+						//////////////////////////////////
 
-/datum/job/CaesarsLegion/Legionnaire/f13legate
-	title = "Legion Legate"
-	flag = F13LEGATE
-	head_announce = list("Security")
-	supervisors = "Caesar"
-	selection_color = "#ff8f8f"
-	req_admin_notify = 1
-	total_positions = 0
-	spawn_positions = 0
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legate
-	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
-	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13legate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	if(H.mind)
-		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
-		H.mind.AddSpell(S)
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13legate	// 14mm Pistol, Goliath
-	name = "Legate"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legate
-	shoes =	/obj/item/clothing/shoes/f13/military/legate
-	suit = /obj/item/clothing/suit/armor/heavy/legion/legate
-	head = /obj/item/clothing/head/helmet/f13/legion/legate
-	gloves = /obj/item/clothing/gloves/legion/legate
-	glasses = /obj/item/clothing/glasses/sunglasses/big
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
-	r_pocket = /obj/item/storage/bag/money/small/legion
-	l_pocket = /obj/item/flashlight/lantern
-	r_hand = /obj/item/melee/powerfist/f13/goliath
-	l_hand = /obj/item/tank/internals/oxygen
-	backpack = null
-	satchel = null
-	ears = /obj/item/radio/headset/headset_legion/cent
-	box = /obj/item/storage/box/legate
-
-
-// ORATOR
-
-/datum/job/CaesarsLegion/Legionnaire/f13orator
-	title = "Legion Orator"
-	flag = F13ORATOR
-	supervisors = "Centurion"
-	total_positions = 1
-	spawn_positions = 1
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
-	display_order = JOB_DISPLAY_ORDER_ORATOR
-	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
-	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
-	exp_requirements = 750
-
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// .357 Revolver, Spatha
-	name = "Orator"
-	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
-	neck = /obj/item/storage/belt/holster
-	shoes = /obj/item/clothing/shoes/f13/military/plated
-	suit = /obj/item/clothing/suit/armor/medium/legion/orator
-	id = /obj/item/card/id/dogtag/legorator
-	gloves = null
-	backpack = /obj/item/storage/backpack/legionr
-	suit_store = /obj/item/gun/ballistic/revolver/colt357
-	r_pocket = /obj/item/storage/bag/money/small/legofficers
-	l_pocket = /obj/item/flashlight/lantern
-	l_hand = /obj/item/melee/onehanded/machete/spatha
-	backpack_contents = list(
-		/obj/item/binoculars = 1,
-		/obj/item/ammo_box/loader/a357 = 2,
-		/obj/item/reagent_containers/pill/bitterdrink = 2
-		)
-
-/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
-
-/////////////////
-//// Officers ///
-/////////////////
-
-// CENTURION
+// ----------------- CENTURION ---------------------
 
 /datum/job/CaesarsLegion/Legionnaire/f13centurion
 	title = "Legion Centurion"
@@ -250,17 +153,15 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 	name = "Legion Centurion"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13centurion
-	id = /obj/item/card/id/dogtag/legcenturion
-	mask = /obj/item/clothing/mask/bandana/legion/legcenturion
+	id = /obj/item/card/id/dogtag/legion/centurion
+	mask = /obj/item/clothing/mask/bandana/legion/centurion
 	ears = /obj/item/radio/headset/headset_legion/cent
-	neck = /obj/item/storage/belt/holster
 	gloves = /obj/item/clothing/gloves/legion/plated
 	glasses = /obj/item/clothing/glasses/night/polarizing
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/restraints/handcuffs
 	l_pocket = /obj/item/flashlight/lantern
-	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal/adv
+	box_two = /obj/item/storage/survivalkit/medical/legion/advanced
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
@@ -276,6 +177,7 @@ Access
 	head = /obj/item/clothing/head/helmet/f13/legion/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/bar
 	backpack_contents = list(
+		/obj/item/storage/belt/holster = 1,
 		/obj/item/ammo_box/magazine/m762 = 3,
 		/obj/item/melee/powerfist/f13/goliath = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
@@ -288,9 +190,9 @@ Access
 	head = /obj/item/clothing/head/helmet/f13/legion/rangercent
 	suit_store = /obj/item/gun/ballistic/automatic/sniper
 	backpack_contents = list(
+		/obj/item/storage/belt/holster/rugged/revolver_hunting = 1,
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/ammo_box/loader/c4570 = 3,
-		/obj/item/gun/ballistic/revolver/hunting = 1,
 		/obj/item/melee/onehanded/machete/spatha = 1
 		)
 
@@ -300,12 +202,15 @@ Access
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	backpack_contents = list(
+		/obj/item/storage/belt/holster = 1,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
 		/obj/item/ammo_box/magazine/city12g = 3
 		)
 
-// VETERAN DECANUS
+
+
+// ----------------- VETERAN DECANUS ---------------------
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	title = "Legion Veteran Decanus"
@@ -328,7 +233,6 @@ Access
 		/datum/outfit/loadout/decvetbrave // Trench shotgun, .44 revolver, Ballistic fist
 		)
 
-
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -342,17 +246,16 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 	name = "Legion Veteran Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
-	id = /obj/item/card/id/dogtag/legveteran
+	id = /obj/item/card/id/dogtag/legion/veteran
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	suit = /obj/item/clothing/suit/armor/medium/legion/vet
-	mask = /obj/item/clothing/mask/bandana/legion/legdecan
+	mask = /obj/item/clothing/mask/bandana/legion
 	gloves = /obj/item/clothing/gloves/legion/plated
 	ears = /obj/item/radio/headset/headset_legion/cent
-	glasses = /obj/item/clothing/glasses/legionpolarizing
+	glasses = /obj/item/clothing/glasses/f13/sunglasses/big
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/flashlight/lantern
-	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal/adv
+	box_two = /obj/item/storage/survivalkit/medical/legion/advanced
 	backpack_contents = list(
 		/obj/item/ammo_box/loader/a357 = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
@@ -403,7 +306,8 @@ Access
 		)
 
 
-// PRIME DECANUS
+
+// ----------------- PRIME DECANUS ---------------------
 
 /datum/job/CaesarsLegion/Legionnaire/f13decan
 	title = "Legion Prime Decanus"
@@ -445,17 +349,16 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 	name = "Prime Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decan
-	id = /obj/item/card/id/dogtag/legveteran
+	id = /obj/item/card/id/dogtag/legion/prime
 	suit = /obj/item/clothing/suit/armor/light/legion/prime
 	head = /obj/item/clothing/head/helmet/f13/legion/prime/decan
-	mask = /obj/item/clothing/mask/bandana/legion/legdecan
+	mask = /obj/item/clothing/mask/bandana/legion
 	neck = /obj/item/storage/belt/holster
-	glasses = /obj/item/clothing/glasses/legiongoggles
+	glasses = /obj/item/clothing/glasses/f13/goggles_sandstorm
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/flashlight/lantern
 	l_pocket = /obj/item/restraints/handcuffs
-	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal/adv
+	box_two = /obj/item/storage/survivalkit/medical/legion/advanced
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		/obj/item/storage/bag/money/small/legofficers = 1,
@@ -497,7 +400,8 @@ Access
 		)
 
 
-// RECRUIT DECANUS
+
+// ----------------- RECRUIT DECANUS ---------------------
 
 /datum/job/CaesarsLegion/Legionnaire/f13decanrec
 	title = "Legion Recruit Decanus"
@@ -537,14 +441,13 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 	name = "Legion Recruit Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanrec
-	id = /obj/item/card/id/dogtag/legveteran
+	id = /obj/item/card/id/dogtag/legion
 	suit = /obj/item/clothing/suit/armor/light/legion/recruit //That's not how legion ranks work Recruit = Recruit not Prime
 	head = /obj/item/clothing/head/helmet/f13/legion/recruit/decan
-	mask = /obj/item/clothing/mask/bandana/legion/legdecan
-	glasses = /obj/item/clothing/glasses/legiongoggles
+	mask = /obj/item/clothing/mask/bandana/legion/recruit
+	glasses = /obj/item/clothing/glasses/f13/goggles_sandstorm
 	r_pocket = /obj/item/flashlight/lantern
-	box = /obj/item/storage/survivalkit/tribal/chief
-	box_two = /obj/item/storage/survivalkit/medical/tribal
+	box_two = /obj/item/storage/survivalkit/medical/legion/advanced
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
 		/obj/item/restraints/handcuffs = 1,
@@ -576,11 +479,14 @@ Access
 
 
 
-////////////////////
-///Specialist///////
-////////////////////
 
-// VEXILLARIUS
+//......................//////////////////////////////////................................................
+						//								//
+						// 			SPECIALISTS			//
+						//								//
+						//////////////////////////////////
+
+// ----------------- VEXILLARIUS ---------------------
 
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	title = "Legion Vexillarius"
@@ -623,11 +529,11 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	name = "Vexillarius"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
-	id = /obj/item/card/id/dogtag/legveteran
+	id = /obj/item/card/id/dogtag/legion/veteran
 	suit = /obj/item/clothing/suit/armor/medium/legion/vexil
 	shoes = /obj/item/clothing/shoes/f13/military/plated
-	mask = /obj/item/clothing/mask/bandana/legion/legvet
-	glasses = /obj/item/clothing/glasses/legionpolarizing
+	mask = /obj/item/clothing/mask/bandana/legion
+	glasses = /obj/item/clothing/glasses/f13/sunglasses/big
 	gloves = /obj/item/clothing/gloves/legion/plated
 	r_pocket = /obj/item/flashlight/lantern
 	box_two = /obj/item/storage/survivalkit/medical/tribal/adv
@@ -669,7 +575,9 @@ Access
 		/obj/item/melee/onehanded/machete/gladius = 1
 		)
 
-//EXPLORER
+
+
+// ----------------- EXPLORER ---------------------
 
 /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	title = "Legion Explorer"
@@ -710,15 +618,14 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	name = "Legion Explorer"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
-	id = /obj/item/card/id/dogtag/legprime
+	id = /obj/item/card/id/dogtag/legion/prime
 	suit = /obj/item/clothing/suit/armor/light/legion/explorer
 	head = /obj/item/clothing/head/helmet/f13/legion/explorer
-	glasses = /obj/item/clothing/glasses/legiongoggles
-	neck = /obj/item/storage/belt/holster
+	glasses = /obj/item/clothing/glasses/f13/goggles_sandstorm
+	neck = /obj/item/storage/belt/holster/rugged/revolver_45
 	r_pocket = /obj/item/flashlight
 	l_pocket = /obj/item/binoculars
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/revolver45 = 1,
 		/obj/item/ammo_box/loader/acp45 = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
@@ -747,11 +654,61 @@ Access
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
-///////////////////
-////Legionnaires///
-///////////////////
 
-// VETERAN
+
+// ----------------- ORATOR ---------------------
+
+/datum/job/CaesarsLegion/Legionnaire/f13orator
+	title = "Legion Orator"
+	flag = F13ORATOR
+	supervisors = "Centurion"
+	total_positions = 1
+	spawn_positions = 1
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator
+	display_order = JOB_DISPLAY_ORDER_ORATOR
+	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
+	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
+	exp_requirements = 750
+
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// .357 Revolver, Spatha
+	name = "Orator"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
+	neck = /obj/item/storage/belt/holster
+	shoes = /obj/item/clothing/shoes/f13/military/plated
+	suit = /obj/item/clothing/suit/armor/medium/legion/orator
+	id = /obj/item/card/id/dogtag/legion/orator
+	gloves = null
+	backpack = /obj/item/storage/backpack/legionr
+	suit_store = /obj/item/gun/ballistic/revolver/colt357
+	r_pocket = /obj/item/storage/bag/money/small/legofficers
+	l_pocket = /obj/item/flashlight/lantern
+	l_hand = /obj/item/melee/onehanded/machete/spatha
+	backpack_contents = list(
+		/obj/item/binoculars = 1,
+		/obj/item/ammo_box/loader/a357 = 2,
+		/obj/item/reagent_containers/pill/bitterdrink = 2
+		)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13orator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
+
+
+
+
+//......................//////////////////////////////////................................................
+						//								//
+						// 		LEGION WARRIORS			//
+						//								//
+						//////////////////////////////////
+
+// ----------------- VETERAN --------------------- //
 
 /datum/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	title = "Veteran Legionnaire"
@@ -795,11 +752,11 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	name = "Veteran Legionnaire"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/vetlegionnaire
-	id = /obj/item/card/id/dogtag/legveteran
-	mask = /obj/item/clothing/mask/bandana/legion/legvet
+	id = /obj/item/card/id/dogtag/legion/veteran
+	mask = /obj/item/clothing/mask/bandana/legion
 	head = /obj/item/clothing/head/helmet/f13/legion/vet
 	suit = /obj/item/clothing/suit/armor/medium/legion/vet
-	glasses = /obj/item/clothing/glasses/legiongoggles
+	glasses = /obj/item/clothing/glasses/f13/goggles_sandstorm
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	gloves = /obj/item/clothing/gloves/legion/plated
 	r_pocket = /obj/item/flashlight/lantern
@@ -811,7 +768,6 @@ Access
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
 		)
-
 
 /datum/outfit/loadout/vetaxe
 	name = "Enforcer"
@@ -860,7 +816,9 @@ Access
 		/obj/item/restraints/legcuffs/beartrap = 1
 		)
 
-// PRIME
+
+
+// ----------------- PRIME --------------------- //
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	title = "Prime Legionnaire"
@@ -899,25 +857,24 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Prime Legionnaire"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
-	id = /obj/item/card/id/dogtag/legprime
-	mask = /obj/item/clothing/mask/bandana/legion/legprime
+	id = /obj/item/card/id/dogtag/legion/prime
+	mask = /obj/item/clothing/mask/bandana/legion
 	head = /obj/item/clothing/head/helmet/f13/legion/prime
-	neck = /obj/item/storage/belt/holster
 	suit = /obj/item/clothing/suit/armor/light/legion/prime
-	glasses = /obj/item/clothing/glasses/legiongoggles
+	glasses = /obj/item/clothing/glasses/f13/goggles_sandstorm
 	r_pocket = /obj/item/flashlight/lantern
 	l_pocket = /obj/item/restraints/handcuffs
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
-		/obj/item/melee/onehanded/machete/forgedmachete = 1
+		/obj/item/melee/onehanded/machete = 1
 		)
 
 /datum/outfit/loadout/primelancer
 	name = "Guardian"
-	suit_store = /obj/item/gun/ballistic/revolver/colt357
 	r_hand = /obj/item/shield/riot/legion
 	backpack_contents = list(
+		/obj/item/storage/belt/holster/rugged/revolver_357 = 1,
 		/obj/item/ammo_box/loader/a357 = 3,
 		/obj/item/restraints/legcuffs/bola = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2
@@ -942,7 +899,9 @@ Access
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
-// RECRUIT
+
+
+// ----------------- RECRUIT --------------------- //
 
 /datum/job/CaesarsLegion/Legionnaire/f13recleg
 	title = "Recruit Legionnaire"
@@ -980,12 +939,12 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 	name = "Recruit Legionnaire"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13recleg
-	id = /obj/item/card/id/dogtag/legrecruit
+	id = /obj/item/card/id/dogtag/legion
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	suit = /obj/item/clothing/suit/armor/light/legion/recruit
 	head = /obj/item/clothing/head/helmet/f13/legion/recruit
-	mask = /obj/item/clothing/mask/bandana/legion/legrecruit
-	glasses = /obj/item/clothing/glasses/legiongoggles
+	mask = /obj/item/clothing/mask/bandana/legion/recruit
+	glasses = /obj/item/clothing/glasses/f13/goggles_sandstorm
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
@@ -1014,11 +973,14 @@ Access
 
 
 
-//////////////////////
-////Support Roles ////
-//////////////////////
 
-// Camp Follower - Difference intended between off-duty and Camp Follower is that camp followers may vary in background and are EXPECTED to work as an on-duty role.
+//......................//////////////////////////////////................................................
+						//								//
+						// 			SUPPORT ROLES		//
+						//								//
+						//////////////////////////////////
+
+// ----------------- CAMP FOLLOWER --------------------- //
 
 /datum/job/CaesarsLegion/f13campfollower	// Extra materials, Blueprints
 	title = "Camp Follower"
@@ -1043,19 +1005,18 @@ Access
 
 /datum/outfit/job/CaesarsLegion/f13campfollower
 	name = "Camp Follower"
-	id = /obj/item/card/id/dogtag/legforgemaster
+	id = /obj/item/card/id/dogtag/legion/follower
 	ears = /obj/item/radio/headset/headset_legion
 	glasses = /obj/item/clothing/glasses/welding
-	shoes = /obj/item/clothing/shoes/f13/military/plated
-	gloves = null
+	shoes = /obj/item/clothing/shoes/f13/military/legion
 	r_pocket = /obj/item/flashlight/lantern
 	head = /obj/item/clothing/head/f13/auxilia
-	uniform	= /obj/item/clothing/under/f13/legauxiliaf
+	uniform	= /obj/item/clothing/under/f13/legauxilia
+	backpack = /obj/item/storage/backpack/satchel/leather
+	box_two = /obj/item/storage/survivalkit/medical/legion
 	backpack_contents = list(
-		/obj/item/clothing/under/f13/legauxilia = 1,
+		/obj/item/clothing/under/f13/legauxiliaf = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/book/granter/crafting_recipe/bitters = 1,
-		/obj/item/book/granter/trait/mars_teachings = 1
 		)
 
 /datum/outfit/loadout/servant
@@ -1129,10 +1090,83 @@ Access
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/hydra)
 
-/////////////////////
-////Unused Roles ////
-/////////////////////
+
+
+//......................//////////////////////////////////................................................
+						//								//
+						// 			ADMIN ROLES			//
+						//								//
+						//////////////////////////////////
+
+// ----------------- LEGATE --------------------- //
+
+/datum/job/CaesarsLegion/Legionnaire/f13legate
+	title = "Legion Legate"
+	flag = F13LEGATE
+	head_announce = list("Security")
+	supervisors = "Caesar"
+	selection_color = "#ff8f8f"
+	req_admin_notify = 1
+	total_positions = 0
+	spawn_positions = 0
+	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legate
+	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
+	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13legate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
+	ADD_TRAIT(H, TRAIT_IRONFIST, src)
+	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
+	if(H.mind)
+		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
+		H.mind.AddSpell(S)
+
+/datum/outfit/job/CaesarsLegion/Legionnaire/f13legate	// 14mm Pistol, Goliath
+	name = "Legate"
+	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legate
+	shoes =	/obj/item/clothing/shoes/f13/military/legate
+	suit = /obj/item/clothing/suit/armor/heavy/legion/legate
+	head = /obj/item/clothing/head/helmet/f13/legion/legate
+	gloves = /obj/item/clothing/gloves/legion/legate
+	glasses = /obj/item/clothing/glasses/f13/sunglasses/big
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
+	r_pocket = /obj/item/storage/bag/money/small/legion
+	l_pocket = /obj/item/flashlight/lantern
+	r_hand = /obj/item/melee/powerfist/f13/goliath
+	l_hand = /obj/item/tank/internals/oxygen
+	backpack = null
+	satchel = null
+	ears = /obj/item/radio/headset/headset_legion/cent
+	box = /obj/item/storage/box/legate
+
+/obj/item/storage/box/legate
+	name = "legate belongings"
+	icon_state = "secbox"
+	illustration = "flashbang"
+
+/obj/item/storage/box/legate/PopulateContents()
+	. = ..()
+	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
+	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
+	new /obj/item/ammo_box/magazine/pistol14mm(src)
+	new /obj/item/ammo_box/magazine/pistol14mm(src)
+	new /obj/item/ammo_box/magazine/pistol14mm(src)
+
+
+
+
+//......................//////////////////////////////////................................................
+						//								//
+						// 		GRAVEYARD - UNUSED		//
+						//								//
+//......................//////////////////////////////////................................................
+
 
 // Legion Off-Duty - The difference between off-duty and camp follower is that off-duty is NOT expected to do a job.
 
@@ -1154,7 +1188,7 @@ Access
 	name = "Legion Off-Duty"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13immune
 	id = /obj/item/card/id/dogtag/legimmune
-	mask = /obj/item/clothing/mask/bandana/legion/camp
+	mask = /obj/item/clothing/mask/bandana/legion/dark
 	uniform = /obj/item/clothing/under/f13/legskirt
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/f13/military/leather
@@ -1223,7 +1257,7 @@ Access
 /datum/outfit/job/CaesarsLegion/slave
 	name = "Legion Slave"
 	jobtype = /datum/outfit/job/CaesarsLegion/slave
-	id = /obj/item/card/id/legionbrand
+	id = /obj/item/card/id/legion_slave
 	uniform = /obj/item/clothing/under/f13/legslavef
 	neck = /obj/item/electropack/shockcollar
 	shoes =	/obj/item/clothing/shoes/roman

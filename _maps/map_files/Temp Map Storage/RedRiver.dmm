@@ -3427,7 +3427,7 @@
 	},
 /area/f13/city)
 "cyw" = (
-/obj/item/clothing/glasses/legiongoggles{
+/obj/item/clothing/glasses/f13/biker{
 	pixel_y = -6
 	},
 /obj/item/clothing/glasses/cold{
@@ -12403,7 +12403,7 @@
 /area/f13/wasteland)
 "jgM" = (
 /obj/effect/decal/remains/human,
-/obj/item/clothing/mask/bandana/legion/legrecruit,
+/obj/item/clothing/mask/bandana/legion,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/caves)
 "jhh" = (
