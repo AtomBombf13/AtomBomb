@@ -1,7 +1,7 @@
 /*
 NCR Design notes:
 Standard issue stuff to keep the theme visually and gameplay and avoid watering down.
-Gloves		Officers - Leather glovesl, fingerless leather gloves for sergeants. Bayonet standard issue knife. Sidearms mostly for officers, 9mm is the standard. MP gets nonstandard pot helm, the exception to prove the rule.
+Gloves		Officers - Leather gloves, fingerless leather gloves for sergeants. Bayonet standard issue knife. Sidearms mostly for officers, 9mm is the standard. MP gets nonstandard pot helm, the exception to prove the rule.
 			NCOs -		Fingerless gloves
 			Rest -		No gloves
 Knives		Army -		Bayonet
@@ -11,7 +11,7 @@ Money		Commanding Officer (LT and CAP) - "small" money bag
 			Rest - /obj/item/storage/bag/money/small/ncrenlisted
 Sidearm		Officers & a few specialists - 9mm pistol
 Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
-			Don't use Greaseguns, Lever shotguns, Police shotguns, Berettas, Hunting knives
+			Don't use Lever shotguns, Police shotguns, Berettas, Hunting knives
 Access
 			NCR Clearance 0 (All Access) - ACCESS_NCR 121
 			NCR Clearance 1 (E1-E4) - ACCESS_NCR1 256
@@ -310,7 +310,7 @@ Access
 		/datum/outfit/loadout/sergeantrifleman,	// Worn Assault Carbine
 		/datum/outfit/loadout/sergeantrecon, // Scout Carbine, Trekking
 		/datum/outfit/loadout/sergeantcqc, // Trench Shotgun, Gas mask, Smoke bombs, Trench knife
-		/datum/outfit/loadout/sergeanttechnical //Head MP
+		/datum/outfit/loadout/sergeantmp // Head MP
 		)
 
 	matchmaking_allowed = list(
@@ -376,20 +376,24 @@ Access
 	suit_store = /obj/item/gun/ballistic/shotgun/trench //Over thereee over thereeeee spread the spread the word over thereeee
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/ammo_box/shotgun/incendiary = 1,
 		/obj/item/clothing/mask/gas = 1,
 		/obj/item/grenade/smokebomb = 2,
-		/obj/item/melee/onehanded/knife/bayonet = 1
+		/obj/item/melee/onehanded/knife/trench = 1,
+		/obj/item/book/granter/trait/rifleman = 1
 		)
 
-/datum/outfit/loadout/sergeanttechnical
+/datum/outfit/loadout/sergeantmp
 	name = "Military Police Provost"
 	head = /obj/item/clothing/head/f13/ncr/mp
+	suit_store = /obj/item/gun/ballistic/shotgun/police
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
-		/obj/item/ammo_box/magazine/pistol45 = 2,
+		/obj/item/ammo_box/shotgun/bean = 2,
+		/obj/item/clothing/accessory/armband/black = 1,
 		/obj/item/melee/classic_baton/militarypolice = 1,
-		/obj/item/ammo_box/magazine/m5mm = 1,
-		/obj/item/cosmetics/razor = 1
+		/obj/item/megaphone = 1,
+		/obj/item/restraints/legcuffs = 3,
+		/obj/item/storage/box/handcuffs = 1
 		)
 
 // REPRESENATIVE
