@@ -74,8 +74,8 @@
 /datum/crafting_recipe/bitterdrink
 	name = "Bitterdrink"
 	result = /obj/item/reagent_containers/pill/bitterdrink
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
 				/obj/item/reagent_containers/glass/beaker = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
@@ -85,8 +85,8 @@
 /datum/crafting_recipe/bitterdrink5
 	name = "Batch of bitterdrinks (x5)"
 	result = /obj/item/storage/box/medicine/bitterdrink5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
 				/obj/item/reagent_containers/glass/beaker = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 20
@@ -117,8 +117,8 @@
 /datum/crafting_recipe/stimpak // Heals the same amount as healing powder and bitters for its material cost, just more refined and faster.
 	name = "Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
 				/obj/item/reagent_containers/syringe = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
@@ -138,8 +138,8 @@
 /datum/crafting_recipe/stimpak5
 	name = "Stimpak x5"
 	result = /obj/item/storage/box/medicine/stimpaks/stimpaks5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
 				/obj/item/reagent_containers/syringe = 5)
 	tools = list(TOOL_WORKBENCH)
 	time = 20

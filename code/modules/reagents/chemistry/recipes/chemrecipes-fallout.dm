@@ -6,7 +6,7 @@
 	results = list(/datum/reagent/medicine/mentat = 3)
 	required_reagents = list(/datum/reagent/medicine/neurine = 1, /datum/reagent/cellulose = 1)
 	required_temp = 451
-
+/*
 /datum/chemical_reaction/stimfluid
 	name = "stimfluid"
 	id = /datum/reagent/medicine/stimpak
@@ -18,7 +18,7 @@
 		/datum/reagent/medicine/silver_sulfadiazine = 5, 
 		)
 	required_temp = 451
-
+*/
 // F13: Drugs 
 
 /datum/chemical_reaction/jet
@@ -97,7 +97,7 @@
 	name = "Med-X"
 	id = /datum/reagent/medicine/medx
 	results = list(/datum/reagent/medicine/medx = 4)
-	required_reagents = list(/datum/reagent/drug/aranesp = 1, /datum/reagent/phenol = 1, /datum/reagent/drug/heroin = 1, /datum/reagent/medicine/stimpak = 1)
+	required_reagents = list(/datum/reagent/drug/aranesp = 1, /datum/reagent/phenol = 1, /datum/reagent/drug/heroin = 1, /datum/reagent/medicine/sal_acid = 1)
 	OptimalTempMin 		= 780
 	OptimalTempMax		= 821
 	ExplodeTemp			= 824
