@@ -34,10 +34,16 @@
 //////////////////////
 
 /obj/item/melee/onehanded/machete					//	[ Damage SWORD, Wounding] --------------
-	name = "simple machete"
+	name = "lawnmower machete"
 	desc = "A makeshift machete made of a lawn mower blade."
-	icon_state = "machete_imp"
-	item_state = "salvagedmachete"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/beltslot.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "machete_lawnmower"
+	item_state = "machete_lawnmower"
+//	icon_state = "machete_imp"
+//	item_state = "salvagedmachete"
 	force = WEAPON_FORCE_SWORD
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_MODEST
@@ -48,6 +54,7 @@
 	name = "machete"
 	desc = "A forged machete made of high quality steel."
 	icon_state = "machete"
+	item_state = "machete"
 	force = WEAPON_FORCE_SWORD
 	block_chance = 8
 
@@ -55,6 +62,7 @@
 	name = "training machete"
 	desc = "A training machete made of tough wood."
 	icon_state = "machete_training"
+	item_state = "machete_training"
 	force = 1
 	throwforce = THROWING_PATHETIC
 	wound_bonus = -20
@@ -86,6 +94,9 @@
 /obj/item/melee/onehanded/machete/scrapsabre		//	[ Damage SWORD, Wounding, Block] --------
 	name = "scrap sabre"
 	desc = "Made from materials found in the wastes, a skilled blacksmith has turned it into a thing of deadly beauty."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "scrapsabre"
 	item_state = "scrapsabre"
 	force = WEAPON_FORCE_SWORD
@@ -647,8 +658,8 @@
 	if(ishuman(user) && slot == SLOT_GLOVES)
 		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
 		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagehigh = force + 8 //The +8 damage is what brings up your punch damage to the unarmed weapon's force fully
-			H.dna.species.punchdamagelow = force + 8
+			H.dna.species.punchdamagehigh = force
+			H.dna.species.punchdamagelow = force
 			H.dna.species.attack_sound = hitsound
 			if(sharpness == SHARP_POINTY || sharpness ==  SHARP_EDGED)
 				H.dna.species.attack_verb = pick("slash","slice","rip","tear","cut","dice")

@@ -17,7 +17,7 @@
 
 /obj/machinery/photocopier
 	name = "photocopier"
-	desc = "Used to copy important documents and anatomy studies."
+	desc = "Used to copy important documents."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "photocopier"
 	density = TRUE

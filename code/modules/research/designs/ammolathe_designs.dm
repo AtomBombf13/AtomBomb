@@ -721,6 +721,14 @@
 	category = list("initial", "Advanced Ammo")
 	autocalc_material_values = FALSE
 
+/datum/design/ammolathe/m2mmpistol
+	name = "2mm Electromagnetic Pistol Magazine"
+	id = "2mmp"
+	materials = list(/datum/material/iron = 12500, /datum/material/titanium = 7500)
+	build_path = /obj/item/ammo_box/magazine/m2mm/pistol
+	category = list("initial", "Advanced Ammo")
+	autocalc_material_values = FALSE
+
 /////////////////////
 /// Improvised stuff
 //////////

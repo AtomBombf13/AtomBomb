@@ -42,7 +42,7 @@
 
 /obj/structure/sign/departments/cargo
 	name = "\improper CARGO"
-	desc = "A sign labelling an area where cargo ships dock."
+	desc = "A sign labelling an area where cargo trucks or trains park."
 	icon_state = "cargo"
 
 /obj/structure/sign/departments/security
@@ -67,7 +67,7 @@
 
 /obj/structure/sign/departments/medbay
 	name = "\improper MEDBAY"
-	desc = "The Intergalactic symbol of Medical institutions. You'll probably get help here."
+	desc = "The International symbol of Medical institutions. You'll probably get help here."
 	icon_state = "bluecross"
 
 /obj/structure/sign/departments/medbay/alt

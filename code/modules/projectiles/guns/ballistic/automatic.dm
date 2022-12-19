@@ -1032,9 +1032,9 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_0 //baseline 5.56, deals 34.375 damage with 5.56
 	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = RIFLE_RECOIL(1.2)
+	init_recoil = RIFLE_RECOIL(1.1)
 	init_firemodes = list(
 		FULL_AUTO_250,
 		SEMI_AUTO_SMG
@@ -1063,6 +1063,7 @@
 /* * * * * * * * * * *
  * Type 93 assault rifle
  * Chinese 5.56mm autorifle
+ * Stronger and slower
  * .223 / 5.56mm
  * Uncommon
  * * * * * * * * * * */
@@ -1079,9 +1080,9 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1 //38dmg
 	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = RIFLE_RECOIL(1)
+	init_recoil = RIFLE_RECOIL(1.2) //kick
 	init_firemodes = list(
 		FULL_AUTO_200,
 		BURST_3_ROUND,
@@ -1114,7 +1115,7 @@
  * Uncommon
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/automatic/type93/worn //24dmg
+/obj/item/gun/ballistic/automatic/type93/worn //28dmg
 	name = "\improper Worn Type 93"
 	desc = "This Type 93 Chinese assault rifle looks like it has been made in a garage. The bore is shot to hell, the threading is destroyed, but atleast it works."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -1124,8 +1125,8 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	init_recoil = RIFLE_RECOIL(1.2)
+	damage_multiplier = GUN_LESS_DAMAGE_T1
+	init_recoil = RIFLE_RECOIL(1.25)
 	init_firemodes = list(
 		BURST_8_ROUND
 	)
@@ -1156,11 +1157,11 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(0.8)
 	init_firemodes = list(
-		FULL_AUTO_300,
+		FULL_AUTO_400,
 		BURST_5_ROUND,
 		SEMI_AUTO_SMG
 	)//LMG but alos still just a sniper rifle come on now
@@ -1199,9 +1200,9 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_LESS_DAMAGE_T3
+	damage_multiplier = GUN_EXTRA_DAMAGE_0 //generic 5mm gun, deals generic 5mm damage
 	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = CARBINE_RECOIL(1)
+	init_recoil = CARBINE_RECOIL(0.9)
 	init_firemodes = list(
 		FULL_AUTO_400,
 		BURST_3_ROUND
@@ -1235,7 +1236,7 @@
  * Baseline 5mm autorifle
  * 5mm
  * Less damage
- * Less accurate
+ * Accurate
  * Slower to shoot
  * Uncommon
  * * * * * * * * * * */
@@ -1250,9 +1251,9 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_LESS_DAMAGE_T3
+	damage_multiplier = GUN_LESS_DAMAGE_T1 //not very strong in FO1
 	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = CARBINE_RECOIL(1.2)
+	init_recoil = CARBINE_RECOIL(0.75) //had long range hidden perk in FO1/2
 	init_firemodes = list(
 		BURST_5_ROUND,
 		SEMI_AUTO_SMG
@@ -1265,7 +1266,8 @@
  * Police Assault Rifle
  * Baseline 5mm autorifle
  * 5mm
- * Uncommon
+ * Craftable
+ * shoots slower, has more recoil, deals a smidge more damage
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
@@ -1279,7 +1281,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1 //27.5
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
