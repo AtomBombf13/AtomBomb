@@ -420,7 +420,7 @@
 /////////////////////
 //LEGION BANDANAS//
 /////////////////////
-
+/*  All replaced by the ones in Legio Invicta
 /obj/item/clothing/mask/bandana/legion
 	name = "legion mask template"
 	desc = "Should not exist."
@@ -436,7 +436,7 @@
 	desc = "Simple black cloth intended for men on camp duty."
 	icon_state = "legaux"
 
-/obj/item/clothing/mask/bandana/legion/legrecruit
+/obj/item/clothing/mask/bandana/legion/legrecruit // obvsolete marked for death
 	name = "recruit bandana"
 	desc = "A coarse dark recruit bandana."
 	icon_state = "legrecruit"
@@ -462,7 +462,7 @@
 	name = "centurion bandana"
 	desc = "A high quality bandana made for a centurion."
 	icon_state = "legcenturion"
-
+*/
 
 //Desert facewrap
 

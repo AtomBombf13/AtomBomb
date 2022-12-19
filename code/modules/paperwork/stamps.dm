@@ -20,42 +20,42 @@
 	return (OXYLOSS)
 
 /obj/item/stamp/qm
-	name = "quartermaster's rubber stamp"
+	name = "A gold rubber stamp"
 	icon_state = "stamp-qm"
 	dye_color = DYE_QM
 
 /obj/item/stamp/law
-	name = "law office's rubber stamp"
+	name = "A light red rubber stamp"
 	icon_state = "stamp-law"
 	dye_color = DYE_LAW
 
 /obj/item/stamp/captain
-	name = "captain's rubber stamp"
+	name = "A dark blue rubber stamp"
 	icon_state = "stamp-cap"
 	dye_color = DYE_CAPTAIN
 
 /obj/item/stamp/hop
-	name = "head of personnel's rubber stamp"
+	name = "A blue rubber stamp"
 	icon_state = "stamp-hop"
 	dye_color = DYE_HOP
 
 /obj/item/stamp/hos
-	name = "head of security's rubber stamp"
+	name = "A red rubber stamp"
 	icon_state = "stamp-hos"
 	dye_color = DYE_HOS
 
 /obj/item/stamp/ce
-	name = "chief engineer's rubber stamp"
+	name = "An orange rubber stamp"
 	icon_state = "stamp-ce"
 	dye_color = DYE_CE
 
 /obj/item/stamp/rd
-	name = "research director's rubber stamp"
+	name = "A purple rubber stamp"
 	icon_state = "stamp-rd"
 	dye_color = DYE_RD
 
 /obj/item/stamp/cmo
-	name = "chief medical officer's rubber stamp"
+	name = "A light blue rubber stamp"
 	icon_state = "stamp-cmo"
 	dye_color = DYE_CMO
 
@@ -63,21 +63,6 @@
 	name = "\improper DENIED rubber stamp"
 	icon_state = "stamp-deny"
 	dye_color = DYE_REDCOAT
-
-/obj/item/stamp/chap
-	name = "chaplain's rubber stamp"
-	icon_state = "stamp-chap"
-	dye_color = DYE_CHAP
-
-/obj/item/stamp/centcom
-	name = "CentCom rubber stamp"
-	icon_state = "stamp-centcom"
-	dye_color = DYE_CENTCOM
-
-/obj/item/stamp/syndicate
-	name = "Syndicate rubber stamp"
-	icon_state = "stamp-syndicate"
-	dye_color = DYE_SYNDICATE
 
 /obj/item/stamp/attack_paw(mob/user)
 	return attack_hand(user)

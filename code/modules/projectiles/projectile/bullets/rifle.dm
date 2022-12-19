@@ -3,7 +3,8 @@
 ////////////////////
 
 /* * * * * * * *
- * Baseline Light Rifle Bullet
+ * Baseline Rifle Bullet
+ * Jack of all trades round
  * Match
  * Surplus
  * Improvised
@@ -12,7 +13,7 @@
  * * * * * * * */
 
 /* 5.56 match
- * DAMAGE: 37
+ * DAMAGE: 34.375
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -20,9 +21,9 @@
  */
 /obj/item/projectile/bullet/a556
 	name = "5.56 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT *  GUN_EXTRA_DAMAGE_T1 * BULLET_MATCH_MULT  //a bit stronger than 5mm, weaker than 7.62mm
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -35,16 +36,14 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5.56 sport
- * DAMAGE: 30
+ * DAMAGE: 31.25
  * STAMIN: 5
  * RECOIL: 1
  * WOUNDS: 6.5
  * WNAKED: 3.75
  */
-/obj/item/projectile/bullet/a556/sport
+/obj/item/projectile/bullet/a556/sport //same as 5.56, but with less pen
 	name = "surplus .223 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
-	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS
@@ -57,7 +56,7 @@
 	pixels_per_second = BULLET_SPEED_RIFLE_LIGHT
 
 /* 5.56 handload
- * DAMAGE: 22
+ * DAMAGE: 25
  * STAMIN: 3.75
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -65,7 +64,7 @@
  */
 /obj/item/projectile/bullet/a556/improvised
 	name = "handloaded .223 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
@@ -212,16 +211,16 @@
 
 /* * * * * * * *
  * Light Rifle Bullet that ive never seen ingame
- * Match - no surplus / improvised
+ * Only comes in standard rounds, no match or bulk rounds
  * Rubber
  * Incendiary
- * Anti-mob?
+ * Extreme anti-armor skew, Gauss-penetration but pistol damage
  * Explosive
  * High velocity?
  * * * * * * * */
 
 /* 4.73 fmj
- * DAMAGE: 31.25
+ * DAMAGE: 22.5
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -229,10 +228,12 @@
  */
 /obj/item/projectile/bullet/a473
 	name = "4.73 FMJ bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_MATCH_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT * GUN_LESS_DAMAGE_T1
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_MATCH_MULT
 	spread = BULLET_SPREAD_MATCH
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_GAUSS
 
 	wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_MATCH_MULT
 	bare_wound_bonus = BULLET_WOUND_RIFLE_LIGHT * BULLET_NAKED_WOUND_MULT
@@ -242,7 +243,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 4.73 rubber
- * DAMAGE: 2.5
+ * DAMAGE: 2
  * STAMIN: 12
  * RECOIL: 1
  * WOUNDS: 7.5
@@ -250,7 +251,7 @@
  */
 /obj/item/projectile/bullet/a473/rubber
 	name = "4.73 polyurethane bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT
+	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * RUBBERY_DAMAGE_MULT * GUN_LESS_DAMAGE_T1
 	stamina = RUBBERY_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -264,7 +265,7 @@
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
 
 /* 4.73 fire
- * DAMAGE: 12.5
+ * DAMAGE: LESS
  * STAMIN: 12
  * RECOIL: 1
  * WOUNDS: 6.25
@@ -301,7 +302,7 @@
 */
 
 /* 4.73 dumdum
- * DAMAGE: 31.25 * 2 vs mobs
+ * DAMAGE: 22.5 * 2 vs mobs
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -418,7 +419,7 @@
 	name = "5mm bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	armour_penetration = BULLET_PENETRATION_HEAVY
-	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
+	damage_threshold_penetration =  BULLET_DT_PENETRATION_SNIPER
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT
 	spread = BULLET_SPREAD_SURPLUS * 0.75 //high velocity means less spread
 	recoil = BULLET_RECOIL_RIFLE_LIGHT
@@ -460,7 +461,7 @@
  */
 /obj/item/projectile/bullet/m5mm/improvised
 	name = "5mm bullet"
-	damage = BULLET_DAMAGE_RIFLE_LIGHT 
+	damage = BULLET_DAMAGE_RIFLE_LIGHT
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	stamina = BULLET_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT
