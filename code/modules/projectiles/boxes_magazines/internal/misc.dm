@@ -29,7 +29,7 @@
 	max_ammo = 12 //6 bursts, iirc its about the same ammount as the IRL M2
 
 /obj/item/ammo_box/magazine/internal/fo4plasma
-	name = "plasma canister mag"
+	name = "plasma canister mag (30rnd)"
 	desc = "magazine for plasma canisters. if you see this, there is a bug"
 	caliber = list(CALIBER_MUSKET_PLASMA)
 	max_ammo = 30 //lore accurate
