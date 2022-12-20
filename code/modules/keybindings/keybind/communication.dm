@@ -42,12 +42,6 @@
 	M.me_typing_indicator()
 	return TRUE
 
-/datum/keybinding/client/communication/subtler
-	hotkey_keys = list("6")
-	name = "Subtler"
-	full_name = "Me (emote - Antighost)"
-	clientside = "me (antighost)"
-
 /datum/keybinding/client/communication/whisper
 	hotkey_keys = list("Y")
 	name = "Whisper"

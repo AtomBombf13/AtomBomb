@@ -75,7 +75,6 @@ h1.alert, h2.alert		{color: #000000;}
 
 .emote					{ }
 .subtle					{ }
-.subtler				{ }
 .selecteddna			{color: #ffffff; 	background-color: #001B1B}
 
 .attack					{color: #ff0000;}
