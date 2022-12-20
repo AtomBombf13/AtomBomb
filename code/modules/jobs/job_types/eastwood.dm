@@ -354,7 +354,7 @@ here's a tip, go search DEFINES/access.dm
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Mayor and Overseer"
-	description = "From the board of the VTCC, you were chosen to be the chief deligator for the medical and science wings of this town's clinic. You are the mediator of workplace drama, the human resource enforcer, and the cornerstone of inspiration for your underlings. As their supervisor, it is your job to make sure that this clinic functions at peak performance."
+	description = "From the board of the VTCC, you were chosen to be the chief delegator for the medical and science wings of this town's clinic. You are the mediator of workplace drama, the human resource enforcer, and the cornerstone of inspiration for your underlings. As their supervisor, it is your job to make sure that this clinic functions at peak performance."
 	selection_color = "#af9172"
 	exp_requirements = 750
 
