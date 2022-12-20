@@ -118,7 +118,7 @@
 
 /obj/item/gun/ballistic/revolver/hobo/piperifle
 	name = "pipe rifle"
-	desc = "A rusty piece of pipe used to fire .223 and 5,56mm ammo."
+	desc = "A rusty piece of pipe used to fire 10mm ammo."
 	icon_state = "piperifle"
 	item_state = "pepperbox"
 	w_class = WEIGHT_CLASS_BULKY
