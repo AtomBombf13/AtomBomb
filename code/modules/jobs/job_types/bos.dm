@@ -267,7 +267,7 @@ Head Scribe
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
-	H.mind.teach_crafting_recipe(recipe)
+		H.mind.teach_crafting_recipe(recipe)
 
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
@@ -616,7 +616,7 @@ Senior Scribe
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
-	H.mind.teach_crafting_recipe(recipe)
+		H.mind.teach_crafting_recipe(recipe)
 
 /datum/outfit/job/bos/f13seniorscribe
 	name =	"Senior Scribe"
