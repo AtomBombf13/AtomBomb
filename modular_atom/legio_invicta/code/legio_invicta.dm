@@ -115,6 +115,7 @@
 	name = "red bandana"
 	desc = "Simple cloth bandana dyed red. Very common in the Legion."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
 	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
 	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'

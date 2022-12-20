@@ -405,6 +405,7 @@
 	name = "desert facewrap"
 	desc = "A facewrap commonly employed by NCR troops in desert environments."
 	icon_state = "ncr_facewrap"
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
