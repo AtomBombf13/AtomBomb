@@ -972,7 +972,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(1)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
