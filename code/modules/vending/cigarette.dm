@@ -1,6 +1,7 @@
 /obj/machinery/vending/cigarette
 	name = "\improper Big Boss Vending Machine"
 	desc = "Big Boss cigarettes were a popular brand before the Great War, being found in and around major cities including Las Vegas, Pittsburgh, and Washington, D.C."
+	icon = 'icons/WVM/new_vendors.dmi'
 	product_slogans = "Grey Tortoise taste good like a cigarette should.;For the smoker who knows what he wants taste.;Longer than King Size so much more to enjoy!;After all, if smoking isn't a pleasure, why bother?!"
 	product_ads = "Big Boss cigarettes. Great american taste;Unexpected flavor. Wild & free.;Perfectly aged tobacco.;No additives - True taste - No bull.;American matches for American Homes;Fine American blend also in menthol.;A rewarding experience.;Tastes as good as it looks."
 	icon_state = "cigs"

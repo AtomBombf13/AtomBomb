@@ -2099,9 +2099,7 @@
 	},
 /area/f13/building)
 "aja" = (
-/obj/machinery/mineral/wasteland_vendor/crafting{
-	icon_state = "parts_idle"
-	},
+/obj/machinery/mineral/wasteland_vendor/crafting,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -6694,7 +6692,7 @@
 	},
 /area/f13/village)
 "aAi" = (
-/obj/machinery/vending/cola/space_up{
+/obj/machinery/vending/cola/sunset_sarsaparilla{
 	density = 0;
 	pixel_y = 24
 	},
@@ -14715,7 +14713,7 @@
 	},
 /area/f13/building)
 "ber" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -17554,7 +17552,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "bvX" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain1"
@@ -22922,7 +22920,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "dqJ" = (
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -33671,9 +33669,7 @@
 	},
 /area/f13/wasteland)
 "iwn" = (
-/obj/machinery/mineral/wasteland_vendor/crafting{
-	icon_state = "parts_idle"
-	},
+/obj/machinery/mineral/wasteland_vendor/crafting,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -37612,7 +37608,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -40231,7 +40227,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "lBM" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/building)
@@ -41525,7 +41521,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/caves)
 "mck" = (
-/obj/machinery/vending/cola{
+/obj/machinery/vending/cola/nukacola{
 	pixel_y = -10
 	},
 /turf/closed/wall/f13/store{
@@ -42739,7 +42735,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "mEE" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain1"
 	},
@@ -48589,9 +48585,7 @@
 	},
 /area/f13/ncr)
 "psl" = (
-/obj/machinery/mineral/wasteland_vendor/attachments{
-	icon_state = "weapon_idle"
-	},
+/obj/machinery/mineral/wasteland_vendor/attachments,
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
 	},
@@ -53492,7 +53486,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "rNn" = (
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 9
@@ -55813,7 +55807,7 @@
 	},
 /area/f13/city)
 "sTX" = (
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /obj/machinery/light/broken{
 	dir = 1
 	},
@@ -57469,7 +57463,7 @@
 	},
 /area/f13/building/museum)
 "tGu" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 5
 	},
@@ -59055,7 +59049,7 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "uuz" = (
-/obj/machinery/vending/cola/space_up,
+/obj/machinery/vending/cola/sunset_sarsaparilla,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain1"
 	},
@@ -59722,9 +59716,7 @@
 	},
 /area/f13/ncr)
 "uJp" = (
-/obj/machinery/mineral/wasteland_vendor/attachments{
-	icon_state = "weapon_idle"
-	},
+/obj/machinery/mineral/wasteland_vendor/attachments,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -64172,7 +64164,7 @@
 	},
 /area/f13/wasteland)
 "wQp" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
 	},

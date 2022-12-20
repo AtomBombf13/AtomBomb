@@ -91,8 +91,8 @@
 	desc = "A stand with a model of the perfect Nanotrasen Employee bolted to it. Signs indicate it is robustly genetically engineered, as well as being ruthlessly loyal."
 
 /obj/structure/showcase/machinery/tv
-	name = "Nanotrasen corporate newsfeed"
-	desc = "A slightly battered looking TV. Various Nanotrasen infomercials play on a loop, accompanied by a jaunty tune."
+	name = "Pre-War TV set"
+	desc = "A slightly battered looking TV. The screen's pitch black, this probably hasn't worked in a while."
 	icon = 'icons/obj/computer.dmi'
 	icon_state = "television"
 

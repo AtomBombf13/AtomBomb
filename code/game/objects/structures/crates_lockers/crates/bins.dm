@@ -1,5 +1,5 @@
 /obj/structure/closet/crate/bin
-	desc = "A trash bin, place your trash here for the janitor to collect."
+	desc = "A trash bin, place your trash here for the garbage man to collect."
 	name = "trash bin"
 	icon_state = "largebins"
 	open_sound = 'sound/effects/bin_open.ogg'

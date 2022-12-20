@@ -145,7 +145,7 @@ Head Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/hpstand, //Tribeam laser + Hardened T-51
-	//datum/outfit/loadout/hpheavy, //Gauss + Glock + Hardened T-51
+	/datum/outfit/loadout/hpheavy, //DKS + Glock + Hardened T-51
 	/datum/outfit/loadout/hpgat		//Gatling + Hardened T-51
 	)
 
@@ -194,7 +194,7 @@ Head Paladin
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
@@ -206,16 +206,16 @@ Head Paladin
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3
 	)
-/* Bad
+
 /datum/outfit/loadout/hpheavy
 	name = "Heavy Head Paladin"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/m72 = 1,
-		/obj/item/ammo_box/magazine/m2mm = 3,
+		/obj/item/gun/ballistic/automatic/sniper = 1,
+		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/energy/laser/plasma/glock = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		/obj/item/stock_parts/cell/ammo/ec = 2,
 	)
-*/
+
 /datum/outfit/loadout/hpgat
 	name = "Laser Gatling Head Paladin"
 	backpack_contents = list(
@@ -289,7 +289,7 @@ Head Scribe
 		/obj/item/storage/firstaid/tactical/bosheadscribe=1,
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/wattz = 1,
+		/obj/item/gun/energy/laser/plasma/glock = 1,
 		)
 
 /*
@@ -310,8 +310,8 @@ Knight-Captain
 	exp_requirements = 1500
 
 	loadout_options = list(
-	/datum/outfit/loadout/capstand, //Wattz 2k
-	/datum/outfit/loadout/capsap, //Marksman
+	/datum/outfit/loadout/capstand, //DKS 2 mags
+	/datum/outfit/loadout/capsap, //RCW + 2 mags
 	/datum/outfit/loadout/capalt //Neostead with buck because they don't know slugs are better
 	)
 
@@ -340,7 +340,10 @@ Knight-Captain
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/commando)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m2405) // temporary as head scribe taken plasma pistol as they are more plasma / laser and knight is ballistic. Actually accurate?! for BOS?
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m2405) 
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)// temporary as head scribe taken plasma pistol as they are more plasma / laser and knight is ballistic. Actually accurate?! for BOS?
 	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
@@ -370,8 +373,8 @@ Knight-Captain
 /datum/outfit/loadout/capstand
 	name = "Standard"
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/wattz2k = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 2
+		/obj/item/gun/ballistic/automatic/sniper = 1,
+		/obj/item/ammo_box/magazine/w308 = 2
 	)
 
 /datum/outfit/loadout/capsap
@@ -405,7 +408,7 @@ Senior Paladin
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //5mm minigun
-		/datum/outfit/loadout/spaladinc,  //Aer9
+		/datum/outfit/loadout/spaladinc,  //Aer14 + pistol
 		/datum/outfit/loadout/spaladind //Sledge and fist
 		)
 
@@ -468,10 +471,10 @@ Senior Paladin
 /datum/outfit/loadout/spaladind
 	name = "Senior Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/twohanded/sledgehammer/supersledge = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2
+		
 		)
 
 
@@ -483,8 +486,8 @@ Paladin
 	title = "Paladin"
 	flag = F13PALADIN
 	display_order = JOB_DISPLAY_ORDER_PALADIN
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	supervisors = "the Head Paladin"
 	exp_requirements = 1200
@@ -547,7 +550,7 @@ Paladin
 /datum/outfit/loadout/paladind
 	name = "Melee Specialist"
 	backpack_contents = list(
-		/obj/item/melee/powerfist/f13 = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/clothing/accessory/bos/paladin = 1
@@ -561,8 +564,8 @@ Senior Scribe
 	title = "Senior Scribe"
 	flag = F13SENIORSCRIBE
 	display_order = JOB_DISPLAY_ORDER_SENIORSCRIBE
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the bunker's seniormost medical and scientific expert in the bunker, sans the Head Scribe themselves. You are trained in both medicine and engineering, while also having extensive studies of the old world to assist in pinpointing what technology would be useful to the Brotherhood and its interests."
 	supervisors = "the Head Scribe"
 
@@ -624,7 +627,7 @@ Senior Scribe
 	glasses =	/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/wattz = 1,
+		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/clothing/mask/gas/adv/gasmask = 1,
@@ -647,7 +650,7 @@ Senior Scribe
 	backpack_contents = list(
 		/obj/item/storage/belt/utility/bos=1,
 		/obj/item/clothing/gloves/color/yellow=1,
-		/obj/item/blueprint/research=2,
+		/obj/item/blueprint/research=6,
 		/obj/item/clothing/gloves/color/yellow=1
 		)
 
@@ -661,8 +664,8 @@ Scribe
 	title = "Scribe"
 	flag = F13SCRIBE
 	display_order = JOB_DISPLAY_ORDER_SCRIBE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Senior Scribe, tasked with researching and reverse-engineering recovered technologies from the old world, while maintaining the brotherhoods scientific archives. You may also be given a trainee to assign duties to."
 	supervisors = "the Senior Scribe and Head Scribe"
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
@@ -702,7 +705,7 @@ Scribe
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/gun/energy/laser/wattz = 1,
+		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1
 		)
@@ -782,8 +785,8 @@ Senior Knight
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_PUBLIC)
 
 	loadout_options = list(
-	/datum/outfit/loadout/sknighta, //AER9
-	/datum/outfit/loadout/sknightb, //Browning Auto-5
+	/datum/outfit/loadout/sknighta, //AER12
+	/datum/outfit/loadout/sknightb, //Lever Action
 	/datum/outfit/loadout/sknightc, //R91
 	/datum/outfit/loadout/sknightd	//Ripper and Bulletproof Shield
 	)
@@ -837,7 +840,7 @@ Senior Knight
 	name = "Footknight"
 	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aer9 = 1,
+		/obj/item/gun/energy/laser/aer12 = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
@@ -848,7 +851,7 @@ Senior Knight
 	name = "Knight-Defender"
 	suit = /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	backpack_contents = list(
-		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
@@ -859,8 +862,8 @@ Senior Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	backpack_contents = list(
 		/obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior = 1,
-		/obj/item/gun/ballistic/automatic/assault_rifle = 1,
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
+		/obj/item/gun/ballistic/automatic/marksman = 1,
+		/obj/item/ammo_box/magazine/m556/rifle = 3,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
@@ -892,8 +895,8 @@ Knight
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9 J
 	/datum/outfit/loadout/knightc, //AER9 S
-	/datum/outfit/loadout/knightb, //Ripper J
-	/datum/outfit/loadout/knightd //Ripper S
+	/datum/outfit/loadout/knightb, //Shishkebab J
+	/datum/outfit/loadout/knightd //Shishkebab
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -957,7 +960,7 @@ Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight = 1,
-		/obj/item/melee/powered/ripper = 1,
+		/obj/item/shishkebabpack = 1,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
 
@@ -978,7 +981,7 @@ Knight
 	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/knight = 1,
-		/obj/item/melee/powered/ripper = 1,
+		/obj/item/shishkebabpack = 1,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
 /*
@@ -989,8 +992,8 @@ Initiate
 	title = "Initiate"
 	flag = F13INITIATE
 	display_order = JOB_DISPLAY_ORDER_INITIATE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	description = "Either recently inducted or born into the Brotherhood, you have since proven yourself worthy of assignment to the Chapter. You are to assist your superiors and receive training how they deem fit. You are NEVER allowed to leave the bunker without the direct supervision of a superior; doing so may result in exile or transferrence back the Valley."
 	supervisors = "the Scribes, Knights or Paladins"
 

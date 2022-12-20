@@ -3106,7 +3106,7 @@
 	},
 /area/f13/clinic)
 "bJV" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -30854,7 +30854,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/tunnel)
 "uws" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/nukacola,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
 "uwz" = (
@@ -35777,9 +35777,7 @@
 	},
 /area/f13/brotherhood/operating)
 "yhZ" = (
-/obj/machinery/vending/cola{
-	name = "\improper Nuka Cola Vending Machine"
-	},
+/obj/machinery/vending/cola/nukacola,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "yig" = (
