@@ -16,13 +16,13 @@
 	var/old_alpha = 0
 	actions_types = list(/datum/action/item_action/stealthboy_cloak)
 
-/obj/item/stealthboy/makeshift
+/obj/item/stealthboy/makeshift // Barely visble
 	name = "Makeshift Stealth Boy"
 	icon_state = "makeshift_stealth"
 	charge = 175
 	max_charge = 175
 
-/obj/item/stealthboy/mk2
+/obj/item/stealthboy/mk2 // Longer visiblity then Mk1
 	name = "Stealth Boy MK2"
 	icon_state = "stealth_boy_mk"
 	charge = 375
