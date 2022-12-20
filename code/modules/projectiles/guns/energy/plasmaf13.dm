@@ -149,6 +149,7 @@
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/fo4plasma
 	damage_multiplier = 0.5 //30 damage, with 30 shots it probably should not deal 60 damage
+	gun_tags = GUN_ENERGY
 
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*please insert live canister*"
@@ -157,6 +158,9 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
+	init_firemodes = list(
+		SEMI_AUTO_RIFLE
+		) //slowfiring
 
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
