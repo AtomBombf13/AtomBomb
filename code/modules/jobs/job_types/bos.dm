@@ -734,6 +734,8 @@ Scribe
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
+	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
+		H.mind.teach_crafting_recipe(recipe)
 
 
 //	You gotta be a bunker scribe before fieldscribe
