@@ -21981,7 +21981,7 @@
 /obj/structure/table,
 /obj/machinery/door/window{
 	dir = 8;
-	req_access_txt = "68"
+	req_access_txt = "280"
 	},
 /obj/structure/barricade/bars,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralsolid,
@@ -27030,7 +27030,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
-	req_access_txt = "280"
+	req_access_txt = "273"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/followers)
@@ -42364,7 +42364,7 @@
 /obj/structure/table,
 /obj/machinery/door/window{
 	dir = 8;
-	req_access_txt = "137"
+	req_access_txt = "281"
 	},
 /obj/structure/barricade/bars,
 /turf/open/floor/plasteel/vault,
@@ -65401,12 +65401,12 @@
 "xvW" = (
 /obj/structure/noticeboard,
 /obj/item/clothing/suit/armor/medium/combat/mk2{
-	name = "strange power armor";
+	anchored = 1;
 	armor_tier_desc = "This is a suit of power armor, able to withstand a tank shell and still finish a marathon.";
 	desc = "Upgraded pre-war power armor design.  How did this end up in the bar?";
 	icon = 'icons/fallout/clothing/armored_power.dmi';
 	icon_state = "advanced";
-	anchored = 1
+	name = "strange power armor"
 	},
 /turf/closed/wall/f13/wood,
 /area/f13/city)
