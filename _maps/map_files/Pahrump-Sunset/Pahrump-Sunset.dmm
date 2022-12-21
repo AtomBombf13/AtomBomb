@@ -13357,9 +13357,7 @@
 	},
 /area/f13/building/massfusion)
 "aXI" = (
-/turf/open/floor/plasteel/stairs{
-	dir = 4
-	},
+/turf/open/floor/plasteel/stairs,
 /area/f13/radiation)
 "aXJ" = (
 /obj/machinery/power/terminal{
@@ -13398,6 +13396,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
+"aXQ" = (
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/radiation)
 "aXT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
@@ -14200,9 +14206,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "bcv" = (
-/turf/open/floor/plasteel/stairs{
-	dir = 4
-	},
+/turf/open/floor/plasteel/stairs/left,
 /area/f13/building/massfusion)
 "bcw" = (
 /turf/open/floor/carpet/royalblack,
@@ -39671,6 +39675,9 @@
 /area/f13/wasteland)
 "lwr" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
+/obj/structure/railing/corner{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrusty"
 	},
@@ -40530,6 +40537,13 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ncr)
+"lPo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "lPq" = (
 /obj/structure/car/rubbish4,
 /turf/open/indestructible/ground/outside/road{
@@ -54158,6 +54172,9 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building)
+"spg" = (
+/turf/open/floor/plasteel/stairs/right,
+/area/f13/building/massfusion)
 "spC" = (
 /obj/effect/decal/remains{
 	icon_state = "remains"
@@ -54666,6 +54683,9 @@
 /area/f13/legion)
 "sCJ" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 8
+	},
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
 	},
@@ -57604,11 +57624,12 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "tUV" = (
-/obj/structure/stairs/south{
-	color = "#A47449"
+/turf/open/floor/plasteel/stairs{
+	barefootstep = "woodbarefoot";
+	color = "#A47449";
+	dir = 1;
+	footstep = "wood"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
 /area/f13/legion)
 "tUX" = (
 /obj/structure/table/wood/settler,
@@ -62757,8 +62778,15 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "wAi" = (
-/turf/open/floor/plasteel/stairs/left,
-/area/f13/legion)
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowrustychess"
+	},
+/area/f13/building/massfusion)
 "wAG" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -114599,7 +114627,7 @@ uqJ
 iYa
 vVo
 tyU
-irW
+wAi
 wno
 bkG
 xwq
@@ -115115,7 +115143,7 @@ xJU
 cdl
 vVo
 eon
-bcv
+spg
 tyU
 vGp
 auX
@@ -117883,7 +117911,7 @@ fEW
 csG
 csG
 csG
-wAi
+lfd
 aOk
 aOk
 aOk
@@ -117924,7 +117952,7 @@ aby
 aby
 aby
 adG
-ese
+aXQ
 dBY
 aeP
 aeP
@@ -129696,7 +129724,7 @@ eBH
 vBU
 csG
 oOD
-csG
+lPo
 bAf
 hrE
 cnF
