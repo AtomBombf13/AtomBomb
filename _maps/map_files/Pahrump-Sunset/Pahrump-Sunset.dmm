@@ -45205,6 +45205,11 @@
 /obj/structure/flora/tallgrass2,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
+"nOd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_master/primitive,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/legion)
 "nOi" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -122622,7 +122627,7 @@ qXa
 dSU
 qXa
 qXa
-iEb
+nOd
 oSV
 sEB
 aqx
