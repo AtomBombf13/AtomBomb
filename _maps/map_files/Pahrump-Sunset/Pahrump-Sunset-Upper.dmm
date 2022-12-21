@@ -1257,7 +1257,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
 "ccV" = (
-/obj/structure/closet/crate/bin,
+/obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "cde" = (
@@ -10582,8 +10582,8 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "tFg" = (
-/obj/structure/closet/crate/bin,
 /obj/item/folder/red,
+/obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/wood_common,
 /area/f13/building)
 "tFP" = (
@@ -14251,7 +14251,7 @@ vLb
 vLb
 vLb
 vLb
-vLb
+rLB
 vLb
 vLb
 vLb
@@ -14508,8 +14508,8 @@ vLb
 vLb
 vLb
 vLb
-vLb
-vLb
+rLB
+rLB
 vLb
 vLb
 rLB
@@ -14763,8 +14763,8 @@ vLb
 vLb
 vLb
 vLb
-rLB
-rLB
+vLb
+vLb
 rLB
 rLB
 rLB
@@ -15018,8 +15018,8 @@ vLb
 vLb
 vLb
 vLb
-vLb
-vLb
+rLB
+rLB
 rLB
 rLB
 rLB
@@ -15274,8 +15274,8 @@ vLb
 vLb
 vLb
 vLb
-vLb
-vLb
+rLB
+rLB
 rLB
 rLB
 rLB
@@ -15530,9 +15530,9 @@ vLb
 vLb
 vLb
 vLb
-vLb
-vLb
-vLb
+rLB
+rLB
+rLB
 rLB
 rLB
 rLB
