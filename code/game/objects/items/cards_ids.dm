@@ -741,7 +741,7 @@
 /obj/item/card/id/away/old/apc
 	name = "APC Access ID"
 	desc = "A special ID card that allows access to APC terminals."
-	access = list(ACCESS_ENGINE_EQUIP)
+	access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 
 /obj/item/card/id/departmental_budget
 	name = "departmental card (FUCK)"
@@ -874,6 +874,9 @@
 			registered_name = living_user.real_name
 			assignment = living_user.job
 			update_label()
+			LAZYCLEARLIST(access)
+			var/datum/job/player_job = SSjob.GetJob(user.mind.assigned_role)
+			src.access |= player_job.access
 			to_chat(user, span_notice("You successfully forge the ID card."))
 			return
 	..()
@@ -897,7 +900,7 @@
 	assignment = "Deputy"
 	icon_state = "deputy"
 	item_state = "badge-deputy"
-	access = list(ACCESS_BAR, ACCESS_GATEWAY)
+	access = list(ACCESS_TOWN, ACCESS_TOWN_SEC)
 
 /obj/item/card/id/dogtag/deputy/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/dogtag/sheriff))
@@ -921,7 +924,7 @@
 	icon_state = "doctor"
 	item_state = "card-doctor"
 	assignment = "citizenship permit"
-	access = list(ACCESS_BAR)
+	access = list(ACCESS_TOWN, ACCESS_TOWN_CIV)
 
 /obj/item/card/id/dogtag/vaultiecard
 	name = "vault Citizenship"
@@ -961,7 +964,7 @@
 	item_state = "card-doctor"
 	assignment = "Settler"
 	obj_flags = UNIQUE_RENAME
-	access = list(ACCESS_BAR)
+	access = list(ACCESS_TOWN)
 
 /obj/item/card/id/dogtag/town/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/silver/mayor))
@@ -1034,19 +1037,13 @@
 	name = "colonel's tags"
 	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR colonel."
 	icon_state = "ncrdogtagcaptain"
-
+/* Below replaced by the versions in Legio Invicta
 /obj/item/card/id/dogtag/legforgemaster
 	name = "camp follower medallion"
 	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a follower of the legion."
 	icon_state = "legionmedallionprime"
 	assignment = "camp follower medallion"
-	access = list(ACCESS_LEGION)
-
-/obj/item/card/id/dogtag/legslavemaster
-	name = "slavemaster medallion"
-	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to the dreaded Slavemaster."
-	icon_state = "legionmedallionprime"
-	assignment = "slavemaster medallion"
+	access = list(ACCESS_LEGION, ACCESS_LEGION1, ACCESS_LEGION2)
 
 /obj/item/card/id/dogtag/legauxilia
 	name = "auxilia medallion"
@@ -1069,13 +1066,6 @@
 	item_state = "card-id_leg"
 	assignment = "prime medallion"
 
-/obj/item/card/id/dogtag/legimmune
-	name = "immune medallion"
-	desc = "A marked silver disc stamped with the Legion's Bull insignia. Worn by legionnaires on camp duty."
-	icon_state = "legionmedallionprime"
-	item_state = "card-id_leg"
-	assignment = "immune medallion"
-
 /obj/item/card/id/dogtag/legveteran
 	name = "veteran medallion"
 	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a veteran, and reeks of iron."
@@ -1090,35 +1080,12 @@
 	item_state = "card-id_leg2"
 	assignment = "centurion medallion"
 
-/obj/item/card/id/dogtag/legvenator
-	name = "speculator medallion"
-	desc = "A golden disc awarded to the elite hunters of the legion. If you are close enough to read the insignia you won't be alive much longer."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "Speculator medallion"
-
-
-/obj/item/card/id/dogtag/legpriest
-	name = "priestess medallion"
-	desc = "A golden disc awarded to the trusted spiritual guide to the nearby Legion."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "priestess medallion"
-
 /obj/item/card/id/dogtag/legorator
 	name = "orator medallion"
 	desc = "A golden disc awarded to the one who is a dedicated ambassador for Caesar's Legion."
 	icon_state = "legionmedallioncent"
 	item_state = "card-id_leg2"
 	assignment = "orator medallion"
-
-//For PilotBland's frumentarii custom loadout
-/obj/item/card/id/dogtag/legfrumentariiremus
-	name = "Remus Amius' frumentarius medallion"
-	desc = "A golden disc with a string threaded through the top, displaying official markings confirming a frumentarius' status."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "frumentarius medallion"
 
 /obj/item/card/id/legionbrand
 	name = "Legion's brand"
@@ -1132,7 +1099,35 @@
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
+*/
+/obj/item/card/id/dogtag/legimmune
+	name = "immune medallion"
+	desc = "A marked silver disc stamped with the Legion's Bull insignia. Worn by legionnaires on camp duty."
+	icon_state = "legionmedallionprime"
+	item_state = "card-id_leg"
+	assignment = "immune medallion"
+
+
+
+//For PilotBland's frumentarii custom loadout
+/obj/item/card/id/dogtag/legfrumentariiremus
+	name = "Remus Amius' frumentarius medallion"
+	desc = "A golden disc with a string threaded through the top, displaying official markings confirming a frumentarius' status."
+	icon_state = "legionmedallioncent"
+	item_state = "card-id_leg2"
+	assignment = "frumentarius medallion"
+
+
+
 ///OUTLAW TAGS////
+
+/obj/item/card/id/raider
+	name = "Raider tattoo"
+	desc = "A tattoo of the symbol of the raider."
+	icon_state = null
+	item_state = null
+	uses_overlays = FALSE
+	access = list(ACCESS_RAIDER, ACCESS_PUBLIC)
 
 /obj/item/card/id/rusted
 	name = "rusted tags"
@@ -1171,7 +1166,7 @@
 	desc = "A certificate declaring your loyalty to the gang"
 	assignment = "gang tattoo"
 
-	access = list(ACCESS_DEN)
+	access = list(ACCESS_DEN, ACCESS_PUBLIC)
 
 
 /obj/item/card/id/khantattoo
@@ -1182,7 +1177,7 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_GATEWAY, ACCESS_MINING)
+	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
 
 /obj/item/card/id/khantattoo/Initialize()
 	. = ..()
@@ -1196,7 +1191,7 @@
 	item_state = null
 	assignment = "gang tattoo"
 	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_BAR, ACCESS_CLINIC, ACCESS_GATEWAY, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_CLONING)
+	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
 
 /obj/item/card/id/khanleadertattoo/Initialize()
 	. = ..()
@@ -1226,7 +1221,7 @@
 	assignment = "tribe tattoo"
 	uses_overlays = FALSE
 
-	access = list(ACCESS_TRIBE)
+	access = list(ACCESS_TRIBE, ACCESS_PUBLIC)
 
 /obj/item/card/id/tribetattoo/Initialize()
 	. = ..()
@@ -1238,6 +1233,14 @@
 	icon_state = "silver"
 	item_state = "silver_id"
 	assignment = "mayoral permit"
+	uses_overlays = FALSE
+
+/obj/item/card/id/f13towncmo
+	name = "doctor's name badge"
+	desc = "A plastic-sealed name badge certifying the medical expertise of its holder."
+	icon_state = "doctor"
+	item_state = "card-doctor"
+	assignment = "name badge"
 	uses_overlays = FALSE
 
 /obj/item/card/id/dendoctor

@@ -247,13 +247,13 @@
 	cold_protection = HEAD //This tam brings the warm reggae and Jamaican sun with it.
 	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
 
-/obj/item/clothing/head/f13/hairband
+/obj/item/clothing/head/f13/hairband // obsolete with Fashion module
 	name = "hairband"
 	desc = "Pretty yellow hairband"
 	icon_state = "50shairband"
 	item_state = "50shairband"
 
-/obj/item/clothing/head/f13/nursehat
+/obj/item/clothing/head/f13/nursehat  // kind of obsolete with Fashion module
 	name = "nursehat"
 	desc = "White cloth headdress for nurses"
 	icon_state = "nursehat"
@@ -628,6 +628,7 @@
 /obj/item/clothing/head/helmet/skull/bone
 	name = "Reinforced skull helmet"
 	desc = "An intimidating tribal helmet reinforced with leather and cloth parts on the inside for more comfort, while styling it on the Bone dancers way."
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1)
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = HEADCOVERSEYES
 	icon_state = "bone_dancer_helmet"

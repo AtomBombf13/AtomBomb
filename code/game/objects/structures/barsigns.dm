@@ -3,7 +3,7 @@
 	desc = "A bar sign with no writing on it."
 	icon = 'icons/obj/barsigns.dmi'
 	icon_state = "empty"
-	req_access = list(ACCESS_BAR)
+	req_access = list(ACCESS_TOWN_BAR)
 	max_integrity = 500
 	integrity_failure = 0.5
 	armor = ARMOR_VALUE_LIGHT

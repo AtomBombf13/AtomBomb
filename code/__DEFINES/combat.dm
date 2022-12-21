@@ -409,12 +409,12 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_HANDLOAD_MULT 0.75 // trash ammo you can make anywhere with a reloader tool, most common
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_BASE 2 // Base spread added from 'quality' ammo
+#define BULLET_SPREAD_BASE 1 // Base spread added from 'quality' ammo
 
 /// Bullet spread modifier defines
 #define BULLET_SPREAD_MATCH 0 // No extra spread~
-#define BULLET_SPREAD_SURPLUS (BULLET_SPREAD_BASE) // Base spread
-#define BULLET_SPREAD_HANDLOAD (BULLET_SPREAD_BASE * 2) // More spread!
+#define BULLET_SPREAD_SURPLUS (BULLET_SPREAD_BASE * 1.5) // slightly worse spread from wasteland ammo
+#define BULLET_SPREAD_HANDLOAD (BULLET_SPREAD_BASE * 3) // much worse spread from junk ammo!
 
 /// Bullet wound modifier defines
 #define BULLET_WOUND_PISTOL_LIGHT 5
@@ -581,6 +581,17 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_FIRE_DELAY_SLOW (GUN_FIRE_DELAY_BASE * 4.5) //4.5s
 #define GUN_FIRE_DELAY_SLOWER (GUN_FIRE_DELAY_BASE * 5) //5s
 #define GUN_FIRE_DELAY_ABSOLUTE (GUN_FIRE_DELAY_BASE * 6) //6s
+
+/// Mob autofire delay Base
+#define MOB_AUTOFIRE_DELAY_BASE 1
+
+/// Mob fire delay modifiers
+#define MOB_AUTOFIRE_DELAY_FASTEST (MOB_AUTOFIRE_DELAY_BASE * 0.1)
+#define MOB_AUTOFIRE_DELAY_FASTER (MOB_AUTOFIRE_DELAY_BASE * 1)
+#define MOB_AUTOFIRE_DELAY_FAST (MOB_AUTOFIRE_DELAY_BASE * 2)
+#define MOB_AUTOFIRE_DELAY_NORMAL (MOB_AUTOFIRE_DELAY_BASE * 3)
+#define MOB_AUTOFIRE_DELAY_SLOW (MOB_AUTOFIRE_DELAY_BASE * 4)
+#define MOB_AUTOFIRE_DELAY_SLOWER (MOB_AUTOFIRE_DELAY_BASE * 5)
 
 /// Gun burstfire delay Base
 #define GUN_BURSTFIRE_DELAY_BASE 2

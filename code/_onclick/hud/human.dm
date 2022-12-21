@@ -98,12 +98,12 @@
 	using.hud = src
 	static_inventory += using
 
-	using = new /obj/screen/area_creator
+	/*using = new /obj/screen/area_creator
 	using.icon = ui_style
 	if(!widescreenlayout) // CIT CHANGE
 		using.screen_loc = ui_boxarea // CIT CHANGE
 	using.hud = src
-	static_inventory += using
+	static_inventory += using*/
 
 	action_intent = new /obj/screen/act_intent/segmented
 	action_intent.icon_state = mymob.a_intent

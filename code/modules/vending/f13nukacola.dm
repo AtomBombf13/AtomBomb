@@ -1,6 +1,7 @@
 /obj/machinery/vending/nukacolavend
 	name = "\improper Nuka-Cola vending machine"
-	icon = 'icons/obj/f13vending.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "nuka_vending"
 	icon_deny = "nuka_vending-deny"
 	product_slogans = "Take the leap... enjoy a Quantum!"

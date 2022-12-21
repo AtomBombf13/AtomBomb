@@ -29,11 +29,11 @@
 
 // -------------------- COSMETICS ------------------------------
 
-/datum/gear/backpack/razor
-	name = "Electric razor"
-	path = /obj/item/cosmetics/razor
+/datum/gear/backpack/straight_razor
+	name = "Straight razor"
+	path = /obj/item/melee/onehanded/straight_razor
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_COSMETICS
-	cost = 2
+	cost = 3
 
 /datum/gear/backpack/haircomb
 	name = "Plastic comb"

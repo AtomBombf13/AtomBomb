@@ -1,3 +1,14 @@
+/*
+
+Access
+		Raider - ACCESS_RAIDER 285
+		Wastelander - ACCESS_WASTER 286
+		Tribal - ACCESS_TRIBE 131
+
+		All Access for every role in every faction: ACCESS_PUBLIC 284
+
+*/
+
 /datum/job/wasteland
 	department_flag = WASTELAND
 
@@ -23,8 +34,8 @@ Raider
 
 	outfit = /datum/outfit/job/wasteland/f13raider
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_RAIDER, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_RAIDER, ACCESS_PUBLIC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13raider,
@@ -272,8 +283,8 @@ Wastelander
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
-	minimal_access = list()
+	access = list(ACCESS_WASTER, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_WASTER, ACCESS_PUBLIC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
@@ -610,8 +621,8 @@ Wastelander
 
 	outfit = /datum/outfit/job/wasteland/f13tribal
 
-	access = list()
-	minimal_access = list()
+	access = list(ACCESS_TRIBE, ACCESS_PUBLIC)
+	minimal_access = list(ACCESS_TRIBE, ACCESS_PUBLIC)
 
 	loadout_options = list(
 	/datum/outfit/loadout/brawler,

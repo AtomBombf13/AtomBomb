@@ -1,8 +1,9 @@
 /* Copied to sprite_accessories subtree for code reasons. This file is not actually used, included so all the data thats needed in the module is collected.
+redirects done in species.dm, read the comments, search for fashion if you wish to revert the module.
 
 /////////////////////////////
 // Facial Hair Definitions //
-///////////////////////////// 
+/////////////////////////////
 /datum/sprite_accessory/facial_hair
 	icon = 'modular_atom/fashion/icons/facial_hair.dmi'
 	gender = MALE

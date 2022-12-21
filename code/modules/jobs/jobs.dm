@@ -59,6 +59,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Mayor",
 	"Provost Marshal",
+	"Director",
 
 	"Desperado Leader",
 
@@ -86,17 +87,16 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 "Legion Centurion",
 "Legion Explorer",
-"Legion Slavemaster",
 "Legion Veteran Decanus",
 "Veteran Legionnaire",
 "Legion Prime Decanus",
 "Prime Legionnaire",
 "Legion Recruit Decanus",
-"Legion Scout",
 "Legion Slave",
 
 "Mayor",
 "Sheriff",
+"Director",
 "Deputy",
 "Shopkeeper",
 "Doctor",
@@ -132,11 +132,13 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Knight",
 	"Scribe",
 	"Initiate",
+	"BoS Off-Duty"
 ))
 
 GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Mayor",
 	"Provost Marshal",
+	"Director",
 	"Deputy Marshal",
 	"Detective",
 	"Merchant",
@@ -162,7 +164,6 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Veteran Decanus",
 	"Legion Prime Decanus",
 	"Legion Recruit Decanus",
-	"Legion Speculator",
 	"Legion Explorer",
 	"Veteran Legionnaire",
 	"Prime Legionnaire",

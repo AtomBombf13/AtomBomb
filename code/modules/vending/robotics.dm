@@ -1,7 +1,7 @@
 //This one's from bay12
 /obj/machinery/vending/robotics
-	name = "\improper Robotech Deluxe"
-	desc = "All the tools you need to create your own robot army."
+	name = "\improper RobCo Deluxe"
+	desc = "All the tools you need to create your own securitron army."
 	icon_state = "robotics"
 	icon_deny = "robotics-deny"
 	products = list(/obj/item/clothing/suit/toggle/labcoat = 4,

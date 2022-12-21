@@ -67,11 +67,10 @@
 /obj/item/storage/backpack/spearquiver/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 7
-	STR.can_hold = typecacheof(list(/obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola))
+	STR.max_items = 6
+	STR.can_hold = typecacheof(list(/obj/item/throwing_star/spear, /obj/item/melee/smith/javelin, /obj/item/restraints/legcuffs/bola, /obj/item/restraints/legcuffs/bola/smithed))
 
 /obj/item/storage/backpack/spearquiver/PopulateContents()
-	new /obj/item/throwing_star/spear(src)
 	new /obj/item/throwing_star/spear(src)
 	new /obj/item/throwing_star/spear(src)
 	new /obj/item/throwing_star/spear(src)

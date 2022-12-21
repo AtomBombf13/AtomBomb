@@ -82,6 +82,10 @@
 /obj/item/clothing/gloves/f13/crudemedical
 	name = "crude medical gloves"
 	desc = "Cotton gloves waxed to prevent the blood from soaking through immediatly. Better than nothing."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	icon_state = "offwhite"
 	item_state = "offwhite"
 	siemens_coefficient = 0.5
@@ -127,13 +131,19 @@
 //LEGION//
 //////////
 
-/obj/item/clothing/gloves/legion
+/obj/item/clothing/gloves/legion // art in Legio Invicta
 	name = "leather gloves"
 	desc = "Fingerless leather gloves to improve grip worn by legionaires."
-	icon = 'icons/fallout/clothing/gloves.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
-	icon_state = "legion_fingerless"
-	item_state = "legion_fingerless"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+//	icon = 'icons/fallout/clothing/gloves.dmi'
+//	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
+	icon_state = "gloves_fingerless"
+	item_state = "gloves_fingerless"
+//	icon_state = "legion_fingerless"
+//	item_state = "legion_fingerless"
 	item_color = null	//So they don't wash.
 	transfer_prints = TRUE
 	strip_delay = 40
@@ -144,14 +154,18 @@
 /obj/item/clothing/gloves/legion/plated
 	name = "plated gloves"
 	desc = "Leather gloves with metal reinforcement."
-	icon_state = "legion_plated"
-	item_state = "legion_plated"
+	icon_state = "gloves_plated"
+	item_state = "gloves_plated"
+//	icon_state = "legion_plated"
+//	item_state = "legion_plated"
 	transfer_prints = FALSE
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/gloves/legion/legate
 	name = "brass gauntlets"
 	desc = "Heavy finely crafted metal gloves."
+	icon = 'icons/fallout/clothing/gloves.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
 	icon_state = "legion_legate"
 	item_state = "legion_legate"
 	transfer_prints = FALSE

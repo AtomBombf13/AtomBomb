@@ -135,12 +135,16 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola
 	name = "Nuka-Cola"
-	desc = "The most popular flavored soft drink in the United States before the Great War."
-	icon = 'icons/obj/f13vending.dmi'
+	desc = "A bottle of Nuka-Cola, the flavored softdrink of the post-nuclear world. Warm and flat"
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "nukacola"
-	list_reagents = list(/datum/reagent/consumable/nuka_cola = 25, /datum/reagent/radium = 5)
 	foodtype = NUKA
 	isGlass = TRUE
+
+/obj/item/reagent_containers/food/drinks/bottle/f13nukacola/Initialize()
+	list_reagents = list(/datum/reagent/consumable/nuka_cola = 24, /datum/reagent/radium = rand(1, 6))
+	. = ..()
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
@@ -149,7 +153,8 @@
 /obj/item/reagent_containers/food/drinks/bottle/sunset
 	name = "Sunset Sarsparilla"
 	desc = "The most popular flavored root beer in the West!"
-	icon = 'icons/obj/f13vending.dmi'
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "sunset"
 	list_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 1, /datum/reagent/consumable/sunset = 15, /datum/reagent/medicine/salglu_solution = 5)
 	isGlass = TRUE

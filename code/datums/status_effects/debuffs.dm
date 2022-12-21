@@ -686,11 +686,11 @@
 		new /obj/effect/temp_visual/dir_setting/bloodsplatter(T, d)
 	playsound(T, "desceration", 100, TRUE, -1)
 
-/datum/status_effect/stacking/saw_bleed/bloodletting
+/datum/status_effect/stacking/saw_bleed/bloodletting // this is basically damage over time, add some little icons and you can have it be hot metal, poison, anything really. Adjusted values so the the effect lasts longer with lower tick damage, so remains about the same total damage but its a little more noticeable.
 	id = "bloodletting"
-	stack_threshold = 7
-	max_stacks = 7
-	bleed_damage = 20
+	stack_threshold = 10
+	max_stacks = 10
+	bleed_damage = 5
 
 /datum/status_effect/stacking/saw_bleed/yaoguaigauntlet
 	id = "yaoguaigauntletbleed"

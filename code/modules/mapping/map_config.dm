@@ -18,7 +18,7 @@
 	// Config actually from the JSON - should default to Box
 	var/map_name = "Yuma"
 	var/map_path = "map_files/Pahrump"
-	var/map_file = list("Pahrump-Sunset-Lower.dmm", "Pahrump-Sunset.dmm", "Pahrump-Sunset-Upper.dmm", "Pahrump-Sunset-Upper-2.dmm")
+	var/map_file = list("Pahrump-Sunset-Lower.dmm", "Pahrump-Sunset.dmm", "Pahrump-Sunset-Upper.dmm")
 	var/list/added_jobs = list()     //Overrides the "none" faction using job name
 	var/list/removed_jobs = list()   //Removes the "none" faction using job name - can also use #all# (case sensitive)
 
@@ -48,7 +48,7 @@
 		"ferry" = "ferry_fancy",
 		"emergency" = "emergency_pahrump")
 
-	var/year_offset = 540 //The offset of ingame year from the actual IRL year. You know you want to make a map that takes place in the 90's. Don't lie.
+	var/year_offset = 258 //The offset of ingame year from the actual IRL year. You know you want to make a map that takes place in the 90's. Don't lie.
 
 	// "fun things"
 	/// Orientation to load in by default.

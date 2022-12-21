@@ -231,7 +231,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 15, \
-		"damage_threshold" = 6)
+		"damage_threshold" = 7)
 
 #define ARMOR_VALUE_REINFORCED_METAL_ARMOR list(\
 		"melee" = 40, \
@@ -283,7 +283,7 @@
 		"fire" = 20, \
 		"acid" = 20, \
 		"wound" = 20, \
-		"damage_threshold" = 10)
+		"damage_threshold" = 8)
 
 #define ARMOR_VALUE_REINFORCED_COMBAT_ARMOR list(\
 		"melee" = 30, \
@@ -296,7 +296,7 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 20, \
-		"damage_threshold" = 12)
+		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_RIOT_ARMOR list(\
 		"melee" = 50, \
@@ -309,13 +309,13 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 30, \
-		"damage_threshold" = 14)
+		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_SALVAGE list(\
-		"melee" = 50, \
-		"bullet" = 60, \
-		"laser" = 30, \
-		"energy" = 30, \
+		"melee" = 45, \
+		"bullet" = 45, \
+		"laser" = 45, \
+		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 80, \
 		"rad" = 50, \
@@ -325,17 +325,32 @@
 		"damage_threshold" = 16)
 
 #define ARMOR_VALUE_PA list(\
-		"melee" = 60, \
-		"bullet" = 70, \
-		"laser" = 40, \
-		"energy" = 30, \
+		"melee" = 50, \
+		"bullet" = 50, \
+		"laser" = 50, \
+		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 100, \
 		"rad" = 50, \
 		"fire" = 70, \
 		"acid" = 95, \
 		"wound" = 50, \
+		"damage_threshold" = 18)
+		
+/*
+#define ARMOR_VALUE_APA list(\
+		"melee" = 55, \
+		"bullet" = 55, \
+		"laser" = 55, \
+		"energy" = 30, \
+		"bomb" = 40, \
+		"bio" = 100, \
+		"rad" = 55, \
+		"fire" = 70, \
+		"acid" = 95, \
+		"wound" = 55, \
 		"damage_threshold" = 20)
+*/
 
 /* Armor Subclass multipliers
  * Modifies base armor slots by these values

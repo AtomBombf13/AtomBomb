@@ -54,7 +54,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
 				/obj/item/reagent_containers/food/snacks/grown/agave = 1,
 				/obj/item/reagent_containers/food/snacks/grown/fungus = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	time = 10
 	category = CAT_MEDICAL
 	always_available = FALSE // only tribals know the secret
@@ -66,7 +66,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
 				/obj/item/reagent_containers/food/snacks/grown/agave = 5,
 				/obj/item/reagent_containers/food/snacks/grown/fungus = 5)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	time = 20
 	category = CAT_MEDICAL
 	always_available = FALSE
@@ -77,7 +77,7 @@
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
 				/obj/item/reagent_containers/glass/beaker = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	time = 10
 	category = CAT_MEDICAL
 	always_available = FALSE // Only the Twin Mothers Tribe knew the secret to making bitter drink prior to legion annexation. Any clever chemist can bootleg the recipe though.
@@ -88,10 +88,21 @@
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
 				/obj/item/reagent_containers/glass/beaker = 5)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	time = 20
 	category = CAT_MEDICAL
 	always_available = FALSE
+
+/datum/crafting_recipe/hydra
+	name = "Hydra"
+	result = /obj/item/reagent_containers/pill/consumable/hydra
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 1,
+				/datum/reagent/consumable/cavefungus_fermented = 30)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_MEDICAL
+	always_available = FALSE // possibly limited to tribal/legion?
+
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -109,7 +120,7 @@
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
 				/obj/item/reagent_containers/syringe = 1)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	time = 10
 	category = CAT_MEDICAL
 	always_available = FALSE
@@ -130,7 +141,7 @@
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 5,
 				/obj/item/reagent_containers/food/snacks/grown/xander = 5,
 				/obj/item/reagent_containers/syringe = 5)
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	time = 20
 	category = CAT_MEDICAL
 	always_available = FALSE
@@ -187,7 +198,7 @@
 				/datum/reagent/consumable/milk = 10,
 				/obj/item/toy/crayon/spraycan = 1)
 	time = 35
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 	always_available = FALSE
 
@@ -198,7 +209,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/agave = 2,
 				/datum/reagent/consumable/ethanol/whiskey = 15)
 	time = 35
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 	always_available = FALSE
 
@@ -209,7 +220,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/fungus = 3,
 				/datum/reagent/consumable/nuka_cola = 10)
 	time = 35
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 	always_available = FALSE
 
@@ -220,7 +231,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/datura = 2,
 				/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2)
 	time = 35
-	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 	always_available = FALSE
 
@@ -244,7 +255,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 5,
 				/datum/reagent/consumable/nuka_cola = 60)
 	time = 50
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 	always_available = FALSE
 
@@ -256,7 +267,7 @@
 				/obj/item/reagent_containers/food/snacks/grown/horsenettle = 1,
 				/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 1)
 	time = 35
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 	always_available = FALSE
 
@@ -266,7 +277,7 @@
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/ambrosia/gaia  = 6,
 	/datum/reagent/water = 50)
 	time = 20
-	tools = list(TOOL_WORKBENCH)
+	tools = list(TOOL_ALCHEMY)
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/primitive_defib

@@ -237,6 +237,103 @@
 	else
 		..()
 
+// ------------------------ STRAIGHT RAZOR ------------------------------- // Pebbles straight razor. It borrows the razor code, edits some timers, adds sounds and slaps it on a melee weapon.
+/obj/item/melee/onehanded/straight_razor
+	name = "straight razor"
+	desc = "For those smooth close shaves. Better aim for the mouth or the head, or else things might get messy."
+	icon = 'modular_atom/fashion/icons/cosmetics.dmi'
+	righthand_file = 'modular_atom/fashion/icons/onmobright.dmi'
+	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
+	icon_state = "straight_razor"
+	force = WEAPON_FORCE_BIG_TOOL
+	throwforce = THROWING_PATHETIC
+	wound_bonus = WOUNDING_MALUS_SHALLOW // crap against armor
+	bare_wound_bonus = WOUNDING_BONUS_BIG // bleeds a lot, despite its low damage
+	sharpness = SHARP_EDGED
+	total_mass = TOTAL_MASS_TINY_ITEM
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/melee/onehanded/straight_razor/proc/manual_shave(mob/living/carbon/human/H, location = BODY_ZONE_PRECISE_MOUTH)
+	if(location == BODY_ZONE_PRECISE_MOUTH)
+		H.facial_hair_style = "Clean shave (Hairless)"
+	else
+		H.hair_style = "Skinhead"
+
+	H.update_hair()
+
+/obj/item/melee/onehanded/straight_razor/attack(mob/M, mob/user)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/location = user.zone_selected
+		if((location in list(BODY_ZONE_PRECISE_EYES, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_HEAD)) && !H.get_bodypart(BODY_ZONE_HEAD))
+			to_chat(user, span_warning("[H] doesn't have a head!"))
+			return
+		if(location == BODY_ZONE_PRECISE_MOUTH)
+			if(!(FACEHAIR in H.dna.species.species_traits))
+				to_chat(user, span_warning("There is no facial hair to shave!"))
+				return
+			if(!get_location_accessible(H, location))
+				to_chat(user, span_warning("The mask is in the way!"))
+				return
+			if(H.facial_hair_style == "Clean shave (Hairless)")
+				to_chat(user, span_warning("Already clean-shaven!"))
+				return
+
+			if(H == user) //shaving yourself
+				playsound(loc, 'modular_atom/fashion/sound/shaving.ogg', 100, 1) // added
+				user.visible_message("[user] starts to shave [user.p_their()] facial hair with [src].", \
+									span_notice("You take a moment to shave your facial hair with [src]..."))
+				if(do_after(user, 150, target = H))
+					user.visible_message("[user] shaves [user.p_their()] facial hair clean with [src].", \
+										span_notice("You finish shaving with [src]. Fast and clean!"))
+					manual_shave(H, location)
+			else
+				var/turf/H_loc = H.loc
+				playsound(loc, 'modular_atom/fashion/sound/shaving.ogg', 100, 1) // added
+				user.visible_message(span_warning("[user] tries to shave [H]'s facial hair with [src]."), \
+									span_notice("You start shaving [H]'s facial hair..."))
+				if(do_after(user, 100, target = H))
+					if(H_loc == H.loc)
+						user.visible_message(span_warning("[user] shaves off [H]'s facial hair with [src]."), \
+											span_notice("You shave [H]'s facial hair clean off."))
+						manual_shave(H, location)
+
+		else if(location == BODY_ZONE_HEAD)
+			if(!(HAIR in H.dna.species.species_traits))
+				to_chat(user, span_warning("There is no hair to shave!"))
+				return
+			if(!get_location_accessible(H, location))
+				to_chat(user, span_warning("The headgear is in the way!"))
+				return
+			if(H.hair_style == "Bald" || H.hair_style == "Mature (Balding)" || H.hair_style == "Clean shave (Hairless)")
+				to_chat(user, span_warning("There is not enough hair left to shave!"))
+				return
+
+			if(H == user) //shaving yourself
+				playsound(loc, 'modular_atom/fashion/sound/shaving.ogg', 100, 1) // added
+				user.visible_message("[user] starts to shave [user.p_their()] head with [src].", \
+									span_notice("You start to shave your head with [src]..."))
+				if(do_after(user, 150, target = H)) //edited time
+					user.visible_message("[user] shaves [user.p_their()] head with [src].", \
+										span_notice("You finish shaving with [src]."))
+					manual_shave(H, location)
+			else
+				var/turf/H_loc = H.loc
+				playsound(loc, 'modular_atom/fashion/sound/shaving.ogg', 100, 1) // added
+				user.visible_message(span_warning("[user] tries to shave [H]'s head with [src]!"), \
+									span_notice("You start shaving [H]'s head..."))
+				if(do_after(user, 150, target = H)) //edited time
+					if(H_loc == H.loc)
+						user.visible_message(span_warning("[user] shaves [H]'s head bald with [src]!"), \
+											span_notice("You shave [H]'s head bald."))
+						manual_shave(H, location)
+		else
+			..()
+	else
+		..()
+
+
+
 // ------------------------ COMBS AND BRUSHES ------------------------------ // - Pebbles
 /obj/item/cosmetics/haircomb //This was painful to make
 	name = "hair comb"
@@ -247,8 +344,8 @@
 
 
 // This code is meant to make the item comb a mob on clicking them with the item, giving a message in chat, and can't be done while wearing a hat.
-// Idea is to use hairstyle flags and give various mood boosts depending on hair length, and none to baldies. Some issue making this part work properly. Only paritally done, for working full section see bottom. 
-/obj/item/cosmetics/haircomb/attack(mob/M, mob/user) 
+// Idea is to use hairstyle flags and give various mood boosts depending on hair length, and none to baldies. Some issue making this part work properly. Only paritally done, for working full section see bottom.
+/obj/item/cosmetics/haircomb/attack(mob/M, mob/user)
 	var/mob/living/carbon/human/H = M
 	if(!ismob(M))
 		return
@@ -260,7 +357,7 @@
 		if(H == user)
 //			var/datum/sprite_accessory/hair/hair_style = GLOB.hair_styles_list[H.hair_style]
 //			if(hair_style.flags & VERY_SHORT_HAIR)
-//				to_chat(user, span_warning("[user] scrapes the scalp in a futile attempt to comb the hair."))	
+//				to_chat(user, span_warning("[user] scrapes the scalp in a futile attempt to comb the hair."))
 			user.visible_message(span_notice("[user] combs [user.p_their()] hair with \the [src]. What a tidy[user.gender == FEMALE ? "gal" : "guy"]"), \
 			span_notice("You comb your hair for a moment, getting rid of dust and grime. Perfect!"))
 			SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "combed", /datum/mood_event/combed)

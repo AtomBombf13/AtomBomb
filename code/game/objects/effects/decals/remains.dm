@@ -43,7 +43,7 @@
 	return .
 
 /obj/effect/decal/remains/human
-	desc = "They look like human remains. They have a strange aura about them."
+	desc = "They look like human remains."
 	icon_state = "remains"
 	drop_amount = 2
 
@@ -52,7 +52,7 @@
 	drop_amount = 0
 
 /obj/effect/decal/remains/xeno
-	desc = "They look like the remains of something... alien. They have a strange aura about them."
+	desc = "They look like the remains of something... alien."
 	icon_state = "remainsxeno"
 	drop_amount = 2
 
@@ -60,7 +60,7 @@
 	icon_state = "remainslarva"
 
 /obj/effect/decal/remains/robot
-	desc = "They look like the remains of something mechanical. They have a strange aura about them."
+	desc = "They look like the remains of something mechanical."
 	icon = 'icons/mob/robots.dmi'
 	icon_state = "remainsrobot"
 	debris_result = list(/obj/item/stack/sheet/metal, /obj/item/stack/cable_coil, /obj/item/stack/rods)
