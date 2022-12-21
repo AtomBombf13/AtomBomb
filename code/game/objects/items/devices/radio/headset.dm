@@ -435,6 +435,17 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	command = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/mayor
 
+/obj/item/radio/headset/headset_town/cmo
+	name = "Eastwood Director radio headset"
+	desc = "This is used by Eastwood's CMO. Protects ears from flashbangs.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood mayor channel, use :y.\
+		\nTo access the Eastwood security channel, use :s.\
+		\nTo access the Eastwood medical channel, use :j."
+	bowman = TRUE
+	command = TRUE
+	keyslot = new /obj/item/encryptionkey/headset_town/cmo
+
 /obj/item/radio/headset/headset_followers
 	name = "followers radio headset"
 	desc = "This is used by the Followers.\nTo access the Followers channel, use :m"

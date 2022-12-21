@@ -1,4 +1,4 @@
-
+// filename misleading, should be fallout drink vendors or something clearer. If sorted this file really supercedes f13nukacola.dm that should be nuked
 /obj/machinery/vending/cola
 	name = "\improper Nuka-Cola vending machine"
 	icon = 'icons/obj/f13vending.dmi'
@@ -46,3 +46,27 @@
 	desc = "A pre-war Balls Guarana Vending Machine. For that Bounce! To keep you going!"
 	product_slogans = "The Drink to Keep you Going! Balls Guarana! Bounce!"
 	products = list(/obj/item/reagent_containers/food/drinks/bottle/bawls = 30)
+
+
+// The new ones under here, a bit more clear pathing and consistent art, and more random contents, cause a fully stocked wasteland vendor seems kind of weird
+
+/obj/machinery/vending/cola/nukacola
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "nuka_vending"
+	contraband = list(/obj/item/reagent_containers/food/drinks/drinkingglass/filled/nuka_cola = 1)
+	premium = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1)
+
+/obj/machinery/vending/cola/nukacola/Initialize()
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = rand(3, 7))
+	. = ..()
+
+/obj/machinery/vending/cola/sunset_sarsaparilla
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "sunset_vending"
+	contraband = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 1)
+	premium = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 1)
+
+/obj/machinery/vending/cola/sunset_sarsaparilla/Initialize()
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = rand(3, 7))
+	. = ..()
+

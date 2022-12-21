@@ -127,6 +127,7 @@
 	health = 100
 	faction = list("raider", "wastebot")
 	extra_projectiles = 1
+	auto_fire_delay = MOB_AUTOFIRE_DELAY_SLOWER
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	minimum_distance = 4

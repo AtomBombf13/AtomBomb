@@ -7,7 +7,7 @@
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 20
 	active_power_usage = 5000
-	req_access = list(ACCESS_ROBOTICS, ACCESS_BOS)
+	req_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 	circuit = /obj/item/circuitboard/machine/mechfab
 	// processing_flags = START_PROCESSING_MANUALLY
 

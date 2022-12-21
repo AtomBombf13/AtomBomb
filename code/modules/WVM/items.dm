@@ -4,8 +4,9 @@
 /obj/item/key/vending
 	name = "Vending Machine Key"
 	desc = "Vending machine key."
-	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
-	icon_state = "key-door"
+	icon = 'icons/WVM/new_vendors.dmi'
+//	icon = 'icons/fallout/vehicles/small_vehicles.dmi'
+	icon_state = "key_vendor"
 	var/id = 0
 
 /obj/item/key/vending/proc/set_name(newname)

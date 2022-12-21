@@ -210,8 +210,8 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	overdose_threshold = 31
-	var/heal_factor = -5 //Subtractive multiplier if you do not have the perk.
-	var/heal_factor_perk = -5.5 //Multiplier if you have the right perk.
+	var/heal_factor = -4 //Subtractive multiplier if you do not have the perk.
+	var/heal_factor_perk = -4.5 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)

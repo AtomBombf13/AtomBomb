@@ -24,12 +24,6 @@
 			Radio headset does not include encryption key. No gun included."
 	item = /obj/item/storage/box/syndie_kit/centcom_costume
 
-/datum/uplink_item/badass/plastitanium_toolbox
-	name = "Plastitanium Toolbox"
-	desc = "A very high impact toolbox. Excels at destroying stationary structures."
-	item = /obj/item/storage/toolbox/plastitanium
-	cost = 2		//18 damage on mobs, 50 on objects, 4.5 stam/hit
-
 /datum/uplink_item/badass/balloon
 	name = "Syndicate Balloon"
 	desc = "For showing that you are THE BOSS: A useless red balloon with the Syndicate logo on it. \

@@ -1329,7 +1329,7 @@
 	..()
 
 /datum/reagent/uranium
-	name ="Uranium"
+	name = "Uranium"
 	description = "A silvery-white metallic chemical element in the actinide series, weakly radioactive."
 	reagent_state = SOLID
 	color = "#B8B8C0" // rgb: 184, 184, 192
@@ -2385,6 +2385,7 @@
 	REMOVE_TRAIT(L, TRAIT_PACIFISM, type)
 	..()
 */
+
 /datum/reagent/bz_metabolites
 	name = "BZ metabolites"
 	description = "A harmless metabolite of BZ gas"
@@ -2416,6 +2417,7 @@
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 */
+
 /datum/reagent/peaceborg_confuse
 	name = "Dizzying Solution"
 	description = "Makes the target off balance and dizzy"
@@ -2423,6 +2425,7 @@
 	taste_description = "dizziness"
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
+	can_synth = FALSE
 
 /datum/reagent/peaceborg_confuse/on_mob_life(mob/living/carbon/M)
 	if(M.confused < 6)
@@ -2448,14 +2451,6 @@
 	if(prob(30))
 		to_chat(M, "You should sit down and take a rest...")
 	..()
-
-/datum/reagent/moonsugar
-	name = "Moonsugar"
-	description = "An unstable slurry consisting of moonshine and sugar, made by stirring at high speeds."
-	color = "#FAEAFF"
-	taste_description = "sugar and moonshine"
-	value = REAGENT_VALUE_UNCOMMON
-	ghoulfriendly = TRUE
 
 /datum/reagent/changeling_string
 	name = "UNKNOWN"
