@@ -22664,7 +22664,7 @@
 /area/f13/bunker)
 "opT" = (
 /obj/structure/table,
-/obj/effect/spawner/bundle/f13/armor/t45d,
+/obj/effect/spawner/lootdrop/f13/armor/tier4PA,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -28962,7 +28962,7 @@
 /obj/structure/closet/crate,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique,
-/obj/effect/spawner/bundle/f13/armor/t45d,
+/obj/effect/spawner/lootdrop/f13/armor/tier4PA,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
