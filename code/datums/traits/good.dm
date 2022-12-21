@@ -39,9 +39,9 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 
 GLOBAL_LIST_INIT(whitelegs_recipes, list(
 	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
-	/datum/crafting_recipe/tribalwar/whitelegs/armour, 
-	/datum/crafting_recipe/tribalwar/whitelegs/garb, 
-	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/armour,
+	/datum/crafting_recipe/tribalwar/whitelegs/garb,
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb,
 	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
 
 GLOBAL_LIST_INIT(deadhorses_recipes, list(
@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(wayfarer_recipes, list(
 
 GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	/datum/crafting_recipe/tribalwar/bone/lightarmour,
-	/datum/crafting_recipe/tribalwar/bone/armour, 
+	/datum/crafting_recipe/tribalwar/bone/armour,
 	/datum/crafting_recipe/tribalwar/bone/heavyarmour,
 	/datum/crafting_recipe/tribalwar/bone/garb,
 	/datum/crafting_recipe/tribalwar/bone/helmet))
@@ -134,6 +134,22 @@ GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	if(!QDELETED(H))
 		REMOVE_TRAIT(H, TRAIT_TECHNOPHOBE, "Former Tribal")
 		REMOVE_TRAIT(H, TRAIT_TRIBAL, "Former Tribal")
+
+/datum/quirk/chinesespeak
+	name = "Chinese Language Comprehension"
+	desc = "You are somehow capable of understanding and speaking the old Chinese language."
+	value = 1
+	gain_text = span_notice("You remember the old language of China.")
+	lose_text = span_notice("You forget the old language of China.")
+
+/datum/quirk/chinesespeak/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/chinese)
+
+/datum/quirk/chinesespeak/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/chinese)
 
 
 /datum/quirk/tribespeak
@@ -386,7 +402,7 @@ GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	gain_text = span_notice("You want to buy the whole world a nuka-cola!")
 	lose_text = span_danger("What's the big deal about nuka-cola?")
 	medical_record_text = "Patient has an addiction to the soft drink Nuka-Cola. Somehow, their metabolism has adapted to the sugars and artifical flavorings."
-	
+
 /datum/quirk/nukalover/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/species/species = H.dna.species

@@ -18,6 +18,7 @@
 
 	var/extra_projectiles = 0 //how many projectiles above 1?
 	/// How long to wait between shots?
+	var/auto_fire_delay = MOB_AUTOFIRE_DELAY_NORMAL
 	var/projectiletype	//set ONLY it and NULLIFY casingtype var, if we have ONLY projectile
 	var/projectilesound
 	var/list/projectile_sound_properties = list(
@@ -82,8 +83,8 @@
 	if(!targets_from)
 		targets_from = src
 	wanted_objects = typecacheof(wanted_objects)
-	if((ranged_cooldown * extra_projectiles) < ranged_cooldown_time)
-		ranged_cooldown_time = (ranged_cooldown * (extra_projectiles + 1))
+	if((auto_fire_delay * extra_projectiles) < ranged_cooldown_time)
+		ranged_cooldown_time = (auto_fire_delay * (extra_projectiles + 1))
 
 
 /mob/living/simple_animal/hostile/Destroy()
@@ -465,7 +466,7 @@
 	else
 		Shoot(A)
 		for(var/i in 1 to extra_projectiles)
-			addtimer(CALLBACK(src, .proc/Shoot, A), i * ranged_cooldown)
+			addtimer(CALLBACK(src, .proc/Shoot, A), i * auto_fire_delay)
 	ranged_cooldown = world.time + ranged_cooldown_time
 	if(LAZYLEN(variation_list[MOB_PROJECTILE]) >= 2) // Gotta have multiple different projectiles to cycle through
 		projectiletype = vary_from_list(variation_list[MOB_PROJECTILE], TRUE)
