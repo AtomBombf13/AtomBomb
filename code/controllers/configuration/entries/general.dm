@@ -221,7 +221,7 @@
 	config_entry_value = "https://discord.gg/nRSNBcuSah"
 
 /datum/config_entry/string/rulesurl
-	config_entry_value = "https://docs.google.com/document/d/1I1j1X629J6R-D9nQdkBu2G-11AVCUeIg23ZnYEWjE5I"
+	config_entry_value = "https://docs.google.com/document/d/116GON6o_ebTGVlweKboZcB2Dud4z2yLGALuDCGZxMAc/edit"
 
 /datum/config_entry/string/wikiurltg
 	config_entry_value = "https://tgstation13.org/wiki/Main_Page"
