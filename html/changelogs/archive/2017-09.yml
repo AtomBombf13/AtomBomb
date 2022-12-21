@@ -173,7 +173,7 @@
   AutomaticFrenzy:
   - bugfix: Mice spawning finds the station z level properly
   CPTANT:
-  - balance: Knockdown and unconcious now let you regenerate stamina damage.
+  - balance: Knockdown and unconscious now let you regenerate stamina damage.
   - rscadd: Sleeping regenerates more stamina damage.
   Naksu:
   - bugfix: Admin ghosts can no longer unintentionally make a mess of things.

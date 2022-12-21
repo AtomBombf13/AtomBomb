@@ -26,7 +26,7 @@
 /datum/status_effect/chem/SGDF/on_remove()
 	log_reagent("FERMICHEM: SGDF mind shift applied. [owner] is now playing as their clone and should not have memories after their clone split (look up SGDF status applied). ID: [owner.key]")
 	originalmind.transfer_to(fermi_Clone)
-	to_chat(owner, span_warning("Lucidity shoots to your previously blank mind as your mind suddenly finishes the cloning process. You marvel for a moment at yourself, as your mind subconciously recollects all your memories up until the point when you cloned yourself. Curiously, you find that you memories are blank after you ingested the synthetic serum, leaving you to wonder where the other you is."))
+	to_chat(owner, span_warning("Lucidity shoots to your previously blank mind as your mind suddenly finishes the cloning process. You marvel for a moment at yourself, as your mind subconsciously recollects all your memories up until the point when you cloned yourself. Curiously, you find that you memories are blank after you ingested the synthetic serum, leaving you to wonder where the other you is."))
 	fermi_Clone = null
 	return ..()
 
@@ -51,7 +51,7 @@
 	if(owner.mind)
 		var/mob/living/simple_animal/astral/G = new(get_turf(M.loc))
 		owner.mind.transfer_to(G)//Just in case someone else is inside of you, it makes them a ghost and should hopefully bring them home at the end.
-		to_chat(G, "<span class='warning'>[M]'s conciousness snaps back to them as their astrogen runs out, kicking your projected mind out!'</b></span>")
+		to_chat(G, "<span class='warning'>[M]'s consciousness snaps back to them as their astrogen runs out, kicking your projected mind out!'</b></span>")
 		log_reagent("FERMICHEM: [M]'s possesser has been booted out into a astral ghost!")
 	originalmind.transfer_to(original)
 
@@ -60,7 +60,7 @@
 		if(owner.mind)
 			var/mob/living/simple_animal/astral/G = new(get_turf(owner))
 			owner.mind.transfer_to(G)//Just in case someone else is inside of you, it makes them a ghost and should hopefully bring them home at the end.
-			to_chat(G, "<span class='warning'>[owner]'s conciousness snaps back to them as their astrogen runs out, kicking your projected mind out!'</b></span>")
+			to_chat(G, "<span class='warning'>[owner]'s consciousness snaps back to them as their astrogen runs out, kicking your projected mind out!'</b></span>")
 			log_reagent("FERMICHEM: [owner]'s possesser has been booted out into a astral ghost!")
 		originalmind.transfer_to(original)
 	return ..()
