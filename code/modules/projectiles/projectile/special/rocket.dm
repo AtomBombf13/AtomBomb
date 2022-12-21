@@ -22,7 +22,7 @@
 	explosion(target, -1, 1, 3, 1, 0, flame_range = 4)
 
 	if(ismecha(target))
-		var/obj/mecha/M = target
+		var/obj/vehicle/sealed/mecha/M = target
 		M.take_damage(anti_armour_damage)
 	if(issilicon(target))
 		var/mob/living/silicon/S = target
@@ -84,41 +84,41 @@
 	return BULLET_ACT_HIT
 
 /obj/item/projectile/bullet/a84mm_he
-	name ="\improper low yield HE missile"
-	desc = "Boom."
-	icon_state = "missile"
-	damage = 25
-	ricochets_max = 0 //it's a MISSILE
-
-/obj/item/projectile/bullet/a84mm_he/on_hit(atom/target, blocked=0)
-	..()
-	explosion(target, 0, 0, 2, 4)
-	new /obj/effect/temp_visual/explosion(get_turf(target))
-	return BULLET_ACT_HIT
-
-/obj/item/projectile/bullet/a84mm_he_big
-	name ="\improper high yield HE missile"
-	desc = "Boom plus."
+	name ="improvised HE rocket"
+	desc = "Boom"
 	icon_state = "missile"
 	damage = 15
 	ricochets_max = 0 //it's a MISSILE
 
+/obj/item/projectile/bullet/a84mm_he/on_hit(atom/target, blocked=0)
+	..()
+	explosion(target, 1, 2, 5, 4)
+	new /obj/effect/temp_visual/explosion(get_turf(target))
+	return BULLET_ACT_HIT
+
+/obj/item/projectile/bullet/a84mm_he_big
+	name ="High-Explosive rocket"
+	desc = "Boom plus."
+	icon_state = "missile"
+	damage = 20
+	ricochets_max = 0 //it's a MISSILE
+
 /obj/item/projectile/bullet/a84mm_he_big/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 0, 3, 5, 5)
+	explosion(target, 2, 3, 5, 5)
 	new /obj/effect/temp_visual/explosion(get_turf(target))
 	return BULLET_ACT_HIT
 
 /obj/item/projectile/bullet/a84mm_br
-	name ="\improper APHE missile"
+	name ="Armor-Piercing, High-Explosive rocket"
 	desc = "Boom."
 	icon_state = "missile"
-	damage = 20
-	armour_penetration = 0.25
+	damage = 75
+	armour_penetration = 0.5 //the direct hit hurts
 	ricochets_max = 0 //Guess what? Still a MISSILE
 	var/sturdy = list(
 	/turf/closed,
-	/obj/mecha,
+	/obj/vehicle/sealed/mecha,
 	/obj/machinery/door,
 	/obj/machinery/door/poddoor/shutters
 	)
@@ -135,6 +135,6 @@
 	..()
 	for(var/i in sturdy)
 		if(istype(target, i))
-			explosion(target, 0, 1, 1, 2)
+			explosion(target, 1, 2, 2, 0)
 			return BULLET_ACT_HIT
 	new /obj/item/broken_missile(get_turf(src), 1)

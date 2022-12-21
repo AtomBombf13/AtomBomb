@@ -18,6 +18,7 @@
 
 	var/extra_projectiles = 0 //how many projectiles above 1?
 	/// How long to wait between shots?
+	var/auto_fire_delay = MOB_AUTOFIRE_DELAY_NORMAL
 	var/projectiletype	//set ONLY it and NULLIFY casingtype var, if we have ONLY projectile
 	var/projectilesound
 	var/list/projectile_sound_properties = list(
@@ -82,8 +83,8 @@
 	if(!targets_from)
 		targets_from = src
 	wanted_objects = typecacheof(wanted_objects)
-	if((ranged_cooldown * extra_projectiles) < ranged_cooldown_time)
-		ranged_cooldown_time = (ranged_cooldown * (extra_projectiles + 1))
+	if((auto_fire_delay * extra_projectiles) < ranged_cooldown_time)
+		ranged_cooldown_time = (auto_fire_delay * (extra_projectiles + 1))
 
 
 /mob/living/simple_animal/hostile/Destroy()
@@ -181,7 +182,7 @@
 	if(!search_objects)
 		. = hearers(vision_range, targets_from) - src //Remove self, so we don't suicide
 
-		var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/structure/destructible/clockwork/ocular_warden,/obj/item/electronic_assembly))
+		var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/vehicle/sealed/mecha, /obj/structure/destructible/clockwork/ocular_warden,/obj/item/electronic_assembly))
 
 		for(var/HM in typecache_filter_list(range(vision_range, targets_from), hostile_machines))
 			CHECK_TICK
@@ -273,9 +274,9 @@
 			return TRUE
 
 		if(ismecha(the_target))
-			var/obj/mecha/M = the_target
-			if(M.occupant)//Just so we don't attack empty mechs
-				if(CanAttack(M.occupant))
+			var/obj/vehicle/sealed/mecha/M = the_target
+			for(var/occupant in M.occupants)
+				if(CanAttack(occupant))
 					return TRUE
 
 		if(istype(the_target, /obj/machinery/porta_turret))
@@ -465,7 +466,7 @@
 	else
 		Shoot(A)
 		for(var/i in 1 to extra_projectiles)
-			addtimer(CALLBACK(src, .proc/Shoot, A), i * ranged_cooldown)
+			addtimer(CALLBACK(src, .proc/Shoot, A), i * auto_fire_delay)
 	ranged_cooldown = world.time + ranged_cooldown_time
 	if(LAZYLEN(variation_list[MOB_PROJECTILE]) >= 2) // Gotta have multiple different projectiles to cycle through
 		projectiletype = vary_from_list(variation_list[MOB_PROJECTILE], TRUE)
@@ -602,7 +603,7 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 /mob/living/simple_animal/hostile/proc/GainPatience()
 	if(QDELETED(src))
 		return
-	
+
 	if(lose_patience_timeout)
 		LosePatience()
 		lose_patience_timer_id = addtimer(CALLBACK(src, .proc/LoseTarget), lose_patience_timeout, TIMER_STOPPABLE)
@@ -616,7 +617,7 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 /mob/living/simple_animal/hostile/proc/LoseSearchObjects()
 	if(QDELETED(src))
 		return
-	
+
 	search_objects = 0
 	deltimer(search_objects_timer_id)
 	search_objects_timer_id = addtimer(CALLBACK(src, .proc/RegainSearchObjects), search_objects_regain_time, TIMER_STOPPABLE)
@@ -651,7 +652,7 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 		toggle_ai(AI_ON)
 
 /mob/living/simple_animal/hostile/proc/ListTargetsLazy(_Z)//Step 1, find out what we can see
-	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/structure/destructible/clockwork/ocular_warden))
+	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/vehicle/sealed/mecha, /obj/structure/destructible/clockwork/ocular_warden))
 	. = list()
 	for (var/I in SSmobs.clients_by_zlevel[_Z])
 		var/mob/M = I

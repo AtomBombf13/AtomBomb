@@ -14,7 +14,7 @@
 	starting_node = TRUE
 	display_name = "Basic Exosuit Equipment"
 	description = "Various tools fit for basic mech units"
-	design_ids = list("mech_drill", "mech_mscanner", "mech_extinguisher", "mech_cable_layer", "mech_hydraulic_clamp")
+	design_ids = list("mech_drill", "mech_mscanner", "mech_extinguisher", /*"mech_cable_layer",*/ "mech_hydraulic_clamp")
 
 /datum/techweb_node/ripley
 	id = "mech_ripley"
@@ -118,7 +118,6 @@
 	design_ids = list(/*"mech_energy_relay",*/ "mech_ccw_armor", "mech_proj_armor", "mech_generator_nuclear")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/* ## Uncomment it after projectiles don't runtime anymore
 /datum/techweb_node/mech_scattershot
 	id = "mecha_tools"
 	display_name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
@@ -126,7 +125,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_scattershot", "mech_scattershot_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+/*
 /datum/techweb_node/mech_seedscatter
 	id = "mech_seedscatter"
 	display_name = "Exosuit Weapon (Melon Seed \"Scattershot\")"
@@ -142,7 +141,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_carbine", "mech_carbine_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
+*/
 /datum/techweb_node/mech_lmg
 	id = "mech_lmg"
 	display_name = "Exosuit Weapon (\"Ultra AC 2\" LMG)"
@@ -150,7 +149,6 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_lmg", "mech_lmg_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
 
 /datum/techweb_node/mech_ion
 	id = "mmech_ion"

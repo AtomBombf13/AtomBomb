@@ -5,7 +5,7 @@
 
 /datum/gear/shoes/laceup
 	name = "laceup shoes"
-	path = /obj/item/clothing/shoes/laceup
+	path = /obj/item/clothing/shoes/laceup/alternative // new onmobs from Fashion module
 	cost = 1
 
 /datum/gear/shoes/workboots
@@ -70,7 +70,7 @@
 
 /datum/gear/shoes/romansandals
 	name = "roman sandals"
-	path = /obj/item/clothing/shoes/roman
+	path = /obj/item/clothing/shoes/sandals_leather
 
 /datum/gear/shoes/cowboy
 	name = "cowboy boots"

@@ -569,9 +569,10 @@ GLOBAL_LIST_INIT(storage_treasurer_can_hold, typecacheof(list(
 	/obj/item/folder,
 	/obj/item/storage/bag/money/small,
 	/obj/item/binoculars,
-	/obj/item/cosmetics/lipstick,
+	/obj/item/cosmetics,
 	/obj/item/pen,
 	/obj/item/melee/smith/dagger,
+	/obj/item/kitchen/knife,
 	)))
 
 GLOBAL_LIST_INIT(storage_wallet_can_hold, typecacheof(list(

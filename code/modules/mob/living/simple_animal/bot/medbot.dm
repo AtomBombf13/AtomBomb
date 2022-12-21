@@ -779,7 +779,7 @@
 	declare_cooldown = world.time + 200
 
 /obj/machinery/bot_core/medbot
-	req_one_access = list(ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_FOLLOWER)
+	req_one_access = list(ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_FOLLOWER, ACCESS_BOS, ACCESS_TOWN_SCIENCE, ACCESS_TOWN_DOC)
 
 #undef MEDBOT_PANIC_NONE
 #undef MEDBOT_PANIC_LOW

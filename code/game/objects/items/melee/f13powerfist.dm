@@ -3,64 +3,60 @@
 /////////////////		-Uses power (gas currently) for knockback. Heavy AP, specialized for attacking heavy armor
 
 // Power Fist			Throws targets. Max damage 44. Full AP.
-/obj/item/melee/powerfist/f13
+/obj/item/melee/unarmed/powerfist
 	name = "power fist"
 	desc = "A metal gauntlet with a piston-powered ram on top for that extra 'oomph' in your punch."
 	icon_state = "powerfist"
 	item_state = "powerfist"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	hitsound = 'sound/weapons/resonator_blast.ogg'
 	attack_speed = MELEE_SPEED_NORMAL
 	force = 22
 	throwforce = 10
 	throw_range = 3
 	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
+	slot_flags = ITEM_SLOT_GLOVES
 	flags_1 = CONDUCT_1
 	attack_verb = list("whacked", "fisted", "power-punched")
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 	var/throw_distance = 1
+	var/power = 1
+	var/knockback_anchored = FALSE
 
 
-/obj/item/melee/powerfist/f13/attackby(obj/item/W, mob/user, params)
+/obj/item/melee/unarmed/powerfist/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/knockback, throw_distance, FALSE, knockback_anchored)
+
+/obj/item/melee/unarmed/powerfist/attackby(obj/item/W, mob/user, params)
+	if(!power)
+		return
 	if(istype(W, /obj/item/wrench))
-		switch(fisto_setting)
+		switch(power)
 			if(1)
-				fisto_setting = 2
+				power = 2
 			if(2)
-				fisto_setting = 1
+				power = 1
+		if(GetComponent(/datum/component/knockback))
+			var/datum/component/knockback/KB = GetComponent(/datum/component/knockback)
+			KB.throw_distance = initial(throw_distance) * power
 		W.play_tool_sound(src)
-		to_chat(user, span_notice("You tweak \the [src]'s piston valve to [fisto_setting]."))
-		attack_speed = CLICK_CD_MELEE * fisto_setting
-
-/obj/item/melee/powerfist/f13/updateTank(obj/item/tank/internals/thetank, removing = 0, mob/living/carbon/human/user)
-	return
-
-/obj/item/melee/powerfist/f13/attack(mob/living/target, mob/living/user, attackchain_flags = NONE)
-	if(HAS_TRAIT(user, TRAIT_PACIFISM))
-		to_chat(user, span_warning("You don't want to harm other living beings!"))
-		return FALSE
-	var/turf/T = get_turf(src)
-	if(!T)
-		return FALSE
-	var/totalitemdamage = target.pre_attacked_by(src, user)
-	target.apply_damage(totalitemdamage * fisto_setting, BRUTE, wound_bonus = -25*fisto_setting**2)
-	target.visible_message(span_danger("[user]'s powerfist lets out a loud hiss as [user.p_they()] punch[user.p_es()] [target.name]!"), \
-		span_userdanger("You cry out in pain as [user]'s punch flings you backwards!"))
-	new /obj/effect/temp_visual/kinetic_blast(target.loc)
-	playsound(loc, 'sound/weapons/resonator_blast.ogg', 50, 1)
-	playsound(loc, 'sound/weapons/genhit2.ogg', 50, 1)
-	var/atom/throw_target = get_edge_target_turf(target, get_dir(src, get_step_away(target, src)))
-	target.throw_at(throw_target, 2 * throw_distance, 0.5 + (throw_distance / 2))
-	log_combat(user, target, "power fisted", src)
+		to_chat(user, "<span class='notice'>You tweak \the [src]'s piston valve to [power].</span>")
+		force = initial(force) * power
+		attack_speed = CLICK_CD_MELEE * power
 
 // Goliath				Throws targets far. Max damage 50.
-/obj/item/melee/powerfist/f13/goliath
+/obj/item/melee/unarmed/powerfist/goliath
 	name = "Goliath"
 	desc = "A massive, experimental metal gauntlet crafted by some poor bastard in Redwater that since outlived their usefulness. The piston-powered ram on top is designed to throw targets very, very far."
-	icon = 'icons/fallout/objects/melee/melee.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+//	icon = 'icons/fallout/objects/melee/melee.dmi'
+//	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+//	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "goliath"
 	item_state = "goliath"
 	force = 25
@@ -88,18 +84,19 @@
 
 
 // Mole Miner
-/obj/item/melee/powerfist/f13/moleminer
+/obj/item/melee/unarmed/powerfist/moleminer
 	name = "mole miner gauntlet"
 	desc = "A hand-held mining and cutting implement, repurposed into a deadly melee weapon.  Its name origins are a mystery..."
 	icon_state = "mole_miner_g"
 	item_state = "mole_miner_g"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	force = 15
+	throw_distance = 5
 	throwforce = THROWING_POOR
 	throw_range = 7
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
-	hitsound = 'sound/weapons/bladeslice.ogg'
 	tool_behaviour = TOOL_MINING
 	var/digrange = 0
 	toolspeed = 0.4
@@ -115,10 +112,14 @@
 /obj/item/melee/powered/ripper
 	name = "ripper"
 	desc = "The Ripper™ vibroblade is powered by a small energy cell wich allows it to easily cut through flesh and bone."
-	icon = 'icons/fallout/objects/melee/melee.dmi'
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/beltslot.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	icon_state = "ripper"
-	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
+//	icon = 'icons/fallout/objects/melee/melee.dmi'
+//	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+//	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	force = 10
 	wound_bonus = WOUNDING_BONUS_BIG
 	block_chance = 15
@@ -130,7 +131,7 @@
 	slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
-	toolspeed = 1.5
+	toolspeed = 0.8 //as good as a circular saw
 	resistance_flags = FIRE_PROOF
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 	var/on_item_state = "ripper_on"
@@ -168,10 +169,33 @@
 	add_fingerprint(user)
 
 
+/obj/item/melee/powered/ripper/afterattack(atom/A, mob/living/user, proximity)
+	. = ..()
+	if(!proximity || !wielded || IS_STAMCRIT(user))
+		return
+	if(istype(A, /obj/structure/window)) //destroys windows and grilles in one hit (or more if it has a ton of health like plasmaglass)
+		var/obj/structure/window/W = A
+		W.take_damage(100, BRUTE, "melee", 0)
+	else if(istype(A, /obj/structure/barricade/bars))
+		var/obj/structure/barricade/bars/B = A
+		B.take_damage(155, BRUTE, "melee", 0) //200 damage, 2-shot vs metal bars
+	else if(istype(A, /obj/structure/grille))
+		var/obj/structure/grille/G = A
+		G.take_damage(40, BRUTE, "melee", 0)
+	else if(istype(A, /obj/machinery/door))
+		var/obj/machinery/door/D = A
+		D.take_damage(20, BRUTE, "melee", 0)
+	else if(istype(A, /obj/structure/simple_door))
+		var/obj/structure/simple_door/M = A
+		M.take_damage(20, BRUTE, "melee", 0)
+
 //Warhammer chainsword			Keywords: Damage 10/50, Wound bonus, Block, Bonus AP + 0.15
 /obj/item/melee/powered/ripper/prewar
 	name = "pre-war military ripper"
 	desc = "A hand-held, militarized chainsaw, popular with Army units requiring a compact engineering tool for cutting. Just what material is intended to be cut with the weapon remains open to debate."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "prewarrip_off"
 	on_icon_state = "prewarrip_on"
 	off_icon_state = "prewarrip_off"

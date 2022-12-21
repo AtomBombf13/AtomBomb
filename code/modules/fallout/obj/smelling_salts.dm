@@ -102,7 +102,7 @@
 		return
 	//If the body has been fixed so that they would not be in crit when revived, give them oxyloss to put them back into crit
 	var/const/threshold = ((HEALTH_THRESHOLD_CRIT + HEALTH_THRESHOLD_DEAD) * 0.5)
-	var/tlimit = DEFIB_TIME_LIMIT * 10
+	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	if (revived_mob.health > threshold)
 		revived_mob.adjustOxyLoss(revived_mob.health - threshold, 0)
 	else
@@ -124,7 +124,7 @@
 	var/list/policies = CONFIG_GET(keyed_list/policyconfig)
 	var/memory_limit = CONFIG_GET(number/defib_cmd_time_limit)
 	var/late = memory_limit && (time_since_death > memory_limit)
-	var/policy = late? policies[POLICYCONFIG_ON_DEFIB_LATE] : policies[POLICYCONFIG_ON_DEFIB_INTACT]
+	var/policy = policies[POLICYCONFIG_ON_DEFIB_INTACT]
 	if(policy)
 		to_chat(revived_mob, policy)
 	revived_mob.log_message("revived using smelling salts, [time_since_death / 10] seconds from time of death, considered [late? "late" : "memory-intact"] revival under configured policy limits.", LOG_GAME)

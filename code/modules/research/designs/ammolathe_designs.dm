@@ -188,7 +188,7 @@
 	build_path = /obj/item/ammo_box/c38box/rubber
 	category = list("initial", "Simple Ammo")
 
-/datum/design/ammolathe/beanbag
+/*/datum/design/ammolathe/beanbag
 	name = "beanbag shotgun box"
 	id = "beanbag"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
@@ -200,7 +200,7 @@
 	id = "rubbershot"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
 	build_path = /obj/item/ammo_box/shotgun/rubber
-	category = list("initial", "Simple Ammo")
+	category = list("initial", "Simple Ammo")*/
 
 /datum/design/ammolathe/lethalshot
 	name = "buckshot shotgun box"
@@ -721,6 +721,14 @@
 	category = list("initial", "Advanced Ammo")
 	autocalc_material_values = FALSE
 
+/datum/design/ammolathe/m2mmpistol
+	name = "2mm Electromagnetic Pistol Magazine"
+	id = "2mmp"
+	materials = list(/datum/material/iron = 12500, /datum/material/titanium = 7500)
+	build_path = /obj/item/ammo_box/magazine/m2mm/pistol
+	category = list("initial", "Advanced Ammo")
+	autocalc_material_values = FALSE
+
 /////////////////////
 /// Improvised stuff
 //////////
@@ -838,7 +846,7 @@
 	build_path = /obj/item/ammo_box/shotgun/improvised
 	category = list("initial", "Handloaded Ammo")
 
-/datum/design/ammolathe/improvised/beanbag
+/*/datum/design/ammolathe/improvised/beanbag
 	name = "beanbag shotgun box"
 	id = "handloader_beanbag"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
@@ -850,7 +858,7 @@
 	id = "handloader_rubbershot"
 	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
 	build_path = /obj/item/ammo_box/shotgun/rubber
-	category = list("initial", "Handloaded Ammo")
+	category = list("initial", "Handloaded Ammo")*/
 
 /datum/design/ammolathe/improvised/a223
 	name = ".223 bag"

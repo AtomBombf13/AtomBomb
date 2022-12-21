@@ -995,7 +995,7 @@
 					var/list/policies = CONFIG_GET(keyed_list/policyconfig)
 					var/timelimit = CONFIG_GET(number/defib_cmd_time_limit)
 					var/late = timelimit && (tplus > timelimit)
-					var/policy = late? policies[POLICYCONFIG_ON_DEFIB_LATE] : policies[POLICYCONFIG_ON_DEFIB_INTACT]
+					var/policy = policies[POLICYCONFIG_ON_DEFIB_INTACT]
 					if(policy)
 						to_chat(M, policy)
 					M.log_message("revived using strange reagent, [tplus] deciseconds from time of death, considered [late? "late" : "memory-intact"] revival under configured policy limits.", LOG_GAME)

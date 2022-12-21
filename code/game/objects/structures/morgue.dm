@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 GLOBAL_LIST_EMPTY(crematoriums)
 /obj/structure/bodycontainer/crematorium
 	name = "crematorium"
-	desc = "A human incinerator. Works well on barbecue nights."
+	desc = "A dead body incinerator."
 	icon_state = "crema1"
 	dir = SOUTH
 	starting_tray = /obj/structure/tray/c_tray

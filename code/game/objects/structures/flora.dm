@@ -62,7 +62,7 @@
 /obj/structure/flora/tree/pine/xmas/presents
 	icon_state = "pinepresents"
 	desc = "A wondrous decorated Christmas tree. It has presents!"
-	var/gift_type = /obj/item/a_gift/anything
+	var/gift_type = /obj/item/a_gift
 	var/list/ckeys_that_took = list()
 
 /obj/structure/flora/tree/pine/xmas/presents/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
@@ -353,13 +353,13 @@
 	states += "applebush"
 
 /obj/item/twohanded/required/kirbyplants/dead
-	name = "RD's potted plant"
-	desc = "A gift from the botanical staff, presented after the RD's reassignment. There's a tag on it that says \"Y'all come back now, y'hear?\"\nIt doesn't look very healthy..."
+	name = "dead potted plant"
+	desc = "A little bit of nature contained in a pot. It doesn't look very healthy..."
 	icon_state = "plant-25"
 
 /obj/item/kirbyplants/dead
-	name = "RD's potted plant"
-	desc = "A gift from the botanical staff, presented after the RD's reassignment. There's a tag on it that says \"Y'all come back now, y'hear?\"\nIt doesn't look very healthy..."
+	name = "dead potted plant"
+	desc = "A little bit of nature contained in a pot. It doesn't look very healthy..."
 	icon_state = "plant-25"
 
 /obj/item/kirbyplants/photosynthetic
@@ -409,7 +409,7 @@
 
 /obj/structure/flora/grass/jungle
 	name = "jungle grass"
-	desc = "Thick alien flora."
+	desc = "Thick jungle flora."
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "grassa"
 

@@ -36,9 +36,9 @@
 //						//
 //			AXES		//		[ Bonus against Window, Door ]
 //						//
-//////////////////////////	
+//////////////////////////
 
-// Legion Axe					[ Damage MASSIVE, Bonus against Window, Door ] -why on earth make this a copy paste instead of a fireaxe child? Or just a reskin. 
+// Legion Axe					[ Damage MASSIVE, Bonus against Window, Door ] -why on earth make this a copy paste instead of a fireaxe child? Or just a reskin.
 /obj/item/twohanded/legionaxe
 	name = "War Honed Axe"
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
@@ -85,6 +85,10 @@
 /obj/item/twohanded/fireaxe
 	name = "fire axe"
 	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel. Excellent for smashing doors."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/backslot.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	icon_state = "fireaxe"
 	icon_prefix = "fireaxe"
 	wielded_icon = "fireaxe2"
@@ -129,6 +133,10 @@
 /obj/item/twohanded/fireaxe/boneaxe
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters. Swings faster than other axes due to its light weight."
+	icon = 'icons/fallout/objects/melee/twohanded.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	icon_state = "boneaxe"
 	icon_prefix = "boneaxe"
 	wielded_icon = "boneaxe2"
@@ -159,6 +167,10 @@
 /obj/item/twohanded/fireaxe/bmprsword
 	name = "bumper sword"
 	desc = "It was too big to be called a sword. Massive, thick, heavy, and far too rough. Indeed, it was more like a heap of raw iron."
+	icon = 'icons/fallout/objects/melee/twohanded.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	icon_prefix = "bumper"
 	icon_state = "bumper"
 	wielded_icon = "bumper2"
@@ -187,7 +199,7 @@
 //						//
 //			SPEARS		//		[ Reach ]
 //						//
-//////////////////////////	
+//////////////////////////
 
 // Metal Spear						[ Damage SPEAR WIELDED, Reach ] ---------------
 /obj/item/twohanded/spear
@@ -291,9 +303,17 @@
 /obj/item/twohanded/spear/lance
 	name = "legion lance"
 	desc = "A long spear made in the Legions war foundries. Useful for fighting tribals and hunting when ammunition is scarce."
-	icon_state = "spear-lance"
-	icon_prefix = "spear-lance"
-	wielded_icon = "spear-lance2"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/64x64_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/64x64_lefthand.dmi'
+	icon_state = "lance"
+	icon_prefix = "lance"
+	wielded_icon = "lance_wield"
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+//	icon_state = "spear-lance"
+//	icon_prefix = "spear-lance"
+//	wielded_icon = "spear-lance2"
 	force = WEAPON_FORCE_SPEAR+1
 	force_unwielded = WEAPON_FORCE_SPEAR+1
 	force_wielded = WEAPON_FORCE_SPEAR_WIELDED+4
@@ -368,13 +388,13 @@
 	sharpness = SHARP_EDGED
 
 
-	
+
 
 //////////////////////////---------------------------------------------------------
 //						//
 //		HEAVY CLUBS		//		[ Bonus damage STAMINA ]
 //						//
-//////////////////////////	
+//////////////////////////
 
 // Baseball Bat				[ Damage CLUB WIELDED, Bonus damage STAMINA ] ---------------
 /obj/item/twohanded/baseball
@@ -464,7 +484,7 @@
 //							//
 //		SLEDGEHAMMERS		//		[ bonus damage to structures, barricades. Slow attack ]
 //							//
-//////////////////////////////	
+//////////////////////////////
 
 // Template hammer, can't be used for crafting/smithing and lacks the demolishing bonus so avoid using it
 /obj/item/twohanded/sledgehammer
@@ -510,7 +530,7 @@
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 
 
-// Shaman staff				[ Damage CLUB, Bonus damage STAMINA, TRIBAL ] ---------------------------- 
+// Shaman staff				[ Damage CLUB, Bonus damage STAMINA, TRIBAL ] ----------------------------
 /obj/item/twohanded/sledgehammer/shamanstaff
 	name = "shaman staff"
 	desc = "An intricate staff, carried for centuries by the shaman class of the Wayfayer Tribe."
@@ -578,12 +598,16 @@
 /obj/item/twohanded/thermic_lance
 	name = "thermic lance"
 	desc = "A versatile power-welding tool. Useful for cutting apart metal things like airlocks, bars, and probably limbs."
-	icon = 'icons/fallout/objects/melee/twohanded.dmi'
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/backslot.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/64x64_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/64x64_lefthand.dmi'
 	icon_state = "thermiclance"
 	icon_prefix = "thermiclance"
 	wielded_icon = "thermiclance2"
-	lefthand_file = 'icons/fallout/onmob/weapons/64x64_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/64x64_righthand.dmi'
+//	icon = 'icons/fallout/objects/melee/twohanded.dmi'
+//	lefthand_file = 'icons/fallout/onmob/weapons/64x64_lefthand.dmi'
+//	righthand_file = 'icons/fallout/onmob/weapons/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	attack_speed = MELEE_SPEED_SLOWEST
@@ -607,11 +631,11 @@
 		playsound(loc, hitsound, 70, TRUE)
 	else if(istype(A, /obj/structure/simple_door/metal))
 		var/obj/structure/simple_door/metal/G = A
-		G.take_damage(30, BRUTE, "melee", 0)
+		G.take_damage(40, BRUTE, "melee", 0)
 		playsound(loc, hitsound, 70, TRUE)
 	else if(istype(A, /obj/machinery/door/unpowered))
 		var/obj/machinery/door/unpowered/U = A
-		U.take_damage(20, BRUTE, "melee", 0)
+		U.take_damage(40, BRUTE, "melee", 0)
 		playsound(loc, hitsound, 70, TRUE)
 	else if(istype(A, /obj/structure))
 		playsound(loc, hitsound, 70, TRUE)
@@ -633,10 +657,11 @@
 	force = WEAPON_FORCE_SPEAR
 	force_on = WEAPON_FORCE_SPEAR_WIELDED
 	armour_penetration = 0.7
+	damage_threshold_penetration = 5 //unique penetration into threshold
 	throwforce = THROWING_POOR
 	throwforce_on = THROWING_GOOD
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = null
+	slot_flags = ITEM_SLOT_BACK //why cant you put an axe on your back?
 
 /obj/item/melee/transforming/energy/axe/protonaxe/ComponentInitialize()
 	. = ..()
@@ -648,6 +673,10 @@
 /obj/item/twohanded/sledgehammer/supersledge
 	name = "super sledge"
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/backslot.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	icon_state = "hammer-super"
 	icon_prefix = "hammer-super"
 	wielded_icon = "hammer-super2"
@@ -677,6 +706,10 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "This pre-War model was originally used by construction crews for demolition. Fitted with a rocket booster at the head, \
 	the sledgehammer would behave like a normal tool until it reached a certain acceleration point, when the booster would activate  \
 	and deliver a tremendously powerful impact, easily crushing concrete."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/backslot.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	icon_state = "hammer-rocket"
 	icon_prefix = "hammer-rocket"
 	wielded_icon = "hammer-rocket2"
@@ -715,6 +748,9 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "The Captain found use for this during a discussion with a would-be deserter. He grew so fond of it he had the engineers refit the hammer head \
 	to focus its energy on impact, at the cost of utility as a mining tool. <br>The men call it the Court Martial, and if you think it's a joke you better think again \
 	before your skull assumes a consistency reminiscent of a smashed egg."
+	icon = 'icons/fallout/objects/melee/twohanded.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	icon_state = "hammer-courtmartial"
 	icon_prefix = "hammer-courtmartial"
 	toolspeed = 0.8

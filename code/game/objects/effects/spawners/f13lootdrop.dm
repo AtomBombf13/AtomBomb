@@ -22,6 +22,7 @@
 
 /obj/effect/spawner/lootdrop/f13/armor/clothes
 	name = "pre-war clothes spawner"
+	icon_state = "clothes_loot"
 	loot = list(
 				/obj/effect/spawner/bundle/f13/worker,
 				/obj/effect/spawner/bundle/f13/plaidskirt,
@@ -139,6 +140,7 @@
 
 /obj/effect/spawner/lootdrop/f13/armor/costumes
 	name = "pre-war costumes spawner"
+	icon_state = "costume_loot"
 	loot = list(
 				/obj/effect/spawner/bundle/f13/soviet,
 				/obj/effect/spawner/bundle/f13/geisha,
@@ -146,7 +148,7 @@
 				/obj/item/clothing/under/redeveninggown,
 				/obj/effect/spawner/bundle/f13/mexican,
 				/obj/item/clothing/under/sailor,
-				/obj/effect/spawner/lootdrop/f13/schoolgirl,
+				/obj/effect/spawner/bundle/f13/schoolgirl,
 				/obj/effect/spawner/bundle/f13/hats,
 				/obj/effect/spawner/bundle/f13/jabroni,
 				/obj/effect/spawner/bundle/f13/romeaboo,
@@ -178,9 +180,9 @@
 				/obj/item/clothing/neck/mantle/poncho
 				)
 
-/obj/effect/spawner/lootdrop/f13/schoolgirl
+/obj/effect/spawner/bundle/f13/schoolgirl
 	name = "schoolgirl outfit spawner"
-	loot = list(
+	items = list(
 				/obj/item/clothing/under/schoolgirl/red,
 				/obj/item/clothing/under/schoolgirl
 				)
@@ -203,7 +205,7 @@
 	name = "roman gladiator outfit spawner"
 	items = list(
 				/obj/item/clothing/under/gladiator,
-				/obj/item/clothing/shoes/roman
+				/obj/item/clothing/shoes/sandals_leather
 				)
 
 /obj/effect/spawner/bundle/f13/vampire
@@ -463,7 +465,7 @@
 			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
 			)
 
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid
+/obj/effect/spawner/lootdrop/f13/armor/random/high
 	name = "high tier random armor loot"
 	lootcount = 1
 
@@ -480,9 +482,11 @@
 
 /obj/effect/spawner/lootdrop/f13/medical
 	name = "medical spawners - DO NOT USE THIS"
+	icon_state = "debug_loot"
 
 /obj/effect/spawner/lootdrop/f13/medical/surgical
 	name = "surgical item spawner"
+	icon_state = "surgery_loot"
 	lootcount = 1
 
 	loot = list(
@@ -500,6 +504,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/surgical/blood
 	name = "blood spawner"
+	icon_state = "blood_loot"
 	lootcount = 1
 
 	loot = list(
@@ -511,6 +516,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/equipment
 	name = "vault medical equipment spawner"
+	icon_state = "vaultmed_loot"
 	lootcount = 1
 
 	loot = list(
@@ -522,6 +528,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
 	name = "vault medical meds spawner"
+	icon_state = "med_loot"
 	lootcount = 1
 
 	loot = list(
@@ -536,6 +543,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds //remove equipment, has nothing on it
 	name = "wasteland meds spawner"
+	icon_state = "med_loot"
 	lootcount = 1
 
 	loot = list(/obj/item/reagent_containers/pill/patch/healingpowder,
@@ -550,6 +558,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug //remove equipment, has nothing on it
 	name = "wasteland drugs spawner"
+	icon_state = "chem_loot"
 	lootcount = 1
 
 	loot = list(
@@ -565,6 +574,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/rnd/mid
 	name = "mid dungeon science loot"	//to replace guns as treasure in slightly protected areas
+	icon_state = "sci1_loot"
 	lootcount = 1
 
 	loot = list(
@@ -575,11 +585,13 @@
 		/obj/item/stack/sheet/plastic/twenty,
 		/obj/item/defibrillator/primitive,
 		/obj/item/reagent_containers/syringe/bluespace,
+		/obj/effect/spawner/bundle/f13/needler/weak
 		)
 
 
 /obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	name = "good dungeon science loot"	//to replace guns as treasure in heavily guarded areas
+	icon_state = "sci2_loot"
 	lootcount = 1
 
 	loot = list(
@@ -602,6 +614,7 @@
 
 /obj/effect/spawner/lootdrop/f13/medical/random_fev
 	name = "random FEV bottle"	//for when you can't decide what is worse
+	icon_state = "fev_loot"
 	lootcount = 1
 
 	loot = list(
@@ -711,12 +724,12 @@
 				/obj/item/twohanded/chainsaw,
 				/obj/item/twohanded/sledgehammer/rockethammer,
 				/obj/item/melee/powered/ripper,
-				/obj/item/melee/powerfist/f13,
+				/obj/item/melee/unarmed/powerfist,
 				/obj/item/melee/transforming/energy/axe/protonaxe,
 				/obj/item/gun/ballistic/revolver/ballisticfist,
 				/obj/item/twohanded/sledgehammer/supersledge,
 				/obj/item/melee/unarmed/deathclawgauntlet,
-				/obj/item/melee/powerfist/f13/moleminer
+				/obj/item/melee/unarmed/powerfist/moleminer
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random
@@ -753,14 +766,26 @@
 	icon_state = "gun_loot"
 
 //Energy Weapon Spawners
+
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy
+	icon_state = "egun_loot"
+
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/hobo
+	name = "very low tier energy gun"
+	loot = list(/obj/effect/spawner/bundle/f13/wattz,
+					/obj/item/gun/energy/laser/rechargerrifle,
+					/obj/item/gun/ballistic/rifle/hobo/lasmusket,
+					)
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 35,
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 25,
 				/obj/effect/spawner/bundle/f13/wattzm = 15,
-				/obj/effect/spawner/bundle/f13/laserpistol = 30,
-				/obj/item/gun/energy/laser/recharger = 20,
+				/obj/effect/spawner/bundle/f13/laserpistol = 20,
+				/obj/item/gun/energy/laser/recharger = 15,
+				/obj/item/gun/energy/laser/rechargerrifle = 25
 				)
-				
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
 	name = "mid tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 26,
@@ -841,6 +866,7 @@
 	loot = list(/obj/effect/spawner/bundle/f13/n99,
 				/obj/effect/spawner/bundle/f13/cowboy,
 				/obj/effect/spawner/bundle/f13/mk23,
+				/obj/effect/spawner/bundle/f13/needler,
 				/obj/effect/spawner/bundle/f13/hunting,
 				/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
@@ -856,7 +882,6 @@
 				/obj/effect/spawner/bundle/f13/service,
 				/obj/effect/spawner/bundle/f13/miniuzi,
 				/obj/effect/spawner/bundle/f13/auto5,
-				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/m1garand,
 				/obj/effect/spawner/bundle/f13/deagle,
 				/obj/effect/spawner/bundle/f13/automag,
@@ -867,7 +892,6 @@
 	name = "high-mid tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/mp5,
 				/obj/effect/spawner/bundle/f13/smg10mm,
-				/obj/effect/spawner/bundle/f13/needler,
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
 				/obj/effect/spawner/bundle/f13/shotgunlever,
@@ -1185,7 +1209,15 @@
 	name = "needler and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle,
 				/obj/item/ammo_box/stripper/needle
+				)
+
+/obj/effect/spawner/bundle/f13/needler/weak
+	items = list(
+				/obj/item/gun/ballistic/revolver/needler,
+				/obj/item/ammo_box/stripper/needle/improvised,
+				/obj/item/ammo_box/stripper/needle/improvised,
 				)
 
 /obj/effect/spawner/bundle/f13/trail
@@ -1532,7 +1564,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/stripper/a308,
 				/obj/item/ammo_box/magazine/pistol10mm,
 				/obj/item/ammo_box/magazine/m556/rifle,
-				/obj/item/ammo_box/loader/c38,
+				/obj/item/ammo_box/stripper/needle/improvised,
 				/obj/item/ammo_box/magazine/pistol9mm,
 				/obj/item/ammo_box/loader/m44,
 				/obj/item/ammo_box/tube/a357,
@@ -1606,13 +1638,13 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	. = ..()
 
 //BOMBS N GRENADES
-/obj/effect/spawner/loot/f13/bomb
+/obj/effect/spawner/lootdrop/f13/bomb
 	name = "DO NOT USE THIS BASIC SPAWNER"
-	icon_state = "ammo_loot"
+	icon_state = "debug_loot"
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier1
 	name = "tier 1 grenade spawner"
-	icon_state = "ammo_loot"
+	icon_state = "bomb_loot"
 	lootdoubles = TRUE
 	lootcount = 2 //2 random grenades
 	loot = list(
@@ -1624,6 +1656,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				)
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier2
+	icon_state = "bomb_loot"
 	loot = list(
 				/obj/item/grenade/f13/frag = 3 ,
 				/obj/item/grenade/flashbang = 2,
@@ -1633,6 +1666,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				)
 
 /obj/effect/spawner/lootdrop/f13/bomb/tier3
+	icon_state = "bomb_loot"
 	loot = list(
 				/obj/item/grenade/f13/explosive,
 				/obj/item/grenade/plastic/c4,
@@ -1643,6 +1677,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/effect/spawner/bundle/f13/grenadelauncher,
 				)
 /obj/effect/spawner/lootdrop/f13/bomb/top_tier
+	icon_state = "bomb_loot"
 	lootcount = 1
 	loot = list(
 				/obj/item/grenade/f13/plasma,
@@ -1656,59 +1691,101 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/junkspawners //TIER 4 GARBAGE
 	name = "garbage spawner"
+	icon_state = "garbage_loot"
 	lootcount = 2
 	fan_out_items = TRUE
 
 	loot = list(
+				/obj/item/trash/raisins,
+				/obj/item/trash/candy,
+				/obj/item/trash/cheesie,
+				/obj/item/trash/chips,
+				/obj/item/trash/popcorn,
+				/obj/item/trash/sosjerky,
+				/obj/item/trash/syndi_cakes,
+				/obj/item/trash/energybar,
+				/obj/item/trash/waffles,
+				/obj/item/trash/plate,
+				/obj/item/trash/plate/alt,
+				/obj/item/trash/pistachios,
+				/obj/item/trash/semki,
+				/obj/item/trash/tray,
+				/obj/item/trash/candle,
+				/obj/item/trash/can,
+				/obj/item/trash/boritos,
+				/obj/item/trash/coal,
+				/obj/item/trash/f13/bubblegum,
+				/obj/item/trash/f13/bubblegum_large,
+				/obj/item/trash/f13/cram,
+				/obj/item/trash/f13/cram_large,
+				/obj/item/trash/f13/yumyum,
+				/obj/item/trash/f13/fancylads,
+				/obj/item/trash/f13/sugarbombs,
+				/obj/item/trash/f13/crisps,
+				/obj/item/trash/f13/steak,
+				/obj/item/trash/f13/specialapples,
+				/obj/item/trash/f13/dandyapples,
+				/obj/item/trash/f13/blamco,
+				/obj/item/trash/f13/blamco_large,
+				/obj/item/trash/f13/mechanist,
+				/obj/item/trash/f13/instamash,
+				/obj/item/trash/f13/porknbeans,
+				/obj/item/trash/f13/borscht,
+				/obj/item/trash/f13/dog,
+				/obj/item/trash/f13/mre,
+				/obj/item/trash/f13/rotten,
+				/obj/item/trash/f13/tin,
+				/obj/item/trash/f13/tin_large,
 				/obj/item/broken_bottle,
 				/obj/item/poster/random_official,
+				/obj/item/poster/random_contraband,
 				/obj/item/multitool,
 				/obj/item/cigbutt/cigarbutt,
 				/obj/item/cosmetics/razor,
 				/obj/item/candle,
 				/obj/item/rollingpaper,
-				/obj/item/trash/coal,
 				/obj/item/soap/homemade,
 				/obj/item/stack/cable_coil/random,
 				/obj/item/stack/medical/bruise_pack,
-				/obj/item/trash/popcorn,
+				/obj/item/stack/medical/gauze,
+				/obj/item/stack/packageWrap,
 				/obj/item/valentine,
 				/obj/item/taperecorder,
 				/obj/item/tape/random,
-				/obj/item/stack/medical/gauze,
-				/obj/item/trash/plate,
-				/obj/item/storage/box/snappops,
-				/obj/item/trash/f13/rotten,
-				/obj/item/trash/f13/tin,
-				/obj/item/trash/f13/dog,
-				/obj/item/trash/f13/dandyapples,
 				/obj/item/storage/crayons,
-				/obj/item/stack/packageWrap,
+				/obj/item/storage/box/snappops,
 				/obj/item/storage/box/matches,
-				/obj/item/reagent_containers/food/snacks/deadmouse,
-				/obj/item/toner,
-				/obj/item/tank/internals/oxygen,
 				/obj/item/storage/box/papersack,
 				/obj/item/storage/box/lights/mixed,
-				/obj/item/reagent_containers/food/drinks/sillycup,
-				/obj/item/restraints/handcuffs/cable/zipties,
 				/obj/item/storage/pill_bottle,
 				/obj/item/storage/belt/fannypack/black,
+				/obj/item/toner,
+				/obj/item/tank/internals/oxygen,
+				/obj/item/reagent_containers/food/drinks/sillycup,
+				/obj/item/restraints/handcuffs/cable/zipties,
 				/obj/item/camera,
 				/obj/item/bodypart/l_arm,
 				/obj/item/toy/dummy,
 				/obj/item/toy/eightball,
 				/obj/item/toy/cards/deck,
-				/obj/item/trash/tray,
 				/obj/item/toy/xmas_cracker,
+				/obj/item/toy/tennis,
 				/obj/item/reagent_containers/glass/bowl,
 				/obj/item/reagent_containers/spray/cleaner,
 				/obj/item/reagent_containers/glass/bucket,
-				/obj/item/poster/random_contraband
+				/obj/item/reagent_containers/syringe,
+				/obj/item/reagent_containers/dropper,
+				/obj/item/reagent_containers/rag,
+				/obj/item/reagent_containers/spray/pepper/empty,
+				/obj/item/reagent_containers/food/snacks/deadmouse,
+				/obj/effect/decal/cleanable/oil/slippery, //oh dear
+				/obj/effect/gibspawner/human,
+				/obj/effect/gibspawner/generic/animal,
 				)
 
 /obj/effect/spawner/lootdrop/f13/seedspawner
 	name = "seed spawner"
+	icon_state = "seed_loot"
 	lootdoubles = TRUE
 	fan_out_items = TRUE
 	lootcount = 4
@@ -1765,36 +1842,36 @@ obj/effect/spawner/bundle/f13/combat_rifle
 					/obj/item/seeds/random)
 	. = ..()
 
-/obj/effect/spawner/lootdrop/f13/foodspawner
+/obj/effect/spawner/lootdrop/f13/foodspawner //all prewar, condiments and ingredients
 	name = "food spawner"
+	icon_state = "food_loot"
 	lootdoubles = TRUE
 	fan_out_items = TRUE
 
 	loot = list(
-				/obj/item/storage/box/ingredients/american,
-				/obj/item/reagent_containers/food/snacks/f13/crisps,
+				/obj/item/reagent_containers/food/snacks/beans,
+				/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+				/obj/item/reagent_containers/food/snacks/cannedpeaches,
+				/obj/item/reagent_containers/food/snacks/cornchips,
+				/obj/item/reagent_containers/food/snacks/energybar,
+				/obj/item/reagent_containers/food/snacks/no_raisin,
+				/obj/item/reagent_containers/food/snacks/sosjerky,
+				/obj/item/reagent_containers/food/snacks/cracker,
+				/obj/item/reagent_containers/food/snacks/lollipop,
 				/obj/item/reagent_containers/food/snacks/f13/crisps,
 				/obj/item/reagent_containers/food/snacks/f13/bubblegum,
 				/obj/item/reagent_containers/food/snacks/f13/cram,
 				/obj/item/reagent_containers/food/snacks/f13/yumyum,
 				/obj/item/reagent_containers/food/snacks/f13/fancylads,
 				/obj/item/reagent_containers/food/snacks/f13/sugarbombs,
-				/obj/item/reagent_containers/food/snacks/cheesiehonkers,
 				/obj/item/reagent_containers/food/snacks/f13/steak,
 				/obj/item/reagent_containers/food/snacks/f13/dandyapples,
 				/obj/item/reagent_containers/food/snacks/f13/blamco,
 				/obj/item/reagent_containers/food/snacks/f13/instamash ,
 				/obj/item/reagent_containers/food/snacks/f13/canned/porknbeans,
-				/obj/item/storage/box/ingredients/carnivore,
-				/obj/item/storage/box/ingredients/delights,
-				/obj/item/storage/box/ingredients/exotic,
-				/obj/item/storage/box/ingredients/fiesta,
-				/obj/item/storage/box/ingredients/fruity,
-				/obj/item/storage/box/ingredients/grains,
-				/obj/item/storage/box/ingredients/italian,
-				/obj/item/storage/box/ingredients/sweets,
-				/obj/item/storage/box/ingredients/vegetarian,
-				/obj/item/storage/box/ingredients/wildcard,
+				/obj/item/reagent_containers/food/snacks/f13/canned/borscht,
+				/obj/item/reagent_containers/food/snacks/f13/canned/dog,
+				/obj/item/reagent_containers/food/snacks/f13/canned/kibble,
 				/obj/item/reagent_containers/food/condiment/flour,
 				/obj/item/reagent_containers/food/condiment/rice,
 				/obj/item/reagent_containers/food/condiment/yeast,
@@ -1805,18 +1882,121 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/reagent_containers/food/condiment/saltshaker,
 				/obj/item/reagent_containers/food/condiment/peppermill,
 				/obj/item/reagent_containers/food/condiment/soysauce,
-				/obj/item/reagent_containers/food/snacks/beans,
-				/obj/item/reagent_containers/food/snacks/cracker,
-				/obj/item/reagent_containers/food/snacks/lollipop,
+				/obj/item/storage/box/ingredients/carnivore,
+				/obj/item/storage/box/ingredients/delights,
+				/obj/item/storage/box/ingredients/exotic,
+				/obj/item/storage/box/ingredients/fiesta,
+				/obj/item/storage/box/ingredients/fruity,
+				/obj/item/storage/box/ingredients/grains,
+				/obj/item/storage/box/ingredients/italian,
+				/obj/item/storage/box/ingredients/sweets,
+				/obj/item/storage/box/ingredients/vegetarian,
+				/obj/item/storage/box/ingredients/wildcard,
+				/obj/item/storage/box/ingredients/american,
 				)
-
 
 /obj/effect/spawner/lootdrop/f13/foodspawner/Initialize(mapload) //on mapload, pick how many shit to spawn
 	lootcount = pick(1, 2)
 	. = ..()
 
+/obj/effect/spawner/lootdrop/f13/foodspawner/prewar //prewar food. mostly for ruins
+	name = "prewar food spawner"
+	icon_state = "packaged_loot"
+	lootdoubles = TRUE
+	fan_out_items = TRUE
+
+	loot = list(
+				/obj/item/reagent_containers/food/snacks/beans,
+				/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+				/obj/item/reagent_containers/food/snacks/cannedpeaches,
+				/obj/item/reagent_containers/food/snacks/cornchips,
+				/obj/item/reagent_containers/food/snacks/energybar,
+				/obj/item/reagent_containers/food/snacks/no_raisin,
+				/obj/item/reagent_containers/food/snacks/sosjerky,
+				/obj/item/reagent_containers/food/snacks/cracker,
+				/obj/item/reagent_containers/food/snacks/lollipop,
+				/obj/item/reagent_containers/food/snacks/f13/crisps,
+				/obj/item/reagent_containers/food/snacks/f13/bubblegum,
+				/obj/item/reagent_containers/food/snacks/f13/cram,
+				/obj/item/reagent_containers/food/snacks/f13/yumyum,
+				/obj/item/reagent_containers/food/snacks/f13/fancylads,
+				/obj/item/reagent_containers/food/snacks/f13/sugarbombs,
+				/obj/item/reagent_containers/food/snacks/f13/steak,
+				/obj/item/reagent_containers/food/snacks/f13/dandyapples,
+				/obj/item/reagent_containers/food/snacks/f13/blamco,
+				/obj/item/reagent_containers/food/snacks/f13/instamash ,
+				/obj/item/reagent_containers/food/snacks/f13/canned/porknbeans,
+				/obj/item/reagent_containers/food/snacks/f13/canned/borscht,
+				/obj/item/reagent_containers/food/snacks/f13/canned/dog,
+				/obj/item/reagent_containers/food/snacks/f13/canned/kibble,
+				)
+
+/obj/effect/spawner/lootdrop/f13/foodspawner/condiment //kitchen items - settlements or ruins
+	name = "condiment spawner"
+	icon_state = "condiment_loot"
+	lootdoubles = TRUE
+	fan_out_items = TRUE
+
+	loot = list(
+				/obj/item/reagent_containers/food/condiment/flour,
+				/obj/item/reagent_containers/food/condiment/rice,
+				/obj/item/reagent_containers/food/condiment/yeast,
+				/obj/item/reagent_containers/food/condiment/soymilk,
+				/obj/item/reagent_containers/food/condiment/ketchup,
+				/obj/item/reagent_containers/food/condiment/sugar,
+				/obj/item/reagent_containers/food/condiment/milk,
+				/obj/item/reagent_containers/food/condiment/saltshaker,
+				/obj/item/reagent_containers/food/condiment/peppermill,
+				/obj/item/reagent_containers/food/condiment/soysauce,
+				)
+
+/obj/effect/spawner/lootdrop/f13/foodspawner/ingredient //kitchen items - settlements or ruins
+	name = "ingredient box spawner"
+	icon_state = "ingredient_loot"
+	lootdoubles = TRUE
+	fan_out_items = TRUE
+
+	loot = list(
+				/obj/item/storage/box/ingredients/carnivore,
+				/obj/item/storage/box/ingredients/delights,
+				/obj/item/storage/box/ingredients/exotic,
+				/obj/item/storage/box/ingredients/fiesta,
+				/obj/item/storage/box/ingredients/fruity,
+				/obj/item/storage/box/ingredients/grains,
+				/obj/item/storage/box/ingredients/italian,
+				/obj/item/storage/box/ingredients/sweets,
+				/obj/item/storage/box/ingredients/vegetarian,
+				/obj/item/storage/box/ingredients/wildcard,
+				/obj/item/storage/box/ingredients/american,
+				)
+
+/obj/effect/spawner/lootdrop/f13/foodspawner/wasteland //every wasteland dish except deathclaws - waster buildings/settlements
+	name = "wasteland food spawner"
+	icon_state = "wastefood_loot"
+	lootdoubles = TRUE
+	fan_out_items = TRUE
+
+	loot = list(
+				/obj/item/reagent_containers/food/snacks/f13/baked_nightstalker_tail,
+				/obj/item/reagent_containers/food/snacks/f13/caravanlunch,
+				/obj/item/reagent_containers/food/snacks/f13/chitlins_con_carne,
+				/obj/item/reagent_containers/food/snacks/f13/crispysquirrel,
+				/obj/item/reagent_containers/food/snacks/f13/fire_ant_fricassee,
+				/obj/item/reagent_containers/food/snacks/f13/fried_brahmin_skin,
+				/obj/item/reagent_containers/food/snacks/f13/fried_molerat_lung,
+				/obj/item/reagent_containers/food/snacks/f13/gecko_kebab,
+				/obj/item/reagent_containers/food/snacks/f13/giantantegg,
+				/obj/item/reagent_containers/food/snacks/f13/mirelurkcake,
+				/obj/item/reagent_containers/food/snacks/f13/molejerky,
+				/obj/item/reagent_containers/food/snacks/f13/molerat_manicotti,
+				/obj/item/reagent_containers/food/snacks/f13/radscorpion_en_croute,
+				/obj/item/reagent_containers/food/snacks/f13/squirrelstick,
+				/obj/item/reagent_containers/food/snacks/f13/wastelandwellington,
+				)
+
 /obj/effect/spawner/lootdrop/f13/crafting
 	name = "crafting spawner"
+	icon_state = "crafting_loot"
 	lootdoubles = TRUE
 	fan_out_items = TRUE
 
@@ -1836,7 +2016,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 
 /obj/effect/spawner/lootdrop/f13/alcoholspawner //TIER 7 ALCOHOL
-	name = "alcoholspawner"
+	name = "alcohol spawner"
+	icon_state = "alcohol_loot"
 	lootdoubles = TRUE
 	fan_out_items = TRUE
 
@@ -1865,8 +2046,39 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = pick(1, 2)
 	. = ..()
 
+
+/obj/effect/spawner/lootdrop/f13/alcoholspawner/empty //empty bottles
+	name = "empty bottle spawner"
+	icon_state = "alcohole_loot"
+
+	loot = list(
+				/obj/item/reagent_containers/food/drinks/bottle/brown/white,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/green,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/beer,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/darkbrown,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/lightbrown,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/wine,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/greenwine,
+				/obj/item/reagent_containers/food/drinks/bottle/gin/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/hcider/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/whiskey/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/vodka/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/tequila/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/rum/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/vermouth/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/kahlua/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/cognac/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/wine/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/absinthe/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/hcider/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/grappa/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/sake/empty,
+				/obj/item/reagent_containers/food/drinks/bottle/fernet/empty
+				)
+
 /obj/effect/spawner/lootdrop/f13/resourcespawner //now include R N G (TM) (higher number means it has a bigger spawn chance)
 	name = "resource spawner"
+	icon_state = "resource_loot"
 	lootcount = 2
 
 	loot = list(
@@ -1889,6 +2101,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/cash_random_low
 	name = "low value cash spawner"
+	icon_state = "money_loot"
 	lootcount = 1
 
 	loot = list(
@@ -1900,6 +2113,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/cash_random_med
 	name = "medium value cash spawner"
+	icon_state = "money_loot"
 	lootcount = 1
 
 	loot = list(
@@ -1919,6 +2133,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/cash_random_high
 	name = "high value cash spawner"
+	icon_state = "money_loot"
 	lootcount = 1
 
 	loot = list(
@@ -2008,15 +2223,16 @@ obj/effect/spawner/bundle/f13/combat_rifle
 			/obj/item/stack/f13Cash/random/ncr/med = 25,
 			/obj/item/stack/f13Cash/random/med = 5,
 			)
-*/
 
 /obj/effect/spawner/lootdrop/f13/deadrodent_or_brainwashdisk
 	name = "100% chance of deceased rodent"
 	loot = list(
 		/obj/item/reagent_containers/food/snacks/deadmouse = 50)
+*/
 
 /obj/effect/spawner/lootdrop/f13/traitbooks
 	name = "good trait book spawner"
+	icon_state = "book_loot"
 	lootcount = 1
 	loot = list(/obj/item/book/granter/trait/lowsurgery = 10,
 				/obj/item/book/granter/trait/chemistry = 10,
@@ -2026,7 +2242,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/book/granter/trait/explosives = 10,
 				/obj/item/book/granter/trait/explosives_advanced = 5,
 				/obj/item/book/granter/trait/rifleman = 5,
-				/obj/item/book/granter/crafting_recipe/gunsmith_two = 20,
 				/obj/item/book/granter/crafting_recipe/gunsmith_three = 10,
 				/obj/item/book/granter/crafting_recipe/gunsmith_four = 10,
 				/obj/item/book/granter/crafting_recipe/gunsmith_five = 5
@@ -2060,6 +2275,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/book/granter/crafting_recipe/ODF = 10,
 				/obj/item/book/granter/action/drink_fling = 10,
 				/obj/item/book/granter/crafting_recipe/gunsmith_one = 10,
+				/obj/item/book/granter/crafting_recipe/gunsmith_two = 10,
 				)
 
 /obj/effect/spawner/lootdrop/f13/blueprintLow
@@ -2132,6 +2348,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
 		/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
 		/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
+		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHigh
@@ -2141,7 +2358,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/neostead,
 		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
+		/obj/item/book/granter/crafting_recipe/blueprint/rcw,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics
@@ -2164,7 +2381,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/r91 = 3,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84 = 3,
-		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle = 3,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster = 3,
 		/obj/item/advanced_crafting_components/flux,
 		/obj/item/advanced_crafting_components/lenses,
@@ -2176,6 +2392,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/advcrafting
 	name = "advanced_crafting"
+	icon_state = "advcrafting_loot"
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
@@ -2190,6 +2407,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 
 /obj/effect/spawner/lootdrop/f13/attachments
 	name = "attachments"
+	icon_state = "attachment_loot"
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
@@ -2209,10 +2427,35 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/effect/spawner/bundle/f13/ninemil
 	)
 
+/obj/effect/spawner/lootdrop/f13/ncr_ration //ncr canned rations
+	name = "ncr ration can spawner"
+	icon_state = "ncrration_loot"
+	lootdoubles = TRUE
+	fan_out_items = TRUE
+
+	loot = list(
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/brahmin_chili,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/bighorner_sausage,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/igauna_bits,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/grilled_radstag,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/molerat_stew,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/ham_and_eggs,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/brahmin_burger,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/vegetable_soup,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/mirelurk_filets,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/yaoguai_meatballs,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/brahmin_dogs,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/crackers,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/candied_mutfruit,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/cranberry_cobbler,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/breakfast,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/lunch,
+				/obj/item/reagent_containers/food/snacks/f13/canned/ncr/dinner,
+				)
+
 /obj/effect/spawner/lootdrop/f13/ncr_c_ration
 	name = "c-ration spawner"
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "c-ration"
+	icon_state = "cration_loot"
 	lootcount = 1
 	loot = list(
 			/obj/item/storage/box/ration/menu_one,
@@ -2229,12 +2472,24 @@ obj/effect/spawner/bundle/f13/combat_rifle
 			)
 
 /obj/effect/spawner/lootdrop/f13/ncr_k_ration
-	name = "c-ration spawner"
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "k-ration"
+	name = "k-ration spawner"
+	icon_state = "kration_loot"
 	lootcount = 1
 	loot = list(
 			/obj/item/storage/box/ration/ranger_breakfast,
 			/obj/item/storage/box/ration/ranger_lunch,
 			/obj/item/storage/box/ration/ranger_dinner,
 			)
+
+/obj/effect/spawner/lootdrop/f13/brahmin
+	name = "brahmin gear spawner"
+	icon_state = "brahmin_loot"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+			/obj/item/brahminbags,
+			/obj/item/brahmincollar,
+			/obj/item/brahminbridle,
+			/obj/item/brahminsaddle,
+			/obj/item/brahminbrand,
+	)

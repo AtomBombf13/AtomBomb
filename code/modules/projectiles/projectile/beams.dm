@@ -27,6 +27,8 @@
 /obj/item/projectile/beam/laser/mech
 	hitscan = TRUE
 	wound_bonus = 0
+	armour_penetration = BULLET_PENETRATION_HEAVY
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
 
 // Low energy drain and cooldown
 /obj/item/projectile/beam/laser/mech/light
@@ -37,6 +39,7 @@
 /obj/item/projectile/beam/laser/mech/heavy
 	name = "heavy laser beam"
 	damage = 40
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -44,7 +47,9 @@
 // The highest energy drain and cooldown
 /obj/item/projectile/beam/laser/mech/pulse
 	name = "charged pulse beam"
-	damage = 49
+	damage = 50
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
@@ -333,7 +338,7 @@
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
-	damage = 25
+	damage = 24
 	hitscan = TRUE
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
@@ -341,6 +346,18 @@
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
 	light_color = LIGHT_COLOR_BLUE
+
+
+/obj/item/projectile/beam/laser/rechargerrifle/hitscan //histcan recharger rifle
+	name = "recharger beam"
+	damage = 19
+	hitscan = TRUE
+	armour_penetration = BULLET_PENETRATION_LOW
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	tracer_type = /obj/effect/projectile/tracer/pulse
+	muzzle_type = /obj/effect/projectile/muzzle/pulse
+	impact_type = /obj/effect/projectile/impact/pulse
+	light_color = LIGHT_COLOR_BLUEGREEN
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
@@ -379,7 +396,7 @@
 
 /obj/item/projectile/beam/laser/pistol/wattz/hitscan //hitscan wattz
 	name = "weak laser beam"
-	damage = 10
+	damage = 12
 	armour_penetration = BULLET_PENETRATION_LOW
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	hitscan = TRUE
@@ -389,10 +406,10 @@
 
 /obj/item/projectile/beam/laser/pistol/wattz/magneto/hitscan
 	name = "penetrating laser beam"
-	damage = 15
+	damage = 12
 	hitscan = TRUE
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -401,7 +418,7 @@
 	name = "laser beam"
 	damage = 15
 	armour_penetration = BULLET_PENETRATION_HEAVY
-	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -413,8 +430,8 @@
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 	hitscan = TRUE
-	wound_bonus = 5
-	bare_wound_bonus = 10 
+	wound_bonus = 15
+	bare_wound_bonus = 20
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -453,8 +470,8 @@
 	damage = 25
 	armour_penetration = BULLET_PENETRATION_HEAVY
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 10
-	bare_wound_bonus = 15 
+	wound_bonus = 20
+	bare_wound_bonus = 25
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
@@ -473,8 +490,8 @@
 	damage = 30
 	armour_penetration = BULLET_PENETRATION_ABSOLUTE
 	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
-	wound_bonus = 20
-	bare_wound_bonus = 25 
+	wound_bonus = 25
+	bare_wound_bonus = 30
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
@@ -503,7 +520,7 @@
 
 /obj/item/projectile/beam/laser/rcw/hitscan/autolaser //autolaser
 	damage = 7
-
+	
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
 	damage = 10
@@ -555,25 +572,33 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/f13plasma //Plasma rifle
+///////////////
+//F13 Plasma///
+///////////////
+//Why isnt this in the plasma folder?//
+
+
+/obj/item/projectile/f13plasma //Plasma caster
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
 	damage = 60 //fucc you normies
 	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
 	flag = "energy" //checks vs. energy protection
 	wound_bonus = 90 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second =  TILES_TO_PIXELS(10) //same as 40mm grenade
 
-/obj/item/projectile/plasmacarbine //Plasma carbine
+/obj/item/projectile/plasmacarbine //urban plasma rifle
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 40
+	damage = 45
 	flag = "energy" //checks vs. energy protection
-	wound_bonus = 50 //let's not make the carbine horrifying // nah lets make it horrifying
+	damage_threshold_penetration = BULLET_DT_PENETRATION_RIFLE //ignores below combat armor, combat armor greatly reduced
+	wound_bonus = 75 //almost as bad as the plasma caster
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second = TILES_TO_PIXELS(10)

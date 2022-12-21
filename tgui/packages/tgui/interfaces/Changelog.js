@@ -176,7 +176,7 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>Coyote Bayou</h1>
+        <h1>Atom Bomb</h1>
         <p>
           <b>Thanks to: </b>
           Baystation 12, /vg/station, NTstation, CDK Station devs,
@@ -187,11 +187,11 @@ export class Changelog extends Component {
         </p>
         <p>
           {'Current project maintainers can be found '}
-          <a href="https://github.com/ARF-SS13/coyote-bayou/people">
+          <a href="https://github.com/orgs/AtomBombf13/people">
             here
           </a>
           {', recent GitHub contributors can be found '}
-          <a href="https://github.com/ARF-SS13/coyote-bayou/pulse/monthly">
+          <a href="https://github.com/AtomBombf13/AtomBomb/pulse/monthly">
             here
           </a>.
         </p>

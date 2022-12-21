@@ -462,8 +462,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			//List of all valid dynamic_fhair_suffixes
 			var/static/list/fextensions
 			if(!fextensions)
-				var/icon/fhair_extensions = icon('icons/mob/facialhair_extensions.dmi')
-				fextensions = list()
+				var/icon/fhair_extensions = icon('modular_atom/fashion/icons/facial_hair_extensions.dmi')
+//				var/icon/fhair_extensions = icon('icons/mob/facialhair_extensions.dmi') commented out since above needed for fashion module extensions
+				fextensions = list("+hood")
 				for(var/s in fhair_extensions.IconStates(1))
 					fextensions[s] = TRUE
 				qdel(fhair_extensions)
@@ -473,7 +474,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			var/fhair_file = S.icon
 			if(fextensions[fhair_state+dynamic_fhair_suffix])
 				fhair_state += dynamic_fhair_suffix
-				fhair_file = 'icons/mob/facialhair_extensions.dmi'
+				fhair_file = 'modular_atom/fashion/icons/facial_hair_extensions.dmi'
+//				fhair_file = 'icons/mob/facialhair_extensions.dmi'	 commented out since above needed for fashion module extensions
 
 			var/mutable_appearance/facial_overlay = mutable_appearance(fhair_file, fhair_state, -HAIR_LAYER)
 
@@ -526,8 +528,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				//List of all valid dynamic_hair_suffixes
 				var/static/list/extensions
 				if(!extensions)
-					var/icon/hair_extensions = icon('icons/mob/hair_extensions.dmi') //hehe
-					extensions = list()
+					var/icon/hair_extensions = icon('modular_atom/fashion/icons/hair_extensions.dmi')
+//					var/icon/hair_extensions = icon('icons/mob/hair_extensions.dmi')	commented out since above needed for fashion module extensions
+					extensions = list("+hood", "+generic")
 					for(var/s in hair_extensions.IconStates(1))
 						extensions[s] = TRUE
 					qdel(hair_extensions)
@@ -537,7 +540,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				var/hair_file = S.icon
 				if(extensions[hair_state+dynamic_hair_suffix])
 					hair_state += dynamic_hair_suffix
-					hair_file = 'icons/mob/hair_extensions.dmi'
+					hair_file = 'modular_atom/fashion/icons/hair_extensions.dmi'
+//					hair_file = 'icons/mob/hair_extensions.dmi'	commented out since above needed for fashion module extensions
 
 				hair_overlay.icon = hair_file
 				hair_overlay.icon_state = hair_state
@@ -1454,13 +1458,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		var/punchedstam = target.getStaminaLoss()
 		var/punchedbrute = target.getBruteLoss()
 
-		//CITADEL CHANGES - makes resting and disabled combat mode reduce punch damage, makes being out of combat mode result in you taking more damage
-		if(!SEND_SIGNAL(target, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			damage *= 1.2
+		//CITADEL CHANGES - makes resting reduce punch damage
 		if(!CHECK_MOBILITY(user, MOBILITY_STAND))
 			damage *= 0.65
-		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			damage *= 0.8
 		//END OF CITADEL CHANGES
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
@@ -1929,7 +1929,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if(SHARP_EDGED)
 			sharp_mod = sharp_edged_mod
 		if(SHARP_POINTY)
-			sharp_mod = sharp_pointy_mod 
+			sharp_mod = sharp_pointy_mod
 	var/obj/item/bodypart/BP = null
 	if(!spread_damage)
 		if(isbodypart(def_zone))

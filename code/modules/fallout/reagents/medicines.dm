@@ -102,7 +102,7 @@
 				if(FACTION_LEGION)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
 
-/datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=INJECT, reac_volume)
+/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M, method=INJECT, reac_volume)
 	if(M.health < 0)					//Functions as epinephrine.
 		M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -124,6 +124,7 @@
 		M.AdjustStun(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.AdjustKnockdown(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
 		M.adjustStaminaLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
+		clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 		. = TRUE
 	..()
 
@@ -139,10 +140,12 @@
 	M.remove_movespeed_modifier(/datum/movespeed_modifier/super_stimpak_slowdown)
 	to_chat(M, span_notice("Your heart slows to a more reasonable pace, and your aching muscular fatigue fades.")) // tells you when it's safe to take another dose
 
-/// Seals up bleeds like a weaker sanguirite, doesnt do any passive heals though
-/datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
-	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
-	. = TRUE
+/datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+	if(iscarbon(M) && M.stat != DEAD)
+		if(method in list(INGEST, VAPOR))
+			M.adjustToxLoss(3.75*reac_volume*REAGENTS_EFFECT_MULTIPLIER) //increased from 0.5*reac_volume, which was amusingly low since stimpak heals toxins. now a pill at safe max crits and then heals back up to low health within a few seconds
+			if(show_message)
+				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
 	..()
 
 
@@ -207,8 +210,8 @@
 	taste_description = "bitterness"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	overdose_threshold = 31
-	var/heal_factor = -5 //Subtractive multiplier if you do not have the perk.
-	var/heal_factor_perk = -5.5 //Multiplier if you have the right perk.
+	var/heal_factor = -4 //Subtractive multiplier if you do not have the perk.
+	var/heal_factor_perk = -4.5 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
@@ -706,7 +709,7 @@
 		var/datum/wound/W = thing
 		var/obj/item/bodypart/wounded_part = W.limb
 		if(wounded_part)
-			wounded_part.heal_damage(125, 125)//Does this even work? AAAAAAAAAAAAAAAAA
+			wounded_part.heal_damage(10)//Does this even work? AAAAAAAAAAAAAAAAA -sort of. If you have a datum/wound it heals 125 brute + 125 burn per tick wich makes you a immortal God. Adjusting it down.
 	..()
 
 /datum/reagent/medicine/hydra/overdose_process(mob/living/M)

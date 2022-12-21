@@ -61,12 +61,6 @@
 	desc = "A Ripley APLU right leg. Contains somewhat complex servodrives and balance maintaining systems."
 	icon_state = "ripley_r_leg"
 
-
-//Firefighter
-/obj/item/mecha_parts/chassis/firefighter
-	name = "\improper Firefighter chassis"
-	construct_type = /datum/component/construction/unordered/mecha_chassis/firefighter
-
 ///////// Odysseus
 
 /obj/item/mecha_parts/chassis/odysseus

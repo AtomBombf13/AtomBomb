@@ -69,7 +69,7 @@
 	mag_type = /obj/item/ammo_box/magazine/pistol22
 	disallowed_mags = list(/obj/item/ammo_box/magazine/pistol22/extended)
 	w_class = WEIGHT_CLASS_TINY
-	
+
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
@@ -94,8 +94,8 @@
 	icon_state = "ninemil"
 	w_class = WEIGHT_CLASS_SMALL
 	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
-	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos	
-	
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos
+
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
@@ -121,7 +121,7 @@
 	name = "Maria"
 	desc = "An ornately-decorated pre-war Browning Hi-power 9mm pistol with pearl grips and a polished nickel finish. The firing mechanism has been upgraded, so for anyone on the receiving end, it must seem like an eighteen-karat run of bad luck."
 	icon_state = "maria"
-	
+
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
@@ -141,7 +141,7 @@
 	icon_state = "m93r"
 	w_class = WEIGHT_CLASS_SMALL
 	init_mag_type = /obj/item/ammo_box/magazine/pistol9mm/doublestack
-	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos	
+	mag_type = /obj/item/ammo_box/magazine/pistol9mm // load any 9mm pistol ammos
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -177,9 +177,9 @@
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	disallowed_mags = list(
-		/obj/item/ammo_box/magazine/pistol10mm/extended, 
+		/obj/item/ammo_box/magazine/pistol10mm/extended,
 		/obj/item/ammo_box/magazine/pistol10mm/extended/empty,)
-	
+
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO
@@ -250,7 +250,7 @@
 	item_state = "pistolchrome"
 	w_class = WEIGHT_CLASS_NORMAL
 	init_mag_type = /obj/item/ammo_box/magazine/pistol45
-	mag_type = /obj/item/ammo_box/magazine/pistol45 // load any .45 pistol ammos	
+	mag_type = /obj/item/ammo_box/magazine/pistol45 // load any .45 pistol ammos
 
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -301,13 +301,13 @@
  * Faster to shoot
  * Uncommon
  * * * * * * * * * * */
- 
+
 /obj/item/gun/ballistic/automatic/pistol/autoloader
 	name = ".45 Autoloader"
 	desc = "A sleek looking handgun chambered in .45 ACP for all your operating needs. Don't let the slide catch your finger though."
 	icon_state = "autoloader"
 	init_mag_type = /obj/item/ammo_box/magazine/pistol45/socom
-	mag_type = /obj/item/ammo_box/magazine/pistol45 // load any .45 pistol ammos	
+	mag_type = /obj/item/ammo_box/magazine/pistol45 // load any .45 pistol ammos
 	w_class = WEIGHT_CLASS_NORMAL
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
@@ -355,7 +355,7 @@
 	icon_state = "deagle"
 	item_state = "deagle"
 	init_mag_type = /obj/item/ammo_box/magazine/pistol44
-	mag_type = /obj/item/ammo_box/magazine/pistol44 // load any .44 pistol ammos	
+	mag_type = /obj/item/ammo_box/magazine/pistol44 // load any .44 pistol ammos
 	w_class = WEIGHT_CLASS_NORMAL
 
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
@@ -394,9 +394,9 @@
 	icon_state = "automag"
 	item_state = "deagle"
 	init_mag_type = /obj/item/ammo_box/magazine/pistol44/automag
-	mag_type = /obj/item/ammo_box/magazine/pistol44 // load any .44 pistol ammos	
+	mag_type = /obj/item/ammo_box/magazine/pistol44 // load any .44 pistol ammos
 	w_class = WEIGHT_CLASS_NORMAL
-	
+
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -475,6 +475,46 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
 	init_recoil = HANDGUN_RECOIL(1.2)
+
+/* * * * * * * * * * *
+ * PPK12 Gauss Pistol
+ * Superpistol
+ * 2mmEC
+ * Rare
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/pistol/ppk12
+	name = "PPK12 gauss pistol"
+	desc = "Praised for its range and stopping power, the PPK12 Gauss Pistol is of German design. The pistol uses a weak electromagnetic field to propel rounds at tremendous speed and punch through almost any armor."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "gausspistol"
+	item_state = "crusader"
+	mag_type = /obj/item/ammo_box/magazine/m2mm/pistol
+	init_mag_type = /obj/item/ammo_box/magazine/m2mm/pistol
+
+	slowdown = GUN_SLOWDOWN_SMG_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_LESS_DAMAGE_T5
+	init_recoil = RIFLE_RECOIL(1.6)
+
+	init_firemodes = list(
+		SEMI_AUTO_SNIPER
+	)
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
+
+	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(GAUSS_VOLUME),
+		SP_VOLUME_SILENCED(GAUSS_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(GAUSS_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(GAUSS_DISTANT_SOUND),
+		SP_DISTANT_RANGE(GAUSS_RANGE_DISTANT)
+	)
 
 //////////////////
 //UNIQUE SECTION//

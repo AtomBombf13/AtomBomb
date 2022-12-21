@@ -88,7 +88,7 @@
 /obj/item/stack/tile/grass
 	name = "grass tile"
 	singular_name = "grass floor tile"
-	desc = "A patch of grass like they use on space golf courses."
+	desc = "A patch of grass like they use on golf courses."
 	icon_state = "tile_grass"
 	turf_type = /turf/open/floor/grass
 	resistance_flags = FLAMMABLE
@@ -569,7 +569,7 @@
 /obj/item/stack/tile/bronze
 	name = "bronze tile"
 	singular_name = "bronze floor tile"
-	desc = "A tile made out of bronze. Looks like clockwork."
+	desc = "A tile made out of bronze."
 	icon_state = "material_tile"
 	color = "#92661A"
 	turf_type = /turf/open/floor/bronze

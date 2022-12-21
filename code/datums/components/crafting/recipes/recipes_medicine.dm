@@ -93,6 +93,17 @@
 	category = CAT_MEDICAL
 	always_available = FALSE
 
+/datum/crafting_recipe/hydra
+	name = "Hydra"
+	result = /obj/item/reagent_containers/pill/consumable/hydra
+	reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 1,
+				/datum/reagent/consumable/cavefungus_fermented = 30)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_MEDICAL
+	always_available = FALSE // possibly limited to tribal/legion?
+
+
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
 	result = /obj/item/smelling_salts

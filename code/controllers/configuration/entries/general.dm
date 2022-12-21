@@ -259,6 +259,10 @@
 	config_entry_value = 3000
 	min_val = 0
 
+/datum/config_entry/number/death_revive_time
+	config_entry_value = 15
+	min_val = 0
+
 /datum/config_entry/number/afk_period/ValidateAndSet(str_val)
 	. = ..()
 	if(.)
@@ -519,3 +523,7 @@
 // via send2chat("Hello world.", CONFIG_GET(string/discord_channel_serverstatus))
 /datum/config_entry/string/discord_channel_serverstatus
 	config_entry_value = "server_status"
+
+/// log mech data
+/datum/config_entry/flag/log_mecha
+	config_entry_value = TRUE

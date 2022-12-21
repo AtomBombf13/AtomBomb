@@ -455,14 +455,14 @@
 	M.AdjustUnconscious(-4, 0)
 	..()
 
-/datum/reagent/consumable/cavefungusjuice
-	name = "Cave Fungus Juice"
-	description = "Juiced cave fungus fruiting bodies."
+/datum/reagent/consumable/cavefungus_fermented
+	name = "fermented cave fungus pulp"
+	description = "Goop made from fungus fruiting bodies, has a strong odor."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#274E13"
 	taste_description = "nuts"
 
-/datum/reagent/consumable/cavefungusjuice/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/cavefungus_fermented/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
 

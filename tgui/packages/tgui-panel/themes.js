@@ -57,6 +57,10 @@ export const setClientTheme = name => {
       'github.text-color': '#000000',
       'report-issue.background-color': 'none',
       'report-issue.text-color': '#000000',
+      'tgwiki.background-color': 'none',
+      'tgwiki.text-color': '#000000',
+      'discord.background-color': 'none',
+      'discord.text-color': '#000000',
       // Status and verb tabs
       'output.background-color': 'none',
       'output.text-color': '#000000',
@@ -103,10 +107,15 @@ export const setClientTheme = name => {
       'wiki.text-color': COLOR_DARK_TEXT,
       'forum.background-color': '#494949',
       'forum.text-color': COLOR_DARK_TEXT,
-      'github.background-color': '#3a3a3a',
+      'github.background-color': '#494949',
       'github.text-color': COLOR_DARK_TEXT,
       'report-issue.background-color': '#492020',
       'report-issue.text-color': COLOR_DARK_TEXT,
+      'tgwiki.background-color': '#494949',
+      'tgwiki.text-color': COLOR_DARK_TEXT,
+      'discord.background-color': '#494949',
+      'discord.text-color': COLOR_DARK_TEXT,
+
       // Status and verb tabs
       'output.background-color': COLOR_DARK_BG_DARKER,
       'output.text-color': COLOR_DARK_TEXT,

@@ -7,7 +7,7 @@
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 20
 	active_power_usage = 5000
-	req_access = list(ACCESS_ROBOTICS)
+	req_access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 	circuit = /obj/item/circuitboard/machine/mechfab
 	// processing_flags = START_PROCESSING_MANUALLY
 
@@ -47,7 +47,6 @@
 	var/list/part_sets = list(
 								"Cyborg",
 								"Ripley",
-//								"Firefighter",
 								"Odysseus",
 								"Gygax",
 								"Medical-Spec Gygax",
@@ -154,8 +153,6 @@
 				category_override = list()
 				if(mech_types & EXOSUIT_MODULE_RIPLEY)
 					category_override += "Ripley"
-//				if(mech_types & EXOSUIT_MODULE_FIREFIGHTER)
-//					category_override += "Firefighter"
 				if(mech_types & EXOSUIT_MODULE_ODYSSEUS)
 					category_override += "Odysseus"
 				if(mech_types & EXOSUIT_MODULE_CLARKE)
@@ -170,12 +167,6 @@
 					category_override += "Durand"
 //				if(mech_types & EXOSUIT_MODULE_HONK)
 //					category_override += "H.O.N.K"
-				if(mech_types & EXOSUIT_MODULE_PHAZON)
-					category_override += "Savannah-Ivanov"
-				if(mech_types & EXOSUIT_MODULE_PHAZON)
-					category_override += "Savannah-Ivanov"
-				if(mech_types & EXOSUIT_MODULE_PHAZON)
-					category_override += "Marauder"
 
 	var/list/part = list(
 		"name" = D.name,

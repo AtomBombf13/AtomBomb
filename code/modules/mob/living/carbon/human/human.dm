@@ -226,7 +226,8 @@
 		var/atom/movable/content = i
 		dat += " [content.type]"
 	log_game(dat)
-	ghostize()
+	if(job_to_free)
+		ghostize(memorize_job = job_to_free)
 	qdel(src)
 
 /mob/living/carbon/human/Topic(href, href_list)
@@ -534,7 +535,7 @@
 	. = 1 // Default to returning true.
 	if(user && !target_zone)
 		target_zone = user.zone_selected
-	if(HAS_TRAIT(src, TRAIT_PIERCEIMMUNE) && !bypass_immunity)
+	if((HAS_TRAIT(src, TRAIT_PIERCEIMMUNE) && !HAS_TRAIT_FROM(src, TRAIT_PIERCEIMMUNE, BERSERKER_TRAIT)) && !bypass_immunity) // have to include special chec for beserker
 		. = 0
 	// If targeting the head, see if the head item is thin enough.
 	// If targeting anything else, see if the wear suit is thin enough.
