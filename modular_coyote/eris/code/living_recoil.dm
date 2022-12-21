@@ -19,8 +19,8 @@ mob/proc/handle_movement_recoil() // Used in movement/mob.dm
 
 /mob/living/proc/calc_recoil()
 
-	var/base = 0.4
-	var/scale = 0.9
+	var/base = 0.8
+	var/scale = 0.8
 
 	if(HAS_TRAIT(src, SPREAD_CONTROL))
 		scale = 0.5
