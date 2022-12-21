@@ -273,7 +273,7 @@ CHECK_RANDOMIZER
 # WIKIURL https://f13wiki.herma.moe/index.php/Main_Page
 
 ## Rules address
-RULESURL https://docs.google.com/document/d/1I1j1X629J6R-D9nQdkBu2G-11AVCUeIg23ZnYEWjE5I/edit
+RULESURL https://docs.google.com/document/d/116GON6o_ebTGVlweKboZcB2Dud4z2yLGALuDCGZxMAc/edit
 
 ## Github address
 GITHUBURL https://github.com/AtomBombf13/AtomBomb
