@@ -383,15 +383,47 @@
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark
 				)
 
-/obj/effect/spawner/lootdrop/f13/armor/tier4PA // TIER 4 ARMOR WITH PA
-	name = "tier 4 armor with possible PA"
+/obj/effect/spawner/lootdrop/f13/armor/tier4PA // Not actually tier4 but too lazy to rename/repath and remap. Use this very sparingly as it has PA.
+	name = "tier between 4 and 5 armor with possible PA"
 	loot = list(
-				/obj/effect/spawner/bundle/f13/armor/t45d,
-				/obj/effect/spawner/bundle/f13/armor/riot,
-				/obj/effect/spawner/bundle/f13/armor/combat/mk2,
-				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark
+				/obj/effect/spawner/bundle/f13/armor/advanced = 4,
+				/obj/effect/spawner/bundle/f13/armor/t51b = 6,
+				/obj/effect/spawner/bundle/f13/armor/t45d = 8,
+				/obj/effect/spawner/bundle/f13/armor/t45b = 10,
+				/obj/effect/spawner/bundle/f13/armor/eliteriot = 20,
+				/obj/effect/spawner/bundle/f13/armor/desertriot = 20,
+				/obj/effect/spawner/bundle/f13/armor/policeriot = 20,
+				/obj/effect/spawner/bundle/f13/armor/environmental = 20
 				)
 
+/obj/effect/spawner/bundle/f13/armor/environmental
+	name = "environmental armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/medium/combat/environmental,
+				/obj/item/clothing/head/helmet/f13/combat/environmental
+				)
+
+/obj/effect/spawner/bundle/f13/armor/eliteriot
+	name = "elite riot armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/heavy/riot/elite,
+				/obj/item/clothing/head/helmet/f13/ncr/rangercombat/degancustom
+				) // whoever made the helmet into their donor item deserves death
+
+/obj/effect/spawner/bundle/f13/armor/desertriot
+	name = "desert ranger riot armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/heavy/riot/marine,
+				/obj/item/clothing/head/helmet/f13/herbertranger
+				) // you too
+
+/obj/effect/spawner/bundle/f13/armor/policeriot
+	name = "police riot armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/heavy/riot/police,
+				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
+				)
+				
 /obj/effect/spawner/bundle/f13/armor/t45b_salvaged
 	name = "salvaged t45b power armor spawner"
 	items = list(
@@ -449,6 +481,13 @@
 				/obj/effect/spawner/bundle/f13/armor/t51b,
 				)
 
+/obj/effect/spawner/bundle/f13/armor/t45b
+	name = "t45b power armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/power_armor/t45b,
+				/obj/item/clothing/head/helmet/f13/power_armor/t45b,
+				)
+
 /obj/effect/spawner/bundle/f13/armor/t45d
 	name = "t45d power armor spawner"
 	items = list(
@@ -463,6 +502,12 @@
 				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
 				)
 
+/obj/effect/spawner/bundle/f13/armor/advanced
+	name = "advanced power armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/power_armor/advanced,
+				/obj/item/clothing/head/helmet/f13/power_armor/advanced,
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/random
 	name = "random armor loot"
@@ -607,10 +652,8 @@
 		/obj/item/reagent_containers/glass/beaker/meta = 5,
 		/obj/item/stack/sheet/mineral/abductor/ten = 5,
 		/obj/item/scalpel/advanced = 5,
-		/obj/item/surgical_drapes/advanced = 5,
 		/obj/effect/spawner/bundle/f13/needler = 5,
 		/obj/item/clothing/glasses/night = 5,
-		/obj/item/circuitboard/machine/chem_dispenser/apothecary = 5,
 		/obj/item/storage/box/stockparts/deluxe = 5,
 		/obj/item/storage/box/emps = 5,
 		/obj/item/organ/cyberimp/arm/janitor = 5,
