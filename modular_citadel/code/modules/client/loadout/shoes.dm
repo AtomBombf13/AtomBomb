@@ -70,7 +70,7 @@
 
 /datum/gear/shoes/romansandals
 	name = "roman sandals"
-	path = /obj/item/clothing/shoes/roman
+	path = /obj/item/clothing/shoes/sandals_leather
 
 /datum/gear/shoes/cowboy
 	name = "cowboy boots"

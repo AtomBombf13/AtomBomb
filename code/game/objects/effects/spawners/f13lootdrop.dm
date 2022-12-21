@@ -203,7 +203,7 @@
 	name = "roman gladiator outfit spawner"
 	items = list(
 				/obj/item/clothing/under/gladiator,
-				/obj/item/clothing/shoes/roman
+				/obj/item/clothing/shoes/sandals_leather
 				)
 
 /obj/effect/spawner/bundle/f13/vampire

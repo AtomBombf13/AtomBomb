@@ -249,7 +249,70 @@
 /obj/item/melee/powered/ripper
 */
 
+// ------------------- APRONS & MANTLES -----------------------------
 
+/obj/item/clothing/neck/apron/medicus_legion
+	name = "medicus apron"
+	desc = "Waxed cotton apron with a red bull on it. Marks the wearer as a healer following the wisdom of Caesar. Has pockets for some small medical equipment."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "apron_medicus"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
+
+/obj/item/clothing/neck/apron/labor/blacksmith_legion
+	name = "blacksmith's apron"
+	desc = "A heavy leather apron designed for protecting the user when metalforging and help carry some minor tools. Marked with a yellow bull."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "apron_blacksmith"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/service
+/*
+/obj/item/clothing/neck/mantle/legion/treasurer
+	name = "treasurers mantle"
+	desc = "The grey and black mantle with gold thread trimming shows the wearer is entrusted with matters of money and records. Hidden inner pockets can store money, keys and documents safely, and a discrete sheath for a knife for self defence is also attached."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "mantle_treasurer"
+	item_state = "mantle_treasurer"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
+*/
+
+/obj/item/clothing/neck/mantle/legion
+	name = "legion mantle"
+	desc = "A bull flag adapted to be worn, a honor not given to every warrior. Comes with a holster for a handgun."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "mantle_legion"
+	item_state = "mantle_legion"
+	layer = NECK_LAYER
+//	alternate_worn_layer = NECK_LAYER
+
+/obj/item/clothing/neck/mantle/legion/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/gun/ballistic/automatic/pistol,
+		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/energy/laser/solar,
+		/obj/item/gun/energy/laser/pistol,
+		/obj/item/gun/energy/laser/plasma/pistol,
+		/obj/item/gun/energy/laser/plasma/glock,
+		/obj/item/gun/energy/laser/plasma/glock/extended,
+		/obj/item/gun/energy/laser/wattz,
+		/obj/item/gun/energy/laser/wattz/magneto,
+		))
+
+// ------------------- KITS & BAGS & HOLSTERS -----------------------------
 
 /obj/item/storage/survivalkit/legion_rations
 	name = "ration package"
