@@ -11,7 +11,7 @@
 
 	anchored = FALSE
 	density = TRUE
-	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS)
+	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_BOS, ACCESS_TOWN_SCIENCE)
 	circuit = /obj/item/circuitboard/machine/emitter
 
 	use_power = NO_POWER_USE

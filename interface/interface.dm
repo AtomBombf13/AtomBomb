@@ -29,6 +29,19 @@
 		to_chat(src, span_danger("The discord URL is not set in the server configuration."))
 	return
 
+/client/verb/rules()
+	set name = "rules"
+	set desc = "View the Rules"
+	set hidden = 1
+	var/rulesurl = CONFIG_GET(string/rulesurl)
+	if(rulesurl)
+		if(alert("This will open the Rules in your browser. Are you sure?",,"Yes","No")!="Yes")
+			return
+		src << link(rulesurl)
+	else
+		to_chat(src, span_danger("The rules URL is not set in the server configuration."))
+	return
+
 /client/verb/github()
 	set name = "github"
 	set desc = "Visit Github"

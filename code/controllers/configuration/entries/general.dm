@@ -220,13 +220,13 @@
 /datum/config_entry/string/discordurl
 	config_entry_value = "https://discord.gg/nRSNBcuSah"
 
+/datum/config_entry/string/rulesurl
+	config_entry_value = "https://docs.google.com/document/d/116GON6o_ebTGVlweKboZcB2Dud4z2yLGALuDCGZxMAc/edit"
+
 /datum/config_entry/string/wikiurltg
 	config_entry_value = "https://tgstation13.org/wiki/Main_Page"
 
 /datum/config_entry/string/forumurl
-	config_entry_value = null
-
-/datum/config_entry/string/rulesurl
 	config_entry_value = null
 
 /datum/config_entry/string/githuburl
