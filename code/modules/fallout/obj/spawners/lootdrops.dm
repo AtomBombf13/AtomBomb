@@ -2,8 +2,9 @@
 // TODO: Armor spawners.
 
 
+/*
 /obj/effect/spawner/lootdrop/crafts
-/*	color = "#0FFFA0"
+	color = "#0FFFA0"
 	loot = list(
 	/obj/item/crafting/diode = 5,
 	/obj/item/crafting/transistor = 5,
@@ -25,7 +26,7 @@
 	/obj/item/circuitboard/machine/autolathe/ammo/improvised = 5,
 	/obj/item/assembly/timer = 5,
 	/obj/item/assembly/prox_sensor = 5)
-*/
+
 /obj/effect/spawner/lootdrop/wrange_low
 /*	color = "#CCCCCC"
 	loot = list(
@@ -208,10 +209,11 @@
 	/obj/item/clothing/suit/armor/medium/combat_mk2 = 1)
 */
 /obj/effect/spawner/lootdrop/clothing_legend
-/*	color = "#FF0000"
+	color = "#FF0000"
 	loot = list(
 	/obj/item/clothing/head/helmet/power_armor/t45d = 1,
 	/obj/item/clothing/head/helmet/power_armor/ncr = 1,
 	/obj/item/clothing/suit/armor/power_armor/t45d = 1,
 	/obj/item/clothing/suit/armor/power_armor/ncr = 1,
-	/obj/item/clothing/under/f13/recon = 1)*/
+	/obj/item/clothing/under/f13/recon = 1)
+*/

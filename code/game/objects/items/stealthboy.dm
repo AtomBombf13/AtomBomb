@@ -1,8 +1,8 @@
 /obj/item/stealthboy
-	name = "Stealth Boy"
+	name = "Stealth Boy MK1"
 	desc = "The RobCo Stealth Boy 3001 is a personal stealth device worn on one's wrist. It generates a modulating field that transmits the reflected light from one side of an object to the other, making a person much harder to notice (but not completely invisible)."
-	icon = 'icons/obj/clockwork_objects.dmi' //placeholder
-	icon_state = "rare_pepe" //placeholder
+	icon = 'icons/fallout/objects/stealthboy.dmi'
+	icon_state = "stealth_boy"
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
 	throwforce = 5
@@ -10,11 +10,24 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	var/mob/living/carbon/human/user = null
-	var/charge = 350
-	var/max_charge = 350
+	var/charge = 275
+	var/max_charge = 275
 	var/on = FALSE
 	var/old_alpha = 0
 	actions_types = list(/datum/action/item_action/stealthboy_cloak)
+
+/obj/item/stealthboy/makeshift // Barely visble
+	name = "Makeshift Stealth Boy"
+	icon_state = "makeshift_stealth"
+	charge = 175
+	max_charge = 175
+
+/obj/item/stealthboy/mk2 // Longer visiblity then Mk1
+	name = "Stealth Boy MK2"
+	icon_state = "stealth_boy_mk"
+	charge = 375
+	max_charge = 375
+
 
 /obj/item/stealthboy/ui_action_click(mob/user)
 	if(user.get_item_by_slot(SLOT_BELT) == src)

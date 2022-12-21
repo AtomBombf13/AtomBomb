@@ -143,8 +143,8 @@
 /area/f13/wasteland)
 "oC" = (
 /obj/structure/obstacle/barbedwire{
-	icon_state = "barbed_end";
-	dir = 1
+	dir = 1;
+	icon_state = "barbed_end"
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
@@ -202,7 +202,7 @@
 	},
 /area/f13/wasteland)
 "xN" = (
-/obj/effect/spawner/lootdrop/trash,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2"
 	},
@@ -260,14 +260,14 @@
 	},
 /area/f13/wasteland)
 "DQ" = (
-/obj/effect/spawner/lootdrop/trash,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
 	icon_state = "horizontalinnermain2left"
 	},
 /area/f13/wasteland)
 "EJ" = (
-/obj/effect/spawner/lootdrop/trash,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2left"
 	},
@@ -289,8 +289,8 @@
 /area/f13/wasteland)
 "JU" = (
 /obj/structure/obstacle/barbedwire{
-	icon_state = "barbed_end";
-	dir = 4
+	dir = 4;
+	icon_state = "barbed_end"
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
@@ -304,8 +304,8 @@
 /area/f13/wasteland)
 "LU" = (
 /obj/structure/obstacle/barbedwire{
-	icon_state = "barbed_end";
-	dir = 8
+	dir = 8;
+	icon_state = "barbed_end"
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
@@ -337,7 +337,7 @@
 	},
 /area/f13/wasteland)
 "Uo" = (
-/obj/effect/spawner/lootdrop/trash,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertopright"
 	},
@@ -354,7 +354,7 @@
 	},
 /area/f13/wasteland)
 "Yf" = (
-/obj/effect/spawner/lootdrop/trash,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
