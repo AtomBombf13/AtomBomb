@@ -63,10 +63,10 @@
 	// Close UIs if mindless.
 	if(!client)
 		return UI_CLOSE
-	// Disable UIs if unconscious.
+	// Disable UIs if unconcious.
 	else if(stat)
 		return UI_DISABLED
-	// Update UIs if incapicitated but conscious.
+	// Update UIs if incapicitated but concious.
 	else if(incapacitated())
 		return UI_UPDATE
 	return UI_INTERACTIVE

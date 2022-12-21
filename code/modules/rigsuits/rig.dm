@@ -488,7 +488,7 @@
 	for(var/obj/item/rig_module/module in installed_modules)
 		cell.use(module.process()*10)
 
-/obj/item/rig/proc/check_power_cost(mob/living/user, cost, use_unconscious, obj/item/rig_module/mod, user_is_ai)
+/obj/item/rig/proc/check_power_cost(mob/living/user, cost, use_unconcious, obj/item/rig_module/mod, user_is_ai)
 	if(!istype(user))
 		return 0
 
@@ -502,7 +502,7 @@
 			fail_msg = span_warning("You must be solid to do this.")
 	if(sealing)
 		fail_msg = span_warning("The hardsuit is in the process of adjusting seals and cannot be activated.")
-	else if(!fail_msg && ((use_unconscious && user.stat > 1) || (!use_unconscious && user.stat)))
+	else if(!fail_msg && ((use_unconcious && user.stat > 1) || (!use_unconcious && user.stat)))
 		fail_msg = span_warning("You are in no fit state to do that.")
 	else if(!cell)
 		fail_msg = span_warning("There is no cell installed in the suit.")

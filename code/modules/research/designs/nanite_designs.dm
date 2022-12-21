@@ -545,7 +545,7 @@
 
 /datum/design/nanites/offline
 	name = "Offline Production Protocol"
-	desc = "Replication Protocol: while the host is asleep or otherwise unconscious, the nanites exploit the reduced interference to replicate more quickly."
+	desc = "Replication Protocol: while the host is asleep or otherwise unconcious, the nanites exploit the reduced interference to replicate more quickly."
 	id = "offline_nanites"
 	program_type = /datum/nanite_program/protocol/offline
 	category = list("Protocols_Nanites")

@@ -397,7 +397,7 @@
       Emergency alerts will still function in that case as long as the rest of telecomms
       is online.
   Naksu:
-  - code_imp: pipeline gas reconsciliation is now faster
+  - code_imp: pipeline gas reconciliation is now faster
   OnlineGirlfriend:
   - rscadd: Lemonade
   - tweak: Arnold Palmer recipe

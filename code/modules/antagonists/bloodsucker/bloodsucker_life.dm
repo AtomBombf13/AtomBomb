@@ -109,7 +109,7 @@
 			CheckVampOrgans() // Heart, Eyes
 			if(check_limbs(costMult))
 				return TRUE
-		else if(owner.current.stat >= UNCONSCIOUS) //Faster regeneration and slight burn healing while unconscious
+		else if(owner.current.stat >= UNCONSCIOUS) //Faster regeneration and slight burn healing while unconcious
 			mult *= 2
 			fireheal = min(C.getFireLoss(), regen_rate * 0.2)
 
