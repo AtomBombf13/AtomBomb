@@ -90,7 +90,7 @@
 
 
 // --------------------- GLOVES -----------------------------
-/*
+/* Already copied to main
 /obj/item/clothing/gloves/legion
 	name = "fingerless gloves"
 	desc = "Improves the grip on a machete even when slick with blood, widely used by Legion warriors."
@@ -145,7 +145,8 @@
 
 // ------------------- GOGGLES -----------------------------
 
-/obj/item/clothing/glasses/night/polarizing // possibly it would be better to make this just flash protect or such, and keep NVG to NVG looking goggle thingies. Dunno.
+// Polarizing goggles. togglable, Nightvision goggles basically
+/obj/item/clothing/glasses/night/polarizing // possibly it would be better to make this just flash protect or such, and keep NVG to NVG looking goggle thingies. Dunno. 
 	name = "polarizing goggles"
 	desc = "Fancy goggles with rare polarizing glass from some old cache, usually reserved for commanders."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
@@ -159,12 +160,12 @@
 	visor_flags_inv = HIDEEYES
 	visor_flags_cover = MASKCOVERSEYES
 	visor_vars_to_toggle = VISOR_TINT | VISOR_DARKNESSVIEW
-	alternate_worn_layer = (HEAD_LAYER-1) // so its not hidden
+	alternate_worn_layer = (HEAD_LAYER-0.1) // so its not hidden
 
 /obj/item/clothing/glasses/night/polarizing/attack_self(mob/user)
 	weldingvisortoggle(user)
 
-// /obj/item/clothing/glasses/legiongoggles obsolete
+// /obj/item/clothing/glasses/legiongoggles obsolete. Togglable, gives some slight environment armor bonus I believe.
 /obj/item/clothing/glasses/f13/goggles_sandstorm
 	name = "sandstorm goggles"
 	desc = "Simple, tight-fitting goggles that protect your eyes from dust and sand."
@@ -178,14 +179,14 @@
 	visor_flags_inv = HIDEEYES
 	visor_flags_cover = MASKCOVERSEYES
 	visor_vars_to_toggle = VISOR_TINT | VISOR_DARKNESSVIEW
-	alternate_worn_layer = (HEAD_LAYER-1) // so its not hidden
+	alternate_worn_layer = (HEAD_LAYER-0.1) // so its not hidden
 
 /obj/item/clothing/glasses/f13/goggles_sandstorm/attack_self(mob/user)
 	weldingvisortoggle(user)
 
 
 // ------------------- BELT -----------------------------
-/*
+/* Already copied to main
 /obj/item/storage/belt/military/legion
 	name = "legion marching belt"
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
@@ -198,7 +199,7 @@
 
 // ------------------- WEAPONS -----------------------------
 
-/*
+/* Already copied to main
 /obj/item/melee/onehanded/machete
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/beltslot.dmi'
@@ -247,10 +248,33 @@
 /obj/item/twohanded/sledgehammer/rockethammer
 /obj/item/twohanded/fireaxe
 /obj/item/melee/powered/ripper
+
+/obj/item/twohanded/chainsaw
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/backslot.dmi'
+
+/obj/item/clothing/glasses/f13/sunglasses
+	name = "sunglasses"
+	desc = "Makes the strong desert sun a lot more bearable. Some protection against blinding lights is a bonus."
+	icon = 'icons/fallout/clothing/glasses.dmi'
+	icon_state = "sun"
+	item_state = "sunglasses"
+	darkness_view = 1
+	flash_protect = 1
+	tint = 1
+	glass_colour_type = /datum/client_colour/glass_colour/gray
+
+/obj/item/clothing/glasses/f13/sunglasses/big
+	icon_state = "bigsunglasses"
+	item_state = "bigsunglasses"
+	layer = (FACEMASK_LAYER-0.1) // only reason for this is to make it look good over bandana masks.
+	alternate_worn_layer = (FACEMASK_LAYER-0.1)
 */
 
-// ------------------- APRONS & MANTLES -----------------------------
 
+
+
+// ------------------- APRONS & MANTLES -----------------------------
+// same as medical apron but visually unique
 /obj/item/clothing/neck/apron/medicus_legion
 	name = "medicus apron"
 	desc = "Waxed cotton apron with a red bull on it. Marks the wearer as a healer following the wisdom of Caesar. Has pockets for some small medical equipment."
@@ -261,6 +285,7 @@
 	icon_state = "apron_medicus"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
 
+// same as normal labor apron but visually unique
 /obj/item/clothing/neck/apron/labor/blacksmith_legion
 	name = "blacksmith's apron"
 	desc = "A heavy leather apron designed for protecting the user when metalforging and help carry some minor tools. Marked with a yellow bull."
@@ -283,6 +308,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 */
 
+// Mantle for the Orator, also works as a holster since it occupies the accessory slot
 /obj/item/clothing/neck/mantle/legion
 	name = "legion mantle"
 	desc = "A bull flag adapted to be worn, a honor not given to every warrior. Comes with a holster for a handgun."
@@ -293,7 +319,6 @@
 	icon_state = "mantle_legion"
 	item_state = "mantle_legion"
 	layer = NECK_LAYER
-//	alternate_worn_layer = NECK_LAYER
 
 /obj/item/clothing/neck/mantle/legion/ComponentInitialize()
 	. = ..()
@@ -312,8 +337,10 @@
 		/obj/item/gun/energy/laser/wattz/magneto,
 		))
 
+
 // ------------------- KITS & BAGS & HOLSTERS -----------------------------
 
+// Ration package is a paper container for food/misc survival stuff
 /obj/item/storage/survivalkit/legion_rations
 	name = "ration package"
 	desc = "Waxed paper package with food and some minor accessories a warrior might need."
@@ -326,6 +353,7 @@
 	new /obj/item/reagent_containers/food/snacks/breadhard(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 
+// proc to make the quiver look empty when empty
 /obj/item/storage/survivalkit/legion_rations/update_icon_state()
 	. = ..()
 	if(!contents.len)
@@ -333,7 +361,7 @@
 	else
 		icon_state = initial(icon_state)
 
-
+// Leather pouch for medicines
 /obj/item/storage/survivalkit/medical/legion
 	name = "medicine bag"
 	desc = "Medical kit compliant with the laws of Caesar."
@@ -347,6 +375,7 @@
 	new /obj/item/stack/medical/mesh/aloe(src)
 	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
 
+// proc to make the quiver look empty when empty
 /obj/item/storage/survivalkit/medical/legion/update_icon_state()
 	. = ..()
 	if(!contents.len)
@@ -363,13 +392,13 @@
 	new /obj/item/stack/medical/mesh(src)
 	new /obj/item/reagent_containers/pill/bitterdrink(src)
 
-
+// new satchel style that doesnt clutter up the mob so much
 /obj/item/storage/backpack/marching_satchel
 	name = "marching satchel"
 	desc = "A sturdy leather bag attacked to the belt, for carrying necessary supplies."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
 	icon_state = "satchel_marching"
 	item_state = "satchel_marching"
@@ -381,16 +410,18 @@
 	else
 		icon_state = initial(icon_state)
 
+// new style of holsters that show when occupied
 /obj/item/storage/belt/holster/rugged	// some sort of overlay system for the filled holsters would be better naturally but lack the time to figure it out.
 	name = "rugged holster"
 	desc = "A plain holster for a revolver."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
 	icon_state = "holster_rugged"
 	item_state = "holster_rugged"
 
+// proc to make the holster look empty when empty
 /obj/item/storage/belt/holster/rugged/update_icon_state()
 	. = ..()
 	if(!contents.len)
@@ -398,6 +429,7 @@
 	else
 		icon_state = initial(icon_state)
 
+// some prefilled holsters
 /obj/item/storage/belt/holster/rugged/revolver_357
 	icon_state = "holster_rugged"
 
@@ -415,3 +447,152 @@
 
 /obj/item/storage/belt/holster/rugged/revolver_hunting/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/hunting(src)
+
+/* copy pasted to base files
+/obj/item/storage/belt/utility/waster
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "belt_blacksmith"
+	item_state = "belt_blacksmith"
+
+/obj/item/storage/backpack/spearquiver
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+*/
+
+// proc to make the quiver look empty when empty
+/obj/item/storage/backpack/spearquiver/update_icon_state()
+	. = ..()
+	if(!contents.len)
+		icon_state = "[icon_state]_empty"
+	else
+		icon_state = initial(icon_state)
+
+
+// ------------------- ARMOR -----------------------------
+
+/obj/item/clothing/suit/armor/light/legion
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+
+
+/obj/item/clothing/suit/armor/light/legion/recruit
+	icon_state = "armor_recruit"
+
+/obj/item/clothing/suit/armor/light/legion/prime
+	icon_state = "armor_prime"
+
+/obj/item/clothing/suit/armor/light/legion/explorer
+	icon_state = "armor_explorer"
+
+/obj/item/clothing/suit/armor/medium/legion
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+
+/obj/item/clothing/suit/armor/medium/legion/vet
+	icon_state = "armor_veteran"
+
+/obj/item/clothing/suit/armor/medium/legion/vexil
+	icon_state = "armor_vexillarius"
+
+/obj/item/clothing/suit/armor/medium/legion/orator
+	name = "legion orator armor"
+	desc = "Similar in style to the armor praetorians wear."
+	icon_state = "armor_praetorian"
+/* Not ready yet
+/obj/item/clothing/suit/armor/medium/legion/centurion
+	icon_state = "armor_centurion"
+
+/obj/item/clothing/suit/armor/medium/legion/rangercent 
+	icon_state = "armor_rangerhunter"
+
+/obj/item/clothing/suit/armor/heavy/legion
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+
+/obj/item/clothing/suit/armor/heavy/legion/palacent
+	icon_state = "armor_paladinslayer"
+
+/obj/item/clothing/suit/armor/heavy/legion/legate
+	icon_state = "armor_legate"
+*/
+/obj/item/clothing/suit/armor/heavy/metal/smithed/legion
+	name = "smithed legion armor"
+	desc = "A set of plates with leather straps, protecting some vital areas. This one is combined with football shoulder pads and marked with the red X of Caesars Legion."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "armor_smithed"
+	item_state = "armor_smithed"
+
+
+// ------------------- HELMETS -----------------------------
+
+/obj/item/clothing/head/helmet/f13/legion
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+
+/obj/item/clothing/head/f13/servant
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "hat_servant"
+	item_state = "hat_servant"
+	dynamic_hair_suffix = "+generic"
+	flags_inv = null
+	flags_cover = null
+
+/obj/item/clothing/head/f13/servant/auxilia
+	name = "auxilia headwear"
+	desc = "A soft red cap with a black band, used by Auxilia outside camp."
+	icon_state = "hat_auxilia"
+	item_state = "hat_auxilia"
+
+/obj/item/clothing/head/helmet/f13/legion/recruit
+	icon_state = "helmet_recruit"
+
+/obj/item/clothing/head/helmet/f13/legion/prime
+	icon_state = "helmet_prime"
+
+/obj/item/clothing/head/helmet/f13/legion/explorer
+	icon_state = "helmet_explorer"
+
+/obj/item/clothing/head/helmet/f13/legion/vet
+	icon_state = "helmet_veteran"
+
+/obj/item/clothing/head/helmet/f13/legion/vet/vexil
+	icon_state = "helmet_vexillarius"
+
+
+
+
+
+// ------------------- CRAFTING -----------------------------
+
+/datum/crafting_recipe/blacksmith/smithed_armor_legion
+	name = "Legion metal armor set"
+	result = /obj/item/clothing/suit/armor/heavy/metal/smithed/legion
+	reqs = list(
+		/obj/item/smithing/armor_piece = 2,
+		/obj/item/stack/sheet/leather = 2,
+		)
+	time = 200
+	tools = list(TOOL_METAL_BENCH)
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+	always_available = FALSE
+	

@@ -57,12 +57,17 @@
 	STR.max_w_class = WEIGHT_CLASS_GIGANTIC
 	STR.max_combined_w_class = 35
 
-/obj/item/storage/backpack/spearquiver
+/obj/item/storage/backpack/spearquiver // Art added with Invicta
 	name = "sturdy quiver"
 	desc = "A leather and iron quiver designed to hold throwing spears and bolas."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
 	icon_state = "spearquiver"
 	item_state = "spearquiver"
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
+	component_type = /datum/component/storage/concrete/backpack/spear_quiver
 
 /obj/item/storage/backpack/spearquiver/ComponentInitialize()
 	. = ..()
@@ -99,6 +104,10 @@
 	else
 		to_chat(user, span_notice("There is nothing left in the quiver."))
 	return TRUE
+
+/obj/item/storage/backpack/spearquiver/empty/PopulateContents()
+	return
+
 
 /obj/item/storage/backpack/holding/satchel
 	name = "satchel of holding"
@@ -563,22 +572,4 @@
 	if(contents.len == 0)
 		qdel(src)
 
-/obj/item/storage/backpack/spearquiver
-	name = "sturdy quiver"
-	desc = "A leather and iron quiver designed to hold throwing spears and bolas."
-	icon = 'icons/fallout/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
-	icon_state = "spearquiver"
-	item_state = "spearquiver"
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_BELT
-	component_type = /datum/component/storage/concrete/backpack/spear_quiver
 
-/obj/item/storage/backpack/spearquiver/PopulateContents()
-	new /obj/item/throwing_star/spear(src)
-	new /obj/item/throwing_star/spear(src)
-	new /obj/item/throwing_star/spear(src)
-	new /obj/item/throwing_star/spear(src)
-	new /obj/item/throwing_star/spear(src)
-
-/obj/item/storage/backpack/spearquiver/empty/PopulateContents()
-	return
