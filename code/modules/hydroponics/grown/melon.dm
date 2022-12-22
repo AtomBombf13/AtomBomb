@@ -38,6 +38,7 @@
 	wine_power = 40
 
 // Holymelon
+/*
 /obj/item/seeds/watermelon/holy
 	name = "pack of goldenmelon seeds"
 	desc = "These seeds grow into goldenmelon plants."
@@ -60,7 +61,6 @@
 	wine_power = 70 //Water to wine, baby.
 	wine_flavor = "divinity"
 
-/*
 /obj/item/reagent_containers/food/snacks/grown/holymelon/Initialize()
 	. = ..()
 	var/uses = 1

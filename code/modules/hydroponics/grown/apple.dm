@@ -28,6 +28,7 @@
 	tastes = list("apple" = 1)
 	distill_reagent = /datum/reagent/consumable/ethanol/hcider
 
+/*
 // Gold Apple
 /obj/item/seeds/apple/gold
 	name = "pack of golden apple seeds"
@@ -50,3 +51,4 @@
 	filling_color = "#FFD700"
 	distill_reagent = null
 	wine_power = 50
+*/
