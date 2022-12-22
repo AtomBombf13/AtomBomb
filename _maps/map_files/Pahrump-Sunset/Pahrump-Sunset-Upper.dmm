@@ -1655,7 +1655,6 @@
 /area/f13/wasteland/ncr)
 "cRP" = (
 /obj/docking_port/stationary{
-	dir = 2;
 	dwidth = 1;
 	height = 4;
 	id = "bos_level_2";
@@ -10843,7 +10842,7 @@
 	id_tag = "MedbayFoyer";
 	name = "Clinic Director";
 	req_access_txt = "287";
-	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 75, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 25, "acid" = 25, "wound" = 25, "damage_threshold" = 3);
+	armor = list("melee"=75,"bullet"=75,"laser"=75,"energy"=75,"bomb"=30,"bio"=25,"rad"=25,"fire"=25,"acid"=25,"wound"=25,"damage_threshold"=3);
 	desc = "It opens and closes. This one looks heavily fortified"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
@@ -47722,10 +47721,10 @@ rvM
 vGo
 mLh
 dcJ
+oEC
+oEC
+oEC
 cRP
-oEC
-oEC
-oEC
 ryC
 hbQ
 hbQ
