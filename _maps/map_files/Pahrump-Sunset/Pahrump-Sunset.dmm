@@ -46959,9 +46959,7 @@
 /area/f13/wasteland)
 "oIA" = (
 /obj/effect/turf_decal/big/energy{
-	alpha = 200;
-	pixel_x = 33;
-	pixel_y = 17
+	alpha = 200
 	},
 /turf/open/floor/f13{
 	icon_state = "whiteyellowrustychess"
@@ -58701,6 +58699,11 @@
 /area/f13/wasteland)
 "umd" = (
 /obj/structure/frame/machine,
+/obj/machinery/camera/autoname{
+	dir = 5;
+	name = "Merchant Lobby";
+	network = list("Eastwood")
+	},
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
 	},
@@ -100963,7 +100966,7 @@ uix
 rud
 sel
 sel
-oIA
+sel
 emg
 rud
 rud
@@ -101219,7 +101222,7 @@ mfY
 uix
 rud
 sel
-sel
+oIA
 sel
 emg
 xhH
