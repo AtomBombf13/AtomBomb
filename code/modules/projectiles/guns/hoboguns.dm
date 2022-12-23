@@ -98,7 +98,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	init_recoil = HANDGUN_RECOIL(2.1)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_PISTOL
 	)
 
 	fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -118,7 +118,7 @@
 
 /obj/item/gun/ballistic/revolver/hobo/piperifle
 	name = "pipe rifle"
-	desc = "A rusty piece of pipe used to fire .223 and 5,56mm ammo."
+	desc = "A rusty piece of pipe used to fire 10mm ammo."
 	icon_state = "piperifle"
 	item_state = "pepperbox"
 	w_class = WEIGHT_CLASS_BULKY
@@ -131,7 +131,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	init_recoil = RIFLE_RECOIL(3)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 	fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -353,7 +353,7 @@
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 
@@ -374,7 +374,7 @@
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 /* * * * * * * * * * *
@@ -404,7 +404,7 @@
 	scope_y_offset = 14
 	init_recoil = CARBINE_RECOIL(2.3)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_PISTOL
 	)
 
 
@@ -427,7 +427,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_recoil = HANDGUN_RECOIL(4)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 	can_scope = FALSE
@@ -452,7 +452,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_recoil = RIFLE_RECOIL(2.3)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_PISTOL
 	)
 
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
@@ -497,7 +497,7 @@
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 	can_bayonet = FALSE
