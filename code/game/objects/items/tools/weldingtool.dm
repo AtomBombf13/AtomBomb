@@ -415,14 +415,14 @@
 	desc = "A god-awful construction of rusted junk, a blood bag and spirit, salvaged and robust, extremely useless and slow, but EVENTUALLY, it might burn something."
 	icon_state = "crudeweld"
 	item_state = "crudeweld"
-	toolspeed = 10
+	toolspeed = 1.3
 
 /obj/item/weldingtool/basic
 	name = "basic welding tool"
 	desc = "A roughly crafted together welding tool, not perfect but it works."
 	icon_state = "basicweld"
 	item_state = "basicweld"
-	toolspeed = 2
+	toolspeed = 1.1
 
 /obj/item/weldingtool/hightech
 	name = "advanced welding tool"
