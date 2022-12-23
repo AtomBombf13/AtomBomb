@@ -6369,24 +6369,6 @@
 /area/f13/building)
 "miU" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big{
-	pixel_x = 3
-	},
-/obj/item/clothing/head/helmet/riot{
-	pixel_y = 6
-	},
-/obj/item/clothing/head/helmet/riot{
-	pixel_y = 3
-	},
-/obj/item/clothing/head/helmet/riot,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
