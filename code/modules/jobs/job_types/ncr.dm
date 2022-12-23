@@ -1177,7 +1177,7 @@ Access
 // Basically off-duty and civilian-tier roles. May removed civilian-tier roles at a later date. Allows RP value for now. - Rebel0
 
 /datum/job/ncr/f13offdutyncr
-	title = "NCR Off-Duty"
+	title = "NCR Rear Echelon"
 	flag = F13OFFDUTYNCR
 	total_positions = 4
 	spawn_positions = 4
@@ -1192,7 +1192,7 @@ Access
 	exp_requirements = 60
 
 /datum/outfit/job/ncr/f13offdutyncr
-	name = "NCR Off-Duty"
+	name = "NCR Rear Echelon"
 	jobtype	= /datum/job/ncr/f13offdutyncr
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	head = null
