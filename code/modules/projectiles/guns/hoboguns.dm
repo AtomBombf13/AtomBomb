@@ -363,7 +363,7 @@
 	desc = "The cooling looks dubious and is that a empty can of beans used as a safety valve? Pray the plasma goes towards the enemy and not your face when you pull the trigger."
 	icon_state = "plasmamusket"
 	item_state = "plasmamusket"
-	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
+	mag_type = /obj/item/ammo_box/magazine/internal/plasmaghetto
 	var/bolt_open = FALSE
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"

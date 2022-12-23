@@ -42,17 +42,6 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 
-//someone make the FO4 plasma pistol sprite for this please
-/obj/item/gun/energy/laser/plasma/pistol/worn
-	name ="shoddy plasma pistol"
-	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one's internal parts have loose seals and corroded electronics."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/worn)
-
-	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-
 //Glock 86 Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock
 	name = "glock 86"
@@ -145,3 +134,43 @@
 /obj/item/gun/energy/laser/plasma/spear/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
+
+
+//the FO4 plasma pistol
+//uses plasma cans
+//pathed to ballistic weapons for now due to not using cells
+/obj/item/gun/ballistic/automatic/pistol/plasma
+	name ="short plasma gun"
+	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one loads plasma canisters rather than the usual MF cell."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	item_state = "plasma-pistol"
+	icon_state = "plasmafo4"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	mag_type = /obj/item/ammo_box/magazine/internal/fo4plasma
+	damage_multiplier = 0.5 //30 damage, with 30 shots it probably should not deal 60 damage
+	gun_tags = GUN_ENERGY
+
+	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
+	dryfire_text = "*please insert live canister*"
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_LIGHT
+	weapon_weight = GUN_ONE_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	init_firemodes = list(
+		SEMI_AUTO_RIFLE
+		) //slowfiring
+
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(PLASMA_VOLUME),
+		SP_VOLUME_SILENCED(PLASMA_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(PLASMA_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(PLASMA_DISTANT_SOUND),
+		SP_DISTANT_RANGE(PLASMA_RANGE_DISTANT)
+	)
+
+
