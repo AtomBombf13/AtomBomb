@@ -53,7 +53,7 @@
 								/obj/item/export/bottle/trappist = 10,
 								/obj/item/export/bottle/minikeg = 10,
 								/obj/item/export/bottle/nukashine = 10,
-								/obj/item/export/bottle/patron = 35,
+								/obj/item/export/bottle/patron = 15,
 								/obj/item/export/bottle/goldschlager = 45,
 								)
 

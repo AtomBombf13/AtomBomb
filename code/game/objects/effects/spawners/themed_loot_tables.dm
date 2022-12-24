@@ -445,7 +445,7 @@
 	name = "piperifle and ammo spawner"
 	items = list(
 		/obj/item/gun/ballistic/revolver/hobo/piperifle,
-		/obj/item/ammo_box/a556/sport/improvised,
+		/obj/item/ammo_box/c10mm/improvised,
 		)
 
 /obj/effect/spawner/bundle/weapon/pepperbox
