@@ -55182,10 +55182,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"sRM" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "sRZ" = (
 /obj/structure/chair/wood,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
@@ -110914,7 +110910,7 @@ aOk
 aOk
 cFK
 oSe
-sRM
+dOB
 tws
 nvn
 nvn
