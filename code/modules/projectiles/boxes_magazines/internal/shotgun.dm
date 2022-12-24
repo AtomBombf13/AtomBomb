@@ -88,10 +88,10 @@
 	max_ammo = 6
 	multiload = 1
 
-/obj/item/ammo_box/magazine/internal/plasmacaster
+/obj/item/ammo_box/magazine/internal/plasmaghetto
 	name = "plasmacaster magazine"
 	desc = "Oh god, this shouldn't be here"
-	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
+	ammo_type = /obj/item/ammo_casing/caseless/plasmaghetto
 	caliber = list(CALIBER_MUSKET_PLASMA)
 	max_ammo = 2
 	multiload = 1

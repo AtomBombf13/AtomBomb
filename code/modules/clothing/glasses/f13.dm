@@ -63,7 +63,8 @@
 /obj/item/clothing/glasses/f13/sunglasses/big
 	icon_state = "bigsunglasses"
 	item_state = "bigsunglasses"
-
+	layer = (FACEMASK_LAYER-0.1) // only reason for this is to make it look good over bandana masks.
+	alternate_worn_layer = (FACEMASK_LAYER-0.1)
 
 //Fallout 13 thermals
 

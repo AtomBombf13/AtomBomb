@@ -221,6 +221,7 @@
 	tastes = list("pie" = 1, "pumpkin" = 1)
 	foodtype = GRAIN | VEGETABLES
 
+/*
 /obj/item/reagent_containers/food/snacks/pie/appletart
 	name = "golden apple streusel tart"
 	desc = "A tasty dessert that won't make it through a metal detector."
@@ -229,6 +230,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/gold = 5, /datum/reagent/consumable/nutriment/vitamin = 4)
 	tastes = list("pie" = 1, "apple" = 1, "expensive metal" = 1)
 	foodtype = GRAIN | FRUIT | SUGAR
+*/
 
 /obj/item/reagent_containers/food/snacks/pie/grapetart
 	name = "grape tart"

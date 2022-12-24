@@ -762,6 +762,8 @@
 /obj/item/clothing/suit/armor/medium/legion/centurion //reinforced combat armor
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
+	icon = 'icons/fallout/clothing/armored_medium.dmi' // temp solution to inheritance
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi' // temp solution to inheritance
 	icon_state = "leg_cent"
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
@@ -770,6 +772,8 @@
 /obj/item/clothing/suit/armor/medium/legion/rangercent 
 	name = "legion centurion ranger-hunter armor"
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
+	icon = 'icons/fallout/clothing/armored_medium.dmi' // temp solution to inheritance
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi' // temp solution to inheritance
 	icon_state = "leg_cent_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
