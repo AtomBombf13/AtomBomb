@@ -2125,7 +2125,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 
 	loot = list(
-				/obj/item/stack/f13Cash/random/med = 43,
+				/obj/item/stack/f13Cash/random/medmob = 43,
 				/* /obj/item/stack/f13Cash/random/ncr/med = 35,
 				/obj/item/stack/f13Cash/random/denarius/med = 30,
 				/obj/item/stack/f13Cash/random/aureus/med = 5, */
@@ -2133,7 +2133,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/* /obj/item/stack/f13Cash/random/ncr/low = 19,
 				/obj/item/stack/f13Cash/random/denarius/low = 19,
 				/obj/item/stack/f13Cash/random/aureus/low = 5, */
-				/obj/item/stack/f13Cash/random/high = 2
+				/obj/item/stack/f13Cash/random/highmob = 2
 				/* /obj/item/stack/f13Cash/random/ncr/high = 1,
 				/obj/item/stack/f13Cash/random/denarius/high = 1,
 				/obj/item/stack/f13Cash/random/aureus/high = 1, */
@@ -2145,8 +2145,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 
 	loot = list(
-				/obj/item/stack/f13Cash/random/high = 25,
-				/obj/item/stack/f13Cash/random/med = 50,
+				/obj/item/stack/f13Cash/random/highmob = 25,
+				/obj/item/stack/f13Cash/random/medmob = 50,
 				/obj/item/stack/f13Cash/random/lowmob = 10
 				/* /obj/item/stack/f13Cash/random/ncr/high = 30,
 				/obj/item/stack/f13Cash/random/denarius/high = 30,
