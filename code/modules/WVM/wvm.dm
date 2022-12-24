@@ -7,12 +7,12 @@
 #define STATE_VEND 2
 #define STATE_LOCKOPEN 3
 
-#define CASH_CAP_VENDOR 1
+#define CASH_CAP 1
 
 /* exchange rates X * CAP*/
-#define CASH_AUR_VENDOR 100 /* 100 caps to 1 AUR */
-#define CASH_DEN_VENDOR 4 /* 4 caps to 1 DEN */
-#define CASH_NCR_VENDOR 0.4 /* $100 to 40 caps */
+#define CASH_AUR 100 /* 100 caps to 1 AUR */
+#define CASH_DEN 4 /* 4 caps to 1 DEN */
+#define CASH_NCR 0.4 /* $100 to 40 caps */
 
 // Total number of caps value spent in the Trading Protectrons Vendors
 GLOBAL_VAR_INIT(vendor_cash, 0)
@@ -115,7 +115,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		P.forceMove(src.loc)
 
 /* Adding item to machine and spawn Set Price dialog */
-/obj/machinery/trading_machine/proc/add_item(obj/item/Itm, mob/living/carbon/human/user)
+/*/obj/machinery/trading_machine/proc/add_item(obj/item/Itm, mob/living/carbon/human/user) //Disabling for now until the f13cash exploit is fixed
 	if(machine_state != STATE_SERVICE)
 		return
 
@@ -145,6 +145,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			playsound(src, 'sound/machines/DeniedBeep.ogg', 60, 1)
 			to_chat(usr, item_not_acceptable_message)
 
+
 /* Check item type and compare it with stored_item_type */
 /obj/machinery/trading_machine/proc/is_available_category(obj/item/Itm)
 	for(var/item_type in stored_item_type)
@@ -164,7 +165,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		src.ui_interact(usr)
 
 /* Adding a caps to caps storage and release vending item. */
-/obj/machinery/trading_machine/proc/add_caps(obj/item/I)
+/obj/machinery/trading_machine/proc/add_caps(obj/item/I) 
 	if(machine_state != STATE_VEND)
 		return
 
@@ -180,11 +181,12 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			playsound(src, 'sound/machines/DeniedBeep.ogg', 60, 1)
 			to_chat(usr, "Not enough caps.")
 
+
 /* Spawn all caps on world and clear caps storage */
 /obj/machinery/trading_machine/proc/remove_all_caps()
 	if(stored_caps <= 0)
 		return
-	var/obj/item/stack/f13Cash/caps/C = new /obj/item/stack/f13Cash/caps
+	var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps
 	if(stored_caps > C.max_amount)
 		C.add(C.max_amount - 1)
 		C.forceMove(src.loc)
@@ -203,6 +205,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		expected_price = content[Itm]
 		set_state(STATE_VEND)
 		src.attack_hand(usr)
+*/
 
 /* Remove lock from machine */
 /obj/machinery/trading_machine/proc/drop_lock()
@@ -288,7 +291,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			to_chat(user, span_notice("You repair the vending machine."))
 			stat &= ~BROKEN
 			obj_integrity = max_integrity
-
+/* //Disabling for now until the f13cash exploit is fixed
 /* Attack By */
 /obj/machinery/trading_machine/attackby(obj/item/OtherItem, mob/living/carbon/human/user, parameters)
 	switch(machine_state)
@@ -379,7 +382,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 					to_chat(usr, "You need to secure lock first. Use screwdriver.")
 
 	src.ui_interact(user)
-
+*/
 /* Spawn input dialog and set item price */
 /obj/machinery/trading_machine/proc/set_price_by_input(obj/item/Itm, mob/user)
 	if(machine_state != STATE_SERVICE)
@@ -463,6 +466,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	data += "Wasteland Trading Company guide."
 	return data
 
+/* //Disabling for now until the f13cash exploit is fixed
 /* TOPIC */
 /obj/machinery/trading_machine/Topic(href, href_list)
 	if(..())
@@ -507,6 +511,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		I.examine(usr)
 
 	ui_interact()
+*/
 
 /**********************Trading Protectron Vendors**************************/
 
@@ -939,10 +944,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
 	dat += "<b>Currency conversion rates:</b><br>"
-	dat += "1 Bottle cap = [CASH_CAP_VENDOR] bottle caps value <br>"
-	dat += "1 NCR dollar = [CASH_NCR_VENDOR] bottle caps value <br>"
-	dat += "1 Denarius = [CASH_DEN_VENDOR] bottle caps value <br>"
-	dat += "1 Aureus = [CASH_AUR_VENDOR] bottle caps value <br>"
+	dat += "1 Bottle cap = [CASH_CAP] bottle caps value <br>"
+	dat += "1 NCR dollar = [CASH_NCR] bottle caps value <br>"
+	dat += "1 Denarius = [CASH_DEN] bottle caps value <br>"
+	dat += "1 Aureus = [CASH_AUR] bottle caps value <br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"

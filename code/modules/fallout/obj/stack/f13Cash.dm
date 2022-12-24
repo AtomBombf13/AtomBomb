@@ -9,27 +9,26 @@
 /* value of coins to spawn, use as-is for caps */
 /* LOW_MIN / AUR = amount in AUR */
 
-// A low value cash spawn is on average worth 25
-#define LOW_MIN 7
-#define LOW_MAX 19
+//Value cash spawn for mobs
+#define LOWMOB_MIN 2
+#define LOWMOB_MAX 13
+#define MEDMOB_MIN 20
+#define MEDMOB_MAX 47
+#define HIGHMOB_MIN 56
+#define HIGHMOB_MAX 78
 
-// A medium value cash spawn is on average worth 60ish
-#define MED_MIN 20
-#define MED_MAX 35
+// A low value cash spawn is on average worth 50
+#define LOW_MIN 26
+#define LOW_MAX 35
+
+// A medium value cash spawn is on average worth 150
+#define MED_MIN 79
+#define MED_MAX 103
 
 
-// A high value cash spawn is on average worth 280
-#define HIGH_MIN 36
-#define HIGH_MAX 45
-
-
-// Bad Pebbles fix to NCR money fudgery
-#define TEMP3_MIN 0
-#define TEMP3_MAX 0
-#define TEMP_MIN 0
-#define TEMP_MAX 0
-#define TEMP2_MIN 0
-#define TEMP2_MAX 0
+// A high value cash spawn is on average worth 300
+#define HIGH_MIN 186
+#define HIGH_MAX 213
 
 // The Bankers Vault-Stash, done like this make it so it only spawns on his person to stop metarushing. Average 8500.
 #define BANKER_MIN 2000
@@ -150,6 +149,21 @@
 		if(501 to 15000)
 			icon_state = "[initial(icon_state)]6"
 
+/obj/item/stack/f13Cash/random/lowmob
+	spawn_nothing_chance = 75
+	min_qty =  LOWMOB_MIN / CASH_CAP
+	max_qty = LOWMOB_MAX / CASH_CAP
+
+/obj/item/stack/f13Cash/random/medmob
+	spawn_nothing_chance = 75
+	min_qty =  MEDMOB_MIN / CASH_CAP
+	max_qty = MEDMOB_MAX / CASH_CAP
+
+/obj/item/stack/f13Cash/random/highmob
+	spawn_nothing_chance = 75
+	min_qty =  HIGHMOB_MIN / CASH_CAP
+	max_qty = HIGHMOB_MAX / CASH_CAP
+
 /obj/item/stack/f13Cash/random/low
 	min_qty = LOW_MIN / CASH_CAP
 	max_qty = LOW_MAX / CASH_CAP
@@ -227,16 +241,16 @@
 	money_type = /obj/item/stack/f13Cash/aureus
 
 /obj/item/stack/f13Cash/random/aureus/low
-	min_qty = 0
-	max_qty = 0
+	min_qty = 1
+	max_qty = 1
 
 /obj/item/stack/f13Cash/random/aureus/med
-	min_qty = 0
-	max_qty = 0
+	min_qty = 2
+	max_qty = 2
 
 /obj/item/stack/f13Cash/random/aureus/high
-	min_qty = 0
-	max_qty = 0 //uses flat values because aurei are worth so much
+	min_qty = 1
+	max_qty = 3 //uses flat values because aurei are worth so much
 
 /obj/item/stack/f13Cash/ncr
 	name = "NCR Dollar"
@@ -269,16 +283,16 @@
 	money_type = /obj/item/stack/f13Cash/ncr
 
 /obj/item/stack/f13Cash/random/ncr/low
-	min_qty = TEMP3_MIN / CASH_NCR
-	max_qty = TEMP3_MAX / CASH_NCR
+	min_qty = LOW_MIN / CASH_NCR
+	max_qty = LOW_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/med
-	min_qty = TEMP_MIN / CASH_NCR
-	max_qty = TEMP_MAX / CASH_NCR
+	min_qty = MED_MIN / CASH_NCR
+	max_qty = MED_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/high
-	min_qty = TEMP2_MIN / CASH_NCR
-	max_qty = TEMP2_MAX / CASH_NCR
+	min_qty = HIGH_MIN / CASH_NCR
+	max_qty = HIGH_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/ncrpay_basic
 	min_qty = LOW_MIN / CASH_NCR
@@ -304,11 +318,11 @@
 #undef MED_MAX
 #undef HIGH_MIN
 #undef HIGH_MAX
+#undef LOWMOB_MIN
+#undef LOWMOB_MAX
+#undef MEDMOB_MIN
+#undef MEDMOB_MAX
+#undef HIGHMOB_MIN
+#undef HIGHMOB_MAX
 #undef BANKER_MIN
 #undef BANKER_MAX
-#undef TEMP3_MIN
-#undef TEMP3_MAX
-#undef TEMP_MIN
-#undef TEMP_MAX
-#undef TEMP2_MIN
-#undef TEMP2_MAX
