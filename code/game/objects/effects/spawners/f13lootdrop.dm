@@ -800,7 +800,6 @@
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 26,
 				/obj/effect/spawner/bundle/f13/wattz2k = 26,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 15,
-				/obj/effect/spawner/bundle/f13/ionrifle = 5
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier / Why does this exist like why
@@ -808,7 +807,6 @@
 	loot = list(/obj/effect/spawner/bundle/f13/aer12,
 				/obj/effect/spawner/bundle/f13/plasmapistol,
 				/obj/effect/spawner/bundle/f13/wattz2kext,
-				/obj/effect/spawner/bundle/f13/ionrifle,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
@@ -816,7 +814,8 @@
 	loot = list(/obj/effect/spawner/bundle/f13/plasmarifle = 25,
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/aer14 = 20,
-				/obj/effect/spawner/bundle/f13/plasmaglock = 25
+				/obj/effect/spawner/bundle/f13/plasmaglock = 25,
+				/obj/effect/spawner/bundle/f13/ionrifle = 10
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
