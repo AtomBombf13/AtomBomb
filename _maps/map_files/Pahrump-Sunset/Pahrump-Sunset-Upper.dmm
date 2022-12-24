@@ -1652,7 +1652,6 @@
 /area/f13/wasteland/ncr)
 "cRP" = (
 /obj/docking_port/stationary{
-	dir = 2;
 	dwidth = 1;
 	height = 4;
 	id = "bos_level_2";
@@ -47662,10 +47661,10 @@ rvM
 vGo
 mLh
 dcJ
+oEC
+oEC
+oEC
 cRP
-oEC
-oEC
-oEC
 ryC
 hbQ
 hbQ
