@@ -162,6 +162,7 @@
 	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_stimpak"
+	custom_price = PRICE_STIMPAK
 	syringe_self_delay = 10 //Double of a powder
 	volume = 15
 	amount_per_transfer_from_this = 15
@@ -197,6 +198,7 @@
 	name = "super stimpak"
 	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
 	icon_state = "hypo_superstimpak"
+	custom_price = PRICE_SUPER_STIM
 	syringe_self_delay = 10 //Double of a powder
 	volume = 15
 	amount_per_transfer_from_this = 15

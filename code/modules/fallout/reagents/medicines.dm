@@ -52,7 +52,7 @@
 		M.AdjustUnconscious(-20, 0)
 	//if(M.getBruteLoss() == 0 && M.getFireLoss() == 0 && M.getToxLoss() == 0)
 	//	metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
-	if(!M.reagents.has_reagent(/datum/reagent/medicine/healing_powder) && !M.reagents.has_reagent(/datum/reagent/medicine/longpork_stew) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder/poultice)) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found.We only check for the less powerful chems, so the least powerful one always heals.
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/super_stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/bitter_drink) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder/poultice)) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found. We only check for the most powerful chems, so the most powerful one always heals.
 		M.adjustBruteLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustFireLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
 		M.AdjustStun(-2*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -118,7 +118,7 @@
 	if(prob(20))
 		M.AdjustAllImmobility(-20, 0)
 		M.AdjustUnconscious(-20, 0)
-	if(!M.reagents.has_reagent(/datum/reagent/medicine/healing_powder/poultice) && !M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder)) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found. We only check for the less powerful chems, so the least powerful one always heals.
+	if(!M.reagents.has_reagent(/datum/reagent/drug/psycho)) // Doesn't check for medicines because the lower tiers check for superstimfluid, instead checks for chems to prevent PWRgame. Stacking meds is still prevented by the lesser medicines blocking their healing upon detecting superstimfluid. Essentially Super Stimfluid > Poultice > Bitter Drink > Stimpak > Healing powder.
 		M.adjustBruteLoss(-7*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustFireLoss(-5*REAGENTS_EFFECT_MULTIPLIER)
 		M.AdjustStun(-3*REAGENTS_EFFECT_MULTIPLIER, 0)
@@ -219,7 +219,7 @@
 	if(HAS_TRAIT(M, TRAIT_TRIBAL))
 		is_tribal = TRUE
 	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
-	if(!M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder/poultice) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder) && !M.reagents.has_reagent(/datum/reagent/medicine/super_stimpak))
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/healing_powder/poultice) && !M.reagents.has_reagent(/datum/reagent/medicine/super_stimpak))
 		M.adjustFireLoss(heal_rate)
 		M.adjustBruteLoss(heal_rate)
 		M.adjustToxLoss(heal_rate)
@@ -255,11 +255,12 @@
 	if(HAS_TRAIT(M, TRAIT_TRIBAL))
 		is_tribal = TRUE
 	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
-	M.adjustFireLoss(heal_rate)
-	M.adjustBruteLoss(heal_rate)
-	M.adjustToxLoss(heal_rate)
-	M.hallucination = max(M.hallucination, is_tribal ? 0 : 5)
-	. = TRUE
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/super_stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/bitter_drink) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder/poultice))
+		M.adjustFireLoss(heal_rate)
+		M.adjustBruteLoss(heal_rate)
+		M.adjustToxLoss(heal_rate)
+		M.hallucination = max(M.hallucination, is_tribal ? 0 : 5)
+		. = TRUE
 	..()
 
 /datum/reagent/medicine/healing_powder/overdose_process(mob/living/carbon/M)
@@ -310,11 +311,12 @@
 	if(HAS_TRAIT(M, TRAIT_TRIBAL))
 		is_tribal = TRUE
 	var/heal_rate = (is_tribal ? heal_factor_perk : heal_factor) * REAGENTS_EFFECT_MULTIPLIER
-	M.adjustFireLoss(heal_rate)
-	M.adjustBruteLoss(heal_rate)
-	M.adjustToxLoss(heal_rate)
-	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
-	. = TRUE
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/super_stimpak))
+		M.adjustFireLoss(heal_rate)
+		M.adjustBruteLoss(heal_rate)
+		M.adjustToxLoss(heal_rate)
+		clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
+		. = TRUE
 	..()
 
 

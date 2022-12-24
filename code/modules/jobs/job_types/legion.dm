@@ -1098,7 +1098,7 @@ Access
 // ----------------- LEGATE --------------------- //
 
 /datum/job/CaesarsLegion/Legionnaire/f13legate
-	title = "Legion Legate"
+	title = "Legate"
 	flag = F13LEGATE
 	head_announce = list("Security")
 	supervisors = "Caesar"

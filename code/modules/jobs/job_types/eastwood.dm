@@ -1044,7 +1044,6 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/reagent_containers/glass/bucket/plastic = 1,
 	/obj/item/storage/bag/plants/portaseeder= 1,
 	/obj/item/seeds/bamboo = 1,
-	/obj/item/seeds/apple/gold = 1,
 	/obj/item/seeds/cannabis = 1
 	)
 
