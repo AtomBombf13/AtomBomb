@@ -27,7 +27,7 @@
 
 #define RECIPE_LONGSWORD "fffdd" //fold fold fold draw draw
 #define RECIPE_KATANA "fffff" //fold fold fold fold fold
-#define RECIPE_WAKI "fdff" //fold draw fold fold
+#define RECIPE_WAKI "fffs" //fold fold fold shrink
 
 #define RECIPE_MACE "upu"  //upset punch upset
 #define RECIPE_SCRAP "udpp" //upset draw shrink punch

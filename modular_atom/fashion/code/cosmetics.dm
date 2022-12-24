@@ -250,6 +250,8 @@
 	wound_bonus = WOUNDING_MALUS_SHALLOW // crap against armor
 	bare_wound_bonus = WOUNDING_BONUS_BIG // bleeds a lot, despite its low damage
 	sharpness = SHARP_EDGED
+	total_mass = TOTAL_MASS_TINY_ITEM
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/melee/onehanded/straight_razor/proc/manual_shave(mob/living/carbon/human/H, location = BODY_ZONE_PRECISE_MOUTH)
 	if(location == BODY_ZONE_PRECISE_MOUTH)

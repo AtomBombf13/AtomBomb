@@ -306,7 +306,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 		new /datum/stack_recipe("bottle rack", /obj/machinery/smartfridge/bottlerack, 20, time = 40, one_per_turf = TRUE, on_floor = TRUE),\
 		new /datum/stack_recipe("garden tool rack", /obj/machinery/smartfridge/bottlerack/gardentool, 20, time = 40, one_per_turf = TRUE, on_floor = TRUE),\
 		null, \
-		new /datum/stack_recipe("primitive chemistry table", /obj/machinery/chem_master/primitive, 25, time = 15, one_per_turf = TRUE, on_floor = TRUE),\
+		new /datum/stack_recipe("alchemy table", /obj/machinery/chem_master/primitive, 25, time = 100, one_per_turf = TRUE, on_floor = TRUE),\
 		new /datum/stack_recipe("loom", /obj/structure/loom, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE),\
 		)), \
 	new/datum/stack_recipe_list("cooking", list( \

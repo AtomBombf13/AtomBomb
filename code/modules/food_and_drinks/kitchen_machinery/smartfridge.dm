@@ -679,7 +679,7 @@
 
 
 //-------------------------
-// Alchemy Rack - Takes patches, primitive bottle, mourning dust, smelling salt
+// Alchemy Rack - Takes patches, primitive bottle, mourning dust, smelling salt, bitter drink, hydra
 //-------------------------
 /obj/machinery/smartfridge/bottlerack/alchemy_rack
 	name = "alchemy rack"
@@ -692,7 +692,9 @@
 		/obj/item/reagent_containers/pill/patch,
 		/obj/item/reagent_containers/glass/bottle/primitive,
 		/obj/item/stack/medical/mourning_dust,
-		/obj/item/smelling_salts
+		/obj/item/smelling_salts,
+		/obj/item/reagent_containers/pill/bitterdrink,
+		/obj/item/reagent_containers/pill/consumable,
 	))
 	if(is_type_in_typecache(O, alchemyrack_typecache))
 		return TRUE

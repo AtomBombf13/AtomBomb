@@ -21,7 +21,9 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_TOWN_PD = RADIO_TOKEN_TOWN_PD,
 	RADIO_CHANNEL_RANGER = RADIO_TOKEN_RANGER,
 	RADIO_CHANNEL_TOWN_COMMERCE = RADIO_TOKEN_TOWN_COMMERCE,
-	RADIO_CHANNEL_LEGION = RADIO_TOKEN_LEGION
+	RADIO_CHANNEL_LEGION = RADIO_TOKEN_LEGION,
+	RADIO_CHANNEL_KHAN = RADIO_TOKEN_KHAN,
+	RADIO_CHANNEL_DEN = RADIO_TOKEN_DEN
 ))
 
 /obj/item/radio/headset
@@ -395,7 +397,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/headset_khans
 	name = "khan radio headset"
 	desc = "This is used by the Khans.\
-		\nTo access the Khan channel, use :e."
+		\nTo access the Khan channel, use :k."
 	icon_state = "syndie_headset"
 	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_khan
@@ -435,6 +437,17 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	command = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/mayor
 
+/obj/item/radio/headset/headset_town/cmo
+	name = "Eastwood Director radio headset"
+	desc = "This is used by Eastwood's CMO. Protects ears from flashbangs.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood mayor channel, use :y.\
+		\nTo access the Eastwood security channel, use :s.\
+		\nTo access the Eastwood medical channel, use :j."
+	bowman = TRUE
+	command = TRUE
+	keyslot = new /obj/item/encryptionkey/headset_town/cmo
+
 /obj/item/radio/headset/headset_followers
 	name = "followers radio headset"
 	desc = "This is used by the Followers.\nTo access the Followers channel, use :m"
@@ -443,7 +456,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/headset_den
 	name = "den radio headset"
-	desc = "This is used by the den. \nTo access the den channel, use :j."
+	desc = "This is used by the den. \nTo access the den channel, use :d."
 	icon_state = "mine_headset"
 	keyslot = new /obj/item/encryptionkey/headset_den
 

@@ -170,6 +170,7 @@
 	result = /obj/item/reagent_containers/food/snacks/pie/frostypie
 	subcategory = CAT_PASTRY
 
+/*
 /datum/crafting_recipe/food/goldenappletart
 	name = "Golden apple tart"
 	reqs = list(
@@ -180,6 +181,7 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/pie/appletart
 	subcategory = CAT_PIE
+*/
 
 /datum/crafting_recipe/food/bearypie
 	name = "Beary Pie"

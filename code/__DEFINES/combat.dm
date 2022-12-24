@@ -582,6 +582,17 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_FIRE_DELAY_SLOWER (GUN_FIRE_DELAY_BASE * 5) //5s
 #define GUN_FIRE_DELAY_ABSOLUTE (GUN_FIRE_DELAY_BASE * 6) //6s
 
+/// Mob autofire delay Base
+#define MOB_AUTOFIRE_DELAY_BASE 1
+
+/// Mob fire delay modifiers
+#define MOB_AUTOFIRE_DELAY_FASTEST (MOB_AUTOFIRE_DELAY_BASE * 0.1)
+#define MOB_AUTOFIRE_DELAY_FASTER (MOB_AUTOFIRE_DELAY_BASE * 1)
+#define MOB_AUTOFIRE_DELAY_FAST (MOB_AUTOFIRE_DELAY_BASE * 2)
+#define MOB_AUTOFIRE_DELAY_NORMAL (MOB_AUTOFIRE_DELAY_BASE * 3)
+#define MOB_AUTOFIRE_DELAY_SLOW (MOB_AUTOFIRE_DELAY_BASE * 4)
+#define MOB_AUTOFIRE_DELAY_SLOWER (MOB_AUTOFIRE_DELAY_BASE * 5)
+
 /// Gun burstfire delay Base
 #define GUN_BURSTFIRE_DELAY_BASE 2
 
@@ -668,7 +679,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define WEAPON_NORMAL		list(mode_name="standard", burst_size=1, icon="semi")
 #define SEMI_AUTO_NODELAY	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 2, burst_size=1, icon="semi") //Shouldn't be used on guns
 
-#define SEMI_AUTO_SNIPER	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 7, burst_size=1, icon="semi") //Sniper Rifle and AMR/Gauss
+#define SEMI_AUTO_SNIPER	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 13, burst_size=1, icon="semi") //Sniper Rifle and AMR/Gauss
 #define SEMI_AUTO_RIFLE		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 5, burst_size=1, icon="semi") //This means bolt action
 #define SEMI_AUTO_PISTOL	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 4, burst_size=1, icon="semi") //Anything that should be baseline weapon
 #define SEMI_AUTO_SMG		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 3, burst_size=1, icon="semi")	//This includes carbines and automatic rifles

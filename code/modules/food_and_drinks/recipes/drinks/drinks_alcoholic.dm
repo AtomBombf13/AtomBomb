@@ -3,8 +3,8 @@
 /datum/chemical_reaction/goldschlager
 	name = "Goldschlager"
 	id = /datum/reagent/consumable/ethanol/goldschlager
-	results = list(/datum/reagent/consumable/ethanol/goldschlager = 10)
-	required_reagents = list(/datum/reagent/consumable/ethanol/vodka = 10, /datum/reagent/gold = 1)
+	results = list(/datum/reagent/consumable/ethanol/goldschlager = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol/vodka = 1, /datum/reagent/gold = 1)
 
 /datum/chemical_reaction/patron
 	name = "Patron"
