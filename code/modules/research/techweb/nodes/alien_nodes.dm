@@ -17,9 +17,7 @@
 							/obj/item/crowbar/abductor, /obj/item/multitool/abductor,
 							/obj/item/stock_parts/cell/infinite/abductor, /obj/item/weldingtool/abductor,
 							/obj/item/wirecutters/abductor, /obj/item/circuitboard/machine/abductor,
-							/obj/item/abductor, /obj/item/stack/sheet/mineral/abductor,
-							/obj/item/melee/onehanded/knife/cosmicdirty, obj/item/melee/onehanded/knife/cosmic,
-							/obj/item/melee/onehanded/knife/cosmicheated)
+							/obj/item/abductor, /obj/item/stack/sheet/mineral/abductor, /obj/item/melee/onehanded/knife/cosmicdirty, /obj/item/melee/onehanded/knife/cosmic, /obj/item/melee/onehanded/knife/cosmicheated) //Atom edit: adds Cosmic Knifes to the list of valid items)
 
 /datum/techweb_node/alien_bio
 	id = "alien_bio"
