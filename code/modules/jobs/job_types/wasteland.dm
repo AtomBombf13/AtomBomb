@@ -614,6 +614,7 @@ Wastelander
 	id = /obj/item/card/id/dogtag/town/legion
 	l_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
+		/obj/item/stack/f13Cash/random/denarius/low = 1,
 		/obj/item/melee/onehanded/machete = 1
 		)
 
@@ -626,6 +627,7 @@ Wastelander
 	id = /obj/item/card/id/dogtag/town/ncr
 	l_hand = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
+		/obj/item/stack/f13Cash/random/ncr/med = 1,
 		/obj/item/ammo_box/magazine/m556/rifle/small = 2
 		)
 
