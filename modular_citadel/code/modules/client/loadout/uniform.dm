@@ -722,7 +722,7 @@
 	restricted_desc = "BoS"
 	restricted_roles = list(
 							"Head Paladin",
-							"Knight-Captain",
+							"Head Knight",
 							"Head Scribe",
 							"Senior Paladin",
 							"Senior Knight",

@@ -555,7 +555,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"Elder",
 		"Head Paladin",
 		"Head Scribe",
-		"Knight-Captain",
+		"Head Knight",
 		)
 
 /obj/machinery/computer/card/town
