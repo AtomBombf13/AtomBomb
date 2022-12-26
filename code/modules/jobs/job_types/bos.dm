@@ -283,7 +283,7 @@ Head Scribe
 Head Knight
 */
 
-/datum/job/bos/f13knightcap
+/datum/job/bos/f13headknight
 	title = "Head Knight"
 	flag = F13HEADKNIGHT
 	display_order = JOB_DISPLAY_ORDER_HEADKNIGHT
@@ -302,12 +302,12 @@ Head Knight
 	/datum/outfit/loadout/headalt //Neostead with buck because they don't know slugs are better
 	)
 
-	outfit = /datum/outfit/job/bos/f13knightcap
+	outfit = /datum/outfit/job/bos/f13headknight
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_CHANGE_IDS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_BOS4, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_CHANGE_IDS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_BOS4, ACCESS_PUBLIC)
 
-/datum/outfit/job/bos/f13knightcap/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/bos/f13headknight/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
