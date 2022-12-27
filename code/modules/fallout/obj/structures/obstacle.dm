@@ -429,7 +429,7 @@
 	obj_integrity = 400
 	max_integrity = 400
 	proj_pass_rate = 90
-	pass_flags_self = LETPASSTHROW
+	//pass_flags_self = LETPASSTHROW
 
 /*
 /obj/structure/barricade/sandbags
