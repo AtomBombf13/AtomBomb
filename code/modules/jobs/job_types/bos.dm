@@ -997,6 +997,7 @@ Knight
 		/obj/item/stack/sheet/glass/fifty = 1,
 		/obj/item/gun/ballistic/shotgun/police = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/clothing/mask/gas/welding = 1
 		)
 
@@ -1010,6 +1011,7 @@ Knight
 		/obj/item/stack/sheet/glass/fifty = 1,
 		/obj/item/gun/ballistic/shotgun/police = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/clothing/mask/gas/welding = 1
 		)
 /*
