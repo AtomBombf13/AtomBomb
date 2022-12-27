@@ -852,7 +852,7 @@ Knight
 	display_order = JOB_DISPLAY_ORDER_KNIGHT
 	total_positions = 3
 	spawn_positions = 3
-	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
+	description = "You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
 	supervisors = "the Senior Knight and Head Knight"
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
@@ -864,6 +864,8 @@ Knight
 	/datum/outfit/loadout/knightc, //AER9 and .45 Autoloader
 	/datum/outfit/loadout/knightb, //Shishkebab and Bulletproof Shield J
 	/datum/outfit/loadout/knightd //Shishkebab and Bulletproof Shield
+	/datum/outfit/loadout/knighte, //Knight-Engineer with a police shotgun and .44 J
+	/datum/outfit/loadout/knightf //Knight-Engineer with a police shotgun and .44
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -931,6 +933,19 @@ Knight
 		/obj/item/shield/riot/bullet_proof = 1
 		)
 
+/datum/outfit/loadout/knighte
+	name = "Junior Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
 
 /datum/outfit/loadout/knightc
 	name = "Footknight"
@@ -951,6 +966,21 @@ Knight
 		/obj/item/shishkebabpack = 1,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
+
+/datum/outfit/loadout/knightf
+	name = "Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
+
 /*
 Initiate
 */
