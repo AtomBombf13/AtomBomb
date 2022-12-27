@@ -897,6 +897,8 @@ Knight
 	/datum/outfit/loadout/knightc, //AER9 S
 	/datum/outfit/loadout/knightb, //Shishkebab J
 	/datum/outfit/loadout/knightd //Shishkebab
+	/datum/outfit/loadout/knighte, //Engi J
+	/datum/outfit/loadout/knightf, //Engi S
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -983,6 +985,32 @@ Knight
 		/obj/item/clothing/accessory/bos/knight = 1,
 		/obj/item/shishkebabpack = 1,
 		/obj/item/shield/riot/bullet_proof = 1
+		)
+		
+/datum/outfit/loadout/knighte
+	name = "Junior Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
+
+/datum/outfit/loadout/knightf
+	name = "Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/clothing/mask/gas/welding = 1
 		)
 /*
 Initiate
