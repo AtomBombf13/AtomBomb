@@ -941,7 +941,7 @@
 
 /obj/item/card/id/dogtag/town/ncr
 	name = "NCR citizenship permit"
-	desc = "A permit identifying the holder as a citizen of New Californian Republic."
+	desc = "A permit identifying the holder as a citizen of the New California Republic."
 	assignment = "NCR Citizen"
 	access = list()
 
