@@ -1045,7 +1045,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /**********************Federal Reserve Money Printer**************************/
 /obj/machinery/mineral/money_printer/usd
 	name = "Federal Reserve Money Printer"
-	desc = "Production is the only answer to inflation!"
+	desc = "The Commonwealth Bank Minting Machine, once a staple of American Banking across all the US Commonwealths. This one, along with most seen across the various wastelands, is rusted and barely functional, but it keeps on ticking nonetheless. Much like Old America."
 	icon = 'icons/WVM/machines.dmi'
 	icon_state = "liberationstation_idle" //placeholder
 
