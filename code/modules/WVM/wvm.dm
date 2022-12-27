@@ -116,7 +116,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		P.forceMove(src.loc)
 
 /* Adding item to machine and spawn Set Price dialog */
-/obj/machinery/trading_machine/proc/add_item(obj/item/Itm, mob/living/carbon/human/user) //Disabling for now until the f13cash exploit is fixed
+/obj/machinery/trading_machine/proc/add_item(obj/item/Itm, mob/living/carbon/human/user)
 	if(machine_state != STATE_SERVICE)
 		return
 
@@ -295,7 +295,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			to_chat(user, span_notice("You repair the vending machine."))
 			stat &= ~BROKEN
 			obj_integrity = max_integrity
- //Disabling for now until the f13cash exploit is fixed
+
 /* Attack By */
 /obj/machinery/trading_machine/attackby(obj/item/OtherItem, mob/living/carbon/human/user, parameters)
 	switch(machine_state)
@@ -470,7 +470,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	data += "Wasteland Trading Company guide."
 	return data
 
- //Disabling for now until the f13cash exploit is fixed
 /* TOPIC */
 /obj/machinery/trading_machine/Topic(href, href_list)
 	if(..())
