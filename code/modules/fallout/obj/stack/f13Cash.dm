@@ -5,6 +5,7 @@
 #define CASH_AUR 100 /* 100 caps to 1 AUR */
 #define CASH_DEN 4 /* 4 caps to 1 DEN */
 #define CASH_NCR 0.4 /* $100 to 40 caps */
+#define CASH_USD 0.004 /* $10,000 to 40 caps */
 
 /* value of coins to spawn, use as-is for caps */
 /* LOW_MIN / AUR = amount in AUR */
@@ -276,7 +277,7 @@
 			icon_state = "[initial(icon_state)]100"
 		if(200 to 499)
 			icon_state = "[initial(icon_state)]200"
-		if(500 to 15000)
+		if(500 to INFINITY)
 			icon_state = "[initial(icon_state)]500"
 
 /obj/item/stack/f13Cash/random/ncr
@@ -306,12 +307,55 @@
 	min_qty = HIGH_MIN / CASH_NCR
 	max_qty = HIGH_MAX / CASH_NCR
 
+/obj/item/stack/f13Cash/usd //Don't use base space cash stacks. Any other space cash stack can merge with them, and could cause potential money duping exploits.
+	name = "pre-war cash"
+	singular_name = "bill"
+	icon = 'icons/obj/economy.dmi'
+	icon_state = "spacecash"
+	value = CASH_USD * CASH_CAP
+	flippable = FALSE
+	merge_type = /obj/item/stack/f13Cash/usd
+
+/obj/item/stack/f13Cash/usd/update_icon()
+	switch(amount)
+		if(1  to 9)
+			icon_state = "[initial(icon_state)]"
+		if(10 to 19)
+			icon_state = "[initial(icon_state)]10"
+		if(20 to 49)
+			icon_state = "[initial(icon_state)]20"
+		if(50 to 99)
+			icon_state = "[initial(icon_state)]50"
+		if(100 to 199)
+			icon_state = "[initial(icon_state)]100"
+		if(200 to 499)
+			icon_state = "[initial(icon_state)]200"
+		if(500 to 999)
+			icon_state = "[initial(icon_state)]500"
+		if(1000 to INFINITY)
+			icon_state = "[initial(icon_state)]1000"
+
+/obj/item/stack/f13Cash/random/usd
+	money_type = /obj/item/stack/f13Cash/usd
+
+/obj/item/stack/f13Cash/random/usd/low
+	min_qty = LOW_MIN / CASH_USD
+	max_qty = LOW_MAX / CASH_USD
+
+/obj/item/stack/f13Cash/random/usd/med
+	min_qty = MED_MIN / CASH_USD
+	max_qty = MED_MAX / CASH_USD
+
+/obj/item/stack/f13Cash/random/usd/high
+	min_qty = HIGH_MIN / CASH_USD
+	max_qty = HIGH_MAX / CASH_USD
 
 #undef maxCoinIcon
 #undef CASH_CAP
 #undef CASH_AUR
 #undef CASH_DEN
 #undef CASH_NCR
+#undef CASH_USD
 #undef LOW_MIN
 #undef LOW_MAX
 #undef MED_MIN

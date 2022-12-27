@@ -13,6 +13,7 @@
 #define CASH_AUR 100 /* 100 caps to 1 AUR */
 #define CASH_DEN 4 /* 4 caps to 1 DEN */
 #define CASH_NCR 0.4 /* $100 to 40 caps */
+#define CASH_USD 0.004 /* $10000 to 40 caps */
 
 // Total number of caps value spent in the Trading Protectrons Vendors
 GLOBAL_VAR_INIT(vendor_cash, 0)
@@ -115,7 +116,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		P.forceMove(src.loc)
 
 /* Adding item to machine and spawn Set Price dialog */
-/*/obj/machinery/trading_machine/proc/add_item(obj/item/Itm, mob/living/carbon/human/user) //Disabling for now until the f13cash exploit is fixed
+/obj/machinery/trading_machine/proc/add_item(obj/item/Itm, mob/living/carbon/human/user) //Disabling for now until the f13cash exploit is fixed
 	if(machine_state != STATE_SERVICE)
 		return
 
@@ -169,31 +170,35 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	if(machine_state != STATE_VEND)
 		return
 
-	if(istype(I, /obj/item/stack/f13Cash))
-		if(I.use(expected_price))
+	if(istype(I, /obj/item/stack/f13Cash/usd)) 
+		if(I.use(expected_price*250))
+			src.ui_interact(usr)
 			stored_caps += expected_price
-			playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-			to_chat(usr, "You put [expected_price] caps to a vending machine. [vending_item.name] is vended out of it. ")
 			remove_item(vending_item)
 			set_state(STATE_IDLE)
+			playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+			to_chat(usr, "You pay [expected_price] dollar value to a vending machine.")
 			onclose(usr, "vending")
 		else
 			playsound(src, 'sound/machines/DeniedBeep.ogg', 60, 1)
 			to_chat(usr, "Not enough caps.")
+	else
+		to_chat(usr, "We only accept the American dollar here!")
+		return
 
 
 /* Spawn all caps on world and clear caps storage */
 /obj/machinery/trading_machine/proc/remove_all_caps()
 	if(stored_caps <= 0)
 		return
-	var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps
-	if(stored_caps > C.max_amount)
-		C.add(C.max_amount - 1)
-		C.forceMove(src.loc)
-		stored_caps -= C.max_amount
+	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
+	if(stored_caps > U.max_amount)
+		U.add((U.max_amount * 250) - 1)
+		U.forceMove(src.loc)
+		stored_caps -= U.max_amount
 	else
-		C.add(stored_caps - 1)
-		C.forceMove(src.loc)
+		U.add((stored_caps * 250) - 1)
+		U.forceMove(src.loc)
 		stored_caps = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
 	src.ui_interact(usr)
@@ -205,7 +210,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		expected_price = content[Itm]
 		set_state(STATE_VEND)
 		src.attack_hand(usr)
-*/
 
 /* Remove lock from machine */
 /obj/machinery/trading_machine/proc/drop_lock()
@@ -291,7 +295,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			to_chat(user, span_notice("You repair the vending machine."))
 			stat &= ~BROKEN
 			obj_integrity = max_integrity
-/* //Disabling for now until the f13cash exploit is fixed
+ //Disabling for now until the f13cash exploit is fixed
 /* Attack By */
 /obj/machinery/trading_machine/attackby(obj/item/OtherItem, mob/living/carbon/human/user, parameters)
 	switch(machine_state)
@@ -382,7 +386,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 					to_chat(usr, "You need to secure lock first. Use screwdriver.")
 
 	src.ui_interact(user)
-*/
+
 /* Spawn input dialog and set item price */
 /obj/machinery/trading_machine/proc/set_price_by_input(obj/item/Itm, mob/user)
 	if(machine_state != STATE_SERVICE)
@@ -466,7 +470,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	data += "Wasteland Trading Company guide."
 	return data
 
-/* //Disabling for now until the f13cash exploit is fixed
+ //Disabling for now until the f13cash exploit is fixed
 /* TOPIC */
 /obj/machinery/trading_machine/Topic(href, href_list)
 	if(..())
@@ -511,15 +515,15 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		I.examine(usr)
 
 	ui_interact()
-*/
+
 
 /**********************Trading Protectron Vendors**************************/
 
 /obj/machinery/mineral/wasteland_vendor
 	name = "Wasteland Vending Machine"
-	desc = "Wasteland Vending Machine manned by old reprogrammed RobCo trading protectrons."
+	desc = "Production is the only answer to inflation!"
 	icon = 'icons/WVM/machines.dmi'
-	icon_state = "weapon_idle"
+	icon_state = "liberationstation_idle"
 
 	density = TRUE
 	use_power = FALSE
@@ -948,6 +952,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "1 NCR dollar = [CASH_NCR] bottle caps value <br>"
 	dat += "1 Denarius = [CASH_DEN] bottle caps value <br>"
 	dat += "1 Aureus = [CASH_AUR] bottle caps value <br>"
+	dat += "1 USD dollar = [CASH_USD] bottle caps value <br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
@@ -1008,6 +1013,86 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /* Adding a caps to caps storage and release vending item. */
 /obj/machinery/mineral/wasteland_vendor/proc/add_caps(obj/item/I)
+	if(istype(I, /obj/item/stack/f13Cash/usd))
+		var/obj/item/stack/f13Cash/currency = I
+		var/inserted_value = FLOOR(currency.amount * 0.004, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] dollar value to a vending machine.")
+		src.ui_interact(usr)
+	else
+		to_chat(usr, "We only accept the American dollar here!")
+		return
+
+/* Spawn all caps on world and clear caps storage */
+/obj/machinery/mineral/wasteland_vendor/proc/remove_all_caps()
+	if(stored_caps <= 0)
+		return
+	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
+	if(stored_caps > U.max_amount)
+		U.add((U.max_amount * 250) - 1)
+		U.forceMove(src.loc)
+		stored_caps -= U.max_amount
+	else
+		U.add((stored_caps * 250) - 1)
+		U.forceMove(src.loc)
+		stored_caps = 0
+	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
+	src.ui_interact(usr)
+
+
+/**********************Federal Reserve Money Printer**************************/
+/obj/machinery/mineral/money_printer/usd
+	name = "Federal Reserve Money Printer"
+	desc = "Production is the only answer to inflation!"
+	icon = 'icons/WVM/machines.dmi'
+	icon_state = "liberationstation_idle" //placeholder
+
+	density = TRUE
+	use_power = FALSE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	can_be_unanchored = FALSE
+	layer = 2.9
+
+	var/stored_caps = 0	// store caps
+
+/obj/machinery/mineral/money_printer/usd/ui_interact(mob/user)
+	. = ..()
+	var/dat
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "</div>"
+	dat += "<br>"
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Currency conversion rates:</b><br>"
+	dat += "1 Bottle cap = [CASH_CAP] bottle caps value <br>"
+	dat += "1 NCR dollar = [CASH_NCR] bottle caps value <br>"
+	dat += "1 Denarius = [CASH_DEN] bottle caps value <br>"
+	dat += "1 Aureus = [CASH_AUR] bottle caps value <br>"
+	dat += "1 USD dollar = [CASH_USD] bottle caps value <br>"
+	dat += "</div>"
+	dat += "<br>"
+
+
+	var/datum/browser/popup = new(user, "tradingvendor", "Federal Reserve Money Printer", 400, 500)
+	popup.set_content(dat)
+	popup.open()
+	return
+
+/obj/machinery/mineral/money_printer/usd/Topic(href, href_list)
+	if(..())
+		return
+	if(href_list["choice"] == "eject")
+		remove_all_caps()
+
+/obj/machinery/mineral/money_printer/usd/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/stack/f13Cash))
+		add_caps(I)
+	else
+		attack_hand(user)
+
+/obj/machinery/mineral/money_printer/usd/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/caps))
 		var/obj/item/stack/f13Cash/currency = I
 		var/inserted_value = FLOOR(currency.amount * 1, 1)
@@ -1039,23 +1124,216 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		I.use(currency.amount)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else
-		to_chat(usr, "Invalid currency!")
-		return
 
-/* Spawn all caps on world and clear caps storage */
-/obj/machinery/mineral/wasteland_vendor/proc/remove_all_caps()
+/obj/machinery/mineral/money_printer/usd/proc/remove_all_caps()
 	if(stored_caps <= 0)
 		return
-	var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps
-	if(stored_caps > C.max_amount)
-		C.add(C.max_amount - 1)
-		C.forceMove(src.loc)
-		stored_caps -= C.max_amount
+	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
+	if(stored_caps > U.max_amount)
+		U.add((U.max_amount * 250) - 1)
+		U.forceMove(src.loc)
+		stored_caps -= U.max_amount
 	else
-		C.add(stored_caps - 1)
-		C.forceMove(src.loc)
+		U.add((stored_caps * 250) - 1)
+		U.forceMove(src.loc)
+		stored_caps = 0
+	say("Brrrrrrrrr!")
+	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+	src.ui_interact(usr)
+
+/**********************NCR Money Printer**************************/
+/obj/machinery/mineral/money_printer/ncr
+	name = "NCR Money Printer"
+	desc = "New California Republic Reserves Money Printer MK.I. Heavily weathered from years of neglect and poor maintenance. Miraculously it still works, somehow. The quote “In order to give, you must first take. Todays taxes, tomorrows paycheck.” Can be seen on across the  top of the machine."
+	icon = 'icons/WVM/new_vendors.dmi'
+	icon_state = "ncr_money_printer" //placeholder
+
+	density = TRUE
+	use_power = FALSE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	can_be_unanchored = FALSE
+	layer = 2.9
+
+	var/stored_caps = 0	// store caps
+
+/obj/machinery/mineral/money_printer/ncr/ui_interact(mob/user)
+	. = ..()
+	var/dat
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "</div>"
+	dat += "<br>"
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Currency conversion rates:</b><br>"
+	dat += "1 Bottle cap = [CASH_CAP] bottle caps value <br>"
+	dat += "1 NCR dollar = [CASH_NCR] bottle caps value <br>"
+	dat += "1 Denarius = [CASH_DEN] bottle caps value <br>"
+	dat += "1 Aureus = [CASH_AUR] bottle caps value <br>"
+	dat += "1 USD dollar = [CASH_USD] bottle caps value <br>"
+	dat += "</div>"
+	dat += "<br>"
+
+
+	var/datum/browser/popup = new(user, "tradingvendor", "NCR Money Printer", 400, 500)
+	popup.set_content(dat)
+	popup.open()
+	return
+
+/obj/machinery/mineral/money_printer/ncr/Topic(href, href_list)
+	if(..())
+		return
+	if(href_list["choice"] == "eject")
+		remove_all_caps()
+
+/obj/machinery/mineral/money_printer/ncr/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/stack/f13Cash))
+		add_caps(I)
+	else
+		attack_hand(user)
+
+/obj/machinery/mineral/money_printer/ncr/proc/add_caps(obj/item/I)
+	if(istype(I, /obj/item/stack/f13Cash/caps))
+		var/obj/item/stack/f13Cash/currency = I
+		var/inserted_value = FLOOR(currency.amount * 1, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/f13Cash/usd))
+		var/obj/item/stack/f13Cash/ncr/currency = I
+		var/inserted_value = FLOOR(currency.amount * 0.004, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/f13Cash/denarius))
+		var/obj/item/stack/f13Cash/denarius/currency = I
+		var/inserted_value = FLOOR(currency.amount * 4, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/f13Cash/aureus))
+		var/obj/item/stack/f13Cash/aureus/currency = I
+		var/inserted_value = FLOOR(currency.amount * 100, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+
+/obj/machinery/mineral/money_printer/ncr/proc/remove_all_caps()
+	if(stored_caps <= 0)
+		return
+	var/obj/item/stack/f13Cash/N = new /obj/item/stack/f13Cash/ncr
+	if(stored_caps > N.max_amount)
+		N.add((N.max_amount * 2.5) - 1)
+		N.forceMove(src.loc)
+		stored_caps -= N.max_amount
+	else
+		N.add((stored_caps * 2.5) - 1)
+		N.forceMove(src.loc)
+		stored_caps = 0
+	say("Brrrrrrrrr!")
+	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+	src.ui_interact(usr)
+
+/**********************Legion Coin Minter**************************/
+/obj/machinery/mineral/money_printer/legion
+	name = "Legion Coin Minter"
+	desc = "Caesar’s Legion has sized the means of production; having refitted this Pre-War Coin Press Machine to print bastardized American coins with Caesar’s face and a Bull on them. The words “Property of Officiorum Ab Industria. The Only Wealth Which You Will Keep Forever Is The Wealth You Have Given Away.” have been stamped into the side of the machine with small metal lettering."
+	icon = 'icons/obj/economy.dmi'
+	icon_state = "coinpress0" //placeholder
+
+	density = TRUE
+	use_power = FALSE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	can_be_unanchored = FALSE
+	layer = 2.9
+
+	var/stored_caps = 0	// store caps
+
+/obj/machinery/mineral/money_printer/legion/ui_interact(mob/user)
+	. = ..()
+	var/dat
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "</div>"
+	dat += "<br>"
+	dat +="<div class='statusDisplay'>"
+	dat += "<b>Currency conversion rates:</b><br>"
+	dat += "1 Bottle cap = [CASH_CAP] bottle caps value <br>"
+	dat += "1 NCR dollar = [CASH_NCR] bottle caps value <br>"
+	dat += "1 Denarius = [CASH_DEN] bottle caps value <br>"
+	dat += "1 Aureus = [CASH_AUR] bottle caps value <br>"
+	dat += "1 USD dollar = [CASH_USD] bottle caps value <br>"
+	dat += "</div>"
+	dat += "<br>"
+
+
+	var/datum/browser/popup = new(user, "tradingvendor", "Legion Coin Minter", 400, 500)
+	popup.set_content(dat)
+	popup.open()
+	return
+
+/obj/machinery/mineral/money_printer/legion/Topic(href, href_list)
+	if(..())
+		return
+	if(href_list["choice"] == "eject")
+		remove_all_caps()
+
+/obj/machinery/mineral/money_printer/legion/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/stack/f13Cash))
+		add_caps(I)
+	else
+		attack_hand(user)
+
+/obj/machinery/mineral/money_printer/legion/proc/add_caps(obj/item/I)
+	if(istype(I, /obj/item/stack/f13Cash/caps))
+		var/obj/item/stack/f13Cash/currency = I
+		var/inserted_value = FLOOR(currency.amount * 1, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/f13Cash/usd))
+		var/obj/item/stack/f13Cash/ncr/currency = I
+		var/inserted_value = FLOOR(currency.amount * 0.004, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/f13Cash/ncr))
+		var/obj/item/stack/f13Cash/denarius/currency = I
+		var/inserted_value = FLOOR(currency.amount * 0.4, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+		src.ui_interact(usr)
+	else if(istype(I, /obj/item/stack/f13Cash/aureus))
+		var/obj/item/stack/f13Cash/aureus/currency = I
+		var/inserted_value = FLOOR(currency.amount * 100, 1)
+		stored_caps += inserted_value
+		I.use(currency.amount)
+		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
+		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
+
+/obj/machinery/mineral/money_printer/legion/proc/remove_all_caps()
+	if(stored_caps <= 0)
+		return
+	var/obj/item/stack/f13Cash/L = new /obj/item/stack/f13Cash/denarius
+	if(stored_caps > L.max_amount)
+		L.add((L.max_amount * 0.25) - 1)
+		L.forceMove(src.loc)
+		stored_caps -= L.max_amount
+	else
+		L.add((stored_caps * 0.25) - 1)
+		L.forceMove(src.loc)
 		stored_caps = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
 	src.ui_interact(usr)
