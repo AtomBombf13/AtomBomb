@@ -896,9 +896,9 @@ Knight
 	/datum/outfit/loadout/knighta, //AER9 J
 	/datum/outfit/loadout/knightc, //AER9 S
 	/datum/outfit/loadout/knightb, //Shishkebab J
-	/datum/outfit/loadout/knightd //Shishkebab
+	/datum/outfit/loadout/knightd, //Shishkebab
 	/datum/outfit/loadout/knighte, //Engi J
-	/datum/outfit/loadout/knightf, //Engi S
+	/datum/outfit/loadout/knightf //Engi S
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
