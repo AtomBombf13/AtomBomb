@@ -863,7 +863,7 @@ Knight
 	/datum/outfit/loadout/knighta, //AER9 and .45 Autoloader J
 	/datum/outfit/loadout/knightc, //AER9 and .45 Autoloader
 	/datum/outfit/loadout/knightb, //Shishkebab and Bulletproof Shield J
-	/datum/outfit/loadout/knightd //Shishkebab and Bulletproof Shield
+	/datum/outfit/loadout/knightd, //Shishkebab and Bulletproof Shield
 	/datum/outfit/loadout/knighte, //Knight-Engineer with a police shotgun and .44 J
 	/datum/outfit/loadout/knightf //Knight-Engineer with a police shotgun and .44
 	)
