@@ -362,7 +362,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/applejack
 	name = "Buckin' Bronco's Applejack"
 	desc = "Kicks like a horse, tastes like an apple!"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_REALLY_CHEAP
 	icon_state = "applejack_bottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/applejack = 100)
 	foodtype = FRUIT
@@ -432,7 +432,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice
 	name = "orange juice"
 	desc = "Full of vitamins and deliciousness!"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 	icon_state = "orangejuice"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -454,7 +454,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/cream
 	name = "milk cream"
 	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 	icon_state = "cream"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -523,7 +523,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/tomatojuice
 	name = "tomato juice"
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 	icon_state = "tomatojuice"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'

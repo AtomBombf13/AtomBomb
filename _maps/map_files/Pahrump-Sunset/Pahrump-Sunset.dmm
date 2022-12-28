@@ -47681,8 +47681,8 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/structure/closet/crate/bin/trashbin,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/mineral/money_printer/legion,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "pgo" = (
@@ -57169,6 +57169,13 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
+"tLH" = (
+/obj/machinery/light,
+/obj/machinery/mineral/money_printer/usd,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
 "tLI" = (
 /obj/structure/chair/stool,
 /obj/effect/decal/cleanable/dirt,
@@ -58213,6 +58220,11 @@
 /area/f13/wasteland)
 "umd" = (
 /obj/structure/frame/machine,
+/obj/machinery/camera/autoname{
+	dir = 5;
+	name = "Merchant Lobby";
+	network = list("Eastwood")
+	},
 /turf/open/floor/f13{
 	icon_state = "yellowrustychess"
 	},
@@ -59727,6 +59739,11 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"uWU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/bin/trashbin,
+/turf/open/floor/wood_fancy/wood_fancy_dark,
+/area/f13/legion)
 "uWY" = (
 /obj/structure/table/wood/settler,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
@@ -61686,6 +61703,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
+"vXu" = (
+/obj/machinery/mineral/money_printer/ncr,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
 "vXC" = (
 /obj/structure/table/wood/bar,
 /turf/open/floor/f13/wood{
@@ -64820,12 +64843,12 @@
 "xvW" = (
 /obj/structure/noticeboard,
 /obj/item/clothing/suit/armor/medium/combat/mk2{
-	name = "strange power armor";
+	anchored = 1;
 	armor_tier_desc = "This is a suit of power armor, able to withstand a tank shell and still finish a marathon.";
 	desc = "Upgraded pre-war power armor design.  How did this end up in the bar?";
 	icon = 'icons/fallout/clothing/armored_power.dmi';
 	icon_state = "advanced";
-	anchored = 1
+	name = "strange power armor"
 	},
 /turf/closed/wall/f13/wood,
 /area/f13/city)
@@ -101632,7 +101655,7 @@ qHy
 uNJ
 uNJ
 igF
-hEG
+vXu
 xLy
 xLy
 xLy
@@ -101889,7 +101912,7 @@ qHy
 uNJ
 uNJ
 nvn
-vPF
+tLH
 xLy
 rFD
 qOV
@@ -124575,7 +124598,7 @@ iEb
 vlp
 tbW
 pgi
-qXa
+uWU
 qXa
 tbW
 wfv
