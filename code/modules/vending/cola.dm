@@ -53,11 +53,11 @@
 /obj/machinery/vending/cola/nukacola
 	icon = 'icons/WVM/new_vendors.dmi'
 	icon_state = "nuka_vending"
-	contraband = list(/obj/item/reagent_containers/food/drinks/drinkingglass/filled/nuka_cola = 1)
-	premium = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 1)
+	contraband = list(/obj/item/reagent_containers/food/drinks/drinkingglass/filled/nuka_cola = 13)
+	premium = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 13) //only one that registers
 
 /obj/machinery/vending/cola/nukacola/Initialize()
-	products = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = rand(3, 7))
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/f13nukacola = 13) // doesnt work
 	. = ..()
 
 /obj/machinery/vending/cola/sunset_sarsaparilla
@@ -65,10 +65,10 @@
 	desc = "The Wests most Popular Soda Drink Vending Machine!"
 	icon = 'icons/WVM/new_vendors.dmi'
 	icon_state = "sunset_vending"
-	contraband = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 1)
-	premium = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 1)
+	contraband = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 13)
+	premium = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 13) //only one that registers
 
 /obj/machinery/vending/cola/sunset_sarsaparilla/Initialize()
-	products = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = rand(3, 7))
+	products = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 13) //doesnt work
 	. = ..()
 
