@@ -208,7 +208,7 @@
 
 				<li>Longsword: (FFFDD) Fold, fold, fold then draw twice.. Done right, you get a proper sharp sword, after adding a sword handle.</li>
 				<li>Katana: (FFFFF) Fold, fold, then FOLD SOME MORE. These curved swords look weird but are reasonably sharp I guess.</li>
-				<li>Wakizashi: (FDFF) Fold, draw, and fold twice, add a handle and you got a small dinky blade. </li>
+				<li>Wakizashi: (FFFS) Fold thrice and shrink it, add a handle and you got a small dinky blade. </li>
 
 				<li>Mace: (UPU) Fold, draw, and fold twice, add a handle and you got a small dinky blade. </li>
 				<li>Scrap blade: (UDPP) Fold, draw, and fold twice, add a handle and you got a small dinky blade. </li>

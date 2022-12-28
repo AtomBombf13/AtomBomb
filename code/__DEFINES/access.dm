@@ -176,6 +176,7 @@ also be like that but I can't be arsed to go back and change them all*/
 #define ACCESS_TOWN_DOC 280
 #define ACCESS_TOWN_SEC 281
 #define ACCESS_TOWN_HOS 282
+#define ACCESS_TOWN_CMO 287
 #define ACCESS_TOWN_COMMAND 283
 
 	//Wasteland Clearance Access

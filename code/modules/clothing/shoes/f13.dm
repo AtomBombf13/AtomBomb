@@ -127,13 +127,19 @@
 
 //// "Legion" Stuff below
 
-/obj/item/clothing/shoes/roman
-	name = "roman sandals"
-	desc = "Sandals with buckled leather straps on it."
-	icon = 'icons/fallout/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
-	icon_state = "legion_sandals"
-	item_state = "legion_sandals"
+/obj/item/clothing/shoes/sandals_leather
+	name = "leather sandals"
+	desc = "Sandals with buckled leather straps on it. Good workmanship."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "shoes_sandals"
+	item_state = "shoes_sandals"
+//	icon = 'icons/fallout/clothing/shoes.dmi'
+//	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
+//	icon_state = "legion_sandals"
+//	item_state = "legion_sandals"
 	strip_delay = 100
 	equip_delay_other = 100
 	permeability_coefficient = 0.9
@@ -152,18 +158,30 @@
 /obj/item/clothing/shoes/f13/military/legion
 	name = "rough leather boots"
 	desc = "A pair of crudely made leather boots, followng the standardized pattern laid down according to the wisdom of Caesar."
-	icon = 'icons/fallout/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
-	icon_state = "legion_leather"
-	item_state = "legion_leather"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "shoes_boots"
+	item_state = "shoes_boots"
+//	icon = 'icons/fallout/clothing/shoes.dmi'
+//	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
+//	icon_state = "legion_leather"
+//	item_state = "legion_leather"
 
 /obj/item/clothing/shoes/f13/military/plated
 	name = "plated war boots"
 	desc = "A pair of leather boots reinforced with hardened toe caps and shin guards, usually recycled old workboot steel caps taken from rotted old boots and glued to new ones."
-	icon = 'icons/fallout/clothing/shoes.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
-	icon_state = "legion_war"
-	item_state = "legion_war"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "shoes_plated"
+	item_state = "shoes_plated"
+//	icon = 'icons/fallout/clothing/shoes.dmi'
+//	mob_overlay_icon = 'icons/fallout/onmob/clothes/shoe.dmi'
+//	icon_state = "legion_war"
+//	item_state = "legion_war"
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1)
 

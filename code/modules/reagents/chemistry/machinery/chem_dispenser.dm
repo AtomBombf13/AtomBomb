@@ -22,15 +22,17 @@
 	interaction_flags_machine = INTERACT_MACHINE_OPEN | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OFFLINE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	circuit = /obj/item/circuitboard/machine/chem_dispenser
-	var/obj/item/stock_parts/cell/cell
+	var/obj/item/stock_parts/chem_cartridge/cartridge
+	//var/obj/item/stock_parts/cell/cell
 	var/powerefficiency = 0.0666666
+	var/matefficiency = 0.0666666
 	var/amount = 30
 	var/recharge_amount = 10
 	var/recharge_counter = 0
 	var/mutable_appearance/beaker_overlay
 	var/working_state = "dispenser_working"
 	var/nopower_state = "dispenser_nopower"
-	var/cell_type = /obj/item/stock_parts/cell/high
+	//var/cell_type = /obj/item/stock_parts/cell/high
 	var/has_panel_overlay = TRUE
 	var/obj/item/reagent_containers/beaker = null
 	var/list/dispensable_reagents = list(
@@ -106,7 +108,8 @@
 
 /obj/machinery/chem_dispenser/Destroy()
 	QDEL_NULL(beaker)
-	QDEL_NULL(cell)
+	//QDEL_NULL(cell)
+	QDEL_NULL(cartridge)
 	return ..()
 
 /obj/machinery/chem_dispenser/examine(mob/user)
@@ -122,9 +125,9 @@
 	if (recharge_counter >= 4)
 		if(!is_operational())
 			return
-		var/usedpower = cell.give(recharge_amount)
-		if(usedpower)
-			use_power(250*recharge_amount)
+		//var/usedpower = cell.give(recharge_amount)
+		//if(usedpower)
+			//use_power(250*recharge_amount)
 		recharge_counter = 0
 		return
 	recharge_counter++
@@ -140,7 +143,7 @@
 		flick(working_state,src)
 
 /obj/machinery/chem_dispenser/low_power
-	cell_type = /obj/item/stock_parts/cell/upgraded
+	//cell_type = /obj/item/stock_parts/cell/upgraded
 
 /obj/machinery/chem_dispenser/power_change()
 	..()
@@ -202,8 +205,10 @@
 /obj/machinery/chem_dispenser/ui_data(mob/user)
 	var/data = list()
 	data["amount"] = amount
-	data["energy"] = cell.charge ? cell.charge * powerefficiency : "0" //To prevent NaN in the UI.
-	data["maxEnergy"] = cell.maxcharge * powerefficiency
+	//data["energy"] = cell.charge ? cell.charge * powerefficiency : "0" //To prevent NaN in the UI.
+	//data["maxEnergy"] = cell.maxcharge * powerefficiency
+	data["cartridgeCharge"] = cartridge.charge ? cartridge.charge * matefficiency : "0"
+	data["maxCartridgeCharge"] = cartridge.maxCharge * matefficiency
 	data["isBeakerLoaded"] = beaker ? 1 : 0
 
 	var/beakerContents[0]
@@ -259,7 +264,7 @@
 				work_animation()
 				. = TRUE
 		if("dispense")
-			if(!is_operational() || QDELETED(cell))
+			if(!is_operational()) // || QDELETED(cell))
 				return
 			var/reagent_name = params["reagent"]
 			if(!recording_recipe)
@@ -267,10 +272,14 @@
 				if(beaker && dispensable_reagents.Find(reagent))
 					var/datum/reagents/R = beaker.reagents
 					var/free = R.maximum_volume - R.total_volume
-					var/actual = min(amount, (cell.charge * powerefficiency)*10, free)
-
+					var/actual = min(amount, (cartridge.charge * powerefficiency)*10, free)
+					/*
 					if(!cell.use(actual / powerefficiency))
 						say("Not enough energy to complete operation!")
+						retur
+					*/
+					if(!cartridge.takeMaterial(actual / matefficiency))
+						say("Not enough chemicals in storage to complete operation!")
 						return
 					R.add_reagent(reagent, actual)
 					log_reagent("DISPENSER: ([COORD(src)]) ([REF(src)]) [key_name(usr)] dispensed [actual] of [reagent] to [beaker] ([REF(beaker)]).")
@@ -291,7 +300,7 @@
 			replace_beaker(usr)
 			. = TRUE
 		if("dispense_recipe")
-			if(!is_operational() || QDELETED(cell))
+			if(!is_operational()) // || QDELETED(cell))
 				return
 			var/list/chemicals_to_dispense = saved_recipes[params["recipe"]]
 			if(!LAZYLEN(chemicals_to_dispense))
@@ -309,10 +318,16 @@
 						return
 					var/datum/reagents/R = beaker.reagents
 					var/free = R.maximum_volume - R.total_volume
-					var/actual = min(dispense_amount, (cell.charge * powerefficiency)*10, free)
+					var/actual = min(dispense_amount, (cartridge.charge * powerefficiency)*10, free)
 					if(actual)
+						/*
 						if(!cell.use(actual / powerefficiency))
 							say("Not enough energy to complete operation!")
+							earlyabort = TRUE
+							break
+						*/
+						if(!cartridge.takeMaterial(actual / matefficiency))
+							say("Not enough chemicals in storage to complete operation!")
 							earlyabort = TRUE
 							break
 						R.add_reagent(reagent, actual)
@@ -380,6 +395,13 @@
 		replace_beaker(user, B)
 		to_chat(user, span_notice("You add [B] to [src]."))
 		updateUsrDialog()
+	else if(istype(I, /obj/item/stock_parts/chem_cartridge))
+		var/obj/item/stock_parts/chem_cartridge/C = I
+		. = TRUE //no afterattack
+		if(!user.transferItemToLoc(C, src))
+			return
+		replace_cartridge(user, C)
+		to_chat(user, span_notice("You replace [C] in [src]"))
 	else if(user.a_intent != INTENT_HARM && !istype(I, /obj/item/card/emag))
 		to_chat(user, span_warning("You can't load [I] into [src]!"))
 		return ..()
@@ -387,14 +409,14 @@
 		return ..()
 
 /obj/machinery/chem_dispenser/get_cell()
-	return cell
+	return null //was cell
 
 /obj/machinery/chem_dispenser/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
 	var/list/datum/reagents/R = list()
-	var/total = min(rand(7,15), FLOOR(cell.charge*powerefficiency, 1))
+	var/total = min(rand(7,15), FLOOR(cartridge.charge*matefficiency, 1))
 	var/datum/reagents/Q = new(total*10)
 	if(beaker && beaker.reagents)
 		R += beaker.reagents
@@ -404,21 +426,28 @@
 	chem_splash(get_turf(src), 3, R)
 	if(beaker && beaker.reagents)
 		beaker.reagents.remove_all()
-	cell.use(total/powerefficiency)
-	cell.emp_act(severity)
+	//cell.use(total/powerefficiency)
+	cartridge.takeMaterial(total/matefficiency)
+	//cell.emp_act(severity)
 	work_animation()
 	visible_message(span_danger("[src] malfunctions, spraying chemicals everywhere!"))
 
 /obj/machinery/chem_dispenser/RefreshParts()
 	recharge_amount = initial(recharge_amount)
 	var/newpowereff = initial(powerefficiency)
+	var/newmateff = initial(matefficiency)
+	/*
 	for(var/obj/item/stock_parts/cell/P in component_parts)
 		cell = P
+	*/
+	for(var/obj/item/stock_parts/chem_cartridge/C in component_parts)
+		cartridge = C
 	for(var/obj/item/stock_parts/matter_bin/M in component_parts)
 		newpowereff += 0.0166666666*M.rating
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		recharge_amount *= C.rating
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
+		newmateff += 0.0166666666*M.rating
 		if(M.rating > 1)
 			dispensable_reagents |= upgrade_reagents
 		if(M.rating > 2)
@@ -426,6 +455,7 @@
 		if(M.rating > 3)
 			dispensable_reagents |= upgrade_reagents3
 	powerefficiency = round(newpowereff, 0.01)
+	matefficiency = round(newmateff, 0.01)
 
 /obj/machinery/chem_dispenser/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
 	if(beaker)
@@ -441,11 +471,27 @@
 	return TRUE
 
 /obj/machinery/chem_dispenser/on_deconstruction()
-	cell = null
+	//cell = null
+	if(cartridge)
+		cartridge.forceMove(drop_location())
+		cartridge = null
 	if(beaker)
 		beaker.forceMove(drop_location())
 		beaker = null
 	return ..()
+
+/obj/machinery/chem_dispenser/proc/replace_cartridge(mob/living/user, obj/item/stock_parts/chem_cartridge/new_cartridge)
+	if(cartridge)
+		var/obj/item/stock_parts/chem_cartridge/C = cartridge
+		C.forceMove(drop_location())
+		if(user && Adjacent(user) && user.can_hold_items())
+			user.put_in_hands(C)
+	if(new_cartridge)
+		cartridge = new_cartridge
+	else
+		cartridge = null
+	update_icon()
+	return TRUE
 
 /obj/machinery/chem_dispenser/AltClick(mob/living/user)
 	. = ..()
@@ -576,7 +622,8 @@
 	component_parts += new /obj/item/stock_parts/capacitor/quadratic(null)
 	component_parts += new /obj/item/stock_parts/manipulator/femto(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
-	component_parts += new /obj/item/stock_parts/cell/bluespace(null)
+	component_parts += new /obj/item/stock_parts/chem_cartridge/pristine(null)
+	//component_parts += new /obj/item/stock_parts/cell/bluespace(null)
 	RefreshParts()
 
 /obj/machinery/chem_dispenser/drinks/beer
@@ -688,7 +735,8 @@
 	component_parts += new /obj/item/stock_parts/capacitor/quadratic(null)
 	component_parts += new /obj/item/stock_parts/manipulator/femto(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
-	component_parts += new /obj/item/stock_parts/cell/bluespace(null)
+	component_parts += new /obj/item/stock_parts/chem_cartridge/pristine(null)
+	//component_parts += new /obj/item/stock_parts/cell/bluespace(null)
 	RefreshParts()
 
 /obj/machinery/chem_dispenser/fullupgrade //fully ugpraded stock parts, emagged
@@ -706,7 +754,8 @@
 	component_parts += new /obj/item/stock_parts/capacitor/quadratic(null)
 	component_parts += new /obj/item/stock_parts/manipulator/femto(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
-	component_parts += new /obj/item/stock_parts/cell/bluespace(null)
+	component_parts += new /obj/item/stock_parts/chem_cartridge/pristine(null)
+	//component_parts += new /obj/item/stock_parts/cell/bluespace(null)
 	RefreshParts()
 
 /obj/machinery/chem_dispenser/abductor
