@@ -520,9 +520,9 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 /obj/machinery/mineral/wasteland_vendor
 	name = "Wasteland Vending Machine"
-	desc = "Production is the only answer to inflation!"
+	desc = "Wasteland Vending Machine manned by old reprogrammed RobCo trading protectrons."
 	icon = 'icons/WVM/machines.dmi'
-	icon_state = "liberationstation_idle"
+	icon_state = "weapon_idle"
 
 	density = TRUE
 	use_power = FALSE
