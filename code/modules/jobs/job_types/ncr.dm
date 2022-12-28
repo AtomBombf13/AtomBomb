@@ -511,8 +511,8 @@ Access
 	ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
-	var/datum/martial_art/rangertakedown/RT = new
-	RT.teach(H)
+/*	var/datum/martial_art/rangertakedown/RT = new
+	RT.teach(H) */
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -597,8 +597,8 @@ Access
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_FAST_PUMP, src)
-	var/datum/martial_art/rangertakedown/RT = new
-	RT.teach(H)
+/*	var/datum/martial_art/rangertakedown/RT = new
+	RT.teach(H) */
 
 
 /datum/outfit/job/ncr/f13ranger
