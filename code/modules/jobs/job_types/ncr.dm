@@ -982,7 +982,7 @@ Access
 	head = /obj/item/clothing/head/f13/ncr/storm
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	backpack_contents = list(
-		/obj/item/shovel/trench = 1
+		/obj/item/shovel/trench = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
 		)
