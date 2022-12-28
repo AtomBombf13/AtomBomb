@@ -10,6 +10,9 @@
 /* value of coins to spawn, use as-is for caps */
 /* LOW_MIN / AUR = amount in AUR */
 
+//Value for USD trashloot
+#define LOWUSD_MAX 10
+
 //Value cash spawn for mobs
 #define LOWMOB_MIN 2
 #define LOWMOB_MAX 13
@@ -350,12 +353,18 @@
 	min_qty = HIGH_MIN / CASH_USD
 	max_qty = HIGH_MAX / CASH_USD
 
+/obj/item/stack/f13Cash/random/usd/lowusd
+	spawn_nothing_chance = 75
+	min_qty = LOWUSD_MAX / CASH_USD
+	max_qty = LOWUSD_MAX / CASH_USD
+
 #undef maxCoinIcon
 #undef CASH_CAP
 #undef CASH_AUR
 #undef CASH_DEN
 #undef CASH_NCR
 #undef CASH_USD
+#undef LOWUSD_MAX
 #undef LOW_MIN
 #undef LOW_MAX
 #undef MED_MIN
