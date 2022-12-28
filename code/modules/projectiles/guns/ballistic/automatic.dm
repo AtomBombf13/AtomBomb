@@ -836,8 +836,9 @@
 
 /* * * * * * * * * * *
  * Rangemaster Rifle
- * Baseline semi-auto 7.62mm rifle
- * .308 / 7.62mm
+ * Baseline .223/5.56 rifle
+ * .223/5.56
+ * Highly accurate
  * Scope!
  * Bayonet!
  * Common
@@ -845,20 +846,22 @@
 
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "colt rangemaster"
-	desc = "A Colt Rangemaster semi-automatic rifle, chambered for 7.62x51. Single-shot only."
+	desc = "A Colt Rangemaster semi-automatic rifle, chambered for .223 rounds. Single-shot only."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "rangemaster"
 	item_state = "308"
 	icon_prefix = "308"
 	force = 20
-	mag_type = /obj/item/ammo_box/magazine/m762
-	init_mag_type = /obj/item/ammo_box/magazine/m762
+	mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
+	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/small
+	disallowed_mags = list(/obj/item/ammo_box/magazine/m556/rifle/assault,/obj/item/ammo_box/magazine/m556/rifle/extended)
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1 //27.5dmg
 	weapon_weight = GUN_TWO_HAND_ONLY
-	init_recoil = RIFLE_RECOIL(1.2)
+	init_recoil = RIFLE_RECOIL(0.75)
 	init_firemodes = list(
 		SEMI_AUTO_RIFLE
 	)
@@ -971,9 +974,8 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(1)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
@@ -1152,7 +1154,6 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	weapon_weight = GUN_TWO_HAND_ONLY

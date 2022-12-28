@@ -9,7 +9,7 @@
 #define RADIO_KEY_SECURITY "s"
 #define RADIO_TOKEN_SECURITY ":s"
 
-#define RADIO_CHANNEL_ENGINEERING "Khan"
+#define RADIO_CHANNEL_ENGINEERING "Engineering"
 #define RADIO_KEY_ENGINEERING "e"
 #define RADIO_TOKEN_ENGINEERING ":e"
 
@@ -48,6 +48,14 @@
 #define RADIO_CHANNEL_VAULT "Vault"
 #define RADIO_KEY_VAULT "b"
 #define RADIO_TOKEN_VAULT ":b"
+
+#define RADIO_CHANNEL_DEN "Desperados"
+#define RADIO_KEY_DEN "d"
+#define RADIO_TOKEN_DEN ":d"
+
+#define RADIO_CHANNEL_KHAN "Great Khans"
+#define RADIO_KEY_KHAN "k"
+#define RADIO_TOKEN_KHAN ":k"
 
 #define RADIO_CHANNEL_NCR "NCR"
 #define RADIO_KEY_NCR "w"
@@ -110,8 +118,10 @@
 #define FREQ_TOWN_PD 1371 //Town Police
 #define FREQ_RANGER 1373 //Ranger
 #define FREQ_TOWN_MAYOR 1375 //Den
-#define FREQ_TOWN_COMMERCE 1376 //Khans
+#define FREQ_TOWN_COMMERCE 1376 // Service
 #define FREQ_LEGION 1377 //Legion
+#define FREQ_KHAN 1378 //Great Khans
+#define FREQ_DEN 1379 // Desperados
 
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435

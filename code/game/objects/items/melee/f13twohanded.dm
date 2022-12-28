@@ -791,6 +791,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 /obj/item/twohanded/chainsaw
 	name = "chainsaw"
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/backslot.dmi' // added with Invicta
 	icon_state = "chainsaw"
 	icon_prefix = "chainsaw"
 	wielded_icon = "chainsaw2"

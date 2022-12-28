@@ -127,11 +127,6 @@
 	freq_listening = list(FREQ_TOWN)
 	autolinkers = list("town")
 
-/obj/machinery/telecomms/server/presets/den
-	id = "Den Server"
-	freq_listening = list(FREQ_TOWN_MAYOR)
-	autolinkers = list("den")
-
 /obj/machinery/telecomms/server/presets/town_pd
 	id = "Town PD Server"
 	freq_listening = list(FREQ_TOWN_PD)
@@ -142,15 +137,20 @@
 	freq_listening = list(FREQ_RANGER)
 	autolinkers = list("ranger")
 
-/obj/machinery/telecomms/server/presets/khans
-	id = "Khans Server"
-	freq_listening = list(FREQ_TOWN_COMMERCE)
-	autolinkers = list("khans")
-
 /obj/machinery/telecomms/server/presets/legion
 	id = "Legion Server"
 	freq_listening = list(FREQ_LEGION)
 	autolinkers = list("legion")
+
+/obj/machinery/telecomms/server/presets/khans
+	id = "Khans Server"
+	freq_listening = list(FREQ_KHAN)
+	autolinkers = list("khans")
+
+/obj/machinery/telecomms/server/presets/den
+	id = "Desperados Server"
+	freq_listening = list(FREQ_DEN)
+	autolinkers = list("den")
 
 //Common and other radio frequencies for people to freely use
 /obj/machinery/telecomms/server/presets/common/Initialize()

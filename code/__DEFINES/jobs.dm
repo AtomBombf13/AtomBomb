@@ -9,6 +9,7 @@
 #define FACTION_WASTELAND "Wastelander"
 #define FACTION_RAIDERS "Raiders"
 #define FACTION_KHAN "Great Khans"
+#define FACTION_DEN "Desperados"
 
 #define ENGSEC			(1<<0)
 
