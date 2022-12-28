@@ -272,7 +272,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bowie = 1
+		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 3,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
