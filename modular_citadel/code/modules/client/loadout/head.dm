@@ -364,7 +364,7 @@
 	cost = 3
 	restricted_desc = "Eastwood PD, Eastwood officials"
 	restricted_roles = list("Chief of Police",
-							"Officer",
+							"Deputy Marshal",
 							"Mayor",
 							"Detective",
 							"Secretary",

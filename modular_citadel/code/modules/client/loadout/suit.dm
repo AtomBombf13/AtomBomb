@@ -163,7 +163,7 @@
 							"Sheriff",
 							"Doctor",
 							"Citizen",
-							"Deputy",
+							"Deputy Marshal",
 							"Shopkeeper",
 							"Farmer",
 							"Prospector",
@@ -179,7 +179,7 @@ datum/gear/suit/blueshirt
 	restricted_desc = "Eastwood PD, Eastwood officials"
 	restricted_roles = list("Mayor",
 							"Sheriff",
-							"Deputy",
+							"Deputy Marshal",
 							"Shopkeeper",
 							"Secretary",
 							)
