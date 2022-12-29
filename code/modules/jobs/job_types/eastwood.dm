@@ -137,7 +137,7 @@ here's a tip, go search DEFINES/access.dm
 	name = "Provost Marshal"
 	jobtype = /datum/job/eastwood/f13sheriff
 	id = /obj/item/card/id/dogtag/sheriff
-	ears = /obj/item/radio/headset/headset_town/lawman
+	ears = /obj/item/radio/headset/headset_town/lawman_sheriff
 	glasses  = /obj/item/clothing/glasses/sunglasses
 	neck = /obj/item/storage/belt/holster/leg
 	belt = /obj/item/storage/belt/military/army
