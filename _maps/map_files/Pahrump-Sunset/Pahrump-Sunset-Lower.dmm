@@ -9240,7 +9240,7 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
 "eoM" = (
-/obj/structure/blacksmith/anvil,
+/obj/structure/blacksmith/anvil/obtainable/legion,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "eoT" = (
