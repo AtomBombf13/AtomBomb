@@ -145,7 +145,7 @@ Head Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/hpstand, //Tribeam laser + Hardened T-51
-	/datum/outfit/loadout/hpheavy, //DKS + Glock + Hardened T-51
+	/datum/outfit/loadout/hpheavy, //Gauss Pistol + Hardened T-51
 	/datum/outfit/loadout/hpgat		//Gatling + Hardened T-51
 	)
 
@@ -208,12 +208,10 @@ Head Paladin
 	)
 
 /datum/outfit/loadout/hpheavy
-	name = "Heavy Head Paladin"
+	name = "Gunslinger Head Paladin"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/sniper = 1,
-		/obj/item/ammo_box/magazine/w308 = 2,
-		/obj/item/gun/energy/laser/plasma/glock = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/ballistic/automatic/pistol/ppk12 = 1,
+		/obj/item/ammo_box/magazine/m2mm/pistol = 2
 	)
 
 /datum/outfit/loadout/hpgat
