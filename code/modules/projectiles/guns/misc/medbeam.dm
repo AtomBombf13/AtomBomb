@@ -4,6 +4,8 @@
 	icon = 'icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	item_state = "chronogun"
+	icon_prefix = "chronogun"
+	wielded_icon = "chronogun"
 	w_class = WEIGHT_CLASS_NORMAL
 
 	var/mob/living/current_target
