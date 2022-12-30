@@ -314,7 +314,7 @@
 #define ARMOR_VALUE_SALVAGE list(\
 		"melee" = 45, \
 		"bullet" = 45, \
-		"laser" = 45, \
+		"laser" = 25, \
 		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 80, \
