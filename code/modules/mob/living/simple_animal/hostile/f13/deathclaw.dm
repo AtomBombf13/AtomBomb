@@ -24,7 +24,7 @@
 	a_intent = INTENT_HARM //So we can not move past them.
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	robust_searching = TRUE
-	stat_attack = 1
+	stat_attack = 2
 	speak = list("ROAR!","Rawr!","GRRAAGH!","Growl!")
 	speak_emote = list("growls", "roars")
 	emote_hear = list("grumbles.","grawls.")

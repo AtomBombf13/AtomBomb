@@ -33,7 +33,7 @@
 	attack_verb_simple = "whipped"
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 20
-	stat_attack = 1
+	stat_attack = 2
 	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("hostile", "supermutant")
 	guaranteed_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/centaur = 3,
@@ -84,6 +84,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	robust_searching = TRUE
+	stat_attack = 2
 	attack_verb_simple = "eviscerates"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	speak_emote = list("screams", "clicks", "chitters", "barks", "moans", "growls", "meows", "reverberates", "roars", "squeaks", "rattles", "exclaims", "yells", "remarks", "mumbles", "jabbers", "stutters", "seethes")
@@ -142,6 +143,7 @@
 	speed = -0.5
 	maxHealth = 700
 	health = 700
+	stat_attack = 2
 	harm_intent_damage = 8
 	melee_damage_lower = 50
 	melee_damage_upper = 50

@@ -21,7 +21,7 @@
 	robust_searching = TRUE
 	maxHealth = 120
 	health = 120
-	stat_attack = 1
+	stat_attack = 2
 	blood_volume = 0
 	del_on_death = TRUE
 	healable = FALSE
