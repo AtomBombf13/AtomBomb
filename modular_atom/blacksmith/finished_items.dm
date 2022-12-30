@@ -421,38 +421,23 @@
 //								//
 //////////////////////////////////
 
-// ------------ WAKIZASHI ------------ // [Parry]
+// ------------ WAKIZASHI ------------ // 
 /obj/item/melee/smith/wakizashi
 	name = "wakizashi"
 	icon_state = "waki_smith"
 	overlay_state = "hilt_waki"
 	force = (FORCE_SMITH_HIGH-2)
 	block_chance = 5
-	block_parry_data = /datum/block_parry_data/waki
 	sharpness = SHARP_EDGED
 	item_flags = ITEM_CAN_PARRY
 	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
-
-/datum/block_parry_data/waki
-	parry_stamina_cost = 8
-	parry_time_windup = 0
-	parry_time_active = 15
-	parry_time_spindown = 0
-	parry_time_perfect = 2
-	parry_time_perfect_leeway = 0.75
-	parry_imperfect_falloff_percent = 7.5
-	parry_efficiency_to_counterattack = 100
-	parry_efficiency_considered_successful = 80
-	parry_efficiency_perfect = 120
-	parry_failed_stagger_duration = 2 SECONDS
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1.9)
 
 /obj/item/melee/smith/wakizashi/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 110, 70) //decent in a pinch, but pretty bad.
 
 
-// ------------ SCRAP SAW ------------ // [Parry, stack damage experimental]
+// ------------ SCRAP SAW ------------ // 
 /obj/item/melee/smith/wakizashi/scrapsaw
 	name = "scrap saw"
 	icon_state = "saw_smith"
@@ -507,7 +492,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ SWORD ------------ // [AP 0.1 Parry]
+// ------------ SWORD ------------ // [AP 0.1]
 /obj/item/melee/smith/sword
 	name = "sword"
 	icon_state = "sword_smith"
@@ -516,23 +501,9 @@
 	force = FORCE_SMITH_HIGH
 	armour_penetration = PIERCING_MINOR
 	wound_bonus = WOUNDING_BONUS_BIG
-	item_flags = ITEM_CAN_PARRY
 	block_chance = 10
-	block_parry_data = /datum/block_parry_data/sword
 	w_class = WEIGHT_CLASS_BULKY
 	sharpness = SHARP_EDGED
-
-/datum/block_parry_data/sword
-	parry_stamina_cost = 12
-	parry_time_windup = 0.5
-	parry_time_active = 4
-	parry_time_spindown = 1
-	parry_time_perfect = 0.75
-	parry_time_perfect_leeway = 0.75
-	parry_imperfect_falloff_percent = 30
-	parry_efficiency_perfect = 100
-	parry_failed_stagger_duration = 3 SECONDS
-	parry_failed_clickcd_duration = 2 SECONDS
 
 /obj/item/melee/smith/sword/ComponentInitialize()
 	. = ..()
@@ -549,7 +520,7 @@
 	block_chance = 14
 
 
-// ------------ SABRE ------------ // [AP 0.1 Parry]
+// ------------ SABRE ------------ // [AP 0.1]
 /obj/item/melee/smith/sword/sabre
 	name = "sabre"
 	icon_state = "sabre_smith"
@@ -557,24 +528,6 @@
 	overlay_state = "hilt_sabre"
 	force = (FORCE_SMITH_HIGH-1)
 	block_chance = 18
-	block_parry_data = /datum/block_parry_data/smithsaber
-
-/datum/block_parry_data/smithsaber
-	parry_stamina_cost = 10
-	parry_time_active = 8
-	parry_time_perfect = 2
-	parry_time_perfect_leeway = 2
-	parry_failed_stagger_duration = 3 SECONDS
-	parry_failed_clickcd_duration = 3 SECONDS
-	parry_time_windup = 0
-	parry_time_spindown = 0
-	parry_imperfect_falloff_percent = 0
-	parry_efficiency_to_counterattack = 100
-	parry_efficiency_considered_successful = 100
-	parry_efficiency_perfect = 120
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
-
-
 
 //////////////////////////////////
 //								//
@@ -582,7 +535,7 @@
 //								//
 //////////////////////////////////
 
-// ------------ KATANA ------------ // [AP 0.2 Parry]
+// ------------ KATANA ------------ // [AP 0.2]
 /obj/item/twohanded/smithed/katana
 	name = "katana"
 	icon_state = "katana_smith"
@@ -594,26 +547,9 @@
 	throwforce = THROWING_POOR
 	wound_bonus = WOUNDING_BONUS_BIG
 	wielded_mult = 1.25
-	item_flags = ITEM_CAN_PARRY
 	block_chance = 15
-	block_parry_data = /datum/block_parry_data/smithkatana
 	slot_flags = ITEM_SLOT_BELT
 	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
-
-/datum/block_parry_data/smithkatana
-	parry_stamina_cost = 10
-	parry_time_active = 6
-	parry_time_perfect = 3
-	parry_time_perfect_leeway = 3
-	parry_failed_stagger_duration = 3 SECONDS
-	parry_failed_clickcd_duration = 3 SECONDS
-	parry_time_windup = 0
-	parry_time_spindown = 0
-	parry_imperfect_falloff_percent = 0
-	parry_efficiency_to_counterattack = 100
-	parry_efficiency_considered_successful = 120
-	parry_efficiency_perfect = 120
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
 
 /obj/item/twohanded/smithed/katana/ComponentInitialize()
 	. = ..()
@@ -621,7 +557,7 @@
 	AddElement(/datum/element/sword_point)
 
 
-// ------------ LONGSWORD ------------ // [AP 0.2 Parry]
+// ------------ LONGSWORD ------------ // [AP 0.2]
 /obj/item/twohanded/smithed/katana/longsword
 	name = "longsword"
 	icon_state = "longsword_smith"
@@ -630,7 +566,7 @@
 	overlay_state = "hilt_longsword"
 
 
-// ------------ SCRAP BLADE ------------ // [AP 0.2 Parry]
+// ------------ SCRAP BLADE ------------ // [AP 0.2]
 /obj/item/twohanded/smithed/katana/scrapblade
 	name = "scrap blade"
 	icon_state = "scrap_smith"
