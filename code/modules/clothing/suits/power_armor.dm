@@ -292,20 +292,22 @@
 			var/mob/living/L = loc
 			var/induced_slowdown = 0
 			if(severity >= 41) //heavy emp
-				induced_slowdown = 4
+				induced_slowdown = 16
 				to_chat(L, span_boldwarning("Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems."))
 			else
-				induced_slowdown = 2
+				induced_slowdown = 8
 				to_chat(L, span_warning("Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems."))
+			armor = armor.modifyRating(melee = -40, bullet = -40, laser = -25, energy = -25)
 			emped = TRUE
 			slowdown += induced_slowdown
 			L.update_equipment_speed_mods()
-			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), 50)
+			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), 100) // this used to last a minute on BD
 	return
 
 /obj/item/clothing/suit/armor/power_armor/proc/end_emp_effect(slowdown_induced)
 	emped = FALSE
 	slowdown -= slowdown_induced // Even if armor is dropped it'll fix slowdown
+	armor = armor.modifyRating(melee = 40, bullet = 40, laser = 25, energy = 25)
 	if(isliving(loc))
 		var/mob/living/L = loc
 		to_chat(L, span_warning("Armor power reroute successful. All systems operational."))
