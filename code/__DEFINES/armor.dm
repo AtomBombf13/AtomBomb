@@ -325,9 +325,9 @@
 		"damage_threshold" = 16)
 
 #define ARMOR_VALUE_PA list(\
-		"melee" = 50, \
-		"bullet" = 50, \
-		"laser" = 50, \
+		"melee" = 80, \
+		"bullet" = 70, \
+		"laser" = 30, \
 		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 100, \
