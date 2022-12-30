@@ -205,7 +205,8 @@ Access
 		/obj/item/megaphone = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
 		/obj/item/lighter = 1,
-		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 1
+		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 1,
+		/obj/item/melee/onehanded/knife/trench = 1
 		)
 
 /datum/outfit/loadout/captainbackline
@@ -215,8 +216,7 @@ Access
 		/obj/item/ammo_box/magazine/garand308 = 2,
 		/obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 3,
-		/obj/item/storage/box/ration/menu_two = 1,
-		/obj/item/melee/onehanded/knife/trench = 1
+		/obj/item/storage/box/ration/menu_two = 1
 		)
 
 /datum/outfit/loadout/captainfrontline
@@ -254,7 +254,7 @@ Access
 		),
 	)
 
-/datum/outfit/job/ncr/f13lieutenant		// Infiltrator, Binoculars, Bayonet, M1911 custom
+/datum/outfit/job/ncr/f13lieutenant		// Infiltrator, Binoculars, Bowie Knife, M1911 custom
 	name = "NCR Lieutenant"
 	jobtype	= /datum/job/ncr/f13lieutenant
 	id = /obj/item/card/id/dogtag/ncrlieutenant
@@ -272,7 +272,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 3,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
@@ -723,7 +723,7 @@ Access
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/r84 = 1,
 		/obj/item/ammo_box/magazine/lmg = 1,
-		/obj/item/melee/onehanded/knife/bayonet = 1
+		/obj/item/melee/onehanded/knife/bowie = 1
 		)
 
 
@@ -982,7 +982,7 @@ Access
 	head = /obj/item/clothing/head/f13/ncr/storm
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/shovel/trench = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
 		)
@@ -1003,7 +1003,6 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/storage/box/ration/menu_one = 1,
-		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 6
 		)
 
@@ -1066,7 +1065,8 @@ Access
 	glasses	= null
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/shovel/trench = 1
 		)
 
 /datum/outfit/loadout/trooperrifleman
@@ -1083,7 +1083,6 @@ Access
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/storage/box/ration/menu_eight = 1
 		)
@@ -1093,7 +1092,6 @@ Access
 	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/stripper/a308 = 2,
-		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 7,
 		/obj/item/storage/box/ration/menu_eight = 1
 		)
