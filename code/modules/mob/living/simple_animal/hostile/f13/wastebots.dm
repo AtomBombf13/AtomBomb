@@ -67,6 +67,7 @@
 	maxHealth = 140
 	melee_damage_lower = 20
 	melee_damage_upper = 72
+	stat_attack = 1
 	attack_sound = 'sound/items/welder.ogg'
 	attack_verb_simple = "shoots a burst of flame at"
 	projectilesound = 'sound/weapons/laser.ogg'
@@ -340,6 +341,7 @@
 	health = 160
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	maxHealth = 160
+	stat_attack = 1
 	speed = 0
 	melee_damage_lower = 25
 	melee_damage_upper = 60

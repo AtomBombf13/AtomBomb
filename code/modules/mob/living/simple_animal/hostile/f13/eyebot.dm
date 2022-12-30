@@ -130,5 +130,6 @@
 	auto_fire_delay = MOB_AUTOFIRE_DELAY_SLOWER
 	melee_damage_lower = 5
 	melee_damage_upper = 10
+	stat_attack = 1
 	minimum_distance = 4
 	retreat_distance = 6

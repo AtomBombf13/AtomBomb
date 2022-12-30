@@ -21,6 +21,7 @@
 	robust_searching = TRUE
 	maxHealth = 120
 	health = 120
+	stat_attack = 1
 	blood_volume = 0
 	del_on_death = TRUE
 	healable = FALSE
@@ -127,11 +128,11 @@
 	health = 400 //13~ hits of 5.56
 	maxHealth = 400
 	del_on_death = FALSE
-	melee_damage_lower = 28
+	melee_damage_lower = 40
 	melee_damage_upper = 65
 	extra_projectiles = 4 //5 projectiles
 	ranged_cooldown_time = 12 //brrrrrrrrrrrrt
-	retreat_distance = 0
+	retreat_distance = 2
 	minimum_distance = 2
 	attack_verb_simple = "pulverizes"
 	attack_sound = 'sound/weapons/punch1.ogg'

@@ -166,6 +166,7 @@
 	harm_intent_damage = 8
 	melee_damage_lower = 25
 	melee_damage_upper = 35
+	stat_attack = 1
 	mob_size = 5
 	wound_bonus = 0
 	bare_wound_bonus = 0
