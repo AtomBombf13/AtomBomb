@@ -276,12 +276,15 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
+							"NCR Off-Duty"
 						)
 
 /datum/gear/head/ncr_fieldcap
@@ -292,11 +295,13 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
 							"NCR Off-Duty"
 						)
@@ -309,11 +314,13 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
 							"NCR Off-Duty"
 						)						
@@ -326,12 +333,15 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
+							"NCR Off-Duty"
 						)
 
 /datum/gear/head/ncr_campaignhat
@@ -340,7 +350,9 @@
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 2
 	restricted_desc = "NCR"
-	restricted_roles = list("NCR Heavy Trooper",
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Military Police"
 						)
@@ -363,12 +375,11 @@
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 3
 	restricted_desc = "Eastwood PD, Eastwood officials"
-	restricted_roles = list("Chief of Police",
+	restricted_roles = list("Provost Marshal",
 							"Deputy Marshal",
 							"Mayor",
 							"Detective",
-							"Secretary",
-							"Shopkeeper"
+							"Merchant"
 						)
 
 /// Khan
