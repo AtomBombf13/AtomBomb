@@ -409,10 +409,10 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_HANDLOAD_MULT 0.75 // trash ammo you can make anywhere with a reloader tool, most common
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_BASE 1 // Base spread added from 'quality' ammo
+#define BULLET_SPREAD_BASE 1.5 // Base spread added from 'quality' ammo
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_MATCH 0 // No extra spread~
+#define BULLET_SPREAD_MATCH 0 // No extra spread
 #define BULLET_SPREAD_SURPLUS (BULLET_SPREAD_BASE * 1.5) // slightly worse spread from wasteland ammo
 #define BULLET_SPREAD_HANDLOAD (BULLET_SPREAD_BASE * 3) // much worse spread from junk ammo!
 
