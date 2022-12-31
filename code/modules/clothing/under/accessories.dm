@@ -339,14 +339,12 @@
 	name = "bone talisman"
 	desc = "A hunter's talisman, some say the old gods smile on those who wear it."
 	icon_state = "talisman"
-	armor = list("linemelee" = 1, "linebullet" = 1, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 5, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/accessory/skullcodpiece
 	name = "skull codpiece"
 	desc = "A skull shaped ornament, intended to protect the important things in life."
 	icon_state = "skull"
 	above_suit = TRUE
-	armor = list("linemelee" = 1, "linebullet" = 1, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 5, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/accessory/skullcodpiece/fake
 	name = "false codpiece"
@@ -425,11 +423,11 @@
 	item_color = "juniorpaladin"
 	minimize_when_attached = TRUE
 
-/obj/item/clothing/accessory/bos/knightcaptain
-	name = "Knight-Captain pins"
-	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Knight-Captain."
-	icon_state = "knight-captain"
-	item_color = "knight-captain"
+/obj/item/clothing/accessory/bos/headknight
+	name = "Head Knight pins"
+	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Head Knight."
+	icon_state = "headcaptain"
+	item_color = "headcaptain"
 	minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/seniorscribe
@@ -484,8 +482,8 @@
 /obj/item/clothing/accessory/bos/headpaladin
 	name = "Head Paladin pins"
 	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on purple-cloth. Worn by the Head Paladin."
-	icon_state = "sentinel"
-	item_color = "sentinel"
+	icon_state = "headpaladin"
+	item_color = "headpaladin"
 	minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/elder
