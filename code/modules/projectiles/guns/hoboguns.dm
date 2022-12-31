@@ -98,7 +98,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	init_recoil = HANDGUN_RECOIL(2.1)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_PISTOL
 	)
 
 	fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -118,7 +118,7 @@
 
 /obj/item/gun/ballistic/revolver/hobo/piperifle
 	name = "pipe rifle"
-	desc = "A rusty piece of pipe used to fire .223 and 5,56mm ammo."
+	desc = "A rusty piece of pipe used to fire 10mm ammo."
 	icon_state = "piperifle"
 	item_state = "pepperbox"
 	w_class = WEIGHT_CLASS_BULKY
@@ -131,7 +131,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	init_recoil = RIFLE_RECOIL(3)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 	fire_sound = 'sound/weapons/Gunshot.ogg'
@@ -353,7 +353,7 @@
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 
@@ -363,7 +363,7 @@
 	desc = "The cooling looks dubious and is that a empty can of beans used as a safety valve? Pray the plasma goes towards the enemy and not your face when you pull the trigger."
 	icon_state = "plasmamusket"
 	item_state = "plasmamusket"
-	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
+	mag_type = /obj/item/ammo_box/magazine/internal/plasmaghetto
 	var/bolt_open = FALSE
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"
@@ -374,7 +374,7 @@
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 /* * * * * * * * * * *
@@ -404,7 +404,7 @@
 	scope_y_offset = 14
 	init_recoil = CARBINE_RECOIL(2.3)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_PISTOL
 	)
 
 
@@ -427,7 +427,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_recoil = HANDGUN_RECOIL(4)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_RIFLE
 	)
 
 	can_scope = FALSE
@@ -452,7 +452,7 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_recoil = RIFLE_RECOIL(2.3)
 	init_firemodes = list(
-		SEMI_AUTO_SNIPER
+		SEMI_AUTO_PISTOL
 	)
 
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
@@ -474,55 +474,3 @@
 		icon_state = "[initial(icon_state)]-e"
 	else
 		icon_state = "[initial(icon_state)]"
-
-/obj/item/gun/ballistic/rifle/hobo/hobomat
-	name = "heavy pipe rifle"
-	desc = "A beast of a weapon made from thick metal piping and a deathwish. Chambered in .50 MG, this unwieldy cannon relies on a rack and pinion mechanism to actuate the bolt. The gear is attached to a valve head far too stiff to be turned by hand, the unlucky sod to wield this weapon must use a wrench to rack the bolt."
-	icon = 'icons/fallout/objects/guns/longguns.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "hobomat"
-	item_state = "hobomat"
-	inhand_x_dimension = 32
-	inhand_y_dimension = 32
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hobomat
-	canpump = 0 //(weak baby man can't work the bolt with his hands, use a wrench to cycle the bolt)
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = HMG_RECOIL(3)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	init_firemodes = list(
-		SEMI_AUTO_SNIPER
-	)
-
-	can_bayonet = FALSE
-	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
-	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
-
-/obj/item/gun/ballistic/rifle/hobo/hobomat/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
-	if(prob(1))
-		playsound(user, fire_sound, 50, 1)
-		to_chat(user, span_userdanger("[src] misfires, detonating the round in the barrel prematurely!"))
-		user.take_bodypart_damage(0,20)
-		user.dropItemToGround(src)
-		return FALSE
-	..()
-
-/obj/item/gun/ballistic/rifle/hobo/hobomat/attackby(obj/item/A, mob/user, params)
-	..()
-	if(istype(A, /obj/item/wrench))
-		if(do_after(user, 20, target = src))
-			pump(user, TRUE)
-
-/obj/item/gun/ballistic/rifle/hobo/hobomat/update_icon_state()
-	if(chambered)
-		icon_state = "[initial(icon_state)]"
-	else if(magazine.ammo_count()==0)
-		icon_state = "[initial(icon_state)]-e"
-	else
-		icon_state = "[initial(icon_state)]-e2"
