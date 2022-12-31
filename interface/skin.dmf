@@ -132,6 +132,15 @@ window "infowindow"
 		left = "statwindow"
 		right = "outputwindow"
 		is-vert = false
+	elem "button_codex"
+		type = BUTTON
+		pos = 20,5
+		size = 100x20
+		anchor1 = 2,0
+		anchor2 = 18,0
+		saved-params = "is-checked"
+		text = "Codex"
+		command = "codex"
 	elem "rules"
 		type = BUTTON
 		pos = 120,5

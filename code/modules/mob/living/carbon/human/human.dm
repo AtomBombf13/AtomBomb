@@ -1093,7 +1093,7 @@
 	return ..()
 
 /mob/living/carbon/human/species
-	var/race = null
+	var/datum/species/race = null
 
 /mob/living/carbon/human/species/Initialize()
 	. = ..()
