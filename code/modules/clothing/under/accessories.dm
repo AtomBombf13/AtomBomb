@@ -425,11 +425,11 @@
 	item_color = "juniorpaladin"
 	minimize_when_attached = TRUE
 
-/obj/item/clothing/accessory/bos/knightcaptain
-	name = "Knight-Captain pins"
-	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Knight-Captain."
-	icon_state = "knight-captain"
-	item_color = "knight-captain"
+/obj/item/clothing/accessory/bos/headknight
+	name = "Head Knight pins"
+	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on blue-cloth. Worn by the Head Knight."
+	icon_state = "headcaptain"
+	item_color = "headcaptain"
 	minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/seniorscribe
@@ -484,8 +484,8 @@
 /obj/item/clothing/accessory/bos/headpaladin
 	name = "Head Paladin pins"
 	desc = "A gold-plated, silver lined pin with one device and two outstretched wings on the side; a golden sword centered on purple-cloth. Worn by the Head Paladin."
-	icon_state = "sentinel"
-	item_color = "sentinel"
+	icon_state = "headpaladin"
+	item_color = "headpaladin"
 	minimize_when_attached = TRUE
 
 /obj/item/clothing/accessory/bos/elder
