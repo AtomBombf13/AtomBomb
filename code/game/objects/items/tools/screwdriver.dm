@@ -167,7 +167,7 @@
 	desc = "A piece of junk metal sharpened to a point, worthwile as a shiv or crude turning device."
 	icon_state = "crudescrew"
 	item_state = "crudescrew"
-	toolspeed = 6
+	toolspeed = 2
 	random_color = FALSE
 
 /obj/item/screwdriver/basic
@@ -175,7 +175,7 @@
 	desc = "A refined tip of a jerry-rigged screwdriver, pretty accurate."
 	icon_state = "basicscrew"
 	item_state = "basicscrew"
-	toolspeed = 2
+	toolspeed = 1.1
 	random_color = FALSE
 
 /obj/item/screwdriver/hightech

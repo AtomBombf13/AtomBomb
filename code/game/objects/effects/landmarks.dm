@@ -658,7 +658,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Paladin"
 
 /obj/effect/landmark/start/f13/knightcap
-	name = "Knight-Captain"
+	name = "Head Knight"
 	icon_state = "Knight"
 
 /obj/effect/landmark/start/f13/seniorknight
@@ -743,6 +743,9 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/settler
 	name = "Citizen"
 	icon_state = "Settler"
+
+/obj/effect/landmark/start/f13/towncmo
+	name = "Director"
 
 /obj/effect/landmark/start/f13/dendoc
 	name = "Town Doctor"

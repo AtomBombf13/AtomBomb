@@ -53,7 +53,7 @@
 								/obj/item/export/bottle/trappist = 10,
 								/obj/item/export/bottle/minikeg = 10,
 								/obj/item/export/bottle/nukashine = 10,
-								/obj/item/export/bottle/patron = 35,
+								/obj/item/export/bottle/patron = 15,
 								/obj/item/export/bottle/goldschlager = 45,
 								)
 
@@ -358,7 +358,7 @@ Fence CURRENTLY NOT USED!  Its some sort of pun joke vendor. Commented out so ma
 								/obj/item/clothing/accessory/bos/paladin = 30,
 								/obj/item/clothing/accessory/bos/seniorpaladin = 45,
 								/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain = 75,
-								/obj/item/clothing/accessory/bos/knightcaptain = 60,
+								/obj/item/clothing/accessory/bos/headknight = 60,
 								/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain = 75,
 								/obj/item/clothing/accessory/bos/headscribe = 60,
 								/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe = 75,

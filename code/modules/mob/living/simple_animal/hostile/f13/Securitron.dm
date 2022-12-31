@@ -21,6 +21,7 @@
 	robust_searching = TRUE
 	maxHealth = 120
 	health = 120
+	stat_attack = 2
 	blood_volume = 0
 	del_on_death = TRUE
 	healable = FALSE
@@ -34,6 +35,7 @@
 	minimum_distance = 1
 	retreat_distance = 4
 	extra_projectiles = 2
+	auto_fire_delay = MOB_AUTOFIRE_DELAY_SLOW
 	ranged_ignores_vision = TRUE
 	attack_verb_simple = "punches"
 	attack_sound = "punch"
@@ -123,10 +125,10 @@
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot_dead"
-	health = 251 //11 hits of .223
-	maxHealth = 251
+	health = 400 //13~ hits of 5.56
+	maxHealth = 400
 	del_on_death = FALSE
-	melee_damage_lower = 28
+	melee_damage_lower = 40
 	melee_damage_upper = 65
 	extra_projectiles = 4 //5 projectiles
 	ranged_cooldown_time = 12 //brrrrrrrrrrrrt
@@ -135,7 +137,7 @@
 	attack_verb_simple = "pulverizes"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak
+	projectiletype = /obj/item/projectile/beam/weak
 	emote_taunt_sound = list('sound/f13npc/sentry/taunt1.ogg', 'sound/f13npc/sentry/taunt2.ogg', 'sound/f13npc/sentry/taunt3.ogg', 'sound/f13npc/sentry/taunt4.ogg', 'sound/f13npc/sentry/taunt5.ogg', 'sound/f13npc/sentry/taunt6.ogg')
 	emote_taunt = list("spins its barrels")
 	aggrosound = list('sound/f13npc/sentry/aggro1.ogg', 'sound/f13npc/sentry/aggro2.ogg', 'sound/f13npc/sentry/aggro3.ogg', 'sound/f13npc/sentry/aggro4.ogg', 'sound/f13npc/sentry/aggro5.ogg')

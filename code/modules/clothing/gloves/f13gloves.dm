@@ -82,6 +82,10 @@
 /obj/item/clothing/gloves/f13/crudemedical
 	name = "crude medical gloves"
 	desc = "Cotton gloves waxed to prevent the blood from soaking through immediatly. Better than nothing."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
 	icon_state = "offwhite"
 	item_state = "offwhite"
 	siemens_coefficient = 0.5

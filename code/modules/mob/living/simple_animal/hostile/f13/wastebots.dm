@@ -20,6 +20,7 @@
 	maxHealth = 104
 	healable = FALSE
 	stat_attack = CONSCIOUS
+	auto_fire_delay = MOB_AUTOFIRE_DELAY_SLOWER
 	melee_damage_lower = 14
 	melee_damage_upper = 28
 	robust_searching = TRUE
@@ -66,6 +67,7 @@
 	maxHealth = 140
 	melee_damage_lower = 20
 	melee_damage_upper = 72
+	stat_attack = 2
 	attack_sound = 'sound/items/welder.ogg'
 	attack_verb_simple = "shoots a burst of flame at"
 	projectilesound = 'sound/weapons/laser.ogg'
@@ -210,10 +212,10 @@
 	icon_dead = "protectron_dead"
 	health = 104
 	maxHealth = 104
-	speed = 4
+	speed = 3 // these things are supposed to be super slow???
 	melee_damage_lower = 5 //severely reduced melee damage here because its silly to have a ranged mob also be a cqc master
 	melee_damage_upper = 10
-	extra_projectiles = 0 //removed extra projectiles to make these easier to deal with on super lowpop
+	extra_projectiles = 1 //30 damage if all projectiles hit
 	stat_attack = CONSCIOUS
 	ranged = TRUE
 	retreat_distance = 2
@@ -221,7 +223,7 @@
 	attack_verb_simple = "slaps"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	loot = list(
@@ -339,6 +341,7 @@
 	health = 160
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	maxHealth = 160
+	stat_attack = 2
 	speed = 0
 	melee_damage_lower = 25
 	melee_damage_upper = 60

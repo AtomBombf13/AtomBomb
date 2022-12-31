@@ -61,6 +61,8 @@
 	. = ..()
 
 /obj/machinery/vending/cola/sunset_sarsaparilla
+	name = "\improper Sunset Sarsparilla Vending Machine"
+	desc = "The Wests most Popular Soda Drink Vending Machine!"
 	icon = 'icons/WVM/new_vendors.dmi'
 	icon_state = "sunset_vending"
 	contraband = list(/obj/item/reagent_containers/food/drinks/bottle/sunset = 1)

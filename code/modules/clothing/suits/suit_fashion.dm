@@ -172,6 +172,14 @@
 	item_state = "draculacoat"
 	body_parts_covered = CHEST|ARMS
 
+/obj/item/clothing/suit/schlimmcoat
+	name = "red coat"
+	desc = "Nice coat."
+	icon_state = "schlimmcoat"
+	item_state = "schlimmcoat"
+	body_parts_covered = CHEST|ARMS
+
+
 /obj/item/clothing/suit/drfreeze_coat
 	name = "doctor freeze's labcoat"
 	desc = "A labcoat imbued with the power of features and freezes."

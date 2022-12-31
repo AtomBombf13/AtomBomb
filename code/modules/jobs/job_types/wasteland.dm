@@ -59,7 +59,8 @@ Raider
 	/datum/outfit/loadout/raider_painspike,	//Shotgunner build, goon out
 	/datum/outfit/loadout/quack_doctor,		//Raider doctor or doctor for raiders doesn't really matter how you call this
 	/datum/outfit/loadout/raider_smith,		//Raider smith or smith for raiders same thing as doctor, has arclight armor
-	/datum/outfit/loadout/raider_tribal		//Tribal raider, bone spear some bad armor and tradition, el classico
+	/datum/outfit/loadout/raider_tribal,	//Tribal raider, bone spear some bad armor and tradition, el classico
+	/datum/outfit/loadout/chinese_remnant   //ex chinese
 	)
 
 
@@ -109,13 +110,6 @@ Raider
 
 	shoes = (/obj/item/clothing/shoes/f13/raidertreads)
 
-	suit_store = pick(
-		/obj/item/gun/ballistic/revolver/detective, \
-		/obj/item/gun/ballistic/automatic/pistol/ninemil,\
-		/obj/item/gun/ballistic/automatic/pistol/m1911, \
-		/obj/item/gun/ballistic/automatic/pistol/type17, \
-		)
-
 /datum/outfit/job/wasteland/f13raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -138,7 +132,8 @@ Raider
 		/obj/item/ammo_box/magazine/m556/rifle = 1,
 		/obj/item/reagent_containers/hypospray/medipen/psycho = 3,
 		/obj/item/reagent_containers/pill/patch/turbo = 2,
-		/obj/item/reagent_containers/hypospray/medipen/medx = 1)
+		/obj/item/reagent_containers/hypospray/medipen/medx = 1
+		)
 
 /datum/outfit/loadout/raider_sadist
 	name = "Sadist"
@@ -151,7 +146,8 @@ Raider
 		/obj/item/restraints/legcuffs/bola/tactical = 2,
 		/obj/item/restraints/legcuffs/beartrap = 2,
 		/obj/item/reverse_bear_trap = 1,
-		/obj/item/book/granter/trait/trekking = 1)
+		/obj/item/book/granter/trait/trekking = 1
+		)
 
 /datum/outfit/loadout/raider_supafly
 	name = "Supa-fly"
@@ -176,7 +172,8 @@ Raider
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
 		/obj/item/grenade/f13/anarchist/dynamite = 2, //What is more american than blowing stuff up
 		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/storage/pill_bottle/chem_tin/buffout = 1)
+		/obj/item/storage/pill_bottle/chem_tin/buffout = 1
+		)
 
 /datum/outfit/loadout/raider_blast
 	name = "Blastmaster"
@@ -201,7 +198,7 @@ Raider
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/bean = 1,
 		/obj/item/melee/onehanded/club/fryingpan = 1,
-		/obj/item/grenade/chem_grenade/cleaner = 1,
+		/obj/item/grenade/chem_grenade/cleaner = 1
 		)
 
 /datum/outfit/loadout/quack_doctor
@@ -211,14 +208,14 @@ Raider
 	r_hand = /obj/item/book/granter/trait/midsurgery
 	suit_store = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec=1,
+		/obj/item/stock_parts/cell/ammo/ec = 1,
 		/obj/item/reagent_containers/pill/patch/jet = 3,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/storage/pill_bottle/aranesp = 1,
 		/obj/item/storage/pill_bottle/happy = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
-		/obj/item/stack/sheet/mineral/silver=2,
-		/obj/item/clothing/accessory/pocketprotector/full = 1,
+		/obj/item/stack/sheet/mineral/silver = 2,
+		/obj/item/clothing/accessory/pocketprotector/full = 1
 		)
 
 /datum/outfit/loadout/raider_smith
@@ -234,7 +231,7 @@ Raider
 		/obj/item/melee/smith/hammer = 1,
 		/obj/item/stack/sheet/mineral/sandstone = 50,
 		/obj/item/book/granter/trait/techno = 1,
-		/obj/item/book/granter/crafting_recipe/scav_one = 1,
+		/obj/item/book/granter/crafting_recipe/scav_one = 1
 		)
 
 /datum/outfit/loadout/raider_tribal
@@ -253,6 +250,15 @@ Raider
 		/obj/item/melee/onehanded/knife/bone = 1,
 		/obj/item/book/granter/trait/bigleagues = 1
 		)
+
+/datum/outfit/loadout/chinese_remnant
+	name = "Chinese Remnant"
+	uniform = /obj/item/clothing/under/f13/chinese
+	suit = /obj/item/clothing/suit/armor/medium/vest/chinese
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/type17
+	shoes = /obj/item/clothing/shoes/f13/explorer
+	back = /obj/item/storage/backpack/satchel/explorer
+	gloves = /obj/item/clothing/gloves/color/brown
 
 /*
 Wastelander
@@ -294,14 +300,14 @@ Wastelander
 		),
 	)
 	loadout_options = list(
-	/datum/outfit/loadout/vault_refugee,
 	/datum/outfit/loadout/salvager,
-	/datum/outfit/loadout/medic,
-	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/settler,
-	/datum/outfit/loadout/warrior,
+	/datum/outfit/loadout/medic,
+	/datum/outfit/loadout/merchant,
 	/datum/outfit/loadout/gambler,
+	/datum/outfit/loadout/vault_refugee,
+	/datum/outfit/loadout/warrior,
 	/datum/outfit/loadout/vaquero,
 	/datum/outfit/loadout/hobo,
 	/datum/outfit/loadout/hombre,
@@ -310,7 +316,9 @@ Wastelander
 	/datum/outfit/loadout/eidolon,
 	/datum/outfit/loadout/aviator,
 	/datum/outfit/loadout/trapper,
-	/datum/outfit/loadout/trouper)
+	/datum/outfit/loadout/trouper,
+	/datum/outfit/loadout/legioncivilian,
+	/datum/outfit/loadout/ncrcitizen)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -351,7 +359,10 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/blacksmith_mittens
 	head = /obj/item/clothing/glasses/welding
 	r_hand = /obj/item/weldingtool/largetank
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/pistol45 = 2,)
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1, 
+		/obj/item/ammo_box/magazine/pistol45 = 2
+		)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"
@@ -359,10 +370,13 @@ Wastelander
 	r_hand = /obj/item/storage/backpack/duffelbag/scavengers
 	l_hand = /obj/item/pickaxe/drill
 	belt = /obj/item/storage/belt/fannypack
-	backpack_contents = list(/obj/item/mining_scanner=1,
-							/obj/item/metaldetector=1,
-							/obj/item/shovel=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911=1, /obj/item/ammo_box/magazine/pistol45 = 2,)
+	backpack_contents = list(
+		/obj/item/mining_scanner = 1,
+		/obj/item/metaldetector = 1,
+		/obj/item/shovel = 1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1, 
+		/obj/item/ammo_box/magazine/pistol45 = 2
+		)
 
 /datum/outfit/loadout/settler
 	name = "Settler"
@@ -381,7 +395,7 @@ Wastelander
 		/obj/item/seeds/tomato=1,
 		/obj/item/seeds/wheat=1,
 		/obj/item/reagent_containers/glass/bucket = 1,
-		/obj/item/storage/bag/plants/portaseeder = 1,
+		/obj/item/storage/bag/plants/portaseeder = 1
 		)
 
 /datum/outfit/loadout/medic
@@ -392,14 +406,15 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/color/latex
 	neck = /obj/item/clothing/neck/stethoscope
 	belt = /obj/item/storage/belt/medical
-	backpack_contents =  list(/obj/item/reagent_containers/medspray/synthflesh=2,
-							/obj/item/healthanalyzer=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
-							/obj/item/reagent_containers/glass/bottle/epinephrine=2,
-							/obj/item/paper_bin=1,
-							/obj/item/folder=1,
-							/obj/item/pen/fountain=1,
-							/obj/item/storage/firstaid/ancient=1,
+	backpack_contents =  list(
+		/obj/item/reagent_containers/medspray/synthflesh = 2,
+		/obj/item/healthanalyzer = 1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
+		/obj/item/reagent_containers/glass/bottle/epinephrine = 2,
+		/obj/item/paper_bin = 1,
+		/obj/item/folder = 1,
+		/obj/item/pen/fountain = 1,
+		/obj/item/storage/firstaid/ancient = 1
 		)
 
 /datum/outfit/loadout/merchant
@@ -411,8 +426,10 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
 	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
-							/obj/item/ammo_box/shotgun/buck = 2,)
+	backpack_contents =  list(
+		/obj/item/storage/box/vendingmachine=1,
+		/obj/item/ammo_box/shotgun/buck = 2
+		)
 
 /datum/outfit/loadout/gambler
 	name = "Gambler"
@@ -421,15 +438,14 @@ Wastelander
 	head = /obj/item/clothing/head/fedora
 	l_hand = /obj/item/gun/ballistic/revolver/m29/snub
 	backpack_contents = list(
-		/obj/item/storage/fancy/cigarettes/cigars/cohiba=1,
-		/obj/item/coin/gold=1,
-		/obj/item/lighter/gold=1,
-		/obj/item/toy/cards/deck=1,
-		/obj/item/storage/box/dice=1,
-		/obj/item/stack/tile/carpet/blackred/fifty=1,
-		/obj/item/ammo_box/loader/m44=2)
-
-//end new
+		/obj/item/storage/fancy/cigarettes/cigars/cohiba = 1,
+		/obj/item/coin/gold = 1,
+		/obj/item/lighter/gold = 1,
+		/obj/item/toy/cards/deck = 1,
+		/obj/item/storage/box/dice = 1,
+		/obj/item/stack/tile/carpet/blackred/fifty = 1,
+		/obj/item/ammo_box/loader/m44 = 2
+		)
 
 /datum/outfit/loadout/vault_refugee
 	name = "Vaultie"
@@ -439,9 +455,10 @@ Wastelander
 	id = /obj/item/card/id/dogtag/vaultiecard
 	suit = /obj/item/clothing/suit/suspenders
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/n99=1,
-		/obj/item/ammo_box/magazine/pistol10mm=2,
-		/obj/item/pda=1,)
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/ammo_box/magazine/pistol10mm = 2,
+		/obj/item/pda = 1
+		)
 
 /datum/outfit/loadout/warrior
 	name = "Wasteland Warrior"
@@ -452,25 +469,8 @@ Wastelander
 	glasses = /obj/item/clothing/glasses/legiongoggles
 	l_hand = /obj/item/shield/riot/buckler/stop
 	backpack_contents = list(
-		/obj/item/melee/onehanded/machete/scrapsabre = 1,
+		/obj/item/melee/onehanded/machete/scrapsabre = 1
 		)
-
-	//ported wasteland loadouts from DR
-
-/datum/outfit/loadout/gambler
-	name = "Gambler"
-	uniform = /obj/item/clothing/under/f13/bennys
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	head = /obj/item/clothing/head/fedora
-	l_hand = /obj/item/gun/ballistic/revolver/m29/snub
-	backpack_contents = list(
-		/obj/item/storage/fancy/cigarettes/cigars/cohiba=1,
-		/obj/item/coin/gold=1,
-		/obj/item/lighter/gold=1,
-		/obj/item/toy/cards/deck=1,
-		/obj/item/storage/box/dice=1,
-		/obj/item/stack/tile/carpet/blackred/fifty=1,
-		/obj/item/ammo_box/loader/m44=2)
 
 /datum/outfit/loadout/vaquero
 	name = "Vaquero"
@@ -480,10 +480,11 @@ Wastelander
 	head = /obj/item/clothing/head/helmet/f13/vaquerohat
 	l_hand = /obj/item/ammo_box/loader/a357
 	backpack_contents = list(
-		/obj/item/gun/ballistic/revolver/colt357=2,
-		/obj/item/melee/onehanded/club/tireiron=1,
-		/obj/item/reagent_containers/food/snacks/grown/cannabis=1,
-		/obj/item/clothing/mask/cigarette/pipe/cobpipe=1)
+		/obj/item/gun/ballistic/revolver/colt357 = 2,
+		/obj/item/melee/onehanded/club/tireiron = 1,
+		/obj/item/reagent_containers/food/snacks/grown/cannabis = 1,
+		/obj/item/clothing/mask/cigarette/pipe/cobpipe = 1
+		)
 
 /datum/outfit/loadout/hobo
 	name = "Hobo"
@@ -495,10 +496,11 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	l_hand = /obj/item/melee/onehanded/club/fryingpan
 	backpack_contents = list(
-		/obj/item/storage/bag/trash=1,
-		/obj/item/picket_sign=1,
-		/obj/item/gun/ballistic/revolver/hobo/piperifle =1,
-		/obj/item/ammo_box/a556=1,)
+		/obj/item/storage/bag/trash = 1,
+		/obj/item/picket_sign = 1,
+		/obj/item/gun/ballistic/revolver/hobo/piperifle = 1,
+		/obj/item/ammo_box/a556 = 1
+		)
 
 /datum/outfit/loadout/hombre
 	name = "Hombre"
@@ -508,10 +510,11 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/f13/leather
 	l_hand = /obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
-		/obj/item/storage/fancy/rollingpapers=1,
-		/obj/item/ammo_box/loader/a357=2,
-		/obj/item/binoculars=1,
-		/obj/item/radio=1,)
+		/obj/item/storage/fancy/rollingpapers = 1,
+		/obj/item/ammo_box/loader/a357 = 2,
+		/obj/item/binoculars = 1,
+		/obj/item/radio = 1,
+		)
 
 /datum/outfit/loadout/exmil
 	name = "Ex-Military"
@@ -523,8 +526,9 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/f13/military
 	l_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/pistol9mm=2,
-		/obj/item/storage/fancy/cigarettes/dromedaryco=1,)
+		/obj/item/ammo_box/magazine/pistol9mm = 2,
+		/obj/item/storage/fancy/cigarettes/dromedaryco = 1,
+		)
 
 /datum/outfit/loadout/strandedbos
 	name = "Stranded BoS Member"
@@ -535,8 +539,9 @@ Wastelander
 	gloves = /obj/item/clothing/gloves/f13/military
 	l_hand = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/card/id/rusted/brokenholodog = 1,)
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/card/id/rusted/brokenholodog = 1
+		)
 
 /datum/outfit/loadout/eidolon
 	name = "Eidolon"
@@ -548,9 +553,10 @@ Wastelander
 	mask = /obj/item/clothing/mask/balaclava
 	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/slug=2,
-		/obj/item/reagent_containers/food/drinks/flask/russian=1,
-		/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka=1,)
+		/obj/item/ammo_box/shotgun/slug = 2,
+		/obj/item/reagent_containers/food/drinks/flask/russian = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/vodka/badminka = 1
+		)
 
 /datum/outfit/loadout/aviator
 	name = "Aviator"
@@ -561,8 +567,9 @@ Wastelander
 	neck = /obj/item/storage/belt/holster
 	gloves = /obj/item/clothing/gloves/rifleman
 	backpack_contents = list(
-		/obj/item/lighter/fusion=1,
-		/obj/item/storage/fancy/cigarettes/cigpack_carp =1,)
+		/obj/item/lighter/fusion = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_carp =1
+		)
 
 /datum/outfit/loadout/trapper
 	name = "Trapper"
@@ -575,7 +582,8 @@ Wastelander
 	l_hand = /obj/item/shovel/trench
 	backpack_contents = list(
 		/obj/item/storage/backpack/spearquiver = 1,
-		/obj/item/storage/box/mousetraps=3,)
+		/obj/item/storage/box/mousetraps = 3
+		)
 
 /datum/outfit/loadout/trouper
 	name = "Trouper"
@@ -585,14 +593,43 @@ Wastelander
 	head = /obj/item/clothing/head/widered
 	l_hand = /obj/item/gun/ballistic/automatic/pistol/pistol22
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/pistol22=2,
-		/obj/item/reagent_containers/food/drinks/shaker=1,
-		/obj/item/restraints/handcuffs/fake/kinky=1,
-		/obj/item/melee/onehanded/slavewhip=1,
-		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
-		/obj/item/reagent_containers/food/drinks/bottle/trappist=1,
-		/obj/item/reagent_containers/food/drinks/bottle/applejack=1,
-		/obj/item/reagent_containers/food/drinks/bottle/goldschlager=1,)
+		/obj/item/ammo_box/magazine/pistol22 = 2,
+		/obj/item/reagent_containers/food/drinks/shaker = 1,
+		/obj/item/restraints/handcuffs/fake/kinky = 1,
+		/obj/item/melee/onehanded/slavewhip = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/trappist = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/applejack = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/goldschlager = 1
+		)
+
+/datum/outfit/loadout/legioncivilian
+	name = "Legion Civilian"
+	uniform = /obj/item/clothing/under/f13/doctor
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	suit = /obj/item/clothing/suit/curator
+	head = /obj/item/clothing/head/scarecrow_hat
+	gloves = /obj/item/clothing/gloves/color/black
+	glasses = /obj/item/clothing/glasses/welding
+	id = /obj/item/card/id/dogtag/town/legion
+	l_hand = /obj/item/shield/riot/buckler
+	backpack_contents = list(
+		/obj/item/stack/f13Cash/random/denarius/low = 1,
+		/obj/item/melee/onehanded/machete = 1
+		)
+
+/datum/outfit/loadout/ncrcitizen
+	name = "NCR Citizen"
+	uniform = /obj/item/clothing/under/f13/ncrcaravan
+	shoes = /obj/item/clothing/shoes/f13/tan
+	head = /obj/item/clothing/head/f13/cowboy
+	gloves = /obj/item/clothing/gloves/color/brown
+	id = /obj/item/card/id/dogtag/town/ncr
+	l_hand = /obj/item/gun/ballistic/rifle/mag/varmint
+	backpack_contents = list(
+		/obj/item/stack/f13Cash/random/ncr/med = 1,
+		/obj/item/ammo_box/magazine/m556/rifle/small = 2
+		)
 
 //New tribal role. Replaces old tribe stuff.
 /datum/job/wasteland/f13tribal
@@ -603,7 +640,7 @@ Wastelander
 	total_positions = -1
 	spawn_positions = -1
 	description = "You are a member of the of a tribe who has wandered to this area, but does not belong to the Sulphur Bottom tribe.  From where you came is up to you, why you are here is your own, and it is up to you to survive on your own and attempt to thrive."
-	supervisors = "the Ways of your own tribe."
+	supervisors = "the Ways of your own tribe"
 
 	selection_color = "#dddddd"
 
@@ -699,7 +736,7 @@ Wastelander
 	box_two = /obj/item/storage/survivalkit/medical/tribal
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
-		/obj/item/flashlight/lantern = 1,
+		/obj/item/flashlight/lantern = 1
 		)
 
 //Generic Tribals
@@ -712,7 +749,7 @@ Wastelander
 		/obj/item/restraints/legcuffs/bola = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/book/granter/trait/tribaltraditions =1,
+		/obj/item/book/granter/trait/tribaltraditions = 1
 		)
 
 /datum/outfit/loadout/spearman
@@ -724,7 +761,7 @@ Wastelander
 	backpack_contents = list(
 		/obj/item/twohanded/spear = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
-		/obj/item/book/granter/trait/tribaltraditions =1,
+		/obj/item/book/granter/trait/tribaltraditions = 1
 		)
 
 /datum/outfit/loadout/shaman
@@ -733,15 +770,15 @@ Wastelander
 	box = /obj/item/storage/survivalkit/tribal
 	box_two = /obj/item/storage/survivalkit/medical/tribal
 	backpack_contents = list(
-		/obj/item/storage/bag/plants=1,
-		/obj/item/cultivator=1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket/wood=1,
 		/obj/item/twohanded/sledgehammer/warmace = 1,
 		/obj/item/melee/onehanded/knife/ritualdagger = 1,
 		/obj/item/stack/medical/gauze/improvised = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/crafting_recipe/tribal = 1,
-		/obj/item/book/granter/trait/tribaltraditions =1,
+		/obj/item/book/granter/trait/tribaltraditions = 1
 	)
 
 /datum/outfit/loadout/lostvillager
@@ -756,7 +793,7 @@ Wastelander
 		/obj/item/storage/bag/plants = 1,
 		/obj/item/crowbar/smithedunitool = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 3,
-		/obj/item/book/granter/trait/tribaltraditions =1,
+		/obj/item/book/granter/trait/tribaltraditions = 1
 	)
 
 /datum/outfit/loadout/wayfarerranged
@@ -769,7 +806,7 @@ Wastelander
 		/obj/item/storage/bag/tribe_quiver/archer = 1,
 		/obj/item/binoculars = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
-		/obj/item/book/granter/trait/tribaltraditions =1,
+		/obj/item/book/granter/trait/tribaltraditions = 1
 		)
 
 /*/datum/outfit/loadout/whitelegsranged
@@ -812,9 +849,9 @@ Wastelander
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/deadhorses = 1,
 		/obj/item/clothing/under/f13/female/deadhorses = 1,
-		/obj/item/gun/ballistic/automatic/pistol/m1911=1,
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 2,
-		/obj/item/reagent_containers/pill/patch/healpoultice =2
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 	)
 
 /datum/outfit/loadout/deadhorsesshaman
@@ -822,9 +859,9 @@ Wastelander
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/deadhorses = 1,
 		/obj/item/clothing/under/f13/female/deadhorses = 1,
-		/obj/item/storage/bag/plants=1,
-		/obj/item/cultivator=1,
-		/obj/item/reagent_containers/glass/bucket/wood=1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/reagent_containers/glass/bucket/wood = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
 		/obj/item/book/granter/crafting_recipe/tribal/deadhorses = 1
 	)
@@ -907,7 +944,7 @@ Wastelander
 		/obj/item/clothing/under/f13/wayfarer = 1,
 		/obj/item/clothing/head/helmet/f13/wayfarer/hunter = 1,
 		/obj/item/twohanded/spear/bonespear = 1,
-		/obj/item/reagent_containers/pill/bitterdrink = 1,
+		/obj/item/reagent_containers/pill/bitterdrink = 1
 	)
 
 
@@ -915,14 +952,14 @@ Wastelander
 	name = "Wayfarer Shaman"
 	suit = /obj/item/clothing/suit/armor/light/tribal/geckocloak
 	backpack_contents = list(
-		/obj/item/storage/bag/plants=1,
-		/obj/item/cultivator=1,
-		/obj/item/reagent_containers/glass/bucket/wood=1,
-		/obj/item/warpaint_bowl=1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/reagent_containers/glass/bucket/wood = 1,
+		/obj/item/warpaint_bowl = 1,
 		/obj/item/melee/onehanded/knife/ritualdagger = 1,
 		/obj/item/stack/medical/gauze/improvised = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
-		/obj/item/book/granter/crafting_recipe/tribal/wayfarer = 1,
+		/obj/item/book/granter/crafting_recipe/tribal/wayfarer = 1
 	)
 
 //Rustwalkers
@@ -948,7 +985,7 @@ Wastelander
 		/obj/item/ammo_box/c10mm = 1,
 		/obj/item/circular_saw = 1,
 		/obj/item/storage/belt/utility/full = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 1
 	)
 
 /datum/outfit/loadout/rustwalkersshaman
@@ -995,7 +1032,8 @@ Wastelander
 		/obj/item/ammo_box/magazine/pistol10mm=2,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		/obj/item/storage/box/ration/ranger_breakfast = 1,
-		/obj/item/book/granter/crafting_recipe/blueprint/service = 1)
+		/obj/item/book/granter/crafting_recipe/blueprint/service = 1
+		)
 
 /*
 /datum/outfit/loadout/raider_legion
@@ -1020,7 +1058,7 @@ Wastelander
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
-		/obj/item/grenade/f13/frag = 2,
+		/obj/item/grenade/f13/frag = 2
 		)
 
 /datum/outfit/loadout/raider_vault
@@ -1031,7 +1069,7 @@ Wastelander
 	gloves = /obj/item/pda
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/thatgun = 1,
-		/obj/item/pda=1,
+		/obj/item/pda = 1
 		)
 
 */

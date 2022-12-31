@@ -4,6 +4,7 @@ Mayor: ACCESS_TOWN_COMMAND 283
 Provost Marshal: ACCESS_TOWN_HOS 282
 Deputy, Detective: ACCESS_TOWN_SEC 281
 General access: ACCESS_TOWN 273
+Director: ACCESS_TOWN_CMO 287
 Doctor: ACCESS_TOWN_DOC 280
 Researcher: ACCESS_TOWN_SCIENCE 279
 Barkeeper: ACCESS_TOWN_BAR 275
@@ -92,7 +93,8 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/pen/fountain/captain = 1,
 		/obj/item/clothing/mask/cigarette/cigar = 1,
 		/obj/item/toy/cards/deck/unum = 1,
-		/obj/item/ammo_box/magazine/pistol10mm = 3
+		/obj/item/ammo_box/magazine/pistol10mm = 3,
+		/obj/item/megaphone/command = 1
 		)
 
 /*--------------------------------------------------------------*/
@@ -341,6 +343,76 @@ here's a tip, go search DEFINES/access.dm
 		/obj/item/ammo_box/loader/m44=1
 		)
 
+/*--------------------------------------------------------------*/	
+//Town Director
+/*--------------------------------------------------------------*/
+
+/datum/job/eastwood/f13towncmo
+	title = "Director"
+	flag = F13CHIEFMED
+	display_order = JOB_DISPLAY_ORDER_F13CHIEFMED
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "The Mayor and Overseer"
+	description = "From the board of the VTCC, you were chosen to be the chief delegator for the medical and science wings of this town's clinic. You are the mediator of workplace drama, the human resource enforcer, and the cornerstone of inspiration for your underlings. As their supervisor, it is your job to make sure that this clinic functions at peak performance."
+	selection_color = "#af9172"
+	exp_requirements = 750
+
+	outfit = /datum/outfit/job/eastwood/f13towncmo
+	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO)
+	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/eastwood
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/eastwood
+		)
+	)
+
+/datum/outfit/job/eastwood/f13towncmo
+	name = "Director"
+	jobtype = /datum/job/eastwood/f13towncmo
+	id = /obj/item/card/id/f13towncmo
+	chemwhiz = TRUE
+	ears = /obj/item/radio/headset/headset_town/cmo
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer
+	glasses = /obj/item/clothing/glasses/science
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	head = /obj/item/clothing/head/beret/cmo
+	suit_store = /obj/item/gun/energy/laser/complianceregulator
+	l_pocket = /obj/item/storage/bag/money/small/den
+	backpack_contents = list(
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
+		/obj/item/megaphone/command = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/pda/medical = 1
+		)
+
+/datum/outfit/job/eastwood/f13towncmo/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
+	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
+	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
+	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 /*--------------------------------------------------------------*/
 //Researcher
 /*--------------------------------------------------------------*/
@@ -352,7 +424,7 @@ here's a tip, go search DEFINES/access.dm
 	display_order = JOB_DISPLAY_ORDER_RESEARCHER
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "The Mayor"
+	supervisors = "The Mayor and Director"
 	description =  "Scientist, Roboticist, each of you under the Vault's employ stands under the title of Researcher. The Vault's servers are regularly wiped by some glitch in the system, and it's down to the Scientists to restore these data files. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 
@@ -408,7 +480,7 @@ here's a tip, go search DEFINES/access.dm
 	display_order = JOB_DISPLAY_ORDER_DENDOC
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "The Mayor"
+	supervisors = "The Mayor and Director"
 	description = "Doctor, the Medical Professionals, even those who handle quarantined patients, are the clinical cornerstone of the town, so long as the price is right. Just remember that you're no Follower (unless you somehow are) - medicine doesn't come for free, and you aren't here out of the kindness of your heart. Make sure to turn a profit on your services, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
 
@@ -456,9 +528,6 @@ here's a tip, go search DEFINES/access.dm
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(GLOB.chemwhiz_recipes)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
@@ -467,8 +536,6 @@ here's a tip, go search DEFINES/access.dm
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/needler)
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
@@ -977,7 +1044,6 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/reagent_containers/glass/bucket/plastic = 1,
 	/obj/item/storage/bag/plants/portaseeder= 1,
 	/obj/item/seeds/bamboo = 1,
-	/obj/item/seeds/apple/gold = 1,
 	/obj/item/seeds/cannabis = 1
 	)
 

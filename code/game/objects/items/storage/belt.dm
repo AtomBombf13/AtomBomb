@@ -1055,10 +1055,40 @@ obj/item/storage/belt/medical/surgical
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/bonesetter(src)
 
-// Wasteland toolbelt
+// Wasteland toolbelt -Art added from Invicta
 /obj/item/storage/belt/utility/waster
 	name = "wastelander toolbelt"
 	desc = "Holds a collection of simple tools."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "belt_blacksmith"
+	item_state = "belt_blacksmith"
+
+/obj/item/storage/belt/utility/waster/ComponentInitialize() // added Atom Bomb
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 6
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/crowbar,
+		/obj/item/screwdriver,
+		/obj/item/weldingtool,
+		/obj/item/wirecutters,
+		/obj/item/wrench,
+		/obj/item/multitool,
+		/obj/item/flashlight,
+		/obj/item/stack/cable_coil,
+		/obj/item/t_scanner,
+		/obj/item/analyzer,
+		/obj/item/geiger_counter,
+		/obj/item/extinguisher/mini,
+		/obj/item/radio,
+		/obj/item/clothing/gloves,
+		/obj/item/assembly/signaler,
+		/obj/item/melee/smith/hammer 
+		))
 
 /obj/item/storage/belt/utility/waster/PopulateContents()
 	new /obj/item/crowbar(src)
@@ -1068,16 +1098,16 @@ obj/item/storage/belt/medical/surgical
 	new /obj/item/wirecutters/basic(src)
 	new /obj/item/stack/cable_coil(src,30,pick("yellow","orange"))
 
-// Forgemaster toolbelt (made to make the old chainsaw 2h component bearable, phase out unless needed, wasteland toobelt should suffice)
-/obj/item/storage/belt/utility/waster/forgemaster
-	name = "forgemasters toolbelt"
-	desc = "Has a collection of basic tools and a hook rigging to sling a chainsaw from."
+// Blacksmith toolbelt (wasteland basic + smithing hammer)
+/obj/item/storage/belt/utility/waster/blacksmith
+	name = "blacksmiths toolbelt"
+	desc = "Has a collection of basic tools and a loop to hold a good hammer."
 
-/obj/item/storage/belt/utility/waster/forgemaster/PopulateContents()
+/obj/item/storage/belt/utility/waster/blacksmith/PopulateContents()
 	new /obj/item/crowbar(src)
 	new /obj/item/wrench(src)
 	new /obj/item/screwdriver/basic(src)
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/wirecutters/basic(src)
 	new /obj/item/melee/smith/hammer/premade(src)
-	new /obj/item/twohanded/chainsaw(src)
+

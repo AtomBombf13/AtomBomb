@@ -664,9 +664,9 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 #define ARMOR_CAP_DR 95
 
 /// Armor stiffness - How much recoil we get while running and gunning!
-#define LIGHT_STIFFNESS 1
-#define MEDIUM_STIFFNESS 1.5
-#define HEAVY_STIFFNESS 2
+#define LIGHT_STIFFNESS 0.5
+#define MEDIUM_STIFFNESS 1
+#define HEAVY_STIFFNESS 1.5
 
 /// Damages DT is effective with
 GLOBAL_LIST_INIT(damage_threshold_valid_types, list("brute", "fire"))

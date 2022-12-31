@@ -20,7 +20,7 @@
 	height = 4;
 	id = "bos_elevator";
 	name = "BOS Elevator";
-	width = 5
+	width = 4
 	},
 /turf/open/floor/engine,
 /area/f13/wasteland)

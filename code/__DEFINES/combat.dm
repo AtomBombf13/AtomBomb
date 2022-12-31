@@ -409,10 +409,10 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_HANDLOAD_MULT 0.75 // trash ammo you can make anywhere with a reloader tool, most common
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_BASE 1 // Base spread added from 'quality' ammo
+#define BULLET_SPREAD_BASE 1.5 // Base spread added from 'quality' ammo
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_MATCH 0 // No extra spread~
+#define BULLET_SPREAD_MATCH 0 // No extra spread
 #define BULLET_SPREAD_SURPLUS (BULLET_SPREAD_BASE * 1.5) // slightly worse spread from wasteland ammo
 #define BULLET_SPREAD_HANDLOAD (BULLET_SPREAD_BASE * 3) // much worse spread from junk ammo!
 
@@ -428,6 +428,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 
 /// Rubber wound modifier defines
 /// intended to break bones, dont make beanbags sharp or everyone dies
+// these ammos are usually very over powered unless balanced some other way
 #define RUBBERY_WOUND_PISTOL_LIGHT (BULLET_WOUND_PISTOL_LIGHT)
 #define RUBBERY_WOUND_PISTOL_MEDIUM (BULLET_WOUND_PISTOL_MEDIUM * 1.5)
 #define RUBBERY_WOUND_PISTOL_HEAVY (BULLET_WOUND_PISTOL_HEAVY * 1.5)
@@ -435,7 +436,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define RUBBERY_WOUND_RIFLE_MEDIUM (BULLET_WOUND_RIFLE_MEDIUM * 2)
 #define RUBBERY_WOUND_RIFLE_HEAVY (BULLET_WOUND_RIFLE_HEAVY * 5) // If this starts ripping off limbs... good~
 #define RUBBERY_WOUND_SHOTGUN_PELLET (-BULLET_WOUND_SHOTGUN_PELLET * 0.1) // cus negative
-#define RUBBERY_WOUND_SHOTGUN_SLUG (BULLET_WOUND_SHOTGUN_SLUG * 3)
+#define RUBBERY_WOUND_SHOTGUN_SLUG (BULLET_WOUND_SHOTGUN_SLUG)
 
 /// Bullet wound falloff defines
 #define BULLET_WOUND_FALLOFF_PISTOL_LIGHT 0
@@ -582,6 +583,17 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_FIRE_DELAY_SLOWER (GUN_FIRE_DELAY_BASE * 5) //5s
 #define GUN_FIRE_DELAY_ABSOLUTE (GUN_FIRE_DELAY_BASE * 6) //6s
 
+/// Mob autofire delay Base
+#define MOB_AUTOFIRE_DELAY_BASE 1
+
+/// Mob fire delay modifiers
+#define MOB_AUTOFIRE_DELAY_FASTEST (MOB_AUTOFIRE_DELAY_BASE * 0.1)
+#define MOB_AUTOFIRE_DELAY_FASTER (MOB_AUTOFIRE_DELAY_BASE * 1)
+#define MOB_AUTOFIRE_DELAY_FAST (MOB_AUTOFIRE_DELAY_BASE * 2)
+#define MOB_AUTOFIRE_DELAY_NORMAL (MOB_AUTOFIRE_DELAY_BASE * 3)
+#define MOB_AUTOFIRE_DELAY_SLOW (MOB_AUTOFIRE_DELAY_BASE * 4)
+#define MOB_AUTOFIRE_DELAY_SLOWER (MOB_AUTOFIRE_DELAY_BASE * 5)
+
 /// Gun burstfire delay Base
 #define GUN_BURSTFIRE_DELAY_BASE 2
 
@@ -668,7 +680,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define WEAPON_NORMAL		list(mode_name="standard", burst_size=1, icon="semi")
 #define SEMI_AUTO_NODELAY	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 2, burst_size=1, icon="semi") //Shouldn't be used on guns
 
-#define SEMI_AUTO_SNIPER	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 7, burst_size=1, icon="semi") //Sniper Rifle and AMR/Gauss
+#define SEMI_AUTO_SNIPER	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 13, burst_size=1, icon="semi") //Sniper Rifle and AMR/Gauss
 #define SEMI_AUTO_RIFLE		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 5, burst_size=1, icon="semi") //This means bolt action
 #define SEMI_AUTO_PISTOL	list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 4, burst_size=1, icon="semi") //Anything that should be baseline weapon
 #define SEMI_AUTO_SMG		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", automatic = 0, fire_delay = 3, burst_size=1, icon="semi")	//This includes carbines and automatic rifles

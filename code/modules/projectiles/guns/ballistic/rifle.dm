@@ -34,7 +34,6 @@
 	flags_1 =  CONDUCT_1
 	casing_ejector = FALSE
 	var/recentpump = 0 // to prevent spammage
-	var/canpump = 1 // set to 0 to prevent normal methods of cocking, allows for guns to have their own custom cockage systems by calling pump directly.
 	spawnwithmagazine = TRUE
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
@@ -57,8 +56,6 @@
 	return !!chambered?.BB
 
 /obj/item/gun/ballistic/rifle/attack_self(mob/living/user)
-	if(canpump == 0)
-		return
 	//if(recentpump > world.time)
 	//	return
 	if(IS_STAMCRIT(user))//CIT CHANGE - makes pumping shotguns impossible in stamina softcrit
@@ -108,8 +105,6 @@
 
 /// Pump if click with empty thing
 /obj/item/gun/ballistic/rifle/shoot_with_empty_chamber(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
-	if(canpump == 0)
-		return
 	if(chambered && HAS_TRAIT(user, TRAIT_FAST_PUMP))
 		attack_self(user)
 	else
@@ -242,8 +237,8 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = RIFLE_RECOIL(3.6)
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_recoil = RIFLE_RECOIL(2.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
 	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
@@ -650,7 +645,7 @@
 /obj/item/gun/ballistic/rifle/mag/varmint/verminkiller
 	name = "verminkiller rifle"
 	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
-	icon_state = "verminrifle"
+	icon_state = "ratslayer"
 	item_state = "ratslayer"
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI

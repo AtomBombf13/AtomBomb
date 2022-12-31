@@ -125,7 +125,7 @@
 	max_ammo = 12
 	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
-	w_class = WEIGHT_CLASS_TINY
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_box/magazine/pistol45/socom/empty
 	start_empty = TRUE

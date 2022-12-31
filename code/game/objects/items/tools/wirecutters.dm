@@ -154,7 +154,7 @@
 	desc = "Literally just a piece of bent and scraped junk metal, enough to cut something, but extremly unwieldly and worthless. Mainly just ripping with weight behind it."
 	item_state = "crudewire"
 	icon_state = "crudewire"
-	toolspeed = 6
+	toolspeed = 2
 	random_color = FALSE
 
 /obj/item/wirecutters/basic
@@ -162,7 +162,7 @@
 	desc = "Almost sharpened cutters, maded of sharpened rusted metal and multiple parts."
 	icon_state = "basicwire"
 	item_state = "basicwire"
-	toolspeed = 2
+	toolspeed = 1.1
 	random_color = FALSE
 
 /obj/item/wirecutters/hightech

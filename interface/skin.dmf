@@ -132,6 +132,15 @@ window "infowindow"
 		left = "statwindow"
 		right = "outputwindow"
 		is-vert = false
+	elem "rules"
+		type = BUTTON
+		pos = 120,5
+		size = 100x20
+		anchor1 = 18,0
+		anchor2 = 34,0
+		saved-params = "is-checked"
+		text = "Rules"
+		command = "rules"
 	elem "tgwiki"
 		type = BUTTON
 		pos = 220,5
@@ -166,7 +175,7 @@ window "infowindow"
 		anchor1 = 81,0
 		anchor2 = 97,0
 		saved-params = "is-checked"
-		text = "Discord/Rules"
+		text = "Discord"
 		command = "discord"
 
 window "outputwindow"

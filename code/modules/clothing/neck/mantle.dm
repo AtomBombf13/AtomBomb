@@ -85,10 +85,12 @@
 	desc = "A fine mantle marking the wearer as a Commander of some long lost nation."
 	icon_state = "commander"
 
-/obj/item/clothing/neck/mantle/treasurer
+/obj/item/clothing/neck/mantle/legion/treasurer // /legion added to fit it into Invicta module
 	name = "treasurers mantle"
 	desc = "The grey and black mantle with gold thread trimming shows the wearer is entrusted with matters of money and records. Hidden inner pockets can store money, keys and documents safely, and a discrete sheath for a knife for self defence is also attached."
-	icon_state = "treasurer"
+	icon_state = "mantle_treasurer"
+	item_state = "mantle_treasurer"
+//	icon_state = "treasurer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/treasurer
 
 /obj/item/clothing/neck/mantle/peltfur
@@ -122,7 +124,7 @@
 						"New Poncho Open" = "ponchonewopen"
 						)
 
-
+/* Commented out due to no sprite, some sort of old custom stuff
 /obj/item/clothing/neck/mantle/umbo
 	name = "Roman mantle"
 	desc = "A decorated mantle created in the ancient roman era, this one appears to be hand made by an auxilia likely with a large bust."
@@ -132,3 +134,5 @@
 	name = "Fancy Cape"
 	desc = "A fancy looking cape that has been manufactured for an androgynous person."
 	icon_state = "snugglycape"
+*/
+

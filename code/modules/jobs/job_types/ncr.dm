@@ -1,7 +1,7 @@
 /*
 NCR Design notes:
 Standard issue stuff to keep the theme visually and gameplay and avoid watering down.
-Gloves		Officers - Leather glovesl, fingerless leather gloves for sergeants. Bayonet standard issue knife. Sidearms mostly for officers, 9mm is the standard. MP gets nonstandard pot helm, the exception to prove the rule.
+Gloves		Officers - Leather gloves, fingerless leather gloves for sergeants. Bayonet standard issue knife. Sidearms mostly for officers, 9mm is the standard. MP gets nonstandard pot helm, the exception to prove the rule.
 			NCOs -		Fingerless gloves
 			Rest -		No gloves
 Knives		Army -		Bayonet
@@ -11,7 +11,7 @@ Money		Commanding Officer (LT and CAP) - "small" money bag
 			Rest - /obj/item/storage/bag/money/small/ncrenlisted
 Sidearm		Officers & a few specialists - 9mm pistol
 Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
-			Don't use Greaseguns, Lever shotguns, Police shotguns, Berettas, Hunting knives
+			Don't use Lever shotguns, Police shotguns, Berettas, Hunting knives
 Access
 			NCR Clearance 0 (All Access) - ACCESS_NCR 121
 			NCR Clearance 1 (E1-E4) - ACCESS_NCR1 256
@@ -205,7 +205,8 @@ Access
 		/obj/item/megaphone = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
 		/obj/item/lighter = 1,
-		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 1
+		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 1,
+		/obj/item/melee/onehanded/knife/trench = 1
 		)
 
 /datum/outfit/loadout/captainbackline
@@ -215,8 +216,7 @@ Access
 		/obj/item/ammo_box/magazine/garand308 = 2,
 		/obj/item/gun/ballistic/automatic/pistol/deagle/elcapitan = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 3,
-		/obj/item/storage/box/ration/menu_two = 1,
-		/obj/item/melee/onehanded/knife/trench = 1
+		/obj/item/storage/box/ration/menu_two = 1
 		)
 
 /datum/outfit/loadout/captainfrontline
@@ -254,7 +254,7 @@ Access
 		),
 	)
 
-/datum/outfit/job/ncr/f13lieutenant		// Infiltrator, Binoculars, Bayonet, M1911 custom
+/datum/outfit/job/ncr/f13lieutenant		// Infiltrator, Binoculars, Bowie Knife, M1911 custom
 	name = "NCR Lieutenant"
 	jobtype	= /datum/job/ncr/f13lieutenant
 	id = /obj/item/card/id/dogtag/ncrlieutenant
@@ -272,7 +272,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 3,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
@@ -310,7 +310,7 @@ Access
 		/datum/outfit/loadout/sergeantrifleman,	// Worn Assault Carbine
 		/datum/outfit/loadout/sergeantrecon, // Scout Carbine, Trekking
 		/datum/outfit/loadout/sergeantcqc, // Trench Shotgun, Gas mask, Smoke bombs, Trench knife
-		/datum/outfit/loadout/sergeanttechnical //Head MP
+		/datum/outfit/loadout/sergeantmp // Head MP
 		)
 
 	matchmaking_allowed = list(
@@ -376,20 +376,24 @@ Access
 	suit_store = /obj/item/gun/ballistic/shotgun/trench //Over thereee over thereeeee spread the spread the word over thereeee
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/ammo_box/shotgun/incendiary = 1,
 		/obj/item/clothing/mask/gas = 1,
 		/obj/item/grenade/smokebomb = 2,
-		/obj/item/melee/onehanded/knife/bayonet = 1
+		/obj/item/melee/onehanded/knife/trench = 1,
+		/obj/item/book/granter/trait/rifleman = 1
 		)
 
-/datum/outfit/loadout/sergeanttechnical
+/datum/outfit/loadout/sergeantmp
 	name = "Military Police Provost"
 	head = /obj/item/clothing/head/f13/ncr/mp
+	suit_store = /obj/item/gun/ballistic/shotgun/police
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
-		/obj/item/ammo_box/magazine/pistol45 = 2,
+		/obj/item/ammo_box/shotgun/bean = 2,
+		/obj/item/clothing/accessory/armband/black = 1,
 		/obj/item/melee/classic_baton/militarypolice = 1,
-		/obj/item/ammo_box/magazine/m5mm = 1,
-		/obj/item/cosmetics/razor = 1
+		/obj/item/megaphone = 1,
+		/obj/item/restraints/legcuffs = 3,
+		/obj/item/storage/box/handcuffs = 1
 		)
 
 // REPRESENATIVE
@@ -719,7 +723,7 @@ Access
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/r84 = 1,
 		/obj/item/ammo_box/magazine/lmg = 1,
-		/obj/item/melee/onehanded/knife/bayonet = 1
+		/obj/item/melee/onehanded/knife/bowie = 1
 		)
 
 
@@ -978,7 +982,7 @@ Access
 	head = /obj/item/clothing/head/f13/ncr/storm
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/shovel/trench = 1,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
 		)
@@ -999,7 +1003,6 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/storage/box/ration/menu_one = 1,
-		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 6
 		)
 
@@ -1062,7 +1065,8 @@ Access
 	glasses	= null
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/shovel/trench = 1
 		)
 
 /datum/outfit/loadout/trooperrifleman
@@ -1079,7 +1083,6 @@ Access
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/storage/box/ration/menu_eight = 1
 		)
@@ -1089,7 +1092,6 @@ Access
 	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/stripper/a308 = 2,
-		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 7,
 		/obj/item/storage/box/ration/menu_eight = 1
 		)

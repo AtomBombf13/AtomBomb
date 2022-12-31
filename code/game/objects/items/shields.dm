@@ -205,13 +205,13 @@
 	attack_verb = list("shoved", "bashed")
 	var/cooldown = 0 //shield bash cooldown. based on world.time
 	var/repair_material = /obj/item/stack/sheet/plastic
-	var/can_shatter = FALSE
+	var/can_shatter = TRUE
 	shield_flags = SHIELD_FLAGS_DEFAULT | SHIELD_TRANSPARENT
-	max_integrity = 2250
+	max_integrity = 1000
 
 /datum/block_parry_data/shield/riot
 	block_damage_multiplier = 0.35
-	block_stamina_efficiency = 5
+	block_stamina_efficiency = 1
 	block_stamina_cost_per_second = 1
 	block_damage_absorption = 7.5
 
@@ -265,7 +265,7 @@ obj/item/shield/riot/bullet_proof
 	item_state = "shield_bulletproof"
 	block_parry_data = /datum/block_parry_data/shield/bulletproof
 	armor = list("melee" = 50, "bullet" = 90, "laser" = 50, "energy" = 0, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 70)
-	max_integrity = 1750
+	max_integrity = 1000
 	slowdown = 0.2
 	custom_materials = list(/datum/material/plastic=8000, /datum/material/titanium=1000)
 	repair_material = /obj/item/stack/sheet/mineral/titanium
@@ -334,6 +334,7 @@ obj/item/shield/riot/bullet_proof
 	block_damage_multiplier = 0.3
 	block_damage_absorption = 7.5
 	block_damage_limit = 30
+	block_stamina_efficiency = 1.5
 
 //Scrap shield. Somewhat cheaper, simpler and worse than Legion shield but basically similar.
 /obj/item/shield/riot/scrapshield
@@ -428,12 +429,12 @@ obj/item/shield/riot/bullet_proof
 	custom_materials = list(/datum/material/iron = 32000)
 	repair_material = /obj/item/stack/sheet/metal
 	shield_flags = SHIELD_FLAGS_HEAVY
-	max_integrity = 3000
+	max_integrity = 1000
 
 /datum/block_parry_data/shield/tower
 	block_slowdown = 0.75
 	block_damage_multiplier = 0.7
-	block_stamina_efficiency = 10
+	block_stamina_efficiency = 1
 	block_stamina_cost_per_second = 5
 	block_damage_absorption = 20
 	block_damage_limit = 160
@@ -448,11 +449,11 @@ obj/item/shield/riot/bullet_proof
 	shieldbash_stamdmg = 60
 	shield_flags = SHIELD_FLAGS_DEFAULT //no guaranteed kd on bash, sorry
 	block_parry_data = /datum/block_parry_data/shield/tower/scrap
-	max_integrity = 1500
+	max_integrity = 1000
 
 /datum/block_parry_data/shield/tower/scrap
 	block_damage_multiplier = 0.6
-	block_stamina_efficiency = 7.5
+	block_stamina_efficiency = 1
 	block_damage_absorption = 15
 
 /obj/item/shield/riot/tele

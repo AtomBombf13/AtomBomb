@@ -313,7 +313,7 @@
 	flags_inv = HIDEEARS
 	flags_cover = null
 
-/obj/item/clothing/head/f13/auxilia
+/obj/item/clothing/head/f13/auxilia // obsolete with Invicta
 	name = "auxilia headwear"
 	desc = "A soft red cap with a black band, used by Auxilia outside camp."
 	icon = 'icons/fallout/clothing/hats.dmi'
@@ -356,13 +356,6 @@
 	icon_state = "leg_hood"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/helmet/f13/legion/assassin
-	name = "legion assassin hood"
-	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into. This one has golden bull on it's forehead."
-	icon_state = "leg_hood_assassin"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-	flags_inv = HIDEEARS|HIDEHAIR
-
 //////////
 /*DECANI*/
 //////////
@@ -370,16 +363,28 @@
 /obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	name = "legion recruit decanus helmet"
 	desc = "This reinforced leather helmet has a plume of black and dark red feathers."
+	icon = 'icons/fallout/clothing/hats.dmi' // temporary stuff for inheritance
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_decan"
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
 	desc = "This reinforced leather helmet with a red peak has a plume of black feathers."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_decan_prime"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
 	desc = "It's a metal helmet with an array of red, white and black feathers, unmistakably a Veteran Decanus."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_decan_veteran"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/vexil
@@ -390,11 +395,19 @@
 /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	name = "legion bear vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a ashland bear."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_vex_bear"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
 	name = "legion nightstalker vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a nightstalker."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_vex_night"
 
 /////////////
@@ -404,6 +417,10 @@
 /obj/item/clothing/head/helmet/f13/legion/centurion
 	name = "legion centurion helmet"
 	desc = "A sturdy helmet from steel and brass with a red horizontal plume."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_cent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
@@ -412,6 +429,10 @@
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "legion centurion paladin-slayer helmet"
 	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_cent_paladin"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
@@ -420,6 +441,10 @@
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
 	desc = "The helmet of an NCR ranger, refit to serve as a Centurions helmet."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_cent_ranger"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
@@ -429,6 +454,10 @@
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	lefthand_file = ""
+	righthand_file = ""
 	icon_state = "leg_legate"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
@@ -614,10 +643,10 @@
 	icon_state = "brotherhood_helmet_senior"
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
-	name = "brotherhood knight-captain helmet"
-	desc = "An improved combat helmet, bearing the symbol of the Knight-Captain."
-	icon_state = "brotherhood_helmet_captain"
+/obj/item/clothing/head/helmet/f13/combat/brotherhood/head
+	name = "brotherhood head knight helmet"
+	desc = "An improved combat helmet, bearing the symbol of the Head Knight."
+	icon_state = "brotherhood_helmet_head"
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
