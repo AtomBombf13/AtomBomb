@@ -237,16 +237,19 @@
 
 /datum/gang_item/equipment/stinger
 	name = "Stinger"
+	id = "stinger"
 	cost = 75
 	item_path = /obj/item/grenade/f13/stinger
 
 /datum/gang_item/equipment/he
 	name = "stick of dynamite"
+	id = "dynamite"
 	cost = 75
 	item_path = /obj/item/grenade/f13/anarchist/dynamite
 
 /datum/gang_item/equipment/greatkhanheadset
 	name = "Great Khan Headset"
+	id = "khanheadset"
 	cost = 10 
 	item_path = /obj/item/radio/headset/headset_khans
 

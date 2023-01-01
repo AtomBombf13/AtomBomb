@@ -105,6 +105,7 @@
 	maxHealth = 450
 	health = 450
 	speed = 1.2
+	stat_attack = 2
 	obj_damage = 300
 	aggro_vision_range = 15
 	rapid_melee = 1
@@ -118,6 +119,7 @@
 	color = "#FFFF00"
 	maxHealth = 480
 	health = 480
+	stat_attack = 2
 	retreat_distance = 1
 	minimum_distance = 2
 	projectiletype = /obj/item/projectile/bullet/m44
@@ -147,6 +149,7 @@
 	icon_dead = "raiderboss_dead"
 	maxHealth = 137
 	health = 136
+	stat_attack = 2
 	extra_projectiles = 3
 	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
@@ -376,6 +379,7 @@
 	icon_dead = "junker_dead"
 	maxHealth = 360
 	health = 360
+	stat_attack = 2
 	ranged = TRUE
 	retreat_distance = 4
 	minimum_distance = 6

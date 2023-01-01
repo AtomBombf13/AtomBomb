@@ -356,17 +356,6 @@
 	icon_state = "leg_hood"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/helmet/f13/legion/assassin
-	name = "legion assassin hood"
-	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into. This one has golden bull on it's forehead."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	lefthand_file = ""
-	righthand_file = ""
-	icon_state = "leg_hood_assassin"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
-	flags_inv = HIDEEARS|HIDEHAIR
-
 //////////
 /*DECANI*/
 //////////
@@ -654,10 +643,10 @@
 	icon_state = "brotherhood_helmet_senior"
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
-	name = "brotherhood knight-captain helmet"
-	desc = "An improved combat helmet, bearing the symbol of the Knight-Captain."
-	icon_state = "brotherhood_helmet_captain"
+/obj/item/clothing/head/helmet/f13/combat/brotherhood/head
+	name = "brotherhood head knight helmet"
+	desc = "An improved combat helmet, bearing the symbol of the Head Knight."
+	icon_state = "brotherhood_helmet_head"
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate

@@ -152,6 +152,16 @@
 	freq_listening = list(FREQ_DEN)
 	autolinkers = list("den")
 
+/obj/machinery/telecomms/server/presets/town_commerce
+	id = "Town Commerce Server"
+	freq_listening = list(FREQ_TOWN_COMMERCE)
+	autolinkers = list("commerce")
+
+/obj/machinery/telecomms/server/presets/town_mayor
+	id = "Town Mayor Server"
+	freq_listening = list(FREQ_TOWN_MAYOR)
+	autolinkers = list("mayor")
+
 //Common and other radio frequencies for people to freely use
 /obj/machinery/telecomms/server/presets/common/Initialize()
 	. = ..()

@@ -409,10 +409,10 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_HANDLOAD_MULT 0.75 // trash ammo you can make anywhere with a reloader tool, most common
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_BASE 1 // Base spread added from 'quality' ammo
+#define BULLET_SPREAD_BASE 1.5 // Base spread added from 'quality' ammo
 
 /// Bullet spread modifier defines
-#define BULLET_SPREAD_MATCH 0 // No extra spread~
+#define BULLET_SPREAD_MATCH 0 // No extra spread
 #define BULLET_SPREAD_SURPLUS (BULLET_SPREAD_BASE * 1.5) // slightly worse spread from wasteland ammo
 #define BULLET_SPREAD_HANDLOAD (BULLET_SPREAD_BASE * 3) // much worse spread from junk ammo!
 
@@ -428,6 +428,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 
 /// Rubber wound modifier defines
 /// intended to break bones, dont make beanbags sharp or everyone dies
+// these ammos are usually very over powered unless balanced some other way
 #define RUBBERY_WOUND_PISTOL_LIGHT (BULLET_WOUND_PISTOL_LIGHT)
 #define RUBBERY_WOUND_PISTOL_MEDIUM (BULLET_WOUND_PISTOL_MEDIUM * 1.5)
 #define RUBBERY_WOUND_PISTOL_HEAVY (BULLET_WOUND_PISTOL_HEAVY * 1.5)
@@ -435,7 +436,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define RUBBERY_WOUND_RIFLE_MEDIUM (BULLET_WOUND_RIFLE_MEDIUM * 2)
 #define RUBBERY_WOUND_RIFLE_HEAVY (BULLET_WOUND_RIFLE_HEAVY * 5) // If this starts ripping off limbs... good~
 #define RUBBERY_WOUND_SHOTGUN_PELLET (-BULLET_WOUND_SHOTGUN_PELLET * 0.1) // cus negative
-#define RUBBERY_WOUND_SHOTGUN_SLUG (BULLET_WOUND_SHOTGUN_SLUG * 3)
+#define RUBBERY_WOUND_SHOTGUN_SLUG (BULLET_WOUND_SHOTGUN_SLUG)
 
 /// Bullet wound falloff defines
 #define BULLET_WOUND_FALLOFF_PISTOL_LIGHT 0

@@ -172,8 +172,8 @@
  * DAMAGE: 5
  * STAMIN: 100
  * RECOIL: 2
- * WOUNDS: 120
- * WNAKED: 90
+ * WOUNDS: 40
+ * WNAKED: 30
  */
 /obj/item/projectile/bullet/shotgun_beanbag
 	name = "beanbag slug"
@@ -195,7 +195,7 @@
  * DAMAGE: 25
  * STAMIN: 50
  * RECOIL: 2
- * WOUNDS: 120
+ * WOUNDS: 40
  * WNAKED: 0
  */
 /obj/item/projectile/bullet/incendiary/shotgun
@@ -277,8 +277,8 @@
  * DAMAGE: 5
  * STAMIN: 100
  * RECOIL: 2
- * WOUNDS: 120
- * WNAKED: 90
+ * WOUNDS: 40
+ * WNAKED: 30
  */
 /obj/item/projectile/bullet/shotgun_stunslug
 	name = "stunslug"
