@@ -479,7 +479,7 @@
 
 /obj/item/clothing/suit/armor/medium/combat/chinese
 	name = "chinese combat armor"
-	desc = "(An uncommon suit of pre-war Chinese combat armor. It's a very basic and straightforward piece of armor that covers the front of the user."
+	desc = "An uncommon suit of pre-war Chinese combat armor. It's a very basic and straightforward piece of armor that covers the front of the user."
 	icon_state = "chicom_armor"
 	item_state = "chicom_armor"
 
@@ -810,10 +810,10 @@
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
-	name = "brotherhood knight-captain armor"
-	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Knight-Captains. It bears golden embroidery."
-	icon_state = "brotherhood_armor_captain"
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/head
+	name = "brotherhood head knight armor"
+	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Head Knight. It bears golden embroidery."
+	icon_state = "brotherhood_armor_head"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
