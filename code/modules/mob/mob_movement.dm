@@ -83,6 +83,15 @@
 	if(SEND_SIGNAL(mob, COMSIG_MOB_CLIENT_PRE_MOVE, args) & COMSIG_MOB_CLIENT_BLOCK_PRE_MOVE)
 		return FALSE
 
+	if (istype(L.get_item_by_slot(SLOT_HEAD), /obj/item/clothing/head/helmet/f13/power_armor) || istype(L.get_item_by_slot(SLOT_HEAD), /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa))
+		if(!istype(L.get_item_by_slot(SLOT_WEAR_SUIT), /obj/item/clothing/suit/armor/power_armor) && !istype(L.get_item_by_slot(SLOT_WEAR_SUIT), /obj/item/clothing/suit/armor/heavy/salvaged_pa))
+			if(prob(15))
+				var/obj/item/bodypart/head/victimhead = L.get_bodypart(BODY_ZONE_HEAD)
+				if(istype(victimhead))
+					to_chat(L, span_danger("Wow! Wearing that heavy helmet without support sure was a bad idea!"))
+					victimhead.dismember()
+					return FALSE
+
 	//We are now going to move
 	var/add_delay = mob.movement_delay()
 	mob.set_glide_size(DELAY_TO_GLIDE_SIZE(add_delay * ( (NSCOMPONENT(direction) && EWCOMPONENT(direction)) ? 2 : 1 ) ), FALSE) // set it now in case of pulled objects
