@@ -10825,7 +10825,7 @@
 	id_tag = "MedbayFoyer";
 	name = "Clinic Director";
 	req_access_txt = "287";
-	armor = list("melee" = 75, "bullet" = 75, "laser" = 75, "energy" = 75, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 25, "acid" = 25, "wound" = 25, "damage_threshold" = 3);
+	armor = list("melee"=75,"bullet"=75,"laser"=75,"energy"=75,"bomb"=30,"bio"=25,"rad"=25,"fire"=25,"acid"=25,"wound"=25,"damage_threshold"=3);
 	desc = "It opens and closes. This one looks heavily fortified"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
@@ -12823,6 +12823,12 @@
 /area/f13/city)
 "xUb" = (
 /obj/structure/rack,
+/obj/item/clothing/suit/armor/medium/combat/town,
+/obj/item/clothing/suit/armor/medium/combat/town,
+/obj/item/clothing/suit/armor/medium/combat/town,
+/obj/item/clothing/head/helmet/f13/combat/town,
+/obj/item/clothing/head/helmet/f13/combat/town,
+/obj/item/clothing/head/helmet/f13/combat/town,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -36267,9 +36273,9 @@ fbK
 uKh
 lXL
 dYT
-miU
-aib
 xUb
+aib
+miU
 dYT
 nnw
 dYT
@@ -36524,9 +36530,9 @@ fbK
 uKh
 uKh
 dYT
-xUb
+miU
 xHV
-xUb
+miU
 dYT
 npY
 dYT
@@ -36783,7 +36789,7 @@ uKh
 dYT
 mrM
 xHV
-xUb
+miU
 dYT
 nsa
 dYT
@@ -37040,7 +37046,7 @@ uKh
 dYT
 tzD
 xHV
-xUb
+miU
 dYT
 hYA
 hYA
