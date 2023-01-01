@@ -39,6 +39,13 @@
 		/obj/item/stack/cable_coil = 2,
 		/obj/item/stack/sheet/glass = 1)
 
+/obj/item/circuitboard/machine/announcement_system/Mr_Yuma
+	name = "Announcement System (Machine Board)"
+	build_path = /obj/machinery/announcement_system/Mr_Yuma
+	req_components = list(
+		/obj/item/stack/cable_coil = 2,
+		/obj/item/stack/sheet/glass = 1)
+
 /obj/item/circuitboard/machine/autolathe
 	name = "Autolathe (Machine Board)"
 	build_path = /obj/machinery/autolathe

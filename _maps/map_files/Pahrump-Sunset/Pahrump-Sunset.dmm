@@ -35139,6 +35139,13 @@
 /obj/structure/flora/tallgrass6,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"jiz" = (
+/obj/structure/table,
+/obj/machinery/announcement_system/Mr_Yuma,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building/trainstation)
 "jiJ" = (
 /obj/machinery/trading_machine/ammo,
 /obj/machinery/light{
@@ -131068,7 +131075,7 @@ xLC
 dgy
 lRe
 dgn
-ogp
+jiz
 ajR
 aks
 lRe

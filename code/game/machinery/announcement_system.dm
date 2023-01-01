@@ -21,10 +21,32 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	var/arrivalToggle = 1
 	var/newhead = "%PERSON, %RANK, is the department head."
 	var/newheadToggle = 1
+	var/factionleave = "%PERSON, the %RANK, has left these lands for a (hopefully) better land in the wasteland." //this is used to announce a faction of when a player leaves by the matrix
+	var/factionleavedead = "the corpse of %PERSON, the %RANK, is now feeding the vultures, at the other side of the border" //same but dead
+
 
 	var/greenlight = "Light_Green"
 	var/pinklight = "Light_Pink"
 	var/errorlight = "Error_Red"
+
+/obj/machinery/announcement_system/Mr_Yuma //ATOM EDIT, adds a lore friendly announcer in the form of Mr. Yuma, a parody of Mr. New Vegas
+	density = TRUE
+	name = "Mr. Yuma"
+	desc = "A Modified Autonomos AI Persona locutor, designed by Robco Industries, which announce many things over the radio."
+	icon = 'icons/obj/machines/telecomms.dmi'
+	icon_state = "Mr_Yuma_On"
+
+	verb_say = "smoothly says"
+	verb_ask = "wonders"
+	verb_exclaim = "warns"
+
+	idle_power_usage = 20
+	active_power_usage = 50
+
+	circuit = /obj/item/circuitboard/machine/announcement_system/Mr_Yuma
+
+	arrival = "%PERSON, the %RANK has joined us today in this fine day for the week"
+	newhead = "%PERSON, the %RANK is the head honcho of the barn"
 
 /obj/machinery/announcement_system/Initialize()
 	. = ..()
@@ -37,6 +59,12 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 		icon_state = (panel_open ? "AAS_On_Open" : "AAS_On")
 	else
 		icon_state = (panel_open ? "AAS_Off_Open" : "AAS_Off")
+
+/obj/machinery/announcement_system/Mr_Yuma/update_icon_state()
+	if(is_operational())
+		icon_state = (panel_open ? "Mr_Yuma_On_Open" : "Mr_Yuma_On")
+	else
+		icon_state = (panel_open ? "Mr_Yuma_Off_Open" : "Mr_Yuma_Off")
 
 /obj/machinery/announcement_system/update_overlays()
 	. = ..()
@@ -84,6 +112,10 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 		message = CompileText(arrival, user, rank)
 	else if(message_type == "NEWHEAD" && newheadToggle)
 		message = CompileText(newhead, user, rank)
+	else if(message_type == "FACTIONLEAVE")
+		message = CompileText(factionleave, user, rank)
+	else if(message_type == "FACTIONLEAVEDEAD")
+		message = CompileText(factionleavedead, user, rank)
 	else if(message_type == "ARRIVALS_BROKEN")
 		message = "The arrivals shuttle has been damaged. Docking for repairs..."
 
