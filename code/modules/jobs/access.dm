@@ -523,15 +523,14 @@
 			return "Provost Marshal Access"
 
 /proc/get_all_jobs()
-	return list("Centurion", "NCR Captain", "Overseer", "Sheriff",
+	return list("Legion Centurion", "NCR Captain", "Overseer", "Mayor",
 				"Head Paladin", "Senior Paladin", "Paladin", "Head Knight", "Senior Knight", "Knight", "Head Scribe", "Senior Scribe", "Scribe", "Initiate",
-				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionnaire", "Prime Legionnaire",
-				"NCR Lieutenant", "NCR Sergeant", ,"NCR Corporal", "NCR Combat Medic", "NCR Combat Engineer", "NCR Trooper",
-				"NCR Veteran Ranger", "NCR Patrol Ranger", "NCR Recon Ranger",
-				"NCR Scout", "NCR Scout Sergeant", "NCR Scout Lieutenant",
-				"Chief of Security", "Vault-tec Doctor", "Vault-tec Scientist",
-				"Vault-tec Security", "Vault-tec Engineer", "Vault Dweller", "Settler",
-				"Wastelander", "Raider", "Great Khan", "Preacher", "Head Hunter", "Chief", "Shaman", "Villager", "Hunter")
+				"Legion Orator", "Legion Vexillarius", "Legion Veteran Decanus", "Legion Prime Decanus", "Legion Recruit Decanus", "Legion Explorer", "Veteran Legionnaire", "Prime Legionnaire", "Recruit Legionnaire", "Camp Follower", "Legion Off-Duty",
+				"NCR Lieutenant", "NCR Medical Officer", "NCR Representative", "NCR Sergeant", "NCR Corporal", "NCR Combat Medic", "NCR Combat Engineer", "NCR Heavy Trooper", "NCR Trooper", "NCR Military Police", "NCR Off-Duty",
+				"NCR Veteran Ranger", "NCR Ranger",
+				"Provost Marshal", "Director", "Deputy Marshal",
+				"Detective", "Merchant", "Prospector", "Barkeeper", "Town Doctor", "Researcher", "Preacher", "Citizen",
+				"Wastelander", "Far-Lands Tribal", "Raider", "Great Khan", "Desperado Leader", "Desperado Enforcer")
 
 /proc/get_all_job_icons() //For all existing HUD icons
 	return get_all_jobs() + list("Prisoner")
