@@ -11,7 +11,7 @@
 	var/disambiguator
 	var/list/categories
 
-/datum/codex_entry/New(var/_display_name, var/list/_associated_paths, var/list/_associated_strings, var/_lore_text, var/_mechanics_text, var/_antag_text)
+/datum/codex_entry/New(_display_name, list/_associated_paths, list/_associated_strings, _lore_text, _mechanics_text, _antag_text)
 
 	SScodex.all_entries += src
 
@@ -59,7 +59,7 @@
 	SScodex.all_entries -= src
 	. = ..()
 
-/datum/codex_entry/proc/get_codex_header(var/mob/presenting_to)
+/datum/codex_entry/proc/get_codex_header(mob/presenting_to)
 	. = list()
 	if(presenting_to)
 		var/datum/codex_entry/linked_entry = SScodex.get_entry_by_string("nexus")
@@ -69,7 +69,7 @@
 			. += "<a href='?src=[REF(presenting_to.client)];codex_index=1'>List All Entries</a>"
 	. += "<hr>"
 
-/datum/codex_entry/proc/get_codex_footer(var/mob/presenting_to)
+/datum/codex_entry/proc/get_codex_footer(mob/presenting_to)
 	. = list()
 	if(length(categories))
 		for(var/datum/codex_category/category in categories)
@@ -77,7 +77,7 @@
 
 // TODO: clean up codex bodies until trimming linebreaks is unnecessary.
 #define TRIM_LINEBREAKS(TEXT) replacetext(replacetext(TEXT, SScodex.trailingLinebreakRegexStart, null), SScodex.trailingLinebreakRegexEnd, null)
-/datum/codex_entry/proc/get_codex_body(var/mob/presenting_to, var/include_header = TRUE, var/include_footer = TRUE)
+/datum/codex_entry/proc/get_codex_body(mob/presenting_to, include_header = TRUE, include_footer = TRUE)
 
 	. = list()
 	if(include_header && presenting_to)

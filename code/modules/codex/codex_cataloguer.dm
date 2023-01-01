@@ -10,12 +10,12 @@
 	var/scan_range
 	var/image/holder_image
 
-/obj/screen/scan_radius/proc/set_radius(var/new_range)
+/obj/screen/scan_radius/proc/set_radius(new_range)
 	if(new_range != scan_range)
 		scan_range = max(1, new_range)
 		update_icon()
 
-/obj/screen/scan_radius/proc/fade_out(var/mob/user, var/fade_time)
+/obj/screen/scan_radius/proc/fade_out(mob/user, fade_time)
 	set waitfor = FALSE
 	animate(src, alpha = 0, time = fade_time)
 	if(fade_time > 0)

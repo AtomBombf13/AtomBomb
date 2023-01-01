@@ -6,7 +6,7 @@ var/global/list/unlocked_codex_scannables = list()
 	var/associated_entry
 	var/scan_delay = 5 SECONDS
 
-/datum/extension/scannable/New(var/datum/holder, var/entry_value, var/_scan_delay)
+/datum/extension/scannable/New(datum/holder, entry_value, _scan_delay)
 	..()
 	associated_entry = entry_value
 	if(isnum(_scan_delay))
@@ -19,7 +19,7 @@ var/global/list/unlocked_codex_scannables = list()
 	var/worth_points = 1
 	var/category
 
-/datum/codex_entry/scannable/New(var/_display_name, var/list/_associated_paths, var/list/_associated_strings, var/_lore_text, var/_mechanics_text, var/_antag_text)
+/datum/codex_entry/scannable/New(_display_name, /list/_associated_paths, /list/_associated_strings, _lore_text, _mechanics_text, _antag_text)
 	..()
 	if(category)
 		var/datum/codex_category/cat = SScodex.categorized_categories[category]
