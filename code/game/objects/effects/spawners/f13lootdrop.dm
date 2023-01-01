@@ -815,7 +815,7 @@
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/aer14 = 20,
 				/obj/effect/spawner/bundle/f13/plasmaglock = 25,
-				/obj/effect/spawner/bundle/f13/ionrifle = 10
+				/obj/effect/spawner/bundle/f13/ionrifle = 20
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
@@ -1377,7 +1377,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				)
 
 /obj/effect/spawner/bundle/f13/ionrifle
-	name = "ion rifle and ammo spawner"
+	name = "pulse rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/energy/ionrifle,
 				/obj/item/stock_parts/cell/ammo/mfc
