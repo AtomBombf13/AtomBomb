@@ -477,7 +477,7 @@
 
 
 /datum/block_parry_data/waki
-	parry_stamina_cost = 8
+	parry_stamina_cost = 50
 	parry_time_windup = 0
 	parry_time_active = 15
 	parry_time_spindown = 0
@@ -488,7 +488,7 @@
 	parry_efficiency_considered_successful = 80
 	parry_efficiency_perfect = 120
 	parry_failed_stagger_duration = 2 SECONDS
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1.9)
+	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1)
 
 /obj/item/melee/smith/wakizashi/ComponentInitialize()
 	. = ..()
@@ -549,7 +549,7 @@
 	sharpness = SHARP_EDGED
 
 /datum/block_parry_data/sword
-	parry_stamina_cost = 12
+	parry_stamina_cost = 50
 	parry_time_windup = 0.5
 	parry_time_active = 4
 	parry_time_spindown = 1
@@ -586,7 +586,7 @@
 	block_parry_data = /datum/block_parry_data/smithsaber
 
 /datum/block_parry_data/smithsaber
-	parry_stamina_cost = 10
+	parry_stamina_cost = 50
 	parry_time_active = 8
 	parry_time_perfect = 2
 	parry_time_perfect_leeway = 2
@@ -598,7 +598,7 @@
 	parry_efficiency_to_counterattack = 100
 	parry_efficiency_considered_successful = 100
 	parry_efficiency_perfect = 120
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
+	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1)
 
 
 //////////////////////////////////
@@ -626,7 +626,7 @@
 	hitsound = 'modular_atom/blacksmith/sound/hit_sword.ogg'
 
 /datum/block_parry_data/smithkatana
-	parry_stamina_cost = 10
+	parry_stamina_cost = 50
 	parry_time_active = 6
 	parry_time_perfect = 3
 	parry_time_perfect_leeway = 3
@@ -638,7 +638,7 @@
 	parry_efficiency_to_counterattack = 100
 	parry_efficiency_considered_successful = 120
 	parry_efficiency_perfect = 120
-	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 4)
+	parry_data = list(PARRY_COUNTERATTACK_MELEE_ATTACK_CHAIN = 1)
 
 /obj/item/twohanded/smithed/katana/ComponentInitialize()
 	. = ..()
