@@ -142,7 +142,7 @@
 	. = ..()
 	loaded_disk = new(src)
 
-/obj/item/cataloguer/proc/set_scan_radius(var/new_range, var/forced)
+/obj/item/cataloguer/proc/set_scan_radius(new_range, forced)
 	if(!forced && new_range == scan_range)
 		return FALSE
 
@@ -198,7 +198,7 @@
 	if(loaded_disk)
 		to_chat(user, "It has \a [loaded_disk] slotted into the storage port. The display indicates it currently holds [loaded_disk.data] Good Explorer Point\s.")
 
-/obj/item/cataloguer/proc/stop_scan(var/interrupted = TRUE, var/mob/user, var/fade_out = 0)
+/obj/item/cataloguer/proc/stop_scan(interrupted = TRUE, mob/user, fade_out = 0)
 
 	if(!scanning)
 		return
@@ -218,7 +218,7 @@
 	scanning = null
 	update_icon()
 
-/obj/item/cataloguer/proc/start_scan(var/atom/target, var/mob/user)
+/obj/item/cataloguer/proc/start_scan(atom/target, mob/user)
 
 	set waitfor = FALSE
 

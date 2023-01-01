@@ -88,7 +88,7 @@ SUBSYSTEM_DEF(codex)
 /datum/controller/subsystem/codex/proc/get_entry_by_string(string)
 	return entries_by_string[codex_sanitize(string)]
 
-/datum/controller/subsystem/codex/proc/present_codex_entry(var/mob/presenting_to, var/datum/codex_entry/entry)
+/datum/controller/subsystem/codex/proc/present_codex_entry(mob/presenting_to, datum/codex_entry/entry)
 	if(entry && istype(presenting_to) && presenting_to.client)
 		var/datum/browser/popup = new(presenting_to, "codex\ref[entry]", "Codex", nheight=425)
 		popup.set_content(parse_links(jointext(entry.get_codex_body(presenting_to), null), presenting_to))
