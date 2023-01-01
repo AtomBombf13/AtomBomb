@@ -65,7 +65,7 @@ const VendingRow = (props, context) => {
         {custom && (
           <Button
             fluid
-            content={data.access ? 'FREE' : product.price + ' cr'}
+            content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' caps'}
             onClick={() => act('dispense', {
               'item': product.name,
             })} />
@@ -79,7 +79,7 @@ const VendingRow = (props, context) => {
                 || product.price > data.user.cash
               )
             )}
-            content={free ? 'FREE' : product.price + ' cr'}
+            content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' caps'}
             onClick={() => act('vend', {
               'ref': product.ref,
             })} />
@@ -98,6 +98,7 @@ export const Vending = (props, context) => {
     coin_records = [],
     hidden_records = [],
     stock,
+    insertedCaps,
   } = data;
   let inventory;
   let custom = false;
@@ -126,6 +127,16 @@ export const Vending = (props, context) => {
       height={600}
       resizable>
       <Window.Content scrollable>
+        {!data.forceFree && (
+          <section title="Welcome User!">
+            <box>
+              Caps inserted: {insertedCaps} <Button
+                fluid={false}
+                content={"Eject"}
+                onClick={() => act('ejectCaps')} />
+            </box>
+          </section>
+        )}
         {!!onstation && (
           <Section title="User">
             {user && (

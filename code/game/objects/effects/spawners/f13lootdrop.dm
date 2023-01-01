@@ -888,7 +888,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid
 	name = "mid tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/trail,
-				/obj/effect/spawner/bundle/f13/service,
+				/obj/effect/spawner/bundle/f13/rangemaster,
 				/obj/effect/spawner/bundle/f13/miniuzi,
 				/obj/effect/spawner/bundle/f13/auto5,
 				/obj/effect/spawner/bundle/f13/m1garand,
@@ -929,7 +929,6 @@
 				/obj/item/gun/ballistic/automatic/bozar = 10,
 				/obj/effect/spawner/bundle/f13/amr = 10,
 				/obj/effect/spawner/bundle/f13/bar = 10,
-				/obj/effect/spawner/bundle/f13/rangemaster = 15,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/g11 = 5,
 				)
@@ -1368,7 +1367,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	name = "rangemaster rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/rangemaster,
-				/obj/item/ammo_box/magazine/m762/
+				/obj/item/ammo_box/magazine/m556/rifle/small
 				)
 
 /obj/effect/spawner/bundle/f13/riotshotgun
