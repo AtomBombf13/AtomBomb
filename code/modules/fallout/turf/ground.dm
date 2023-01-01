@@ -164,8 +164,6 @@
 						/obj/item/stack/crafting/metalparts/five = 30,
 						/obj/item/stack/crafting/goodparts/five = 30,
 						/obj/item/stack/ore/blackpowder/twenty = 10,
-						/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid = 3,
-						/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low = 3
 						)
 
 //For sculpting with more precision, the random picking does not work very well. Slowdown 0.5 instead of 1. No random armor or gunpowder or titanium. Use directions for control. - Pebbles
@@ -390,14 +388,14 @@
 	AM.water_act(5)
 	..()
 
-/turf/open/indestructible/ground/outside/water/Exited(atom/movable/AM, atom/newloc)
+/turf/open/indestructible/ground/outside/water/Exited(atom/movable/AM)
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)
 			return
-		if(!istype(newloc, /turf/open/indestructible/ground/outside/water))
-			to_chat(L, span_warning("You climb out of \the [src]."))
+		if(prob(5))
+			to_chat(L, span_warning("You trudge through \the [src]."))
 	..()
 
 /turf/open/indestructible/ground/outside/water/update_icon()
