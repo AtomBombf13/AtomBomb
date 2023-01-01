@@ -1,4 +1,4 @@
-var/global/list/unlocked_codex_scannables = list()
+GLOBAL_LIST_EMPTY(unlocked_codex_scannables)
 
 /datum/extension/scannable
 	expected_type = /atom
@@ -33,7 +33,7 @@ var/global/list/unlocked_codex_scannables = list()
 /datum/extension/scannable/proc/is_scannable()
 	if(associated_entry)
 		if(ispath(associated_entry, /datum/codex_entry/scannable))
-			return !(associated_entry in global.unlocked_codex_scannables)
+			return !(associated_entry in GLOB.unlocked_codex_scannables)
 		var/datum/codex_entry/scannable/associated_entry_page = SScodex.get_entry_by_string(associated_entry)
 		return istype(associated_entry_page) && associated_entry_page.has_scannable_secrets
 
@@ -46,8 +46,8 @@ var/global/list/unlocked_codex_scannables = list()
 
 		var/datum/codex_entry/scannable/associated_entry_page
 		if(ispath(associated_entry, /datum/codex_entry/scannable))
-			global.unlocked_codex_scannables[associated_entry] = new associated_entry
-			associated_entry_page = global.unlocked_codex_scannables[associated_entry]
+			GLOB.unlocked_codex_scannables[associated_entry] = new associated_entry
+			associated_entry_page = GLOB.unlocked_codex_scannables[associated_entry]
 		else
 			associated_entry_page = SScodex.get_entry_by_string(associated_entry)
 
