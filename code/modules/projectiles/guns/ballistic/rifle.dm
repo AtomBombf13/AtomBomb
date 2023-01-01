@@ -587,10 +587,11 @@
 	init_recoil = HMG_RECOIL(3)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
+	gun_skill_check = null
 	init_firemodes = list(
 		SEMI_AUTO_SNIPER
 	)
-
+	
 	can_bayonet = FALSE
 	can_scope = FALSE
 	zoom_factor = 2
