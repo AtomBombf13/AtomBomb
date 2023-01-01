@@ -297,8 +297,8 @@
 			else
 				induced_slowdown = 8
 				to_chat(L, span_warning("Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems."))
-			armor = armor.modifyRating(melee = -40, bullet = -40, laser = -25, energy = -25)
 			emped = TRUE
+			armor = armor.modifyRating(melee = -40, bullet = -40, laser = -25, energy = -25)
 			slowdown += induced_slowdown
 			L.update_equipment_speed_mods()
 			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), 100) // this used to last a minute on BD
