@@ -1407,8 +1407,8 @@ list(/obj/item/stack/sheet/metal = 20,
 	new /obj/item/weldingtool(src)
 
 /obj/item/storage/box/shopkeeper
-	name = "Shopkeeper's blueprints"
-	desc = "a box of the shopkeeper's blueprints"
+	name = "merchant's blueprints"
+	desc = "a box of the merchant's blueprints"
 
 
 /obj/item/storage/box/shopkeeper/PopulateContents()

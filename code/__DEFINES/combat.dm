@@ -660,7 +660,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_SLOWDOWN_SHOTGUN_AUTO 0.40
 
 /// Refire speed multiplier for manual action guns, cus we no longer care about your cock length
-#define GUN_RIFLEMAN_REFIRE_DELAY_MULT 0.8
+#define GUN_RIFLEMAN_REFIRE_DELAY_MULT 1.2
 
 /// Refire speed multiplier for manual action guns if you're not a pr0 and click-to-cycle it
 #define GUN_AUTOPUMP_REFIRE_DELAY_MULT 1.8
