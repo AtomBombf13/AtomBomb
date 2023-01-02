@@ -159,11 +159,11 @@
 		..()
 
 /obj/item/clothing/accessory/medal/conduct
-	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given. It is often awarded by an officer to a member of their staff."
+	name = "distinguished service medal"
+	desc = "A bronze medal awarded for distinguished service. Whilst a great honor, this is the most basic award given. It is often awarded by a commanding officer to a member of their unit."
 
 /obj/item/clothing/accessory/medal/bronze_heart
-	name = "bronze heart medal"
+	name = "purple heart"
 	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
 	icon_state = "bronze_heart"
 
@@ -199,12 +199,12 @@
 	custom_materials = list(/datum/material/silver=1000)
 
 /obj/item/clothing/accessory/medal/silver/valor
-	name = "medal of valor"
-	desc = "A silver medal awarded for acts of exceptional valor."
+	name = "medal of honor"
+	desc = "A silver medal awarded for acts of exceptional honor."
 
 /obj/item/clothing/accessory/medal/silver/security
-	name = "robust security award"
-	desc = "An award for distinguished combat. Often awarded to security staff."
+	name = "silver star medal"
+	desc = "An award for distinguished combat. Often awarded to elite units."
 
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
@@ -214,17 +214,17 @@
 	custom_materials = list(/datum/material/gold=1000)
 
 /obj/item/clothing/accessory/medal/gold/captain
-	name = "medal of competency"
-	desc = "A golden medal awarded exclusively to those promoted to a command role. It signifies the codified responsibilities of the commander to organization, and their undisputable authority over their staff."
+	name = "commendation medal"
+	desc = "A golden medal awarded exclusively to those promoted to commissioned officer. It signifies the codified responsibilities of a CO to organization, and their undisputable authority over their unit."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/accessory/medal/gold/captain/family
-	name = "old medal"
+	name = "old commendation medal"
 	desc = "A rustic badge pure gold, has been through hell and back by the looks."
 	custom_materials = list(/datum/material/gold=2000)
 
 /obj/item/clothing/accessory/medal/gold/heroism
-	name = "medal of exceptional heroism"
+	name = "star of the Sierra Madre"
 	desc = "An extremely rare golden medal awarded only by as the highest honor and as such, very few exist. This medal is almost never awarded to anybody."
 
 /obj/item/clothing/accessory/medal/plasma
@@ -241,7 +241,7 @@
 		qdel(src)
 
 /obj/item/clothing/accessory/medal/plasma/nobel_science
-	name = "nobel sciences award"
+	name = "medal of science"
 	desc = "A medal which represents significant contributions to the field of science or engineering."
 
 ////////////
@@ -292,14 +292,14 @@
 //////////////
 
 /obj/item/clothing/accessory/lawyers_badge
-	name = "NCR agent's badge"
-	desc = "A polished badge representative of courage, honor, and morally dubious undercover missions."
+	name = "NCR Congressional ID"
+	desc = "A polished badge representing that the owner is a member of the New California Republic House of Congress."
 	icon_state = "lawyerbadge"
 
 /obj/item/clothing/accessory/lawyers_badge/attack_self(mob/user)
 	if(prob(1))
-		user.say("The testimony contradicts the evidence!", forced = "attorney's badge")
-	user.visible_message("[user] shows [user.p_their()] attorney's badge.", span_notice("You show your attorney's badge."))
+		user.say("The testimony contradicts the evidence!", forced = "Congressional ID")
+	user.visible_message("[user] shows [user.p_their()] Congressional ID.", span_notice("You show your Congressional ID."))
 
 /obj/item/clothing/accessory/lawyers_badge/on_uniform_equip(obj/item/clothing/under/U, user)
 	var/mob/living/L = user
