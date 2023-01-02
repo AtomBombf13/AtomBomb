@@ -97,7 +97,7 @@ Access
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	accessory = /obj/item/clothing/accessory/ncr
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d/sierra
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
+	suit = /obj/item/clothing/suit/armor/power_armor/t45d/sierra
 	belt = /obj/item/storage/belt/holster/leg
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	gloves = /obj/item/clothing/gloves/f13/leather
