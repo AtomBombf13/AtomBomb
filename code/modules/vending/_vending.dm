@@ -831,7 +831,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 				purchase_message_cooldown = world.time + 5 SECONDS
 				last_shopper = usr
 			if(price_to_use > stored_caps && !force_free)
-				to_chat(usr, span_alert("Not enough caps to pay for [R.name]!"))
+				to_chat(usr, span_alert("Not enough money to pay for [R.name]!"))
 				vend_ready = TRUE
 				return
 			if(!force_free)

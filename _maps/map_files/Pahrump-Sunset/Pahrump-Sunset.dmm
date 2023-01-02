@@ -2088,11 +2088,9 @@
 	},
 /area/f13/wasteland)
 "aiZ" = (
-/obj/machinery/vending/nukacolavend,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/building)
+/obj/machinery/mineral/money_exchanger/usd,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
 "aja" = (
 /obj/machinery/mineral/wasteland_vendor/crafting,
 /turf/open/floor/f13{
@@ -3595,10 +3593,6 @@
 "aoG" = (
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/building)
-"aoH" = (
-/obj/machinery/vending/nukacolavend,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "aoJ" = (
@@ -7578,10 +7572,6 @@
 /obj/machinery/reagentgrinder,
 /turf/open/floor/plasteel/f13/vault_floor/red/white/whiteredchess/whiteredchess2,
 /area/f13/ncr)
-"aDi" = (
-/obj/machinery/vending/nukacolavend,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "aDj" = (
 /obj/structure/mirror{
 	pixel_y = 32
@@ -31966,12 +31956,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
-"hPK" = (
-/obj/machinery/vending/nukacolavend,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/building/trainstation)
 "hPL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/rust,
@@ -41673,10 +41657,6 @@
 /obj/item/storage/box/drinkingglasses,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building/mall)
-"mnr" = (
-/obj/machinery/vending/nukacolavend,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/village)
 "mns" = (
 /obj/machinery/computer/operating{
 	dir = 1
@@ -42946,14 +42926,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
-"mQV" = (
-/obj/machinery/vending/nukacolavendfull,
-/obj/machinery/light{
-	dir = 8;
-	pixel_y = -16
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
-/area/f13/building/mall)
 "mRk" = (
 /obj/structure/rack,
 /obj/item/wirerod,
@@ -47682,7 +47654,7 @@
 	pixel_y = 12
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/mineral/money_printer/legion,
+/obj/machinery/mineral/money_exchanger/legion,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/legion)
 "pgo" = (
@@ -51439,15 +51411,6 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland)
-"qUH" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/obj/machinery/vending/nukacolavendfull,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/building/mall)
 "qVf" = (
 /obj/machinery/smartfridge/chemistry,
 /turf/open/indestructible/ground/outside/ruins{
@@ -57171,7 +57134,7 @@
 /area/f13/building/massfusion)
 "tLH" = (
 /obj/machinery/light,
-/obj/machinery/mineral/money_printer/usd,
+/obj/machinery/mineral/money_exchanger/usd,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom0"
 	},
@@ -61704,7 +61667,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
 "vXu" = (
-/obj/machinery/mineral/money_printer/ncr,
+/obj/machinery/mineral/money_exchanger/ncr,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom0"
 	},
@@ -64351,6 +64314,15 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
+"xjY" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/mineral/money_exchanger/ncr,
+/turf/open/floor/plasteel/f13/vault_floor/dark{
+	icon_state = "darkdirty"
+	},
+/area/f13/ncr)
 "xkf" = (
 /obj/effect/decal/waste{
 	icon_state = "goo12"
@@ -77368,7 +77340,7 @@ aLF
 bAV
 hmu
 lZB
-aNa
+xjY
 bzx
 prQ
 ean
@@ -89469,7 +89441,7 @@ afz
 anC
 anW
 afz
-aoH
+xyU
 aoZ
 faP
 afz
@@ -90634,7 +90606,7 @@ aOk
 aOk
 hkV
 bjb
-aOk
+aaT
 biO
 etg
 cFK
@@ -92851,7 +92823,7 @@ iCg
 oUj
 oUj
 aaQ
-aDi
+oUj
 aFG
 oJz
 oUj
@@ -100811,7 +100783,7 @@ xnl
 oUj
 aCx
 azh
-aDi
+oUj
 dPr
 azh
 aEp
@@ -107001,7 +106973,7 @@ oDW
 mdN
 aJs
 aIF
-mnr
+aIF
 azh
 yfV
 nVx
@@ -117391,7 +117363,7 @@ bik
 euM
 fuB
 nDc
-aiZ
+afS
 fuB
 beb
 ouU
@@ -120339,7 +120311,7 @@ liO
 aID
 kzL
 wDH
-mQV
+aGc
 aGN
 aGN
 aGN
@@ -124453,7 +124425,7 @@ fnj
 rpQ
 vNI
 wDb
-qUH
+fnj
 koL
 lWe
 ejn
@@ -128255,7 +128227,7 @@ lRe
 lRe
 lRe
 lRe
-ean
+aiZ
 ean
 ean
 ean
@@ -129042,7 +129014,7 @@ eAh
 jZr
 aGf
 eAh
-hPK
+eAh
 lRe
 aae
 aae

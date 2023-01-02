@@ -136,7 +136,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 		Itm.forceMove(src)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You loaded [Itm.name] to vending machine. New price - [content[Itm]] caps..")
+		to_chat(usr, "You loaded [Itm.name] to vending machine. New price - [content[Itm] * 250] USD..")
 		src.ui_interact(usr)
 	else
 		if(!is_available_category(Itm))
@@ -430,14 +430,14 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 				for(var/obj/item/Itm in content)
 					var/item_name = url_encode(Itm.name)
 					var/price = content[Itm]
-					dat += "<a href='byond://?src=\ref[src];vend=[item_name];current_price=[price]'>[Itm.name] | [price] caps</a> "
-					dat += "<a href='byond://?src=\ref[src];examine=[item_name];current_price=[price]'>Examine</a><br> "
+					dat += "<a href='byond://?src=\ref[src];vend=[item_name];current_price=[price]'>[Itm.name] | [price * 250] USD</a> "
+					dat += "<a href='byond://?src=\ref[src];examine=[item_name];current_price=[price * 250]'>Examine</a><br> "
 
 		//--- Service
 		if(STATE_SERVICE)
 			dat += "<h3>Machine setup menu</h3>"
 			dat += "<div class='statusDisplay'>"
-			dat += "<font color='green'>Caps stored - [stored_caps]</font>"
+			dat += "<font color='green'>USD stored - [stored_caps * 250]</font>"
 			dat += "<a href='?src=\ref[src];removecaps=1'>Unload</a>"
 			dat += "<h4> Items </h4> "
 
@@ -447,15 +447,15 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 				for(var/obj/item/Itm in content)
 					var/item_name = url_encode(Itm.name)
 					var/price = content[Itm]
-					dat += "<b>[Itm.name]</b> - [content[Itm]] caps"
-					dat += "<a href='?src=\ref[src];setprice=[item_name];current_price=[price]'>Set price</a> "
-					dat += "<a href='?src=\ref[src];remove=[item_name];current_price=[price]'>Remove</a> <br>"
+					dat += "<b>[Itm.name]</b> - [content[Itm] * 250] USD"
+					dat += "<a href='?src=\ref[src];setprice=[item_name];current_price=[price * 250]'>Set price</a> "
+					dat += "<a href='?src=\ref[src];remove=[item_name];current_price=[price * 250]'>Remove</a> <br>"
 
 		// --- Vend
 		if(STATE_VEND)
 			dat += "<h3>Select an item</h3>"
 			dat += "<div class='statusDisplay'>"
-			dat += "<font color = 'red'>Waiting for [expected_price] caps!</font>"
+			dat += "<font color = 'red'>Waiting for [expected_price * 250] USD!</font>"
 			dat += "<a href='?src=\ref[src];back=1'> Back</a> "
 
 		// --- Lock Open
@@ -942,7 +942,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Bottle caps value stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "<b>USD value stored:</b> [stored_caps * 250]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
@@ -958,10 +958,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<b>Vendor goods:</b><BR><table border='0' width='300'>"
 	if (GLOB.player_list.len>50)
 		for(var/datum/data/wasteland_equipment/prize in highpop_list)
-			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
+			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost * 250]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
 	else
 		for(var/datum/data/wasteland_equipment/prize in prize_list)
-			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
+			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost * 250]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
 	dat += "</table>"
 	dat += "</div>"
 
@@ -981,7 +981,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			to_chat(usr, span_warning("Error: Invalid choice!"))
 			return
 		if(prize.cost > stored_caps)
-			to_chat(usr, span_warning("Error: Insufficent bottle caps value for [prize.equipment_name]!"))
+			to_chat(usr, span_warning("Error: Insufficent USD for [prize.equipment_name]!"))
 		else
 			stored_caps -= prize.cost
 			GLOB.vendor_cash += prize.cost
@@ -994,7 +994,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			to_chat(usr, span_warning("Error: Invalid choice!"))
 			return
 		if(prize.cost > stored_caps)
-			to_chat(usr, span_warning("Error: Insufficent bottle caps value for [prize.equipment_name]!"))
+			to_chat(usr, span_warning("Error: Insufficent USD for [prize.equipment_name]!"))
 		else
 			stored_caps -= prize.cost
 			GLOB.vendor_cash += prize.cost
@@ -1041,10 +1041,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	src.ui_interact(usr)
 
 
-/**********************Federal Reserve Money Printer**************************/
-/obj/machinery/mineral/money_printer/usd
-	name = "Federal Reserve Money Printer"
-	desc = "The Commonwealth Bank Minting Machine, once a staple of American Banking across all the US Commonwealths. This one, along with most seen across the various wastelands, is rusted and barely functional, but it keeps on ticking nonetheless. Much like Old America."
+/**********************Federal Reserve Money Exchanger**************************/
+/obj/machinery/mineral/money_exchanger/usd
+	name = "Federal Reserve Currency Exchanger"
+	desc = "The Commonwealth Bank Currency Exchanger, once a staple of American Banking across all the US Commonwealths. This one, along with most seen across the various wastelands, is rusted and barely functional, but it keeps on ticking nonetheless. Much like Old America."
 	icon = 'icons/WVM/machines.dmi'
 	icon_state = "liberationstation_idle" //placeholder
 
@@ -1056,7 +1056,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 	var/stored_caps = 0	// store caps
 
-/obj/machinery/mineral/money_printer/usd/ui_interact(mob/user)
+/obj/machinery/mineral/money_exchanger/usd/ui_interact(mob/user)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
@@ -1074,24 +1074,24 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<br>"
 
 
-	var/datum/browser/popup = new(user, "tradingvendor", "Federal Reserve Money Printer", 400, 500)
+	var/datum/browser/popup = new(user, "tradingvendor", "Federal Reserve Currency Exchanger", 400, 500)
 	popup.set_content(dat)
 	popup.open()
 	return
 
-/obj/machinery/mineral/money_printer/usd/Topic(href, href_list)
+/obj/machinery/mineral/money_exchanger/usd/Topic(href, href_list)
 	if(..())
 		return
 	if(href_list["choice"] == "eject")
 		remove_all_caps()
 
-/obj/machinery/mineral/money_printer/usd/attackby(obj/item/I, mob/user, params)
+/obj/machinery/mineral/money_exchanger/usd/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/stack/f13Cash))
 		add_caps(I)
 	else
 		attack_hand(user)
 
-/obj/machinery/mineral/money_printer/usd/proc/add_caps(obj/item/I)
+/obj/machinery/mineral/money_exchanger/usd/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/caps))
 		var/obj/item/stack/f13Cash/currency = I
 		var/inserted_value = FLOOR(currency.amount * 1, 1)
@@ -1124,7 +1124,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
 
-/obj/machinery/mineral/money_printer/usd/proc/remove_all_caps()
+/obj/machinery/mineral/money_exchanger/usd/proc/remove_all_caps()
 	if(stored_caps <= 0)
 		return
 	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
@@ -1140,10 +1140,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 	src.ui_interact(usr)
 
-/**********************NCR Money Printer**************************/
-/obj/machinery/mineral/money_printer/ncr
-	name = "NCR Money Printer"
-	desc = "New California Republic Reserves Money Printer MK.I. Heavily weathered from years of neglect and poor maintenance. Miraculously it still works, somehow. The quote “In order to give, you must first take. Todays taxes, tomorrows paycheck.” Can be seen on across the  top of the machine."
+/**********************NCR Money exchanger**************************/
+/obj/machinery/mineral/money_exchanger/ncr
+	name = "NCR Currency Exchanger"
+	desc = "New California Republic Reserves Currency Exchanger MK.I. Heavily weathered from years of neglect and poor maintenance. Miraculously it still works, somehow. The quote “In order to give, you must first take. Todays taxes, tomorrows paycheck.” Can be seen on across the  top of the machine."
 	icon = 'icons/WVM/new_vendors.dmi'
 	icon_state = "ncr_money_printer" //placeholder
 
@@ -1155,7 +1155,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 	var/stored_caps = 0	// store caps
 
-/obj/machinery/mineral/money_printer/ncr/ui_interact(mob/user)
+/obj/machinery/mineral/money_exchanger/ncr/ui_interact(mob/user)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
@@ -1173,24 +1173,24 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<br>"
 
 
-	var/datum/browser/popup = new(user, "tradingvendor", "NCR Money Printer", 400, 500)
+	var/datum/browser/popup = new(user, "tradingvendor", "NCR Currency Exchanger", 400, 500)
 	popup.set_content(dat)
 	popup.open()
 	return
 
-/obj/machinery/mineral/money_printer/ncr/Topic(href, href_list)
+/obj/machinery/mineral/money_exchanger/ncr/Topic(href, href_list)
 	if(..())
 		return
 	if(href_list["choice"] == "eject")
 		remove_all_caps()
 
-/obj/machinery/mineral/money_printer/ncr/attackby(obj/item/I, mob/user, params)
+/obj/machinery/mineral/money_exchanger/ncr/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/stack/f13Cash))
 		add_caps(I)
 	else
 		attack_hand(user)
 
-/obj/machinery/mineral/money_printer/ncr/proc/add_caps(obj/item/I)
+/obj/machinery/mineral/money_exchanger/ncr/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/caps))
 		var/obj/item/stack/f13Cash/currency = I
 		var/inserted_value = FLOOR(currency.amount * 1, 1)
@@ -1223,7 +1223,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
 
-/obj/machinery/mineral/money_printer/ncr/proc/remove_all_caps()
+/obj/machinery/mineral/money_exchanger/ncr/proc/remove_all_caps()
 	if(stored_caps <= 0)
 		return
 	var/obj/item/stack/f13Cash/N = new /obj/item/stack/f13Cash/ncr
@@ -1240,8 +1240,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	src.ui_interact(usr)
 
 /**********************Legion Coin Minter**************************/
-/obj/machinery/mineral/money_printer/legion
-	name = "Legion Coin Minter"
+/obj/machinery/mineral/money_exchanger/legion
+	name = "Legion Currency Exchanger"
 	desc = "Caesar’s Legion has sized the means of production; having refitted this Pre-War Coin Press Machine to print bastardized American coins with Caesar’s face and a Bull on them. The words “Property of Officiorum Ab Industria. The Only Wealth Which You Will Keep Forever Is The Wealth You Have Given Away.” have been stamped into the side of the machine with small metal lettering."
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "coinpress0" //placeholder
@@ -1254,7 +1254,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 
 	var/stored_caps = 0	// store caps
 
-/obj/machinery/mineral/money_printer/legion/ui_interact(mob/user)
+/obj/machinery/mineral/money_exchanger/legion/ui_interact(mob/user)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
@@ -1272,24 +1272,24 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<br>"
 
 
-	var/datum/browser/popup = new(user, "tradingvendor", "Legion Coin Minter", 400, 500)
+	var/datum/browser/popup = new(user, "tradingvendor", "Legion Currency Exchanger", 400, 500)
 	popup.set_content(dat)
 	popup.open()
 	return
 
-/obj/machinery/mineral/money_printer/legion/Topic(href, href_list)
+/obj/machinery/mineral/money_exchanger/legion/Topic(href, href_list)
 	if(..())
 		return
 	if(href_list["choice"] == "eject")
 		remove_all_caps()
 
-/obj/machinery/mineral/money_printer/legion/attackby(obj/item/I, mob/user, params)
+/obj/machinery/mineral/money_exchanger/legion/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/stack/f13Cash))
 		add_caps(I)
 	else
 		attack_hand(user)
 
-/obj/machinery/mineral/money_printer/legion/proc/add_caps(obj/item/I)
+/obj/machinery/mineral/money_exchanger/legion/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/caps))
 		var/obj/item/stack/f13Cash/currency = I
 		var/inserted_value = FLOOR(currency.amount * 1, 1)
@@ -1322,7 +1322,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
 
-/obj/machinery/mineral/money_printer/legion/proc/remove_all_caps()
+/obj/machinery/mineral/money_exchanger/legion/proc/remove_all_caps()
 	if(stored_caps <= 0)
 		return
 	var/obj/item/stack/f13Cash/L = new /obj/item/stack/f13Cash/denarius
