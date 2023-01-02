@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	var/pinklight = "Light_Pink"
 	var/errorlight = "Error_Red"
 
-/obj/machinery/announcement_system/Mr_Yuma //ATOM EDIT, adds a lore friendly announcer in the form of Mr. Yuma, a parody of Mr. New Vegas
+/obj/machinery/announcement_system/Mr_Yuma //ATOM EDIT -Start- , adds a lore friendly announcer in the form of Mr. Yuma, a parody of Mr. New Vegas
 	density = TRUE
 	name = "Mr. Yuma"
 	desc = "A Modified Autonomos AI Persona locutor, designed by Robco Industries, which announce many things over the radio."
@@ -47,7 +47,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 
 	arrival = "%PERSON, the %RANK has joined us today in this fine day for the week"
 	newhead = "%PERSON, the %RANK is the head honcho of the barn"
-
+//ATOM EDIT -End-
 /obj/machinery/announcement_system/Initialize()
 	. = ..()
 	GLOB.announcement_systems += src
@@ -60,12 +60,12 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	else
 		icon_state = (panel_open ? "AAS_Off_Open" : "AAS_Off")
 
-/obj/machinery/announcement_system/Mr_Yuma/update_icon_state()
+/obj/machinery/announcement_system/Mr_Yuma/update_icon_state() //ATOM Edit -starts- Mr. Yuma's sprites
 	if(is_operational())
 		icon_state = (panel_open ? "Mr_Yuma_On_Open" : "Mr_Yuma_On")
 	else
 		icon_state = (panel_open ? "Mr_Yuma_Off_Open" : "Mr_Yuma_Off")
-
+//ATOM EDIT -End-
 /obj/machinery/announcement_system/update_overlays()
 	. = ..()
 	if(arrivalToggle)
@@ -112,10 +112,10 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 		message = CompileText(arrival, user, rank)
 	else if(message_type == "NEWHEAD" && newheadToggle)
 		message = CompileText(newhead, user, rank)
-	else if(message_type == "FACTIONLEAVE")
+	else if(message_type == "FACTIONLEAVE") //ATOM EDIT -Start-, announcements for the user matrixing, either alive or alivent
 		message = CompileText(factionleave, user, rank)
 	else if(message_type == "FACTIONLEAVEDEAD")
-		message = CompileText(factionleavedead, user, rank)
+		message = CompileText(factionleavedead, user, rank) //ATOM EDIT -End-
 	else if(message_type == "ARRIVALS_BROKEN")
 		message = "The arrivals shuttle has been damaged. Docking for repairs..."
 

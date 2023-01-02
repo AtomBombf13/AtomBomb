@@ -322,18 +322,18 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 		dat += "."
 	message_admins(dat)
 	log_admin(dat)
+	//ATOM EDIT -Start-
 	if(departing_mob.stat == DEAD)
 		departing_mob.visible_message(span_notice("[user] pushes the body of [departing_mob] over the border. They're someone else's problem now."))
 		if(GLOB.announcement_systems.len)
 			var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
 			announcer.announce("FACTIONLEAVEDEAD", departing_mob.real_name, departing_mob.job, list())
-			message_admins("sent the announcement")
 	else
 		departing_mob.visible_message(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] crosses the border and departs the area."))
 		if(GLOB.announcement_systems.len)
 			var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
 			announcer.announce("FACTIONLEAVE", departing_mob.real_name, departing_mob.job, list())
-			message_admins("sent the announcement")
+	//ATOM EDIT -End- sends an announcement when someones gets existent'ed depending on their status 
 	departing_mob.despawn()
 
 
