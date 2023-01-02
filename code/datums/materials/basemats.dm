@@ -213,7 +213,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "adamantine"
 	desc = "A powerful material made out of magic, I mean science!"
 	color = "#6d7e8e"
-	strength_modifier = 1.3
+	strength_modifier = 1.2
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/adamantine
 	value_per_unit = 0.25
@@ -298,7 +298,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	desc = "Tybel gb-Ratvar"
 	color = "#917010"
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
-	strength_modifier = 1.3 // Replicant Alloy is very good for skull beatings..
+	strength_modifier = 1.2 // Replicant Alloy is very good for skull beatings..
 	sheet_type = /obj/item/stack/tile/brass
 	value_per_unit = 0.75
 	armor_modifiers = list("melee" = 1.4, "bullet" = 1.4, "laser" = 0, "energy" = 0, "bomb" = 1.4, "bio" = 1.2, "rad" = 1.5, "fire" = 1.5, "acid" = 1.5) //But it has.. a few problems that can't easily be compensated for.
@@ -308,7 +308,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "bronze"
 	desc = "Clock Cult? Never heard of it."
 	color = "#92661A"
-	strength_modifier = 1.1
+	strength_modifier = 1
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/bronze
 	value_per_unit = 0.025
