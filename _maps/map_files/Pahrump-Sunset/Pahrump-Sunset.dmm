@@ -8866,6 +8866,7 @@
 /obj/item/storage/bag/plants,
 /obj/item/storage/bag/plants,
 /obj/item/melee/onehanded/knife/switchblade,
+/obj/item/reagent_containers/glass/bucket/wood,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/ncr)
 "aHo" = (
@@ -17998,6 +17999,15 @@
 /area/f13/city)
 "bCM" = (
 /obj/structure/fermenting_barrel,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
+"bDa" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/storage/bag/plants,
+/obj/item/storage/bag/plants,
+/obj/item/shovel/spade,
+/obj/item/shovel/spade,
+/obj/item/reagent_containers/glass/bucket/wood,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "bDx" = (
@@ -47623,6 +47633,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/f13/building)
+"peV" = (
+/obj/structure/simple_door/interior,
+/obj/item/storage/bag/plants,
+/turf/open/floor/wood_common,
+/area/f13/village)
 "pfz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -66021,6 +66036,10 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
+"xZV" = (
+/obj/machinery/seed_extractor,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "yaf" = (
 /obj/machinery/camera/autoname{
 	invuln = null;
@@ -77099,7 +77118,7 @@ aOk
 aGR
 aOk
 aGR
-aOk
+xZV
 bAu
 bAu
 bAu
@@ -78127,7 +78146,7 @@ aOk
 aOk
 btA
 aOk
-aOk
+bDa
 bAu
 bAu
 bAu
@@ -83525,7 +83544,7 @@ ean
 bjP
 kNQ
 cjX
-oCS
+peV
 bQx
 jJk
 hmq
