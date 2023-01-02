@@ -991,6 +991,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] dollar value to a vending machine.")
 		src.ui_interact(usr)
+		if(inserted_value < 1)
+			to_chat(usr, "We don't accept amounts less that 250 USD!")
 	else
 		to_chat(usr, "We only accept the American dollar here!")
 		return

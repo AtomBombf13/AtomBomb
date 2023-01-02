@@ -181,7 +181,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			onclose(usr, "vending")
 		else
 			playsound(src, 'sound/machines/DeniedBeep.ogg', 60, 1)
-			to_chat(usr, "Not enough caps.")
+			to_chat(usr, "Not enough money.")
 	else
 		to_chat(usr, "We only accept the American dollar here!")
 		return
@@ -1020,6 +1020,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] dollar value to a vending machine.")
 		src.ui_interact(usr)
+		if(inserted_value < 1)
+			to_chat(usr, "We don't accept amounts less that 250 USD!")
 	else
 		to_chat(usr, "We only accept the American dollar here!")
 		return
