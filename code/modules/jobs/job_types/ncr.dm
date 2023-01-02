@@ -857,7 +857,7 @@ Access
 	backpack = /obj/item/storage/backpack/satchel/trekker
 	suit_store = /obj/item/gun/ballistic/shotgun/police
 	backpack_contents = list(
-		/obj/effect/spawner/lootdrop/f13/ncr_c_ration = 1,
+		/obj/item/storage/box/ration/menu_three = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 3,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
