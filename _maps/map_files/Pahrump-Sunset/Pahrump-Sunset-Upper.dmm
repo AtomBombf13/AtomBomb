@@ -6336,24 +6336,6 @@
 /area/f13/building)
 "miU" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big{
-	pixel_x = 3
-	},
-/obj/item/clothing/head/helmet/riot{
-	pixel_y = 6
-	},
-/obj/item/clothing/head/helmet/riot{
-	pixel_y = 3
-	},
-/obj/item/clothing/head/helmet/riot,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -12780,6 +12762,12 @@
 /area/f13/city)
 "xUb" = (
 /obj/structure/rack,
+/obj/item/clothing/suit/armor/medium/combat/town,
+/obj/item/clothing/suit/armor/medium/combat/town,
+/obj/item/clothing/suit/armor/medium/combat/town,
+/obj/item/clothing/head/helmet/f13/combat/town,
+/obj/item/clothing/head/helmet/f13/combat/town,
+/obj/item/clothing/head/helmet/f13/combat/town,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -36224,9 +36212,9 @@ fbK
 uKh
 lXL
 dYT
-miU
-aib
 xUb
+aib
+miU
 dYT
 nnw
 dYT
@@ -36481,9 +36469,9 @@ fbK
 uKh
 uKh
 dYT
-xUb
+miU
 xHV
-xUb
+miU
 dYT
 npY
 dYT
@@ -36740,7 +36728,7 @@ uKh
 dYT
 mrM
 xHV
-xUb
+miU
 dYT
 nsa
 dYT
@@ -36997,7 +36985,7 @@ uKh
 dYT
 tzD
 xHV
-xUb
+miU
 dYT
 hYA
 hYA
