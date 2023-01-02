@@ -203,11 +203,12 @@ Access
 	belt = /obj/item/storage/belt/military/ncr
 	r_pocket = /obj/item/binoculars
 	backpack_contents = list(
+		/obj/item/storage/lockbox/medal = 1,
 		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/megaphone = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
 		/obj/item/lighter = 1,
-		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 1,
+		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 2,
 		/obj/item/melee/onehanded/knife/trench = 1
 		)
 

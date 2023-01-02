@@ -348,7 +348,7 @@
 	icon_state = "t45dpowerarmor_bos"
 	item_state = "t45dpowerarmor_bos"
 
-/obj/item/clothing/suit/armor/f13/power_armor/t45d/sierra
+/obj/item/clothing/suit/armor/power_armor/t45d/sierra
 	name = "sierra power armor"
 	desc = "A captured set of T-45d power armor put into use by the NCR, it's been heavily modified and decorated with the head of a bear and intricate gold trimming. A two headed bear is scorched into the breastplate."
 	icon_state = "sierra"

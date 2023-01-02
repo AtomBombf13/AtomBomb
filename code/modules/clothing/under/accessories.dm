@@ -224,7 +224,7 @@
 	custom_materials = list(/datum/material/gold=2000)
 
 /obj/item/clothing/accessory/medal/gold/heroism
-	name = "star of the Sierra Madre"
+	name = "star of Sierra Madre"
 	desc = "An extremely rare golden medal awarded only by as the highest honor and as such, very few exist. This medal is almost never awarded to anybody."
 
 /obj/item/clothing/accessory/medal/plasma
