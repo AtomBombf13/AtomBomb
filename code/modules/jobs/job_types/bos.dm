@@ -77,7 +77,7 @@ Elder
 	title = "Elder"
 	flag = F13ELDER
 	display_order = JOB_DISPLAY_ORDER_ELDER
-	head_announce = list("Security")
+	head_announce = list("BOS")// ATOM EDIT- no matter how much they try, brotherhood are not the town's head
 	total_positions = 0
 	spawn_positions = 0
 	description = "You are the Elder of the local Brotherhood chapter."
@@ -135,7 +135,7 @@ Head Paladin
 	title = "Head Paladin"
 	flag = F13HEADPALADIN
 	display_order = JOB_DISPLAY_ORDER_HEADPALADIN
-	head_announce = list("Security")
+	head_announce = list("BOS")//ATOM EDIT - Just to make sure they don't scream at the wrong people
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the acting field commander until the Brotherhood regains its strength enough to place an Elder for the bunker. You are a veteran of many battles and sorties in pursuit of Brotherhood goals; your only weakness may just be your hubris. Your main goals are defense of the Chapter and surveillance of the surrounding region for technology."
@@ -218,7 +218,7 @@ Head Scribe
 	title = "Head Scribe"
 	flag = F13HEADSCRIBE
 	display_order = JOB_DISPLAY_ORDER_HEADSCRIBE
-	head_announce = list("Security")
+	head_announce = list("BOS")//ATOM EDIT- I don't think they would like town to know when they get home
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the foremost experienced scribe remaining in this bunker. Your role is to ensure the safekeeping and proper usage of technology within the Brotherhood. You are also the lead medical expert in this Chapter. Delegate your tasks to your Scribes."
@@ -287,7 +287,7 @@ Head Knight
 	title = "Head Knight"
 	flag = F13HEADKNIGHT
 	display_order = JOB_DISPLAY_ORDER_HEADKNIGHT
-	head_announce = list("Security")
+	head_announce = list("BOS")// ATOM EDIT- whoops, wrong house
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the Head Knight, leader of your respective division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."

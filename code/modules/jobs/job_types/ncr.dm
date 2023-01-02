@@ -69,7 +69,7 @@ Access
 /datum/job/ncr/f13colonel
 	title = "NCR Colonel"
 	flag = F13COLONEL
-	head_announce = list("Security")
+	head_announce = list("NCR")
 	supervisors = "The Republic Senate, High Command"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC, ACCESS_CHANGE_IDS, ACCESS_NCR3, ACCESS_NCR4)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC, ACCESS_CHANGE_IDS, ACCESS_NCR3, ACCESS_NCR4)
@@ -155,7 +155,7 @@ Access
 /datum/job/ncr/f13captain
 	title = "NCR Captain"
 	flag = F13CAPTAIN
-	head_announce = list("Security")
+	head_announce = list("NCR")
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the commanding officer of your company and direct superior to the MPs, the SEA, and the Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."

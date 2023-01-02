@@ -47,6 +47,7 @@ here's a tip, go search DEFINES/access.dm
 	title = "Mayor"
 	flag = F13MAYOR
 	display_order = JOB_DISPLAY_ORDER_MAYOR
+	head_announce = list("Eastwood") //ATOM EDIT, hey, these heads don't have a head_announce variable
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Overseer"

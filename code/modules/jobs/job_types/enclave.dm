@@ -67,6 +67,7 @@ Access
 	title = "Enclave Lieutenant"
 	flag = F13USLT
 	display_order = JOB_DISPLAY_ORDER_F13USLT
+	head_announce = list("Enclave")
 	selection_color = "#686666"
 	total_positions = 0
 	spawn_positions = 0

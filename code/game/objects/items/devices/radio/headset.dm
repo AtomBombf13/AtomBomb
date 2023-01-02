@@ -544,6 +544,11 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot2 = new /obj/item/encryptionkey/ai
 	command = TRUE
 
+/obj/item/radio/headset/silicon/Mr_Yuma //ATOM EDIT, adds an special headset for the announcer with acccess to most channels
+	name = "\proper Integrated Subspace Transceiver "
+	keyslot2 = new /obj/item/encryptionkey/Mr_Yuma
+	command = TRUE
+
 /obj/item/radio/headset/silicon/can_receive(freq, level)
 	return ..(freq, level, TRUE)
 

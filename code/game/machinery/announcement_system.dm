@@ -54,6 +54,10 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	radio = new /obj/item/radio/headset/silicon/ai(src)
 	update_icon()
 
+/obj/machinery/announcement_system/Mr_Yuma/Initialize() //Mr. Yuma, with his charm and sexy voice,gets a special headset for such special AI
+	. = ..()
+	radio = new /obj/item/radio/headset/silicon/Mr_Yuma(src)
+
 /obj/machinery/announcement_system/update_icon_state()
 	if(is_operational())
 		icon_state = (panel_open ? "AAS_On_Open" : "AAS_On")

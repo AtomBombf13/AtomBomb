@@ -322,18 +322,30 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 		dat += "."
 	message_admins(dat)
 	log_admin(dat)
-	//ATOM EDIT -Start-
+	//ATOM EDIT -Start- sends an announcement when someones gets existent'ed depending on their status 
+	var/list/channelstoannounce = list()
+	if(departing_mob.job in GLOB.eastwood_positions)
+		channelstoannounce += list("Eastwood")
+	if(departing_mob.job in GLOB.brotherhood_positions)
+		channelstoannounce += list("BOS")
+	if(departing_mob.job in GLOB.legion_positions)
+		channelstoannounce += list("Legion")
+	if(departing_mob.job in GLOB.ncr_positions)
+		channelstoannounce += list("NCR")
+	if(departing_mob.job in GLOB.enclave_positions)
+		channelstoannounce += list("Enclave")
+	if(departing_mob.job == "Desperado Leader")
+		channelstoannounce += list("Desperados")
 	if(departing_mob.stat == DEAD)
 		departing_mob.visible_message(span_notice("[user] pushes the body of [departing_mob] over the border. They're someone else's problem now."))
 		if(GLOB.announcement_systems.len)
 			var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
-			announcer.announce("FACTIONLEAVEDEAD", departing_mob.real_name, departing_mob.job, list())
+			announcer.announce("FACTIONLEAVEDEAD", departing_mob.real_name, departing_mob.job, channelstoannounce)
 	else
 		departing_mob.visible_message(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] crosses the border and departs the area."))
 		if(GLOB.announcement_systems.len)
 			var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
-			announcer.announce("FACTIONLEAVE", departing_mob.real_name, departing_mob.job, list())
-	//ATOM EDIT -End- sends an announcement when someones gets existent'ed depending on their status 
+			announcer.announce("FACTIONLEAVE", departing_mob.real_name, departing_mob.job, channelstoannounce) // ATOM EDIT -End-
 	departing_mob.despawn()
 
 

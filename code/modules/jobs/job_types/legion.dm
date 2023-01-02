@@ -120,7 +120,7 @@ Access
 /datum/job/CaesarsLegion/Legionnaire/f13centurion
 	title = "Legion Centurion"
 	flag = F13CENTURION
-	head_announce = list("Security")
+	head_announce = list("Leigion")
 	total_positions = 1
 	spawn_positions = 1
 	description = "You are the camp commander and strongest soldier. Use your officers, the Decanii, to delegate tasks, make sure you lead and give orders. Take no disrespect, you are the dominus. If you prove a fool or weak, expect to be dispatched by a stronger subordinate."
@@ -1100,7 +1100,7 @@ Access
 /datum/job/CaesarsLegion/Legionnaire/f13legate
 	title = "Legate"
 	flag = F13LEGATE
-	head_announce = list("Security")
+	head_announce = list("Legion")
 	supervisors = "Caesar"
 	selection_color = "#ff8f8f"
 	req_admin_notify = 1
