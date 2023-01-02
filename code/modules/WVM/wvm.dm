@@ -121,7 +121,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		return
 
 	if(is_available_category(Itm) && is_acceptable_item_state(Itm))
-		var/price = input(usr, "Enter price for " + Itm.name + ".", "Setup Price", basic_price) as null|num
+		var/price = input(usr, "Enter bottle cap value price for " + Itm.name + ".", "Setup Price", basic_price) as null|num
 
 		if(!price)
 			return
