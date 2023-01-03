@@ -12,7 +12,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	hitsound = 'sound/weapons/resonator_blast.ogg'
 	attack_speed = MELEE_SPEED_NORMAL
-	force = 40
+	force = 28
 	armour_penetration = 0.5
 	throwforce = 10
 	throw_range = 3
@@ -60,7 +60,7 @@
 //	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "goliath"
 	item_state = "goliath"
-	force = 50
+	force = 31
 	throw_distance = 3
 
 
