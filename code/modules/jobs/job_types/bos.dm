@@ -626,7 +626,7 @@ Senior Scribe
 
 /datum/outfit/loadout/seniorscribehs
 	name = "Senior Botanist Scribe"
-	backpack_contents = list{
+	backpack_contents = list(
 		/obj/item/clothing/gloves/botanic_leather = 1,
 		/obj/item/storage/belt/utility/gardener = 1,
 		/obj/item/storage/bag/plants = 1,
