@@ -37,11 +37,11 @@
 			lore_text = initial(product.desc)
 			mechanics_text = "This recipe produces \a [initial(product.name)].<br>It should be performed using the crafting menu and requires the following ingredients:"
 
-			var/list/reactant_values = list()
-			for(var/reactant_id in food.reqs)
-				var/obj/item/reactant = reactant_id
-				reactant_values += "[food.reqs[reactant_id]]u <span codexlink='[initial(reactant.name)] (substance)'>[initial(reactant.name)]</span>"
-			mechanics_text += " [jointext(reactant_values, " + ")]"
+			var/list/crafting_requirements = list()
+			for(var/part_id in food.reqs)
+				var/obj/item/part = part_id
+				crafting_requirements += "[food.reqs[part_id]]u <span codexlink='[initial(part.name)] (substance)'>[initial(part.name)]</span>"
+			mechanics_text += " [jointext(crafting_requirements, " + ")]"
 
 
 

@@ -139,7 +139,7 @@ window "infowindow"
 		anchor1 = 2,0
 		anchor2 = 18,0
 		saved-params = "is-checked"
-		text = "Codex"
+		text = "Wasteland Survival Guide"
 		command = "codex"
 	elem "rules"
 		type = BUTTON

@@ -1,7 +1,7 @@
 /datum/codex_entry/girder
 	associated_paths = list(/obj/structure/girder)
 	mechanics_text = "Use material sheets on this while anchored to build a wall. Adding sheets while unanchored will reinforce it.<br>\
-	A false wall can be made by using a screwdriver on this girder, and then adding material sheets.<br>\
+	A false wall can be made by using a crowbar on this girder, and then adding material sheets.<br>\
 	You can dismantle the grider with a wrench."
 	disambiguator = "structure"
 
@@ -14,7 +14,7 @@
 /datum/codex_entry/lattice
 	associated_paths = list(/obj/structure/lattice)
 	mechanics_text = "Add a metal floor tile to build a floor on top of the lattice.<br>\
-	Lattices can be made by applying rods to a space tile."
+	Lattices can be made by applying rods to a tile with no flooring. If you are trying to make a bridge, you will need supports every couple of feet!"
 	disambiguator = "structure"
 
 /datum/codex_entry/bed

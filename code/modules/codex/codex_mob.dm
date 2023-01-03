@@ -16,5 +16,6 @@
 	return TRUE //has_implant(/obj/item/implant/codex, functioning = TRUE)
 */
 
-/mob/living/carbon/human/species/get_codex_value()
-	return "[lowertext(race.name)] (species)"
+/mob/living/carbon/get_codex_value()
+	if(dna?.species)
+		return "[codex_sanitize(dna.species.name)] (species)"
