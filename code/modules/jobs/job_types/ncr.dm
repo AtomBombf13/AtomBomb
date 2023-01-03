@@ -1236,7 +1236,7 @@ Access
 
 /datum/outfit/loadout/ncrmerchant
 	name = "NCR Merchant"
-	suit =	/obj/item/clothing/suit/armor/light/duster/brahmin
+	suit = /obj/item/clothing/suit/armor/light/duster/brahmin
 	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/f13/explorer
 
