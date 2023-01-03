@@ -533,7 +533,7 @@
 		message_admins("[ADMIN_LOOKUPFLW(user)] caused cockroaches to spawn in a hydro tray")
 		log_game("[key_name(user)] caused cockroaches pests to spawn in a hydro tray")
 		visible_message(span_warning("The pests seem to behave oddly..."))
-		spawn_atom_to_turf(/mob/living/simple_animal/cockroach src, 3, FALSE)
+		spawn_atom_to_turf(/mob/living/simple_animal/cockroach, src, 3, FALSE)
 	else
 		to_chat(user, span_warning("The pests seem to behave oddly, but quickly settle down..."))
 
