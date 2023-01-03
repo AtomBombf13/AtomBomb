@@ -1219,6 +1219,11 @@ Access
 	minimal_access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13ncrcitizen
 
+	loadout_options = list(
+	/datum/outfit/loadout/ncrmerchant,
+	/datum/outfit/loadout/ncrsharecropper
+	)
+
 /datum/outfit/job/ncr/f13ncrcitizen
 	name = "NCR Citizen (Role)"
 	uniform = /obj/item/clothing/under/f13/ncrcaravan
@@ -1230,3 +1235,30 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2
 		)
+
+/datum/outfit/loadout/ncrmerchant
+	name = "NCR Merchant"
+	suit =	/obj/item/clothing/suit/armor/light/duster/brahmin
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/explorer
+
+/datum/outfit/loadout/ncrsharecropper
+	name = "NCR Sharecropper"
+	backpack_contents = list(
+		/obj/item/clothing/gloves/botanic_leather = 1,
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)

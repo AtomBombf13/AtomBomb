@@ -1030,7 +1030,16 @@ Access
 		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/broom = 1,
-		/obj/item/shovel/spade = 1
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
 		)
 
 /datum/outfit/loadout/treasurer
@@ -1295,6 +1304,11 @@ Access
 /datum/job/ncr/f13legioncitizen
 	title = "Legion Citizen"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
+	
+	loadout_options = list(
+	/datum/outfit/loadout/legionmerchant,
+	/datum/outfit/loadout/legionfarmer
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
 	name = "Legion Citizen (Role)"
@@ -1309,3 +1323,32 @@ Access
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1
 		)
+
+/datum/outfit/loadout/legionmerchant
+	name = "Legion Merchant"
+	suit =	/obj/item/clothing/suit/armor/light/duster/brahmin
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/explorer
+
+/datum/outfit/loadout/legionfarmer
+	name = "Legion Crops Trader"
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	suit = /obj/item/clothing/suit/armor/light/duster/brahmin 
+	gloves = /obj/item/clothing/gloves/botanic_leather
+	backpack_contents = list(
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)
