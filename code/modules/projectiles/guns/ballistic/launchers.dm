@@ -4,7 +4,7 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher
 	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	name = "grenade rifle"
-	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon'
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "grenade_rifle"
 	item_state = "shotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher

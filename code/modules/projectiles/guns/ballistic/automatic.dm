@@ -1785,7 +1785,7 @@
 /obj/item/gun/ballistic/automatic/m1919/m2a1
 	name = "John 'Moses' Browning M2A1"
 	desc = "This ancient heavy machine gun has been directly pulled off of some once combat vehicle and modified to be fired while being carried. It is adorned by symbols of the US Government and the Encalve."
-	icon = 'icons/fallout/objects/guns/heavyweapon.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "m2a1"
 	slot_flags = 0
 	slowdown = 1.25
