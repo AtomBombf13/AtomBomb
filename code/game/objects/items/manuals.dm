@@ -224,7 +224,7 @@
 				<b>Nuka Quartz:</b> Nuka Cola 5u + Sugar 5u + Silicon 5u.<br>
 				<b>Nuka Cherry:</b> Nuka Cola 3u + Cherry Jelly 1u<br>
 				<b>Nuka Love:</b> Nuka Cherry 5u + Nuka Quartz 5u<br>
-				<b>Nuka Quantum:</b> Nuka Cola 2u + Uranium 1u + Bluespace Dust 1u + Blue Cherry Jelly 1u<br>
+				<b>Nuka Quantum:</b> Nuka Cola 2u + Uranium 1u + Ultracite Dust 1u + Blue Cherry Jelly 1u<br>
 				<b>Nuka Grape:</b> Nuka Cola 5u + Grape Juice 5u<br>
 				<b>Nuka Dark:</b> Nuka Cola 5u + Rum 5u<br>
 				<b>Nuka Orange:</b> Nuka Cola 5u + Orange Juice 5u<br>
