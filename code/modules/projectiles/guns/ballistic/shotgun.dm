@@ -11,7 +11,7 @@
 /obj/item/gun/ballistic/shotgun
 	name = "shotgun template"
 	desc = "Should not exist"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/shotties.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_prefix = "shotgunpump"
@@ -128,7 +128,6 @@
 /obj/item/gun/ballistic/revolver/caravan_shotgun
 	name = "caravan shotgun"
 	desc = "An common over-under double barreled shotgun made in the post-war era."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "caravan"
@@ -188,7 +187,7 @@
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "Winchester Widowmaker"
 	desc = "Old-world Winchester Widowmaker double-barreled 12 gauge shotgun, with mahogany furniture"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/shotties.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "widowmaker"
@@ -369,6 +368,7 @@
 /obj/item/gun/ballistic/shotgun/automatic/combat
 	name = "semi-auto shotgun template"
 
+	icon = 'icons/fallout/objects/guns/ballistic/shotties.dmi'
 	slowdown = GUN_SLOWDOWN_SHOTGUN_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -516,7 +516,7 @@
 /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	name = "Winchester City-Killer shotgun"
 	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This one is well preserved pre-war pattern version."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "citykiller"
@@ -547,7 +547,7 @@
 /obj/item/gun/ballistic/automatic/shotgun/riot
 	name = "Riot shotgun"
 	desc = "A compact riot shotgun with a large ammo drum and semi-automatic fire, designed to fight in close quarters."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/shotties.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "shotgunriot"

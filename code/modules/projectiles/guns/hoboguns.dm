@@ -4,7 +4,9 @@
 
 /obj/item/gun/ballistic/automatic/hobo
 	slowdown = 0.3
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/hobogun.dmi'
+	icon_state = "piperifle"
+	item_state = "pepperbox"
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 
@@ -19,7 +21,7 @@
 
 /obj/item/gun/ballistic/revolver/hobo
 	slowdown = 0.2
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/hobogun.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 
@@ -198,7 +200,7 @@
 /obj/item/gun/ballistic/revolver/single_shotgun
 	name = "shotgun bat"
 	desc = "A baseball bat, a piece of pipe and a screwdriver is all you need to fire a shotgun shell apparantly. Good for whacking things once fired too."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/hobogun.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "shotgunbat"
@@ -299,7 +301,7 @@
 /obj/item/gun/ballistic/automatic/autopipe
 	name = "Auto-pipe rifle"
 	desc = "A belt fed pipe rifle held together with duct tape. Highly inaccurate. What could go wrong."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/hobogun.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "autopipe"
@@ -412,7 +414,7 @@
 /obj/item/gun/ballistic/rifle/hunting/obrez
 	name = "Obrez"
 	desc = "A cut down bolt action rifle. Uses .308."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/hobogun.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "308-sawn"
@@ -437,7 +439,7 @@
 /obj/item/gun/ballistic/revolver/winchesterrebored
 	name = "rebored Winchester"
 	desc = "A Winchester double-barreled shotgun rebored to fire .308 ammunition."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/hobogun.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "winchesterbore"
