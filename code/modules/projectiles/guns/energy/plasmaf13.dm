@@ -139,7 +139,7 @@
 //the FO4 plasma pistol
 //uses plasma cans
 //pathed to ballistic weapons for now due to not using cells
-/obj/item/gun/ballistic/automatic/pistol/plasma
+/obj/item/gun/ballistic/shotgun/automatic/combat/plasma
 	name ="short plasma gun"
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one loads plasma canisters rather than the usual MF cell."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
