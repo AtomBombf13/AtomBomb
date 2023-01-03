@@ -931,18 +931,18 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /datum/data/wasteland_equipment
 	var/equipment_name = "generic"
 	var/equipment_path = null
-	var/cost = 0
+	var/cost = (0 * 250)
 
 /datum/data/wasteland_equipment/New(name, path, cost)
 	src.equipment_name = name
 	src.equipment_path = path
-	src.cost = cost
+	src.cost = (cost * 250)
 
 /obj/machinery/mineral/wasteland_vendor/ui_interact(mob/user)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>USD value stored:</b> [stored_caps * 250]. <A href='?src=[REF(src)];choice=eject'>Eject money</A><br>"
+	dat += "<b>USD value stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject money</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
@@ -958,10 +958,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<b>Vendor goods:</b><BR><table border='0' width='300'>"
 	if (GLOB.player_list.len>50)
 		for(var/datum/data/wasteland_equipment/prize in highpop_list)
-			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost * 250]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
+			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
 	else
 		for(var/datum/data/wasteland_equipment/prize in prize_list)
-			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost * 250]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
+			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
 	dat += "</table>"
 	dat += "</div>"
 
@@ -1014,7 +1014,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 /obj/machinery/mineral/wasteland_vendor/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/usd))
 		var/obj/item/stack/f13Cash/currency = I
-		var/inserted_value = FLOOR(currency.amount * 0.004, 1)
+		var/inserted_value = FLOOR(currency.amount * 1, 1)
 		stored_caps += inserted_value
 		I.use(currency.amount)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
@@ -1032,11 +1032,11 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		return
 	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
 	if(stored_caps > U.max_amount)
-		U.add((U.max_amount * 250) - 1)
+		U.add(U.max_amount - 1)
 		U.forceMove(src.loc)
 		stored_caps -= U.max_amount
 	else
-		U.add((stored_caps * 250) - 1)
+		U.add(stored_caps - 1)
 		U.forceMove(src.loc)
 		stored_caps = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)

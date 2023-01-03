@@ -985,7 +985,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/usd))
 		var/obj/item/stack/f13Cash/currency = I
-		var/inserted_value = FLOOR(currency.amount * 0.004, 1)
+		var/inserted_value = FLOOR(currency.amount * 1, 1)
 		stored_caps += inserted_value
 		I.use(currency.amount)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
@@ -1003,11 +1003,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 		return
 	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
 	if(stored_caps > U.max_amount)
-		U.add((U.max_amount * 250) - 1)
+		U.add(U.max_amount - 1)
 		U.forceMove(src.loc)
 		stored_caps -= U.max_amount
 	else
-		U.add((stored_caps * 250) - 1)
+		U.add(stored_caps - 1)
 		U.forceMove(src.loc)
 		stored_caps = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
