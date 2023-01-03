@@ -396,7 +396,8 @@ obj/item/reagent_containers/food/snacks/store/cake/pound_cake
 	slices_num = 7 //Its meant to feed the party
 	slice_path = /obj/item/reagent_containers/food/snacks/cakeslice/pound_cake_slice
 	bonus_reagents = list(
-		/datum/reagent/consumable/nutriment = 60
+		/datum/reagent/consumable/nutriment = 60,
+		/datum/reagent/consumable/nutriment/vitamin = 20
 	)
 	tastes = list("cake" = 5, "sweetness" = 1, "batter" = 1)
 	foodtype = GRAIN | DAIRY | SUGAR | JUNKFOOD
