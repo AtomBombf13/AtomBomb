@@ -1,5 +1,6 @@
 /obj/item/gun/energy/laser/practice
 	name = "practice laser gun"
+	icon = 'icons/fallout/objects/guns/energy/energyrifles.dmi'
 	icon_state = "laser-p"
 	desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
 
@@ -187,6 +188,7 @@
 /obj/item/gun/energy/laser
 	name = "energy weapon template"
 	desc = "Should not exists. Bugreport."
+	icon = 'icons/fallout/objects/guns/energy/energyrifles.dmi'
 	icon_state = "laser"
 	item_state = "laser"
 	w_class = WEIGHT_CLASS_BULKY
@@ -238,7 +240,7 @@
 /obj/item/gun/energy/laser/wattz
 	name = "Wattz 1000 laser pistol"
 	desc = "A Wattz 1000 Laser Pistol. Civilian model, so the wattage is lower than military or police versions. Uses small energy cells."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "wattz1000"
@@ -278,7 +280,7 @@
 	can_remove = 0
 	can_charge = 0
 	selfcharge = 1
-	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	icon_state = "rechargerpistol"
 	w_class = WEIGHT_CLASS_NORMAL //not a holdout weapon
 	slot_flags = ITEM_SLOT_BELT
@@ -297,6 +299,7 @@
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light."
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -342,7 +345,7 @@
 	name = "AEP5-CR Disabling Beam Pistol"
 	desc = "A laser pistol that has been modified for less-than-lethal work."
 	slowdown = 0.2
-	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "AEP5CR"
@@ -368,6 +371,7 @@
 	name = "\improper Solar Scorcher"
 	slowdown = 0.2
 	desc = "This modified AEP7 laser pistol takes its power from the sun, recharging slowly using stored solar energy. However, it cannot be recharged manually as a result."
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	icon_state = "solarscorcher"
 	item_state = "solarscorcher"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -387,6 +391,7 @@
 /obj/item/gun/energy/laser/ultra_pistol
 	name = "\improper Ultracite laser pistol"
 	desc = "An ultracite enhanced energy-based laser gun that fires concentrated beams of light."
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	icon_state = "ultra_pistol"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -412,7 +417,6 @@
 /obj/item/gun/energy/laser/wattz2k
 	name = "wattz 2000"
 	desc = "Wattz 2000 Laser Rifle. Uses micro fusion cells for more powerful lasers, and an extended barrel for additional range."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "wattz2k"
@@ -423,7 +427,7 @@
 	zoom_factor = 1
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
@@ -463,7 +467,7 @@
 	scope_y_offset = 20
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
@@ -519,7 +523,7 @@
 	scope_y_offset = 20
 	equipsound = 'sound/f13weapons/equipsounds/tribeamequip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
@@ -540,7 +544,7 @@
 	scope_y_offset = 20
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
@@ -558,7 +562,7 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/laerequip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG

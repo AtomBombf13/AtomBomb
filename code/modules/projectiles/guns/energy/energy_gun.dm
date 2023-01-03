@@ -1,6 +1,7 @@
 /obj/item/gun/energy/e_gun
 	name = "energy gun"
 	desc = "A basic hybrid energy gun with two settings: disable and kill."
+	icon = 'icons/fallout/objects/guns/energy/energyrifles.dmi'
 	icon_state = "energy"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/laser)
@@ -70,6 +71,7 @@
 /obj/item/gun/energy/e_gun/turret
 	name = "hybrid turret gun"
 	desc = "A heavy hybrid energy cannon with two settings: Stun and kill."
+	icon = 'icons/fallout/objects/guns/energy/energyheavy.dmi'
 	icon_state = "turretlaser"
 	item_state = "turretlaser"
 	slot_flags = null

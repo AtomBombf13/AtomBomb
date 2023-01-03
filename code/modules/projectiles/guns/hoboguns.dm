@@ -37,7 +37,7 @@
 
 /obj/item/gun/ballistic/rifle/hobo
 	slowdown = 0.4
-	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon = 'icons/fallout/objects/guns/energy/energyrifles.dmi'
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 
