@@ -67,6 +67,8 @@ em						{font-style: normal;	font-weight: bold;}
 .rangerradio			{color: #83733c;}
 .khansradio				{color: #f0420d;}
 .sheriffradio			{color: #a30000;}
+.commerceradio			{color: #6eaa2c;}
+.mayorradio				{color: #fcdf03;}
 
 .yell					{					font-weight: bold;}
 

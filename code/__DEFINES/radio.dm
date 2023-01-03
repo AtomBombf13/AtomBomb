@@ -42,8 +42,8 @@
 #define RADIO_TOKEN_SYNDICATE ":t"
 
 #define RADIO_CHANNEL_CENTCOM "CentCom"
-#define RADIO_KEY_CENTCOM "y"
-#define RADIO_TOKEN_CENTCOM ":y"
+#define RADIO_KEY_CENTCOM "u"
+#define RADIO_TOKEN_CENTCOM ":u"
 
 #define RADIO_CHANNEL_VAULT "Vault"
 #define RADIO_KEY_VAULT "b"
@@ -117,8 +117,8 @@
 #define FREQ_TOWN 1369 //TOWN
 #define FREQ_TOWN_PD 1371 //Town Police
 #define FREQ_RANGER 1373 //Ranger
-#define FREQ_TOWN_MAYOR 1375 //Den
-#define FREQ_TOWN_COMMERCE 1376 // Service
+#define FREQ_TOWN_MAYOR 1375 // Mayor
+#define FREQ_TOWN_COMMERCE 1376 // Commerce
 #define FREQ_LEGION 1377 //Legion
 #define FREQ_KHAN 1378 //Great Khans
 #define FREQ_DEN 1379 // Desperados

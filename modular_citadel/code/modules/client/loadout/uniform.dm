@@ -595,17 +595,17 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Veteran Ranger",
-							"NCR Lieutenant",
+							"NCR Ranger",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
+							"NCR Off-Duty"
 						)
 
 /datum/gear/uniform/ncr_shorts
@@ -615,17 +615,17 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Veteran Ranger",
-							"NCR Lieutenant",
+							"NCR Ranger",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
+							"NCR Off-Duty"
 						)
 
 /datum/gear/uniform/ncr_officer_dress
@@ -634,7 +634,8 @@
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant"
+							"NCR Lieutenant",
+							"NCR Off-Duty"
 						)
 
 /datum/gear/uniform/ncr_sniper_fatigues
@@ -644,17 +645,17 @@
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
+							"NCR Medical Officer",
 							"NCR Veteran Ranger",
-							"NCR Lieutenant",
+							"NCR Ranger",
 							"NCR Heavy Trooper",
 							"NCR Sergeant",
 							"NCR Corporal",
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
+							"NCR Military Police",
 							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
+							"NCR Off-Duty"
 						)
 
 /datum/gear/uniform/ranger
@@ -662,7 +663,10 @@
 	path = /obj/item/clothing/under/f13/ranger
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 	restricted_desc = "Rangers"
-	restricted_roles = list("NCR Veteran Ranger", "NCR Ranger")
+	restricted_roles = list("NCR Veteran Ranger", 
+							"NCR Ranger",
+							"NCR Off-Duty"
+						)
 
 /datum/gear/uniform/ranger/trail
 	name = "trail ranger outfit"
@@ -685,16 +689,15 @@
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 	restricted_desc = "Eastwood"
 	restricted_roles = list("Mayor",
-							"Secretary",
-							"Chief of Police",
-							"Doctor",
+							"Provost Marshal",
+							"Town Doctor",
 							"Citizen",
-							"Officer",
-							"Shopkeeper",
-							"Farmer",
+							"Deputy Marshal",
+							"Merchant",
 							"Prospector",
 							"Detective",
 							"Barkeep",
+							"Citizen"
 							)
 
 //Khans
@@ -722,7 +725,7 @@
 	restricted_desc = "BoS"
 	restricted_roles = list(
 							"Head Paladin",
-							"Knight-Captain",
+							"Head Knight",
 							"Head Scribe",
 							"Senior Paladin",
 							"Senior Knight",

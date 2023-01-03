@@ -886,14 +886,6 @@
 	item_state = "silver_id"
 	desc = "A rewritable card that allows you to put your name and assignment on it."
 
-/obj/item/card/id/dogtag/vigilante
-	name = "vigilante's badge"
-	desc = "An old silver badge."
-	assignment = "Vigilante"
-	icon_state = "deputy"
-	item_state = "badge-deputy"
-
-
 /obj/item/card/id/dogtag/deputy
 	name = "deputy's badge"
 	desc = "A silver badge which shows honour and dedication."
@@ -934,14 +926,9 @@
 	assignment = "citizenship permit"
 	access = list(ACCESS_BAR)
 
-/obj/item/card/id/dogtag/MDfakepermit
-	name = "faded medical license"
-	desc = "a revoked medical license. This is why we do not remove people's skeletons "
-	access = list()
-
 /obj/item/card/id/dogtag/town/ncr
 	name = "NCR citizenship permit"
-	desc = "A permit identifying the holder as a citizen of New Californian Republic."
+	desc = "A permit identifying the holder as a citizen of the New California Republic."
 	assignment = "NCR Citizen"
 	access = list()
 
@@ -975,16 +962,9 @@
 			update_label()
 	return ..()
 
-/obj/item/card/id/dogtag/ncrambassador
-	name = "ambassador's permit"
-	desc = "An silver encrusted ambassador's permit in a plastic holder."
-	icon_state = "silver"
-	item_state = "silver"
-	assignment = "ambassador's permit"
-
-/obj/item/card/id/dogtag/ncradmin
-	name = "administrators ID"
-	desc = "An silver encrusted admins ID in a plastic holder."
+/obj/item/card/id/dogtag/ncrrep
+	name = "representative's ID"
+	desc = "An silver encrusted representatives ID in a plastic holder."
 	icon_state = "silver"
 	item_state = "silver"
 
@@ -995,23 +975,13 @@
 
 /obj/item/card/id/dogtag/ncrmp
 	name = "military police tags"
-	desc = "A dog tag that associates one with the NCROSI."
-	icon_state = "ncrdogtagrecruit"
-
-/obj/item/card/id/dogtag/ncrht
-	name = "heavy trooper's tags"
-	desc = "A dog tag proving the elite status of the heavy trooper."
+	desc = "A dog tag that associates one with the New California Republic Military Police."
 	icon_state = "ncrdogtagrecruit"
 
 /obj/item/card/id/dogtag/ncrsergeant
 	name = "sergeant's tags"
 	desc = "A chevron decorated dog tag showing NCO-ship."
 	icon_state = "ncrdogtagsergeant"
-
-/obj/item/card/id/dogtag/ncrrep
-	name = "representative's tags"
-	desc = "A special dog tag belonging to the NCR representative."
-	icon_state = "ncrdogtagofficer"
 
 /obj/item/card/id/dogtag/ncrlieutenant
 	name = "lieutenant's tags"
@@ -1037,6 +1007,7 @@
 	name = "colonel's tags"
 	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR colonel."
 	icon_state = "ncrdogtagcaptain"
+
 /* Below replaced by the versions in Legio Invicta
 /obj/item/card/id/dogtag/legforgemaster
 	name = "camp follower medallion"
@@ -1107,18 +1078,6 @@
 	item_state = "card-id_leg"
 	assignment = "immune medallion"
 
-
-
-//For PilotBland's frumentarii custom loadout
-/obj/item/card/id/dogtag/legfrumentariiremus
-	name = "Remus Amius' frumentarius medallion"
-	desc = "A golden disc with a string threaded through the top, displaying official markings confirming a frumentarius' status."
-	icon_state = "legionmedallioncent"
-	item_state = "card-id_leg2"
-	assignment = "frumentarius medallion"
-
-
-
 ///OUTLAW TAGS////
 
 /obj/item/card/id/raider
@@ -1157,17 +1116,12 @@
 	item_state = "brokenholodog"
 	uses_overlays = FALSE
 
-/obj/item/card/id/rusted/brokenholodog/enclave
-	name = "malfunctioning holotag"
-	desc = "A would-be advanced holographic dogtag, if it was working. Kept as a reminder to something."
-
 /obj/item/card/id/denid
 	name = "Den Gang Membership Certificate"
 	desc = "A certificate declaring your loyalty to the gang"
 	assignment = "gang tattoo"
 
 	access = list(ACCESS_DEN, ACCESS_PUBLIC)
-
 
 /obj/item/card/id/khantattoo
 	name = "Great Khan tattoo"
@@ -1182,36 +1136,6 @@
 /obj/item/card/id/khantattoo/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-/obj/item/card/id/khanleadertattoo
-	name = "Great Khan leader tattoo"
-	desc = "A tattoo of the symbol of the Great Khans."
-	icon = 'icons/fallout/clothing/khans.dmi'
-	icon_state = "khan_id"
-	item_state = null
-	assignment = "gang tattoo"
-	uses_overlays = FALSE
-	access = list(ACCESS_KHAN, ACCESS_PUBLIC)
-
-/obj/item/card/id/khanleadertattoo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-
-/obj/item/card/id/outcasttattoo
-	name = "faded tribal tattoos"
-	desc = "Tattoos marking the wearer as a tribal, worn and faded colors."
-	icon_state = "skin"
-	item_state = "skin"
-	assignment = "gang tattoo"
-	uses_overlays = FALSE
-
-/obj/item/card/id/outcasttattoo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-/* Tribal Tags
-*/
 
 /obj/item/card/id/tribetattoo
 	name = "Tattoo of the machine spirits"
@@ -1257,24 +1181,6 @@
 	icon_state = "doctor"
 	item_state = "card-doctor"
 	assignment = "name badge"
-	uses_overlays = FALSE
-
-/obj/item/card/id/chief
-	name = "crimson identification card"
-	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
-	icon_state = "chief"
-	item_state = "sec_id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
-	uses_overlays = FALSE
-
-/obj/item/card/id/sec
-	name = "red identification card"
-	desc = "A red card which shows dedication to the Security department."
-	icon_state = "sec"
-	item_state = "sec_id"
-	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	uses_overlays = FALSE
 
 //ENCLAVE ID

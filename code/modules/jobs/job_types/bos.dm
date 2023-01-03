@@ -76,15 +76,16 @@ Elder
 /datum/job/bos/f13elder
 	title = "Elder"
 	flag = F13ELDER
+	display_order = JOB_DISPLAY_ORDER_ELDER
 	head_announce = list("Security")
+	total_positions = 0
+	spawn_positions = 0
+	description = "You are the Elder of the local Brotherhood chapter."
 	supervisors = "the High Elders"
 	selection_color = "#7f8c8d"
 	req_admin_notify = 1
 
 	exp_requirements = 3000
-
-	total_positions = 0
-	spawn_positions = 0
 
 	outfit = /datum/outfit/job/bos/f13elder
 
@@ -158,20 +159,6 @@ Head Paladin
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
@@ -293,50 +280,37 @@ Head Scribe
 		)
 
 /*
-Knight-Captain
+Head Knight
 */
 
-/datum/job/bos/f13knightcap
-	title = "Knight-Captain"
-	flag = F13KNIGHTCAPTAIN
-	display_order = JOB_DISPLAY_ORDER_KNIGHTCAPTAIN
+/datum/job/bos/f13headknight
+	title = "Head Knight"
+	flag = F13HEADKNIGHT
+	display_order = JOB_DISPLAY_ORDER_HEADKNIGHT
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	description = "You are the Knight-Captain, leader of your respective division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
+	description = "You are the Head Knight, leader of your respective division in the Chapter. Your knowledge of pre-war materials and engineering is almost unparalleled, and you have basic combat training and experience. You are in charge of the Chapter's engineering Corps, and your Knights. Delegate to them as necessary. As Chief Armorer, you are also in charge of the armory."
 	supervisors = "the Elder and Head Paladin in external affairs"
 	selection_color = "#7f8c8d"
 
 	exp_requirements = 1500
 
 	loadout_options = list(
-	/datum/outfit/loadout/capstand, //DKS 2 mags
-	/datum/outfit/loadout/capsap, //RCW + 2 mags
-	/datum/outfit/loadout/capalt //Neostead with buck because they don't know slugs are better
+	/datum/outfit/loadout/headstand, //DKS 2 mags
+	/datum/outfit/loadout/headsap, //RCW + 2 mags
+	/datum/outfit/loadout/headalt //Neostead with buck because they don't know slugs are better
 	)
 
-	outfit = /datum/outfit/job/bos/f13knightcap
+	outfit = /datum/outfit/job/bos/f13headknight
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_CHANGE_IDS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_BOS4, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_CHANGE_IDS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_BOS4, ACCESS_PUBLIC)
 
-/datum/outfit/job/bos/f13knightcap/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/bos/f13headknight/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/commando)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/n99)
@@ -344,7 +318,6 @@ Knight-Captain
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/thatgun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)// temporary as head scribe taken plasma pistol as they are more plasma / laser and knight is ballistic. Actually accurate?! for BOS?
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, src)
 	ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, src)
@@ -353,16 +326,16 @@ Knight-Captain
 	for(var/datum/crafting_recipe/recipe as() in GLOB.knight_gunsmith_recipes)
 		H.mind.teach_crafting_recipe(recipe)
 
-/datum/outfit/job/bos/f13knightcap
-	name = "Knight-Captain"
-	jobtype = /datum/job/bos/f13knightcap
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
+/datum/outfit/job/bos/f13headknight
+	name = "Head Knight"
+	jobtype = /datum/job/bos/f13headknight
+	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/head
 	glasses =		/obj/item/clothing/glasses/night
-	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
+	accessory =		/obj/item/clothing/accessory/bos/headknight
 	belt =			/obj/item/storage/belt/military/army
 	neck =			/obj/item/storage/belt/holster
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
+	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/head
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
@@ -370,21 +343,21 @@ Knight-Captain
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
 		)
 
-/datum/outfit/loadout/capstand
+/datum/outfit/loadout/headstand
 	name = "Standard"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/sniper = 1,
 		/obj/item/ammo_box/magazine/w308 = 2
 	)
 
-/datum/outfit/loadout/capsap
+/datum/outfit/loadout/headsap
 	name = "Close Support"
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/rcw = 1,
 		/obj/item/stock_parts/cell/ammo/ecp = 2
 	)
 
-/datum/outfit/loadout/capalt
+/datum/outfit/loadout/headalt
 	name = "Warden-Defender"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead = 1,
@@ -408,7 +381,7 @@ Senior Paladin
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //5mm minigun
-		/datum/outfit/loadout/spaladinc,  //Aer14 + pistol
+		/datum/outfit/loadout/spaladinc, //AER12 + pistol
 		/datum/outfit/loadout/spaladind //Sledge and fist
 		)
 
@@ -473,10 +446,8 @@ Senior Paladin
 	backpack_contents = list(
 		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/twohanded/sledgehammer/supersledge = 1,
-		/obj/item/gun/energy/laser/pistol = 1,
-		
+		/obj/item/gun/energy/laser/pistol = 1
 		)
-
 
 /*
 Paladin
@@ -489,14 +460,14 @@ Paladin
 	total_positions = 2
 	spawn_positions = 2
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
-	supervisors = "the Head Paladin"
+	supervisors = "the Head Paladin and the Senior Paladin"
 	exp_requirements = 1200
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladinc, //Aer9
-	/datum/outfit/loadout/paladind //Aep 7 and fist
+	/datum/outfit/loadout/paladinc, //AER9 and AEP7
+	/datum/outfit/loadout/paladind //AEP7 and fist
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -529,6 +500,7 @@ Paladin
 	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
+	accessory = /obj/item/clothing/accessory/bos/paladin
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/army
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
@@ -543,8 +515,7 @@ Paladin
 		/obj/item/gun/energy/laser/aer9 = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/clothing/accessory/bos/paladin = 1
+		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
 /datum/outfit/loadout/paladind
@@ -552,8 +523,7 @@ Paladin
 	backpack_contents = list(
 		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/clothing/accessory/bos/paladin = 1
+		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
 /*
@@ -631,33 +601,32 @@ Senior Scribe
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/clothing/mask/gas/adv/gasmask = 1,
+		/obj/item/clothing/mask/gas/adv/gasmask = 1
 
 	)
 
 /datum/outfit/loadout/seniorscribefs
 	name = "Senior Field Scribe"
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/CMO=1,
-		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
-		/obj/item/defibrillator/compact=1,
-		/obj/item/clothing/gloves/color/latex=1,
-		/obj/item/storage/belt/medical/surgery_belt_adv=1
+		/obj/item/reagent_containers/hypospray/CMO = 1,
+		/obj/item/clothing/glasses/hud/health = 1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat = 1,
+		/obj/item/defibrillator/compact = 1,
+		/obj/item/clothing/gloves/color/latex = 1,
+		/obj/item/storage/belt/medical/surgery_belt_adv = 1
 		)
 
 /datum/outfit/loadout/seniorscribebs
 	name = "Senior Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/storage/belt/utility/bos=1,
-		/obj/item/clothing/gloves/color/yellow=1,
-		/obj/item/blueprint/research=6,
-		/obj/item/clothing/gloves/color/yellow=1
+		/obj/item/storage/belt/utility/bos = 1,
+		/obj/item/clothing/gloves/color/yellow = 1,
+		/obj/item/blueprint/research = 1
 		)
 
 /datum/outfit/loadout/seniorscribehs
 	name = "Senior Botanist Scribe"
-	backpack_contents = list(
+	backpack_contents = list{
 		/obj/item/clothing/gloves/botanic_leather = 1,
 		/obj/item/storage/belt/utility/gardener = 1,
 		/obj/item/storage/bag/plants = 1,
@@ -760,33 +729,33 @@ Scribe
 /datum/outfit/loadout/scribefs
 	name = "Field Scribe"
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/CMO=1,
-		/obj/item/clothing/glasses/hud/health=1,
-		/obj/item/clothing/accessory/bos/scribe=1,
-		/obj/item/clothing/suit/toggle/labcoat/scribecoat=1,
-		/obj/item/clothing/gloves/color/latex=1,
-		/obj/item/storage/belt/medical/surgical=1,
+		/obj/item/reagent_containers/hypospray/CMO = 1,
+		/obj/item/clothing/glasses/hud/health = 1,
+		/obj/item/clothing/accessory/bos/scribe = 1,
+		/obj/item/clothing/suit/toggle/labcoat/scribecoat = 1,
+		/obj/item/clothing/gloves/color/latex = 1,
+		/obj/item/storage/belt/medical/surgical = 1
 		)
 
 /datum/outfit/loadout/scribejbs
 	name = "Junior Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorscribe=1,
-		/obj/item/storage/belt/utility/full=1,
-		/obj/item/clothing/gloves/color/yellow=1,
-		/obj/item/clothing/mask/gas/welding=1,
-		/obj/item/blueprint/research=1,
+		/obj/item/clothing/accessory/bos/juniorscribe = 1,
+		/obj/item/storage/belt/utility/full = 1,
+		/obj/item/clothing/gloves/color/yellow = 1,
+		/obj/item/clothing/mask/gas/welding = 1,
+		/obj/item/blueprint/research = 1
 		)
 
 
 /datum/outfit/loadout/scribebs
 	name = "Bunker Scribe"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/scribe=1,
-		/obj/item/storage/belt/utility/full=1,
-		/obj/item/clothing/gloves/color/yellow=1,
-		/obj/item/clothing/mask/gas/welding=1,
-		/obj/item/blueprint/research=1
+		/obj/item/clothing/accessory/bos/scribe = 1,
+		/obj/item/storage/belt/utility/full = 1,
+		/obj/item/clothing/gloves/color/yellow = 1,
+		/obj/item/clothing/mask/gas/welding = 1,
+		/obj/item/blueprint/research = 1
 		)
 
 /datum/outfit/loadout/scribehs
@@ -820,16 +789,16 @@ Senior Knight
 	display_order = JOB_DISPLAY_ORDER_SENIORKNIGHT
 	total_positions = 2
 	spawn_positions = 2
-	description = "You report directly to the Knight-Captain. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
-	supervisors = "the Knight-Captain inside, Paladins outside"
+	description = "You report directly to the Head Knight. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
+	supervisors = "the Head Knight inside, Paladins outside"
 	exp_requirements = 900
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_PUBLIC)
 
 	loadout_options = list(
-	/datum/outfit/loadout/sknighta, //AER12
-	/datum/outfit/loadout/sknightb, //Lever Action
-	/datum/outfit/loadout/sknightc, //R91
+	/datum/outfit/loadout/sknighta, //AER12 and .45 Autoloader
+	/datum/outfit/loadout/sknightb, //Lever Action and AEP7
+	/datum/outfit/loadout/sknightc, //Marksman carbine and AEP7
 	/datum/outfit/loadout/sknightd	//Ripper and Bulletproof Shield
 	)
 
@@ -927,18 +896,20 @@ Knight
 	display_order = JOB_DISPLAY_ORDER_KNIGHT
 	total_positions = 3
 	spawn_positions = 3
-	description = " You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
-	supervisors = "the Senior Knight and Knight-Captain"
+	description = "You are the Brotherhood Knight, the veritable lifeblood of your organization. You are a versatile and adaptably trained person: from your primary duties of weapon & armor repair to basic combat, survival and stealth skills, the only thing you lack is proper experience. You are also in charge of Initiates."
+	supervisors = "the Senior Knight and Head Knight"
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC)
 
 	exp_requirements = 300
 
 	loadout_options = list(
-	/datum/outfit/loadout/knighta, //AER9 J
-	/datum/outfit/loadout/knightc, //AER9 S
-	/datum/outfit/loadout/knightb, //Shishkebab J
-	/datum/outfit/loadout/knightd //Shishkebab
+	/datum/outfit/loadout/knighta, //AER9 and .45 Autoloader J
+	/datum/outfit/loadout/knightc, //AER9 and .45 Autoloader
+	/datum/outfit/loadout/knightb, //Shishkebab and Bulletproof Shield J
+	/datum/outfit/loadout/knightd, //Shishkebab and Bulletproof Shield
+	/datum/outfit/loadout/knighte, //Knight-Engineer with a police shotgun and .44 J
+	/datum/outfit/loadout/knightf //Knight-Engineer with a police shotgun and .44
 	)
 
 	outfit = /datum/outfit/job/bos/f13knight
@@ -1006,6 +977,19 @@ Knight
 		/obj/item/shield/riot/bullet_proof = 1
 		)
 
+/datum/outfit/loadout/knighte
+	name = "Junior Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorknight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
 
 /datum/outfit/loadout/knightc
 	name = "Footknight"
@@ -1026,6 +1010,21 @@ Knight
 		/obj/item/shishkebabpack = 1,
 		/obj/item/shield/riot/bullet_proof = 1
 		)
+
+/datum/outfit/loadout/knightf
+	name = "Knight-Engineer"
+	suit = /obj/item/clothing/suit/armor/light/combat/brotherhood/scout
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/knight = 1,
+		/obj/item/storage/belt/utility/full/engi = 1,
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/glass/fifty = 1,
+		/obj/item/gun/ballistic/shotgun/police = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/clothing/mask/gas/welding = 1
+		)
+
 /*
 Initiate
 */
@@ -1043,7 +1042,7 @@ Initiate
 	exp_requirements = 0
 
 	loadout_options = list(
-	/datum/outfit/loadout/initiatek, //AEP7 and Engibelt with combat armor, no helmet
+	/datum/outfit/loadout/initiatek, //AEP7 and Engibelt with combat armor
 	/datum/outfit/loadout/initiates //Medical belt and chem knowledge
 	)
 

@@ -159,16 +159,17 @@
 	cost = 2
 	restricted_desc = "Eastwood"
 	restricted_roles = list("Mayor",
-							"Secretary",
-							"Sheriff",
-							"Doctor",
+							"Director",
+							"Provost Marshal",
+							"Town Doctor",
 							"Citizen",
-							"Deputy",
-							"Shopkeeper",
-							"Farmer",
+							"Deputy Marshal",
+							"Merchant",
+							"Researcher",
 							"Prospector",
 							"Detective",
 							"Barkeep",
+							"Preacher"
 							)
 
 datum/gear/suit/blueshirt
@@ -178,10 +179,9 @@ datum/gear/suit/blueshirt
 	cost = 3
 	restricted_desc = "Eastwood PD, Eastwood officials"
 	restricted_roles = list("Mayor",
-							"Sheriff",
-							"Deputy",
-							"Shopkeeper",
-							"Secretary",
+							"Provost Marshal",
+							"Deputy Marshal",
+							"Merchant"
 							)
 
 /datum/gear/suit/hazardvest
@@ -190,7 +190,7 @@ datum/gear/suit/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
 	restricted_roles = list("Citizen",
-							"Prospector",
+							"Prospector"
 							)
 
 

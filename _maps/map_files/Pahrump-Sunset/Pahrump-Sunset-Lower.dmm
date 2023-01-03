@@ -563,6 +563,10 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
+"aqU" = (
+/obj/machinery/telecomms/server/presets/town_mayor,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "arj" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
@@ -3414,7 +3418,6 @@
 	},
 /area/f13/clinic)
 "bKR" = (
-/obj/machinery/vending/nukacolavend,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -9240,7 +9243,7 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
 "eoM" = (
-/obj/structure/blacksmith/anvil,
+/obj/structure/blacksmith/anvil/obtainable/legion,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "eoT" = (
@@ -15628,6 +15631,10 @@
 /obj/effect/spawner/lootdrop/low_tools,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/building/museum)
+"iYo" = (
+/obj/machinery/telecomms/server/presets/town_commerce,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "iYp" = (
 /obj/structure/girder/reinforced,
 /turf/open/water,
@@ -32935,7 +32942,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/vending/nukacolavendfull,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
@@ -98092,7 +98098,7 @@ cif
 ciC
 ciZ
 exT
-cig
+aqU
 cjm
 cjw
 cjG
@@ -99120,7 +99126,7 @@ cii
 ciD
 cja
 jSN
-cig
+iYo
 cjp
 cjz
 cig
