@@ -36,6 +36,7 @@
 
 //Some price defines to help standarize the intended vending value of items. Do not bother adding too many examples.
 //CB Change - Pull back cost range for items
+//250 is the exchange rate of USD (1 divided by 0.004). Just multiply the value of your item by 250.
 #define PRICE_FREE				0    // Free items. like job vendors.
 #define PRICE_CHEAP_AS_FREE		(5 * 250)    // -
 #define PRICE_REALLY_CHEAP		(10 * 250)    // low end ammo.
