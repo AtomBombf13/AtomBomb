@@ -95,11 +95,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Slave",
 
 "Mayor",
-"Sheriff",
+"Provost Marshal",
 "Director",
-"Deputy",
-"Shopkeeper",
-"Doctor",
+"Deputy Marshal",
+"Merchant",
+"Town Doctor",
 "Prospector",
 "Detective",
 
@@ -147,14 +147,14 @@ GLOBAL_LIST_INIT(eastwood_positions, list(
 	"Town Doctor",
 	"Researcher",
 	"Preacher",
-	"Citizen",
+	"Citizen"
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
 	"Legate",
 	"Legion Orator",
 	"Legion Centurion",
-	"Legion Veteran Decanus",
+	"Legion Veteran Decanus"
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
@@ -169,7 +169,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
 	"Camp Follower",
-	"Legion Immune",
+	"Legion Off-Duty",
 	"Legion Slave"
 ))
 
@@ -214,12 +214,12 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Specialist",
 	"Enclave Scientist",
 	"Enclave Private",
-	"Enclave Bunker Duty",
+	"Enclave Bunker Duty"
 ))
 
 GLOBAL_LIST_INIT(silicon_positions, list(
 	"Mr. Handy",
-	"Cyborg",
+	"Cyborg"
 ))
 
 // job categories for rendering the late join menu
@@ -254,9 +254,9 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_ENCLAVE = list("titles" = enclave_positions),
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
-	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
+	EXP_TYPE_DECANUS = list("titles" = list("Legion Veteran Decanus","Legion Prime Decanus","Legion Recruit Decanus")),
 
-	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain", "NCR Veteran Ranger"))
+	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Captain","NCR Veteran Ranger"))
 ))
 
 GLOBAL_LIST_INIT(exp_specialmap, list(
