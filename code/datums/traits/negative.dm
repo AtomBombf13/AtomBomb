@@ -51,38 +51,20 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 			heirloom_type = /obj/item/gun/ballistic/automatic/toy/pistol
 		if("BoS Off-Duty")
 			heirloom_type = /obj/item/toy/figure/borg
-		if("Marshal")
+		if("Provost Marshal")
 			heirloom_type = /obj/item/clothing/accessory/medal/silver
-		if("Deputy")
+		if("Deputy Marshal")
 			heirloom_type = /obj/item/clothing/accessory/medal/bronze_heart
-		if("Shopkeeper")
+		if("Merchant")
 			heirloom_type = /obj/item/coin/plasma
-		if("Followers Doctor")
-			heirloom_type = pick(/obj/item/clothing/neck/stethoscope,/obj/item/toy/tragicthegarnering)
-		if("Followers Administrator")
+		if("Director")
 			heirloom_type = pick(/obj/item/toy/nuke, /obj/item/wrench/medical, /obj/item/clothing/neck/tie/horrible)
 		if("Prime Legionnaire")
 			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman, /obj/item/toy/plush/mr_buckety)
 		if("Recruit Legionnaire")
 			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman,/obj/item/clothing/accessory/skullcodpiece/fake)
-		if("Den Mob Boss")
+		if("Desperado Leader")
 			heirloom_type = /obj/item/lighter/gold
-		if("Den Doctor")
-			heirloom_type = /obj/item/card/id/dogtag/MDfakepermit
-		if("Farmer")
-			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade)
-		if("Janitor")
-			heirloom_type = /obj/item/mop
-		if("Security Officer")
-			heirloom_type = /obj/item/clothing/accessory/medal/silver/valor
-		if("Scientist")
-			heirloom_type = /obj/item/toy/plush/slimeplushie
-		if("Assistant")
-			heirloom_type = /obj/item/clothing/gloves/cut/family
-		if("Chaplain")
-			heirloom_type = /obj/item/camera/spooky/family
-		if("Captain")
-			heirloom_type = /obj/item/clothing/accessory/medal/gold/captain/family
 		if("Great Khan")
 			heirloom_type = pick(/obj/item/melee/onehanded/knife/switchblade, /obj/item/melee/onehanded/machete, /obj/item/clothing/mask/bandana/red)
 		if("Far-Lands Tribals")

@@ -419,6 +419,17 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	bowman = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/lawman
 
+/obj/item/radio/headset/headset_town/lawman_sheriff
+	name = "Eastwood security radio headset"
+	desc = "This is used by Eastwood's local security force. Protects ears from flashbangs.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood security channel, use :s.\
+		\nTo access the Eastwood mayor channel, use :y."
+	icon_state = "sec_headset_alt"
+	item_state = "sec_headset_alt"
+	bowman = TRUE
+	keyslot = new /obj/item/encryptionkey/headset_town/lawman_sheriff
+
 /obj/item/radio/headset/headset_town/commerce
 	name = "Eastwood commerce radio headset"
 	desc = "This is used by Eastwood's small business owners.\

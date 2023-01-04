@@ -199,6 +199,14 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1)
 
+/obj/item/encryptionkey/headset_town/lawman_sheriff
+	name = "Eastwood security radio encryption key"
+	desc = "An encryption key for a radio headset.\
+		\nTo access the Eastwood channel, use :f.\
+		\nTo access the Eastwood security channel, use :s"
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_TOWN_MAYOR = 1)
+
 /obj/item/encryptionkey/headset_town/lawman
 	name = "Eastwood security radio encryption key"
 	desc = "An encryption key for a radio headset.\
