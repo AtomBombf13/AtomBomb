@@ -194,6 +194,7 @@
 
 /obj/item/ammo_box/magazine/m2mm/pistol
 	name = "2mm electromagnetic pistol magazine"
+	icon_state = "2mm"
 	max_ammo = 5
 	multiple_sprites = 2
 
