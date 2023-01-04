@@ -390,10 +390,8 @@
 				/obj/effect/spawner/bundle/f13/armor/t51b = 6,
 				/obj/effect/spawner/bundle/f13/armor/t45d = 8,
 				/obj/effect/spawner/bundle/f13/armor/t45b = 10,
-				/obj/effect/spawner/bundle/f13/armor/eliteriot = 20,
-				/obj/effect/spawner/bundle/f13/armor/desertriot = 20,
-				/obj/effect/spawner/bundle/f13/armor/policeriot = 20,
-				/obj/effect/spawner/bundle/f13/armor/environmental = 20
+				/obj/effect/spawner/bundle/f13/armor/eliteriot = 30,
+				/obj/effect/spawner/bundle/f13/armor/desertriot = 40,
 				)
 
 /obj/effect/spawner/bundle/f13/armor/environmental
