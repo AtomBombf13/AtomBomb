@@ -254,18 +254,18 @@
 	build_path = /obj/item/ammo_box/magazine/uzim9mm/empty
 	category = list("initial", "Basic Magazines")
 
-/datum/design/ammolathe/smg10mm
-	name = "empty 10mm SMG magazine (10mm)"
+/datum/design/ammolathe/pistol10_ext
+	name = "empty extended pistol magazine (10mm)"
 	id = "pistol10mm_ext"
 	materials = list(/datum/material/iron = 4000)
 	build_path = /obj/item/ammo_box/magazine/pistol10mm/extended/empty
 	category = list("initial", "Basic Magazines")
 
-/datum/design/ammolathe/carl_gustafmag
-	name = "submachine gun magazine (10mm)"
+/datum/design/ammolathe/smg10
+	name = "empty submachine gun magazine (10mm)"
 	id = "smg10"
 	materials = list(/datum/material/iron = 4000)
-	build_path = obj/item/ammo_box/magazine/smg10
+	build_path = /obj/item/ammo_box/magazine/smg10
 	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/m45expmagazine
