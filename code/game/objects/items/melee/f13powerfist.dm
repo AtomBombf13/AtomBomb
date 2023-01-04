@@ -13,7 +13,7 @@
 	hitsound = 'sound/weapons/resonator_blast.ogg'
 	attack_speed = MELEE_SPEED_NORMAL
 	force = 28
-	armour_penetration = 0.5
+	armour_penetration = 0.35
 	throwforce = 10
 	throw_range = 3
 	w_class = WEIGHT_CLASS_NORMAL
