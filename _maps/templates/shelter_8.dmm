@@ -12,7 +12,7 @@
 /obj/structure/chair/wood/fancy{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/royalblack,
 /area/survivalpod)
 "q" = (
 /obj/structure/bed,
@@ -21,13 +21,13 @@
 /obj/structure/curtain{
 	color = "red"
 	},
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/purple,
 /area/survivalpod)
 "s" = (
 /obj/structure/chair/wood/fancy{
 	dir = 4
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/royalblack,
 /area/survivalpod)
 "v" = (
 /obj/structure/fence/corner/wooden{
@@ -47,13 +47,13 @@
 /obj/item/toy/dummy,
 /obj/item/toy/talking/codex_gigas,
 /obj/effect/holodeck_effect/cards{
-	name = "Tarot Deck"
+	name = TarotDeck
 	},
 /obj/item/storage/fancy/candle_box,
 /obj/structure/curtain{
 	color = "red"
 	},
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/purple,
 /area/survivalpod)
 "D" = (
 /obj/structure/mirror,
@@ -93,13 +93,13 @@
 /obj/item/stack/tile/fakespace,
 /obj/item/clothing/mask/bandana/red,
 /obj/item/storage/crayons,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/purple,
 /area/survivalpod)
 "N" = (
 /obj/structure/curtain{
 	color = "red"
 	},
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/royalblack,
 /area/survivalpod)
 "P" = (
 /obj/structure/table/wood,
@@ -108,19 +108,26 @@
 /obj/structure/curtain{
 	color = "red"
 	},
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/purple,
 /area/survivalpod)
 "W" = (
 /obj/structure/spirit_board,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/royalblack,
 /area/survivalpod)
 "X" = (
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/royalblack,
 /area/survivalpod)
+"Y" = (
+/obj/structure/simple_door/metal/fence{
+	door_type = "fence_wood";
+	icon_state = "fence_wood"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "Z" = (
 /obj/structure/table/wood/fancy/black,
 /obj/item/clothing/head/cueball,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet/royalblack,
 /area/survivalpod)
 
 (1,1,1) = {"
@@ -202,7 +209,7 @@ a
 a
 a
 F
-i
+Y
 "}
 (10,1,1) = {"
 v

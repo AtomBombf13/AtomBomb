@@ -4,7 +4,8 @@
 /area/f13/wasteland)
 "b" = (
 /obj/machinery/autolathe/constructionlathe,
-/turf/open/floor/wood_common/f13/old,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "c" = (
 /obj/structure/table/wood/fancy/black,
@@ -14,20 +15,22 @@
 /area/survivalpod)
 "d" = (
 /obj/machinery/workbench,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "e" = (
 /obj/machinery/vending/coffee,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "f" = (
 /obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/wood_common/f13/old,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "g" = (
 /obj/item/bedsheet/black,
 /obj/structure/bed,
-/turf/open/floor/wood_common/f13/old,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "h" = (
 /turf/open/floor/carpet/black,
@@ -36,19 +39,15 @@
 /obj/structure/rack,
 /obj/item/stack/sheet/mineral/wood/fifty,
 /obj/item/stack/sheet/mineral/wood/fifty,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "l" = (
-/turf/open/floor/wood_common/f13/old,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "n" = (
 /obj/machinery/vending/snack,
-/turf/open/floor/wood_common/f13/old,
-/area/survivalpod)
-"o" = (
-/obj/machinery/light/floor,
-/obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "t" = (
 /obj/machinery/light/floor,
@@ -66,15 +65,15 @@
 "z" = (
 /obj/structure/bed,
 /obj/item/bedsheet/black,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "A" = (
 /obj/structure/dresser,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "D" = (
 /obj/machinery/vending/cigarette,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "E" = (
 /obj/structure/chair/wood{
@@ -85,7 +84,7 @@
 /area/survivalpod)
 "H" = (
 /obj/structure/campfire/stove,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "J" = (
 /obj/structure/table/wood/fancy/black,
@@ -96,23 +95,23 @@
 /area/survivalpod)
 "K" = (
 /obj/machinery/vending/cola/starkist,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "N" = (
 /obj/structure/displaycase_chassis,
 /obj/item/stack/sheet/glass/ten,
 /obj/machinery/light/floor,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "P" = (
 /obj/structure/simple_door/tent,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "Q" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/stack/sheet/plasteel/twenty,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "T" = (
 /obj/structure/table/wood/fancy/black,
@@ -123,15 +122,17 @@
 /obj/item/stack/crafting/electronicparts/five,
 /obj/item/stack/crafting/goodparts/five,
 /obj/item/stack/crafting/metalparts/five,
-/turf/open/floor/wood_common/f13/old,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "X" = (
 /obj/structure/closet/cabinet,
-/turf/open/floor/wood_common/f13/old,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 "Z" = (
 /obj/structure/table/wood/fancy/black,
-/turf/open/floor/wood_common/f13/old,
+/obj/machinery/light/floor,
+/turf/open/floor/carpet/black,
 /area/survivalpod)
 
 (1,1,1) = {"
@@ -150,8 +151,8 @@ a
 (2,1,1) = {"
 w
 b
-l
-l
+h
+h
 j
 Q
 V
@@ -163,10 +164,10 @@ a
 (3,1,1) = {"
 w
 d
-l
-l
-l
-l
+h
+h
+h
+h
 l
 w
 a
@@ -189,11 +190,11 @@ a
 (5,1,1) = {"
 w
 N
-l
-l
-l
-l
-o
+h
+h
+h
+h
+t
 w
 a
 a
@@ -206,7 +207,7 @@ h
 h
 h
 h
-l
+h
 w
 a
 a
@@ -219,7 +220,7 @@ h
 T
 h
 h
-h
+l
 w
 w
 w
@@ -227,11 +228,11 @@ a
 "}
 (8,1,1) = {"
 w
-l
+h
 h
 x
-h
 E
+h
 h
 h
 t
@@ -240,7 +241,7 @@ w
 "}
 (9,1,1) = {"
 w
-l
+h
 h
 c
 h
@@ -248,16 +249,16 @@ h
 h
 h
 h
-l
+h
 P
 "}
 (10,1,1) = {"
 w
-l
+h
 h
 J
-h
 E
+h
 h
 h
 t
@@ -271,7 +272,7 @@ h
 T
 h
 h
-h
+l
 w
 w
 w
@@ -284,7 +285,7 @@ h
 h
 h
 h
-l
+h
 w
 a
 a
@@ -293,11 +294,11 @@ a
 (13,1,1) = {"
 w
 N
-l
-l
-l
-l
-o
+h
+h
+h
+h
+t
 w
 a
 a
@@ -319,10 +320,10 @@ a
 (15,1,1) = {"
 w
 f
-l
-l
-l
-l
+h
+h
+h
+h
 X
 w
 a
@@ -331,12 +332,12 @@ a
 "}
 (16,1,1) = {"
 w
-l
-l
-l
-l
-l
-Z
+h
+h
+h
+h
+h
+T
 w
 a
 a
@@ -344,12 +345,12 @@ a
 "}
 (17,1,1) = {"
 w
-l
-l
-l
-l
-l
-Z
+h
+h
+h
+h
+h
+T
 w
 a
 a
@@ -361,7 +362,7 @@ g
 z
 A
 H
-l
+h
 Z
 w
 a
