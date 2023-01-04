@@ -262,10 +262,10 @@
 	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/carl_gustafmag
-	name = "empty carl gustaf magazine (10mm)"
-	id = "carl_gustafmag"
+	name = "submachine gun magazine (10mm)"
+	id = "smg10"
 	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/magazine/cg45/empty
+	build_path = obj/item/ammo_box/magazine/smg10
 	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/m45expmagazine
