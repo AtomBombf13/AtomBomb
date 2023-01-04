@@ -176,9 +176,6 @@
 	icon_state = "n99"
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	mag_type = /obj/item/ammo_box/magazine/pistol10mm
-	disallowed_mags = list(
-		/obj/item/ammo_box/magazine/pistol10mm/extended,
-		/obj/item/ammo_box/magazine/pistol10mm/extended/empty,)
 
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY

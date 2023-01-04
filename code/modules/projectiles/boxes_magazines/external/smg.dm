@@ -2,19 +2,27 @@
 // SMG MAGAZINES //
 ///////////////////
 
-
-/obj/item/ammo_box/magazine/cg45
-	name = "Carl Gustaf magazine (10mm)"
+/obj/item/ammo_box/magazine/smg10
+	name = "submachine gun magazine (10mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "cg45"
+	icon_state = "smg10"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	caliber = list(CALIBER_10MM)
-	max_ammo = 36
+	max_ammo = 30
 	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_SMG)
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/ammo_box/magazine/cg45/empty
+/obj/item/ammo_box/magazine/smg10/empty
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/smg10/ext
+	name = "submachine gun extended magazine (10mm)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "smg10"
+	max_ammo = 40
+
+/obj/item/ammo_box/magazine/smg10/ext/empty
 	start_empty = TRUE
 
 /obj/item/ammo_box/magazine/greasegun

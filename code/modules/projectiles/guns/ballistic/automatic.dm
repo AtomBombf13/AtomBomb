@@ -367,8 +367,8 @@
 	item_state = "smg10mm"
 	icon_prefix = "smg10mm"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/pistol10mm
-	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm/extended
+	mag_type = /obj/item/ammo_box/magazine/smg10
+	init_mag_type = /obj/item/ammo_box/magazine/smg10
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -385,6 +385,44 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 
 /* * * * * * * * * * *
+ * worn out 10mm SMG
+ * downgraded 10mm SMG
+ * -10% damage and unique sprite
+ * * * * * * * * * * */
+
+obj/item/gun/ballistic/automatic/smg/smg10mm/worn
+	name = "10mm submachine gun"
+	desc = "One of the most common personal-defense weapons of the Great War, a sturdy and reliable open-bolt 10mm submachine gun. This one barely holds"
+	worn_out = TRUE
+	damage_multiplier = GUN_LESS_DAMAGE_T4
+
+
+/* * * * * * * * * * *
+ * commando 10mm SMG
+ * improved 10mm SMG
+ * 10mm
+ * Even slower firing
+ * Less Recoil
+ * One-handed
+ * No akimbo
+ * rare
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/smg/smg10mm/compensated
+	name = "commando 10mm submachine gun"
+	desc = "an improved 10mm SMG for special forces, comes with a compensator and larger magwell to accept larger magazines."
+	icon_state = "smg10mmcomp"
+	mag_type = /obj/item/ammo_box/magazine/smg10
+	init_mag_type = /obj/item/ammo_box/magazine/smg10/ext
+	init_recoil = SMG_RECOIL(0.7)
+	damage_multiplier = GUN_LESS_DAMAGE_T2
+
+	init_firemodes = list(
+		FULL_AUTO_150,
+		SEMI_AUTO_SMG
+		)
+
+/* * * * * * * * * * *
  * P90c SMG
  * Light 10mm SMG
  * 10mm
@@ -392,7 +430,7 @@
  * Less damage
  * One-handed
  * Akimbo!
- * Common
+ * uncommon
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/smg/p90
