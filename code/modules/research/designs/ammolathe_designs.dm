@@ -761,7 +761,7 @@
 	id = "handloader_c9mmrubber_lathe"
 	materials = list(/datum/material/iron = 10000, /datum/material/blackpowder = 1000)
 	build_path = /obj/item/ammo_box/c9mm/rubber
-	category = list("initial", "Handloaded Ammo")/*
+	category = list("initial", "Handloaded Ammo")*/
 
 /datum/design/ammolathe/improvised/c10mm
 	name = "10mm bag"
