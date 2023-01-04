@@ -122,13 +122,13 @@
 			return TRUE
 
 /obj/item/storage/lockbox/medal/PopulateContents()
-    new /obj/item/clothing/accessory/medal/silver/valor(src)
-    new /obj/item/clothing/accessory/medal/silver/security(src)
-    new /obj/item/clothing/accessory/medal/bronze_heart(src)
-    for(var/i in 1 to 3)
-        new /obj/item/clothing/accessory/medal/conduct(src)
-    for(var/i in 1 to 3)
-        new /obj/item/clothing/accessory/medal/bronze_heart(src)
+	new /obj/item/clothing/accessory/medal/silver/valor(src)
+	new /obj/item/clothing/accessory/medal/silver/security(src)
+	new /obj/item/clothing/accessory/medal/bronze_heart(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/accessory/medal/conduct(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/accessory/medal/bronze_heart(src)
 
 /obj/item/storage/lockbox/medal/update_icon_state()
 	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
