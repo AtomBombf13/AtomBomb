@@ -327,7 +327,8 @@ Access
 	loadout_options = list(	//ALL: Gladius, Smokebomb
 		/datum/outfit/loadout/decprimfront,	// Lever action, .44 revolver, Legion lance, Throwing knives
 		/datum/outfit/loadout/decprimrear,	// Legion shield, Ballistic fist
-		/datum/outfit/loadout/decprimboom // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimwar // Spatha, .44 revolver, Bolas
 		)
 
 	matchmaking_allowed = list(
@@ -397,8 +398,16 @@ Access
 		/obj/item/grenade/f13/frag = 2,
 		/obj/item/grenade/homemade/coffeepotbomb = 1
 		)
-
-
+		
+/datum/outfit/loadout/decprimwar
+	name = "Warmonger Prime Decanus"
+	suit_store = /obj/item/melee/onehanded/machete/spatha
+	backpack_contents = list(
+		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/ammo_box/loader/m44 = 2,
+		/obj/item/restraints/legcuffs/bola = 2
+		)
 
 // ----------------- RECRUIT DECANUS ---------------------
 
@@ -828,7 +837,8 @@ Access
 	loadout_options = list(	//ALL: Forged Machete
 		/datum/outfit/loadout/primelancer,	// .357 revolver, Buckler, Bola
 		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Firebomb
-		/datum/outfit/loadout/primebrave	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primebrave,	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primepila		// Legion Lance, Extra Medicine
 		)
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -888,7 +898,13 @@ Access
 		/obj/item/storage/backpack/spearquiver = 1,
 		)
 
-
+/datum/outfit/loadout/primepila
+	name = "Pilum"
+	suit_store = /obj/item/twohanded/spear/lance
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+		)
+		
 
 // ----------------- RECRUIT --------------------- //
 
