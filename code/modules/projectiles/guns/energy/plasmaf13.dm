@@ -148,7 +148,7 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/fo4plasma
-	damage_multiplier = 0.5 //30 damage, with 30 shots it probably should not deal 60 damage
+	damage_multiplier = 0.5 //30 damage, with 27 shots it probably should not deal 60 damage
 	gun_tags = GUN_ENERGY
 
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
