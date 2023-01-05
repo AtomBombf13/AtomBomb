@@ -35,6 +35,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	desc = "A Modified Autonomos AI Persona locutor, designed by Robco Industries, which announce many things over the radio."
 	icon = 'icons/obj/machines/telecomms.dmi'
 	icon_state = "Mr_Yuma_On"
+	arrivalToggle = 0
 
 	verb_say = "smoothly says"
 	verb_ask = "wonders"

@@ -112,7 +112,7 @@ here's a tip, go search DEFINES/access.dm
 	head_announce = list("Security")
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Mayor and Overseer"
+	supervisors = "The Mayor" //ATOM EDIT, Congratulations to town for discovering independance
 	description = "As the head of the security forces, you are the face of justice in the town. Uphold the law, or bend it to suit your needs, you set the precedent for how justice is doled out in the town, so bear that in mind when you sentence that pickpocket to death. Maintain the armoury and keep that watchful eye on the elevator to the Vault below. Whatever you do, don't lose your head."
 	exp_requirements = 750
 
@@ -354,7 +354,8 @@ here's a tip, go search DEFINES/access.dm
 	display_order = JOB_DISPLAY_ORDER_F13CHIEFMED
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Mayor and Overseer"
+	supervisors = "The Mayor and Provost" //ATOM EDIT- we don't have an Overseer as far as i know
+	head_announce = list("Eastwood") //ATOM EDIT - at least head of the clinic
 	description = "From the board of the VTCC, you were chosen to be the chief delegator for the medical and science wings of this town's clinic. You are the mediator of workplace drama, the human resource enforcer, and the cornerstone of inspiration for your underlings. As their supervisor, it is your job to make sure that this clinic functions at peak performance."
 	selection_color = "#af9172"
 	exp_requirements = 750
