@@ -56,6 +56,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/chemical_flags // See fermi/readme.dm REAGENT_DEAD_PROCESS, REAGENT_DONOTSPLIT, REAGENT_ONLYINVERSE, REAGENT_ONMOBMERGE, REAGENT_INVISIBLE, REAGENT_FORCEONNEW, REAGENT_SNEAKYNAME
 	var/value = REAGENT_VALUE_NONE //How much does it sell for in cargo?
 	var/datum/material/material //are we made of material?
+	//codex
+	var/hidden_from_codex = FALSE
 
 /datum/reagent/New()
 	. = ..()

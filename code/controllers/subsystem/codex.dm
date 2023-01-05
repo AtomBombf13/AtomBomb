@@ -90,7 +90,7 @@ SUBSYSTEM_DEF(codex)
 
 /datum/controller/subsystem/codex/proc/present_codex_entry(mob/presenting_to, datum/codex_entry/entry)
 	if(entry && istype(presenting_to) && presenting_to.client)
-		var/datum/browser/popup = new(presenting_to, "codex\ref[entry]", "Codex", nheight=425)
+		var/datum/browser/popup = new(presenting_to, "codex\ref[entry]", "Survival Guide", nheight=425)
 		popup.set_content(parse_links(jointext(entry.get_codex_body(presenting_to), null), presenting_to))
 		popup.open()
 

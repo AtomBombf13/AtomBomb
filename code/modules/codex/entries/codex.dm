@@ -1,4 +1,4 @@
-/datum/codex_entry/codex
+/datum/codex_entry/survival_guide
 	name = "The Wasteland Survival Guide"
 	lore_text = "The Wasteland Survival Guide is the overall body containing the document that you are currently reading. It is a distributed encyclopedia maintained by a dedicated, hard-working staff of scrappers, farmers, mercenaries, and common travelers, all with the goal of providing you, the user, with supposedly up-to-date, nominally useful documentation on the topics you want to know about (And to hopefully keep you alive just a bit longer!). \
 	<br><br> \
@@ -6,7 +6,7 @@
 	<br><br> \
 	The Wasteland Survival Guide editorial offices for this region are located in Novac and will offer cash payments for stories, anecdotes and evidence of the strange and undocumented miscellany cluttering up our little slice of wasteland. Remember our motto: <i>\"Knowledge is power, sell your excess!\"</i>"
 
-/datum/codex_entry/codex/New()
+/datum/codex_entry/survival_guide/New()
 	mechanics_text = "The Wasteland Survival Guide is both an IC and OOC resource. ICly, it is as described; a survival book. You can use <b>Search-Codex <i>topic</i></b> to look something up, or you can click the links provided when examining some objects. \
 	<br><br> \
 	Any of the lore you find in the Survival Guide, designated by <span class='codexLore'>green</span> text, can be freely referenced in-character. \
@@ -17,8 +17,8 @@
 	..()
 
 /datum/codex_entry/nexus
-	name = "Nexus"
-	mechanics_text = "The place to start with <span codexlink='the codex'>The Wasteland Survival Guide</span><br>"
+	name = "Table of Contents"
+	mechanics_text = "The place to start with <span codexlink='The Wasteland Survival Guide'>The Wasteland Survival Guide</span><br>"
 
 /datum/codex_entry/nexus/get_codex_body(mob/presenting_to, include_header, include_footer)
 	. = list(get_codex_header(presenting_to))

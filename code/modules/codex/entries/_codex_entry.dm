@@ -62,10 +62,10 @@
 /datum/codex_entry/proc/get_codex_header(mob/presenting_to)
 	. = list()
 	if(presenting_to)
-		var/datum/codex_entry/linked_entry = SScodex.get_entry_by_string("nexus")
+		var/datum/codex_entry/linked_entry = SScodex.get_entry_by_string("table of contents")
 		. += "<a href='?src=\ref[SScodex];show_examined_info=\ref[linked_entry];show_to=\ref[presenting_to]'>Home</a>"
 		if(presenting_to.client)
-			. += "<a href='?src=[REF(presenting_to.client)];codex_search=1'>Search Codex</a>"
+			. += "<a href='?src=[REF(presenting_to.client)];codex_search=1'>Search Guide</a>"
 			. += "<a href='?src=[REF(presenting_to.client)];codex_index=1'>List All Entries</a>"
 	. += "<hr>"
 

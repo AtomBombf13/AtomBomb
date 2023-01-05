@@ -4,7 +4,7 @@
 
 /client/verb/search_codex(searching as text)
 
-	set name = "Search Codex"
+	set name = "Search Survival Guide"
 	set category = "IC"
 	set src = usr
 
@@ -12,16 +12,16 @@
 		return
 
 	if(codex_on_cooldown || !mob.can_use_codex())
-		to_chat(src, span_warning("You cannot perform codex actions currently."))
+		to_chat(src, span_warning("You cannot perform survival guide actions currently."))
 		return
 
 	if(!searching)
-		searching = input("Enter a search string.", "Codex Search") as text|null
+		searching = input("Enter a search string.", "Survival Guide Search") as text|null
 		if(!searching)
 			return
 
 	if(codex_on_cooldown || !mob.can_use_codex())
-		to_chat(src, span_warning("You cannot perform codex actions currently."))
+		to_chat(src, span_warning("You cannot perform survival guide actions currently."))
 		return
 
 	codex_on_cooldown = TRUE
@@ -68,14 +68,14 @@
 		return
 
 	if(codex_on_cooldown || !mob.can_use_codex())
-		to_chat(src, span_warning("You cannot perform codex actions currently."))
+		to_chat(src, span_warning("You cannot perform Survival Guide actions currently."))
 		return
 	codex_on_cooldown = TRUE
 	addtimer(CALLBACK(src, .proc/reset_codex_cooldown), 1 SECONDS)
-	to_chat(mob, span_notice("The codex forwards you an index file."))
+	to_chat(mob, span_notice("The flip through your Survival Guide."))
 
-	var/datum/browser/popup = new(mob, "codex-index", "Codex Index")
-	var/list/codex_data = list("<h2>Codex Entries</h2>")
+	var/datum/browser/popup = new(mob, "codex-index", "Survival Guide Index")
+	var/list/codex_data = list("<h2>Survival Guide Entries</h2>")
 	codex_data += "<table width = 100%>"
 
 	var/antag_check = mob && mob.mind && !is_special_character(mob)
@@ -109,11 +109,11 @@
 		return
 
 	if(codex_on_cooldown || !mob.can_use_codex())
-		to_chat(src, span_warning("You cannot perform codex actions currently."))
+		to_chat(src, span_warning("You cannot perform Survival Guide actions currently."))
 		return
 
 	codex_on_cooldown = TRUE
 	addtimer(CALLBACK(src, .proc/reset_codex_cooldown), 1 SECONDS)
 
-	var/datum/codex_entry/entry = SScodex.get_codex_entry("nexus")
+	var/datum/codex_entry/entry = SScodex.get_codex_entry("table of contents")
 	SScodex.present_codex_entry(mob, entry)
