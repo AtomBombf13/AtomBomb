@@ -790,7 +790,7 @@
 		/obj/structure/sign/poster/prewar/zion/evening, /obj/structure/sign/poster/prewar/zion/morning,
 		/obj/structure/sign/prewar/prewar/enlist, /obj/structure/sign/poster/prewar/dean,	
 		/obj/structure/sign/poster/prewar/nukagirl, /obj/structure/sign/poster/prewar/ralphie,
-		/obj/structure/sign/poster/prewar/sarsaparilla, /obj/structure/sign/poster/prewar/sugar_bombs
+		/obj/structure/sign/poster/prewar/sarsaparilla, /obj/structure/sign/poster/prewar/sugar_bombs,
 		/obj/structure/sign/poster/prewar/vim, /obj/structure/sign/poster/prewar/ski,
 		/obj/structure/sign/poster/prewar/pebbles
 	)
