@@ -515,7 +515,7 @@
 
 /**
  * Plant Death Proc.
- * Cleans up various stats for the plant upon death, including pests, harvestability, and plant health.
+ * Cleans up various stats for the plant upon death, including pests(Cockroaches), harvestability, and plant health.
  */
 /obj/machinery/hydroponics/proc/plantdies()
 	plant_health = 0
@@ -530,10 +530,10 @@
 
 /obj/machinery/hydroponics/proc/mutatepest(mob/user)
 	if(pestlevel > 5)
-		message_admins("[ADMIN_LOOKUPFLW(user)] caused spiderling pests to spawn in a hydro tray")
-		log_game("[key_name(user)] caused spiderling pests to spawn in a hydro tray")
+		message_admins("[ADMIN_LOOKUPFLW(user)] caused cockroaches to spawn in a hydro tray")
+		log_game("[key_name(user)] caused cockroaches pests to spawn in a hydro tray")
 		visible_message(span_warning("The pests seem to behave oddly..."))
-		spawn_atom_to_turf(/obj/structure/spider/spiderling/hunter, src, 3, FALSE)
+		spawn_atom_to_turf(/mob/living/simple_animal/cockroach, src, 3, FALSE)
 	else
 		to_chat(user, span_warning("The pests seem to behave oddly, but quickly settle down..."))
 
