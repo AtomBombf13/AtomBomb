@@ -91,7 +91,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -107,7 +107,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	var/datum/status_effect/incapacitating/knockdown/K = IsKnockdown()
 	if(amount <= 0)
@@ -127,7 +127,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -153,7 +153,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -169,7 +169,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	var/datum/status_effect/incapacitating/immobilized/I = IsImmobilized()
 	if(amount <= 0)
@@ -189,7 +189,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -215,7 +215,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -231,7 +231,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	var/datum/status_effect/incapacitating/paralyzed/P = IsParalyzed(FALSE)
 	if(amount <= 0)
@@ -251,7 +251,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -277,7 +277,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -293,7 +293,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	var/datum/status_effect/incapacitating/dazed/I = IsDazed()
 	if(amount <= 0)
@@ -313,7 +313,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -339,7 +339,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
@@ -355,7 +355,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	var/datum/status_effect/staggered/I = IsStaggered()
 	if(amount <= 0)
@@ -375,7 +375,7 @@
 		return
 	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
-	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE))
+	if(!ignore_canstun && HAS_TRAIT(src, TRAIT_STUNIMMUNE))
 		return
 	if(absorb_stun(amount, ignore_canstun))
 		return
