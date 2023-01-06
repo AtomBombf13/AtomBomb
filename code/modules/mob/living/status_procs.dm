@@ -89,7 +89,7 @@
 /mob/living/proc/Knockdown(amount, updating = TRUE, ignore_canstun = FALSE) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_KNOCKDOWN, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN)))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -105,7 +105,7 @@
 /mob/living/proc/SetKnockdown(amount, updating = TRUE, ignore_canstun = FALSE) //Sets remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_KNOCKDOWN, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN)))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -125,7 +125,7 @@
 /mob/living/proc/AdjustKnockdown(amount, updating = TRUE, ignore_canstun = FALSE) //Adds to remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_KNOCKDOWN, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -151,7 +151,7 @@
 /mob/living/proc/Immobilize(amount, updating = TRUE, ignore_canstun = FALSE) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_IMMOBILIZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -167,7 +167,7 @@
 /mob/living/proc/SetImmobilized(amount, updating = TRUE, ignore_canstun = FALSE) //Sets remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_IMMOBILIZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -187,7 +187,7 @@
 /mob/living/proc/AdjustImmobilized(amount, updating = TRUE, ignore_canstun = FALSE) //Adds to remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_IMMOBILIZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -213,7 +213,7 @@
 /mob/living/proc/Paralyze(amount, updating = TRUE, ignore_canstun = FALSE) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_PARALYZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -229,7 +229,7 @@
 /mob/living/proc/SetParalyzed(amount, updating = TRUE, ignore_canstun = FALSE) //Sets remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_PARALYZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -249,7 +249,7 @@
 /mob/living/proc/AdjustParalyzed(amount, updating = TRUE, ignore_canstun = FALSE) //Adds to remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_PARALYZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -275,7 +275,7 @@
 /mob/living/proc/Daze(amount, updating = TRUE, ignore_canstun = FALSE) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_DAZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -291,7 +291,7 @@
 /mob/living/proc/SetDazed(amount, updating = TRUE, ignore_canstun = FALSE) //Sets remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_DAZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -311,7 +311,7 @@
 /mob/living/proc/AdjustDazed(amount, updating = TRUE, ignore_canstun = FALSE) //Adds to remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_DAZE, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -337,7 +337,7 @@
 /mob/living/proc/Stagger(amount, updating = TRUE, ignore_canstun = FALSE) //Can't go below remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_STAGGER, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -353,7 +353,7 @@
 /mob/living/proc/SetStaggered(amount, updating = TRUE, ignore_canstun = FALSE) //Sets remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_STAGGER, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
@@ -373,7 +373,7 @@
 /mob/living/proc/AdjustStaggered(amount, updating = TRUE, ignore_canstun = FALSE) //Adds to remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_STAGGER, amount, updating, ignore_canstun) & COMPONENT_NO_STUN)
 		return
-	if(!ignore_canstun && (!(status_flags & CANKNOCKDOWN))))
+	if(!ignore_canstun && !(status_flags & CANKNOCKDOWN))
 		return
 	if(HAS_TRAIT(src, TRAIT_STUNIMMUNE)
 		return
