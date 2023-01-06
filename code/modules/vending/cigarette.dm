@@ -17,8 +17,8 @@
 					/obj/item/storage/fancy/cigarettes/cigars/havana = 1,
 					/obj/item/storage/fancy/cigarettes/cigars/cohiba = 1)
 	refill_canister = /obj/item/vending_refill/cigarette
-	default_price = PRICE_ALMOST_CHEAP
-	extra_price = PRICE_ABOVE_NORMAL
+	default_price = PRICE_REALLY_CHEAP
+	extra_price = PRICE_PRETTY_CHEAP
 	payment_department = ACCOUNT_SRV
 
 /obj/machinery/vending/cigarette/syndicate

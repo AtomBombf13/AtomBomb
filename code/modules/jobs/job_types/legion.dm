@@ -1042,7 +1042,7 @@ Access
 		/obj/item/folder/red = 1,
 		/obj/item/paper/natural = 2,
 		/obj/item/pen/fountain = 1,
-		/obj/item/storage/bag/money/small/legion = 1,
+		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/blacksmith/ingot/gold = 1,
 		)
 
