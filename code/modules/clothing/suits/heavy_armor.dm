@@ -401,7 +401,7 @@
 	name = "legion centurion paladin-slayer armor"
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "leg_cent_paladin"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
