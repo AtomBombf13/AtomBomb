@@ -39,8 +39,6 @@
 			if(attacker_style.pacifism_check && HAS_TRAIT(source, TRAIT_PACIFISM))
 				return
 			attacker_style.add_to_streak("H",target)
-			if(attacker_style.check_streak(source, target))
-				return
 	else if (!istype(target, /mob/living/simple_animal/hostile)) // so that disarming + martial arts streaks still work
 		return
 	melee_attack_chain(source, target)
