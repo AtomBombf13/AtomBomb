@@ -581,11 +581,3 @@
 	name = "gravel path"
 	icon_state = "path_dirt_end"
 
-// Two edge smootheners for the new gravel turf
-/obj/effect/overlay/gravel/edge
-	name = "gravel edge"
-	icon = 'icons/fallout/turfs/gravel.dmi'
-	icon_state = "graveledge"
-
-/obj/effect/overlay/gravel/edge/corner
-	icon_state = "gravelcorner"
