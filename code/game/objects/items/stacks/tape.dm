@@ -87,5 +87,5 @@
 	icon_state = "tapemedical"
 	conferred_embed = list("embed_chance" = 30, "pain_mult" = 0, "jostle_pain_mult" = 0, "ignore_throwspeed_threshold" = TRUE)
 	splint_factor = 0.4
-	custom_price = 50
+	custom_price = PRICE_ALMOST_CHEAP
 	merge_type = /obj/item/stack/sticky_tape/surgical
