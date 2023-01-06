@@ -55,6 +55,11 @@
 	icon_state = "medallion_centurion"
 	assignment = "orator medallion"
 
+/obj/item/card/id/dogtag/legion/offduty
+	name = "off-duty medallion"
+	desc = "The wearer is free from his military duties this week."
+
+
 // - /obj/item/card/id/legionbrand obsolete
 /obj/item/card/id/legion_slave
 	name = "Legion slave brand"
@@ -76,17 +81,6 @@
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
 	icon_state = "medallion_exile"
-
-
-
-// --------------------- RADIO CONTROL ---------------------------  -meant to be wall mounted so not solid, and pixel shifted until it looks good on the specific wall
-
-/obj/machinery/radioterminal/legion/wallmounted
-	name = "Legion radio control"
-	desc = "Cobbled together radio master set for disabling lost radios."
-	icon = 'modular_atom/legio_invicta/icons/icons_64x32_legion.dmi'
-	icon_state = "radio_legion"
-
 
 
 // --------------------- GLOVES -----------------------------
@@ -596,3 +590,378 @@
 	subcategory = CAT_FORGING
 	always_available = FALSE
 	
+
+// --------------------- RADIO CONTROL ---------------------------  -meant to be wall mounted so not solid, and pixel shifted until it looks good on the specific wall
+
+/obj/machinery/radioterminal/legion/wallmounted
+	name = "Legion radio control"
+	desc = "Cobbled together radio master set for disabling lost radios."
+	icon = 'modular_atom/legio_invicta/icons/icons_64x32_legion.dmi'
+	icon_state = "radio_wall_legion"
+
+
+
+// ------------------- LEGION STATIONARY STORAGE -----------------------------
+
+/obj/machinery/smartfridge/bottlerack/wardrobe
+	name = "large clothing rack"
+	desc = "holds clothing and various acessories."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "wardrobe"
+	layer = ABOVE_OBJ_LAYER
+	max_n_of_items = 30
+
+/obj/machinery/smartfridge/bottlerack/wardrobe/accept_check(obj/item/O)
+	if(istype(O, /obj/item/clothing/shoes) || istype(O, /obj/item/clothing/head) || istype(O, /obj/item/clothing/mask) || istype(O, /obj/item/clothing/under) || istype(O, /obj/item/clothing/glasses) || istype(O, /obj/item/clothing/gloves) || istype(O, /obj/item/storage/belt)  || istype(O, /obj/item/clothing/neck))
+		return TRUE
+	return FALSE
+
+// Preloaded Legion wardrobe
+/obj/machinery/smartfridge/bottlerack/wardrobe/legion
+	initial_contents = list(
+		/obj/item/clothing/under/f13/legskirt = 3,
+		/obj/item/clothing/mask/bandana/legion/dark  = 2,
+		/obj/item/clothing/head/f13/servant/auxilia = 1,
+		/obj/item/clothing/head/f13/servant = 1,
+		/obj/item/clothing/gloves/legion = 2,
+		/obj/item/clothing/gloves/blacksmith_mittens = 1,
+		/obj/item/clothing/neck/apron/labor = 1,
+		/obj/item/clothing/shoes/f13/military/legion = 3,
+		/obj/item/clothing/shoes/sandals_leather = 1,
+		/obj/item/storage/belt/military/legion = 1,
+		/obj/item/clothing/glasses/f13/goggles_sandstorm = 1)
+
+
+/obj/machinery/smartfridge/bottlerack/wardrobe/armor
+	name = "armor hanging rack"
+	desc = "a place to hang your armor and helmet."
+	icon_state = "armordrobe"
+
+/obj/machinery/smartfridge/bottlerack/wardrobe/armor/accept_check(obj/item/O)
+	if(istype(O, /obj/item/clothing/shoes) || istype(O, /obj/item/clothing/suit/armor) || istype(O, /obj/item/clothing/head/helmet))
+		return TRUE
+	return FALSE
+
+// Preloaded Legion armor rack
+/obj/machinery/smartfridge/bottlerack/wardrobe/armor/legion
+	initial_contents = list(
+		/obj/item/clothing/suit/armor/light/legion/recruit = 2,
+		/obj/item/clothing/head/helmet/f13/legion/recruit = 2)
+
+
+/obj/machinery/smartfridge/bottlerack/rack_melee
+	name = "melee weapon rack"
+	desc = "holds most melee and throwing weapons."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "rack_melee"
+	layer = ABOVE_OBJ_LAYER
+	max_n_of_items = 30
+
+/obj/machinery/smartfridge/bottlerack/rack_melee/accept_check(obj/item/O)
+	if(istype(O, /obj/item/melee) || istype(O, /obj/item/shishkebabpack) || istype(O, /obj/item/throwing_star) || istype(O, /obj/item/restraints/legcuffs/bola) || istype(O, /obj/item/shovel) || istype(O, /obj/item/twohanded))
+		return TRUE
+	return FALSE
+
+// Preloaded Legion melee rack
+/obj/machinery/smartfridge/bottlerack/rack_melee/legion
+	initial_contents = list(
+		/obj/item/melee/onehanded/machete = 1,
+		/obj/item/restraints/legcuffs/bola = 1)
+
+
+// ------------------- BUTCHERS TABLE -----------------------------
+
+/obj/structure/table/optable/primitive
+	name = "butchers table"
+	desc = "Used for painful, primitive medical procedures."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+
+
+// ------------------- PRIMITIVE SURGERY STUFF -----------------------------
+
+/obj/item/cautery/primitive
+	name = "primitive cautery"
+	desc = "A welding device tuned down to cauterize wounds. Not very precise."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "cautery_primitive"
+	toolspeed = 1.5
+
+/obj/item/circular_saw/primitive
+	name = "handsaw"
+	desc = "For sawing through wood or possibly bones."
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "saw"
+	item_state = "saw"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	hitsound = 'sound/effects/shovel_dig.ogg'
+	usesound = 'sound/effects/shovel_dig.ogg'
+	custom_materials = list(/datum/material/iron=2000)
+	toolspeed = 1.2
+	wound_bonus = 0
+	bare_wound_bonus = 10
+	attack_verb = list("sawed", "scratched")
+
+
+// ------------------- PRIMITIVE MEDICAL BAG -----------------------------
+
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive
+	name = "surgical duffel bag"
+	desc = "A large duffel bag for holding extra medical supplies - this one seems to be designed for holding surgical tools."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "toolbag_primitive"
+
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive/PopulateContents()
+	new /obj/item/kitchen/knife/butcher/tribal(src)
+	new /obj/item/hemostat/tribal(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/circular_saw/primitive(src)
+	new /obj/item/surgicaldrill(src)
+	new /obj/item/cautery/primitive(src)
+	new /obj/item/bonesetter(src)
+	new /obj/item/bedsheet/blanket(src)
+	new /obj/item/reagent_containers/medspray/sterilizine(src)
+	new /obj/item/stack/sticky_tape/surgical(src)
+	new /obj/item/stack/medical/bone_gel(src)
+
+
+// ------------------- PRIMITIVE MEDICAL TOOLBELT -----------------------------
+
+obj/item/storage/belt/medical/surgical/primitive
+	name = "simple surgical toolbelt"
+	desc = "A belt designed for holding surgical tools."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "belt_blacksmith"
+	item_state = "belt_blacksmith"
+
+/obj/item/storage/belt/medical/primitive/PopulateContents()
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/kitchen/knife/butcher/tribal(src)
+	new /obj/item/handsaw(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/hemostat/tribal(src)
+	new /obj/item/cautery/primitive(src)
+	new /obj/item/bonesetter(src)
+
+
+// ------------------- BUST OF CAESAR -----------------------------
+
+
+/obj/item/statuebust/legion
+	name = "a bust of the great leader"
+	desc = "Caesar, a magnificent man, depicted in some tacky imitation of marble."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "bust_legion"
+
+
+
+// -------------- BATHTUB ----------------- - no mechanical function, just for RP
+
+
+/obj/structure/chair/comfy/bathtub
+	name = "bathtub"
+	desc = "A relaxing bath in hot water, or a endurance test in freezing water, depending on how lazy you are."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "bathtub"
+	max_integrity = 200
+	item_chair = null
+	resistance_flags = NONE
+	flags_1 = NODECONSTRUCT_1
+
+/obj/structure/chair/comfy/bathtub/GetArmrest()
+	return mutable_appearance('modular_atom/legio_invicta/icons/icons_legion.dmi', "bathtub_bathing")
+
+/obj/structure/chair/comfy/bathtub/post_buckle_mob(mob/living/M)
+	. = ..()
+	handle_layer()
+	playsound(src, 'modular_atom/blacksmith/sound/water_splash2.ogg',50, 1)
+
+/obj/structure/chair/comfy/bathtub/post_unbuckle_mob()
+	. = ..()
+	handle_layer()
+	playsound(src, 'modular_atom/blacksmith/sound/water_splash2.ogg',50, 1)
+
+
+// ------------------- SIGNS -----------------------------
+
+/obj/structure/sign/legion
+	name = "war room"
+	desc = "For planning the next great victory!"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "sign"
+	layer = SIGN_LAYER
+
+/obj/structure/sign/legion/radio
+	name = "radio room"
+	desc = "Spare radios and radio linking equipment are kept here"
+
+/obj/structure/sign/legion/medicus
+	name = "medicus tent"
+	desc = "Caesar approves the methods used here. Degenerates not welcome."
+	icon_state = "sign_medicus"
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/sign/legion/recruit
+	name = "recruit barracks"
+	desc = "The decanus sleeps with his men and keeps track of them." // Theyre definitively straight
+	icon_state = "sign_ground"
+
+/obj/structure/sign/legion/smithy
+	name = "smithy"
+	desc = "Where weapons are forged and tools stored"
+
+/obj/structure/sign/legion/armory
+	name = "armory"
+	desc = "Great amounts of weapons and equipment are stored here"
+
+/obj/structure/sign/legion/prime
+	name = "prime barracks"
+	desc = "Primes and their decanus live here"
+	icon_state = "sign_ground"
+
+/obj/structure/sign/legion/veteran
+	name = "veteran barracks"
+	desc = "Experienced troops live here in comparable comfort."
+
+/obj/structure/sign/legion/mess
+	name = "mess pavillion"
+	desc = "Food and a place to talk to brothers in arms."
+	icon_state = "sign_ground"
+
+/obj/structure/sign/legion/gym
+	name = "the temple"
+	desc = "Build your body or use it as a speaking platform."
+
+/obj/structure/sign/legion/latrine
+	name = "latrine"
+	desc = "Has a certain odor."
+	icon_state = "sign_ground"
+
+/obj/structure/sign/legion/mines
+	name = "mines"
+	desc = "Put slave here"
+	icon_state = "sign_chain"
+
+/obj/structure/sign/legion/prison
+	name = "prison"
+	desc = "Lets the prisoner enjoy the local climate without interfering roofing."
+
+/obj/structure/sign/legion/storeroom
+	name = "storeroom"
+	desc = "a place to store low-value goods and slaving equipment."
+
+/obj/structure/sign/legion/records
+	name = "office of records"
+	desc = "Where the Treasurer and other nerds store paperwork about stores and payrolls, and maybe the treasury."
+
+/obj/structure/sign/legion/stronghold
+	name = "stronghold"
+	desc = "Main building, fortified."
+
+/obj/machinery/door/unpowered/securedoor/legion/warroom
+	name = "war room"
+	req_access_txt = "254" // ACCESS_LEGION_CPMMAND
+
+/obj/machinery/door/unpowered/securedoor/legion/centurion
+	name = "centurions quarters"
+	req_access_txt = "264" // ACCESS_LEGION4
+
+/* Added to base code
+/obj/structure/campfire/stove
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+
+added to end of campfire/attackby
+	else if(fired && istype(P, /obj/item/stack/medical/gauze/improvised))
+		if(!ishuman(user))
+			return
+		if(istype(P, /obj/item/stack/medical/gauze/improvised))
+			var/obj/item/stack/medical/gauze/improvised/F = P
+			to_chat(user, "You start baking the [F.name].")
+			if(do_after(user, 30, target = src))
+				F.microwave_act()
+
+*/
+/obj/structure/fireplace/preloaded
+	fuel_added = 1000
+
+// Finally time to add my old dirt alternative, ploughed dirt
+/obj/machinery/hydroponics/soil/plowed //Just looks different
+	icon_state = "soil_plowexperiment"
+
+/obj/effect/overlay/darkwoodfancyedge
+	name = "wood edge"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "darkwood_fancyedge"
+	layer = (FLOOR_PLANE+1)
+
+
+// Matrix for slaves/prison
+/turf/closed/indestructible/f13/matrix/slave //Less obtrusive matrix for prison
+	name = "mattress of despair"
+	desc = "<font color='#6eaa2c'>This is incredibly filthy. Sleeping here means your spirit is broken, and you submit to be taken far away to a bleak future as a prisoner. Count as dead for respawning rules.</font>"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "despair"
+
+
+// Better gravel smoothing
+/obj/effect/turf_decal/gravel_edge
+	icon = 'icons/fallout/turfs/gravel.dmi'
+	icon_state = "gravel_edge"
+
+// New roof for tent
+/turf/open/floor/plating/f13/outside/roof/tent_leather 
+	name = "leather tent roof"
+	icon = 'icons/fallout/turfs/walls/tents.dmi'
+	icon_state = "leather_roof"
+
+// shading under the pavillon
+/obj/effect/turf_decal/shadow
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "shadow"
+
+
+// stairs platform to make it prettier
+/turf/open/floor/f13/stairs_platform
+	name = "stairs"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "stairs_platform"
+	color = "#A47449"
+
+
+// -------------- STATUE OF MARS ----------------- 
+// more fitting mars statue for the Legion players
+/obj/structure/statue/mars
+	name = "statue of mars"
+	desc = "A monument to masculine virtue, made out of plaster and wood with a thin bronze outer layer."
+	icon = 'modular_atom/legio_invicta/icons/64x64_icons.dmi'
+	icon_state = "statue_mars"
+	anchored = TRUE
+
+/obj/structure/decoration/legion
+	name = "legion bull flag of high quality"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "decal_bull"
+
+/obj/structure/decoration/legion/spears
+	name = "old decorative spears"
+	icon_state = "decal_spears"
+
+/obj/structure/decoration/legion/chains
+	name = "chains"
+	icon_state = "decal_chain1"
+
+/obj/structure/decoration/legion/chains2
+	name = "chains"
+	icon_state = "decal_chain2"
+
+/obj/structure/decoration/legion/tentpole
+	name = "tentpole"
+	icon_state = "decal_tentpole"
+
