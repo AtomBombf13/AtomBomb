@@ -92,7 +92,7 @@
 	toolspeed = 0.5
 	attack_verb = list("attacked", "pinched")
 
-/obj/item/retractor/augment
+/obj/item/cautery
 	name = "cautery"
 	desc = "This stops bleeding."
 	icon = 'icons/obj/surgery.dmi'
