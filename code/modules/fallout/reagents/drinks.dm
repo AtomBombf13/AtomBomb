@@ -14,8 +14,8 @@
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.05)
-		M.adjustFireLoss(-0.05)
+		M.adjustBruteLoss(-0.125)
+		M.adjustFireLoss(-0.125)
 	..()
 
 /datum/reagent/consumable/nuka_cola/overdose_start(mob/living/M)
@@ -37,6 +37,8 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustToxLoss(0.1)
 	..()
 	. = TRUE
 
@@ -58,6 +60,8 @@
 	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	if(holder?.has_reagent(/datum/reagent/consumable/frostoil))
 		holder.remove_reagent(/datum/reagent/consumable/frostoil, 5)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustToxLoss(0.2) //FAKE COLA!!!
 	..()
 	. = TRUE
 
@@ -103,6 +107,8 @@
 	M.adjust_bodytemperature(25 * TEMPERATURE_DAMAGE_COEFFICIENT, 0, BODYTEMP_NORMAL)
 	if(holder?.has_reagent(/datum/reagent/consumable/frostoil))
 		holder.remove_reagent(/datum/reagent/consumable/frostoil, 5)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(0.1) //it adjusts toxin loss, so it will damage you via brute instead
 	..()
 	. = TRUE
 
@@ -122,6 +128,8 @@
 	M.dizziness = max(0,M.dizziness-5)
 	M.drowsyness = max(0,M.drowsyness-3)
 	//310.15 is the normal bodytemp.
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustToxLoss(0.1)
 	..()
 	. = TRUE
 
@@ -141,6 +149,10 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.075)
+		M.adjustFireLoss(-0.075)
+
 	..()
 	. = TRUE
 
@@ -158,6 +170,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.075)
+		M.adjustFireLoss(-0.075)
 	..()
 	. = TRUE
 
@@ -174,6 +189,9 @@
 	M.adjustToxLoss(-0.1*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.075)
+		M.adjustFireLoss(-0.075)
 	..()
 	. = TRUE
 
@@ -191,6 +209,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.2)
+		M.adjustFireLoss(-0.2)
 	..()
 	. = TRUE
 
@@ -202,14 +223,14 @@
 	glass_icon_state = "nukaiceglass"
 	glass_name = "Iced Nuka"
 	glass_desc = "Nuka. Stay frosty."
-	
+
 /datum/reagent/consumable/nukaice/on_mob_life(mob/living/carbon/M)
 	M.adjust_bodytemperature(-20 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C) //310.15 is the normal bodytemp.
 	M.drowsyness = 0
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
 	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
-		M.adjustBruteLoss(-0.075)
-		M.adjustFireLoss(-0.075)
+		M.adjustBruteLoss(-0.2)
+		M.adjustFireLoss(-0.2)
 	..()
 	. = TRUE
 
@@ -233,6 +254,9 @@
 	M.drowsyness = 0
 	M.AdjustSleeping(-40, FALSE)
 	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.2)
+		M.adjustFireLoss(-0.2)
 	..()
 	. = TRUE
 
@@ -266,6 +290,8 @@
 	glass_name = "Nuka Berry"
 	glass_desc = "Nuka-Cola with a Berry Aftertaste."
 
+
+
 /datum/reagent/consumable/nukacooler
 	name = "Nuka Cooler"
 	description = "Insanely cold Nuka-Cola, Freezing the air that surrounds it."
@@ -296,6 +322,8 @@
 	M.nutrition = max(M.nutrition - 3, 0)
 	M.overeatduration = 0
 	M.drowsyness = 0
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustToxLoss(0.25) //no sugar
 	..()
 	. = TRUE
 
@@ -328,6 +356,15 @@
 	glass_name = "Nuka Float"
 	glass_desc = "A delicious blend of ice-cream and classic Nuka-Cola!"
 
+/datum/reagent/consumable/nukafloat/on_mob_life(mob/living/carbon/M)
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustBruteLoss(-0.125)
+		M.adjustFireLoss(-0.125)
+	..()
+
 /datum/reagent/consumable/sunsetfloat
 	name = "Sunset Float"
 	description = "A delicious blend of ice-cream and classic Sunset Sass!"
@@ -337,6 +374,14 @@
 	glass_icon_state = "sunsetfloatglass"
 	glass_name = "Sunset Float"
 	glass_desc = "A delicious blend of ice-cream and classic Sunset Sass!"
+
+/datum/reagent/consumable/sunsetfloat/on_mob_life(mob/living/carbon/M)
+	M.drowsyness = 0
+	M.AdjustSleeping(-40, FALSE)
+	M.adjust_bodytemperature(-5 * TEMPERATURE_DAMAGE_COEFFICIENT, BODYTEMP_NORMAL)
+	if(HAS_TRAIT(M, TRAIT_NUKA_LOVER))
+		M.adjustToxLoss(0.1)
+	..()
 
 /datum/reagent/consumable/bawlsshake
 	name = "Bawls Shake"
