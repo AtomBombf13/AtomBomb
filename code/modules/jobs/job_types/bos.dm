@@ -335,6 +335,7 @@ Head Knight
 	belt =			/obj/item/storage/belt/military/army
 	neck =			/obj/item/storage/belt/holster
 	mask =			/obj/item/clothing/mask/gas/sechailer
+	ears =			/obj/item/radio/headset/headset_bos/command
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/head
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
