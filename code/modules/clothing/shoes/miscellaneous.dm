@@ -75,7 +75,7 @@
 	strip_delay = 50
 	equip_delay_other = 50
 	resistance_flags = NONE
-	custom_price = PRICE_ABOVE_EXPENSIVE
+	custom_price = PRICE_EXPENSIVE
 	can_be_tied = FALSE
 
 /obj/item/clothing/shoes/galoshes/dry
