@@ -831,7 +831,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 				purchase_message_cooldown = world.time + 5 SECONDS
 				last_shopper = usr
 			if(price_to_use > stored_caps && !force_free)
-				to_chat(usr, span_alert("Not enough caps to pay for [R.name]!"))
+				to_chat(usr, span_alert("Not enough money to pay for [R.name]!"))
 				vend_ready = TRUE
 				return
 			if(!force_free)
@@ -985,12 +985,14 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/proc/add_caps(obj/item/I)
 	if(istype(I, /obj/item/stack/f13Cash/usd))
 		var/obj/item/stack/f13Cash/currency = I
-		var/inserted_value = FLOOR(currency.amount * 0.004, 1)
+		var/inserted_value = FLOOR(currency.amount * 1, 1)
 		stored_caps += inserted_value
 		I.use(currency.amount)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] dollar value to a vending machine.")
 		src.ui_interact(usr)
+		if(inserted_value < 1)
+			to_chat(usr, "We don't accept amounts less that 250 USD!")
 	else
 		to_chat(usr, "We only accept the American dollar here!")
 		return
@@ -1001,11 +1003,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 		return
 	var/obj/item/stack/f13Cash/U = new /obj/item/stack/f13Cash/usd
 	if(stored_caps > U.max_amount)
-		U.add((U.max_amount * 250) - 1)
+		U.add(U.max_amount - 1)
 		U.forceMove(src.loc)
 		stored_caps -= U.max_amount
 	else
-		U.add((stored_caps * 250) - 1)
+		U.add(stored_caps - 1)
 		U.forceMove(src.loc)
 		stored_caps = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
