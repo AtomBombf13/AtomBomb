@@ -502,9 +502,16 @@
 /obj/item/twohanded/sledgehammer/simple
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer useful for blacksmithing as well as caving in heads and barricades. Swings incredibly slowly, but with deadly power."
-	icon_state = "hammer-sledge"
-	icon_prefix = "hammer-sledge"
-	wielded_icon = "hammer-sledge2"
+	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
+	mob_overlay_icon = 'modular_atom/blacksmith/icons/onmob/slot.dmi'
+	lefthand_file = 'modular_atom/blacksmith/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular_atom/blacksmith/icons/onmob/righthand.dmi'
+	icon_state = "sledgehammer"
+	icon_prefix = "sledgehammer"
+	wielded_icon = "sledgehammer2"
+//	icon_state = "hammer-sledge"
+//	icon_prefix = "hammer-sledge"
+//	wielded_icon = "hammer-sledge2"
 	var/qualitymod = 0
 
 /obj/item/twohanded/sledgehammer/simple/afterattack(atom/A, mob/living/user, proximity)
