@@ -184,10 +184,10 @@
 /obj/machinery/door/unpowered/secure_legion/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',15,1)
+			playsound(src,'sound/f13machines/doorchainlink_open.ogg',30,1)
 			flick("secure_legion_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',15,1)
+			playsound(src,'sound/f13machines/doorchainlink_close.ogg',30,1)
 			flick("secure_legion_closing", src)
 
 

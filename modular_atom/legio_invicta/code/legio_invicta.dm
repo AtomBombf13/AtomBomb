@@ -762,7 +762,7 @@ obj/item/storage/belt/medical/surgical/primitive
 
 
 
-// -------------- BATHTUB ----------------- - no mechanical function, just for RP
+// -------------- BATHTUB ----------------- - only mood function, just for RP. Would be better if mood boost just fired if not weaing anything in uniform slot, or unable to buckle if dressed.
 
 
 /obj/structure/chair/comfy/bathtub
@@ -780,6 +780,7 @@ obj/item/storage/belt/medical/surgical/primitive
 
 /obj/structure/chair/comfy/bathtub/post_buckle_mob(mob/living/M)
 	. = ..()
+	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "bathed", /datum/mood_event/bathed)
 	handle_layer()
 	playsound(src, 'modular_atom/blacksmith/sound/water_splash2.ogg',50, 1)
 
@@ -787,6 +788,11 @@ obj/item/storage/belt/medical/surgical/primitive
 	. = ..()
 	handle_layer()
 	playsound(src, 'modular_atom/blacksmith/sound/water_splash2.ogg',50, 1)
+
+/datum/mood_event/bathed
+	description = span_nicegreen("A warm bath felt nice.")
+	mood_change = 4
+	timeout = 3000
 
 
 // ------------------- SIGNS -----------------------------
@@ -852,6 +858,7 @@ obj/item/storage/belt/medical/surgical/primitive
 /obj/structure/sign/legion/prison
 	name = "prison"
 	desc = "Lets the prisoner enjoy the local climate without interfering roofing."
+	icon_state = "sign_ground"
 
 /obj/structure/sign/legion/storeroom
 	name = "storeroom"
@@ -915,6 +922,12 @@ added to end of campfire/attackby
 	icon = 'icons/fallout/turfs/gravel.dmi'
 	icon_state = "gravel_edge"
 
+/obj/effect/turf_decal/gravel_edge/corner // outer corner
+	icon_state = "gravel_corner"
+
+/obj/effect/turf_decal/gravel_edge/diagonal // inner corner alt
+	icon_state = "gravel_diagonal"
+
 // New roof for tent
 /turf/open/floor/plating/f13/outside/roof/tent_leather 
 	name = "leather tent roof"
@@ -943,6 +956,9 @@ added to end of campfire/attackby
 	icon = 'modular_atom/legio_invicta/icons/64x64_icons.dmi'
 	icon_state = "statue_mars"
 	anchored = TRUE
+	max_integrity = 1000
+	material_drop_type = /obj/item/stack/sheet/bronze
+	impressiveness = 30
 
 /obj/structure/decoration/legion
 	name = "legion bull flag of high quality"
@@ -964,4 +980,47 @@ added to end of campfire/attackby
 /obj/structure/decoration/legion/tentpole
 	name = "tentpole"
 	icon_state = "decal_tentpole"
+
+
+// -------------- DOUBLE BARRED DOORS ----------------- 
+
+/obj/structure/simple_door/metal/barred/left
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "barred_left"
+	door_type = "barred_left"
+	open_sound = "modular_atom/legio_invicta/sound/doorchain_open.ogg"
+	close_sound = "modular_atom/legio_invicta/sound/doorchain_close.ogg"
+
+/obj/structure/simple_door/metal/barred/right
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "barred_right"
+	door_type = "barred_right"
+	open_sound = "modular_atom/legio_invicta/sound/doorchain_open.ogg"
+	close_sound = "modular_atom/legio_invicta/sound/doorchain_close.ogg"
+
+
+// -------------- PRE-STONE RINGED BONFIRE ----------------- 
+
+/obj/structure/bonfire/safe
+	stones = TRUE
+	density = TRUE
+
+/obj/structure/bonfire/safe/Initialize()
+	. = ..()
+	add_overlay("bonfire_stones")
+
+
+// // -------------- OUTSIDE DEAD DIRT ----------------- the shade used in the map, nature free, stamped dirt flooring
+/turf/open/indestructible/ground/inside/dirt/stamped
+	icon = 'icons/fallout/turfs/dirt.dmi'
+	slowdown = 0.1
+	flags_1 = null
+
+/turf/open/indestructible/ground/inside/dirt/stamped/outside // criminal solution but whatever. To have dead dirt outside.
+	sunlight_state = SUNLIGHT_SOURCE
+
+/turf/open/indestructible/ground/inside/dirt/stamped/outside/mess // ugly solution but whatever. To have undiggable sand for flooring in a pavillon
+	icon = 'icons/fallout/turfs/ground.dmi'
+	icon_state = "wasteland"
+
 
