@@ -640,7 +640,7 @@
 	desc = "A poster showing a REPCONN employee being watched by an ominous pair of eyes. The text reads, 'Security is YOUR duty!'."
 	icon_state = "corporate2"
 
-/obj/structure/sign/poster/prewar/corporate_espionage
+/obj/structure/sign/poster/prewar/corporate/espionage
 	name = "REPCONN Aerospace security poster #3"
 	desc = "This poster shows the silhouette of a man wearing a raincoat with the collar up and a hat groping towards the files in a drawer of a filing cabinet. The text reads, 'Only You Can Prevent CORPORATE ESPIONAGE!'."
 	icon_state = "corporate3"
@@ -795,7 +795,7 @@
 		/obj/structure/sign/poster/prewar/vault_tec, /obj/structure/sign/poster/prewar/vault_tec/well_be_there,
 		/obj/structure/sign/poster/prewar/vault_tec/vault_secure, /obj/structure/sign/poster/prewar/vault_tec/vault_future,
 		/obj/structure/sign/poster/prewar/corporate, /obj/structure/sign/poster/prewar/corporate/eyes,
-		/obj/structure/sign/poster/prewar/corporate_espionage, /obj/structure/sign/poster/prewar/zion/night,
+		/obj/structure/sign/poster/prewar/corporate/espionage, /obj/structure/sign/poster/prewar/zion/night,
 		/obj/structure/sign/poster/prewar/zion/evening, /obj/structure/sign/poster/prewar/zion/morning,
 		/obj/structure/sign/poster/prewar/enlist, /obj/structure/sign/poster/prewar/dean,
 		/obj/structure/sign/poster/prewar/nukagirl, /obj/structure/sign/poster/prewar/ralphie,
