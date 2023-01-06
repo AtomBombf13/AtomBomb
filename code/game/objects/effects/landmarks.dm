@@ -597,7 +597,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Legion Orator"
 
 /obj/effect/landmark/start/f13/immune
-	name = "Legion Immune"
+	name = "Legion Off-Duty"
 
 /obj/effect/landmark/start/f13/decanvet
 	name = "Legion Veteran Decanus"
@@ -617,7 +617,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/legionary
 	name = "Prime Legionnaire"
-	icon_state = "Veteran Legionnaire"
+	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/decanrec
 	name = "Legion Recruit Decanus"
@@ -633,7 +633,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/campfollower
 	name = "Camp Follower"
-	icon_state = "Legionary"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi' // cause it just doesnt work in the base file, its weird but whatever.
+	icon_state = "Auxilia"
 
 /obj/effect/landmark/start/f13/slave
 	name = "Legion Slave"
