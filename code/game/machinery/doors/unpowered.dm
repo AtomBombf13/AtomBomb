@@ -42,10 +42,10 @@
 /obj/machinery/door/unpowered/securedoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			flick("secure_opening", src)
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			flick("secure_closing", src)
 
 
@@ -53,7 +53,7 @@
 
 /obj/machinery/door/unpowered/securedoor/legion
 	name = "Legion Castrum"
-	req_access_txt = "123"
+	req_access_txt = "123" // ACCESS_LEGION
 
 //khoor
 /obj/machinery/door/unpowered/securedoor/khandoor
@@ -134,7 +134,7 @@
 	assemblytype = /obj/item/stack/rods
 	visible = FALSE
 	explosion_block = FALSE
-	pass_flags = LETPASSTHROW  // would be great but the var is not functional for some reason.
+	pass_flags_self = LETPASSTHROW
 	proj_pass_rate = 95
 
 /obj/machinery/door/unpowered/celldoor/update_icon()
@@ -146,10 +146,10 @@
 /obj/machinery/door/unpowered/celldoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorchainlink_open.ogg',20,1)
 			flick("cell_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorchainlink_close.ogg',20,1)
 			flick("cell_closing", src)
 
 
@@ -184,10 +184,10 @@
 /obj/machinery/door/unpowered/secure_legion/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',40,1)
+			playsound(src,'sound/f13machines/doorchainlink_open.ogg',15,1)
 			flick("secure_legion_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',40,1)
+			playsound(src,'sound/f13machines/doorchainlink_close.ogg',15,1)
 			flick("secure_legion_closing", src)
 
 

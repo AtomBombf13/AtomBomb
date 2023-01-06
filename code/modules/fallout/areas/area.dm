@@ -685,7 +685,7 @@
 	'sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg')
 	blob_allowed = 0
 	environment = 4
-	grow_chance = 5
+	grow_chance = 0
 
 /area/f13/followers
 	name = "Followers of the Apocalypse Clinic"

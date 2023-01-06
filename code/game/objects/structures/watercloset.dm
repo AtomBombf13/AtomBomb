@@ -758,6 +758,9 @@
 	density = FALSE
 	var/open = TRUE
 
+/obj/structure/curtain/closed // pre-closed version
+	open = FALSE
+
 /obj/structure/curtain/proc/toggle()
 	open = !open
 	update_icon()

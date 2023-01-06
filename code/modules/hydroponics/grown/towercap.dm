@@ -146,14 +146,13 @@
 
 /obj/structure/bonfire
 	name = "bonfire"
-	desc = "For grilling, broiling, charring, smoking, heating, roasting, toasting, simmering, searing, melting, and occasionally burning things."
+	desc = "For grilling, broiling, charring, smoking, heating, roasting, toasting, simmering, searing, melting, and occasionally burning things. Can be made safer by adding a sandstone circle."
 	icon = 'icons/fallout/objects/furniture/heating.dmi'
 	icon_state = "bonfire"
 	light_color = LIGHT_COLOR_FIRE
 	density = FALSE
 	anchored = TRUE
 	buckle_lying = 0
-	pass_flags = LETPASSTHROW
 	pass_flags_self = PASSTABLE
 	var/burning = 0
 	var/burn_icon = "bonfire_on_fire" //for a softer more burning embers icon, use "bonfire_warm"

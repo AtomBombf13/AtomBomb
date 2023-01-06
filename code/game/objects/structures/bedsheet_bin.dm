@@ -5,7 +5,7 @@ BEDSHEETS
 LINEN BINS
 */
 
-/obj/item/blanket
+/obj/item/blanket // obsolete type, should be phased out and replaced with below bedsheet subtype
 	name = "blanket"
 	desc = "A undyed rough blanket."
 	icon = 'icons/obj/bedsheets.dmi'
@@ -19,6 +19,14 @@ LINEN BINS
 	resistance_flags = FLAMMABLE
 
 /obj/item/blanket/blanketalt
+	icon_state = "blanket2"
+
+/obj/item/bedsheet/blanket
+	name = "blanket"
+	desc = "A undyed rough blanket."
+	icon_state = "blanket1"
+
+/obj/item/bedsheet/blanket2
 	icon_state = "blanket2"
 
 /obj/item/bedsheet

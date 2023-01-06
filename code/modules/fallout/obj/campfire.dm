@@ -52,6 +52,14 @@
 				to_chat(user, "You start cooking a [F.name].")
 				if(do_after(user, 20, target = src))
 					F.microwave_act()
+	else if(fired && istype(P, /obj/item/stack/medical/gauze/improvised))
+		if(!ishuman(user))
+			return
+		if(istype(P, /obj/item/stack/medical/gauze/improvised))
+			var/obj/item/stack/medical/gauze/improvised/F = P
+			to_chat(user, "You start baking the [F.name].")
+			if(do_after(user, 30, target = src))
+				F.microwave_act()
 	else
 		. = ..()
 		if(fired)
@@ -86,7 +94,7 @@
 
 //	BeginAmbient('sound/effects/comfyfire.ogg', 20, 12)
 
-	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
+	playsound(src, 'modular_atom/blacksmith/sound/furnace1.ogg', 25, 1, -3)
 	START_PROCESSING(SSobj, src)
 	fired = 1
 	desc = "A warm, bright, and hopeful fire source."
@@ -142,6 +150,7 @@
 
 /obj/structure/campfire/stove
 	name = "pot belly stove"
-	desc = "A warm stove, for cooking food, or keeping warm in the winter. It's really old fashioned, but works wonders when there's no electricity."
-	density = 1
+	desc = "A warm stove, for cooking food, or keeping warm in the winter. It's really old fashioned, but works wonders when there's no electricity. Can be used to sterilize improvised gauze."
+	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
 	icon_state = "potbelly"
+	density = 1
