@@ -223,8 +223,6 @@
  * 9mm
  * Very Fast Firing Rate
  * Less damage
- * One-handed
- * Akimbo!
  * Common
  * * * * * * * * * * */
 
@@ -239,7 +237,7 @@
 
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	init_firemodes = list(
