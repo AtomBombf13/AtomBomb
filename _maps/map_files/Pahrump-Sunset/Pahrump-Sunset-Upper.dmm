@@ -8769,14 +8769,6 @@
 "qzj" = (
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"qzp" = (
-/obj/structure/fence/handrail{
-	density = 0;
-	pixel_y = 16
-	},
-/obj/machinery/vending/nukacolavend,
-/turf/open/floor/carpet/red,
-/area/f13/brotherhood/leisure)
 "qzu" = (
 /obj/machinery/photocopier,
 /turf/open/floor/carpet/royalblack,
@@ -48632,7 +48624,7 @@ hbQ
 hbQ
 hbQ
 hbQ
-qzp
+nbF
 cWs
 mOu
 hqH
