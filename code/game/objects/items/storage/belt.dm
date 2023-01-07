@@ -191,7 +191,7 @@
 		/obj/item/pinpointer/crew,
 		/obj/item/reagent_containers/chem_pack,
 		/obj/item/stack/sticky_tape, //surgical tape
-        /obj/item/melee/onehanded/straight_razor // new
+		/obj/item/melee/onehanded/straight_razor // new
 		))
 
 /obj/item/storage/belt/medical/surgical
