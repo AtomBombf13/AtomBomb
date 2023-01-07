@@ -1092,6 +1092,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/gramophone_recorder,
 /turf/open/floor/wood_common,
 /area/f13/city)
 "bOA" = (
@@ -6107,6 +6108,13 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"lSl" = (
+/obj/structure/table/wood,
+/obj/item/record_disk,
+/obj/item/record_disk,
+/obj/item/record_disk,
+/turf/open/floor/wood_common,
+/area/f13/city)
 "lSK" = (
 /obj/machinery/light{
 	dir = 8
@@ -48273,7 +48281,7 @@ oez
 ant
 byT
 bOe
-vMz
+lSl
 ccV
 woa
 nSB
