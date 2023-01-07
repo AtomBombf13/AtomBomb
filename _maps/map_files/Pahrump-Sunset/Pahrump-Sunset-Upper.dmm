@@ -2369,7 +2369,7 @@
 "eeh" = (
 /obj/structure/chair/bench{
 	dir = 4;
-	pixel_x = -18
+	pixel_x = -17
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
@@ -4717,11 +4717,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/wasteland/ncr)
-"iZT" = (
-/obj/structure/window/fulltile/ruins,
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/open/floor/f13/wood,
-/area/f13/legion)
 "jaq" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -7747,7 +7742,10 @@
 /obj/structure/table/wood,
 /obj/item/paper/natural,
 /obj/item/paper/natural,
-/obj/item/pen/fountain,
+/obj/item/paper/natural,
+/obj/item/paper/natural,
+/obj/item/folder/red,
+/obj/item/pen/charcoal,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "osk" = (
@@ -72531,7 +72529,7 @@ oez
 oez
 oez
 oez
-iZT
+wEE
 ebv
 bSK
 iEW

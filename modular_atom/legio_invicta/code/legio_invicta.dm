@@ -728,12 +728,12 @@
 	new /obj/item/stack/sticky_tape/surgical(src)
 	new /obj/item/stack/medical/bone_gel(src)
 
-
+/* Added to base code
 // ------------------- PRIMITIVE MEDICAL TOOLBELT -----------------------------
 
-obj/item/storage/belt/medical/surgical/primitive
-	name = "simple surgical toolbelt"
-	desc = "A belt designed for holding surgical tools."
+obj/item/storage/belt/medical/primitive
+	name = "primitive medical toolbelt"
+	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
 	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
@@ -743,13 +743,13 @@ obj/item/storage/belt/medical/surgical/primitive
 
 /obj/item/storage/belt/medical/primitive/PopulateContents()
 	new /obj/item/surgical_drapes(src)
-	new /obj/item/kitchen/knife/butcher/tribal(src)
-	new /obj/item/handsaw(src)
+	new /obj/item/melee/onehanded/straight_razor(src)
+	new /obj/item/circular_saw/primitive(src)
 	new /obj/item/retractor/tribal(src)
 	new /obj/item/hemostat/tribal(src)
 	new /obj/item/cautery/primitive(src)
 	new /obj/item/bonesetter(src)
-
+*/
 
 // ------------------- BUST OF CAESAR -----------------------------
 
@@ -871,6 +871,10 @@ obj/item/storage/belt/medical/surgical/primitive
 /obj/structure/sign/legion/stronghold
 	name = "stronghold"
 	desc = "Main building, fortified."
+
+/obj/structure/sign/legion/guardhouse
+	name = "guardhouse"
+	desc = "Sit in the gloom and wait for something to happen."
 
 /obj/machinery/door/unpowered/securedoor/legion/warroom
 	name = "war room"

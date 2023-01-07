@@ -22650,14 +22650,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/village)
 "don" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/oil/slippery,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	color = "#e4e4e4"
-	},
+/obj/structure/sign/legion/guardhouse,
+/turf/closed/wall/f13/wood,
 /area/f13/legion)
 "dot" = (
 /obj/structure/fence/wooden,
@@ -52694,7 +52688,9 @@
 /area/f13/wasteland)
 "rka" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/mineral/money_exchanger/legion,
+/obj/machinery/mineral/money_exchanger/legion{
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	color = "#e4e4e4"
 	},
@@ -59388,6 +59384,15 @@
 /obj/item/stack/rods/ten,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/village)
+"uuN" = (
+/obj/structure/noticeboard{
+	layer = 3
+	},
+/obj/structure/barricade/wooden/strong{
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	},
+/turf/closed/wall/f13/wood,
+/area/f13/caves)
 "uuP" = (
 /obj/item/storage/bag/plants,
 /obj/item/trash/f13/k_ration,
@@ -122378,7 +122383,7 @@ asS
 tIG
 aaB
 aaB
-yju
+uuN
 sEB
 fFZ
 pqa
@@ -123912,7 +123917,7 @@ ikx
 fEW
 fEW
 dgb
-fEW
+don
 lBZ
 fEW
 npa
@@ -127772,7 +127777,7 @@ sSM
 kYz
 tbW
 tsh
-don
+oiR
 qXa
 aEr
 sJf
