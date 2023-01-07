@@ -616,10 +616,6 @@
 	desc = "This poster calls to a time of free booze and fun. Today those beaches are full of mutants and bleached bones."
 	icon_state = "poster82"
 
-/obj/structure/sign/poster/prewar/poster93
-	name = "old cult poster"
-	desc = "Time is a trap, God slumbers locked in time. Humanity shares the Soul of God, each a spark of His spirit. The day when God rises and time will cease comes in thirteen centuries. On this day all sparks will unite in an endless bonfire."
-	icon_state = "poster93"
 
 /obj/structure/sign/poster/prewar/poster94
 	name = "burning city poster"
