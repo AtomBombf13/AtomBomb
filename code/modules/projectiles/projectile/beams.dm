@@ -294,6 +294,7 @@
 /obj/item/projectile/beam/laser/musket //musket
 	name = "laser beam"
 	damage = 45
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
 	hitscan = TRUE
 	pixels_per_second = TILES_TO_PIXELS(50)
 
@@ -500,7 +501,7 @@
 	icon_state = "emitter"
 	damage = 20 //Firerate for damage and wounds
 	armour_penetration = BULLET_PENETRATION_LOW
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SMALL
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM // this is a hightier gun, it should at least be on the level of the AER9
 	hitscan = TRUE
 	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
 	tracer_type = /obj/effect/projectile/tracer/laser/emitter
@@ -552,6 +553,7 @@
 	name = "solar scorcher beam"
 	damage = 28
 	armour_penetration = 0.42
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 
 /obj/item/projectile/beam/laser/solar/hitscan
 	name = "solar scorcher beam"
@@ -573,7 +575,7 @@
 	damage_type = BURN
 	damage = 60 //fucc you normies
 	armour_penetration = 0 //no AP, armor shouldnt have more than 20 resist against plasma unless its specialized
-	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER
+	damage_threshold_penetration = BULLET_DT_PENETRATION_SNIPER // make sure to redefine this var if you're making a f13plasma subtype
 	flag = "energy" //checks vs. energy protection
 	wound_bonus = 90 //being hit with plasma is horrific
 	eyeblur = 0
@@ -635,6 +637,7 @@
 /obj/item/projectile/f13plasma/pistol //Plasma pistol
 	damage = 35
 	wound_bonus = 70 //being hit with plasma is horrific
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
 
 /obj/item/projectile/f13plasma/pistol/worn
 	damage = 30
@@ -642,9 +645,10 @@
 /obj/item/projectile/f13plasma/pistol/glock //Glock (streamlined plasma pistol)
 	damage = 40
 	wound_bonus = 75 //being hit with plasma is horrific
-
+	
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 35
+	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 
 /obj/item/projectile/f13plasma/pistol/alien
 	name = "alien projectile"
@@ -659,6 +663,10 @@
 	name = "advanced laser beam"
 	icon_state = "u_laser"
 	damage = 45
+	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	damage_threshold_penetration = BULLET_DT_PENETRATION_MEDIUM
+	wound_bonus = 35 // it's an electrolaser
+	bare_wound_bonus = 40
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
 
@@ -680,12 +688,6 @@
 /obj/item/projectile/beam/laser/laer/hitscan/Initialize()
 	. = ..()
 	transform *= 2
-
-/obj/item/projectile/beam/laser/musket //musket
-	name = "laser bolt"
-	damage = 40
-	armour_penetration = 0.2
-
 
 
 // BETA // Obsolete
