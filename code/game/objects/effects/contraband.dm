@@ -546,11 +546,6 @@
 	desc = "Foreign agents can be anywhere. Trust nobody, report everybody."
 	icon_state = "poster63"
 
-/obj/structure/sign/poster/prewar/poster65
-	name = "niche game poster"
-	desc = "GRIDIRON - Where the only way to escape the game, is to kill. Hitting shelves in fall of 2078!"
-	icon_state = "poster65"
-
 /obj/structure/sign/poster/prewar/poster66
 	name = "old hopeful poster"
 	desc = "This advertisement appears to be spiritual in nature. Whatever faith it called to has been worn away by time."
@@ -565,26 +560,11 @@
 	name = "old crowded poster"
 	desc = "It looks like the crowd is hoisting the man up in celebration, or are they tearing him apart? Its hard to tell."
 	icon_state = "poster69"
-
-/obj/structure/sign/poster/prewar/poster70
-	name = "old spiritual poster"
-	desc = "Suffer well. May God be saved, and may God save us all. Who else can, in times such as these?"
-	icon_state = "poster70"
-
-/obj/structure/sign/poster/prewar/poster71
-	name = "dead king propaganda"
-	desc = "Decades past, the Dead King invaded this area, his armies barely beaten back. These leftover posters remind of the siege."
-	icon_state = "poster71"
-
+	
 /obj/structure/sign/poster/prewar/poster72
 	name = "old military poster"
 	desc = "This picture glorifies some military commander of the past. You can't tell if it was before or after the collapse."
 	icon_state = "poster72"
-
-/obj/structure/sign/poster/prewar/poster73
-	name = "old nihilist poster"
-	desc = "Only once the last human life is snuffed out will the gate open to the new reality."
-	icon_state = "poster73"
 
 /obj/structure/sign/poster/prewar/poster74
 	name = "old research poster"
