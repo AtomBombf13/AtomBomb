@@ -111,6 +111,7 @@
 /obj/item/gun/ballistic/rocketlauncher
 	name = "\improper rocket launcher"
 	desc = "Technically, this is actually a rocket propelled grenade launcher, rather than a true rocket launcher. The person you shot is unlikely to care much, though."
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
 	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher

@@ -516,7 +516,7 @@
 /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	name = "Winchester City-Killer shotgun"
 	desc = "A high capacity pump action shotgun with black tactical furniture made by Winchester Arms. This one is well preserved pre-war pattern version."
-
+	icon = 'icons/fallout/objects/guns/ballistic/shotties.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "citykiller"
@@ -589,6 +589,7 @@
 /obj/item/gun/ballistic/automatic/shotgun/pancor
 	name = "Pancor Jackhammer"
 	desc = "A drum-loaded, fully automatic shotgun. The pinnacle of turning things into swiss cheese."
+	icon = 'icons/fallout/objects/guns/ballistic/shotties.dmi'
 	icon_state = "pancor"
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'

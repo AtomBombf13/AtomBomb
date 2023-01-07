@@ -411,7 +411,7 @@ obj/item/gun/ballistic/automatic/smg/smg10mm/worn
 /obj/item/gun/ballistic/automatic/smg/smg10mm/compensated
 	name = "commando 10mm submachine gun"
 	desc = "an improved 10mm SMG for special forces, comes with a compensator and larger magwell to accept larger magazines."
-	icon_state = "smg10mmcomp"
+	icon_state = "smg10comp"
 	mag_type = /obj/item/ammo_box/magazine/smg10
 	init_mag_type = /obj/item/ammo_box/magazine/smg10/ext
 	init_recoil = SMG_RECOIL(0.7)

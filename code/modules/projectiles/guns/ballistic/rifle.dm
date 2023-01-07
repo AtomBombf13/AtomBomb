@@ -378,7 +378,7 @@
 /obj/item/gun/ballistic/rifle/mag
 	name = "magazine fed bolt-action rifle template"
 	desc = "should not exist."
-
+	icon = 'icons/fallout/objects/guns/ballistic/manualrifle.dmi'
 	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
