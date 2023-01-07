@@ -143,12 +143,12 @@
 	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola/Initialize()
-	list_reagents = list(/datum/reagent/consumable/nuka_cola = 24, /datum/reagent/radium = rand(1, 6))
+	list_reagents = list(/datum/reagent/consumable/nuka_cola = 15, /datum/reagent/medicine/salglu_solution = rand(3, 7))
 	. = ..()
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive
 	desc = "The most popular flavored soft drink in the United States before the Great War.<br>It was preserved in a fairly pristine state.<br>The bottle is slightly glowing."
-	list_reagents = list(/datum/reagent/consumable/nuka_cola = 15, /datum/reagent/radium = 5)
+	list_reagents = list(/datum/reagent/consumable/nuka_cola = 15, /datum/reagent/medicine/salglu_solution = 5)
 
 /obj/item/reagent_containers/food/drinks/bottle/sunset
 	name = "Sunset Sarsparilla"
@@ -156,7 +156,7 @@
 	icon = 'icons/WVM/new_vendors.dmi'
 //	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "sunset"
-	list_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 1, /datum/reagent/consumable/sunset = 15, /datum/reagent/medicine/salglu_solution = 5)
+	list_reagents = list(/datum/reagent/consumable/sunset = 15, /datum/reagent/medicine/salglu_solution = 3)
 	isGlass = TRUE
 
 
@@ -362,7 +362,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/applejack
 	name = "Buckin' Bronco's Applejack"
 	desc = "Kicks like a horse, tastes like an apple!"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_REALLY_CHEAP
 	icon_state = "applejack_bottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/applejack = 100)
 	foodtype = FRUIT
@@ -432,7 +432,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice
 	name = "orange juice"
 	desc = "Full of vitamins and deliciousness!"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 	icon_state = "orangejuice"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -454,7 +454,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/cream
 	name = "milk cream"
 	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 	icon_state = "cream"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
@@ -523,7 +523,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/tomatojuice
 	name = "tomato juice"
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 	icon_state = "tomatojuice"
 	item_state = "carton"
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'

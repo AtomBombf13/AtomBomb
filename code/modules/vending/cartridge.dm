@@ -18,7 +18,7 @@
 	refill_canister = /obj/item/vending_refill/cart
 	resistance_flags = FIRE_PROOF
 	default_price = PRICE_ALMOST_EXPENSIVE
-	extra_price = PRICE_ALMOST_ONE_GRAND
+	extra_price = PRICE_REALLY_EXPENSIVE
 	payment_department = ACCOUNT_SRV
 
 /obj/machinery/vending/cart/Initialize()

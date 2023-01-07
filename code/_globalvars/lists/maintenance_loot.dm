@@ -222,9 +222,8 @@ GLOBAL_LIST_INIT(trash_gun, list(
 ))
 
 GLOBAL_LIST_INIT(trash_money, list(
-	/obj/item/stack/f13Cash/random/low = 30,
-	/obj/item/stack/f13Cash/random/med = 9,
-	/obj/item/stack/f13Cash/random/high = 1
+	/obj/item/stack/f13Cash/random/lowmob = 30,
+	/obj/item/stack/f13Cash/random/usd/lowusd = 10
 ))
 
 GLOBAL_LIST_INIT(trash_tool, list(
@@ -857,15 +856,15 @@ GLOBAL_LIST_INIT(loot_material, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t1_money, list(
-	/obj/item/stack/f13Cash/random/low
+	/obj/item/stack/f13Cash/random/lowmob
 ))
 
 GLOBAL_LIST_INIT(loot_t2_money, list(
-	/obj/item/stack/f13Cash/random/med
+	/obj/item/stack/f13Cash/random/medmob
 ))
 
 GLOBAL_LIST_INIT(loot_t3_money, list(
-	/obj/item/stack/f13Cash/random/high
+	/obj/item/stack/f13Cash/random/highmob
 ))
 
 GLOBAL_LIST_INIT(loot_skillbook, list(

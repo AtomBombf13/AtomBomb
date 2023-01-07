@@ -395,7 +395,7 @@
 	slot_flags = ITEM_SLOT_BELT // Big and heavy!
 	light_range = 6	// luminosity when on
 	light_color = "#FFAA44"
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_PRETTY_CHEAP
 
 /obj/item/flashlight/lantern/jade
 	name = "jade lantern"
