@@ -2018,6 +2018,7 @@
 #include "code\modules\codex\categories\category_chemical_reactions.dm"
 #include "code\modules\codex\categories\category_guides.dm"
 #include "code\modules\codex\categories\category_recipes.dm"
+#include "code\modules\codex\categories\category_smithing.dm"
 #include "code\modules\codex\categories\category_substances.dm"
 #include "code\modules\codex\categories\category_uncategorized.dm"
 #include "code\modules\codex\entries\_codex_entry.dm"
