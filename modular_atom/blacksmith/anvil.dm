@@ -3,88 +3,6 @@
 #define WORKPIECE_FINISHED 3
 #define WORKPIECE_SLAG 5
 
-#define RECIPE_HAMMER "bpp" //bend punch punch
-#define RECIPE_SHOVEL "buu" //bend upset upset
-#define RECIPE_PICKAXE "bff" //bend fold fold
-#define RECIPE_PROSPECTPICK "bfs" //bend fold shrink
-#define RECIPE_KITCHENKNIFE "bsd" //bend shrink draw
-#define RECIPE_CROWBAR "bbb" //bend bend bend
-#define RECIPE_UNITOOL "bbu"  //bend bend upset
-#define RECIPE_SCRAPSAW "ffsu" //fold fold shrink upset
-
-#define RECIPE_RING "sss" //shrink shrink shrink
-#define RECIPE_BALLANDCHAIN "pbu" //punch bend upset
-#define RECIPE_ARMOR_PIECE "pup" //punch upset punch
-
-#define RECIPE_BOWIE "dfs" //draw fold shrink
-#define RECIPE_DAGGER "dds" //draw draw shrink
-
-#define RECIPE_MACHETE "fdf" //fold draw fold
-#define RECIPE_MACHREFORG "fuf" //fold upset fold lawnmower classic
-
-#define RECIPE_SWORD "ffdf" // fold fold draw fold
-#define RECIPE_SABRE "ffdd" //fold fold draw draw
-
-#define RECIPE_LONGSWORD "fffdd" //fold fold fold draw draw
-#define RECIPE_KATANA "fffff" //fold fold fold fold fold
-#define RECIPE_WAKI "fffs" //fold fold fold shrink
-
-#define RECIPE_MACE "upu"  //upset punch upset
-#define RECIPE_SCRAP "udpp" //upset draw shrink punch
-#define RECIPE_AXE "udsp" //upset draw shrink punch
-#define RECIPE_CRUSHER "uupp" //upset upset punch punch
-
-#define RECIPE_SPEAR "dddf" //draw draw draw fold
-#define RECIPE_TRIDENT "ddbf" //draw draw bend fold
-
-#define RECIPE_JAVELIN "sdu" //shrink draw upset
-#define RECIPE_THROWING "sdd" //shrink draw draw
-#define RECIPE_BOLA "suu" //shrink upset upset
-
-
-// LEGION SPECIFIC
-#define RECIPE_GLADIUS "fbf" //fold bend fold
-#define RECIPE_LANCE "dbdf" //draw bend fold fold LEGION
-#define RECIPE_SPATHA "ffbf" // fold fold bend fold LEGION
-#define RECIPE_WARAXE "udup" //upset draw upset punch LEGION
-
-GLOBAL_LIST_INIT(anvil_recipes, list(
-	RECIPE_HAMMER = /obj/item/smithing/hammerhead,
-	RECIPE_SHOVEL = /obj/item/smithing/shovelhead,
-	RECIPE_PICKAXE = /obj/item/smithing/pickaxehead,
-	RECIPE_PROSPECTPICK = /obj/item/smithing/prospectingpickhead,
-	RECIPE_KITCHENKNIFE = /obj/item/smithing/knifeblade,
-	RECIPE_CROWBAR = /obj/item/smithing/crowbar,
-	RECIPE_UNITOOL = /obj/item/smithing/unitool,
-	RECIPE_RING = /obj/item/smithing/special/jewelry/ring,
-	RECIPE_BALLANDCHAIN = /obj/item/smithing/ballandchain,
-	RECIPE_ARMOR_PIECE = /obj/item/smithing/armor_piece,
-	RECIPE_DAGGER = /obj/item/smithing/daggerblade,
-   	RECIPE_BOWIE = /obj/item/smithing/bowieblade,
-	RECIPE_MACHETE = /obj/item/smithing/macheteblade,
-	RECIPE_MACHREFORG = /obj/item/smithing/macheterblade,
-	RECIPE_SWORD = /obj/item/smithing/swordblade,
-	RECIPE_SABRE = /obj/item/smithing/sabreblade,
-	RECIPE_LONGSWORD = /obj/item/smithing/longswordblade,
-	RECIPE_KATANA = /obj/item/smithing/katanablade,
-	RECIPE_WAKI = /obj/item/smithing/wakiblade,
-	RECIPE_SCRAPSAW  = /obj/item/smithing/scrapsaw,
-	RECIPE_MACE = /obj/item/smithing/macehead,
-	RECIPE_SCRAP = /obj/item/smithing/scrapblade,
-	RECIPE_AXE = /obj/item/smithing/axehead,
-	RECIPE_CRUSHER = /obj/item/smithing/crusherhead,
-	RECIPE_SPEAR = /obj/item/smithing/spearhead,
-	RECIPE_TRIDENT = /obj/item/smithing/tridenthead,
-	RECIPE_JAVELIN = /obj/item/smithing/javelinhead,
-	RECIPE_THROWING = /obj/item/smithing/throwingknife,
-	RECIPE_BOLA = /obj/item/smithing/bola,
-	RECIPE_GLADIUS =  /obj/item/smithing/gladiusblade,
-	RECIPE_SPATHA = /obj/item/smithing/spathablade,
-	RECIPE_WARAXE = /obj/item/smithing/waraxehead,
-	RECIPE_LANCE = /obj/item/smithing/lancehead,
-    ))
-
-
 // Logic of smithing recipes: Tools start with bend and have 3 steps. 1h weapons have 3-4 steps. 2h weapons have 4-5 steps. Bigger bladed stuff start with a fold. Pointy stuff generally start with a draw. Unusual stuff migth start with upset.
 // Point of having a structure is obviously to help remember, not just keeping every recipe as pure rote memory with no internal logic. If you add more stuff and fuck this up and don't read comments I hope you get a prolapse. - Pebbles
 
@@ -346,10 +264,13 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 		return SetBusy(FALSE, user)
 
 	// IF YOU DIDN'T FUCK UP THE RECIPE
-	for(var/i in GLOB.anvil_recipes) // for each recipes.
-		if(i == stepsdone)
+	for(var/i in GLOB.anvil_recipes) // for each recipe.
+		var/datum/smithing/smithing_recipe = i
+		if(!istype(smithing_recipe) || isnull(smithing_recipe.id))
+			continue
+		if(smithing_recipe.construct_steps == stepsdone) 
 
-			var/obj/item/smithing/finisheditem = GLOB.anvil_recipes[stepsdone]
+			var/obj/item/smithing/finisheditem = smithing_recipe.result
 			finisheditem = new finisheditem(get_turf(src)) // Lets just spawn the item in immediately!
 
 			to_chat(user, "You finish your [finisheditem]!")

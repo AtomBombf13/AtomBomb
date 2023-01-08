@@ -30,7 +30,7 @@
 
 			for(var/working_product in working_reaction.results)
 				var/datum/reagent/result = working_product
-				mechanics_text += " [working_reaction.results[working_product]]u <span codexlink='[initial(result.name)] (chemical substance)'>[initial(result.name)]"
+				mechanics_text += " [working_reaction.results[working_product]]u <span codexlink='[initial(result.name)] (chemical substance)'>[initial(result.name)]</span>"
 
 			mechanics_text += "<br>It should be performed by mixing the chemicals needed together. It requires the following ingredients:"
 
