@@ -30,7 +30,7 @@
 	desc = "Door with a built-in lock. Can't be padlocked."
 	icon_state = "secure"
 	assemblytype = /obj/item/stack/sheet/mineral/wood/five
-	opacity = TRUE
+	opacity = FALSE
 	explosion_block = TRUE
 
 /obj/machinery/door/unpowered/securedoor/update_icon()
@@ -158,7 +158,7 @@
 
 /obj/machinery/door/unpowered/celldoor/legion
 	name = "Prison door"
-	req_access_txt = "123"
+	req_access_txt = "123"  // ACCESS_LEGION
 
 
 // ------------------------------------
@@ -174,7 +174,8 @@
 	visible = FALSE
 	explosion_block = FALSE
 	proj_pass_rate = 95
-	req_access_txt = "123"
+	req_access_txt = "123"  // ACCESS_LEGION
+	opacity = FALSE
 
 /obj/machinery/door/unpowered/secure_legion/update_icon()
 	if(density)

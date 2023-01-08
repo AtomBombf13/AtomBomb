@@ -10483,7 +10483,9 @@
 "aMY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/railing/handrail/blue/underlayer{
-	dir = 4
+	dir = 4;
+	icon = 'modular_atom/icons/fence.dmi';
+	icon_state = "handrail_g"
 	},
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/f13/wood,
@@ -18854,6 +18856,11 @@
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"bVu" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/glass/bucket/wood,
+/turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
+/area/f13/wasteland)
 "bVE" = (
 /obj/structure/flora/grass/coyote/twelve,
 /turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
@@ -25400,7 +25407,7 @@
 "eEs" = (
 /obj/effect/turf_decal/shadow,
 /obj/structure/decoration/legion/tentpole{
-	pixel_x = 2
+	pixel_x = 12
 	},
 /turf/open/indestructible/ground/inside/dirt/stamped/outside,
 /area/f13/legion)
@@ -25475,7 +25482,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/f13/building/hospital)
 "eGd" = (
-/obj/structure/railing/handrail/blue,
+/obj/structure/railing/handrail/blue/overlayer{
+	icon = 'modular_atom/icons/fence.dmi';
+	icon_state = "handrail_g"
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
@@ -26674,7 +26684,9 @@
 "ffX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/railing/handrail/blue/underlayer{
-	dir = 4
+	dir = 4;
+	icon = 'modular_atom/icons/fence.dmi';
+	icon_state = "handrail_g"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
@@ -28912,7 +28924,7 @@
 /area/f13/building/museum)
 "gkC" = (
 /obj/effect/turf_decal/gravel_edge,
-/obj/structure/flora/tree/wasteland/dark,
+/obj/structure/flora/tree/african_acacia_dead,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "gkK" = (
@@ -30394,6 +30406,13 @@
 "gPj" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
+"gPm" = (
+/obj/structure/flora/grass/coyote/twentythree,
+/obj/structure/flora/tree/wasteland/dark,
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland30"
+	},
+/area/f13/wasteland)
 "gPE" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -35478,6 +35497,13 @@
 /obj/structure/flora/tallgrass6,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"jiI" = (
+/obj/effect/turf_decal/gravel_edge/corner,
+/obj/effect/turf_decal/gravel_edge,
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland33"
+	},
+/area/f13/wasteland)
 "jiJ" = (
 /obj/machinery/trading_machine/ammo,
 /obj/machinery/light{
@@ -38803,7 +38829,6 @@
 /turf/open/floor/wood_common,
 /area/f13/village)
 "kQY" = (
-/obj/structure/flora/grass/coyote/twentytwo,
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1
 	},
@@ -46177,15 +46202,12 @@
 	},
 /area/f13/building/massfusion)
 "ois" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_3"
+/obj/structure/barricade/wooden,
+/obj/structure/decoration/rag{
+	icon_state = "skin"
 	},
-/obj/item/reagent_containers/glass/bucket/wood{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
-/area/f13/legion)
+/turf/closed/mineral/random/low_chance,
+/area/f13/caves)
 "oit" = (
 /obj/effect/decal/fakelattice,
 /obj/effect/decal/cleanable/dirt,
@@ -52010,6 +52032,12 @@
 "qQl" = (
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/khanfort)
+"qQu" = (
+/obj/effect/turf_decal/gravel_edge,
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland27"
+	},
+/area/f13/wasteland)
 "qQz" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -53177,6 +53205,14 @@
 	},
 /turf/closed/wall/f13/wood/house,
 /area/f13/building/khanfort)
+"rwt" = (
+/obj/effect/turf_decal/gravel_edge/corner{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland27"
+	},
+/area/f13/wasteland)
 "rwx" = (
 /obj/effect/turf_decal/gravel_edge,
 /obj/effect/turf_decal/gravel_edge/corner{
@@ -61678,8 +61714,10 @@
 /area/f13/followers)
 "vvO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/railing/handrail/blue{
-	dir = 6
+/obj/structure/railing/handrail/blue/overlayer{
+	dir = 6;
+	icon = 'modular_atom/icons/fence.dmi';
+	icon_state = "handrail_g"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
@@ -63375,6 +63413,12 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"wmR" = (
+/obj/effect/turf_decal/gravel_edge,
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland31"
+	},
+/area/f13/wasteland)
 "wmW" = (
 /obj/machinery/light{
 	dir = 4
@@ -65331,7 +65375,10 @@
 	},
 /area/f13/wasteland)
 "xgW" = (
-/obj/structure/railing/handrail/blue,
+/obj/structure/railing/handrail/blue/overlayer{
+	icon = 'modular_atom/icons/fence.dmi';
+	icon_state = "handrail_g"
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/f13/wood,
@@ -65847,7 +65894,7 @@
 /area/f13/wasteland)
 "xtY" = (
 /obj/structure/campfire/stove{
-	pixel_x = -8
+	pixel_x = -7
 	},
 /obj/effect/turf_decal/shadow,
 /turf/open/indestructible/ground/inside/dirt/stamped/outside,
@@ -66054,7 +66101,7 @@
 "xxP" = (
 /obj/effect/turf_decal/shadow,
 /obj/structure/decoration/legion/tentpole{
-	pixel_x = -21
+	pixel_x = -25
 	},
 /turf/open/indestructible/ground/inside/dirt/stamped/outside,
 /area/f13/legion)
@@ -115762,7 +115809,7 @@ xLC
 xLC
 aae
 aae
-vGl
+ois
 aaB
 vGl
 aae
@@ -116019,7 +116066,7 @@ aae
 aae
 aae
 aae
-vGl
+ois
 aaB
 aaB
 xpV
@@ -116275,7 +116322,7 @@ aae
 aae
 aaa
 aae
-vGl
+ois
 rRe
 aaB
 aaB
@@ -116532,7 +116579,7 @@ aae
 aae
 aaa
 aae
-vGl
+ois
 fNo
 aaB
 aaB
@@ -116789,7 +116836,7 @@ aae
 aae
 aaa
 aaa
-vGl
+ois
 rRe
 aaB
 aaB
@@ -117047,7 +117094,7 @@ aaa
 aae
 aae
 aae
-vGl
+ois
 aaB
 aYf
 xpV
@@ -117305,7 +117352,7 @@ asS
 aae
 aak
 aae
-vGl
+ois
 sls
 nQO
 lTe
@@ -118084,7 +118131,7 @@ eBH
 wwh
 xLC
 gNE
-ois
+onL
 tRs
 tRs
 qjC
@@ -119110,7 +119157,7 @@ tQy
 xLC
 vVf
 maE
-vtZ
+bVu
 eXq
 tRs
 tRs
@@ -119621,7 +119668,7 @@ xXR
 tUV
 xLC
 yiG
-xYt
+qwk
 rbW
 vtZ
 njA
@@ -120134,8 +120181,8 @@ deF
 deF
 xAZ
 pqa
-sSM
-tQy
+afO
+rwt
 rbW
 tfd
 xsw
@@ -120391,8 +120438,8 @@ csG
 csG
 xgW
 pqa
-sSM
-wHl
+pqa
+wmR
 rbW
 tfd
 xsw
@@ -120648,8 +120695,8 @@ wXD
 csG
 eGd
 pqa
-sSM
-tQy
+pqa
+qQu
 vVi
 tfd
 nPu
@@ -120905,8 +120952,8 @@ csG
 csG
 eGd
 pqa
+pqa
 sSM
-xLC
 rbW
 tfd
 xsw
@@ -121162,8 +121209,8 @@ ffX
 ffX
 vvO
 pqa
-sSM
-pdm
+pqa
+jiI
 fwG
 tfd
 xsw
@@ -121419,8 +121466,8 @@ kCl
 jKX
 uTs
 pqa
-sSM
-xLC
+aVq
+jvo
 rbW
 tfd
 xsw
@@ -124235,7 +124282,7 @@ wlm
 sXJ
 rvV
 rtm
-oZM
+gPm
 sou
 xLC
 hme
@@ -128328,7 +128375,7 @@ aae
 aaa
 aae
 aae
-aae
+ois
 sOh
 kCl
 kCl
@@ -128585,7 +128632,7 @@ aae
 aaa
 aae
 aae
-vGl
+aaa
 bqI
 bqI
 bqI
@@ -128842,7 +128889,7 @@ aae
 aaa
 aae
 aae
-vGl
+aaa
 dBh
 aRU
 fWK
@@ -129099,7 +129146,7 @@ aaa
 aae
 aae
 aae
-vGl
+aaa
 evu
 gxa
 tGI
@@ -129126,9 +129173,9 @@ sEB
 yiH
 xLC
 xLC
-xcW
 xLC
-uxi
+xLC
+xLC
 xtN
 yiH
 xLC
@@ -129356,7 +129403,7 @@ aae
 aae
 aae
 aae
-vGl
+aaa
 tGI
 tGI
 tGI
@@ -129613,7 +129660,7 @@ aaa
 aae
 aae
 aae
-vGl
+aaa
 krR
 krR
 krR
@@ -129868,9 +129915,9 @@ aae
 aae
 aaa
 aae
+aaa
 aae
-aae
-vGl
+aaa
 tGI
 tGI
 tGI
@@ -130127,7 +130174,7 @@ aae
 aae
 aae
 aae
-vGl
+aaa
 eyu
 heb
 tGI
@@ -130156,7 +130203,7 @@ xLC
 tQy
 xcW
 xLC
-xLC
+uxi
 ruL
 aqx
 cTD
@@ -130381,10 +130428,10 @@ aae
 aae
 aaa
 aae
+aaa
+aaa
 aae
-aae
-aae
-vGl
+aaa
 fGg
 tGI
 gbA
@@ -130641,8 +130688,8 @@ aae
 aae
 aae
 aae
-vGl
-vGl
+aaa
+aaa
 biW
 biW
 dCa
@@ -130896,13 +130943,13 @@ aae
 aaa
 aae
 aae
+aaa
+aaa
 aae
 aae
-aae
-aae
-aae
-aae
-aae
+vGl
+vGl
+vGl
 ePW
 bqI
 bqI
@@ -131152,14 +131199,14 @@ aae
 aaa
 aaa
 aae
+aaa
+aaa
+aae
+aaa
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
+aaa
+vGl
 feP
 lxp
 tCj
@@ -131412,11 +131459,11 @@ aae
 aae
 aae
 aae
+aaa
+aaa
 aae
 aae
-aae
-aae
-aae
+vGl
 feP
 pvG
 sjz
@@ -131669,11 +131716,11 @@ aae
 aae
 aae
 aae
+aaa
 aae
 aae
-aae
-aae
-aae
+aaa
+vGl
 pLz
 biW
 biW
@@ -131922,19 +131969,19 @@ aaa
 aaa
 aae
 aae
+aaa
+aae
+aae
+aaa
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+aaa
+aaa
+vGl
+aaa
+aaa
+bsP
 kCl
 pLz
 biW
@@ -132184,16 +132231,16 @@ aae
 aae
 aae
 aae
+aaa
 aae
 aae
 aae
 aae
 aae
+aaa
 aae
-aae
-aae
-aae
-aae
+ois
+aaa
 aae
 aae
 aae
@@ -132434,23 +132481,23 @@ aae
 aae
 aae
 aae
+aaa
+aae
+aae
+aaa
 aae
 aae
 aae
+aaa
+aaa
+aae
+aaa
+aaa
+aae
+aaa
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+aaa
 aae
 aae
 aae
@@ -132689,6 +132736,12 @@ atv
 aru
 aae
 aae
+aaa
+aaa
+aae
+aae
+aaa
+aaa
 aae
 aae
 aae
@@ -132696,17 +132749,11 @@ aae
 aae
 aae
 aae
+aaa
 aae
 aae
 aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
-aae
+aaa
 aae
 aae
 aae
@@ -132949,6 +132996,7 @@ aae
 aae
 aae
 aae
+aaa
 aae
 aae
 aae
@@ -132961,8 +133009,7 @@ aae
 aae
 aae
 aae
-aae
-aae
+aaa
 aae
 aae
 aae

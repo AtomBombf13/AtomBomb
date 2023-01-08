@@ -202,6 +202,9 @@
 	icon_state = "handrail_b"
 	layer = ABOVE_ALL_MOB_LAYER
 
+/obj/structure/railing/handrail/blue/overlayer // shown over the mob if layere correctly use with care
+	plane = MOB_PLANE
+
 /obj/structure/railing/handrail/blue/underlayer
 	layer = BELOW_MOB_LAYER
 

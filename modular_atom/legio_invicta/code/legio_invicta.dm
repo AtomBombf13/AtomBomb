@@ -1030,7 +1030,15 @@ added to end of campfire/attackby
 
 /obj/structure/flora/tree/wasteland/dark
 	color = "#5c5a57"
+	plane = MOB_PLANE
 
 /obj/structure/flora/tree/wasteland/dark/Initialize()
+	. = ..()
+	AddComponent(/datum/component/largetransparency, y_offset = 1)
+
+/obj/structure/flora/tree/african_acacia_dead
+	plane = MOB_PLANE
+
+/obj/structure/flora/tree/african_acacia_dead/Initialize()
 	. = ..()
 	AddComponent(/datum/component/largetransparency, y_offset = 1)
