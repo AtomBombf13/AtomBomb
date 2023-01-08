@@ -861,7 +861,7 @@
 	force = 13
 	throwforce = 7
 	custom_materials = list(/datum/material/iron=MINERAL_MATERIAL_AMOUNT*3, /datum/material/wood=MINERAL_MATERIAL_AMOUNT*2)
-	custom_price = PRICE_ALMOST_CHEAP
+	custom_price = PRICE_REALLY_CHEAP
 
 // Frying pan					[ Damage CLUB - 5 ] ----------------
 /obj/item/melee/onehanded/club/fryingpan
