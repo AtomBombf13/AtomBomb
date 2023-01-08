@@ -340,7 +340,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		return
 	if(loc == user && current_equipped_slot && current_equipped_slot != SLOT_HANDS)
 		if(current_equipped_slot in user.check_obscured_slots())
-			to_chat(src, span_warning("You are unable to unequip that while wearing other garments over it!"))
+			to_chat(user, span_warning("You are unable to unequip that while wearing other garments over it!")) //ATOM EDIT - changed from src to user cause it wasn't sending message
 			return FALSE
 
 	if(resistance_flags & ON_FIRE)
