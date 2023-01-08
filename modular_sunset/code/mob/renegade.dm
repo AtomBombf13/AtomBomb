@@ -28,7 +28,7 @@
 	check_friendly_fire = TRUE
 	status_flags = CANPUSH
 	del_on_death = FALSE
-	loot = list(/obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/stack/f13Cash/random/med)
 
 /mob/living/simple_animal/hostile/renegade/Aggro()
 	..()
@@ -90,7 +90,7 @@
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun
-	loot = list(/obj/item/stack/f13Cash/random/lowmob, /obj/effect/spawner/lootdrop/f13/bomb/tier1, /obj/effect/spawner/lootdrop/f13/crafting)
+	loot = list(/obj/item/stack/f13Cash/random/med, /obj/effect/spawner/lootdrop/f13/bomb/tier1, /obj/effect/spawner/lootdrop/f13/crafting)
 	robust_searching = TRUE
 	speak = list("Come get some!", "Going to blow some shit to kingdom come!", "I got the goods!", "Nades for days!", "Renegades represent!")
 	speak_emote = list("says")
@@ -125,7 +125,7 @@
 	ranged_cooldown_time = 6
 	projectiletype = /obj/item/projectile/bullet/c10mm/simple
 	projectilesound = 'sound/f13weapons/combatrifle.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/lowmob, /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2)
+	loot = list(/obj/item/stack/f13Cash/random/med, /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2)
 	robust_searching = TRUE
 	speak = list("Come get some!", "I like my odds, c'mere!", "Gonna get a promotion after this!", "Bullets for days!", "Renegades represent!")
 	speak_emote = list("says")
@@ -230,7 +230,7 @@
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun
-	loot = list(/obj/effect/spawner/bundle/f13/trenchshotgun, /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1, /obj/item/stack/f13Cash/random/medmob)
+	loot = list(/obj/effect/spawner/bundle/f13/trenchshotgun, /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1, /obj/item/stack/f13Cash/random/low)
 	robust_searching = TRUE
 	speak = list("Come get some!", "ON THE GROUND!", "GOING TO SHOVE THIS WHERE THE SUN DON'T SHINE!", "C'MERE, I GOT LEAD!", "RENEGADES REPRESENT!")
 	speak_emote = list("says")
