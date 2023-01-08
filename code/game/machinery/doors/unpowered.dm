@@ -136,6 +136,7 @@
 	explosion_block = FALSE
 	pass_flags_self = LETPASSTHROW
 	proj_pass_rate = 95
+	mouse_opacity = 0
 
 /obj/machinery/door/unpowered/celldoor/update_icon()
 	if(density)

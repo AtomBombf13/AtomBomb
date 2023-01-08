@@ -716,7 +716,7 @@
 	icon_state = "toolbag_primitive"
 
 /obj/item/storage/backpack/duffelbag/med/surgery/primitive/PopulateContents()
-	new /obj/item/kitchen/knife/butcher/tribal(src)
+	new /obj/item/melee/onehanded/straight_razor(src)
 	new /obj/item/hemostat/tribal(src)
 	new /obj/item/retractor/tribal(src)
 	new /obj/item/circular_saw/primitive(src)
@@ -1023,8 +1023,14 @@ added to end of campfire/attackby
 /turf/open/indestructible/ground/inside/dirt/stamped/outside // criminal solution but whatever. To have dead dirt outside.
 	sunlight_state = SUNLIGHT_SOURCE
 
-/turf/open/indestructible/ground/inside/dirt/stamped/outside/mess // ugly solution but whatever. To have undiggable sand for flooring in a pavillon
+/turf/open/indestructible/ground/inside/dirt/stamped/outside/sand // ugly solution but whatever. To have undiggable sand for flooring in a pavillon
+	name = "packed sand"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	icon_state = "wasteland"
 
+/obj/structure/flora/tree/wasteland/dark
+	color = "#5c5a57"
 
+/obj/structure/flora/tree/wasteland/dark/Initialize()
+	. = ..()
+	AddComponent(/datum/component/largetransparency, y_offset = 1)
