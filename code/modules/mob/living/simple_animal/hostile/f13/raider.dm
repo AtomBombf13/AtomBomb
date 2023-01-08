@@ -25,7 +25,7 @@
 	check_friendly_fire = TRUE
 	status_flags = CANPUSH
 	del_on_death = FALSE
-	loot = list(/obj/item/melee/onehanded/knife/survival, /obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/melee/onehanded/knife/survival, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /obj/effect/mob_spawn/human/corpse/raider
@@ -84,7 +84,7 @@
 	minimum_distance = 6
 	projectiletype = /obj/item/projectile/bullet/c9mm/op
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
-	loot = list(/obj/effect/spawner/lootdrop/f13/npc_raider, /obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/effect/spawner/lootdrop/f13/npc_raider, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -181,7 +181,7 @@
 	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/heavy/metal/reinforced, /obj/item/clothing/head/helmet/f13/metalmask/mk2, /obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/heavy/metal/reinforced, /obj/item/clothing/head/helmet/f13/metalmask/mk2, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -200,7 +200,7 @@
 	icon_living = "firefighter_raider"
 	icon_dead = "firefighter_raider_dead"
 	rapid_melee = 1
-	loot = list(/obj/item/twohanded/fireaxe, /obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/twohanded/fireaxe, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 // BIKER RAIDER
@@ -215,7 +215,7 @@
 	projectiletype = /obj/item/projectile/bullet/a556/match
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
 	casingtype = /obj/item/ammo_casing/a556
-	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/medium/combat/rusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet, /obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/medium/combat/rusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -250,7 +250,7 @@
 	maxHealth = 160
 	health = 160
 	rapid_melee = 1
-	loot = list(/obj/item/twohanded/baseball, /obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/twohanded/baseball, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 
@@ -297,7 +297,7 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 47
 	rapid_melee = 1
-	loot = list(/obj/item/stack/f13Cash/random/lowmob)
+	loot = list(/obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /////////////
