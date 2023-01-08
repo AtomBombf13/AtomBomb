@@ -13910,6 +13910,12 @@
 	icon_state = "rubblecorner"
 	},
 /area/f13/wasteland)
+"bbb" = (
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "bbi" = (
 /obj/structure/bed,
 /obj/item/bedsheet{
@@ -31569,9 +31575,6 @@
 "hwT" = (
 /obj/structure/barricade/wooden,
 /obj/structure/destructible/tribal_torch/lit,
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = 15
-	},
 /obj/effect/turf_decal/shadow,
 /obj/effect/turf_decal/gravel_edge{
 	dir = 8
@@ -33700,9 +33703,6 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/turf_decal/shadow,
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = 15
-	},
 /turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
 /area/f13/food_preparation)
 "iwj" = (
@@ -34023,6 +34023,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"iCn" = (
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "iCr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -36705,6 +36711,14 @@
 /obj/structure/barricade/wooden/strong,
 /turf/closed/wall/f13/wood,
 /area/f13/building/khanfort)
+"jPl" = (
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland27"
+	},
+/area/f13/wasteland)
 "jPo" = (
 /obj/structure/chair/office,
 /turf/open/floor/plasteel/f13{
@@ -38492,10 +38506,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/museum)
 "kJW" = (
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = -16
-	},
 /obj/effect/turf_decal/shadow,
+/obj/structure/decoration/legion/tentpole/rope{
+	pixel_x = -14
+	},
 /turf/open/indestructible/ground/inside/dirt/stamped/outside{
 	icon_state = "dirt"
 	},
@@ -40541,10 +40555,10 @@
 /area/f13/wasteland)
 "lFE" = (
 /obj/structure/decoration/legion/tentpole{
-	pixel_x = -16
+	pixel_x = 15;
+	pixel_y = 18
 	},
-/obj/effect/turf_decal/shadow,
-/turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
+/turf/open/indestructible/ground/inside/dirt/stamped,
 /area/f13/legion)
 "lFL" = (
 /obj/structure/simple_door/tentflap_cloth,
@@ -50254,11 +50268,13 @@
 	},
 /area/f13/radiation)
 "pZH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/legionary,
 /obj/structure/decoration/legion/tentpole{
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = 18
 	},
-/obj/effect/turf_decal/shadow,
-/turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
+/turf/open/indestructible/ground/inside/dirt/stamped,
 /area/f13/legion)
 "pZN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -56292,7 +56308,11 @@
 /area/f13/wasteland)
 "sWK" = (
 /obj/structure/closet/crate/bin/trashbin{
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 7
+	},
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 4
 	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland27"
@@ -56964,15 +56984,6 @@
 	},
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
-"toB" = (
-/obj/structure/barricade/wooden,
-/obj/structure/destructible/tribal_torch/lit,
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = -16
-	},
-/obj/effect/turf_decal/shadow,
-/turf/closed/wall/f13/tentwall,
-/area/f13/legion)
 "toG" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
@@ -58186,9 +58197,6 @@
 "tNt" = (
 /obj/structure/barricade/wooden,
 /obj/structure/destructible/tribal_torch/lit,
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = 15
-	},
 /obj/effect/turf_decal/shadow,
 /turf/closed/wall/f13/tentwall,
 /area/f13/legion)
@@ -60498,6 +60506,9 @@
 /area/f13/village)
 "uSs" = (
 /obj/structure/flora/grass/coyote/twenty,
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 8
+	},
 /turf/open/indestructible/ground/outside/desert{
 	icon_state = "wasteland29"
 	},
@@ -63582,6 +63593,9 @@
 /area/f13/wasteland)
 "wqe" = (
 /obj/structure/flora/grass/coyote/thirteen,
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 4
+	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "wqo" = (
@@ -64873,8 +64887,10 @@
 "wVq" = (
 /obj/structure/kitchenspike,
 /obj/effect/turf_decal/shadow,
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = -16
+/obj/structure/decoration/legion/tentpole/rope{
+	dir = 1;
+	pixel_x = -16;
+	pixel_y = -3
 	},
 /turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
 /area/f13/food_preparation)
@@ -67314,9 +67330,6 @@
 	pixel_x = -1
 	},
 /obj/effect/turf_decal/shadow,
-/obj/structure/decoration/legion/tentpole{
-	pixel_x = -16
-	},
 /turf/open/indestructible/ground/inside/dirt/stamped/outside/sand,
 /area/f13/food_preparation)
 "yaX" = (
@@ -122236,13 +122249,13 @@ pqa
 pqa
 goz
 xLC
-xLC
+bbb
 kCl
 vcl
 wqe
 sXJ
 xLC
-xLC
+bbb
 xLC
 xLC
 xLC
@@ -122493,15 +122506,15 @@ pqa
 goz
 sWK
 sEB
-lFE
 wZH
 wZH
-toB
+wZH
+tNt
 wZH
 wZH
 yaR
 qHq
-xLC
+bbb
 xLC
 wHl
 kbF
@@ -122748,7 +122761,7 @@ pqa
 pqa
 qCa
 hPc
-toB
+tNt
 wZH
 wZH
 wZH
@@ -124804,9 +124817,9 @@ pqa
 pqa
 pqa
 sSM
-tQy
+jPl
 xLC
-pZH
+wZH
 wZH
 wZH
 hwT
@@ -125063,13 +125076,13 @@ qCa
 jvo
 vcl
 qwk
+iCn
 xLC
 xLC
-xLC
-xLC
+iCn
 tQy
 xLC
-xLC
+iCn
 xLC
 xLC
 kYz
@@ -126321,7 +126334,7 @@ aaa
 xRJ
 ldF
 tCj
-tCj
+lFE
 bFm
 pSN
 efb
@@ -127092,7 +127105,7 @@ aaa
 xRJ
 sjz
 dud
-dud
+pZH
 bHT
 pSN
 guB

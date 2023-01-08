@@ -985,6 +985,9 @@ added to end of campfire/attackby
 	name = "tentpole"
 	icon_state = "decal_tentpole"
 
+/obj/structure/decoration/legion/tentpole/rope
+	icon_state = "decal_tentpole_rope"
+
 
 // -------------- DOUBLE BARRED DOORS ----------------- 
 
