@@ -2,8 +2,8 @@
 	icon_state = "refill_clothes"
 
 /obj/machinery/vending/wardrobe
-	default_price = PRICE_CHEAP
-	extra_price = PRICE_ABOVE_NORMAL
+	default_price = PRICE_NORMAL
+	extra_price = PRICE_EXPENSIVE
 	payment_department = NO_FREEBIES
 	input_display_header = "Returned Clothing"
 
@@ -36,8 +36,8 @@
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
 	cost_multiplier_per_dept = list(ACCOUNT_SEC = 0)
-	default_price = PRICE_BELOW_NORMAL
-	extra_price = PRICE_ABOVE_NORMAL
+	default_price = PRICE_ABOVE_NORMAL
+	extra_price = PRICE_EXPENSIVE
 
 /obj/item/vending_refill/wardrobe/sec_wardrobe
 	machine_name = "SecDrobe"
