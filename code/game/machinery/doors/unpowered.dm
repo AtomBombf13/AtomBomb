@@ -30,7 +30,6 @@
 	desc = "Door with a built-in lock. Can't be padlocked."
 	icon_state = "secure"
 	assemblytype = /obj/item/stack/sheet/mineral/wood/five
-	opacity = FALSE
 	explosion_block = TRUE
 
 /obj/machinery/door/unpowered/securedoor/update_icon()
@@ -136,7 +135,8 @@
 	explosion_block = FALSE
 	pass_flags_self = LETPASSTHROW
 	proj_pass_rate = 95
-	mouse_opacity = 0
+	opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/machinery/door/unpowered/celldoor/update_icon()
 	if(density)
@@ -147,10 +147,10 @@
 /obj/machinery/door/unpowered/celldoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',20,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_open.ogg',30,1)
 			flick("cell_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',20,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_close.ogg',30,1)
 			flick("cell_closing", src)
 
 
@@ -186,10 +186,10 @@
 /obj/machinery/door/unpowered/secure_legion/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',30,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_open.ogg',30,1)
 			flick("secure_legion_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',30,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_close.ogg',30,1)
 			flick("secure_legion_closing", src)
 
 

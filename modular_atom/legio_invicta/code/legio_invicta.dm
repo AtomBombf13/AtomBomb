@@ -884,6 +884,51 @@ obj/item/storage/belt/medical/primitive
 	name = "centurions quarters"
 	req_access_txt = "264" // ACCESS_LEGION4
 
+
+// -------------- STATUE OF MARS ----------------- 
+// more fitting mars statue for the Legion players
+/obj/structure/statue/mars
+	name = "statue of mars"
+	desc = "A monument to masculine virtue, made out of plaster and wood with a thin bronze outer layer."
+	icon = 'modular_atom/legio_invicta/icons/64x64_icons.dmi'
+	icon_state = "statue_mars"
+	anchored = TRUE
+	max_integrity = 1000
+	material_drop_type = /obj/item/stack/sheet/bronze
+	impressiveness = 30
+	plane = MOB_PLANE
+
+/obj/structure/decoration/legion
+	name = "legion bull flag of high quality"
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "decal_bull"
+
+/obj/structure/decoration/legion/spears
+	name = "decorative weapons"
+	icon_state = "decal_wallweapons"
+
+/obj/structure/decoration/legion/chains
+	name = "chains"
+	icon_state = "decal_chain1"
+
+/obj/structure/decoration/legion/chains2
+	name = "chains"
+	icon_state = "decal_chain2"
+
+/obj/structure/decoration/legion/tentpole
+	name = "tentpole"
+	icon_state = "decal_tentpole"
+
+/obj/structure/decoration/legion/tentpole/rope
+	icon_state = "decal_tentpole_rope"
+
+
+
+// ------------------- GENERIC MAPPING STUFF -----------------------------
+
+/obj/structure/fireplace/preloaded
+	fuel_added = 1000
+
 /* Added to base code
 /obj/structure/campfire/stove
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
@@ -897,10 +942,7 @@ added to end of campfire/attackby
 			to_chat(user, "You start baking the [F.name].")
 			if(do_after(user, 30, target = src))
 				F.microwave_act()
-
 */
-/obj/structure/fireplace/preloaded
-	fuel_added = 1000
 
 // Finally time to add my old dirt alternative, ploughed dirt
 /obj/machinery/hydroponics/soil/plowed //Just looks different
@@ -952,58 +994,22 @@ added to end of campfire/attackby
 	color = "#A47449"
 
 
-// -------------- STATUE OF MARS ----------------- 
-// more fitting mars statue for the Legion players
-/obj/structure/statue/mars
-	name = "statue of mars"
-	desc = "A monument to masculine virtue, made out of plaster and wood with a thin bronze outer layer."
-	icon = 'modular_atom/legio_invicta/icons/64x64_icons.dmi'
-	icon_state = "statue_mars"
-	anchored = TRUE
-	max_integrity = 1000
-	material_drop_type = /obj/item/stack/sheet/bronze
-	impressiveness = 30
-
-/obj/structure/decoration/legion
-	name = "legion bull flag of high quality"
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	icon_state = "decal_bull"
-
-/obj/structure/decoration/legion/spears
-	name = "old decorative spears"
-	icon_state = "decal_spears"
-
-/obj/structure/decoration/legion/chains
-	name = "chains"
-	icon_state = "decal_chain1"
-
-/obj/structure/decoration/legion/chains2
-	name = "chains"
-	icon_state = "decal_chain2"
-
-/obj/structure/decoration/legion/tentpole
-	name = "tentpole"
-	icon_state = "decal_tentpole"
-
-/obj/structure/decoration/legion/tentpole/rope
-	icon_state = "decal_tentpole_rope"
-
 
 // -------------- DOUBLE BARRED DOORS ----------------- 
 
 /obj/structure/simple_door/metal/barred/left
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon = 'modular_atom/icons/door_barred.dmi'
 	icon_state = "barred_left"
 	door_type = "barred_left"
-	open_sound = "modular_atom/legio_invicta/sound/doorchain_open.ogg"
-	close_sound = "modular_atom/legio_invicta/sound/doorchain_close.ogg"
+	open_sound = 'modular_atom/sound/doorchainsoft_open.ogg'
+	close_sound = 'modular_atom/sound/doorchainsoft_close.ogg'
 
 /obj/structure/simple_door/metal/barred/right
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon = 'modular_atom/icons/door_barred.dmi'
 	icon_state = "barred_right"
 	door_type = "barred_right"
-	open_sound = "modular_atom/legio_invicta/sound/doorchain_open.ogg"
-	close_sound = "modular_atom/legio_invicta/sound/doorchain_close.ogg"
+	open_sound = 'modular_atom/sound/doorchainsoft_open.ogg'
+	close_sound = 'modular_atom/sound/doorchainsoft_close.ogg'
 
 
 // -------------- PRE-STONE RINGED BONFIRE ----------------- 
@@ -1028,8 +1034,8 @@ added to end of campfire/attackby
 
 /turf/open/indestructible/ground/inside/dirt/stamped/outside/sand // ugly solution but whatever. To have undiggable sand for flooring in a pavillon
 	name = "packed sand"
-	icon = 'icons/fallout/turfs/ground.dmi'
-	icon_state = "wasteland"
+	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon_state = "desertsmooth"
 
 /obj/structure/flora/tree/wasteland/dark
 	color = "#5c5a57"
@@ -1045,3 +1051,83 @@ added to end of campfire/attackby
 /obj/structure/flora/tree/african_acacia_dead/Initialize()
 	. = ..()
 	AddComponent(/datum/component/largetransparency, y_offset = 1)
+
+/turf/open/indestructible/ground/outside/gravel
+	name = "gravel"
+	icon_state = "gravel"
+	icon = 'modular_atom/icons/turf_gravel.dmi'
+
+/turf/open/indestructible/ground/outside/gravel/edge
+	icon_state = "graveledge"
+
+/turf/open/indestructible/ground/outside/gravel/corner
+	icon_state = "gravelcorner"
+
+/obj/effect/overlay/desert/sonora/edge
+	name = "desert edge"
+	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon_state = "desertedge"
+
+/turf/open/indestructible/ground/outside/desert/sonora
+	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon_state = "desertsmooth"
+	slowdown = 0.3
+	list/loots = list(
+						/obj/item/stack/crafting/metalparts/five = 10,
+						)
+//	footstep = FOOTSTEP_LOOSE_SAND
+//	barefootstep = FOOTSTEP_LOOSE_SAND
+//	clawfootstep = FOOTSTEP_LOOSE_SAND
+
+/turf/open/indestructible/ground/outside/desert/sonora/Initialize()
+	. = ..()
+	icon_state = "desertsmooth[rand(1,8)]"
+
+/turf/open/indestructible/ground/outside/desert/sonora/coarse
+	icon_state = "desertcoarse1"
+	slowdown = 0.4
+
+/turf/open/indestructible/ground/outside/desert/sonora/coarse/Initialize()
+	. = ..()
+	icon_state = "desertcoarse[rand(1,16)]"
+
+/turf/open/indestructible/ground/outside/desert/sonora/rough
+	icon_state = "desertcracked1"
+	slowdown = 0.6
+
+// Two edge smootheners for the new desert turf
+/obj/effect/overlay/desert/sonora/edge
+	name = "desert edge"
+	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon_state = "desertedge"
+
+/obj/effect/overlay/desert/sonora/edge/corner
+	icon_state = "desertcorner"
+
+
+/obj/structure/railing/handrail/legion
+	name = "handrail"
+	desc = "Wooden posts with connecting chain."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "handrail_legion"
+
+/obj/structure/railing/handrail/legion/underlayer
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/railing/handrail/legion/overlayer
+	plane = MOB_PLANE
+
+/obj/structure/railing/handrail/legion/end
+	icon_state = "handrail_legion_end"
+	density = FALSE
+
+
+/obj/structure/closet/crate/footlocker
+	dense_when_open = FALSE
+
+/obj/structure/closet/crate/footchest
+	dense_when_open = FALSE
+
+/turf/open/floor/f13/wood/outside // outside platform with sunlight
+	sunlight_state = SUNLIGHT_SOURCE
+

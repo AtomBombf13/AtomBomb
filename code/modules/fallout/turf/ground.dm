@@ -166,30 +166,6 @@
 						/obj/item/stack/ore/blackpowder/twenty = 10,
 						)
 
-//For sculpting with more precision, the random picking does not work very well. Slowdown 0.5 instead of 1. No random armor or gunpowder or titanium. Use directions for control. - Pebbles
-/turf/open/indestructible/ground/outside/desert/sonora
-	icon = 'icons/fallout/turfs/wasteland.dmi'
-	icon_state = "desertsmooth"
-	slowdown = 0.3
-	list/loots = list(
-						/obj/item/stack/crafting/metalparts/five = 30,
-						)
-	footstep = FOOTSTEP_LOOSE_SAND
-	barefootstep = FOOTSTEP_LOOSE_SAND
-	clawfootstep = FOOTSTEP_LOOSE_SAND
-
-/turf/open/indestructible/ground/outside/desert/sonora/coarse
-	icon_state = "desertcoarse"
-	slowdown = 0.6
-
-/turf/open/indestructible/ground/outside/desert/sonora/coarse2
-	icon_state = "desertcoarse2"
-	slowdown = 0.6
-
-/turf/open/indestructible/ground/outside/desert/sonora/rough
-	icon_state = "desertrough"
-	slowdown = 0.4
-
 /turf/open/indestructible/ground/outside/desert/harsh
 	icon_state = "wasteland"
 	icon = 'icons/fallout/turfs/ground_harsh.dmi'
@@ -234,15 +210,6 @@
 	layer = ABOVE_OPEN_TURF_LAYER
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
-
-// Two edge smootheners for the new desert turf
-/obj/effect/overlay/desert/sonora/edge
-	name = "desert edge"
-	icon = 'icons/fallout/turfs/wasteland.dmi'
-	icon_state = "desertedge"
-
-/obj/effect/overlay/desert/sonora/edge/corner
-	icon_state = "desertcorner"
 
 /turf/open/indestructible/ground/outside/desert/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return //I mean, it makes sense that deserts don't get slippery, I guess... :(
@@ -548,7 +515,7 @@
 /turf/open/indestructible/ground/outside/gravel
 	name = "gravel"
 	icon_state = "gravel"
-	icon = 'icons/fallout/turfs/gravel.dmi'
+	icon = 'modular_atom/icons/turf_gravel.dmi'
 	footstep = FOOTSTEP_GRAVEL
 	barefootstep = FOOTSTEP_GRAVEL
 	clawfootstep = FOOTSTEP_GRAVEL

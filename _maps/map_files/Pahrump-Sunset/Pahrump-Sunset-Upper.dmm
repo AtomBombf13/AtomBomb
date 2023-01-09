@@ -223,6 +223,12 @@
 	icon_state = "casino"
 	},
 /area/f13/brotherhood/offices1st)
+"amG" = (
+/obj/structure/railing/handrail/legion{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "ant" = (
 /obj/structure/obstacle/barbedwire{
 	dir = 4
@@ -1203,7 +1209,10 @@
 /area/f13/brotherhood/leisure)
 "bYx" = (
 /obj/structure/destructible/tribal_torch/lit{
-	pixel_x = -11
+	pixel_x = -3
+	},
+/obj/structure/railing/handrail/legion/overlayer{
+	dir = 10
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -2444,6 +2453,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"elk" = (
+/obj/structure/railing/handrail/legion{
+	dir = 4
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2-broken"
+	},
+/area/f13/wasteland)
 "elx" = (
 /obj/structure/obstacle/barbedwire/end{
 	dir = 1;
@@ -2943,6 +2960,10 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/legion)
+"fkM" = (
+/obj/structure/railing/handrail/legion/end,
+/turf/closed/wall/rust,
+/area/f13/legion)
 "fkN" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/fence/handrail_end{
@@ -3027,6 +3048,17 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/city)
+"fwI" = (
+/obj/structure/chair/bench,
+/obj/structure/decoration/legion/chains{
+	pixel_y = 28
+	},
+/obj/structure/decoration/legion/spears{
+	dir = 4;
+	pixel_y = 31
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "fxn" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/legion)
@@ -3061,7 +3093,9 @@
 	},
 /area/f13/building/massfusion)
 "fAR" = (
-/obj/structure/simple_door/metal/fence/wooden,
+/obj/machinery/door/unpowered/secure_legion{
+	pixel_y = -9
+	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
 "fDR" = (
@@ -3371,6 +3405,18 @@
 "gkT" = (
 /turf/closed/wall/rust,
 /area/f13/ncr)
+"gmh" = (
+/obj/structure/railing/handrail/legion/underlayer{
+	dir = 9
+	},
+/obj/structure/destructible/tribal_torch/lit{
+	layer = 3;
+	pixel_x = -3;
+	pixel_y = 6;
+	plane = -3
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "gmp" = (
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/village)
@@ -3616,6 +3662,12 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"gNc" = (
+/obj/structure/railing/handrail/legion/underlayer{
+	dir = 5
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "gOj" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/turf_decal/stripes/white/box,
@@ -3693,6 +3745,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/massfusion)
+"gXb" = (
+/obj/structure/railing/handrail/legion/underlayer{
+	dir = 1
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "gXj" = (
 /obj/structure/toilet{
 	pixel_y = 10
@@ -3942,12 +4000,22 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
 "hrL" = (
-/obj/structure/destructible/tribal_torch/lit{
-	pixel_x = 2;
-	pixel_y = 28
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/railing/handrail/legion{
+	dir = 4
+	},
+/obj/structure/closet/crate/footchest{
+	anchored = 1;
+	dense_when_open = 0;
+	dir = 8;
+	name = "fighter belongings";
+	pixel_x = -5
 	},
 /turf/open/floor/f13/wood,
-/area/f13/wasteland)
+/area/f13/legion)
 "hrQ" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/inside/mountain,
@@ -4437,6 +4505,10 @@
 	name = "floor"
 	},
 /area/f13/brotherhood/offices1st)
+"irD" = (
+/obj/structure/railing/handrail/legion/overlayer,
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "itg" = (
 /obj/structure/chair/f13foldupchair{
 	dir = 8
@@ -5208,6 +5280,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"jSi" = (
+/obj/structure/railing/handrail/legion/overlayer,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood4-broken"
+	},
+/area/f13/wasteland)
 "jTl" = (
 /obj/structure/decoration/legion/chains2,
 /turf/closed/wall/rust,
@@ -5519,6 +5597,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/ncr)
+"kDR" = (
+/obj/structure/railing/handrail/legion/end{
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "kEe" = (
 /turf/open/floor/carpet/orange,
 /area/f13/ncr)
@@ -6456,6 +6540,12 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/city)
+"moo" = (
+/obj/structure/railing/handrail/legion{
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "mov" = (
 /obj/structure/bed/wooden,
 /obj/effect/landmark/start/f13/vetlegionary,
@@ -7052,6 +7142,7 @@
 	pixel_y = 28
 	},
 /obj/structure/decoration/legion/spears{
+	dir = 8;
 	pixel_y = 31
 	},
 /turf/open/floor/f13/wood,
@@ -7378,6 +7469,12 @@
 /obj/structure/sign/departments/medbay/alt,
 /turf/closed/wall/f13/store,
 /area/f13/building/hospital)
+"nPf" = (
+/obj/structure/railing/handrail/legion/end{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "nPQ" = (
 /obj/structure/decoration/rag{
 	desc = "A string of bones and skulls.<br>A common warning from tribals and raiders to outsiders.";
@@ -7799,6 +7896,16 @@
 	dir = 1;
 	pixel_y = 24
 	},
+/obj/structure/railing/handrail/legion{
+	dir = 8
+	},
+/obj/structure/closet/crate/footchest{
+	anchored = 1;
+	dense_when_open = 0;
+	dir = 4;
+	name = "fighter belongings";
+	pixel_x = 5
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
 "oAO" = (
@@ -8084,6 +8191,18 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/dorms)
+"paD" = (
+/obj/structure/railing/handrail/legion/underlayer{
+	dir = 5
+	},
+/obj/structure/destructible/tribal_torch/lit{
+	layer = 3;
+	pixel_x = 3;
+	pixel_y = 6;
+	plane = -3
+	},
+/turf/open/floor/f13/wood,
+/area/f13/wasteland)
 "paR" = (
 /turf/open/floor/f13/wood,
 /area/f13/city)
@@ -8765,7 +8884,10 @@
 /area/f13/wasteland/ncr)
 "qsZ" = (
 /obj/structure/destructible/tribal_torch/lit{
-	pixel_x = 13
+	pixel_x = 4
+	},
+/obj/structure/railing/handrail/legion/overlayer{
+	dir = 6
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -8904,6 +9026,12 @@
 	icon_state = "darkrustysolid"
 	},
 /area/f13/building/massfusion)
+"qHe" = (
+/obj/structure/railing/handrail/legion/end{
+	dir = 1
+	},
+/turf/closed/wall/rust,
+/area/f13/legion)
 "qHm" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-06"
@@ -9472,6 +9600,12 @@
 	dir = 4
 	},
 /turf/open/transparent/openspace,
+/area/f13/wasteland)
+"rML" = (
+/obj/structure/railing/handrail/legion/overlayer,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood1-broken"
+	},
 /area/f13/wasteland)
 "rMZ" = (
 /obj/structure/barricade/wooden,
@@ -10438,14 +10572,8 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "tpY" = (
-/obj/structure/table/wood,
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 1
-	},
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 2
+/obj/structure/railing/handrail/legion/underlayer{
+	dir = 9
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -70494,14 +70622,14 @@ oez
 oez
 oez
 oez
-pZk
-geI
-geI
-geI
-geI
-geI
-geI
-ttz
+oez
+oez
+oez
+oez
+oez
+oez
+oez
+oez
 oez
 oez
 vLb
@@ -70751,14 +70879,14 @@ xZD
 xZD
 fZB
 xZD
-xZD
+qHe
 ozn
 tpY
-dtb
-dtb
-dtb
+amG
+amG
+amG
 bYx
-tEW
+oez
 oez
 oez
 vLb
@@ -71010,12 +71138,12 @@ lEd
 xZD
 eAq
 iEW
-tpY
+gXb
 qLd
 gRV
 cnl
-dtb
-tEW
+irD
+oez
 oez
 oez
 vLb
@@ -71267,12 +71395,12 @@ iEW
 xZD
 eAq
 iEW
-tpY
+gXb
 dtb
 dtb
 dtb
-dtb
-tEW
+irD
+oez
 oez
 oez
 vLb
@@ -71524,12 +71652,12 @@ iEW
 xZD
 eAq
 iEW
-tpY
+gXb
 dtb
 cnl
 dtb
-dtb
-tEW
+irD
+oez
 oez
 oez
 vLb
@@ -71781,12 +71909,12 @@ qbo
 xZD
 nmB
 iEW
-tpY
-hrL
+paD
+kDR
 qLd
 dtb
-cnl
-tEW
+jSi
+oez
 oez
 oez
 vLb
@@ -72042,8 +72170,8 @@ fAR
 dtb
 dtb
 nrD
-dtb
-tEW
+irD
+oez
 oez
 oez
 vLb
@@ -72295,12 +72423,12 @@ iEW
 iEW
 iEW
 iEW
-tpY
-hrL
+gmh
+nPf
 dtb
 dtb
-dtb
-tEW
+irD
+oez
 oez
 vLb
 vLb
@@ -72550,14 +72678,14 @@ fjM
 iEW
 iEW
 xZD
-nmB
+fwI
 iEW
-tpY
+gXb
 dtb
 nGs
 dtb
-dtb
-tEW
+irD
+oez
 oez
 vLb
 vLb
@@ -72809,12 +72937,12 @@ bSK
 xZD
 eAq
 iEW
-tpY
+gXb
 nGs
 dtb
 dtb
-nGs
-tEW
+rML
+oez
 oez
 vLb
 vLb
@@ -73066,12 +73194,12 @@ bSK
 xZD
 eAq
 iEW
-tpY
+gXb
 nrD
 dtb
 gRV
-dtb
-tEW
+irD
+oez
 oez
 vLb
 vLb
@@ -73321,14 +73449,14 @@ fZB
 xZD
 fZB
 xZD
-xZD
-ozn
-tpY
-dtb
-qLd
-dtb
+fkM
+hrL
+gNc
+moo
+elk
+moo
 qsZ
-tEW
+oez
 oez
 vLb
 vLb
@@ -73578,14 +73706,14 @@ oez
 oez
 oez
 oez
-pPv
-pYi
-pYi
-pYi
-pYi
-pYi
-pYi
-cHi
+oez
+oez
+oez
+oez
+oez
+oez
+oez
+oez
 oez
 vLb
 vLb
