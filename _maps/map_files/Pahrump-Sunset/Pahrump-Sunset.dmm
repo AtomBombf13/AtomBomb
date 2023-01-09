@@ -2085,10 +2085,6 @@
 	icon_state = "innerpavement"
 	},
 /area/f13/wasteland)
-"aiZ" = (
-/obj/machinery/mineral/money_exchanger/usd,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
 "aja" = (
 /obj/machinery/mineral/wasteland_vendor/crafting,
 /turf/open/floor/f13{
@@ -52769,15 +52765,6 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland)
-"rka" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/mineral/money_exchanger/legion{
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	color = "#e4e4e4"
-	},
-/area/f13/legion)
 "rkf" = (
 /obj/item/storage/trash_stack,
 /turf/open/floor/plasteel/f13{
@@ -58085,13 +58072,6 @@
 	icon_state = "greenrustychess"
 	},
 /area/f13/building/massfusion)
-"tLH" = (
-/obj/machinery/light,
-/obj/machinery/mineral/money_exchanger/usd,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom0"
-	},
-/area/f13/wasteland)
 "tLI" = (
 /obj/structure/chair/stool,
 /obj/effect/decal/cleanable/dirt,
@@ -62813,12 +62793,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
-"vXu" = (
-/obj/machinery/mineral/money_exchanger/ncr,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom0"
-	},
-/area/f13/wasteland)
 "vXC" = (
 /obj/structure/table/wood/bar,
 /turf/open/floor/f13/wood{
@@ -65496,15 +65470,6 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
-"xjY" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/mineral/money_exchanger/ncr,
-/turf/open/floor/plasteel/f13/vault_floor/dark{
-	icon_state = "darkdirty"
-	},
-/area/f13/ncr)
 "xkf" = (
 /obj/effect/decal/waste{
 	icon_state = "goo12"
@@ -78610,7 +78575,7 @@ aLF
 bAV
 hmu
 lZB
-xjY
+aNa
 bzx
 prQ
 ean
@@ -102897,7 +102862,7 @@ qHy
 uNJ
 uNJ
 igF
-vXu
+hEG
 xLy
 xLy
 xLy
@@ -103154,7 +103119,7 @@ qHy
 uNJ
 uNJ
 nvn
-tLH
+vPF
 xLy
 rFD
 qOV
@@ -127382,7 +127347,7 @@ qXa
 tsh
 fSg
 rSR
-rka
+tsh
 tsh
 qXa
 yce
@@ -129497,7 +129462,7 @@ lRe
 lRe
 lRe
 lRe
-aiZ
+ean
 ean
 ean
 ean
