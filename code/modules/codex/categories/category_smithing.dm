@@ -2,11 +2,8 @@
 	name = "Smithing"
 	desc = "Recipes for smithing with an anvil."
 	guide_name = "Smithing"
-	var/list/split_wojack
 
 /datum/codex_category/smithing/Populate()
-
-	var/list/entries_to_register = list()
 
 	guide_html = {"
 		<h1>Smithing guide</h1>
@@ -35,7 +32,12 @@
 		<li>The first item you make should be a good hammer, you might need to repeat the process and replace the previous hammer with a new one in steps. Try to have at least a masterworked iron hammer before moving on to other items to save you headache. </li>
 		</ul>"}
 
-	for(var/i in GLOB.anvil_recipes) // for each recipe.
+	var/list/entries_to_register = list()
+
+	var/list/smithing_recipes = GLOB.anvil_recipes
+	
+	for(var/i in smithing_recipes)
+
 		var/mechanics_text
 		var/lore_text
 		var/category_name
@@ -46,21 +48,43 @@
 		
 		category_name = "smithing recipe"
 
+		var/list/working_text = get_smithing_recipe(smithing_recipe.construct_steps)
+
+		var/obj/item/smithing/smithing_result = smithing_recipe.result // This is the uncompleted item made by smithing.
+
+		lore_text = initial(smithing_result.desc)
+		mechanics_text = "This recipe produces \a [initial(smithing_result.name)].<br>It should be performed following the smithing guide at an avil and requires the following steps:"
+		mechanics_text += "<br> [working_text]"
+
 		entries_to_register += new /datum/codex_entry(                  \
-		_display_name =       "[working_reaction.name] ([category_name])",         \
-		_associated_strings = list("[working_reaction.name] (smithing recipe)"), \
+		_display_name =       "[smithing_recipe.name] ([category_name])",         \
+		_associated_strings = list("[smithing_recipe.name] (smithing)"), \
 		_lore_text =          lore_text,                               \
 		_mechanics_text =     mechanics_text,                          \
 		)
-
 
 	for(var/datum/codex_entry/entry in entries_to_register)
 		items |= entry.name
 
 	. = ..()
 
+/datum/codex_category/smithing/proc/get_smithing_recipe(recipe)
+	var/list/split_recipe = splittext(recipe, "")
+	var/list/completed_recipe = list()
+	for(var/i in split_recipe)
+		switch(i)
+			if("b")
+				completed_recipe += "Bend"
+			if("u")
+				completed_recipe += "Upset"
+			if("s")
+				completed_recipe += "Shrink"
+			if("p")
+				completed_recipe += "Punch"
+			if("d")
+				completed_recipe += "Draw"
+			if("f")
+				completed_recipe += "Fold"
 
-
-/datum/codex_category/smithing/proc/parse_smithing_recipe(var/recipe)
-	split_wojack += splittext(recipe, regex(@"\d+|\D+"))
+	return english_list(completed_recipe, and_text = " then ")
 		

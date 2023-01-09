@@ -254,7 +254,7 @@
 //polearms
 
 /datum/crafting_recipe/melee/forged/spear
-	name = "Spear"
+	name = "Forged Spear"
 	result = /obj/item/twohanded/spear
 	time = 200
 	reqs = list(

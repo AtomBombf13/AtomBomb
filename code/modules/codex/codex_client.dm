@@ -60,7 +60,7 @@
 
 /client/verb/list_codex_entries()
 
-	set name = "List Codex Entries"
+	set name = "List Survival Guide Entries"
 	set category = "IC"
 	set src = usr
 
@@ -101,7 +101,7 @@
 	codex_on_cooldown = FALSE
 
 /client/verb/codex()
-	set name = "Codex"
+	set name = "Survival Guide"
 	set category = "IC"
 	set src = usr
 

@@ -83,6 +83,7 @@ datum/chemical_reaction/rezadone
 	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/carbon = 1, /datum/reagent/medicine/styptic_powder = 1)
 
 /datum/chemical_reaction/synthflesh/synthblood
+	name = "Blood Synthflesh"
 	id = "synthflesh_2"
 	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/carbon = 1, /datum/reagent/medicine/styptic_powder = 1)
 
@@ -220,12 +221,6 @@ datum/chemical_reaction/rezadone
 	id = /datum/reagent/medicine/strange_reagent
 	results = list(/datum/reagent/medicine/strange_reagent = 3)
 	required_reagents = list(/datum/reagent/medicine/omnizine = 1, /datum/reagent/water/holywater = 1, /datum/reagent/toxin/mutagen = 1)
-
-/datum/chemical_reaction/strange_reagent/alt
-	name = "Strange Reagent"
-	id = /datum/reagent/medicine/strange_reagent
-	results = list(/datum/reagent/medicine/strange_reagent = 2)
-	required_reagents = list(/datum/reagent/medicine/omnizine/protozine = 1, /datum/reagent/water/holywater = 1, /datum/reagent/toxin/mutagen = 1)
 
 /datum/chemical_reaction/mannitol
 	name = "Mannitol"

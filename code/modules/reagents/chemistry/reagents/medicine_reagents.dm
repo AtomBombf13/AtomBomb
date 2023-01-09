@@ -1435,6 +1435,7 @@
 	overdose_threshold = 30
 	value = REAGENT_VALUE_VERY_RARE
 	ghoulfriendly = TRUE
+	hidden_from_codex = TRUE
 
 /datum/reagent/medicine/changelingadrenaline/on_mob_metabolize(mob/living/L)
 	..()

@@ -36,7 +36,7 @@
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/armor_plate_deathclaw
-	name = "Armor Plate"
+	name = "Armor Plate from Deathclaw Skin"
 	result = /obj/item/stack/crafting/armor_plate
 	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw  = 1,
 				/obj/item/stack/crafting/goodparts = 1,
@@ -47,7 +47,7 @@
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/armor_plate_plastit
-	name = "Armor Plate"
+	name = "Armor Plate from Plasteel"
 	result = /obj/item/stack/crafting/armor_plate
 	reqs = list(/obj/item/stack/sheet/plasteel = 2,
 				/obj/item/stack/crafting/goodparts = 1,

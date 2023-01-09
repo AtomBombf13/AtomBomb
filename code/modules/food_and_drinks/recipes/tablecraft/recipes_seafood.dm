@@ -224,7 +224,7 @@
 	subcategory = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/lobsterdeluxe
-	name = "Fish fry"
+	name = "Lobster Deluxe"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/fishmeat/crawdad/cooked = 1,
 		/obj/item/reagent_containers/food/snacks/grown/citrus/lemon =1,

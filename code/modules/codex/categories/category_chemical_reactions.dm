@@ -1,7 +1,6 @@
 /datum/codex_category/chemical_reactions
 	name = "Chemical Recations"
 	desc = "List of chemical reactions and their parts."
-	//defer_population = TRUE
 
 /datum/codex_category/chemical_reactions/Populate()
 
@@ -21,11 +20,10 @@
 			if(!istype(working_reaction) || working_reaction.hidden_from_codex)
 				continue
 
-			if(!LAZYLEN(working_reaction.results))
+			if(!LAZYLEN(working_reaction.results) || isnull(working_reaction.name))
 				continue
 			
 			category_name = "chemistry reaction"
-			//lore_text = initial(product.description) have to figure out something to put here since some things have multiple products...
 			mechanics_text = "This recipe produces the following:<br>"
 
 			for(var/working_product in working_reaction.results)
@@ -47,10 +45,6 @@
 			if(LAZYLEN(catalyst_requirements))
 				mechanics_text += "<br>You need the combine the above with the following as a catalyst:"
 				mechanics_text += " [jointext(catalyst_requirements, " + ")]"
-
-
-			//if(!working_reaction.always_available)
-			//	mechanics_text += "<br> You need special knowledge to craft this!"
 
 			entries_to_register += new /datum/codex_entry(                  \
 			_display_name =       "[working_reaction.name] ([category_name])",         \

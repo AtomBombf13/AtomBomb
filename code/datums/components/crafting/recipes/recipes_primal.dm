@@ -14,14 +14,14 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/bonfire
-	name = "Bonfire"
+	name = "Bonfire from Planks"
 	time = 60
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 30)
 	result = /obj/structure/bonfire
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/bonfirecaps
-	name = "Bonfire"
+	name = "Bonfire from Logs"
 	time = 60
 	reqs = list(/obj/item/grown/log = 5)
 	result = /obj/structure/bonfire
@@ -62,7 +62,7 @@
 	category = CAT_TRIBAL
 
 /datum/crafting_recipe/duct_tape
-	name = "Bonfire"
+	name = "Duct Tape"
 	time = 60
 	always_available = TRUE
 	tools = list(TOOL_WORKBENCH)

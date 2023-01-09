@@ -49,13 +49,13 @@
 	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/silicon = 1, /datum/reagent/oxygen = 1)
 
 /datum/chemical_reaction/spraytan
-	name = "Spray Tan"
+	name = "Spray Tan from Oil"
 	id = /datum/reagent/spraytan
 	results = list(/datum/reagent/spraytan = 2)
 	required_reagents = list(/datum/reagent/consumable/orangejuice = 1, /datum/reagent/oil = 1)
 
 /datum/chemical_reaction/spraytan2
-	name = "Spray Tan"
+	name = "Spray Tan from Corn oil"
 	id = "spraytan2"
 	results = list(/datum/reagent/spraytan = 2)
 	required_reagents = list(/datum/reagent/consumable/orangejuice = 1, /datum/reagent/consumable/cornoil = 1)
@@ -246,13 +246,13 @@
 	required_reagents = list(/datum/reagent/medicine/synaptizine = 1, /datum/reagent/toxin/plasma/plasmavirusfood = 1)
 
 /datum/chemical_reaction/virus_food_mutagen_sugar
-	name = "sucrose agar"
+	name = "sucrose agar from Sugar"
 	id = /datum/reagent/toxin/mutagen/mutagenvirusfood/sugar
 	results = list(/datum/reagent/toxin/mutagen/mutagenvirusfood/sugar = 2)
 	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/toxin/mutagen/mutagenvirusfood = 1)
 
 /datum/chemical_reaction/virus_food_mutagen_salineglucose
-	name = "sucrose agar"
+	name = "sucrose agar from Saline Glucose"
 	id = "salineglucosevirusfood"
 	results = list(/datum/reagent/toxin/mutagen/mutagenvirusfood/sugar = 2)
 	required_reagents = list(/datum/reagent/medicine/salglu_solution = 1, /datum/reagent/toxin/mutagen/mutagenvirusfood = 1)
@@ -270,13 +270,13 @@
 	required_reagents = list(/datum/reagent/uranium = 5, /datum/reagent/toxin/plasma/plasmavirusfood = 1)
 
 /datum/chemical_reaction/virus_food_uranium_plasma_gold
-	name = "Stable uranium gel"
+	name = "Stable uranium gel from Gold"
 	id = "uraniumvirusfood_gold"
 	results = list(/datum/reagent/uranium/uraniumvirusfood/stable = 1)
 	required_reagents = list(/datum/reagent/uranium = 10, /datum/reagent/gold = 10, /datum/reagent/toxin/plasma = 1)
 
 /datum/chemical_reaction/virus_food_uranium_plasma_silver
-	name = "Stable uranium gel"
+	name = "Stable uranium gel from Silver"
 	id = "uraniumvirusfood_silver"
 	results = list(/datum/reagent/uranium/uraniumvirusfood/stable = 1)
 	required_reagents = list(/datum/reagent/uranium = 10, /datum/reagent/silver = 10, /datum/reagent/toxin/plasma = 1)
@@ -678,7 +678,7 @@
 	required_reagents = list(/datum/reagent/sodium = 1, /datum/reagent/hydrogen = 1, /datum/reagent/oxygen = 1)
 
 /datum/chemical_reaction/lye2
-	name = "lye"
+	name = "alternative lye recipe"
 	id = "lye2"
 	results = list(/datum/reagent/lye = 2)
 	required_reagents = list(/datum/reagent/ash = 1, /datum/reagent/water = 1, /datum/reagent/carbon = 1)

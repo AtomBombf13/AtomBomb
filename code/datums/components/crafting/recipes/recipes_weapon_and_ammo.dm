@@ -689,7 +689,7 @@
 	always_available = FALSE
 
 /datum/crafting_recipe/dks
-	name = "DKS Sniper Rifle"
+	name = "DKS Sniper Rifle Alternative Design"
 	result = /obj/item/gun/ballistic/automatic/sniper
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,

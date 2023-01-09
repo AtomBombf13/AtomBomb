@@ -14,7 +14,7 @@
 		var/category_name
 
 		var/datum/reagent/working_reagent = all_recipe_reactions[reactiontype]
-		if(!istype(working_reagent) || working_reagent.hidden_from_codex)
+		if(!istype(working_reagent) || working_reagent.hidden_from_codex || initial(working_reagent.name) =="Reagent" || initial(working_reagent.name) == "Consumable" )
 			continue
 		category_name = "chemical substance"
 		lore_text = initial(working_reagent.description)
@@ -30,7 +30,7 @@
 
 		entries_to_register += new /datum/codex_entry(                  \
 		_display_name =       "[working_reagent.name] ([category_name])",         \
-		_associated_strings = list("[working_reagent.name] (chemical substance)"), \
+		_associated_strings = list("[working_reagent.name] (chemicals)"), \
 		_lore_text =          lore_text,                               \
 		_mechanics_text =     mechanics_text,                          \
 		)

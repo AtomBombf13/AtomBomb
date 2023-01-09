@@ -7,7 +7,7 @@
 	The Wasteland Survival Guide editorial offices for this region are located in Novac and will offer cash payments for stories, anecdotes and evidence of the strange and undocumented miscellany cluttering up our little slice of wasteland. Remember our motto: <i>\"Knowledge is power, sell your excess!\"</i>"
 
 /datum/codex_entry/survival_guide/New()
-	mechanics_text = "The Wasteland Survival Guide is both an IC and OOC resource. ICly, it is as described; a survival book. You can use <b>Search-Codex <i>topic</i></b> to look something up, or you can click the links provided when examining some objects. \
+	mechanics_text = "The Wasteland Survival Guide is both an IC and OOC resource. ICly, it is as described; a survival book. You can use <b>Search-Survival-Guide <i>topic</i></b> to look something up, or you can click the links provided when examining some objects. \
 	<br><br> \
 	Any of the lore you find in the Survival Guide, designated by <span class='codexLore'>green</span> text, can be freely referenced in-character. \
 	<br><br> \
