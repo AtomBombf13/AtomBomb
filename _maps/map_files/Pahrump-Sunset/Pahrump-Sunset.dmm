@@ -44733,14 +44733,13 @@
 /turf/open/indestructible/ground/outside/water,
 /area/f13/wasteland)
 "nhV" = (
-/obj/structure/flora/ausbushes/sparsegrass{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/turf/open/indestructible/ground/outside/dirt{
+/obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
-	icon_state = "dirt"
+	light_power = 0.5;
+	pixel_x = 1;
+	pixel_y = -20
 	},
+/turf/open/indestructible/ground/inside/dirt/stamped/outside,
 /area/f13/wasteland)
 "nim" = (
 /obj/effect/decal/cleanable/dirt,
@@ -121476,8 +121475,8 @@ rzF
 rzF
 ybx
 gLC
-rzF
-umw
+nhV
+aae
 aae
 aak
 aae
@@ -121733,8 +121732,8 @@ rzF
 nvm
 rzF
 nvm
-nWp
-iXx
+rzF
+umw
 aae
 aae
 aae
@@ -121990,8 +121989,8 @@ rzF
 nvm
 rzF
 nvm
-nhV
-uDu
+nWp
+iXx
 whG
 aae
 aae
