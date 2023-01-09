@@ -331,7 +331,7 @@
 	list_reagents = list(/datum/reagent/consumable/hot_coco = 30, /datum/reagent/consumable/sugar = 5)
 	foodtype = SUGAR
 	resistance_flags = FREEZE_PROOF
-	custom_price = PRICE_ALMOST_CHEAP
+	custom_price = PRICE_REALLY_CHEAP
 
 /obj/item/reagent_containers/food/drinks/dry_ramen
 	name = "cup ramen"
@@ -340,7 +340,7 @@
 	list_reagents = list(/datum/reagent/consumable/dry_ramen = 30)
 	foodtype = GRAIN
 	isGlass = FALSE
-	custom_price = PRICE_PRETTY_CHEAP
+	custom_price = PRICE_CHEAP_AS_FREE
 
 /obj/item/reagent_containers/food/drinks/beer
 	name = "Beer"
@@ -348,7 +348,7 @@
 	icon_state = "beer"
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 30)
 	foodtype = GRAIN | ALCOHOL
-	custom_price = PRICE_PRETTY_CHEAP
+	custom_price = PRICE_REALLY_CHEAP
 
 /obj/item/reagent_containers/food/drinks/beer/light
 	name = "Beer Lite"
