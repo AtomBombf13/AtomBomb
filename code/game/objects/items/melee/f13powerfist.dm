@@ -12,6 +12,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	hitsound = 'sound/weapons/resonator_blast.ogg'
 	attack_speed = MELEE_SPEED_NORMAL
+	var/click_cooldown = CLICK_CD_MELEE
 	force = 28
 	armour_penetration = 0.35
 	throwforce = 10
@@ -46,7 +47,7 @@
 		W.play_tool_sound(src)
 		to_chat(user, "<span class='notice'>You tweak \the [src]'s piston valve to [power].</span>")
 		force = initial(force) * power
-		attack_speed = CLICK_CD_MELEE * power
+		attack_speed = click_cooldown * power
 
 // Goliath				Throws targets far. Max damage 62.
 /obj/item/melee/unarmed/powerfist/goliath
@@ -130,6 +131,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	attack_speed = MELEE_SPEED_FASTEST
+	click_cooldown = CLICK_CD_RANGE
 	force = 25
 
 /obj/item/melee/unarmed/powerfist/saturnite/Touch(atom/target, proximity = TRUE) // Stealing this from the Bands of the North Star, probably wont work since these aren't a glove subtype
