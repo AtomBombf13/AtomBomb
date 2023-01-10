@@ -72,7 +72,7 @@
 	else
 		. = ..()
 
-
+/* THESE THINGS ALREADY COPIED TO BASE CODE
 // Bronze less retarded
 /datum/material/bronze
 	strength_modifier = 1
@@ -80,10 +80,11 @@
 /datum/material/adamantine
 	strength_modifier = 1.2
 
+
 // ------------ SLAG ------------------ Makes slag more suitable visually for the interactions with the anvil
 /obj/item/stack/ore/slag
 	icon = 'modular_atom/blacksmith/icons/blacksmith.dmi'
-
+*/
 
 // ------------ BLACKSMITH MITTENS ------------------	Mittens, since finger gloves and heat insulation is a lame combo
 
@@ -108,7 +109,7 @@
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_CLUMSY, CLOTHING_TRAIT)
 
-
+/* COPIED TO BASE CODE
 // ------------ SLEDGEHAMMER (SIMPLE) ------------------ Just a art redirect, since the sledgehammer/simple is integral to blacksmithing I want the art to match
 
 /obj/item/twohanded/sledgehammer/simple
@@ -121,7 +122,7 @@
 	icon_prefix = "sledgehammer"
 	wielded_icon = "sledgehammer2"
 	qualitymod = 0
-
+*/
 
 ///////////////////////////////////
 // ADVICE FOR BLACKSMITH ROOKIES //
@@ -238,7 +239,7 @@
 				</html>
 				"}
 
-
+/* COPIED TO BASE CODE
 // ------------ METALWORKING BENCH ------------------ Part of the module, for metalworking that doesnt need a whole forge setup
 
 /obj/machinery/workbench/forge // should be repathed to worbench/metal
@@ -246,7 +247,7 @@
 	desc = "A workbench with a drill press, a makeshift blowtorch setup, and various tools for making crude weapons and tools."
 	icon = 'modular_atom/blacksmith/icons/workbench64x32.dmi'
 	icon_state = "bench_metal"
-
+*/
 
 // ------------------------------- TG Remnants ------------------------------
 // Ingots are for smithing. Only metals can be heated and beaten on a metal anvil. Below are pointless in practice.
