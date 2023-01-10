@@ -546,6 +546,11 @@
 	desc = "Foreign agents can be anywhere. Trust nobody, report everybody."
 	icon_state = "poster63"
 
+/obj/structure/sign/poster/prewar/poster65
+	name = "niche game poster"
+	desc = "Buy Atomic Command, the latest in pip-boy gaming. Hitting shelves in fall of 2078!"
+	icon_state = "poster65"
+	
 /obj/structure/sign/poster/prewar/poster66
 	name = "old hopeful poster"
 	desc = "This advertisement appears to be spiritual in nature. Whatever faith it called to has been worn away by time."
@@ -560,11 +565,21 @@
 	name = "old crowded poster"
 	desc = "It looks like the crowd is hoisting the man up in celebration, or are they tearing him apart? Its hard to tell."
 	icon_state = "poster69"
+
+/obj/structure/sign/poster/prewar/poster71
+	name = "ancient poster"
+	desc = "You can hardly make out what any of this means."
+	icon_state = "poster71"
 	
 /obj/structure/sign/poster/prewar/poster72
 	name = "old military poster"
 	desc = "This picture glorifies some military commander of the past. You can't tell if it was before or after the collapse."
 	icon_state = "poster72"
+	
+	/obj/structure/sign/poster/prewar/poster73
+	name = "old nihilist poster"
+	desc = "Nothing on earth consumes a man more quickly than the passion of resentment."
+	icon_state = "poster73"
 
 /obj/structure/sign/poster/prewar/poster74
 	name = "old research poster"
@@ -596,6 +611,10 @@
 	desc = "This poster calls to a time of free booze and fun. Today those beaches are full of mutants and bleached bones."
 	icon_state = "poster82"
 
+/obj/structure/sign/poster/prewar/poster93
+	name = "old movie poster"
+	desc = "Whatever this used to be has mostly faded to time. You can make out some sort of moon on the canvas."
+	icon_state = "poster93"
 
 /obj/structure/sign/poster/prewar/poster94
 	name = "burning city poster"
