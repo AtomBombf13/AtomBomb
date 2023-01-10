@@ -54,32 +54,34 @@
 // Legion reserves. Spawns with the Centurion and a camp follower loadout (or auxillia)
 /obj/item/storage/bag/money/small/legion/PopulateContents()
 	// 400 caps + change
-	new /obj/item/stack/f13Cash/random/denarius/high(src)
-	new /obj/item/stack/f13Cash/random/denarius/high(src)
-	new /obj/item/stack/f13Cash/random/aureus/high(src)
+	new /obj/item/stack/f13Cash/random/low(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
+	new /obj/item/stack/f13Cash/caps/onezerozero(src)
 	
 // Legion enlisted. Spawns with the Legionnaires. Average 12 caps.
 /obj/item/storage/bag/money/small/legenlisted/PopulateContents()
-	new /obj/item/stack/f13Cash/random/denarius/low(src)
+	new /obj/item/stack/f13Cash/random/low(src)
 
 // Legion officers. Spawns with the Decanii. Average 175 caps.
 /obj/item/storage/bag/money/small/legofficers/PopulateContents()
-	new /obj/item/stack/f13Cash/random/denarius/med(src)
+	new /obj/item/stack/f13Cash/random/low(src)
 	
 // NCR reserves. Spawns with the Captain.
 /obj/item/storage/bag/money/small/ncr/PopulateContents()
 	// ~450 worth of ncr money
-	new /obj/item/stack/f13Cash/random/ncr/high(src)
+	new /obj/item/stack/f13Cash/random/low(src)
 
 // NCR enlisted. Spawns with the non officers.
 /obj/item/storage/bag/money/small/ncrenlisted/PopulateContents()
 	// ~12 worth of ncr money
-	new /obj/item/stack/f13Cash/random/ncr/low(src)
+	new /obj/item/stack/f13Cash/random/low(src)
 
 // NCR officers. Spawns with the officers and Rangers.
 /obj/item/storage/bag/money/small/ncrofficers/PopulateContents()
 	// ~75 worth of ncr money
-	new /obj/item/stack/f13Cash/random/ncr/med(src)
+	new /obj/item/stack/f13Cash/random/low(src)
 
 // Den reserves. Spawns with the Sheriff.
 /obj/item/storage/bag/money/small/den/PopulateContents()
@@ -120,7 +122,7 @@
 // Standard Raider money bag. They blew it all on chems and armor mods.
 /obj/item/storage/bag/money/small/raider/PopulateContents()
 	// ~12 worth of caps
-	new /obj/item/stack/f13Cash/random/low/lowchance(src)
+	new /obj/item/stack/f13Cash/random/low(src)
 
 /obj/item/storage/bag/money/small/raider/mobboss/PopulateContents()
 	new /obj/item/stack/f13Cash/random/low(src)
