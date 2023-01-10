@@ -467,7 +467,32 @@
 		icon_state = initial(icon_state)
 
 
-// ------------------- ARMOR -----------------------------
+// ------------------- CRAFTING -----------------------------
+
+/datum/crafting_recipe/blacksmith/smithed_armor_legion
+	name = "Legion metal armor set"
+	result = /obj/item/clothing/suit/armor/heavy/metal/smithed/legion
+	reqs = list(
+		/obj/item/smithing/armor_piece = 2,
+		/obj/item/stack/sheet/leather = 2,
+		)
+	time = 200
+	tools = list(TOOL_METAL_BENCH)
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+	always_available = FALSE
+
+
+
+//////////////////////////////////////////
+// 										//
+//										//
+//				ARMOR					//
+//										//
+//										//
+//////////////////////////////////////////
+
+// ------------------- SUIT -----------------------------
 
 /obj/item/clothing/suit/armor/light/legion
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
@@ -573,23 +598,13 @@
 
 
 
-
-
-// ------------------- CRAFTING -----------------------------
-
-/datum/crafting_recipe/blacksmith/smithed_armor_legion
-	name = "Legion metal armor set"
-	result = /obj/item/clothing/suit/armor/heavy/metal/smithed/legion
-	reqs = list(
-		/obj/item/smithing/armor_piece = 2,
-		/obj/item/stack/sheet/leather = 2,
-		)
-	time = 200
-	tools = list(TOOL_METAL_BENCH)
-	category = CAT_CRAFTING
-	subcategory = CAT_FORGING
-	always_available = FALSE
-	
+//////////////////////////////////////////
+// 										//
+//										//
+//			LEGION FURNITURE			//
+//										//
+//										//
+//////////////////////////////////////////
 
 // --------------------- RADIO CONTROL ---------------------------  -meant to be wall mounted so not solid, and pixel shifted until it looks good on the specific wall
 
@@ -600,8 +615,7 @@
 	icon_state = "radio_wall_legion"
 
 
-
-// ------------------- LEGION STATIONARY STORAGE -----------------------------
+// ------------------- WARDROBE -----------------------------
 
 /obj/machinery/smartfridge/bottlerack/wardrobe
 	name = "large clothing rack"
@@ -615,6 +629,28 @@
 	if(istype(O, /obj/item/clothing/shoes) || istype(O, /obj/item/clothing/head) || istype(O, /obj/item/clothing/mask) || istype(O, /obj/item/clothing/under) || istype(O, /obj/item/clothing/glasses) || istype(O, /obj/item/clothing/gloves) || istype(O, /obj/item/storage/belt)  || istype(O, /obj/item/clothing/neck))
 		return TRUE
 	return FALSE
+
+/obj/machinery/smartfridge/bottlerack/wardrobe/update_icon_state()
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	if(!stat)
+		if(visible_contents)
+			switch(contents.len)
+				if(0)
+					icon_state = "[initial(icon_state)]"
+				if(1 to 5)
+					icon_state = "[initial(icon_state)]-1"
+				if(6 to 10)
+					icon_state = "[initial(icon_state)]-2"
+				if(11 to 16)
+					icon_state = "[initial(icon_state)]-3"
+				if(17 to 22)
+					icon_state = "[initial(icon_state)]-4"
+				if(23 to 30)
+					icon_state = "[initial(icon_state)]-5"
+		else
+			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
 // Preloaded Legion wardrobe
 /obj/machinery/smartfridge/bottlerack/wardrobe/legion
@@ -632,15 +668,40 @@
 		/obj/item/clothing/glasses/f13/goggles_sandstorm = 1)
 
 
+// -------------- ARMORDROBE ----------------- 
+
 /obj/machinery/smartfridge/bottlerack/wardrobe/armor
 	name = "armor hanging rack"
 	desc = "a place to hang your armor and helmet."
 	icon_state = "armordrobe"
+	max_n_of_items = 20
 
 /obj/machinery/smartfridge/bottlerack/wardrobe/armor/accept_check(obj/item/O)
 	if(istype(O, /obj/item/clothing/shoes) || istype(O, /obj/item/clothing/suit/armor) || istype(O, /obj/item/clothing/head/helmet))
 		return TRUE
 	return FALSE
+
+/obj/machinery/smartfridge/bottlerack/wardrobe/armor/update_icon_state()
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	if(!stat)
+		if(visible_contents)
+			switch(contents.len)
+				if(0)
+					icon_state = "[initial(icon_state)]"
+				if(1 to 3)
+					icon_state = "[initial(icon_state)]-1"
+				if(4 to 6)
+					icon_state = "[initial(icon_state)]-2"
+				if(7 to 10)
+					icon_state = "[initial(icon_state)]-3"
+				if(11 to 14)
+					icon_state = "[initial(icon_state)]-4"
+				if(15 to 20)
+					icon_state = "[initial(icon_state)]-5"
+		else
+			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
 // Preloaded Legion armor rack
 /obj/machinery/smartfridge/bottlerack/wardrobe/armor/legion
@@ -649,18 +710,42 @@
 		/obj/item/clothing/head/helmet/f13/legion/recruit = 2)
 
 
+// -------------- MELEE RACK ----------------- 
+
 /obj/machinery/smartfridge/bottlerack/rack_melee
 	name = "melee weapon rack"
 	desc = "holds most melee and throwing weapons."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	icon_state = "rack_melee"
 	layer = ABOVE_OBJ_LAYER
-	max_n_of_items = 30
+	max_n_of_items = 15
 
 /obj/machinery/smartfridge/bottlerack/rack_melee/accept_check(obj/item/O)
 	if(istype(O, /obj/item/melee) || istype(O, /obj/item/shishkebabpack) || istype(O, /obj/item/throwing_star) || istype(O, /obj/item/restraints/legcuffs/bola) || istype(O, /obj/item/shovel) || istype(O, /obj/item/twohanded))
 		return TRUE
 	return FALSE
+
+/obj/machinery/smartfridge/bottlerack/rack_melee/update_icon_state()
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	if(!stat)
+		if(visible_contents)
+			switch(contents.len)
+				if(0)
+					icon_state = "[initial(icon_state)]"
+				if(1 to 2)
+					icon_state = "[initial(icon_state)]-1"
+				if(3 to 5)
+					icon_state = "[initial(icon_state)]-2"
+				if(6 to 8)
+					icon_state = "[initial(icon_state)]-3"
+				if(9 to 12)
+					icon_state = "[initial(icon_state)]-4"
+				if(13 to 15)
+					icon_state = "[initial(icon_state)]-5"
+		else
+			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
 // Preloaded Legion melee rack
 /obj/machinery/smartfridge/bottlerack/rack_melee/legion
@@ -669,90 +754,58 @@
 		/obj/item/restraints/legcuffs/bola = 1)
 
 
-// ------------------- BUTCHERS TABLE -----------------------------
-
-/obj/structure/table/optable/primitive
-	name = "butchers table"
-	desc = "Used for painful, primitive medical procedures."
+// -------------- OFFERING RACK----------------- 
+// Trophy rack for dogtags
+/obj/machinery/smartfridge/bottlerack/legion_offering
+	name = "offerings to Mars"
+	desc = "Hang the dogtags of slain enemies and fallen brothers here so Mars can keep track."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "rack_trophy"
+	max_n_of_items = 12
 
+/obj/machinery/smartfridge/bottlerack/legion_offering/accept_check(obj/item/O)
+	if(istype(O, /obj/item/card/id/dogtag))
+		return TRUE
+	return FALSE
 
-// ------------------- PRIMITIVE SURGERY STUFF -----------------------------
+/obj/machinery/smartfridge/bottlerack/legion_offering/update_icon_state()
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	if(!stat)
+		if(visible_contents)
+			switch(contents.len)
+				if(0)
+					icon_state = "[initial(icon_state)]"
+				if(1)
+					icon_state = "[initial(icon_state)]-1"
+				if(2)
+					icon_state = "[initial(icon_state)]-2"
+				if(3)
+					icon_state = "[initial(icon_state)]-3"
+				if(4)
+					icon_state = "[initial(icon_state)]-4"
+				if(5)
+					icon_state = "[initial(icon_state)]-5"
+				if(6)
+					icon_state = "[initial(icon_state)]-6"
+				if(7)
+					icon_state = "[initial(icon_state)]-7"
+				if(8)
+					icon_state = "[initial(icon_state)]-8"
+				if(9)
+					icon_state = "[initial(icon_state)]-9"
+				if(10)
+					icon_state = "[initial(icon_state)]-10"
+				if(11)
+					icon_state = "[initial(icon_state)]-11"
+				if(12)
+					icon_state = "[initial(icon_state)]-12"
+		else
+			icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]"
 
-/obj/item/cautery/primitive
-	name = "primitive cautery"
-	desc = "A welding device tuned down to cauterize wounds. Not very precise."
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
-	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
-	icon_state = "cautery_primitive"
-	toolspeed = 1.5
-
-/obj/item/circular_saw/primitive
-	name = "handsaw"
-	desc = "For sawing through wood or possibly bones."
-	icon = 'icons/obj/tools.dmi'
-	icon_state = "saw"
-	item_state = "saw"
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
-	hitsound = 'sound/effects/shovel_dig.ogg'
-	usesound = 'sound/effects/shovel_dig.ogg'
-	custom_materials = list(/datum/material/iron=2000)
-	toolspeed = 1.2
-	wound_bonus = 0
-	bare_wound_bonus = 10
-	attack_verb = list("sawed", "scratched")
-
-
-// ------------------- PRIMITIVE MEDICAL BAG -----------------------------
-
-/obj/item/storage/backpack/duffelbag/med/surgery/primitive
-	name = "surgical duffel bag"
-	desc = "A large duffel bag for holding extra medical supplies - this one seems to be designed for holding surgical tools."
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
-	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
-	icon_state = "toolbag_primitive"
-
-/obj/item/storage/backpack/duffelbag/med/surgery/primitive/PopulateContents()
-	new /obj/item/melee/onehanded/straight_razor(src)
-	new /obj/item/hemostat/tribal(src)
-	new /obj/item/retractor/tribal(src)
-	new /obj/item/circular_saw/primitive(src)
-	new /obj/item/surgicaldrill(src)
-	new /obj/item/cautery/primitive(src)
-	new /obj/item/bonesetter(src)
-	new /obj/item/bedsheet/blanket(src)
-	new /obj/item/reagent_containers/medspray/sterilizine(src)
-	new /obj/item/stack/sticky_tape/surgical(src)
-	new /obj/item/stack/medical/bone_gel(src)
-
-/* Added to base code
-// ------------------- PRIMITIVE MEDICAL TOOLBELT -----------------------------
-
-obj/item/storage/belt/medical/primitive
-	name = "primitive medical toolbelt"
-	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
-	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
-	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
-	icon_state = "belt_blacksmith"
-	item_state = "belt_blacksmith"
-
-/obj/item/storage/belt/medical/primitive/PopulateContents()
-	new /obj/item/surgical_drapes(src)
-	new /obj/item/melee/onehanded/straight_razor(src)
-	new /obj/item/circular_saw/primitive(src)
-	new /obj/item/retractor/tribal(src)
-	new /obj/item/hemostat/tribal(src)
-	new /obj/item/cautery/primitive(src)
-	new /obj/item/bonesetter(src)
-*/
 
 // ------------------- BUST OF CAESAR -----------------------------
-
 
 /obj/item/statuebust/legion
 	name = "a bust of the great leader"
@@ -761,9 +814,7 @@ obj/item/storage/belt/medical/primitive
 	icon_state = "bust_legion"
 
 
-
 // -------------- BATHTUB ----------------- - only mood function, just for RP. Would be better if mood boost just fired if not weaing anything in uniform slot, or unable to buckle if dressed.
-
 
 /obj/structure/chair/comfy/bathtub
 	name = "bathtub"
@@ -876,6 +927,9 @@ obj/item/storage/belt/medical/primitive
 	name = "guardhouse"
 	desc = "Sit in the gloom and wait for something to happen."
 
+
+// -------------- ID LOCKED DOORS BY RANK ----------------- 
+
 /obj/machinery/door/unpowered/securedoor/legion/warroom
 	name = "war room"
 	req_access_txt = "254" // ACCESS_LEGION_CPMMAND
@@ -897,6 +951,10 @@ obj/item/storage/belt/medical/primitive
 	material_drop_type = /obj/item/stack/sheet/bronze
 	impressiveness = 30
 	plane = MOB_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
+
+
+// -------------- DECALS ----------------- 
 
 /obj/structure/decoration/legion
 	name = "legion bull flag of high quality"
@@ -923,8 +981,214 @@ obj/item/storage/belt/medical/primitive
 	icon_state = "decal_tentpole_rope"
 
 
+// -------------- HANDRAIL ----------------- 
 
-// ------------------- GENERIC MAPPING STUFF -----------------------------
+/obj/structure/railing/handrail/legion
+	name = "handrail"
+	desc = "Wooden posts with connecting chain."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "handrail_legion"
+
+/obj/structure/railing/handrail/legion/underlayer
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/railing/handrail/legion/overlayer
+	plane = MOB_PLANE
+
+/obj/structure/railing/handrail/legion/end
+	icon_state = "handrail_legion_end"
+	density = FALSE
+
+
+
+//////////////////////////////////////////
+// 										//
+//										//
+//			PRIMITIVE MEDICAL			//
+//										//
+//										//
+//////////////////////////////////////////
+
+// ------------------- BUTCHERS TABLE -----------------------------
+
+/obj/structure/table/optable/primitive
+	name = "butchers table"
+	desc = "Used for painful, primitive medical procedures."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+
+
+// ------------------- PRIMITIVE SURGERY STUFF -----------------------------  Could use more janky ghetto stuff feeling, messing about in the wound datums maybe or whatnot. Currently basically reskins with a bit slower speed.
+
+/obj/item/cautery/primitive
+	name = "primitive cautery"
+	desc = "A welding device tuned down to cauterize wounds. Not very precise."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "cautery_primitive"
+	toolspeed = 1.5
+
+/obj/item/circular_saw/primitive
+	name = "handsaw"
+	desc = "For sawing through wood or possibly bones."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	icon_state = "saw"
+	item_state = "saw"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	hitsound = 'sound/effects/shovel_dig.ogg'
+	usesound = 'sound/effects/shovel_dig.ogg'
+	custom_materials = list(/datum/material/iron=2000)
+	toolspeed = 1.2
+	wound_bonus = 0
+	bare_wound_bonus = 10
+	attack_verb = list("sawed", "scratched")
+
+/obj/item/stack/medical/bone_gel/superglue
+	name = "superglue (bonegel)"
+	singular_name = "superglue"
+	desc = "Good for gluing together broken bones!"
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	icon_state = "superglue"
+	lefthand_file = NONE
+	righthand_file = NONE
+	grind_results = NONE
+
+/obj/item/reagent_containers/medspray/sterilizine/honey
+	name = "medical honey (sterilizer)"
+	desc = "Pure honey has antiseptic properties, and probably works just as a sterilizing agent."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	icon_state = "sterilizer_honey"
+	apply_method = "smear"
+	sound_squirt = 'modular_atom/sound/honey.ogg'
+
+/* Added to base code
+var/sound_squirt
+Added to proc/attempt_spray
+		playsound(src, sound_squirt, 50, 1, -6)
+*/
+
+
+// ------------------- PRIMITIVE MEDICAL BAG -----------------------------
+
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive
+	name = "surgical duffel bag"
+	desc = "A large duffel bag for holding extra medical supplies - this one seems to be designed for holding surgical tools."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	icon_state = "toolbag_primitive"
+
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive/PopulateContents()
+	new /obj/item/melee/onehanded/straight_razor(src)
+	new /obj/item/hemostat/tribal(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/circular_saw/primitive(src)
+	new /obj/item/cautery/primitive(src)
+	new /obj/item/bonesetter(src)
+	new /obj/item/bedsheet/blanket(src)
+	new /obj/item/reagent_containers/medspray/sterilizine/honey(src)
+	new /obj/item/stack/sticky_tape/surgical(src)
+	new /obj/item/stack/medical/bone_gel/superglue(src)
+
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive/anchored
+	name = "surgical toolset"
+	desc = "Large piece of felt with various surgical tools laid out."
+	icon_state = "surgicalset_primitive"
+	anchored = TRUE
+
+
+// ------------------- PRIMITIVE IV DRIP -----------------------------
+
+/obj/machinery/iv_drip/primitive
+	name = "wooden IV drip"
+	desc = "Simple frame for infusing liquids using gravity. Can't suck out fluids."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	anchored = TRUE
+	plane = MOB_PLANE
+
+/* 
+/obj/machinery/iv_drip/verb/toggle_mode()
+	set category = "Object"
+	set name = "Toggle Mode"
+	set src in view(1)
+
+	if(src = /obj/machinery/iv_drip/primitive)
+		return
+	if(!isliving(usr))
+		to_chat(usr, span_warning("You can't do that!"))
+		return
+
+	if(usr.incapacitated())
+		return
+	mode = !mode
+	to_chat(usr, "The IV drip is now [mode ? "injecting" : "taking blood"].")
+	update_icon()
+
+added this to make the overlay actually work
+			var/mutable_appearance/filling_overlay = mutable_appearance('modular_atom/icons/primitive_medical.dmi', "reagent")
+*/
+
+
+// ------------------- PRIMITIVE DEFIB MOUNT -----------------------------
+
+/obj/machinery/defibrillator_mount/primitive
+	desc = "Holds a primitive defibrillator."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	icon_state = "defibrillator_mount"
+	density = FALSE
+	use_power = FALSE
+	clamps_locked = TRUE
+	plane = MOB_PLANE
+
+/obj/machinery/defibrillator_mount/primitive/Initialize() //loaded subtype for mapping use
+	. = ..()
+	defib = new/obj/item/defibrillator/primitive(src)
+	update_overlays()
+
+
+// ------------------- PRIMITIVE MEDICAL TOOLBELT -----------------------------
+/*
+obj/item/storage/belt/medical/primitive
+	name = "primitive medical toolbelt"
+	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "belt_blacksmith"
+	item_state = "belt_blacksmith"
+
+/obj/item/storage/belt/medical/primitive/PopulateContents()
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/melee/onehanded/straight_razor(src)
+	new /obj/item/circular_saw/primitive(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/hemostat/tribal(src)
+	new /obj/item/cautery/primitive(src)
+	new /obj/item/bonesetter(src)
+
+/obj/item/hemostat/tribal
+	name = "primitive hemostat (flesh-poker)"
+	desc = "A pinching device made from bone to clamp bleedings with"
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	icon_state = "hemostat_primitive"
+
+/obj/item/retractor/tribal
+	name = "primitive retractor (skin-puller)"
+	desc = "Pries the flesh and bones open."
+	icon = 'modular_atom/icons/primitive_medical.dmi'
+	icon_state = "retractor_primitive"
+*/
+
+
+//////////////////////////////////////////
+// 										//
+//										//
+//			GENERIC MAPPING STUFF		//
+//										//
+//										//
+//////////////////////////////////////////
 
 /obj/structure/fireplace/preloaded
 	fuel_added = 1000
@@ -963,17 +1227,6 @@ added to end of campfire/attackby
 	icon_state = "despair"
 
 
-// Better gravel smoothing
-/obj/effect/turf_decal/gravel_edge
-	icon = 'icons/fallout/turfs/gravel.dmi'
-	icon_state = "gravel_edge"
-
-/obj/effect/turf_decal/gravel_edge/corner // outer corner
-	icon_state = "gravel_corner"
-
-/obj/effect/turf_decal/gravel_edge/diagonal // inner corner alt
-	icon_state = "gravel_diagonal"
-
 // New roof for tent
 /turf/open/floor/plating/f13/outside/roof/tent_leather 
 	name = "leather tent roof"
@@ -984,7 +1237,6 @@ added to end of campfire/attackby
 /obj/effect/turf_decal/shadow
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	icon_state = "shadow"
-
 
 // stairs platform to make it prettier
 /turf/open/floor/f13/stairs_platform
@@ -1023,6 +1275,15 @@ added to end of campfire/attackby
 	add_overlay("bonfire_stones")
 
 
+/obj/structure/closet/crate/footlocker
+	dense_when_open = FALSE
+
+/obj/structure/closet/crate/footchest
+	dense_when_open = FALSE
+
+
+// -------------- TURF STUFF ----------------- 
+
 // // -------------- OUTSIDE DEAD DIRT ----------------- the shade used in the map, nature free, stamped dirt flooring
 /turf/open/indestructible/ground/inside/dirt/stamped
 	icon = 'icons/fallout/turfs/dirt.dmi'
@@ -1040,6 +1301,7 @@ added to end of campfire/attackby
 /obj/structure/flora/tree/wasteland/dark
 	color = "#5c5a57"
 	plane = MOB_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/structure/flora/tree/wasteland/dark/Initialize()
 	. = ..()
@@ -1052,6 +1314,8 @@ added to end of campfire/attackby
 	. = ..()
 	AddComponent(/datum/component/largetransparency, y_offset = 1)
 
+// -------------- GRAVEL TILESET STUFF ----------------- 
+
 /turf/open/indestructible/ground/outside/gravel
 	name = "gravel"
 	icon_state = "gravel"
@@ -1062,6 +1326,18 @@ added to end of campfire/attackby
 
 /turf/open/indestructible/ground/outside/gravel/corner
 	icon_state = "gravelcorner"
+
+/obj/effect/turf_decal/gravel_edge
+	icon = 'icons/fallout/turfs/gravel.dmi'
+	icon_state = "gravel_edge"
+
+/obj/effect/turf_decal/gravel_edge/corner // outer corner
+	icon_state = "gravel_corner"
+
+/obj/effect/turf_decal/gravel_edge/diagonal // inner corner alt
+	icon_state = "gravel_diagonal"
+
+// -------------- SONORA TILESET STUFF ----------------- 
 
 /obj/effect/overlay/desert/sonora/edge
 	name = "desert edge"
@@ -1075,9 +1351,9 @@ added to end of campfire/attackby
 	list/loots = list(
 						/obj/item/stack/crafting/metalparts/five = 10,
 						)
-//	footstep = FOOTSTEP_LOOSE_SAND
-//	barefootstep = FOOTSTEP_LOOSE_SAND
-//	clawfootstep = FOOTSTEP_LOOSE_SAND
+	footstep = FOOTSTEP_LOOSE_SAND
+	barefootstep = FOOTSTEP_LOOSE_SAND
+	clawfootstep = FOOTSTEP_LOOSE_SAND
 
 /turf/open/indestructible/ground/outside/desert/sonora/Initialize()
 	. = ..()
@@ -1105,28 +1381,6 @@ added to end of campfire/attackby
 	icon_state = "desertcorner"
 
 
-/obj/structure/railing/handrail/legion
-	name = "handrail"
-	desc = "Wooden posts with connecting chain."
-	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
-	icon_state = "handrail_legion"
-
-/obj/structure/railing/handrail/legion/underlayer
-	layer = BELOW_MOB_LAYER
-
-/obj/structure/railing/handrail/legion/overlayer
-	plane = MOB_PLANE
-
-/obj/structure/railing/handrail/legion/end
-	icon_state = "handrail_legion_end"
-	density = FALSE
-
-
-/obj/structure/closet/crate/footlocker
-	dense_when_open = FALSE
-
-/obj/structure/closet/crate/footchest
-	dense_when_open = FALSE
 
 /turf/open/floor/f13/wood/outside // outside platform with sunlight
 	sunlight_state = SUNLIGHT_SOURCE

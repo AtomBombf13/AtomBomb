@@ -51,7 +51,7 @@
 // SECURE DOOR - LEGION
 
 /obj/machinery/door/unpowered/securedoor/legion
-	name = "Legion Castrum"
+	name = "Legion camp"
 	req_access_txt = "123" // ACCESS_LEGION
 
 //khoor

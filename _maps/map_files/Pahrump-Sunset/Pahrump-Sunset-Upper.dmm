@@ -1903,6 +1903,11 @@
 /obj/structure/chair/bench,
 /turf/open/floor/f13/wood,
 /area/f13/legion)
+"dib" = (
+/obj/structure/table/wood,
+/obj/item/warpaint_bowl,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "djh" = (
 /obj/structure/chair/wood,
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -3050,9 +3055,6 @@
 /area/f13/city)
 "fwI" = (
 /obj/structure/chair/bench,
-/obj/structure/decoration/legion/chains{
-	pixel_y = 28
-	},
 /obj/structure/decoration/legion/spears{
 	dir = 4;
 	pixel_y = 31
@@ -4749,6 +4751,10 @@
 	},
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated/green,
 /area/f13/wasteland/ncr)
+"iSv" = (
+/obj/machinery/smartfridge/bottlerack/legion_offering,
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "iSG" = (
 /obj/structure/table,
 /obj/effect/spawner/bundle/f13/greasegun,
@@ -5212,6 +5218,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/offices1st)
+"jJq" = (
+/obj/structure/railing/handrail/legion/end{
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legion)
 "jJr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/dogbed,
@@ -7138,9 +7150,6 @@
 /area/f13/wasteland)
 "nmB" = (
 /obj/structure/chair/bench,
-/obj/structure/decoration/legion/chains{
-	pixel_y = 28
-	},
 /obj/structure/decoration/legion/spears{
 	dir = 8;
 	pixel_y = 31
@@ -10039,6 +10048,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/ncr)
+"stY" = (
+/obj/structure/decoration/legion/chains,
+/obj/structure/railing/handrail/legion/end,
+/turf/closed/wall/rust,
+/area/f13/legion)
 "svo" = (
 /obj/structure/railing{
 	dir = 10
@@ -11015,14 +11029,8 @@
 	},
 /area/f13/building/massfusion)
 "uow" = (
-/obj/structure/railing{
+/obj/structure/railing/handrail/legion{
 	dir = 4
-	},
-/obj/structure/fence/handrail{
-	density = 0;
-	dir = 4;
-	layer = 2.8;
-	pixel_x = 12
 	},
 /turf/open/transparent/openspace,
 /area/f13/legion)
@@ -11834,11 +11842,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "wck" = (
-/obj/structure/fence/handrail{
+/obj/structure/railing/handrail/legion{
 	density = 0;
-	dir = 4;
-	layer = 2.8;
-	pixel_x = 12
+	dir = 4
 	},
 /turf/open/transparent/openspace,
 /area/f13/legion)
@@ -72413,10 +72419,10 @@ qIa
 xZD
 xZD
 gvs
-gDh
+stY
 uow
 wck
-iEW
+jJq
 iEW
 iEW
 iEW
@@ -73186,7 +73192,7 @@ lMd
 iEW
 iEW
 iEW
-iEW
+dhN
 iEW
 gwk
 myX
@@ -74203,7 +74209,7 @@ fxn
 dcO
 iEW
 iEW
-iEW
+dib
 fxn
 wZn
 ebv
@@ -75488,7 +75494,7 @@ fxn
 dhN
 iEW
 iEW
-iEW
+iSv
 fxn
 kMC
 ndI
