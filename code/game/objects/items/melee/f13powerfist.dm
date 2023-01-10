@@ -12,7 +12,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	hitsound = 'sound/weapons/resonator_blast.ogg'
 	attack_speed = MELEE_SPEED_NORMAL
-	var/click_cooldown = CLICK_CD_MELEE
+	var/click_cooldown = CLICK_CD_MELEE // Used for the wrenching component, sync this with attack_speed since this will overwrite it and be multiplied by power.
 	force = 28
 	armour_penetration = 0.35
 	throwforce = 10
