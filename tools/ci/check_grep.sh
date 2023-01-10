@@ -56,7 +56,7 @@ if git grep -Pn '^/*var/' *.dm; then
     st=1
 fi;
 echo "Checking for space indentation"
-if git rep -Pn '(^ {2})|(^ [^ * ])|(^    +)' *.dm; then
+if git grep -Pn '(^ {2})|(^ [^ * ])|(^    +)' *.dm; then
     echo "space indentation detected"
     st=1
 fi;
