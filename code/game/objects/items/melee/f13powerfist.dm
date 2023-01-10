@@ -2,7 +2,7 @@
 // POWER FISTS //
 /////////////////		-Uses power (gas currently) for knockback. Heavy AP, specialized for attacking heavy armor
 
-// Power Fist			Throws targets. Max damage 44. Full AP.
+// Power Fist			Throws targets. Max damage 56.
 /obj/item/melee/unarmed/powerfist
 	name = "power fist"
 	desc = "A metal gauntlet with a piston-powered ram on top for that extra 'oomph' in your punch."
@@ -16,6 +16,7 @@
 	armour_penetration = 0.35
 	throwforce = 10
 	throw_range = 3
+	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_GLOVES
 	flags_1 = CONDUCT_1
@@ -47,7 +48,7 @@
 		force = initial(force) * power
 		attack_speed = CLICK_CD_MELEE * power
 
-// Goliath				Throws targets far. Max damage 50.
+// Goliath				Throws targets far. Max damage 62.
 /obj/item/melee/unarmed/powerfist/goliath
 	name = "Goliath"
 	desc = "A massive, experimental metal gauntlet crafted by some poor bastard in Redwater that since outlived their usefulness. The piston-powered ram on top is designed to throw targets very, very far."
@@ -61,10 +62,11 @@
 	icon_state = "goliath"
 	item_state = "goliath"
 	force = 31
+	armour_penetration = 0.5 // It's a unique weapon and the throw distance is less of a blessing and more of a curse.
 	throw_distance = 3
 
 
-// Ballistic Fist			Keywords: Damage max 42, AP 0.45, Shotgun
+// Ballistic Fist			Keywords: Damage max 30 (this isn't a powerfist subtype), AP 0.45, Shotgun
 /obj/item/gun/ballistic/revolver/ballisticfist
 	name = "ballistic fist"
 	desc = "This powerfist has been modified to have two shotgun barrels welded to it, with the trigger integrated into the knuckle guard. For those times when you want to punch someone and shoot them in the face at the same time."
@@ -105,6 +107,41 @@
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
 
 
+// Displacer Glove 			20% more damage than the power fist for a max of 66. Throws targets. Great woundbonus.
+/obj/item/melee/unarmed/powerfist/displacer
+	name = "displacer glove"
+	desc = "A rare pre-war medical tool created with composite materials and plastics that uses sonic therapy to treat conditions like arrythmia. It appears to have been re-purposed as a weapon, with the sonic implement being overclocked to break bones inside a target."
+	icon_state = "displacer"
+	item_state = "displacer"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	force = 33
+	throw_distance = 1
+	wound_bonus = 40
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
+
+
+// Saturnite Fist 			10% less damage for a faster attack rate.
+/obj/item/melee/unarmed/powerfist/saturnite
+	name = "D-25A power fist"
+	desc = "A one-of-a-kind metal gauntlet made out of a mysterious alloy, the piston is branded 'Saturnite' and it feels lightweight and durable. It seems to have a system that redirects the center of mass of the glove to maximize thrust speed."
+	icon_state = "satfist"
+	item_state = "satfist"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	attack_speed = MELEE_SPEED_FASTEST
+	force = 25
+
+/obj/item/melee/unarmed/powerfist/saturnite/Touch(atom/target, proximity = TRUE) // Stealing this from the Bands of the North Star, probably wont work since these aren't a glove subtype
+	if(!isliving(target))
+		return
+
+	var/mob/living/M = loc
+	M.SetNextAction(CLICK_CD_RANGE) // 0.5 seconds?? a 40% increase i think
+
+	return NO_AUTO_CLICKDELAY_HANDLING | ATTACK_IGNORE_ACTION
+
+
 /////////////////////
 // ADVANCED SWORDS //
 /////////////////////
@@ -112,7 +149,7 @@
 // Ripper				Keywords: Damage 10/45, Wound bonus, block
 /obj/item/melee/powered/ripper
 	name = "ripper"
-	desc = "The Ripper™ vibroblade is powered by a small energy cell wich allows it to easily cut through flesh and bone."
+	desc = "The Ripper™ vibroblade is powered by a small energy cell which allows it to easily cut through flesh and bone."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	mob_overlay_icon = 'modular_atom/legio_invicta/icons/beltslot.dmi'
 	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
