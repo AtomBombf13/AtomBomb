@@ -433,7 +433,7 @@
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
 	damage = 20 //if all bullets connect, this will do 60
-	armour_penetration = BULLET_PENETRATION_ABSOLUTE
+	armour_penetration = BULLET_PENETRATION_LOW // lens makes it less focused
 	damage_threshold_penetration = BULLET_DT_PENETRATION_PISTOL
 	hitscan = TRUE
 	wound_bonus = -10
