@@ -14,7 +14,10 @@
 	icon_dead = "pumpkin-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	mutatelist = list(/obj/item/seeds/pumpkin/blumpkin)
-	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.2)
+	reagents_add = list(
+		/datum/reagent/consumable/nutriment/vitamin = 0.04,
+		/datum/reagent/consumable/nutriment = 0.2
+		)
 
 /obj/item/seeds/pumpkin/microwave_act(obj/machinery/microwave/MW) //The act allows it to be cooked over a bonfire grille too.
 	..()
@@ -25,7 +28,11 @@
 	name = "roasted pumpkin seeds"
 	desc = "Cooked to perfection crispy pumpkin seeds, a golden brown autumntime treat."
 	icon_state = "roasted_seeds"
-	list_reagents = list(/datum/reagent/consumable/cooking_oil = 1, /datum/reagent/consumable/nutriment = 1.5, /datum/reagent/consumable/nutriment/vitamin = 1.5)
+	list_reagents = list(
+		/datum/reagent/consumable/cooking_oil = 1,
+		/datum/reagent/consumable/nutriment = 1.5,
+		/datum/reagent/consumable/nutriment/vitamin = 1.5
+		)
 	bitesize = 2
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("crunchy" = 1)
@@ -60,7 +67,11 @@
 	plantname = "Blumpkin Vines"
 	product = /obj/item/reagent_containers/food/snacks/grown/blumpkin
 	mutatelist = list()
-	reagents_add = list(/datum/reagent/ammonia = 0.2, /datum/reagent/chlorine = 0.1, /datum/reagent/consumable/nutriment = 0.2)
+	reagents_add = list(
+		/datum/reagent/ammonia = 0.2,
+		/datum/reagent/chlorine = 0.1,
+		/datum/reagent/consumable/nutriment = 0.2
+		)
 	rarity = 20
 
 /obj/item/reagent_containers/food/snacks/grown/blumpkin
