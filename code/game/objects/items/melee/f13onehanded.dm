@@ -102,7 +102,19 @@
 	force = WEAPON_FORCE_SWORD
 	block_chance = 15
 
-
+/obj/item/melee/onehanded/chinesesword //[damage SWORD -2, low wounding, very high block]
+	name = "chinese officer's sword"
+	desc = "A sword usually issued to chinese officers during the great war. Despite being ntended for ceremonial use, it's still very well made and functional. Not very heavy but in trained hands its an incredibly agile weapon."
+	icon = 'icons/fallout/objects/melee/melee.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
+	icon_state = "chinasword"
+	item_state = "spathasmith" //placeholder
+	force = WEAPON_FORCE_SWORD-2 //not weighty
+	wound_bonus = WOUNDING_BONUS_MODEST
+	block_chance = 25 //perfectly balanced
+	damage_threshold_penetration = 2 //slight boost to DT pen, unique to swords, aiming for weakpoints perhaps?
+	sharpness = SHARP_EDGED
 
 
 //////////////////////-------------------------------------------------------------
@@ -343,7 +355,7 @@
 //					//
 //		CLUBS		//		[ Bonus damage STAMINA ]
 //					//
-//////////////////////	
+//////////////////////
 
 // Pipe						[ Damage CLUB, Bonus damage STAMINA ] -----------------------
 /obj/item/melee/onehanded/club
@@ -629,7 +641,7 @@
 //							//
 //		GLOVE WEAPONS		//		[ fast attack, unarmed wonkiness ]
 //							//
-//////////////////////////////	
+//////////////////////////////
 /obj/item/melee/unarmed
 	name = "glove weapon template"
 	desc = "should not be here"
@@ -856,7 +868,7 @@
 /obj/item/kitchen/knife/butcher/tribal
 	name = "Carving Knife"
 	desc = "A simple, hand-fashioned carving knife meant for separating meat from bone. Hardly more than some sharpened, rusty metal stuck between a tied wooden handle."
-	icon = 'icons/fallout/objects/kitchen.dmi'	
+	icon = 'icons/fallout/objects/kitchen.dmi'
 	icon_state = "knife_butcher_primal"
 	force = 13
 	throwforce = 7

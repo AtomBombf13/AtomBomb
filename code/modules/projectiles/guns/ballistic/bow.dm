@@ -1,6 +1,7 @@
 /obj/item/gun/ballistic/bow
 	name = "base bow"
 	desc = "base type of bow used to define features for multiple-loading bows"
+	icon = 'icons/fallout/objects/guns/ballistic/bow.dmi'
 	icon_state = "bow"
 	item_state = "bow"
 	icon_prefix = "bow"
@@ -96,6 +97,7 @@
 /obj/item/gun/ballistic/bow/xbow
 	name = "magazine-fed crossbow"
 	desc = "A somewhat primitive projectile weapon. Has a spring-loaded magazine, but still requires drawing back before firing. Fires arrows slightly faster than regular bows, improving damage"
+	icon = 'icons/fallout/objects/guns/ballistic/bow.dmi'
 	icon_state = "xbow"
 	item_state = "xbow"
 	icon_prefix = "xbow"

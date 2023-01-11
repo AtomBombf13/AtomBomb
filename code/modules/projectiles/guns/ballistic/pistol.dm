@@ -11,7 +11,7 @@
 /obj/item/gun/ballistic/automatic/pistol
 	name = "pistol template"
 	desc = "should not be here. Bugreport."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/pistols.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	item_state = "gun"
@@ -176,9 +176,6 @@
 	icon_state = "n99"
 	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm
 	mag_type = /obj/item/ammo_box/magazine/pistol10mm
-	disallowed_mags = list(
-		/obj/item/ammo_box/magazine/pistol10mm/extended,
-		/obj/item/ammo_box/magazine/pistol10mm/extended/empty,)
 
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
@@ -486,7 +483,6 @@
 /obj/item/gun/ballistic/automatic/pistol/ppk12
 	name = "PPK12 gauss pistol"
 	desc = "Praised for its range and stopping power, the PPK12 Gauss Pistol is of German design. The pistol uses a weak electromagnetic field to propel rounds at tremendous speed and punch through almost any armor."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "gausspistol"
 	item_state = "crusader"
 	mag_type = /obj/item/ammo_box/magazine/m2mm/pistol
@@ -554,8 +550,7 @@
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
 	name = "the Executive"
 	desc = "A modified N99 pistol with an accurate two-round-burst and a blue Vault-Tec finish, a status symbol for some Overseers."
-	icon = 'icons/obj/guns/projectile.dmi'
-	icon_state = "executive"
+	icon_state = "executive_old"
 	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO

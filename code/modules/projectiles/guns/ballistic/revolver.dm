@@ -4,6 +4,7 @@
 /obj/item/gun/ballistic/revolver
 	name = "revolver template"
 	desc = "should not exist."
+	icon = 'icons/fallout/objects/guns/ballistic/revolvers.dmi'
 	icon_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
 	w_class = WEIGHT_CLASS_NORMAL
@@ -174,7 +175,6 @@
 /obj/item/gun/ballistic/revolver/colt6520
 	name = "Colt 6520"
 	desc = "The Colt 6520 10mm double action revolver is a highly durable weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction.This revolver has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "10rev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6520
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
@@ -671,7 +671,7 @@
 /obj/item/gun/ballistic/revolver/colt357/lucky
 	name = "Lucky"
 	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often."
-	icon_state = "lucky37"
+	icon_state = "lucky"
 	item_state = "lucky"
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
@@ -721,7 +721,6 @@
 /obj/item/gun/ballistic/revolver/colt6520/Bigiron
 	name = "Big Iron"
 	desc = "The Colt 6520 10mm double action revolver is a highly durable weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction.This revolver has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots. This one seems to be embellished with Vault-tec symbols"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "executive"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6520
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'

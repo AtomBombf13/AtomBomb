@@ -12,7 +12,7 @@
 	name = "automatic gun template"
 	desc = "should not be here, bugreport."
 	w_class = WEIGHT_CLASS_BULKY
-
+	icon = 'icons/fallout/objects/guns/ballistic/automaticrifles.dmi'
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -118,7 +118,7 @@
 /obj/item/gun/ballistic/automatic/smg/
 	name = "SMG TEMPLATE"
 	desc = "should not exist"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/submachinegun.dmi'
 	icon_prefix = "uzi"
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -367,8 +367,8 @@
 	item_state = "smg10mm"
 	icon_prefix = "smg10mm"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/pistol10mm
-	init_mag_type = /obj/item/ammo_box/magazine/pistol10mm/extended
+	mag_type = /obj/item/ammo_box/magazine/smg10
+	init_mag_type = /obj/item/ammo_box/magazine/smg10
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -385,6 +385,44 @@
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 
 /* * * * * * * * * * *
+ * worn out 10mm SMG
+ * downgraded 10mm SMG
+ * -10% damage and unique sprite
+ * * * * * * * * * * */
+
+obj/item/gun/ballistic/automatic/smg/smg10mm/worn
+	name = "10mm submachine gun"
+	desc = "One of the most common personal-defense weapons of the Great War, a sturdy and reliable open-bolt 10mm submachine gun. This one barely holds"
+	worn_out = TRUE
+	damage_multiplier = GUN_LESS_DAMAGE_T4
+
+
+/* * * * * * * * * * *
+ * commando 10mm SMG
+ * improved 10mm SMG
+ * 10mm
+ * Even slower firing
+ * Less Recoil
+ * One-handed
+ * No akimbo
+ * rare
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/smg/smg10mm/compensated
+	name = "commando 10mm submachine gun"
+	desc = "an improved 10mm SMG for special forces, comes with a compensator and larger magwell to accept larger magazines."
+	icon_state = "smg10comp"
+	mag_type = /obj/item/ammo_box/magazine/smg10
+	init_mag_type = /obj/item/ammo_box/magazine/smg10/ext
+	init_recoil = SMG_RECOIL(0.7)
+	damage_multiplier = GUN_LESS_DAMAGE_T2
+
+	init_firemodes = list(
+		FULL_AUTO_150,
+		SEMI_AUTO_SMG
+		)
+
+/* * * * * * * * * * *
  * P90c SMG
  * Light 10mm SMG
  * 10mm
@@ -392,7 +430,7 @@
  * Less damage
  * One-handed
  * Akimbo!
- * Common
+ * uncommon
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/smg/p90
@@ -847,7 +885,6 @@
 /obj/item/gun/ballistic/automatic/rangemaster
 	name = "colt rangemaster"
 	desc = "A Colt Rangemaster semi-automatic rifle, chambered for .223 rounds. Single-shot only."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "rangemaster"
 	item_state = "308"
 	icon_prefix = "308"
@@ -1117,7 +1154,6 @@
 /obj/item/gun/ballistic/automatic/type93/worn //28dmg
 	name = "\improper Worn Type 93"
 	desc = "This Type 93 Chinese assault rifle looks like it has been made in a garage. The bore is shot to hell, the threading is destroyed, but atleast it works."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "type93"
 	item_state = "handmade_rifle"
 
@@ -1146,6 +1182,7 @@
 /obj/item/gun/ballistic/automatic/bozar
 	name = "bozar"
 	desc = "The ultimate refinement of the sniper's art, the Bozar is a scoped, accurate, light machine gun that will make nice big holes in your enemy. Uses 5.56."
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "bozar"
 	item_state = "sniper"
 	slot_flags = SLOT_BACK
@@ -1242,7 +1279,7 @@
 /obj/item/gun/ballistic/automatic/assault_carbine/worn
 	name = "ak112 assault carbine"
 	desc = "An AK-112 5mm Assault Rifle. An old military model bearing Colt markings along its stamped-metal receiver, out of use around the time of the Great War."
-	icon = 'icons/fallout/objects/guns/ballistic/ak112.dmi'
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	icon_state = "ak112"
 	item_state = "fnfal"
 
@@ -1271,7 +1308,6 @@
 /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	name = "police assault rifle"
 	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Eastwood Security Force. Held together by duct tape and prayers, it somehow still shoots."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
@@ -1299,7 +1335,6 @@
 /obj/item/gun/ballistic/automatic/m14
 	name = "m14 battle rifle"
 	desc = "An ancient battle rifle that looks like outdated even by pre-war standards. It has 'Springfield Armory' etched on one-side. It is alarmingly heavy for a rifle."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	icon_state = "m14"
 	item_state = "308"
@@ -1345,7 +1380,7 @@
 /obj/item/gun/ballistic/automatic/bar
 	name = "Browning automatic rifle"
 	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
-	icon = 'icons/fallout/objects/guns/ballistic/bar.dmi'
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	slot_flags = ITEM_SLOT_BACK
 	icon_state = "BAR"
 	item_state = "BAR"
@@ -1444,6 +1479,7 @@
 /obj/item/gun/ballistic/automatic/r84
 	name = "R84 LMG"
 	desc = "A light machinegun using 60 round belts fed from an ammobox, its one of the few heavy weapons designs still commonly found."
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "R84"
 	item_state = "R84"
 	mag_type = /obj/item/ammo_box/magazine/lmg
@@ -1482,7 +1518,6 @@
 /obj/item/gun/ballistic/automatic/lsw
 	name = "light support weapon"
 	desc = "This squad-level support weapon has a bullpup design. The bullpup design makes it difficult to use while lying down. Because of this it was remanded to National Guard units. It, however, earned a reputation as a reliable weapon that packs a lot of punch for its size."
-	icon = 'icons/obj/guns/projectile.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "lsw"
@@ -1527,6 +1562,7 @@
 /obj/item/gun/ballistic/automatic/m1919
 	name = "Browning M1919"
 	desc = "This ancient machine gun has been dug up and put into working order by the Legion Forgemasters. It's loud, heavy and terrifying."
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "M38"
 	item_state = "M38"
 	slot_flags = 0
@@ -1765,7 +1801,6 @@
 	desc = "The customized sniper rifle, fitted with a telescopic sight for extreme accuracy and chambered for a high-ballistic performance centerfire cartridge. It is a superior version of the regular sniper rifle and is decorated with the flag of the bull and tokens of a hunt."
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	icon_state = "venator_sniper"
 	item_state = "venator_sniper"
@@ -1788,7 +1823,7 @@
 /obj/item/gun/ballistic/automatic/m1919/m2a1
 	name = "John 'Moses' Browning M2A1"
 	desc = "This ancient heavy machine gun has been directly pulled off of some once combat vehicle and modified to be fired while being carried. It is adorned by symbols of the US Government and the Encalve."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/heavyweapon.dmi'
 	icon_state = "m2a1"
 	slot_flags = 0
 	slowdown = 1.25

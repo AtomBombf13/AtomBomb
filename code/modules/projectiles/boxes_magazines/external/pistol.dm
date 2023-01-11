@@ -91,9 +91,9 @@
 //10mm extended
 /obj/item/ammo_box/magazine/pistol10mm/extended
 	name = "10mm extended magazine (10mm)"
-	desc = "A extended magazine with 24 rounds."
+	desc = "A extended magazine with 16 rounds."
 	icon_state = "smg10mm"
-	max_ammo = 24
+	max_ammo = 16
 	custom_materials = list(/datum/material/iron = MATS_SMG)
 	w_class = WEIGHT_CLASS_SMALL
 

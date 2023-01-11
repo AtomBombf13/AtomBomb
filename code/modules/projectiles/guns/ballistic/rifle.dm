@@ -12,11 +12,11 @@
 
 	name = "rifle template"
 	desc = "Should not exist"
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon = 'icons/fallout/objects/guns/ballistic/manualrifle.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "shotgun"
-	item_state = "shotgun"
+	icon_state = "308"
+	item_state = "308"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 
@@ -378,7 +378,7 @@
 /obj/item/gun/ballistic/rifle/mag
 	name = "magazine fed bolt-action rifle template"
 	desc = "should not exist."
-
+	icon = 'icons/fallout/objects/guns/ballistic/manualrifle.dmi'
 	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -426,7 +426,6 @@
 /obj/item/gun/ballistic/rifle/mag/sportcarbine
 	name = "sport carbine"
 	desc = "One of the many .22LC carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	icon_state = "svarmint"
 	item_state = "varmintrifle"
 	mag_type = /obj/item/ammo_box/magazine/pistol22
@@ -591,7 +590,7 @@
 	init_firemodes = list(
 		SEMI_AUTO_SNIPER
 	)
-	
+
 	can_bayonet = FALSE
 	can_scope = FALSE
 	zoom_factor = 2

@@ -6,6 +6,7 @@
 //Plasma pistol
 /obj/item/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	item_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas."
@@ -46,6 +47,7 @@
 /obj/item/gun/energy/laser/plasma/glock
 	name = "glock 86"
 	desc = "Glock 86 Plasma Pistol. Designed by the Gaston Glock artificial intelligence. Shoots a small bolt of superheated plasma. Powered by a small energy cell."
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	item_state = "plasma-pistol"
 	icon_state = "glock86"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -76,6 +78,7 @@
 //urban Plasma Rifle
 /obj/item/gun/energy/laser/plasma
 	name ="plasma rifle"
+	icon = 'icons/fallout/objects/guns/energy/energyrifles.dmi'
 	item_state = "plasma"
 	icon_state = "plasma"
 	desc = "A miniaturized plasmacaster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
@@ -101,6 +104,22 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+
+//Plasma-caster
+//original P94 plasma rifle from FO1/2, deliberately overpowered for use in events
+/obj/item/gun/energy/laser/plasma/caster
+	name = "plasmacaster"
+	desc ="a vintage Winchester P94 plasma rifle. Often referred to as a plasma caster due to it's sheer size. A repurposed mining tool, it is incredibly powerful but weights a ton, which is why it was retired in favor of the urban plasma rifle."
+	icon = 'icons/fallout/objects/guns/energy/energyheavy.dmi'
+	icon_state = "turbo-plasma-rifle"
+	item_state ="plasmacaster"
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+
+	slowdown =  GUN_SLOWDOWN_RIFLE_LMG
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 
@@ -142,7 +161,7 @@
 /obj/item/gun/ballistic/automatic/pistol/plasma
 	name ="short plasma gun"
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one loads plasma canisters rather than the usual MF cell."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
+	icon = 'icons/fallout/objects/guns/energy/energypistols.dmi'
 	item_state = "plasma-pistol"
 	icon_state = "plasmafo4"
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
