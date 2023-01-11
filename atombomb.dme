@@ -3855,4 +3855,6 @@
 #include "modular_sunset\code\modules\fluff\happyshark_granter.dm"
 #include "modular_sunset\code\modules\fluff\happyshark_recipe.dm"
 #include "modular_sunset\code\modules\food_and_drinks\happy_shark\happy_shark.dm"
+#include "tgs.dm"
+#include "tgs/includes.dm"
 // END_INCLUDE
