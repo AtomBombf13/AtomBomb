@@ -4,170 +4,41 @@
  *
  * This script uses Juke Build, read the docs here:
  * https://github.com/stylemistake/juke-build
+ *
+ * @file
+ * @copyright 2021 Aleksej Komarov
+ * @license MIT
  */
 
-import fs from 'fs';
-import { get } from 'http';
-import { env } from 'process';
-import Juke from './juke/index.js';
-import { DreamDaemon, DreamMaker, NamedVersionFile } from './lib/byond.js';
-import { yarn } from './lib/yarn.js';
+// Change working directory to project root
+process.chdir(require('path').resolve(__dirname, '../../'));
 
-Juke.chdir('../..', import.meta.url);
-Juke.setup({ file: import.meta.url }).then((code) => {
-  // We're using the currently available quirk in Juke Build, which
-  // prevents it from exiting on Windows, to wait on errors.
-  if (code !== 0 && process.argv.includes('--wait-on-error')) {
-    Juke.logger.error('Please inspect the error and close the window.');
-    return;
-  }
-  process.exit(code);
-});
+// Validate NodeJS version
+const NODE_VERSION = parseInt(process.versions.node.match(/(\d+)/)[1]);
+const NODE_VERSION_TARGET = parseInt(require('fs')
+  .readFileSync('dependencies.sh', 'utf-8')
+  .match(/NODE_VERSION=(\d+)/)[1]);
+if (NODE_VERSION < NODE_VERSION_TARGET) {
+  console.error('Your current Node.js version is out of date.');
+  console.error('You have two options:');
+  console.error('  a) Go to https://nodejs.org/ and install the latest LTS release of Node.js');
+  console.error('  b) Uninstall Node.js (our build system automatically downloads one)');
+  process.exit(1);
+}
 
-const DME_NAME = 'atombomb';
+// Main
+// --------------------------------------------------------
 
-export const DefineParameter = new Juke.Parameter({
-  type: 'string[]',
-  alias: 'D',
-});
+const fs = require('fs');
+const Juke = require('./juke');
+const { yarn } = require('./cbt/yarn');
+const { dm } = require('./cbt/dm');
 
-export const PortParameter = new Juke.Parameter({
-  type: 'string',
-  alias: 'p',
-});
+//Change THIS according to your project <name>
+const DME_NAME = 'atombomb'; 
 
-export const DmVersionParameter = new Juke.Parameter({
-  type: 'string',
-})
-
-export const CiParameter = new Juke.Parameter({ type: 'boolean' });
-
-export const WarningParameter = new Juke.Parameter({
-  type: 'string[]',
-  alias: 'W',
-});
-
-export const DmMapsIncludeTarget = new Juke.Target({
-  executes: async () => {
-    const folders = [
-      ...Juke.glob('_maps/map_files/**/modular_pieces/*.dmm'),
-      ...Juke.glob('_maps/RandomRuins/**/*.dmm'),
-      ...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
-      ...Juke.glob('_maps/shuttles/**/*.dmm'),
-      ...Juke.glob('_maps/templates/**/*.dmm'),
-    ];
-    const content = folders
-      .map((file) => file.replace('_maps/', ''))
-      .map((file) => `#include "${file}"`)
-      .join('\n') + '\n';
-    fs.writeFileSync('_maps/templates.dm', content);
-  },
-});
-
-export const DmTarget = new Juke.Target({
-  parameters: [DefineParameter, DmVersionParameter],
-  dependsOn: ({ get }) => [
-    get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
-  ],
-  inputs: [
-    '_maps/map_files/generic/**',
-    'code/**',
-    'html/**',
-    'icons/**',
-    'interface/**',
-    `${DME_NAME}.dme`,
-    NamedVersionFile,
-  ],
-  outputs: ({ get }) => {
-    if (get(DmVersionParameter)) {
-      return []; // Always rebuild when dm version is provided
-    }
-    return [
-      `${DME_NAME}.dmb`,
-      `${DME_NAME}.rsc`,
-    ]
-  },
-  executes: async ({ get }) => {
-    await DreamMaker(`${DME_NAME}.dme`, {
-      defines: ['CBT', ...get(DefineParameter)],
-      warningsAsErrors: get(WarningParameter).includes('error'),
-      namedDmVersion: get(DmVersionParameter),
-    });
-  },
-});
-
-export const DmTestTarget = new Juke.Target({
-  parameters: [DefineParameter, DmVersionParameter],
-  dependsOn: ({ get }) => [
-    get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
-  ],
-  executes: async ({ get }) => {
-    fs.copyFileSync(`${DME_NAME}.dme`, `${DME_NAME}.test.dme`);
-    await DreamMaker(`${DME_NAME}.test.dme`, {
-      defines: ['CBT', 'CIBUILDING', ...get(DefineParameter)],
-      warningsAsErrors: get(WarningParameter).includes('error'),
-      namedDmVersion: get(DmVersionParameter),
-    });
-    Juke.rm('data/logs/ci', { recursive: true });
-    const options = {
-      dmbFile : `${DME_NAME}.test.dmb`,
-      namedDmVersion: get(DmVersionParameter),
-    }
-    await DreamDaemon(
-      options,
-      '-close', '-trusted', '-verbose',
-      '-params', 'log-directory=ci'
-    );
-    Juke.rm('*.test.*');
-    try {
-      const cleanRun = fs.readFileSync('data/logs/ci/clean_run.lk', 'utf-8');
-      console.log(cleanRun);
-    }
-    catch (err) {
-      Juke.logger.error('Test run was not clean, exiting');
-      throw new Juke.ExitCode(1);
-    }
-  },
-});
-
-export const AutowikiTarget = new Juke.Target({
-  parameters: [DefineParameter, DmVersionParameter],
-  dependsOn: ({ get }) => [
-    get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
-  ],
-  outputs: [
-    'data/autowiki_edits.txt',
-  ],
-  executes: async ({ get }) => {
-    fs.copyFileSync(`${DME_NAME}.dme`, `${DME_NAME}.test.dme`);
-    await DreamMaker(`${DME_NAME}.test.dme`, {
-      defines: ['CBT', 'AUTOWIKI', ...get(DefineParameter)],
-      warningsAsErrors: get(WarningParameter).includes('error'),
-      namedDmVersion: get(DmVersionParameter),
-    });
-    Juke.rm('data/autowiki_edits.txt');
-    Juke.rm('data/autowiki_files', { recursive: true });
-    Juke.rm('data/logs/ci', { recursive: true });
-
-    const options = {
-      dmbFile: `${DME_NAME}.test.dmb`,
-      namedDmVersion: get(DmVersionParameter),
-    }
-    await DreamDaemon(
-      options,
-      '-close', '-trusted', '-verbose',
-      '-params', 'log-directory=ci',
-    );
-    Juke.rm('*.test.*');
-    if (!fs.existsSync('data/autowiki_edits.txt')) {
-      Juke.logger.error('Autowiki did not generate an output, exiting');
-      throw new Juke.ExitCode(1);
-    }
-  },
-})
-
-export const YarnTarget = new Juke.Target({
-  parameters: [CiParameter],
+const YarnTarget = Juke.createTarget({
+  name: 'yarn',
   inputs: [
     'tgui/.yarn/+(cache|releases|plugins|sdks)/**/*',
     'tgui/**/package.json',
@@ -176,10 +47,11 @@ export const YarnTarget = new Juke.Target({
   outputs: [
     'tgui/.yarn/install-target',
   ],
-  executes: ({ get }) => yarn('install', get(CiParameter) && '--immutable'),
+  executes: () => yarn('install'),
 });
 
-export const TgFontTarget = new Juke.Target({
+const TgFontTarget = Juke.createTarget({
+  name: 'tgfont',
   dependsOn: [YarnTarget],
   inputs: [
     'tgui/.yarn/install-target',
@@ -191,15 +63,11 @@ export const TgFontTarget = new Juke.Target({
     'tgui/packages/tgfont/dist/tgfont.eot',
     'tgui/packages/tgfont/dist/tgfont.woff2',
   ],
-  executes: async () => {
-    await yarn('tgfont:build');
-    fs.copyFileSync('tgui/packages/tgfont/dist/tgfont.css', 'tgui/packages/tgfont/static/tgfont.css');
-    fs.copyFileSync('tgui/packages/tgfont/dist/tgfont.eot', 'tgui/packages/tgfont/static/tgfont.eot');
-    fs.copyFileSync('tgui/packages/tgfont/dist/tgfont.woff2', 'tgui/packages/tgfont/static/tgfont.woff2');
-  }
+  executes: () => yarn('workspace', 'tgfont', 'build'),
 });
 
-export const TguiTarget = new Juke.Target({
+const TguiTarget = Juke.createTarget({
+  name: 'tgui',
   dependsOn: [YarnTarget],
   inputs: [
     'tgui/.yarn/install-target',
@@ -210,124 +78,53 @@ export const TguiTarget = new Juke.Target({
   outputs: [
     'tgui/public/tgui.bundle.css',
     'tgui/public/tgui.bundle.js',
+    'tgui/public/tgui-common.bundle.js',
     'tgui/public/tgui-panel.bundle.css',
     'tgui/public/tgui-panel.bundle.js',
-    'tgui/public/tgui-say.bundle.css',
-    'tgui/public/tgui-say.bundle.js',
   ],
-  executes: () => yarn('tgui:build'),
+  executes: () => yarn('run', 'webpack-cli', '--mode=production'),
 });
 
-export const TguiEslintTarget = new Juke.Target({
-  parameters: [CiParameter],
-  dependsOn: [YarnTarget],
-  executes: ({ get }) => yarn('tgui:lint', !get(CiParameter) && '--fix'),
+const DefineParameter = Juke.createParameter({
+  type: 'string[]',
+  name: 'define',
+  alias: 'D',
 });
 
-export const TguiPrettierTarget = new Juke.Target({
-  dependsOn: [YarnTarget],
-  executes: () => yarn('tgui:prettier'),
-});
-
-export const TguiSonarTarget = new Juke.Target({
-  dependsOn: [YarnTarget],
-  executes: () => yarn('tgui:sonar'),
-});
-
-export const TguiTscTarget = new Juke.Target({
-  dependsOn: [YarnTarget],
-  executes: () => yarn('tgui:tsc'),
-});
-
-export const TguiTestTarget = new Juke.Target({
-  parameters: [CiParameter],
-  dependsOn: [YarnTarget],
-  executes: ({ get }) => yarn(`tgui:test-${get(CiParameter) ? 'ci' : 'simple'}`),
-});
-
-export const TguiLintTarget = new Juke.Target({
-  dependsOn: [YarnTarget, TguiPrettierTarget, TguiEslintTarget, TguiTscTarget],
-});
-
-export const TguiDevTarget = new Juke.Target({
-  dependsOn: [YarnTarget],
-  executes: ({ args }) => yarn('tgui:dev', ...args),
-});
-
-export const TguiAnalyzeTarget = new Juke.Target({
-  dependsOn: [YarnTarget],
-  executes: () => yarn('tgui:analyze'),
-});
-
-export const TguiBenchTarget = new Juke.Target({
-  dependsOn: [YarnTarget],
-  executes: () => yarn('tgui:bench'),
-});
-
-export const TestTarget = new Juke.Target({
-  dependsOn: [DmTestTarget, TguiTestTarget],
-});
-
-export const LintTarget = new Juke.Target({
-  dependsOn: [TguiLintTarget],
-});
-
-export const BuildTarget = new Juke.Target({
-  dependsOn: [TguiTarget, DmTarget],
-});
-
-export const ServerTarget = new Juke.Target({
-  parameters: [DmVersionParameter, PortParameter],
-  dependsOn: [BuildTarget],
+const DmTarget = Juke.createTarget({
+  name: 'dm',
+  inputs: [
+    '_maps/map_files/generic/**',
+    '_maps/map_files/Pahrump-Sunset/**',
+    'code/**',
+    'modular_citadel/**',
+    'modular_coyote/**',
+    'modular_sunset/**',
+    'goon/**',
+    'html/**',
+    'icons/**',
+    'interface/**',
+    `${DME_NAME}.dme`,
+  ],
+  outputs: [
+    `${DME_NAME}.dmb`,
+    `${DME_NAME}.rsc`,
+  ],
+  parameters: [DefineParameter],
   executes: async ({ get }) => {
-    const port = get(PortParameter) || '1337';
-    const options = {
-      dmbFile: `${DME_NAME}.dmb`,
-      namedDmVersion: get(DmVersionParameter),
+    const defines = get(DefineParameter);
+    if (defines.length > 0) {
+      Juke.logger.info('Using defines:', defines.join(', '));
     }
-    await DreamDaemon(options, port, '-trusted');
+    await dm(`${DME_NAME}.dme`, {
+      defines: ['CBT', ...defines],
+    });
   },
 });
 
-export const AllTarget = new Juke.Target({
-  dependsOn: [TestTarget, LintTarget, BuildTarget],
-});
-
-export const TguiCleanTarget = new Juke.Target({
-  executes: async () => {
-    Juke.rm('tgui/public/.tmp', { recursive: true });
-    Juke.rm('tgui/public/*.map');
-    Juke.rm('tgui/public/*.{chunk,bundle,hot-update}.*');
-    Juke.rm('tgui/packages/tgfont/dist', { recursive: true });
-    Juke.rm('tgui/.yarn/{cache,unplugged,webpack}', { recursive: true });
-    Juke.rm('tgui/.yarn/build-state.yml');
-    Juke.rm('tgui/.yarn/install-state.gz');
-    Juke.rm('tgui/.yarn/install-target');
-    Juke.rm('tgui/.pnp.*');
-  },
-});
-
-export const CleanTarget = new Juke.Target({
-  dependsOn: [TguiCleanTarget],
-  executes: async () => {
-    Juke.rm('*.{dmb,rsc}');
-    Juke.rm('*.mdme*');
-    Juke.rm('*.m.*');
-    Juke.rm('_maps/templates.dm');
-  },
-});
-
-/**
- * Removes more junk at the expense of much slower initial builds.
- */
-export const CleanAllTarget = new Juke.Target({
-  dependsOn: [CleanTarget],
-  executes: async () => {
-    Juke.logger.info('Cleaning up data/logs');
-    Juke.rm('data/logs', { recursive: true });
-    Juke.logger.info('Cleaning up global yarn cache');
-    await yarn('cache', 'clean', '--all');
-  },
+const DefaultTarget = Juke.createTarget({
+  name: 'default',
+  dependsOn: [TguiTarget, TgFontTarget, DmTarget],
 });
 
 /**
@@ -341,8 +138,9 @@ const prependDefines = (...defines) => {
   fs.writeFileSync(`${DME_NAME}.dme`, `${textToWrite}\n${dmeContents}`);
 };
 
-export const TgsTarget = new Juke.Target({
-  dependsOn: [TguiTarget],
+const TgsTarget = Juke.createTarget({
+  name: 'tgs',
+  dependsOn: [TguiTarget, TgFontTarget],
   executes: async () => {
     Juke.logger.info('Prepending TGS define');
     prependDefines('TGS');
@@ -351,4 +149,10 @@ export const TgsTarget = new Juke.Target({
 
 const TGS_MODE = process.env.CBT_BUILD_MODE === 'TGS';
 
-export default TGS_MODE ? TgsTarget : BuildTarget;
+Juke
+  .setup({
+    default: TGS_MODE ? TgsTarget : DefaultTarget,
+  })
+  .then((code) => {
+    process.exit(code);
+  });
