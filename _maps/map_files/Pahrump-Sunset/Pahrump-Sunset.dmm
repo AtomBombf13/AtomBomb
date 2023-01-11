@@ -29252,6 +29252,7 @@
 	},
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1;
+	
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -30121,7 +30122,7 @@
 "gLF" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outerborder";
-	tag = 
+	
 	},
 /area/f13/wasteland)
 "gLN" = (
@@ -37630,6 +37631,7 @@
 "kso" = (
 /obj/effect/turf_decal/gravel_edge{
 	dir = 4;
+	
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -47548,6 +47550,7 @@
 "oWi" = (
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1;
+	
 	},
 /obj/structure/cross{
 	layer = 3.2
@@ -60593,6 +60596,7 @@
 "vkd" = (
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1;
+	
 	},
 /obj/structure/cross{
 	layer = 3.2
