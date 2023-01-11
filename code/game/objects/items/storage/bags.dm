@@ -120,7 +120,7 @@
 	AddComponent(/datum/component/rad_insulation, 0.01) //please datum mats no more cancer
 	var/datum/component/storage/concrete/stack/STR = GetComponent(/datum/component/storage/concrete/stack)
 	STR.allow_quick_empty = TRUE
-	STR.can_hold = typecacheof(list(/obj/item/stack/ore))
+	STR.can_hold = typecacheof(list(/obj/item/stack/ore, /obj/item/stack/sheet/mineral/limestone))
 	STR.max_w_class = WEIGHT_CLASS_HUGE
 	STR.max_combined_stack_amount = 50
 

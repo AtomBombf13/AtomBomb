@@ -64,6 +64,13 @@
 			</span>")
 		adjust_fuel_timer(PAPER_BURN_TIMER)
 		qdel(T)
+	else if(istype(T, /obj/item/stack/sheet/coke)) // added for coke to work as fuel
+		var/obj/item/stack/sheet/coke/C = T
+		if(C.use(1))
+			user.visible_message("<span class='notice'>[user] throws [T] into \
+				[src].</span>", "<span class='notice'>You throw [T] into [src].\
+			</span>")
+			adjust_fuel_timer(LOG_BURN_TIMER)
 	else if(try_light(T,user))
 		return
 	else

@@ -54,12 +54,14 @@
 	icon = 'icons/fallout/turfs/walls/tents.dmi'
 	icon_state = "leather_corner"
 	opacity = TRUE
+	plane = ABOVE_WALL_PLANE // so you can add some decals on it
 
 /obj/structure/barricade/tentleatheredge
 	name = "brahmin skin tent"
 	icon = 'icons/fallout/turfs/walls/tents.dmi'
 	icon_state = "leather_edge"
 	opacity = TRUE
+	plane = ABOVE_WALL_PLANE
 
 /obj/structure/barricade/tentclothcorner
 	name = "cotton tent"
@@ -67,6 +69,7 @@
 	icon_state = "cloth_corner"
 	max_integrity = 80
 	opacity = TRUE
+	plane = ABOVE_WALL_PLANE
 
 /obj/structure/barricade/tentclothedge
 	name = "cotton tent"
@@ -74,6 +77,7 @@
 	icon_state = "cloth_edge"
 	max_integrity = 80
 	opacity = TRUE
+	plane = ABOVE_WALL_PLANE
 /*
 /obj/structure/barricade/wooden
 	name = "wooden barricade" 

@@ -240,7 +240,7 @@
 // ------------------------ STRAIGHT RAZOR ------------------------------- // Pebbles straight razor. It borrows the razor code, edits some timers, adds sounds and slaps it on a melee weapon.
 /obj/item/melee/onehanded/straight_razor
 	name = "straight razor"
-	desc = "For those smooth close shaves. Better aim for the mouth or the head, or else things might get messy."
+	desc = "For those smooth close shaves. Better aim for the mouth or the head, or else things might get messy. Could be used as a scalpel in a pinch."
 	icon = 'modular_atom/fashion/icons/cosmetics.dmi'
 	righthand_file = 'modular_atom/fashion/icons/onmobright.dmi'
 	lefthand_file = 'modular_atom/fashion/icons/onmobleft.dmi'
@@ -252,6 +252,8 @@
 	sharpness = SHARP_EDGED
 	total_mass = TOTAL_MASS_TINY_ITEM
 	w_class = WEIGHT_CLASS_TINY
+	tool_behaviour = TOOL_SCALPEL //ghetto surgery yay
+	toolspeed = 1.2
 
 /obj/item/melee/onehanded/straight_razor/proc/manual_shave(mob/living/carbon/human/H, location = BODY_ZONE_PRECISE_MOUTH)
 	if(location == BODY_ZONE_PRECISE_MOUTH)

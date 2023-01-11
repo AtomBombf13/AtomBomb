@@ -114,7 +114,7 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/gravel1.ogg',
 		'sound/effects/footstep/gravel2.ogg',
 		'sound/effects/footstep/gravel3.ogg',
-		'sound/effects/footstep/gravel4.ogg'), 35, 1),
+		'sound/effects/footstep/gravel4.ogg'), 40, 1),
 	FOOTSTEP_LOOSE_SAND = list(list(
 		'sound/effects/footstep/sand1.ogg',
 		'sound/effects/footstep/sand2.ogg',
@@ -260,7 +260,7 @@ GLOBAL_LIST_INIT(clawfootstep, list(
 		'sound/effects/footstep/gravel1.ogg',
 		'sound/effects/footstep/gravel2.ogg',
 		'sound/effects/footstep/gravel3.ogg',
-		'sound/effects/footstep/gravel4.ogg'), 35, 1),
+		'sound/effects/footstep/gravel4.ogg'), 40, 1),
 	FOOTSTEP_LOOSE_SAND = list(list(
 		'sound/effects/footstep/sand1.ogg',
 		'sound/effects/footstep/sand2.ogg',
@@ -307,7 +307,7 @@ GLOBAL_LIST_INIT(heavyfootstep, list(
 		'sound/effects/footstep/gravel1.ogg',
 		'sound/effects/footstep/gravel2.ogg',
 		'sound/effects/footstep/gravel3.ogg',
-		'sound/effects/footstep/gravel4.ogg'), 35, 1),
+		'sound/effects/footstep/gravel4.ogg'), 40, 1),
 	FOOTSTEP_LOOSE_SAND = list(list(
 		'sound/effects/footstep/sand1.ogg',
 		'sound/effects/footstep/sand2.ogg',

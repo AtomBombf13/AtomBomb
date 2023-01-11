@@ -43,6 +43,14 @@
 		if(W.use(1))
 			user.visible_message("[user] has added fuel to [src].", span_notice("You have added fuel to [src]."))
 			fuel += 300
+	else if(istype(P, /obj/item/stack/sheet/coke)) // added for coke to work as fuel
+		var/obj/item/stack/sheet/coke/C = P
+		if(fuel > 3000)
+			to_chat(user, "You can't add more fuel - wait untill some of it burns away!")
+			return
+		if(C.use(1))
+			user.visible_message("[user] has added fuel to [src].", span_notice("You have added fuel to [src]."))
+			fuel += 300
 	else if(fired && istype(P, /obj/item/reagent_containers/food/snacks))
 		if(!ishuman(user))
 			return
