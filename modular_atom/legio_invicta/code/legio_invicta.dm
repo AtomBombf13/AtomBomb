@@ -939,6 +939,7 @@
 	req_access_txt = "264" // ACCESS_LEGION4
 
 
+
 // -------------- STATUE OF MARS ----------------- 
 // more fitting mars statue for the Legion players
 /obj/structure/statue/mars
@@ -999,6 +1000,23 @@
 	icon_state = "handrail_legion_end"
 	density = FALSE
 
+/obj/structure/railing/handrail/legion/entrance
+	icon_state = "handrail_legion_entrance"
+	layer = BELOW_MOB_LAYER  // comment for underlayer effect
+
+/obj/structure/railing/handrail/legion/entrance/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	user.visible_message("[user] begins moving the chain of the [src].")
+	if(!do_after(user, 20, TRUE, src))
+		return
+	else	
+		playsound(get_turf(src), 'modular_atom/sound/doorchainsoft_open.ogg', 60, TRUE)
+		if(density)
+			icon_state = "handrail_legion_entrance_open"
+			src.density = 0
+		else
+			icon_state = "handrail_legion_entrance_close"
+			src.density = 1
+	return ..()
 
 
 //////////////////////////////////////////
@@ -1216,7 +1234,7 @@ added to end of campfire/attackby
 	name = "wood edge"
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	icon_state = "darkwood_fancyedge"
-	layer = (FLOOR_PLANE+1)
+	layer = WALL_PLANE
 
 
 // Matrix for slaves/prison
@@ -1237,6 +1255,18 @@ added to end of campfire/attackby
 /obj/effect/turf_decal/shadow
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
 	icon_state = "shadow"
+
+// Floorshading testing
+/obj/effect/turf_decal/shadow/floor
+	icon_state = "shadow_floor"
+	plane = GAME_PLANE
+
+// Wallshading testing
+/obj/effect/shadow_wall
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	icon_state = "shadow_wall"
+	plane = GAME_PLANE
+	pixel_y = 32
 
 // stairs platform to make it prettier
 /turf/open/floor/f13/stairs_platform
@@ -1295,7 +1325,7 @@ added to end of campfire/attackby
 
 /turf/open/indestructible/ground/inside/dirt/stamped/outside/sand // ugly solution but whatever. To have undiggable sand for flooring in a pavillon
 	name = "packed sand"
-	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon = 'modular_atom/icons/tileset_sonora.dmi'
 	icon_state = "desertsmooth"
 
 /obj/structure/flora/tree/wasteland/dark
@@ -1319,7 +1349,7 @@ added to end of campfire/attackby
 /turf/open/indestructible/ground/outside/gravel
 	name = "gravel"
 	icon_state = "gravel"
-	icon = 'modular_atom/icons/turf_gravel.dmi'
+	icon = 'modular_atom/icons/tileset_gravel.dmi'
 
 /turf/open/indestructible/ground/outside/gravel/edge
 	icon_state = "graveledge"
@@ -1340,12 +1370,17 @@ added to end of campfire/attackby
 // -------------- SONORA TILESET STUFF ----------------- 
 
 /obj/effect/overlay/desert/sonora/edge
-	name = "desert edge"
-	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon = 'modular_atom/icons/tileset_sonora.dmi'
 	icon_state = "desertedge"
 
+/obj/effect/overlay/desert/sonora/edge/corner
+	icon_state = "desertcorner"
+
+/obj/effect/overlay/desert/sonora/edge/fade
+	icon_state = "desertfade"
+
 /turf/open/indestructible/ground/outside/desert/sonora
-	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
+	icon = 'modular_atom/icons/tileset_sonora.dmi'
 	icon_state = "desertsmooth"
 	slowdown = 0.3
 	list/loots = list(
@@ -1370,16 +1405,6 @@ added to end of campfire/attackby
 /turf/open/indestructible/ground/outside/desert/sonora/rough
 	icon_state = "desertcracked1"
 	slowdown = 0.6
-
-// Two edge smootheners for the new desert turf
-/obj/effect/overlay/desert/sonora/edge
-	name = "desert edge"
-	icon = 'modular_atom/icons/turf_desert_sonora.dmi'
-	icon_state = "desertedge"
-
-/obj/effect/overlay/desert/sonora/edge/corner
-	icon_state = "desertcorner"
-
 
 
 /turf/open/floor/f13/wood/outside // outside platform with sunlight

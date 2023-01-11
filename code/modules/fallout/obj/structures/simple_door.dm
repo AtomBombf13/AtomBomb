@@ -303,6 +303,7 @@
 	can_hold_padlock = FALSE
 	open_sound = 'sound/effects/rustle3.ogg'
 	close_sound = 'sound/effects/rustle3.ogg'
+	plane = ABOVE_WALL_PLANE
 
 /obj/structure/simple_door/tentflap_cloth
 	name = "cotton tent entrance"
@@ -313,6 +314,7 @@
 	can_hold_padlock = FALSE
 	open_sound = 'sound/effects/rustle3.ogg'
 	close_sound = 'sound/effects/rustle3.ogg'
+	plane = ABOVE_WALL_PLANE
 
 // Old square style tent door
 /obj/structure/simple_door/tent

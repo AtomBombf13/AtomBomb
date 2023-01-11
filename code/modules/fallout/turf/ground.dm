@@ -515,7 +515,7 @@
 /turf/open/indestructible/ground/outside/gravel
 	name = "gravel"
 	icon_state = "gravel"
-	icon = 'modular_atom/icons/turf_gravel.dmi'
+	icon = 'modular_atom/icons/tileset_gravel.dmi'
 	footstep = FOOTSTEP_GRAVEL
 	barefootstep = FOOTSTEP_GRAVEL
 	clawfootstep = FOOTSTEP_GRAVEL
