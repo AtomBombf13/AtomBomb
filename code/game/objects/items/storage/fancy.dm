@@ -70,7 +70,7 @@
 	name = "donut box"
 	spawn_type = /obj/item/reagent_containers/food/snacks/donut
 	fancy_open = TRUE
-	custom_price = PRICE_NORMAL
+	custom_price = PRICE_PRETTY_CHEAP
 
 /obj/item/storage/fancy/donut_box/ComponentInitialize()
 	. = ..()
@@ -137,7 +137,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	icon_type = "cigarette"
 	spawn_type = /obj/item/clothing/mask/cigarette/space_cigarette
-	custom_price = PRICE_ALMOST_CHEAP
+	custom_price = PRICE_REALLY_CHEAP
 	var/spawn_coupon = TRUE
 
 /obj/item/storage/fancy/cigarettes/attack_self(mob/user)

@@ -55,7 +55,7 @@
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/medical
 	default_price = PRICE_ALMOST_CHEAP
-	extra_price = PRICE_ABOVE_NORMAL
+	extra_price = PRICE_BELOW_NORMAL
 	payment_department = ACCOUNT_MED
 	cost_multiplier_per_dept = list(ACCOUNT_MED = 0)
 

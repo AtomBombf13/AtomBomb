@@ -65,7 +65,7 @@ const VendingRow = (props, context) => {
         {custom && (
           <Button
             fluid
-            content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' caps'}
+            content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' USD'}
             onClick={() => act('dispense', {
               'item': product.name,
             })} />
@@ -79,7 +79,7 @@ const VendingRow = (props, context) => {
                 || product.price > data.user.cash
               )
             )}
-            content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' caps'}
+            content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' USD'}
             onClick={() => act('vend', {
               'ref': product.ref,
             })} />
@@ -130,7 +130,7 @@ export const Vending = (props, context) => {
         {!data.forceFree && (
           <section title="Welcome User!">
             <box>
-              Caps inserted: {insertedCaps} <Button
+              USD inserted: {insertedCaps} <Button
                 fluid={false}
                 content={"Eject"}
                 onClick={() => act('ejectCaps')} />

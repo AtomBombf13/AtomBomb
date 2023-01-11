@@ -5,31 +5,34 @@
 #define CASH_AUR 100 /* 100 caps to 1 AUR */
 #define CASH_DEN 4 /* 4 caps to 1 DEN */
 #define CASH_NCR 0.4 /* $100 to 40 caps */
+#define CASH_USD 0.004 /* $10,000 to 40 caps */
 
 /* value of coins to spawn, use as-is for caps */
 /* LOW_MIN / AUR = amount in AUR */
 
-// A low value cash spawn is on average worth 25
-#define LOW_MIN 7
-#define LOW_MAX 19
+//Value for USD trashloot
+#define LOWUSD_MAX 10
 
-// A medium value cash spawn is on average worth 60ish
-#define MED_MIN 20
-#define MED_MAX 35
+//Value cash spawn for mobs
+#define LOWMOB_MIN 2
+#define LOWMOB_MAX 13
+#define MEDMOB_MIN 20
+#define MEDMOB_MAX 47
+#define HIGHMOB_MIN 56
+#define HIGHMOB_MAX 78
+
+// A low value cash spawn is on average worth 50
+#define LOW_MIN 26
+#define LOW_MAX 35
+
+// A medium value cash spawn is on average worth 150
+#define MED_MIN 79
+#define MED_MAX 103
 
 
-// A high value cash spawn is on average worth 280
-#define HIGH_MIN 36
-#define HIGH_MAX 45
-
-
-// Bad Pebbles fix to NCR money fudgery
-#define TEMP3_MIN 0
-#define TEMP3_MAX 0
-#define TEMP_MIN 0
-#define TEMP_MAX 0
-#define TEMP2_MIN 0
-#define TEMP2_MAX 0
+// A high value cash spawn is on average worth 300
+#define HIGH_MIN 186
+#define HIGH_MAX 213
 
 // The Bankers Vault-Stash, done like this make it so it only spawns on his person to stop metarushing. Average 8500.
 #define BANKER_MIN 2000
@@ -150,6 +153,21 @@
 		if(501 to 15000)
 			icon_state = "[initial(icon_state)]6"
 
+/obj/item/stack/f13Cash/random/lowmob
+	spawn_nothing_chance = 75
+	min_qty =  LOWMOB_MIN / CASH_CAP
+	max_qty = LOWMOB_MAX / CASH_CAP
+
+/obj/item/stack/f13Cash/random/medmob
+	spawn_nothing_chance = 75
+	min_qty =  MEDMOB_MIN / CASH_CAP
+	max_qty = MEDMOB_MAX / CASH_CAP
+
+/obj/item/stack/f13Cash/random/highmob
+	spawn_nothing_chance = 75
+	min_qty =  HIGHMOB_MIN / CASH_CAP
+	max_qty = HIGHMOB_MAX / CASH_CAP
+
 /obj/item/stack/f13Cash/random/low
 	min_qty = LOW_MIN / CASH_CAP
 	max_qty = LOW_MAX / CASH_CAP
@@ -227,16 +245,16 @@
 	money_type = /obj/item/stack/f13Cash/aureus
 
 /obj/item/stack/f13Cash/random/aureus/low
-	min_qty = 0
-	max_qty = 0
+	min_qty = 1
+	max_qty = 1
 
 /obj/item/stack/f13Cash/random/aureus/med
-	min_qty = 0
-	max_qty = 0
+	min_qty = 2
+	max_qty = 2
 
 /obj/item/stack/f13Cash/random/aureus/high
-	min_qty = 0
-	max_qty = 0 //uses flat values because aurei are worth so much
+	min_qty = 1
+	max_qty = 3 //uses flat values because aurei are worth so much
 
 /obj/item/stack/f13Cash/ncr
 	name = "NCR Dollar"
@@ -262,23 +280,23 @@
 			icon_state = "[initial(icon_state)]100"
 		if(200 to 499)
 			icon_state = "[initial(icon_state)]200"
-		if(500 to 15000)
+		if(500 to INFINITY)
 			icon_state = "[initial(icon_state)]500"
 
 /obj/item/stack/f13Cash/random/ncr
 	money_type = /obj/item/stack/f13Cash/ncr
 
 /obj/item/stack/f13Cash/random/ncr/low
-	min_qty = TEMP3_MIN / CASH_NCR
-	max_qty = TEMP3_MAX / CASH_NCR
+	min_qty = LOW_MIN / CASH_NCR
+	max_qty = LOW_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/med
-	min_qty = TEMP_MIN / CASH_NCR
-	max_qty = TEMP_MAX / CASH_NCR
+	min_qty = MED_MIN / CASH_NCR
+	max_qty = MED_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/high
-	min_qty = TEMP2_MIN / CASH_NCR
-	max_qty = TEMP2_MAX / CASH_NCR
+	min_qty = HIGH_MIN / CASH_NCR
+	max_qty = HIGH_MAX / CASH_NCR
 
 /obj/item/stack/f13Cash/random/ncr/ncrpay_basic
 	min_qty = LOW_MIN / CASH_NCR
@@ -292,23 +310,72 @@
 	min_qty = HIGH_MIN / CASH_NCR
 	max_qty = HIGH_MAX / CASH_NCR
 
+/obj/item/stack/f13Cash/usd //Don't use base space cash stacks. Any other space cash stack can merge with them, and could cause potential money duping exploits.
+	name = "pre-war cash"
+	singular_name = "bill"
+	icon = 'icons/obj/economy.dmi'
+	icon_state = "spacecash"
+	value = CASH_USD * CASH_CAP
+	flippable = FALSE
+	merge_type = /obj/item/stack/f13Cash/usd
+
+/obj/item/stack/f13Cash/usd/update_icon()
+	switch(amount)
+		if(1  to 9)
+			icon_state = "[initial(icon_state)]"
+		if(10 to 19)
+			icon_state = "[initial(icon_state)]10"
+		if(20 to 49)
+			icon_state = "[initial(icon_state)]20"
+		if(50 to 99)
+			icon_state = "[initial(icon_state)]50"
+		if(100 to 199)
+			icon_state = "[initial(icon_state)]100"
+		if(200 to 499)
+			icon_state = "[initial(icon_state)]200"
+		if(500 to 999)
+			icon_state = "[initial(icon_state)]500"
+		if(1000 to INFINITY)
+			icon_state = "[initial(icon_state)]1000"
+
+/obj/item/stack/f13Cash/random/usd
+	money_type = /obj/item/stack/f13Cash/usd
+
+/obj/item/stack/f13Cash/random/usd/low
+	min_qty = LOW_MIN / CASH_USD
+	max_qty = LOW_MAX / CASH_USD
+
+/obj/item/stack/f13Cash/random/usd/med
+	min_qty = MED_MIN / CASH_USD
+	max_qty = MED_MAX / CASH_USD
+
+/obj/item/stack/f13Cash/random/usd/high
+	min_qty = HIGH_MIN / CASH_USD
+	max_qty = HIGH_MAX / CASH_USD
+
+/obj/item/stack/f13Cash/random/usd/lowusd
+	spawn_nothing_chance = 75
+	min_qty = LOWUSD_MAX / CASH_USD
+	max_qty = LOWUSD_MAX / CASH_USD
 
 #undef maxCoinIcon
 #undef CASH_CAP
 #undef CASH_AUR
 #undef CASH_DEN
 #undef CASH_NCR
+#undef CASH_USD
+#undef LOWUSD_MAX
 #undef LOW_MIN
 #undef LOW_MAX
 #undef MED_MIN
 #undef MED_MAX
 #undef HIGH_MIN
 #undef HIGH_MAX
+#undef LOWMOB_MIN
+#undef LOWMOB_MAX
+#undef MEDMOB_MIN
+#undef MEDMOB_MAX
+#undef HIGHMOB_MIN
+#undef HIGHMOB_MAX
 #undef BANKER_MIN
 #undef BANKER_MAX
-#undef TEMP3_MIN
-#undef TEMP3_MAX
-#undef TEMP_MIN
-#undef TEMP_MAX
-#undef TEMP2_MIN
-#undef TEMP2_MAX
