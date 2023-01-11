@@ -1009,11 +1009,10 @@ Access
 	head = /obj/item/clothing/head/f13/servant
 	shoes = /obj/item/clothing/shoes/sandal
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder = 4,
+		/obj/item/reagent_containers/pill/patch/healingpowder = 3,
 		/obj/item/smelling_salts = 1,
 		/obj/item/book/granter/trait/lowsurgery = 1,
 		/obj/item/reagent_containers/food/condiment/flour = 2,
-		/obj/item/storage/box/bowls = 1,
 		/obj/item/reagent_containers/pill/consumable/hydra = 1,
 		/obj/item/soap/homemade = 1,
 		/obj/item/melee/onehanded/straight_razor = 1
@@ -1030,7 +1029,16 @@ Access
 		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/broom = 1,
-		/obj/item/shovel/spade = 1
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
 		)
 
 /datum/outfit/loadout/treasurer
@@ -1045,7 +1053,6 @@ Access
 		/obj/item/pen/fountain = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
 		/obj/item/blacksmith/ingot/gold = 1,
-		/obj/item/taperecorder = 1
 		)
 
 /datum/outfit/loadout/blacksmith
@@ -1068,12 +1075,12 @@ Access
 	shoes = /obj/item/clothing/shoes/f13/military/legion
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/legauxiliaf = 1,
-		/obj/item/smelling_salts = 1,
+		/obj/item/defibrillator/primitive = 1,
 		/obj/item/clothing/neck/apron/medicus_legion = 1,
 		/obj/item/clothing/gloves/f13/crudemedical = 1,
-		/obj/item/storage/belt/medical/primitive = 1,
+		/obj/item/storage/belt/medical/surgical/primitive = 1,
 		/obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 3
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 /datum/outfit/job/CaesarsLegion/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1170,7 +1177,7 @@ Access
 	flag = F13IMMUNE
 	total_positions = 4
 	spawn_positions = 4
-	description = "A Legionnaire immune from labor services for the week, granted time of recovery for their victories or injuries, or otherwise deligated to medial tasks maintaining the Legion's encampment."
+	description = "A Legionary granted time of recovery for their victories or injuries, is not expected to do any real work."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
@@ -1182,16 +1189,17 @@ Access
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
 	name = "Legion Off-Duty"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13immune
-	id = /obj/item/card/id/dogtag/legimmune
+	id = /obj/item/card/id/dogtag/legion/offduty
 	mask = /obj/item/clothing/mask/bandana/legion/dark
 	uniform = /obj/item/clothing/under/f13/legskirt
-	glasses = /obj/item/clothing/glasses/sunglasses
+	belt = null
+	gloves = null
+	glasses = null
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	l_pocket = /obj/item/flashlight/lantern
-	suit_store = /obj/item/melee/onehanded/machete/forgedmachete
+	suit_store = /obj/item/melee/onehanded/machete
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/reagent_containers/pill/patch/healingpowder = 2
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1295,6 +1303,11 @@ Access
 /datum/job/ncr/f13legioncitizen
 	title = "Legion Citizen"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
+	
+	loadout_options = list(
+	/datum/outfit/loadout/legionmerchant,
+	/datum/outfit/loadout/legionfarmer
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
 	name = "Legion Citizen (Role)"
@@ -1309,3 +1322,32 @@ Access
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1
 		)
+
+/datum/outfit/loadout/legionmerchant
+	name = "Legion Merchant"
+	suit =	/obj/item/clothing/suit/armor/light/duster/brahmin
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/explorer
+
+/datum/outfit/loadout/legionfarmer
+	name = "Legion Crops Trader"
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	suit = /obj/item/clothing/suit/armor/light/duster/brahmin 
+	gloves = /obj/item/clothing/gloves/botanic_leather
+	backpack_contents = list(
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)

@@ -170,6 +170,13 @@
 	icon_state = "t45dhelmet[light_on]"
 	item_state = "t45dhelmet[light_on]"
 
+/obj/item/clothing/head/helmet/f13/power_armor/t45d/sierra
+	name = "sierra power helmet"
+	desc = "A pre-war power armor helmet, issued to special NCR officers."
+	icon_state = "sierra"
+	item_state = "sierra"
+	actions_types = list()
+
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."

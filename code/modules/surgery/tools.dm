@@ -17,11 +17,11 @@
 	return ..()
 
 /obj/item/retractor/tribal
-	name = "skin-puller"
-	desc = "You don't want to be at the recieving end of this."
+	name = "primitive retractor (skin-puller)"
+	desc = "Pries the flesh and bones open."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "retractor_tribe"
-	toolspeed = 2
+	toolspeed = 1.5
 
 /obj/item/retractor/advanced
 	name = "mechanical pinches"
@@ -75,11 +75,11 @@
 	return ..()
 
 /obj/item/hemostat/tribal
-	name = "flesh-poker"
-	desc = "The shaman knows what he's doing... Right?"
+	name = "primitive hemostat (flesh-poker)"
+	desc = "A pinching device made from bone to clamp bleedings with"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "hemostat_tribe"
-	toolspeed = 2
+	toolspeed = 1.5
 
 /obj/item/hemostat/augment
 	name = "hemostat"
