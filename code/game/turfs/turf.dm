@@ -103,7 +103,7 @@
 				smooth_sunlight_border()
 
 	if(requires_activation)
-		ImmediateCalculateAdjacentTurfs()
+		CALCULATE_ADJACENT_TURFS(src)
 
 	if (light_power && light_range)
 		update_light()
@@ -135,7 +135,7 @@
 
 
 /turf/proc/Initialize_Atmos(times_fired)
-	ImmediateCalculateAdjacentTurfs()
+	CALCULATE_ADJACENT_TURFS(src)
 
 /turf/Destroy(force)
 	. = QDEL_HINT_IWILLGC
