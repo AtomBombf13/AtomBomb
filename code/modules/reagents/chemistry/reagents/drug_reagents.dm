@@ -301,6 +301,7 @@
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
 	can_synth = FALSE
+	hidden_from_codex = TRUE
 
 /datum/reagent/drug/bath_salts
 	name = "Bath Salts"

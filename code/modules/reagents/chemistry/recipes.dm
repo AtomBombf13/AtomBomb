@@ -37,6 +37,8 @@
 	var/FermiExplode 			= FALSE 	// If the chemical explodes in a special way
 	var/clear_conversion						//bitflags for clear conversions; REACTION_CLEAR_IMPURE or REACTION_CLEAR_INVERSE
 	var/PurityMin 				= 0.15 		//If purity is below 0.15, it explodes too. Set to 0 to disable this.
+	//Codex
+	var/hidden_from_codex = FALSE
 
 
 /datum/chemical_reaction/proc/on_reaction(datum/reagents/holder, multiplier, specialreact)

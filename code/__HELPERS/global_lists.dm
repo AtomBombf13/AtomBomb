@@ -82,6 +82,8 @@
 
 	init_subtypes(/datum/crafting_recipe, GLOB.crafting_recipes)
 
+	init_subtypes(/datum/smithing, GLOB.anvil_recipes)
+
 	INVOKE_ASYNC(GLOBAL_PROC, .proc/init_ref_coin_values) //so the current procedure doesn't sleep because of UNTIL()
 
 //creates every subtype of prototype (excluding prototype) and adds it to list L.

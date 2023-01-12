@@ -48,6 +48,7 @@
 	subcategory = CAT_PIE
 
 /datum/crafting_recipe/food/pbj_sandwich/alt
+	name = "PB&J sandwich with toast"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/jelliedtoast/cherry = 1,
 		/obj/item/reagent_containers/food/snacks/peanut_buttertoast = 1,

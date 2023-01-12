@@ -2463,6 +2463,7 @@
 	chemical_flags = REAGENT_INVISIBLE
 	value = REAGENT_VALUE_GLORIOUS
 	ghoulfriendly = TRUE
+	hidden_from_codex = TRUE
 
 /datum/reagent/changeling_string/on_mob_metabolize(mob/living/carbon/C)
 	if(ishuman(C) && C.dna && LAZYACCESS(data, "desired_dna"))

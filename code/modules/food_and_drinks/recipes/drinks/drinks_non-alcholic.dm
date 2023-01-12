@@ -30,31 +30,31 @@
 	required_reagents = list(/datum/reagent/consumable/buzz_fuzz= 3, /datum/reagent/consumable/tea = 3)
 
 /datum/chemical_reaction/foresttea2
-	name = "Forest Tea"
+	name = "Forest Tea from Honey"
 	id = /datum/reagent/consumable/tea/forest
 	results = list(/datum/reagent/consumable/tea/forest = 3)
 	required_reagents = list(/datum/reagent/consumable/honey = 1, /datum/reagent/consumable/tea = 3)
 
 /datum/chemical_reaction/redtea1
-	name = "Red Tea"
+	name = "Red Tea from Crayons"
 	id = /datum/reagent/consumable/tea/red
 	results = list(/datum/reagent/consumable/tea/red = 3)
 	required_reagents = list(/datum/reagent/colorful_reagent/crayonpowder/red = 1, /datum/reagent/consumable/tea = 3)
 
 /datum/chemical_reaction/greentea1
-	name = "Green Tea"
+	name = "Green Tea from Crayons"
 	id = /datum/reagent/consumable/tea/green
 	results = list(/datum/reagent/consumable/tea/green = 3)
 	required_reagents = list(/datum/reagent/colorful_reagent/crayonpowder/green = 1, /datum/reagent/consumable/tea = 3)
 
 /datum/chemical_reaction/redtea2
-	name = "Red Tea"
+	name = "Red Tea from Tea Leaves"
 	id = /datum/reagent/consumable/tea/red
 	results = list(/datum/reagent/consumable/tea/red = 3)
 	required_reagents = list(/datum/reagent/toxin/teapowder/red = 1, /datum/reagent/water = 3)
 
 /datum/chemical_reaction/greentea2
-	name = "Green Tea"
+	name = "Green Tea from Tea Leaves"
 	id = /datum/reagent/consumable/tea/green
 	results = list(/datum/reagent/consumable/tea/green = 3)
 	required_reagents = list(/datum/reagent/toxin/teapowder/green = 1, /datum/reagent/water = 3)
