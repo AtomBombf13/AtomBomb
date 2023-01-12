@@ -5,9 +5,14 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
+"b" = (
+/turf/open/indestructible/ground/outside/gravel/path_desert/end{
+	dir = 1
+	},
+/area/f13/wasteland)
 "e" = (
 /obj/item/shovel,
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "f" = (
 /obj/structure/table/wood,
@@ -25,7 +30,7 @@
 /area/survivalpod)
 "j" = (
 /obj/item/reagent_containers/glass/bucket,
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/gravel/path_desert,
 /area/f13/wasteland)
 "l" = (
 /obj/structure/table/wood,
@@ -34,13 +39,20 @@
 /turf/open/floor/f13/wood,
 /area/survivalpod)
 "m" = (
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/gravel/path_desert{
+	dir = 4
+	},
 /area/f13/wasteland)
 "n" = (
 /obj/structure/fence/wooden{
 	pixel_y = 2
 	},
 /turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"o" = (
+/turf/open/indestructible/ground/outside/gravel/path_desert{
+	dir = 9
+	},
 /area/f13/wasteland)
 "p" = (
 /obj/structure/legion_extractor,
@@ -61,7 +73,7 @@
 /turf/open/floor/f13/wood,
 /area/survivalpod)
 "v" = (
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/gravel/path_desert,
 /area/f13/wasteland)
 "y" = (
 /turf/closed/wall/f13/tentwall,
@@ -110,15 +122,16 @@
 	},
 /area/survivalpod)
 "K" = (
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 4;
-	icon_state = "dirt"
-	},
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "M" = (
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirt"
+/turf/open/indestructible/ground/outside/gravel/path_desert/intersection{
+	dir = 8
+	},
+/area/f13/wasteland)
+"N" = (
+/turf/open/indestructible/ground/outside/gravel/path_desert{
+	dir = 6
 	},
 /area/f13/wasteland)
 "O" = (
@@ -131,12 +144,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "S" = (
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/kirbyplants/random,
 /turf/open/floor/f13/wood,
 /area/survivalpod)
 "T" = (
@@ -154,6 +162,11 @@
 /area/f13/wasteland)
 "X" = (
 /obj/machinery/smartfridge/bottlerack/seedbin,
+/obj/item/seeds/wheat,
+/obj/item/seeds/tomato,
+/obj/item/seeds/sugarcane,
+/obj/item/seeds/watermelon,
+/obj/item/seeds/ambrosia,
 /turf/open/floor/f13/wood,
 /area/survivalpod)
 "Y" = (
@@ -193,11 +206,11 @@ D
 "}
 (3,1,1) = {"
 D
-v
+b
 j
 v
 v
-v
+N
 G
 G
 G
@@ -209,7 +222,7 @@ y
 y
 y
 y
-v
+m
 G
 G
 G
@@ -221,10 +234,10 @@ f
 l
 Z
 y
-v
-v
-m
-m
+o
+N
+K
+K
 g
 "}
 (6,1,1) = {"
@@ -234,7 +247,7 @@ O
 O
 y
 y
-v
+m
 K
 K
 K
@@ -246,7 +259,7 @@ O
 O
 O
 J
-v
+M
 v
 v
 v
@@ -258,10 +271,10 @@ O
 S
 y
 y
-M
-M
-M
-M
+K
+K
+K
+K
 "}
 (9,1,1) = {"
 y
@@ -282,41 +295,41 @@ y
 y
 y
 D
-m
-m
+K
+K
 V
 D
 "}
 (11,1,1) = {"
-m
-m
-m
-m
-m
+K
+K
+K
+K
+K
 D
 V
-m
-m
+K
+K
 D
 "}
 (12,1,1) = {"
-m
-m
-m
-m
-m
+K
+K
+K
+K
+K
 D
-m
-m
+K
+K
 V
 D
 "}
 (13,1,1) = {"
-m
-m
-m
-m
-m
+K
+K
+K
+K
+K
 Q
 E
 B

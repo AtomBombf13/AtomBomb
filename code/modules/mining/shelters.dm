@@ -33,10 +33,7 @@
 /datum/map_template/shelter/alpha
 	name = "Shelter Alpha"
 	shelter_id = "shelter_alpha"
-	description = "A cozy self-contained pressurized shelter, with \
-		built-in navigation, entertainment, medical facilities and a \
-		sleeping area! Order now, and we'll throw in a TINY FAN, \
-		absolutely free!"
+	description = "A cozy tent, containing molerat wondermeat and crispy squrriel bits."
 	mappath = "_maps/templates/shelter_1.dmm"
 
 /datum/map_template/shelter/alpha/New()
@@ -47,11 +44,7 @@
 /datum/map_template/shelter/beta
 	name = "Shelter Beta"
 	shelter_id = "shelter_beta"
-	description = "An extremely luxurious shelter, containing all \
-		the amenities of home, including carpeted floors, hot and cold \
-		running water, a gourmet three course meal, cooking facilities, \
-		and a deluxe companion to keep you from getting lonely during \
-		an ash storm."
+	description = "A cozy tent, containing a workbench, lanterns and extra plants."
 	mappath = "_maps/templates/shelter_2.dmm"
 
 /datum/map_template/shelter/beta/New()
@@ -62,14 +55,87 @@
 /datum/map_template/shelter/charlie
 	name = "Shelter Charlie"
 	shelter_id = "shelter_charlie"
-	description = "A luxury elite bar which holds an entire bar \
-		along with two vending machines, tables, and a restroom that \
-		also has a sink. This isn't a survival capsule and so you can \
-		expect that this won't save you if you're bleeding out to \
-		death."
+	description = "A tent that has double bedrooms, stove, workbench, booze and a soda machine."
 	mappath = "_maps/templates/shelter_3.dmm"
 
 /datum/map_template/shelter/charlie/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/delta
+	name = "Shelter Delta"
+	shelter_id = "shelter_delta"
+	description = "A shopkeepers arrangement with base starting supplies."
+	mappath = "_maps/templates/shelter_4.dmm"
+
+/datum/map_template/shelter/delta/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/echo
+	name = "Shelter Echo"
+	shelter_id = "shelter_echo"
+	description = "A party tent for you and all of your friends."
+	mappath = "_maps/templates/shelter_5.dmm"
+
+/datum/map_template/shelter/echo/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/foxtrot
+	name = "Shelter Foxtrot"
+	shelter_id = "shelter_foxtrot"
+	description = "An extremely stocked and well provisioned mass hall kitchen."
+	mappath = "_maps/templates/shelter_6.dmm"
+
+/datum/map_template/shelter/foxtrot/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/golf
+	name = "Shelter Golf"
+	shelter_id = "shelter_golf"
+	description = "An out of the box, get started farm."
+	mappath = "_maps/templates/shelter_7.dmm"
+
+/datum/map_template/shelter/golf/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/hotel
+	name = "Shelter Hotel"
+	shelter_id = "shelter_hotel"
+	description = "A fortune tellers shack."
+	mappath = "_maps/templates/shelter_8.dmm"
+
+/datum/map_template/shelter/hotel/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/india
+	name = "Shelter India"
+	shelter_id = "shelter_india"
+	description = "A blacksmiths tent."
+	mappath = "_maps/templates/shelter_9.dmm"
+
+/datum/map_template/shelter/india/New()
+	. = ..()
+	whitelisted_turfs = typecacheof(/turf/closed/mineral)
+	banned_objects = typecacheof(/obj/structure/stone_tile)
+
+/datum/map_template/shelter/juliett
+	name = "Shelter Juliett"
+	shelter_id = "shelter_juliett"
+	description = "An ultra-deluxe, top of the line, bar non-ammenity held living area for four or more people."
+	mappath = "_maps/templates/shelter_10.dmm"
+
+/datum/map_template/shelter/juliett/New()
 	. = ..()
 	whitelisted_turfs = typecacheof(/turf/closed/mineral)
 	banned_objects = typecacheof(/obj/structure/stone_tile)

@@ -3,7 +3,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "b" = (
-/obj/item/candle/tribal_torch,
+/obj/structure/blacksmith/quenching,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 1;
 	icon_state = "dirt"
@@ -11,7 +11,11 @@
 /area/survivalpod)
 "c" = (
 /obj/structure/campfire,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plating/f13/outside/desert,
+/area/survivalpod)
+"e" = (
+/obj/structure/blacksmith/anvil/obtainable,
+/turf/open/indestructible/ground/outside/dirt,
 /area/survivalpod)
 "f" = (
 /turf/closed/wall/f13/tentwall,
@@ -32,7 +36,7 @@
 	},
 /area/survivalpod)
 "o" = (
-/obj/structure/chair/f13foldupchair,
+/obj/structure/chair/folding,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
 	icon_state = "dirtcorner"
@@ -57,10 +61,10 @@
 	},
 /area/survivalpod)
 "F" = (
-/obj/structure/chair/f13foldupchair{
+/obj/structure/chair/folding{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plating/f13/outside/desert,
 /area/survivalpod)
 "G" = (
 /turf/open/indestructible/ground/outside/dirt{
@@ -104,21 +108,28 @@
 /obj/item/stack/crafting/electronicparts/three,
 /turf/open/indestructible/ground/outside/dirt,
 /area/survivalpod)
+"Q" = (
+/obj/structure/blacksmith/furnace,
+/turf/open/indestructible/ground/outside/dirt,
+/area/survivalpod)
 "R" = (
-/obj/structure/chair/f13foldupchair{
+/obj/structure/chair/folding{
 	dir = 4;
 	icon_state = "f13foldupchair"
 	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plating/f13/outside/desert,
 /area/survivalpod)
 "S" = (
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plating/f13/outside/desert,
 /area/survivalpod)
+"V" = (
+/obj/item/candle/tribal_torch,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "W" = (
 /turf/open/floor/f13/wood,
 /area/survivalpod)
 "Y" = (
-/obj/structure/rack,
 /obj/machinery/autolathe/constructionlathe,
 /turf/open/indestructible/ground/outside/dirt,
 /area/survivalpod)
@@ -129,21 +140,21 @@ f
 f
 f
 f
-a
+V
 a
 "}
 (2,1,1) = {"
 f
-w
+Y
 N
-N
+e
 b
 S
 R
 "}
 (3,1,1) = {"
 f
-N
+Q
 N
 N
 J
@@ -152,7 +163,7 @@ c
 "}
 (4,1,1) = {"
 f
-Y
+w
 N
 N
 K
@@ -181,8 +192,8 @@ a
 f
 O
 N
-N
-b
+h
+G
 a
 a
 "}
@@ -192,7 +203,7 @@ f
 H
 f
 f
-a
+V
 a
 "}
 (9,1,1) = {"
