@@ -76,7 +76,7 @@
 	var/bayonet = FALSE	//Can this be attached to a gun?
 	wound_bonus = -5
 	bare_wound_bonus = 10
-	custom_price = PRICE_REALLY_CHEAP
+	custom_price = PRICE_NORMAL
 
 /obj/item/kitchen/knife/Initialize()
 	. = ..()
@@ -105,7 +105,7 @@
 	custom_materials = list(/datum/material/iron=6000)
 	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	w_class = WEIGHT_CLASS_NORMAL
-	custom_price = PRICE_REALLY_CHEAP
+	custom_price = PRICE_EXPENSIVE
 
 
 /obj/item/kitchen/rollingpin
@@ -119,7 +119,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/wood = MINERAL_MATERIAL_AMOUNT * 1.5)
 	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "whacked")
-	custom_price = PRICE_CHEAP_AS_FREE
+	custom_price = PRICE_ALMOST_CHEAP
 
 /obj/item/kitchen/rollingpin/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins flattening [user.p_their()] head with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
