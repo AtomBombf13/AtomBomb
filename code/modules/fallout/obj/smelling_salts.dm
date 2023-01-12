@@ -119,8 +119,9 @@
 	revived_mob.emote("gasp")
 	revived_mob.Jitter(20)
 	if(time_since_death > tlimit)
-		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, max(0, min(99, ((tlimit - time_since_death) / tlimit * 100))), 150)
+		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN(100))
 		revived_mob.adjustOxyLoss(500)
+		var/time_since_death = 9000
 	log_combat(revived_mob, revived_mob, "revived", src)
 	var/list/policies = CONFIG_GET(keyed_list/policyconfig)
 	var/memory_limit = CONFIG_GET(number/defib_cmd_time_limit)
