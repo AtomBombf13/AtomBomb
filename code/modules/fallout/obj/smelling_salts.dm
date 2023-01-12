@@ -54,7 +54,7 @@
 /obj/item/smelling_salts/proc/can_revive(mob/living/carbon/T)
 	var/obj/item/organ/brain/BR = T.getorgan(/obj/item/organ/brain)
 	var/obj/item/organ/heart = T.getorgan(/obj/item/organ/heart)
-	var/time_since_death = world.time - revived_mob.timeofdeath
+	var/time_since_death = world.time - T.timeofdeath
 	// past this much time the patient is unrecoverable
 	// (in deciseconds)
 	// brain damage starts setting in on the patient after
