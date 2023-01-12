@@ -83,12 +83,13 @@
 				C.IgniteMob()
 	..()
 
-
+/*
 /datum/chemical_reaction/blackpowder
 	name = "Black Powder"
 	id = /datum/reagent/blackpowder
 	results = list(/datum/reagent/blackpowder = 3)
 	required_reagents = list(/datum/reagent/saltpetre = 1, /datum/reagent/medicine/charcoal = 1, /datum/reagent/sulfur = 1)
+*/
 
 /datum/chemical_reaction/reagent_explosion/blackpowder_explosion
 	name = "Black Powder Kaboom"
