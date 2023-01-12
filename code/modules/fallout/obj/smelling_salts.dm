@@ -9,6 +9,12 @@
 	var/in_use = FALSE
 	var/time_to_use = 10 SECONDS // a defib is 5 seconds
 
+var/time_since_death = world.time - revived_mob.timeofdeath
+	// past this much time the patient is unrecoverable
+	// (in deciseconds)
+	// brain damage starts setting in on the patient after
+	// some time left rotting
+
 /obj/item/smelling_salts/examine(mob/user)
 	. = ..()
 	if(in_range(user, src) || isobserver(user))
@@ -60,6 +66,8 @@
 		return
 	if(!heart || (heart.organ_flags & ORGAN_FAILING))
 		return
+	if(time_since_death > 9000)
+		return
 	if(QDELETED(BR) || BR.brain_death || (BR.organ_flags & ORGAN_FAILING))
 		return
 	return TRUE
@@ -70,11 +78,6 @@
 		in_use = FALSE
 		return
 	user.visible_message(span_notice("[user] starts waving [src] under [revived_mob]'s nose."), span_warning("You wave [src] under [revived_mob]'s nose."))
-	var/time_since_death = world.time - revived_mob.timeofdeath
-	// past this much time the patient is unrecoverable
-	// (in deciseconds)
-	// brain damage starts setting in on the patient after
-	// some time left rotting
 	var/total_burn	= 0
 	var/total_brute	= 0
 	if(!do_after(user, 20, target = revived_mob)) //placed on chest and short delay to shock for dramatic effect, revive time is 5sec total
