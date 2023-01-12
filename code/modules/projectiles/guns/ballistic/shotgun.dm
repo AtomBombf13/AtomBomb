@@ -615,6 +615,37 @@
 		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
 	)
 
+//////////////////
+//UNIQUE SECTION//
+//////////////////
+
+//This section is dedicated to unique items; be it leadership unique items OR loot spawn unique items. Each shall be specified in the gun's information.
+
+/* * * * * * * * * * *
+ * Nomad shotgun
+ * Heavy melee-like shotgun
+ * Great melee damage
+ * 12g
+ * Reduced magazine size
+ * Unique - Loot rotation
+ * * * * * * * * * * */
+ 
+ 
+/obj/item/gun/ballistic/shotgun/hunting/nomad
+	name = "nomad shotgun"
+	desc = "A heavy shotgun used by the Kansan nomads, as they were largely unaffected by the bombs this weapon is still in prime condition. Features a heavy stock."
+	icon_state = "pump"
+	item_state = "shotgunpump"
+	icon_prefix = "shotgunpump"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
+
+	slowdown = GUN_SLOWDOWN_SHOTGUN_PUMP 
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY + 20
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+ 
+ 
 // BETA // Obsolete
 /obj/item/gun/ballistic/shotgun/shotttesting
 	name = "shotgun"
