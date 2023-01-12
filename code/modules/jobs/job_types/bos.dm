@@ -146,7 +146,7 @@ Head Paladin
 
 	loadout_options = list(
 	/datum/outfit/loadout/hpstand, //Tribeam laser + Hardened T-51
-	/datum/outfit/loadout/hpheavy, //DKS + Glock + Hardened T-51
+	/datum/outfit/loadout/hpheavy, //Gauss Pistol + Hardened T-51
 	/datum/outfit/loadout/hpgat		//Gatling + Hardened T-51
 	)
 
@@ -195,12 +195,10 @@ Head Paladin
 	)
 
 /datum/outfit/loadout/hpheavy
-	name = "Heavy Head Paladin"
+	name = "Gunslinger Head Paladin"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/sniper = 1,
-		/obj/item/ammo_box/magazine/w308 = 2,
-		/obj/item/gun/energy/laser/plasma/glock = 1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/ballistic/automatic/pistol/ppk12 = 1,
+		/obj/item/ammo_box/magazine/m2mm/pistol = 2
 	)
 
 /datum/outfit/loadout/hpgat
@@ -467,8 +465,10 @@ Paladin
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 
 	loadout_options = list(
-	/datum/outfit/loadout/paladinc, //AER9 and AEP7
-	/datum/outfit/loadout/paladind //AEP7 and fist
+	/datum/outfit/loadout/paladina, //AER9 and AEP7
+	/datum/outfit/loadout/paladinc, //AEP9 and AEP7 J
+	/datum/outfit/loadout/paladinb, //AEP7 and fist
+	/datum/outfit/loadout/paladind	//AEP7 and fist J
 	)
 
 	outfit = /datum/outfit/job/bos/f13paladin
@@ -501,7 +501,6 @@ Paladin
 	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
-	accessory = /obj/item/clothing/accessory/bos/paladin
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	belt =	/obj/item/storage/belt/military/army
 	neck =	/obj/item/clothing/neck/mantle/bos/paladin
@@ -510,18 +509,39 @@ Paladin
 		/obj/item/melee/onehanded/knife/hunting = 1
 	)
 
-/datum/outfit/loadout/paladinc
+/datum/outfit/loadout/paladina
 	name = "Frontline Paladin"
 	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/paladin = 1,
 		/obj/item/gun/energy/laser/aer9 = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/mfc = 2,
 		/obj/item/stock_parts/cell/ammo/ec = 2
 		)
 
-/datum/outfit/loadout/paladind
+/datum/outfit/loadout/paladinc
+	name = "Junior Frontline Paladin"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorpaladin = 1,
+		/obj/item/gun/energy/laser/aer9 = 1,
+		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
+		/obj/item/stock_parts/cell/ammo/ec = 2
+		)
+
+/datum/outfit/loadout/paladinb
 	name = "Melee Specialist"
 	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/paladin = 1,
+		/obj/item/melee/unarmed/powerfist = 1,
+		/obj/item/gun/energy/laser/pistol = 1,
+		/obj/item/stock_parts/cell/ammo/ec = 2
+		)
+
+/datum/outfit/loadout/paladind
+	name = "Junior Melee Specialist"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/juniorpaladin = 1,
 		/obj/item/melee/unarmed/powerfist = 1,
 		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2
@@ -544,7 +564,8 @@ Senior Scribe
 
 	loadout_options = list(
 	/datum/outfit/loadout/seniorscribefs,
-	/datum/outfit/loadout/seniorscribebs
+	/datum/outfit/loadout/seniorscribebs,
+	/datum/outfit/loadout/seniorscribehs
 	)
 
 	outfit = /datum/outfit/job/bos/f13seniorscribe
@@ -624,6 +645,27 @@ Senior Scribe
 		/obj/item/blueprint/research = 1
 		)
 
+/datum/outfit/loadout/seniorscribehs
+	name = "Senior Botanist Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/gloves/botanic_leather = 1,
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)
+
 /*
 Scribe
 */
@@ -644,7 +686,8 @@ Scribe
 	loadout_options = list(
 	/datum/outfit/loadout/scribefs,
 	/datum/outfit/loadout/scribejbs,
-	/datum/outfit/loadout/scribebs
+	/datum/outfit/loadout/scribebs,
+	/datum/outfit/loadout/scribehs
 	)
 
 	outfit = /datum/outfit/job/bos/f13scribe
@@ -733,6 +776,27 @@ Scribe
 		/obj/item/clothing/mask/gas/welding = 1,
 		/obj/item/blueprint/research = 1
 		)
+
+/datum/outfit/loadout/scribehs
+	name = "Botanist Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/gloves/botanic_leather = 1,
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)
 
 /*
 Senior Knight
