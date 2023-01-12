@@ -192,7 +192,7 @@
 		/obj/item/stack/sticky_tape //surgical tape
 		))
 
-obj/item/storage/belt/medical/surgical
+/obj/item/storage/belt/medical/surgical
 	name = "surgical medical toolbelt"
 	desc = "A belt designed for holding surigical tools."
 	content_overlays = FALSE

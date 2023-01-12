@@ -521,16 +521,16 @@
 /turf/open/floor/plasteel/f13/metal/pipe/intersection
 	icon_state = "pipe_intersection"
 
-turf/open/floor/plasteel/f13/tile
+/turf/open/floor/plasteel/f13/tile
 	icon_state = "grey"
 
-turf/open/floor/plasteel/f13/tile/broken
+/turf/open/floor/plasteel/f13/tile/broken
 	icon_state = "grey_1"
 
-	New()
-		..()
-		if(icon_state == "grey_1")
-			icon_state = "grey_[rand(1,8)]"
+/turf/open/floor/plasteel/f13/tile/broken/Initialize()
+	. = ..()
+	if(icon_state == "grey_1")
+		icon_state = "grey_[rand(1,8)]"
 
 /turf/open/floor/plasteel/f13/tile/long
 	icon_state = "grey_long"
@@ -538,10 +538,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/tile/long/broken
 	icon_state = "grey_long_1"
 
-	New()
-		..()
-		if(icon_state == "grey_long1")
-			icon_state = "grey_long_[rand(1,6)]"
+/turf/open/floor/plasteel/f13/tile/long/broken/Initialize()
+	. = ..()
+	if(icon_state == "grey_long1")
+		icon_state = "grey_long_[rand(1,6)]"
 
 /turf/open/floor/plasteel/f13/tile/blue
 	icon_state = "bluetile"
@@ -549,10 +549,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/tile/blue/broken
 	icon_state = "blue_1"
 
-	New()
-		..()
-		if(icon_state == "blue_1")
-			icon_state = "blue_[rand(1,8)]"
+/turf/open/floor/plasteel/f13/tile/blue/broken/Initialize()
+	. = ..()
+	if(icon_state == "blue_1")
+		icon_state = "blue_[rand(1,8)]"
 
 /turf/open/floor/plasteel/f13/tile/blue_long
 	icon_state = "blue_long"
@@ -560,10 +560,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/tile/blue_long/broken
 	icon_state = "blue_long_1"
 
-	New()
-		..()
-		if(icon_state == "blue_long1")
-			icon_state = "blue_long_[rand(1,6)]"
+/turf/open/floor/plasteel/f13/tile/blue_long/broken/Initialize()
+	. = ..()
+	if(icon_state == "blue_long1")
+		icon_state = "blue_long_[rand(1,6)]"
 
 /turf/open/floor/plasteel/f13/tile/navy
 	icon_state = "navy"
@@ -571,10 +571,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/tile/navy/broken
 	icon_state = "navy_1"
 
-	New()
-		..()
-		if(icon_state == "navy_1")
-			icon_state = "navy_[rand(1,7)]"
+/turf/open/floor/plasteel/f13/tile/navy/broken/Initialize()
+	. = ..()
+	if(icon_state == "navy_1")
+		icon_state = "navy_[rand(1,7)]"
 
 /turf/open/floor/plasteel/f13/tile/brown
 	icon_state = "browntile"
@@ -582,10 +582,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/tile/brown/broken
 	icon_state = "brown_1"
 
-	New()
-		..()
-		if(icon_state == "brown_1")
-			icon_state = "brown_[rand(1,8)]"
+/turf/open/floor/plasteel/f13/tile/brown/broken/Initialize()
+	. = ..()
+	if(icon_state == "brown_1")
+		icon_state = "brown_[rand(1,8)]"
 
 /turf/open/floor/plasteel/f13/tile/fancy
 	icon_state = "fancy"
@@ -593,11 +593,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/tile/fancy/broken
 	icon_state = "fancy_1"
 
-	New()
-		..()
-		if(icon_state == "fancy_1")
-			icon_state = "fancy_[rand(1,7)]"
-
+/turf/open/floor/plasteel/f13/tile/fancy/broken/Initialize()
+	. = ..()
+	if(icon_state == "fancy_1")
+		icon_state = "fancy_[rand(1,7)]"
 
 
 /turf/open/floor/plasteel/f13/stone
@@ -610,10 +609,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/stone/ornate/broken
 	icon_state = "ornate_1"
 
-	New()
-		..()
-		if(icon_state == "ornate_1")
-			icon_state = "ornate_[rand(1,3)]"
+/turf/open/floor/plasteel/f13/stone/ornate/broken/Initialize()
+	. = ..()
+	if(icon_state == "ornate_1")
+		icon_state = "ornate_[rand(1,3)]"
 
 /turf/open/floor/plasteel/f13/stone/sierra
 	icon_state = "sierra"
@@ -621,10 +620,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/stone/sierra/broken
 	icon_state = "sierra_1"
 
-	New()
-		..()
-		if(icon_state == "sierra_1")
-			icon_state = "ornate_[rand(1,3)]"
+/turf/open/floor/plasteel/f13/stone/sierra/broken/Initialize()
+	. = ..()
+	if(icon_state == "sierra_1")
+		icon_state = "ornate_[rand(1,3)]"
 
 /turf/open/floor/plasteel/f13/stone/ceramic
 	icon_state = "ceramic"
@@ -632,10 +631,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/stone/ceramic/broken
 	icon_state = "ceramic_1"
 
-	New()
-		..()
-		if(icon_state == "ceramic_1")
-			icon_state = "ceramic_[rand(1,2)]"
+/turf/open/floor/plasteel/f13/stone/ceramic/broken/Initialize()
+	. = ..()
+	if(icon_state == "ceramic_1")
+		icon_state = "ceramic_[rand(1,2)]"
 
 /turf/open/floor/plasteel/f13/stone/brick
 	icon_state = "brick"
@@ -643,10 +642,10 @@ turf/open/floor/plasteel/f13/tile/broken
 /turf/open/floor/plasteel/f13/stone/brick/broken
 	icon_state = "brick_1"
 
-	New()
-		..()
-		if(icon_state == "brick_1")
-			icon_state = "brick_[rand(1,8)]"
+/turf/open/floor/plasteel/f13/stone/brick/broken/Initialize()
+	. = ..()
+	if(icon_state == "brick_1")
+		icon_state = "brick_[rand(1,8)]"
 
 /turf/open/floor/plasteel/f13/stone/rugged
 	icon_state = "khanstone"

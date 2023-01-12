@@ -172,7 +172,7 @@
 							"Preacher"
 							)
 
-datum/gear/suit/blueshirt
+/datum/gear/suit/blueshirt
 	name = "Eastwood light armor vest"
 	path = /obj/item/clothing/suit/armor/light/vest/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS

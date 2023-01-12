@@ -662,7 +662,7 @@
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/autoaxe)
 
-obj/item/book/granter/crafting_recipe/energy
+/obj/item/book/granter/crafting_recipe/energy
 	name = "Future Weapons Today!"
 	desc = "A magazine series covering the latest trends in weapons technology. Though it probably seems a little out of date now"
 	oneuse = TRUE

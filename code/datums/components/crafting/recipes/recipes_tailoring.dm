@@ -119,7 +119,7 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
-datum/crafting_recipe/steelbib
+/datum/crafting_recipe/steelbib
 	name = "Steel Breastplate"
 	result = /obj/item/clothing/suit/armor/medium/vest/breastplate
 	reqs = list(/obj/item/stack/sheet/leather = 2,
@@ -131,7 +131,7 @@ datum/crafting_recipe/steelbib
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
-datum/crafting_recipe/steelbib/heavy
+/datum/crafting_recipe/steelbib/heavy
 	name = "Reinforved Steel Breastplate"
 	result = /obj/item/clothing/suit/armor/medium/vest/breastplate/reinforced
 	reqs = list(/obj/item/clothing/suit/armor/medium/vest/breastplate = 1,

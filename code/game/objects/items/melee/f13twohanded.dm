@@ -692,7 +692,7 @@
 	force_unwielded = WEAPON_FORCE_CLUB
 	force_wielded = WEAPON_FORCE_MASSIVE+5
 
-obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user, proximity)
+/obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
 	if(!proximity || !wielded || IS_STAMCRIT(user))
 		return

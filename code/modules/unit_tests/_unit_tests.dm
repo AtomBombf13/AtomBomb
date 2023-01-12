@@ -43,6 +43,7 @@
 
 //Keep this sorted alphabetically
 #include "anchored_mobs.dm"
+#include "binary_insert.dm"
 #include "character_saving.dm"
 #include "combat.dm"
 #include "component_tests.dm"

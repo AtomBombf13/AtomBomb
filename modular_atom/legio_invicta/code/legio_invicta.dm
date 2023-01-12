@@ -731,7 +731,7 @@
 
 // ------------------- PRIMITIVE MEDICAL TOOLBELT -----------------------------
 
-obj/item/storage/belt/medical/surgical/primitive
+/obj/item/storage/belt/medical/surgical/primitive
 	name = "simple surgical toolbelt"
 	desc = "A belt designed for holding surgical tools."
 	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
