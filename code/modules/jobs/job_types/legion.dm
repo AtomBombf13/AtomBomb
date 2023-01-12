@@ -135,9 +135,9 @@ Access
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// BAR, Goliath, 10mm pistol
-		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, Sniper, Spatha
-		/datum/outfit/loadout/centurion,	// City-Killer shotgun, 14mm pistol
+		/datum/outfit/loadout/palacent,		// BAR, salvaged PA, 10mm pistol
+		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, Sniper, Spatha, 50 bullet/low DT speedy armor
+		/datum/outfit/loadout/centurion,	// City-Killer shotgun, 14mm pistol, Goliath, CQC, RCA armor
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -181,7 +181,6 @@ Access
 	backpack_contents = list(
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/ammo_box/magazine/m762 = 3,
-		/obj/item/melee/unarmed/powerfist/goliath = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2
 		)
@@ -207,7 +206,9 @@ Access
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
-		/obj/item/ammo_box/magazine/city12g = 3
+		/obj/item/ammo_box/magazine/city12g = 3,
+		/obj/item/book/granter/martial/cqc = 1,
+		/obj/item/melee/unarmed/powerfist/goliath = 1
 		)
 
 
