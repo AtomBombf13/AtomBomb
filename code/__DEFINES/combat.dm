@@ -335,7 +335,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_FALLOFF_RIFLE_LIGHT 5
 #define BULLET_FALLOFF_RIFLE_MEDIUM 10
 #define BULLET_FALLOFF_RIFLE_HEAVY 10
-#define BULLET_FALLOFF_SHOTGUN_PELLET 4
+#define BULLET_FALLOFF_SHOTGUN_PELLET 3
 #define BULLET_FALLOFF_SHOTGUN_SLUG 2
 
 /// Bullet damage falloff starting distance defines
@@ -343,10 +343,10 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define BULLET_FALLOFF_START_PISTOL_LIGHT 2
 #define BULLET_FALLOFF_START_PISTOL_MEDIUM 4
 #define BULLET_FALLOFF_START_PISTOL_HEAVY 5
-#define BULLET_FALLOFF_START_RIFLE_LIGHT 3
-#define BULLET_FALLOFF_START_RIFLE_MEDIUM 10
+#define BULLET_FALLOFF_START_RIFLE_LIGHT 5
+#define BULLET_FALLOFF_START_RIFLE_MEDIUM 15
 #define BULLET_FALLOFF_START_RIFLE_HEAVY 20
-#define BULLET_FALLOFF_START_SHOTGUN_PELLET 1 //So it doesn't instantly lose as the tile under you counts as 1
+#define BULLET_FALLOFF_START_SHOTGUN_PELLET 4 //So it doesn't instantly lose as the tile under you counts as 1
 #define BULLET_FALLOFF_START_SHOTGUN_SLUG 5
 
 /// Bullet damage falloff default defines
