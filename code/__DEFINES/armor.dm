@@ -314,7 +314,7 @@
 #define ARMOR_VALUE_SALVAGE list(\
 		"melee" = 45, \
 		"bullet" = 45, \
-		"laser" = 45, \
+		"laser" = 25, \
 		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 80, \
@@ -325,9 +325,9 @@
 		"damage_threshold" = 16)
 
 #define ARMOR_VALUE_PA list(\
-		"melee" = 50, \
-		"bullet" = 50, \
-		"laser" = 50, \
+		"melee" = 80, \
+		"bullet" = 70, \
+		"laser" = 30, \
 		"energy" = 25, \
 		"bomb" = 40, \
 		"bio" = 100, \
