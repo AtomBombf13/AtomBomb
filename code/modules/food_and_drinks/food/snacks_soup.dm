@@ -492,3 +492,15 @@
 	tastes = list("creamy broth"= 1, "fish" = 1, "vegetables" = 1)
 	foodtype = VEGETABLES | MEAT | DAIRY
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/reagent_containers/food/snacks/soup/macaco
+	name = "Macaco soup"
+	desc = "To think, the monkey would've beat you to death and steal your gun."
+	icon_state = "macaco"
+	bonus_reagents = list(
+		/datum/reagent/consumable/nutriment/vitamin = 1,
+		/datum/reagent/medicine/omnizine = 5,
+		/datum/reagent/consumable/nutriment/vitamin = 5
+	)
+	tastes = list("Monkey" = 1)
+	foodtype = MEAT | VEGETABLES
