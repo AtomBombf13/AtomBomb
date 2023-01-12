@@ -58,6 +58,7 @@
 	// past this much time the patient is unrecoverable
 	// (in deciseconds)
 	// brain damage starts setting in on the patient after
+	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	if(T.suiciding || T.hellbound || HAS_TRAIT(src, TRAIT_HUSK) || AmBloodsucker(T))
 		return
 	if((T.getBruteLoss() >= 160) || (T.getFireLoss() >= 160))
@@ -103,7 +104,6 @@
 		return
 	//If the body has been fixed so that they would not be in crit when revived, give them oxyloss to put them back into crit
 	var/const/threshold = ((HEALTH_THRESHOLD_CRIT + HEALTH_THRESHOLD_DEAD) * 0.5)
-	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	if (revived_mob.health > threshold)
 		revived_mob.adjustOxyLoss(revived_mob.health - threshold, 0)
 	else
