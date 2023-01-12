@@ -153,7 +153,7 @@
 	extra_projectiles = 3
 	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/c45/op
-	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/raidercombathelmet, /obj/item/clothing/suit/armor/medium/combat/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
+	loot = list(/obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -170,6 +170,14 @@
 	..()
 	summon_backup(15)
 	say("KILL 'EM, FELLAS!")
+
+/mob/living/simple_animal/hostile/raider/ranged/boss/death(gibbed)
+	var/turf/T = get_turf(src)
+	if(prob(20))
+		new /obj/item/gun/ballistic/automatic/smg/greasegun(T)
+		new /obj/item/clothing/head/helmet/f13/combat/dark(T)
+		new /obj/item/clothing/suit/armor/medium/combat/raider(T)
+	. = ..()
 
 // RANGED RAIDER WITH ARMOR
 /mob/living/simple_animal/hostile/raider/ranged/sulphiteranged
@@ -373,7 +381,7 @@
 
 /mob/living/simple_animal/hostile/raider/junker/boss
 	name = "Junker Boss"
-	desc = "A Junker boss, clad in hotrod power armor, and wielding a deadly rapid-fire shrapnel cannon."
+	desc = "A Junker boss, clad in customized combat armor, and wielding a deadly rapid-fire shrapnel cannon."
 	icon_state = "junker_boss"
 	icon_living = "junker_boss"
 	icon_dead = "junker_dead"
@@ -388,6 +396,6 @@
 	rapid_melee = 1
 	projectiletype = /obj/item/projectile/bullet/shrapnel
 	projectilesound = 'sound/f13weapons/auto5.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/high)
+	loot = list(/obj/item/clothing/suit/armor/medium/combat/mk2/raider, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
