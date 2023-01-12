@@ -62,6 +62,8 @@
 		return
 	if(QDELETED(BR) || BR.brain_death || (BR.organ_flags & ORGAN_FAILING))
 		return
+	if(time_since_death > tlimit)
+		return
 	return TRUE
 
 /obj/item/smelling_salts/proc/do_revive(mob/living/carbon/revived_mob, mob/living/user)
@@ -119,9 +121,7 @@
 	revived_mob.emote("gasp")
 	revived_mob.Jitter(20)
 	if(time_since_death > tlimit)
-		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN(100))
 		revived_mob.adjustOxyLoss(500)
-		var/time_since_death = 9000
 	log_combat(revived_mob, revived_mob, "revived", src)
 	var/list/policies = CONFIG_GET(keyed_list/policyconfig)
 	var/memory_limit = CONFIG_GET(number/defib_cmd_time_limit)
