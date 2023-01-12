@@ -31,7 +31,7 @@
 	slot_flags = ITEM_SLOT_EARS | ITEM_SLOT_HEAD | ITEM_SLOT_NECK		//Fluff item, put it whereever you want!
 	actions_types = list(/datum/action/item_action/toggle_headphones)
 	var/headphones_on = FALSE
-	custom_price = PRICE_CHEAP
+	custom_price = PRICE_ALMOST_CHEAP
 
 /obj/item/clothing/ears/headphones/Initialize()
 	. = ..()

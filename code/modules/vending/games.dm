@@ -12,7 +12,7 @@
 //	premium = list(/obj/item/melee/skateboard/pro = 3,
 //					/obj/item/melee/skateboard/hoverboard = 1)
 	refill_canister = /obj/item/vending_refill/games
-	default_price = PRICE_CHEAP_AS_FREE
+	default_price = PRICE_CHEAP
 	extra_price = PRICE_ALMOST_EXPENSIVE
 	payment_department = ACCOUNT_SRV
 	cost_multiplier_per_dept = list(ACCOUNT_SRV = 0)
