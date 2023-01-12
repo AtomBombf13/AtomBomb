@@ -131,18 +131,6 @@ GLOBAL_LIST_INIT(nonreactive_gases, typecacheof(list(GAS_O2, GAS_N2, GAS_CO2, GA
 	finalize_gas_refs()
 
 
-/datum/auxgm/proc/get_by_flag(flag)
-	var/static/list/gases_by_flag
-	if(!gases_by_flag)
-		gases_by_flag = list()
-	if(!(flag in gases_by_flag))
-		gases_by_flag += flag
-		gases_by_flag[flag] = list()
-		for(var/g in flags)
-			if(flags[g] & flag)
-				gases_by_flag[flag] += g
-	return gases_by_flag[flag]
-
 GLOBAL_DATUM_INIT(gas_data, /datum/auxgm, new)
 
 /obj/effect/overlay/gas
