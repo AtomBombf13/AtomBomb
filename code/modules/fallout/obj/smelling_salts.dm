@@ -54,6 +54,11 @@
 /obj/item/smelling_salts/proc/can_revive(mob/living/carbon/T)
 	var/obj/item/organ/brain/BR = T.getorgan(/obj/item/organ/brain)
 	var/obj/item/organ/heart = T.getorgan(/obj/item/organ/heart)
+	var/time_since_death = world.time - revived_mob.timeofdeath
+	// past this much time the patient is unrecoverable
+	// (in deciseconds)
+	// brain damage starts setting in on the patient after
+	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	if(T.suiciding || T.hellbound || HAS_TRAIT(src, TRAIT_HUSK) || AmBloodsucker(T))
 		return
 	if((T.getBruteLoss() >= 160) || (T.getFireLoss() >= 160))
@@ -61,6 +66,8 @@
 	if(!heart || (heart.organ_flags & ORGAN_FAILING))
 		return
 	if(QDELETED(BR) || BR.brain_death || (BR.organ_flags & ORGAN_FAILING))
+		return
+	if(time_since_death > tlimit)
 		return
 	return TRUE
 
@@ -70,11 +77,6 @@
 		in_use = FALSE
 		return
 	user.visible_message(span_notice("[user] starts waving [src] under [revived_mob]'s nose."), span_warning("You wave [src] under [revived_mob]'s nose."))
-	var/time_since_death = world.time - revived_mob.timeofdeath
-	// past this much time the patient is unrecoverable
-	// (in deciseconds)
-	// brain damage starts setting in on the patient after
-	// some time left rotting
 	var/total_burn	= 0
 	var/total_brute	= 0
 	if(!do_after(user, 20, target = revived_mob)) //placed on chest and short delay to shock for dramatic effect, revive time is 5sec total
@@ -102,7 +104,6 @@
 		return
 	//If the body has been fixed so that they would not be in crit when revived, give them oxyloss to put them back into crit
 	var/const/threshold = ((HEALTH_THRESHOLD_CRIT + HEALTH_THRESHOLD_DEAD) * 0.5)
-	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	if (revived_mob.health > threshold)
 		revived_mob.adjustOxyLoss(revived_mob.health - threshold, 0)
 	else
@@ -118,15 +119,4 @@
 	revived_mob.revive()
 	revived_mob.emote("gasp")
 	revived_mob.Jitter(20)
-	if(time_since_death > tlimit)
-		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, max(0, min(99, ((tlimit - time_since_death) / tlimit * 100))), 150)
 	log_combat(revived_mob, revived_mob, "revived", src)
-	var/list/policies = CONFIG_GET(keyed_list/policyconfig)
-	var/memory_limit = CONFIG_GET(number/defib_cmd_time_limit)
-	var/late = memory_limit && (time_since_death > memory_limit)
-	var/policy = policies[POLICYCONFIG_ON_DEFIB_INTACT]
-	if(policy)
-		to_chat(revived_mob, policy)
-	revived_mob.log_message("revived using smelling salts, [time_since_death / 10] seconds from time of death, considered [late? "late" : "memory-intact"] revival under configured policy limits.", LOG_GAME)
-	//add_logs(user, revived_mob, "revived (smelling salts)", src)
-	in_use = FALSE
