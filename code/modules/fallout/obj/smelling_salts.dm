@@ -54,6 +54,10 @@
 /obj/item/smelling_salts/proc/can_revive(mob/living/carbon/T)
 	var/obj/item/organ/brain/BR = T.getorgan(/obj/item/organ/brain)
 	var/obj/item/organ/heart = T.getorgan(/obj/item/organ/heart)
+	var/time_since_death = world.time - revived_mob.timeofdeath
+	// past this much time the patient is unrecoverable
+	// (in deciseconds)
+	// brain damage starts setting in on the patient after
 	if(T.suiciding || T.hellbound || HAS_TRAIT(src, TRAIT_HUSK) || AmBloodsucker(T))
 		return
 	if((T.getBruteLoss() >= 160) || (T.getFireLoss() >= 160))
@@ -72,11 +76,6 @@
 		in_use = FALSE
 		return
 	user.visible_message(span_notice("[user] starts waving [src] under [revived_mob]'s nose."), span_warning("You wave [src] under [revived_mob]'s nose."))
-	var/time_since_death = world.time - revived_mob.timeofdeath
-	// past this much time the patient is unrecoverable
-	// (in deciseconds)
-	// brain damage starts setting in on the patient after
-	// some time left rotting
 	var/total_burn	= 0
 	var/total_brute	= 0
 	if(!do_after(user, 20, target = revived_mob)) //placed on chest and short delay to shock for dramatic effect, revive time is 5sec total
