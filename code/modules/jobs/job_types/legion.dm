@@ -135,9 +135,9 @@ Access
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// Pulse rifle, EMP grenades, 10mm pistol
+		/datum/outfit/loadout/palacent,		// BAR, Goliath, 10mm pistol
 		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, Sniper, Spatha
-		/datum/outfit/loadout/centurion,	// City-Killer shotgun, Goliath, 14mm pistol
+		/datum/outfit/loadout/centurion,	// City-Killer shotgun, 14mm pistol
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -597,7 +597,7 @@ Access
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
 		/datum/outfit/loadout/expambusher,	// Lever-action shotgun, Bottlecap mine, MP5
-		/datum/outfit/loadout/expsniper	// Hunting Rifle, Smokebomb, C4
+		/datum/outfit/loadout/expsniper	// Commando Carbine, Smokebomb, C4
 		)
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
