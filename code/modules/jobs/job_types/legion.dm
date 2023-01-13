@@ -595,9 +595,9 @@ Access
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	exp_requirements = 150
 
-	loadout_options = list(	// ALL: .45 Revolver, Machete
-		/datum/outfit/loadout/expambusher,	// Lever-action shotgun, Bottlecap mine, MP5
-		/datum/outfit/loadout/expsniper	// Commando Carbine, Smokebomb, C4
+	loadout_options = list(	// ALL: Machete
+		/datum/outfit/loadout/expambusher,	// .44 magnum revolver, Bottlecap mine,smokebomb,explosives crafting trait
+		/datum/outfit/loadout/expsaboteur	// .44 magnum revolver, Smokebomb, C4,tool belt,welding goggles
 		)
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -626,12 +626,11 @@ Access
 	id = /obj/item/card/id/dogtag/legion/prime
 	suit = /obj/item/clothing/suit/armor/light/legion/explorer
 	head = /obj/item/clothing/head/helmet/f13/legion/explorer
-	neck = /obj/item/storage/belt/holster/rugged/revolver_45
+	neck = /obj/item/storage/belt/holster
 	l_pocket = /obj/item/flashlight
 	box_two = /obj/item/storage/survivalkit/medical/legion
 	backpack_contents = list(
 		/obj/item/binoculars = 1,
-		/obj/item/ammo_box/loader/acp45 = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
 		/obj/item/melee/onehanded/machete = 1,
@@ -640,22 +639,24 @@ Access
 
 /datum/outfit/loadout/expambusher
 	name = "Ambusher"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
+	suit_store = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 2,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
+		/obj/item/book/granter/trait/explosives,
+		/obj/item/ammo_box/loader/m44 = 2,
 		/obj/item/bottlecap_mine = 1,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1
 		)
 
-/datum/outfit/loadout/expsniper
-	name = "Sniper"
-	suit_store = /obj/item/gun/ballistic/rifle/hunting
+/datum/outfit/loadout/expsaboteur
+	name = "Saboteur"
+	glasses = /obj/item/clothing/glasses/welding
+	suit_store = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
-		/obj/item/ammo_box/stripper/a308 = 3,
+		/obj/item/storage/belt/utility,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/book/granter/trait/explosives,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
@@ -727,10 +728,11 @@ Access
 	exp_requirements = 300
 
 	loadout_options = list(	//ALL: Gladius
-		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
-		/datum/outfit/loadout/vetsmg, 		// 10mm SMG, .357 Revolver
+		/datum/outfit/loadout/vetvanguard,	// Ballistic fist and shield
+		/datum/outfit/loadout/vetsmg, 		// Thompson SMG
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
-		/datum/outfit/loadout/vetrifle		// Trail gun, .357 Revolver, Throwing knives
+		/datum/outfit/loadout/vetrifle		// Rangemaster, Reinforced bola,Bear Trap
+		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
 		)
 	
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -772,25 +774,23 @@ Access
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
 		)
 
-/datum/outfit/loadout/vetaxe
-	name = "Enforcer"
-	suit_store = /obj/item/twohanded/legionaxe
-	neck = /obj/item/storage/belt/sabre/single
+/datum/outfit/loadout/vetvanguard
+	name = "Vanguard"
+	suit_store = /obj/item/shield/riot/legion
+	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
-		/obj/item/melee/unarmed/tigerclaw = 1,
+		/obj/item/gun/ballistic/revolver/ballisticfist = 1,
+		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 /datum/outfit/loadout/vetsmg
 	name = "Flanker"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	suit_store = /obj/item/gun/ballistic/automatic/smg/tommygun
 	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
-		/obj/item/twohanded/spear/lance = 1,
-		/obj/item/ammo_box/magazine/pistol10mm/extended = 2,
-		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/ammo_box/loader/a357 = 1,
+		/obj/item/ammo_box/magazine/tommygunm45/stick = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
@@ -802,21 +802,29 @@ Access
 		/obj/item/ammo_box/shotgun/slug = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/twohanded/spear/lance = 1,
-		/obj/item/melee/onehanded/knife/bayonet = 1,
-		/obj/item/restraints/legcuffs/bola = 2
+		/obj/item/restraints/legcuffs/beartrap = 2,
+		/obj/item/restraints/legcuffs/bola/tactical = 1
 		)
 
 /datum/outfit/loadout/vetrifle
-	name = "Sharpshooter"
-	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
+	name = "Tactician"
+	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
 	neck = /obj/item/storage/belt/holster
 	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44/ = 3,
-		/obj/item/gun/ballistic/revolver/colt357 = 1,
-		/obj/item/ammo_box/loader/a357 = 1,
-		/obj/item/melee/onehanded/knife/throwing = 2,
+		/obj/item/ammo_box/magazine/m556/rifle/small = 3,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
 		/obj/item/restraints/legcuffs/beartrap = 1
+		)
+
+/datum/outfit/loadout/vetaxe
+	name = "Enforcer"
+	suit_store = /obj/item/twohanded/legionaxe
+	neck = /obj/item/storage/belt/sabre/single
+	backpack_contents = list(
+		/obj/item/melee/unarmed/tigerclaw = 1,
+		/obj/item/restraints/legcuffs/bola = 1,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 
@@ -868,13 +876,12 @@ Access
 	backpack_contents = list(
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
-		/obj/item/melee/onehanded/machete = 1
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
 		)
 
 /datum/outfit/loadout/primelancer
 	name = "Guardian"
-	r_hand = /obj/item/shield/riot/legion
+	r_hand = /obj/item/twohanded/spear/lance
 	backpack_contents = list(
 		/obj/item/storage/belt/holster/rugged/revolver_357 = 1,
 		/obj/item/ammo_box/loader/a357 = 3,
@@ -887,6 +894,7 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/a357 = 2,
 		/obj/item/grenade/homemade/firebomb = 2,
+		/obj/item/melee/onehanded/machete = 1,
 		)
 
 /datum/outfit/loadout/primebrave
@@ -894,7 +902,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/melee/onehanded/knife/bayonet = 1,
+		/obj/item/melee/onehanded/machete = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
 		)
 
@@ -922,8 +930,9 @@ Access
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 
 	loadout_options = list(	//ALL: Machete
-		/datum/outfit/loadout/recruittribal,	// Gladius, Bola, Trekking
-		/datum/outfit/loadout/recruitlegion	// Winchester Widowmaker, 2 x prefilled Molotovs, Machete
+		/datum/outfit/loadout/recruitbuckler,	// Machete, Bola,Buckler
+		/datum/outfit/loadout/recruitlegion	// Bumper Sword, Bola
+		/datum/outfit/loadout/recruitambusher	// Spear Quiver,Bola
 		)
 
 	matchmaking_allowed = list(
@@ -953,23 +962,30 @@ Access
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1
 		)
 
-/datum/outfit/loadout/recruittribal
-	name = "Tribal Recruit"
-	suit_store = /obj/item/melee/onehanded/machete/gladius
+/datum/outfit/loadout/recruitbuckler
+	name = "Buckler Bearer"
+	suit_store = /obj/item/melee/onehanded/machete
 	r_hand = /obj/item/shield/riot/buckler
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola = 1,
-		/obj/item/book/granter/trait/trekking = 1,
 		/obj/item/warpaint_bowl = 1
 		)
 
 /datum/outfit/loadout/recruitlegion
-	name = "Born in the East"
-	suit_store = /obj/item/gun/ballistic/revolver/widowmaker
+	name = "Mauler"
+	suit_store = /obj/item/twohanded/fireaxe/bmprsword
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 3,
-		/obj/item/reagent_containers/food/drinks/bottle/molotov/filled = 2,
-		/obj/item/melee/onehanded/machete = 1,
+		/obj/item/restraints/legcuffs/bola = 2,
+		/obj/item/warpaint_bowl = 1
+		)
+
+/datum/outfit/loadout/recruitambusher
+	name = "Ambusher"
+	suit_store = /obj/item/melee/onehanded/machete
+	r_hand = /obj/item/storage/backpack/spearquiver
+	backpack_contents = list(
+		/obj/item/restraints/legcuffs/bola = 2,
+		/obj/item/warpaint_bowl = 1
 		)
 
 
