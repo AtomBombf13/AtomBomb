@@ -1409,7 +1409,7 @@ added to end of campfire/attackby
 	icon = 'modular_atom/icons/tileset_sonora.dmi'
 	icon_state = "desertsmooth"
 	slowdown = 0.3
-	list/loots = list(
+	loots = list(
 						/obj/item/stack/crafting/metalparts/five = 10,
 						)
 	footstep = FOOTSTEP_LOOSE_SAND
