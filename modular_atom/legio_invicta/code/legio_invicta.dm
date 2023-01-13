@@ -1107,7 +1107,7 @@
 	sound_squirt = 'modular_atom/sound/honey.ogg'
 
 /* Added to base code
-var/sound_squirt
+sound_squirt
 Added to proc/attempt_spray
 		playsound(src, sound_squirt, 50, 1, -6)
 */
