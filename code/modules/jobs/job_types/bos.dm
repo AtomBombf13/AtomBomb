@@ -78,8 +78,8 @@ Elder
 	flag = F13ELDER
 	display_order = JOB_DISPLAY_ORDER_ELDER
 	head_announce = list("Security")
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the Elder of the local Brotherhood chapter."
 	supervisors = "the High Elders"
 	selection_color = "#7f8c8d"
@@ -142,7 +142,7 @@ Head Paladin
 	supervisors = "the Elder"
 	selection_color = "#7f8c8d"
 
-	exp_requirements = 2400
+	exp_requirements = 4800
 
 	loadout_options = list(
 	/datum/outfit/loadout/hpstand, //Tribeam laser + Hardened T-51
@@ -223,7 +223,7 @@ Head Scribe
 	supervisors = "the Elder"
 	selection_color = "#7f8c8d"
 
-	exp_requirements = 1500
+	exp_requirements = 3000
 
 	outfit = /datum/outfit/job/bos/f13headscribe
 
@@ -292,7 +292,7 @@ Head Knight
 	supervisors = "the Elder and Head Paladin in external affairs"
 	selection_color = "#7f8c8d"
 
-	exp_requirements = 1500
+	exp_requirements = 3000
 
 	loadout_options = list(
 	/datum/outfit/loadout/headstand, //DKS 2 mags
@@ -376,7 +376,7 @@ Senior Paladin
 	description = "As the Chapter's senior offensive warrior, you have proven your service and dedication to the Brotherhood over your time as a Paladin. As your skills gained, however, you were deigned to be more useful as a commander and trainer. Your job is to coordinate the Paladins and ensure they work as a team, instilling discipline as you go."
 	supervisors = "the Head Paladin"
 
-	exp_requirements = 1500
+	exp_requirements = 3000
 
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //5mm minigun
@@ -460,7 +460,7 @@ Paladin
 	spawn_positions = 2
 	description = "You answer directly to the Senior Paladin. You are this Chapter's main line of defense and offense; highly trained in combat and weaponry though with little practical field experience, you are eager to prove your worth to the Brotherhood. Your primary duties are defense and surface operations. You may also be assigned a trainee Initiate."
 	supervisors = "the Head Paladin and the Senior Paladin"
-	exp_requirements = 1200
+	exp_requirements = 2400
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 
@@ -560,7 +560,7 @@ Senior Scribe
 	description = "You are the bunker's seniormost medical and scientific expert in the bunker, sans the Head Scribe themselves. You are trained in both medicine and engineering, while also having extensive studies of the old world to assist in pinpointing what technology would be useful to the Brotherhood and its interests."
 	supervisors = "the Head Scribe"
 
-	exp_requirements = 900
+	exp_requirements = 1800
 
 	loadout_options = list(
 	/datum/outfit/loadout/seniorscribefs,
@@ -681,7 +681,7 @@ Scribe
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 
-	exp_requirements = 300
+	exp_requirements = 600
 
 	loadout_options = list(
 	/datum/outfit/loadout/scribefs,
@@ -810,7 +810,7 @@ Senior Knight
 	spawn_positions = 2
 	description = "You report directly to the Head Knight. You are the Brotherhood Senior Knight. Having served the Knight Caste for some time now, you are versatile and experienced in both basic combat and repairs, and also a primary maintainer of the Bunker's facilities. As your seniormost Knight, you may be assigned initiates or Junior Knights to mentor."
 	supervisors = "the Head Knight inside, Paladins outside"
-	exp_requirements = 900
+	exp_requirements = 1800
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 
@@ -918,7 +918,7 @@ Knight
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND,ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 
-	exp_requirements = 300
+	exp_requirements = 600
 
 	loadout_options = list(
 	/datum/outfit/loadout/knighta, //AER9 and .45 Autoloader J
@@ -1131,7 +1131,7 @@ Off Duty
 	supervisors = "your Superior rank"
 
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 300
+	exp_requirements = 600
 
 	outfit = /datum/outfit/job/bos/f13offduty
 
