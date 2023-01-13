@@ -1094,9 +1094,10 @@ Access
 		/obj/item/defibrillator/primitive = 1,
 		/obj/item/clothing/neck/apron/medicus_legion = 1,
 		/obj/item/clothing/gloves/f13/crudemedical = 1,
-		/obj/item/storage/belt/medical/surgical/primitive = 1,
+		/obj/item/storage/belt/medical/primitive = 1,
 		/obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/healthanalyzer = 1
 		)
 
 /datum/outfit/job/CaesarsLegion/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

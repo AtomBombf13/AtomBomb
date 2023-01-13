@@ -56,12 +56,25 @@
 			I.on_attack_hand(user)
 		else
 			to_chat(user, "The furnace isn't working!.")
+	if(istype(I, /obj/item/stack/ore))
+		var/obj/item/stack/ore/G = I
+		if(working)
+			playsound(src, 'modular_atom/blacksmith/sound/steam_short.ogg',80, 1)
+			if(do_after(user, 30, target = src))
+				G.furnace_smelt()
+		else
+			to_chat(user, "The furnace isn't working!.")
 	else
 		. = ..()
 
 /obj/structure/blacksmith/furnace/attackby(obj/item/W, mob/user, params)
 	if(W.reagents)
 		W.reagents.trans_to(src, 250)
+	var/obj/item/stack/sheet/coke/C = W
+	if(istype(C))
+		src.reagents.add_reagent(/datum/reagent/fuel, 5)
+		C.use(1)
+		to_chat(user, "You add some lumps of coke to the furnace.")
 	else
 		return ..()
 
@@ -76,6 +89,13 @@
 	mid_sounds = list('modular_atom/blacksmith/sound/furnace1.ogg'=1)
 	mid_length = 70
 	volume = 80
+
+/obj/item/stack/ore/proc/furnace_smelt()
+	if(isnull(refined_type))
+		return
+	else
+		new refined_type(drop_location(),amount)
+		qdel(src)
 
 
 // ----------------------- SANDSTONE FURNACE -------------------------------
