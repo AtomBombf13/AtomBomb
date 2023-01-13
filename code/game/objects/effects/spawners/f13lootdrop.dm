@@ -914,7 +914,6 @@
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/m14 = 5,
 				/obj/effect/spawner/bundle/f13/assault_carbine = 5,
-				/obj/effect/spawner/bundle/f13/magnumrevolver = 15,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
@@ -1487,13 +1486,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	items = list(
 				/obj/item/gun/ballistic/rifle/mag/antimateriel,
 				/obj/item/ammo_box/magazine/amr/
-	)
-
-/obj/effect/spawner/bundle/f13/magnumrevolver
-	name = "magnum revolver and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/revolver/m2405,
-				/obj/item/ammo_box/loader/rev308
 	)
 
 /obj/effect/spawner/bundle/f13/tribeam
@@ -2346,7 +2338,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/trailcarbine,
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
-		/obj/item/book/granter/crafting_recipe/blueprint/magnum_revolver,
+		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
 		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 	)
 
