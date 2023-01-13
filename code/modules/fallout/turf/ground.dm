@@ -168,7 +168,7 @@
 
 //For sculpting with more precision, the random picking does not work very well. Slowdown 0.5 instead of 1. No random armor or gunpowder or titanium. Use directions for control. - Pebbles
 /turf/open/indestructible/ground/outside/desert/sonora
-	icon = 'icons/fallout/turfs/wasteland.dmi'
+	icon = 'modular_atom/icons/tileset_sonora.dmi'
 	icon_state = "desertsmooth"
 	slowdown = 0.3
 	loots = list(
