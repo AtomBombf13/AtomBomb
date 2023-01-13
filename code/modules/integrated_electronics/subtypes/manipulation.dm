@@ -216,6 +216,7 @@
 	update_outputs()
 	push_data()
 
+/*
 /obj/item/integrated_circuit/manipulation/claw
 	name = "pulling claw"
 	desc = "Circuit which can pull things.."
@@ -269,9 +270,10 @@
 	activate_pin(3)
 	push_data()
 	..()
+*/
 
 
-
+/*
 /obj/item/integrated_circuit/manipulation/thrower
 	name = "thrower"
 	desc = "A compact launcher to throw things from inside or nearby tiles at a low enough velocity not to harm someone."
@@ -352,6 +354,7 @@
 	//return damage
 	A.throwforce = initial(A.throwforce)
 	A.embedding = initial(A.embedding)
+*/
 
 /obj/item/integrated_circuit/manipulation/matman
 	name = "material manager"
