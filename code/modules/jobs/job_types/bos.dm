@@ -78,8 +78,8 @@ Elder
 	flag = F13ELDER
 	display_order = JOB_DISPLAY_ORDER_ELDER
 	head_announce = list("Security")
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the Elder of the local Brotherhood chapter."
 	supervisors = "the High Elders"
 	selection_color = "#7f8c8d"
