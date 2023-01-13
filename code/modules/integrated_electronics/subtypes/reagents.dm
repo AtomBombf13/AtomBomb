@@ -40,6 +40,7 @@
 		//temp_reagents.clear_reagents()
 		//qdel(temp_reagents)
 
+*/
 /obj/item/integrated_circuit/reagent/injector
 	name = "integrated hypo-injector"
 	desc = "This scary looking thing is able to pump liquids into, or suck liquids out of, whatever it's pointed at."
@@ -189,8 +190,7 @@
 			tramount = min(tramount, AM.reagents.total_volume)
 			AM.reagents.trans_to(src, tramount)
 	activate_pin(2)
-
-
+/*
 
 /obj/item/integrated_circuit/reagent/pump
 	name = "reagent pump"
@@ -291,7 +291,7 @@
 
 	complexity = 16
 	spawn_flags = IC_SPAWN_RESEARCH
-
+*/
 /obj/item/integrated_circuit/reagent/storage/cryo
 	name = "cryo reagent storage"
 	desc = "Stores liquid inside the device away from electrical components. It can store up to 60u. This will also prevent reactions."
@@ -304,7 +304,7 @@
 /obj/item/integrated_circuit/reagent/storage/cryo/Initialize()
 	. = ..()
 	ENABLE_BITFIELD(reagents.reagents_holder_flags, NO_REACT)
-
+/*
 /obj/item/integrated_circuit/reagent/storage/grinder
 	name = "reagent grinder"
 	desc = "This is a reagent grinder. It accepts a ref to something, and refines it into reagents. It can store up to 100u."
