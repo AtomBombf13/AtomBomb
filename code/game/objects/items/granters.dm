@@ -794,6 +794,11 @@ obj/item/book/granter/crafting_recipe/energy
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/am_rifle)
 
+/obj/item/book/granter/crafting_recipe/blueprint/magnum_revolver
+	name = "M2045 magnum revolver rifle blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/m2405)
+
 /obj/item/book/granter/crafting_recipe/blueprint/citykiller
 	name = "citykiller blueprint"
 	icon_state = "blueprint2"
