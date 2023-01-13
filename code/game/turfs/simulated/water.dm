@@ -25,7 +25,7 @@
 /turf/open/water/Initialize()
 	. = ..()
 	update_icon()
-	// Moved from /turf/open/indestructible/ground/outside/desert to reduce lag.
+	// Moved from /turf/open/indestructible/ground/outside/desert to reduce lag
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
 		if(turf_to_check.type == /turf/open/indestructible/ground/outside/desert) // don't do it for subtypes!
