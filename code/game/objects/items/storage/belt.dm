@@ -140,6 +140,7 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = WEIGHT_CLASS_BULKY
+	STR.max_items = 7
 	STR.can_hold = typecacheof(list(
 		/obj/item/healthanalyzer,
 		/obj/item/dnainjector,
@@ -189,7 +190,8 @@
 		/obj/item/implanter,
 		/obj/item/pinpointer/crew,
 		/obj/item/reagent_containers/chem_pack,
-		/obj/item/stack/sticky_tape //surgical tape
+		/obj/item/melee/onehanded/straight_razor,	//new
+		/obj/item/stack/sticky_tape//surgical tape
 		))
 
 /obj/item/storage/belt/medical/surgical
@@ -197,7 +199,7 @@
 	desc = "A belt designed for holding surigical tools."
 	content_overlays = FALSE
 
-/obj/item/storage/belt/medical/primitive/PopulateContents()
+/obj/item/storage/belt/medical/surgical/PopulateContents()
 	new /obj/item/surgical_drapes(src)
 	new /obj/item/scalpel(src)
 	new /obj/item/circular_saw(src)
@@ -1044,15 +1046,21 @@
 /obj/item/storage/belt/medical/primitive
 	name = "primitive medical toolbelt"
 	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "belt_blacksmith"
+	item_state = "belt_blacksmith"
 	content_overlays = FALSE
 
 /obj/item/storage/belt/medical/primitive/PopulateContents()
 	new /obj/item/surgical_drapes(src)
-	new /obj/item/scalpel (src)
-	new /obj/item/handsaw(src)
-	new /obj/item/retractor(src)
-	new /obj/item/hemostat(src)
-	new /obj/item/weldingtool/basic(src)
+	new /obj/item/melee/onehanded/straight_razor(src)
+	new /obj/item/circular_saw/primitive(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/hemostat/tribal(src)
+	new /obj/item/cautery/primitive(src)
 	new /obj/item/bonesetter(src)
 
 // Wasteland toolbelt -Art added from Invicta

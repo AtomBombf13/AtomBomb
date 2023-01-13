@@ -1,10 +1,8 @@
 /datum/language/neohongo
 	name = "Neohongo"
-	desc = "A language with heavy Chinese influences, becoming a hybrid of many of the Chinese dilects that could once be found in San Francisco."
+	desc = "A language with heavy Japanese influences, becoming a hybrid of many of the Japanese dilects that could once be found in New Reno." // Has more Japanese in it then chinese, plus chinese is already an language
 	key = "j"
-	speech_verb = list("states")
-	ask_verb = list("queries")
-	exclaim_verb = list("exclaims")
+	icon_state = "neohongo"
 	space_chance = 80
 	syllables = list("hai", "iie", "konnichiwa", "arigatou", "gomen nasai", "sumimasen", "shichi", "ashita", \
 					"kinou", "ato do", "kazoku", "shinu", "boto", "sakana", "kyatchi", "mitsukatta", "burijji", \

@@ -1279,7 +1279,8 @@
 		/datum/crafting_recipe/bitterdrink,
 		/datum/crafting_recipe/bitterdrink5,
 		/datum/crafting_recipe/healpoultice,
-		/datum/crafting_recipe/healpoultice5)
+		/datum/crafting_recipe/healpoultice5,
+		/datum/crafting_recipe/hydra)
 
 /// Both books below are for alchemy use..
 

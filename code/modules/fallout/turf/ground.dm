@@ -166,6 +166,7 @@
 						/obj/item/stack/ore/blackpowder/twenty = 10,
 						)
 
+
 //For sculpting with more precision, the random picking does not work very well. Slowdown 0.5 instead of 1. No random armor or gunpowder or titanium. Use directions for control. - Pebbles
 /turf/open/indestructible/ground/outside/desert/sonora
 	icon = 'icons/fallout/turfs/wasteland.dmi'
@@ -189,6 +190,8 @@
 /turf/open/indestructible/ground/outside/desert/sonora/rough
 	icon_state = "desertrough"
 	slowdown = 0.4
+
+
 
 /turf/open/indestructible/ground/outside/desert/harsh
 	icon_state = "wasteland"
@@ -234,15 +237,6 @@
 	layer = ABOVE_OPEN_TURF_LAYER
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
-
-// Two edge smootheners for the new desert turf
-/obj/effect/overlay/desert/sonora/edge
-	name = "desert edge"
-	icon = 'icons/fallout/turfs/wasteland.dmi'
-	icon_state = "desertedge"
-
-/obj/effect/overlay/desert/sonora/edge/corner
-	icon_state = "desertcorner"
 
 /turf/open/indestructible/ground/outside/desert/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return //I mean, it makes sense that deserts don't get slippery, I guess... :(
@@ -548,7 +542,7 @@
 /turf/open/indestructible/ground/outside/gravel
 	name = "gravel"
 	icon_state = "gravel"
-	icon = 'icons/fallout/turfs/gravel.dmi'
+	icon = 'modular_atom/icons/tileset_gravel.dmi'
 	footstep = FOOTSTEP_GRAVEL
 	barefootstep = FOOTSTEP_GRAVEL
 	clawfootstep = FOOTSTEP_GRAVEL

@@ -212,6 +212,8 @@
 	set name = "Toggle Mode"
 	set src in view(1)
 
+	if(src == /obj/machinery/iv_drip/primitive)
+		return
 	if(!isliving(usr))
 		to_chat(usr, span_warning("You can't do that!"))
 		return

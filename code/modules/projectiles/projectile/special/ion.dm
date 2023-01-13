@@ -1,12 +1,12 @@
 /obj/item/projectile/ion
 	name = "ion bolt"
 	icon_state = "ion"
-	damage = 28
+	damage = 35
 	armour_penetration = 0.75
 	damage_type = BURN
 	flag = "energy"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/ion
-	var/emp_radius = 2
+	var/emp_radius = 1
 
 /obj/item/projectile/ion/on_hit(atom/target, blocked = FALSE)
 	..()

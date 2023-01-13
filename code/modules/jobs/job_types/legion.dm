@@ -327,7 +327,8 @@ Access
 	loadout_options = list(	//ALL: Gladius, Smokebomb
 		/datum/outfit/loadout/decprimfront,	// Lever action, .44 revolver, Legion lance, Throwing knives
 		/datum/outfit/loadout/decprimrear,	// Legion shield, Ballistic fist
-		/datum/outfit/loadout/decprimboom // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimwar // Spatha, .44 revolver, Bolas
 		)
 
 	matchmaking_allowed = list(
@@ -397,8 +398,16 @@ Access
 		/obj/item/grenade/f13/frag = 2,
 		/obj/item/grenade/homemade/coffeepotbomb = 1
 		)
-
-
+		
+/datum/outfit/loadout/decprimwar
+	name = "Warmonger Prime Decanus"
+	suit_store = /obj/item/melee/onehanded/machete/spatha
+	backpack_contents = list(
+		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/ammo_box/loader/m44 = 2,
+		/obj/item/restraints/legcuffs/bola = 2
+		)
 
 // ----------------- RECRUIT DECANUS ---------------------
 
@@ -642,9 +651,9 @@ Access
 
 /datum/outfit/loadout/expsniper
 	name = "Sniper"
-	suit_store = /obj/item/gun/ballistic/rifle/mag/commando
+	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/pistol45/socom = 3,
+		/obj/item/ammo_box/stripper/a308 = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/grenade/plastic/c4 = 1
@@ -828,7 +837,8 @@ Access
 	loadout_options = list(	//ALL: Forged Machete
 		/datum/outfit/loadout/primelancer,	// .357 revolver, Buckler, Bola
 		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Firebomb
-		/datum/outfit/loadout/primebrave	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primebrave,	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primepila		// Legion Lance, Extra Medicine
 		)
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -888,7 +898,13 @@ Access
 		/obj/item/storage/backpack/spearquiver = 1,
 		)
 
-
+/datum/outfit/loadout/primepila
+	name = "Pilum"
+	suit_store = /obj/item/twohanded/spear/lance
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+		)
+		
 
 // ----------------- RECRUIT --------------------- //
 
@@ -1029,7 +1045,16 @@ Access
 		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/broom = 1,
-		/obj/item/shovel/spade = 1
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
 		)
 
 /datum/outfit/loadout/treasurer
@@ -1069,9 +1094,10 @@ Access
 		/obj/item/defibrillator/primitive = 1,
 		/obj/item/clothing/neck/apron/medicus_legion = 1,
 		/obj/item/clothing/gloves/f13/crudemedical = 1,
-		/obj/item/storage/belt/medical/surgical/primitive = 1,
+		/obj/item/storage/belt/medical/primitive = 1,
 		/obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/healthanalyzer = 1
 		)
 
 /datum/outfit/job/CaesarsLegion/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1294,6 +1320,11 @@ Access
 /datum/job/ncr/f13legioncitizen
 	title = "Legion Citizen"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
+	
+	loadout_options = list(
+	/datum/outfit/loadout/legionmerchant,
+	/datum/outfit/loadout/legionfarmer
+	)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legioncitizen
 	name = "Legion Citizen (Role)"
@@ -1308,3 +1339,32 @@ Access
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1
 		)
+
+/datum/outfit/loadout/legionmerchant
+	name = "Legion Merchant"
+	suit =	/obj/item/clothing/suit/armor/light/duster/brahmin
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/explorer
+
+/datum/outfit/loadout/legionfarmer
+	name = "Legion Crops Trader"
+	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
+	suit = /obj/item/clothing/suit/armor/light/duster/brahmin 
+	gloves = /obj/item/clothing/gloves/botanic_leather
+	backpack_contents = list(
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)
