@@ -943,7 +943,7 @@
 				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
-				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevilm,
+				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil,
 				/obj/item/gun/ballistic/shotgun/hunting/nomad
 				)
 
