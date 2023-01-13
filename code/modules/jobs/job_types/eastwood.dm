@@ -359,8 +359,8 @@ here's a tip, go search DEFINES/access.dm
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/eastwood/f13towncmo
-	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO)
-	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO)
+	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -429,8 +429,8 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/eastwood/f13denres
-	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC)
-	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC)
+	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -1043,8 +1043,15 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/cultivator = 1,
 	/obj/item/reagent_containers/glass/bucket/plastic = 1,
 	/obj/item/storage/bag/plants/portaseeder= 1,
-	/obj/item/seeds/bamboo = 1,
-	/obj/item/seeds/cannabis = 1
+	/obj/item/seeds/ambrosia = 2,
+	/obj/item/seeds/tomato = 2,
+	/obj/item/seeds/wheat = 2,
+	/obj/item/seeds/corn = 2,
+	/obj/item/seeds/onion = 2,
+	/obj/item/seeds/soya = 2,
+	/obj/item/seeds/potato = 2,
+	/obj/item/seeds/sugarcane = 2,
+	/obj/item/seeds/olive = 2,
 	)
 
 /////////////////////
