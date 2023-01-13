@@ -597,7 +597,7 @@ Access
 
 	loadout_options = list(	// ALL: Machete
 		/datum/outfit/loadout/expambusher,	// .44 magnum revolver, Bottlecap mine,smokebomb,explosives crafting trait
-		/datum/outfit/loadout/expsaboteur	// .44 magnum revolver, Smokebomb, C4,tool belt,welding goggles
+		/datum/outfit/loadout/expsaboteur,	// .44 magnum revolver, Smokebomb, C4,tool belt,welding goggles
 		)
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -731,7 +731,7 @@ Access
 		/datum/outfit/loadout/vetvanguard,	// Ballistic fist and shield
 		/datum/outfit/loadout/vetsmg, 		// Thompson SMG
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
-		/datum/outfit/loadout/vetrifle		// Rangemaster, Reinforced bola,Bear Trap
+		/datum/outfit/loadout/vetrifle,		// Rangemaster, Reinforced bola,Bear Trap
 		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
 		)
 	
@@ -931,8 +931,8 @@ Access
 
 	loadout_options = list(	//ALL: Machete
 		/datum/outfit/loadout/recruitbuckler,	// Machete, Bola,Buckler
-		/datum/outfit/loadout/recruitlegion	// Bumper Sword, Bola
-		/datum/outfit/loadout/recruitambusher	// Spear Quiver,Bola
+		/datum/outfit/loadout/recruitlegion,	// Bumper Sword, Bola
+		/datum/outfit/loadout/recruitambusher,	// Spear Quiver,Bola
 		)
 
 	matchmaking_allowed = list(
