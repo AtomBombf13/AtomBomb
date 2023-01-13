@@ -10430,10 +10430,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/firestation)
-"aMS" = (
-/obj/structure/sign/poster/prewar/corporate_espionage,
-/turf/closed/wall/f13/store,
-/area/f13/building/hospital)
 "aMT" = (
 /obj/effect/turf_decal/vg_decals/numbers/one,
 /obj/structure/car/rubbish1,
@@ -23743,17 +23739,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/city)
 "dNh" = (
-/obj/structure/chair/f13chair2{
-	dir = 4
+/obj/effect/landmark/poster_spawner/prewar,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War supermart wall made of reinforced concrete.";
+	icon = 'icons/turf/walls/f13superstore.dmi';
+	icon_state = "supermart";
+	icon_type_smooth = "supermart";
+	name = "supermart wall";
+	smooth = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/prewar/corporate_espionage{
-	pixel_x = -32
-	},
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
-	},
-/area/f13/building/firestation)
+/area/f13/building/mall)
 "dNv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/grass/coyote/one,
@@ -29252,6 +29247,7 @@
 	},
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1;
+	
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -30121,7 +30117,7 @@
 "gLF" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outerborder";
-	tag = 
+	
 	},
 /area/f13/wasteland)
 "gLN" = (
@@ -37630,6 +37626,7 @@
 "kso" = (
 /obj/effect/turf_decal/gravel_edge{
 	dir = 4;
+	
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -47548,6 +47545,7 @@
 "oWi" = (
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1;
+	
 	},
 /obj/structure/cross{
 	layer = 3.2
@@ -60593,6 +60591,7 @@
 "vkd" = (
 /obj/effect/turf_decal/gravel_edge{
 	dir = 1;
+	
 	},
 /obj/structure/cross{
 	layer = 3.2
@@ -112221,7 +112220,7 @@ haD
 wPu
 ijr
 ijr
-aMS
+oMf
 ekB
 iKJ
 lfs
@@ -116868,7 +116867,7 @@ bfY
 bfY
 vPC
 aYX
-dNh
+ptN
 ptN
 trQ
 xHd
@@ -117378,7 +117377,7 @@ uSc
 uSc
 uSc
 uSc
-uSc
+dNh
 kSV
 vQL
 mRq
