@@ -166,6 +166,30 @@
 						/obj/item/stack/ore/blackpowder/twenty = 10,
 						)
 
+//For sculpting with more precision, the random picking does not work very well. Slowdown 0.5 instead of 1. No random armor or gunpowder or titanium. Use directions for control. - Pebbles
+/turf/open/indestructible/ground/outside/desert/sonora
+	icon = 'modular_atom/icons/tileset_sonora.dmi'
+	icon_state = "desertsmooth"
+	slowdown = 0.3
+	loots = list(
+						/obj/item/stack/crafting/metalparts/five = 30,
+						)
+	footstep = FOOTSTEP_LOOSE_SAND
+	barefootstep = FOOTSTEP_LOOSE_SAND
+	clawfootstep = FOOTSTEP_LOOSE_SAND
+
+/turf/open/indestructible/ground/outside/desert/sonora/coarse
+	icon_state = "desertcoarse"
+	slowdown = 0.6
+
+/turf/open/indestructible/ground/outside/desert/sonora/coarse2
+	icon_state = "desertcoarse2"
+	slowdown = 0.6
+
+/turf/open/indestructible/ground/outside/desert/sonora/rough
+	icon_state = "desertrough"
+	slowdown = 0.4
+
 /turf/open/indestructible/ground/outside/desert/harsh
 	icon_state = "wasteland"
 	icon = 'icons/fallout/turfs/ground_harsh.dmi'

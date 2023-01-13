@@ -763,6 +763,32 @@
 	icon_state = "rack_trophy"
 	max_n_of_items = 12
 
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive/PopulateContents()
+	new /obj/item/kitchen/knife/butcher/tribal(src)
+	new /obj/item/hemostat/tribal(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/circular_saw/primitive(src)
+	new /obj/item/surgicaldrill(src)
+	new /obj/item/cautery/primitive(src)
+	new /obj/item/bonesetter(src)
+	new /obj/item/bedsheet/blanket(src)
+	new /obj/item/reagent_containers/medspray/sterilizine(src)
+	new /obj/item/stack/sticky_tape/surgical(src)
+	new /obj/item/stack/medical/bone_gel(src)
+
+
+// ------------------- PRIMITIVE MEDICAL TOOLBELT -----------------------------
+
+/obj/item/storage/belt/medical/surgical/primitive
+	name = "simple surgical toolbelt"
+	desc = "A belt designed for holding surgical tools."
+	icon = 'modular_atom/legio_invicta/icons/icons_legion.dmi'
+	righthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_righthand.dmi'
+	lefthand_file = 'modular_atom/legio_invicta/icons/onmob_legion_lefthand.dmi'
+	mob_overlay_icon = 'modular_atom/legio_invicta/icons/onmob_legion.dmi'
+	icon_state = "belt_blacksmith"
+	item_state = "belt_blacksmith"
+
 /obj/machinery/smartfridge/bottlerack/legion_offering/accept_check(obj/item/O)
 	if(istype(O, /obj/item/card/id/dogtag))
 		return TRUE
@@ -1081,7 +1107,7 @@
 	sound_squirt = 'modular_atom/sound/honey.ogg'
 
 /* Added to base code
-var/sound_squirt
+sound_squirt
 Added to proc/attempt_spray
 		playsound(src, sound_squirt, 50, 1, -6)
 */
@@ -1383,7 +1409,7 @@ added to end of campfire/attackby
 	icon = 'modular_atom/icons/tileset_sonora.dmi'
 	icon_state = "desertsmooth"
 	slowdown = 0.3
-	list/loots = list(
+	loots = list(
 						/obj/item/stack/crafting/metalparts/five = 10,
 						)
 	footstep = FOOTSTEP_LOOSE_SAND

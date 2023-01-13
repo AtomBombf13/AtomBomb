@@ -29,7 +29,6 @@
 	icon_state = "choppingpin"
 
 	build_stage = 1
-	obj/item/reagent_containers/glass/bowl
 	completed = FALSE
 
 /obj/structure/chopping_block/update_icon()
