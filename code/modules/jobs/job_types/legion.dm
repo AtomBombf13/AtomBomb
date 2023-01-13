@@ -168,6 +168,8 @@ Access
 		/obj/item/restraints/legcuffs/bola = 1,
 		/obj/item/storage/bag/money/small/legion = 1,
 		/obj/item/warpaint_bowl = 1,
+		/obj/item/ammo_box/loader/a357 = 1,
+		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/binoculars = 1
 		)
 
@@ -175,10 +177,11 @@ Access
 	name = "Paladin-Slayer Centurion"
 	suit = /obj/item/clothing/suit/armor/heavy/legion/palacent
 	head = /obj/item/clothing/head/helmet/f13/legion/palacent
-	suit_store = /obj/item/gun/energy/ionrifle
+	suit_store = /obj/item/gun/ballistic/automatic/bar
 	backpack_contents = list(
 		/obj/item/storage/belt/holster = 1,
-		/obj/item/grenade/empgrenade = 3,
+		/obj/item/ammo_box/magazine/m762 = 3,
+		/obj/item/melee/unarmed/powerfist/goliath = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2
 		)
@@ -201,7 +204,6 @@ Access
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	backpack_contents = list(
-		/obj/item/melee/unarmed/powerfist/goliath = 1,
 		/obj/item/storage/belt/holster = 1,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14 = 1,
 		/obj/item/ammo_box/magazine/pistol14mm = 2,
@@ -593,9 +595,9 @@ Access
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	exp_requirements = 150
 
-	loadout_options = list(	// ALL: .45 Revolver
-		/datum/outfit/loadout/expscout,	// Throwing spears, Gladius, Extra Medicine
-		/datum/outfit/loadout/expsniper	// Hunting Rifle, Machete, C4
+	loadout_options = list(	// ALL: .45 Revolver, Machete
+		/datum/outfit/loadout/expambusher,	// Lever-action shotgun, Bottlecap mine, MP5
+		/datum/outfit/loadout/expsniper	// Hunting Rifle, Smokebomb, C4
 		)
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -632,16 +634,18 @@ Access
 		/obj/item/ammo_box/loader/acp45 = 1,
 		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
 		/obj/item/storage/bag/money/small/legenlisted = 1,
-		/obj/item/grenade/smokebomb = 1,
+		/obj/item/melee/onehanded/machete = 1,
 		/obj/item/restraints/handcuffs = 1
 		)
 
-/datum/outfit/loadout/expscout
-	name = "Scout"
-	belt = /obj/item/storage/backpack/spearquiver
+/datum/outfit/loadout/expambusher
+	name = "Ambusher"
+	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
-		/obj/item/melee/onehanded/machete/gladius = 1,
+		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
+		/obj/item/bottlecap_mine = 1,
+		/obj/item/grenade/smokebomb = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1
 		)
 
@@ -650,7 +654,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/stripper/a308 = 3,
-		/obj/item/melee/onehanded/machete = 1,
+		/obj/item/grenade/smokebomb = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
