@@ -634,7 +634,7 @@
 /obj/item/gun/ballistic/shotgun/hunting/nomad
 	name = "nomad shotgun"
 	desc = "A heavy shotgun used by the Kansan nomads, as they were largely unaffected by the bombs this weapon is still in prime condition. Features a heavy stock."
-	icon_state = "pump"
+	icon_state = "pump_unique"
 	item_state = "shotgunpump"
 	icon_prefix = "shotgunpump"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
