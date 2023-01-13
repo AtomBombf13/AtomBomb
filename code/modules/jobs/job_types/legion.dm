@@ -597,7 +597,7 @@ Access
 
 	loadout_options = list(	// ALL: Machete
 		/datum/outfit/loadout/expambusher,	// .44 magnum revolver, Bottlecap mine,smokebomb,explosives crafting trait
-		/datum/outfit/loadout/expsaboteur,	// .44 magnum revolver, Smokebomb, C4,tool belt,welding goggles
+		/datum/outfit/loadout/expsaboteur	// .44 magnum revolver, Smokebomb, C4,tool belt,welding goggles
 		)
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -641,7 +641,7 @@ Access
 	name = "Ambusher"
 	suit_store = /obj/item/gun/ballistic/revolver/m29
 	backpack_contents = list(
-		/obj/item/book/granter/trait/explosives,
+		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/ammo_box/loader/m44 = 2,
 		/obj/item/bottlecap_mine = 1,
 		/obj/item/grenade/smokebomb = 1,
@@ -656,7 +656,7 @@ Access
 		/obj/item/storage/belt/utility,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/book/granter/trait/explosives,
+		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/grenade/plastic/c4 = 1
 		)
 
@@ -732,7 +732,7 @@ Access
 		/datum/outfit/loadout/vetsmg, 		// Thompson SMG
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Bola, Legion Lance
 		/datum/outfit/loadout/vetrifle,		// Rangemaster, Reinforced bola,Bear Trap
-		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
+		/datum/outfit/loadout/vetaxe	// AXE AND FISTS AND NOTHING FUCKING ELSE
 		)
 	
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -932,7 +932,7 @@ Access
 	loadout_options = list(	//ALL: Machete
 		/datum/outfit/loadout/recruitbuckler,	// Machete, Bola,Buckler
 		/datum/outfit/loadout/recruitlegion,	// Bumper Sword, Bola
-		/datum/outfit/loadout/recruitambusher,	// Spear Quiver,Bola
+		/datum/outfit/loadout/recruitambusher	// Spear Quiver,Bola
 		)
 
 	matchmaking_allowed = list(
