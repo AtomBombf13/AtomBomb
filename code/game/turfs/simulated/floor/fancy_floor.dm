@@ -23,10 +23,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "common1")
-			icon_state = "common[rand(1,3)]"
+/turf/open/floor/wood/wood_common/Initialize()
+	. = ..()
+	if(icon_state == "common1")
+		icon_state = "common[rand(1,3)]"
 
 /turf/open/floor/wood_common/wood_common_light
 	desc = "Wood cast in a sturdy standard pattern."
@@ -41,10 +41,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "common_light1")
-			icon_state = "common_light[rand(1,3)]"
+/turf/open/floor/wood/wood_common/wood_common_light/Initialize()
+	. = ..()
+	if(icon_state == "common_light1")
+		icon_state = "common_light[rand(1,3)]"
 
 /turf/open/floor/wood_common/wood_common_dark
 	desc = "Wood cast in a sturdy standard pattern."
@@ -59,12 +59,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "common_dark1")
-			icon_state = "common_dark[rand(1,3)]"
-
-
+/turf/open/floor/wood/wood_common/wood_common_dark/Initialize()
+	. = ..()
+	if(icon_state == "common_dark1")
+		icon_state = "common_dark[rand(1,3)]"
 
 /turf/open/floor/wood_worn
 	desc = "Wood cast in a sturdy standard pattern."
@@ -79,10 +77,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "worn1")
-			icon_state = "worn[rand(1,4)]"
+/turf/open/floor/wood/wood_worn/Initialize()
+	. = ..()
+	if(icon_state == "worn1")
+		icon_state = "worn[rand(1,4)]"
 
 /turf/open/floor/wood_worn/wood_worn_light
 	desc = "Wood cast in a sturdy standard pattern."
@@ -97,10 +95,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "worn_light1")
-			icon_state = "worn_light[rand(1,4)]"
+/turf/open/floor/wood/wood_worn/wood_worn_light/Initialize()
+	. = ..()
+	if(icon_state == "worn_light1")
+		icon_state = "worn_light[rand(1,4)]"
 
 /turf/open/floor/wood_worn/wood_worn_dark
 	desc = "Wood cast in a sturdy standard pattern."
@@ -115,12 +113,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "worn_dark1")
-			icon_state = "worn_dark[rand(1,4)]"
-
-
+/turf/open/floor/wood/wood_worn/wood_worn_dark/Initialize()
+	. = ..()
+	if(icon_state == "worn_dark1")
+		icon_state = "worn_dark[rand(1,4)]"
 
 /turf/open/floor/wood_fancy
 	desc = "Wood cast in a fancy angled pattern."
@@ -135,10 +131,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "fancy1")
-			icon_state = "fancy[rand(1,1)]"
+/turf/open/floor/wood/wood_fancy/Initialize()
+	. = ..()
+	if(icon_state == "fancy1")
+		icon_state = "fancy[rand(1,1)]"
 
 /turf/open/floor/wood_fancy/wood_fancy_light
 	desc = "Wood cast in a fancy angled pattern."
@@ -153,10 +149,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "fancy_light1")
-			icon_state = "fancy_light[rand(1,1)]"
+/turf/open/floor/wood/wood_fancy/wood_fancy_light/Initialize()
+	. = ..()
+	if(icon_state == "fancy_light1")
+		icon_state = "fancy_light[rand(1,1)]"
 
 
 /turf/open/floor/wood_fancy/wood_fancy_dark
@@ -172,13 +168,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "fancy_dark1")
-			icon_state = "fancy_dark[rand(1,1)]"
-
-
-
+/turf/open/floor/wood/wood_fancy/wood_fancy_dark/Initialize()
+	. = ..()
+	if(icon_state == "fancy_dark1")
+		icon_state = "fancy_dark[rand(1,1)]"
 
 /turf/open/floor/wood_wide
 	desc = "Wood cast in a sturdy standard pattern."
@@ -193,10 +186,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "wide1")
-			icon_state = "wide[rand(1,3)]"
+/turf/open/floor/wood/wood_wide/Initialize()
+	. = ..()
+	if(icon_state == "wide1")
+		icon_state = "wide[rand(1,3)]"
 
 /turf/open/floor/wood_wide/wood_wide_light
 	desc = "Wood cast in a sturdy standard pattern."
@@ -211,10 +204,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "wide_light1")
-			icon_state = "wide_light[rand(1,3)]"
+/turf/open/floor/wood/wood_wide/wood_wide_light/Initialize()
+	. = ..()
+	if(icon_state == "wide_light1")
+		icon_state = "wide_light[rand(1,3)]"
 
 /turf/open/floor/wood_wide/wood_wide_dark
 	desc = "Wood cast in a sturdy standard pattern."
@@ -229,12 +222,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "wide_dark1")
-			icon_state = "wide_dark[rand(1,3)]"
-
-
+/turf/open/floor/wood/wood_wide/wood_wide_dark/Initialize()
+	. = ..()
+	if(icon_state == "wide_dark1")
+		icon_state = "wide_dark[rand(1,3)]"
 
 /turf/open/floor/wood_mosaic
 	desc = "Wood cast in a sturdy standard pattern."
@@ -249,10 +240,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "mosaic1")
-			icon_state = "mosaic[rand(1,3)]"
+/turf/open/floor/wood/wood_mosaic/Initialize()
+	. = ..()
+	if(icon_state == "mosaic1")
+		icon_state = "mosaic[rand(1,3)]"
 
 /turf/open/floor/wood_mosaic/wood_mosaic_light
 	desc = "Wood cast in a sturdy standard pattern."
@@ -267,10 +258,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "mosaic_light1")
-			icon_state = "mosaic_light[rand(1,3)]"
+/turf/open/floor/wood/wood_mosaic/wood_mosaic_light/Initialize()
+	. = ..()
+	if(icon_state == "mosaic_light1")
+		icon_state = "mosaic_light[rand(1,3)]"
 
 /turf/open/floor/wood_mosaic/wood_mosaic_dark
 	desc = "Wood cast in a sturdy standard pattern."
@@ -285,10 +276,10 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-	New()
-		..()
-		if(icon_state == "mosaic_dark1")
-			icon_state = "mosaic_dark[rand(1,3)]"
+/turf/open/floor/wood/wood_mosaic/wood_mosaic_dark/Initialize()
+	. = ..()
+	if(icon_state == "mosaic_dark1")
+		icon_state = "mosaic_dark[rand(1,3)]"
 
 
 

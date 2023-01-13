@@ -421,7 +421,7 @@
 
 //Bone Dancers
 
-datum/crafting_recipe/tribalwar/bone
+/datum/crafting_recipe/tribalwar/bone
 	always_available = FALSE
 
 /datum/crafting_recipe/tribalwar/bone/lightarmour

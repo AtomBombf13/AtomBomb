@@ -29,7 +29,6 @@
 	icon_state = "choppingpin"
 
 	build_stage = 1
-	obj/item/reagent_containers/glass/bowl
 	completed = FALSE
 
 /obj/structure/chopping_block/update_icon()
@@ -343,8 +342,23 @@
 	name = "food preparation area"
 	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
 	icon_state = "area_food_preparation"
+	grow_chance = 0
 
 /* Commented out since edite basefile anyways
 /obj/structure/closet/crate/bin/trashbin
 	icon = 'modular_atom/kitchen_50s/icons/icons_kitchen.dmi'
 */
+
+/obj/structure/bonfire/heater
+	name = "heating pyre"
+	desc = "For warming water before a bath or a shower."
+	density = TRUE
+	burn_icon = "bonfire_warm" // still a bit shitty, this whole sprite is subpar but too low prio atm
+	grill = TRUE
+	stones = TRUE
+
+/obj/structure/bonfire/heater/Initialize()
+	. = ..()
+	add_overlay("bonfire_grill")
+	add_overlay("bonfire_stones")
+

@@ -30,7 +30,6 @@
 	desc = "Door with a built-in lock. Can't be padlocked."
 	icon_state = "secure"
 	assemblytype = /obj/item/stack/sheet/mineral/wood/five
-	opacity = TRUE
 	explosion_block = TRUE
 
 /obj/machinery/door/unpowered/securedoor/update_icon()
@@ -42,18 +41,18 @@
 /obj/machinery/door/unpowered/securedoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/machines/door_open.ogg',40,1)
+			playsound(src,'sound/machines/door_open.ogg',30,1)
 			flick("secure_opening", src)
 		if("closing")
-			playsound(src,'sound/machines/door_close.ogg',40,1)
+			playsound(src,'sound/machines/door_close.ogg',30,1)
 			flick("secure_closing", src)
 
 
 // SECURE DOOR - LEGION
 
 /obj/machinery/door/unpowered/securedoor/legion
-	name = "Legion Castrum"
-	req_access_txt = "123"
+	name = "Legion camp"
+	req_access_txt = "123" // ACCESS_LEGION
 
 //khoor
 /obj/machinery/door/unpowered/securedoor/khandoor
@@ -136,6 +135,8 @@
 	explosion_block = FALSE
 	pass_flags_self = LETPASSTHROW
 	proj_pass_rate = 95
+	opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/machinery/door/unpowered/celldoor/update_icon()
 	if(density)
@@ -146,10 +147,10 @@
 /obj/machinery/door/unpowered/celldoor/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',40,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_open.ogg',30,1)
 			flick("cell_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',40,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_close.ogg',30,1)
 			flick("cell_closing", src)
 
 
@@ -157,7 +158,7 @@
 
 /obj/machinery/door/unpowered/celldoor/legion
 	name = "Prison door"
-	req_access_txt = "123"
+	req_access_txt = "123"  // ACCESS_LEGION
 
 
 // ------------------------------------
@@ -173,7 +174,8 @@
 	visible = FALSE
 	explosion_block = FALSE
 	proj_pass_rate = 95
-	req_access_txt = "123"
+	req_access_txt = "123"  // ACCESS_LEGION
+	opacity = FALSE
 
 /obj/machinery/door/unpowered/secure_legion/update_icon()
 	if(density)
@@ -184,10 +186,10 @@
 /obj/machinery/door/unpowered/secure_legion/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'sound/f13machines/doorchainlink_open.ogg',40,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_open.ogg',30,1)
 			flick("secure_legion_opening", src)
 		if("closing")
-			playsound(src,'sound/f13machines/doorchainlink_close.ogg',40,1)
+			playsound(src,'modular_atom/sound/doorchainsoft_close.ogg',30,1)
 			flick("secure_legion_closing", src)
 
 
