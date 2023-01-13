@@ -1,7 +1,6 @@
 /obj/item/integrated_circuit/weaponized
 	category_text = "Weaponized"
 
-/*
 /obj/item/integrated_circuit/weaponized/weapon_firing
 	name = "weapon firing mechanism"
 	desc = "This somewhat complicated system allows one to slot in a gun, direct it towards a position, and remotely fire it."
@@ -350,5 +349,3 @@
 		H.forcesay(GLOB.hit_appends)
 
 	return 1
-
-*/
