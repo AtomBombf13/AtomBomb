@@ -2031,13 +2031,6 @@
 "aiO" = (
 /turf/closed/wall/r_wall/rust,
 /area/f13/wasteland)
-"aiP" = (
-/mob/living/simple_animal/hostile/handy/protectron,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalinnermain0"
-	},
-/area/f13/wasteland)
 "aiQ" = (
 /obj/structure/fence{
 	dir = 4
@@ -9394,10 +9387,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"aJC" = (
-/mob/living/simple_animal/hostile/handy/protectron,
-/turf/open/floor/f13/wood,
-/area/f13/building)
 "aJF" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -10852,7 +10841,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -28264,7 +28252,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -29358,7 +29345,6 @@
 "ghB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalrightborderleft0"
 	},
@@ -93769,7 +93755,7 @@ wVA
 mGE
 pWU
 imF
-aiP
+imF
 evq
 qmG
 qmG
@@ -98676,7 +98662,7 @@ apO
 arj
 xyU
 asg
-aJC
+xyU
 atf
 xyU
 pgO
