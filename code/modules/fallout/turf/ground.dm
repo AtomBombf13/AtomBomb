@@ -166,7 +166,6 @@
 						/obj/item/stack/ore/blackpowder/twenty = 10,
 						)
 
-
 //For sculpting with more precision, the random picking does not work very well. Slowdown 0.5 instead of 1. No random armor or gunpowder or titanium. Use directions for control. - Pebbles
 /turf/open/indestructible/ground/outside/desert/sonora
 	icon = 'icons/fallout/turfs/wasteland.dmi'
@@ -190,8 +189,6 @@
 /turf/open/indestructible/ground/outside/desert/sonora/rough
 	icon_state = "desertrough"
 	slowdown = 0.4
-
-
 
 /turf/open/indestructible/ground/outside/desert/harsh
 	icon_state = "wasteland"

@@ -763,7 +763,6 @@
 	icon_state = "rack_trophy"
 	max_n_of_items = 12
 
-
 /obj/item/storage/backpack/duffelbag/med/surgery/primitive/PopulateContents()
 	new /obj/item/kitchen/knife/butcher/tribal(src)
 	new /obj/item/hemostat/tribal(src)
@@ -794,7 +793,6 @@
 	if(istype(O, /obj/item/card/id/dogtag))
 		return TRUE
 	return FALSE
-
 
 /obj/machinery/smartfridge/bottlerack/legion_offering/update_icon_state()
 	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
