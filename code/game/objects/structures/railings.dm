@@ -65,6 +65,8 @@
 	if(!(flags_1 & NODECONSTRUCT_1))
 		var/obj/item/stack/rods/rod = new /obj/item/stack/rods(drop_location(), 3)
 		transfer_fingerprints_to(rod)
+	if((flags_1 & NODECONSTRUCT_1))
+		new /obj/item/stack/sheet/mineral/wood(drop_location(), 3)
 	return ..()
 
 ///Implements behaviour that makes it possible to unanchor the railing.
@@ -134,23 +136,18 @@
 /obj/structure/railing/wood
 	name = "wooden fence"
 	desc = "Marks property and prevents accidents."
-	icon = 'icons/fallout/structures/fences.dmi'
+	icon = 'modular_atom/icons/fence.dmi'
 	icon_state = "straight_wood"
-	layer = WALL_OBJ_LAYER
+	flags_1 = ON_BORDER_1 | NODECONSTRUCT_1
+	layer = ABOVE_ALL_MOB_LAYER
 
-/obj/structure/railing/wood/underlayer
-	layer = BELOW_MOB_LAYER
-
-/obj/structure/railing/wood/post 
-	icon_state = "post_wood"
-	density = FALSE
-
-/obj/structure/railing/wood/post/underlayer
+/obj/structure/railing/wood/underlayer	// north facing so you can lean on it
 	layer = BELOW_MOB_LAYER
 
 /obj/structure/simple_door/metal/fence/wooden
 	name = "wood fence gate"
 	desc = "A wooden gate for a wood fence."
+	icon = 'modular_atom/icons/fence.dmi'
 	icon_state = "fence_wood"
 	door_type = "fence_wood"
 	open_sound = "sound/machines/door_open.ogg"
@@ -159,13 +156,15 @@
 	base_opacity = FALSE
 	can_hold_padlock = TRUE
 
+/obj/structure/simple_door/metal/fence/wooden/underlayer	// north facing so you can lean on it
+	layer = BELOW_MOB_LAYER
 
 //Yellow rail
 /obj/structure/railing/handrail
 	name = "handrail"
 	desc = "A waist high handrail, perhaps you could climb over it."
 	icon_state = "handrail_y"
-	layer = WALL_OBJ_LAYER
+	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/structure/railing/handrail/underlayer
 	layer = BELOW_MOB_LAYER
@@ -201,6 +200,10 @@
 	name = "handrail"
 	desc = "Old, rusted metal handrails. The green paint is chipping off in spots."
 	icon_state = "handrail_b"
+	layer = ABOVE_ALL_MOB_LAYER
+
+/obj/structure/railing/handrail/blue/overlayer // shown over the mob if layere correctly use with care
+	plane = MOB_PLANE
 
 /obj/structure/railing/handrail/blue/underlayer
 	layer = BELOW_MOB_LAYER
