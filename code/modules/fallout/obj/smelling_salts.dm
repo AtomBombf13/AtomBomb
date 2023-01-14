@@ -120,3 +120,7 @@
 	revived_mob.emote("gasp")
 	revived_mob.Jitter(20)
 	log_combat(revived_mob, revived_mob, "revived", src)
+	if(time_since_death > tlimit)
+		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, max(0, min(99, ((tlimit - time_since_death) / tlimit * 100))), 150)
+
+
