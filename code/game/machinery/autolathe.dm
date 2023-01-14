@@ -8,6 +8,7 @@
 /obj/machinery/autolathe
 	name = "autolathe"
 	desc = "It produces items using metal and glass."
+	icon = 'modular_atom/icons/autolathe.dmi'
 	icon_state = "autolathe"
 	density = TRUE
 	use_power = IDLE_POWER_USE
@@ -54,7 +55,7 @@
 	var/list/allowed_materials
 
 	/// Base print speed
-	var/base_print_speed = 10
+	var/base_print_speed = 20
 
 /obj/machinery/autolathe/Initialize()
 	var/list/mats = allowed_materials

@@ -62,10 +62,10 @@
 /datum/design/handlabeler
 	name = "Hand Labeler"
 	id = "handlabel"
-	build_type = AUTOLATHE | PROTOLATHE
+	build_type = AUTOLATHE | PROTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 150, /datum/material/glass = 125)
 	build_path = /obj/item/hand_labeler
-	category = list("initial", "Electronics")
+	category = list("initial", "Electronics", "Equipment")
 
 /datum/design/miniature_power_cell
 	name = "Light Fixture Battery"

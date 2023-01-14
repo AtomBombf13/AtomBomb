@@ -8,9 +8,9 @@
 //////////////////
 
 /datum/design/rods
-	name = "Metal Rod"
+	name = "Metal rod"
 	id = "rods"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 1000)
 	build_path = /obj/item/stack/rods
 	category = list("initial","Construction")
@@ -26,18 +26,18 @@
 	maxstack = 50
 
 /datum/design/metal
-	name = "Metal"
+	name = "Metal sheet"
 	id = "metal"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = MINERAL_MATERIAL_AMOUNT)
 	build_path = /obj/item/stack/sheet/metal
 	category = list("initial","Construction")
 	maxstack = 50
 
 /datum/design/glass
-	name = "Glass"
+	name = "Glass sheet"
 	id = "glass"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/glass = MINERAL_MATERIAL_AMOUNT)
 	build_path = /obj/item/stack/sheet/glass
 	category = list("initial","Construction")
@@ -46,7 +46,7 @@
 /datum/design/rglass
 	name = "Reinforced Glass"
 	id = "rglass"
-	build_type = AUTOLATHE | SMELTER | PROTOLATHE
+	build_type = AUTOLATHE | SMELTER | PROTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 1000, /datum/material/glass = MINERAL_MATERIAL_AMOUNT)
 	build_path = /obj/item/stack/sheet/rglass
 	category = list("initial","Construction","Stock Parts")

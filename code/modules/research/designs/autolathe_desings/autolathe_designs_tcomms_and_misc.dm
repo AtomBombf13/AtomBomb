@@ -8,10 +8,10 @@
 /datum/design/signaler
 	name = "Remote Signaling Device"
 	id = "signaler"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 400, /datum/material/glass = 120)
 	build_path = /obj/item/assembly/signaler
-	category = list("initial", "T-Comm")
+	category = list("initial", "T-Comm", "Equipment")
 
 /*
 /datum/design/radio_headset
@@ -26,10 +26,10 @@
 /datum/design/bounced_radio
 	name = "Station Bounced Radio"
 	id = "bounced_radio"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 75, /datum/material/glass = 25)
 	build_path = /obj/item/radio/off
-	category = list("initial", "T-Comm")
+	category = list("initial", "T-Comm", "Equipment")
 
 /datum/design/intercom_frame
 	name = "Intercom Frame"
@@ -62,7 +62,7 @@
 /datum/design/earmuffs
 	name = "Earmuffs"
 	id = "earmuffs"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 500)
 	build_path = /obj/item/clothing/ears/earmuffs
 	category = list("initial", "Misc")
@@ -94,51 +94,6 @@
 	category = list("initial","Tools","Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SERVICE
 
-/datum/design/cultivator
-	name = "Cultivator"
-	id = "cultivator"
-	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(/datum/material/iron=50)
-	build_path = /obj/item/cultivator
-	category = list("initial","Misc","Tool Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
-
-/datum/design/plant_analyzer
-	name = "Plant Analyzer"
-	id = "plant_analyzer"
-	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(/datum/material/iron = 30, /datum/material/glass = 20)
-	build_path = /obj/item/plant_analyzer
-	category = list("initial","Misc","Tool Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
-
-/datum/design/shovel
-	name = "Shovel"
-	id = "shovel"
-	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(/datum/material/iron = 50)
-	build_path = /obj/item/shovel
-	category = list("initial","Misc","Tool Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE | DEPARTMENTAL_FLAG_CARGO
-
-/datum/design/spade
-	name = "Spade"
-	id = "spade"
-	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(/datum/material/iron = 50)
-	build_path = /obj/item/shovel/spade
-	category = list("initial","Misc","Tool Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
-
-/datum/design/hatchet
-	name = "Hatchet"
-	id = "hatchet"
-	build_type = AUTOLATHE | PROTOLATHE
-	materials = list(/datum/material/iron = 15000)
-	build_path = /obj/item/hatchet
-	category = list("initial","Misc","Tool Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
-
 /datum/design/recorder
 	name = "Universal Recorder"
 	id = "recorder"
@@ -158,7 +113,7 @@
 /datum/design/igniter
 	name = "Igniter"
 	id = "igniter"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 50)
 	build_path = /obj/item/assembly/igniter
 	category = list("initial", "Misc")
@@ -174,7 +129,7 @@
 /datum/design/timer
 	name = "Timer"
 	id = "timer"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 50)
 	build_path = /obj/item/assembly/timer
 	category = list("initial", "Misc")
@@ -291,3 +246,29 @@
 	materials = list(/datum/material/iron = 6500, /datum/material/glass = 50)
 	build_path = /obj/item/weaponcrafting/improvised_parts/trigger_assembly
 	category = list("initial", "Misc")
+
+/datum/design/spraycan
+	name = "Spraycan"
+	id = "spraycan"
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
+	materials = list(/datum/material/iron = 100, /datum/material/glass = 250)
+	build_path = /obj/item/toy/crayon/spraycan
+	category = list("initial", "Misc")
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
+
+/datum/design/spraybottle
+	name = "Spray bottle (cleaning)"
+	id = "spraybottle"
+	build_type = AUTOLATHE | AUTOLATHE_PRIMITIVE
+	materials = list(/datum/material/glass =  QUARTER_SHEET)
+	build_path = /obj/item/reagent_containers/spray/empty
+	category = list("initial", "Misc")
+
+/datum/design/bucket
+	name = "Bucket"
+	id = "bucket"
+	build_type = AUTOLATHE | PROTOLATHE | AUTOLATHE_PRIMITIVE
+	materials = list(/datum/material/iron =  QUARTER_SHEET)
+	build_path = /obj/item/reagent_containers/glass/bucket
+	category = list("initial", "Misc")
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE

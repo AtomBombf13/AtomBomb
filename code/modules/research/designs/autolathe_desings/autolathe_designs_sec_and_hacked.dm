@@ -75,10 +75,10 @@
 /datum/design/handcuffs
 	name = "Handcuffs"
 	id = "handcuffs"
-	build_type = AUTOLATHE | NO_PUBLIC_LATHE
-	materials = list(/datum/material/iron = 500)
+	build_type = AUTOLATHE | NO_PUBLIC_LATHE | AUTOLATHE_PRIMITIVE
+	materials = list(/datum/material/iron = QUARTER_SHEET)
 	build_path = /obj/item/restraints/handcuffs
-	category = list("hacked", "Security")
+	category = list("initial", "Security", "Equipment")
 
 /*
 /datum/design/rifle_receiver
@@ -196,7 +196,7 @@
 	name = "Butcher's Cleaver"
 	id = "cleaver"
 	build_type = AUTOLATHE | NO_PUBLIC_LATHE
-	materials = list(/datum/material/iron = 18000)
+	materials = list(/datum/material/iron =  ONE_SHEET*4)
 	build_path = /obj/item/kitchen/knife/butcher
 	category = list("hacked", "Dinnerware")
 
