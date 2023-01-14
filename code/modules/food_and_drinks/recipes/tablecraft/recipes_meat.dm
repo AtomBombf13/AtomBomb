@@ -39,7 +39,7 @@
 /datum/crafting_recipe/food/meatsalted
 	name = "Salted meat"
 	reqs = list(
-		/datum/reagent/consumable/sodiumchloride = 1,
+		/datum/reagent/consumable/sodiumchloride = 5,
 		/obj/item/reagent_containers/food/snacks/meat/steak = 1,
 	)
 	result = /obj/item/reagent_containers/food/snacks/meatsalted
