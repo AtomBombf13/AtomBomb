@@ -30,7 +30,6 @@
 /obj/item/ammo_casing/spent
 	name = "spent bullet casing"
 	BB = null
-	deduct_powder_and_bullet_mats()
 
 /obj/item/ammo_casing/Initialize()
 	. = ..()

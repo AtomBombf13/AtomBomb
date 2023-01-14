@@ -505,7 +505,7 @@
 /obj/item/projectile/bullet/m5mm/shock
 	name = "5mm shock bullet"
 	damage = BULLET_DAMAGE_RIFLE_LIGHT * BULLET_SURPLUS_MULT * BULLET_DAMAGE_SHOCK
-	stamina = RUBBERY_STAMINA_RIFLE_LIGHT * BULLET_SURPLUS_MULT * BULLET_STAMINA_SHOCK
+	stamina = RUBBERY_STAMINA_RIFLE_LIGHT * BULLET_HANDLOAD_MULT *  BULLET_STAMINA_SHOCK * 0.4
 	spread = BULLET_SPREAD_SURPLUS
 	damage_type = BURN // still checks bullet resist
 	recoil = BULLET_RECOIL_RIFLE_LIGHT

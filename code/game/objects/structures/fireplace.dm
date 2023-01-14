@@ -64,6 +64,13 @@
 			</span>")
 		adjust_fuel_timer(PAPER_BURN_TIMER)
 		qdel(T)
+	else if(istype(T, /obj/item/stack/sheet/coke)) // added for coke to work as fuel
+		var/obj/item/stack/sheet/coke/C = T
+		if(C.use(1))
+			user.visible_message("<span class='notice'>[user] throws [T] into \
+				[src].</span>", "<span class='notice'>You throw [T] into [src].\
+			</span>")
+			adjust_fuel_timer(LOG_BURN_TIMER)
 	else if(try_light(T,user))
 		return
 	else
@@ -110,7 +117,7 @@
 		put_out()
 		return
 
-	playsound(src, 'sound/effects/comfyfire.ogg',50,0, 0, 1)
+	playsound(src, 'sound/effects/comfyfire.ogg',15,0, 0, 1)
 	var/turf/T = get_turf(src)
 	T.hotspot_expose(500, 5)
 	update_icon()

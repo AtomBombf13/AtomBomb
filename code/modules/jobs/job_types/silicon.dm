@@ -86,7 +86,7 @@ Cyborg
 	supervisors = "Overseer/Vault"	//Nodrak
 	selection_color = "#ddffdd"
 	minimal_player_age = 21
-	exp_requirements = 300
+	exp_requirements = 600
 	exp_type = EXP_TYPE_FALLOUT
 
 /datum/job/cyborg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE, datum/outfit/outfit_override = null, client/preference_source)
@@ -111,7 +111,7 @@ Mr. Handy
 	supervisors = "Your Creators"	//Nodrak
 	selection_color = "#ddffdd"
 	minimal_player_age = 21
-	exp_requirements = 6000
+	exp_requirements = 12000
 	exp_type = EXP_TYPE_CREW
 
 /datum/job/cyborg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE, datum/outfit/outfit_override = null, client/preference_source)

@@ -52,6 +52,7 @@ Access
 	..()
 	if(visualsOnly)
 		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/ncruniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrgate)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
@@ -95,7 +96,8 @@ Access
 	uniform	= /obj/item/clothing/under/f13/ncr/ncr_officer
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
 	accessory = /obj/item/clothing/accessory/ncr
-	head = /obj/item/clothing/head/beret/ncr
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t45d/sierra
+	suit = /obj/item/clothing/suit/armor/power_armor/t45d/sierra
 	belt = /obj/item/storage/belt/holster/leg
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	gloves = /obj/item/clothing/gloves/f13/leather
@@ -165,7 +167,7 @@ Access
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN_NCR
 	outfit = /datum/outfit/job/ncr/f13captain
-	exp_requirements = 1900
+	exp_requirements = 3800
 
 	loadout_options = list(
 		/datum/outfit/loadout/captainbackline,	// Republics Pride, El Capitan
@@ -201,11 +203,12 @@ Access
 	belt = /obj/item/storage/belt/military/ncr
 	r_pocket = /obj/item/binoculars
 	backpack_contents = list(
+		/obj/item/storage/lockbox/medal = 1,
 		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/megaphone = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 3,
 		/obj/item/lighter = 1,
-		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 1,
+		/obj/item/reagent_containers/food/snacks/grown/tobacco/dried = 2,
 		/obj/item/melee/onehanded/knife/trench = 1
 		)
 
@@ -243,7 +246,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
 	outfit = /datum/outfit/job/ncr/f13lieutenant
-	exp_requirements = 1250
+	exp_requirements = 2500
 
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -272,6 +275,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
 
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_five = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 3,
@@ -298,13 +302,13 @@ Access
 	total_positions = 2
 	spawn_positions = 2
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
-	supervisors = "Sergeant First Class and Above"
+	supervisors = "Lieutenant and Above"
 	selection_color = "#fff5cc"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC)
 	display_order = JOB_DISPLAY_ORDER_SERGEANT
 	outfit = /datum/outfit/job/ncr/f13sergeant
-	exp_requirements = 500
+	exp_requirements = 1000
 
 	loadout_options = list( // ALL: Bayonet, M1911 sidearm
 		/datum/outfit/loadout/sergeantrifleman,	// Worn Assault Carbine
@@ -354,7 +358,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m5mm = 2,
-		/obj/item/storage/box/ration/menu_two = 1,
+		/obj/item/storage/box/ration/menu_seven = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		/obj/item/flashlight/seclite = 1
 		)
@@ -365,7 +369,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 2,
-		/obj/item/storage/box/ration/menu_eight = 1,
+		/obj/item/storage/box/ration/menu_nine = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/book/granter/trait/trekking = 1
 		)
@@ -375,6 +379,7 @@ Access
 	head = /obj/item/clothing/head/f13/ncr
 	suit_store = /obj/item/gun/ballistic/shotgun/trench //Over thereee over thereeeee spread the spread the word over thereeee
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_eleven = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/ammo_box/shotgun/incendiary = 1,
 		/obj/item/clothing/mask/gas = 1,
@@ -388,6 +393,7 @@ Access
 	head = /obj/item/clothing/head/f13/ncr/mp
 	suit_store = /obj/item/gun/ballistic/shotgun/police
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_six = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/clothing/accessory/armband/black = 1,
 		/obj/item/melee/classic_baton/militarypolice = 1,
@@ -409,11 +415,11 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_REPRESENTATIVE
 	outfit = /datum/outfit/job/ncr/f13representative
-	exp_requirements = 750
+	exp_requirements = 1500
 
 	loadout_options = list(
 		/datum/outfit/loadout/repsenator,
-		/datum/outfit/loadout/repagent,
+		/datum/outfit/loadout/reposiagent,
 		/datum/outfit/loadout/repambassador
 		)
 
@@ -448,21 +454,18 @@ Access
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncr = 1,
-		/obj/item/storage/box/ration/menu_two = 1
+		/obj/item/clothing/accessory/lawyers_badge = 1
 		)
 
-/datum/outfit/loadout/repagent
-	name = "Government Agent"
+/datum/outfit/loadout/reposiagent
+	name = "OSI Agent"
 	glasses = /obj/item/clothing/glasses/sunglasses
-	suit = /obj/item/clothing/under/rank/security/detective/grey
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	accessory = /obj/item/clothing/accessory/pocketprotector/full
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncr = 1,
-		/obj/item/storage/box/ration/menu_two = 1,
-		/obj/item/clothing/accessory/waistcoat = 1,
-		/obj/item/clothing/suit/toggle/lawyer/black = 1,
-		/obj/item/storage/briefcase = 1,
-		/obj/item/clothing/accessory/lawyers_badge = 1
+		/obj/item/clothing/accessory/medal/plasma/nobel_science = 1	
 		)
 
 /datum/outfit/loadout/repambassador
@@ -472,7 +475,7 @@ Access
 	head = /obj/item/clothing/head/helmet/f13/rustedcowboyhat
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncr = 1,
-		/obj/item/storage/box/ration/menu_two = 1
+		/obj/item/storage/briefcase = 1
 		)
 
 ///////////////
@@ -493,7 +496,7 @@ Access
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_NCR3, ACCESS_NCR4, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_NCR3, ACCESS_NCR4, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13vetranger
-	exp_requirements = 1750
+	exp_requirements = 3500
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 		/datum/outfit/loadout/vrclassic, // DKS, Sequoia
@@ -542,6 +545,7 @@ Access
 	name = "Sniper Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/automatic/sniper
 	backpack_contents = list(
+		/obj/item/storage/box/ration/ranger_dinner = 1,
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
 		/obj/item/ammo_box/c4570box/knockback = 1,
@@ -552,6 +556,7 @@ Access
 	name = "Rifler Veteran Ranger"
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
+		/obj/item/storage/box/ration/ranger_lunch = 1,
 		/obj/item/ammo_box/loader/c4570 = 3,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
 		/obj/item/book/granter/trait/rifleman = 1
@@ -561,6 +566,7 @@ Access
 	name = "Veteran Ranger Shotgunner"
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/citykiller
 	backpack_contents = list(
+		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/ammo_box/magazine/city12g = 3,
 		/obj/item/gun/ballistic/revolver/sequoia = 1,
 		/obj/item/ammo_box/c4570box/knockback = 1
@@ -581,7 +587,7 @@ Access
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13ranger
-	exp_requirements = 500
+	exp_requirements = 1000
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 	/datum/outfit/loadout/rangertrail, // Trail Carbine, .357 Revolvers
@@ -628,6 +634,7 @@ Access
 	neck = /obj/item/storage/belt/holster/leg
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
+		/obj/item/storage/box/ration/ranger_lunch = 1,
 		/obj/item/ammo_box/tube/m44 = 2,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
@@ -642,6 +649,7 @@ Access
 	neck = /obj/item/storage/belt/holster/leg
 	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
+		/obj/item/storage/box/ration/ranger_dinner = 1,
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/ballistic/revolver/revolver44 = 1,
 		/obj/item/ammo_box/loader/m44 = 2,
@@ -655,6 +663,7 @@ Access
 	neck = /obj/item/storage/belt/bandolier/reconbandolier
 	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	backpack_contents = list(
+		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1,
 		/obj/item/ammo_box/m44box = 1,
@@ -679,7 +688,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_HEAVYTROOPER
 	outfit = /datum/outfit/job/ncr/f13heavytrooper
-	exp_requirements = 375
+	exp_requirements = 750
 
 	loadout_options = list(
 		/datum/outfit/loadout/shockht,	// Minigun
@@ -708,22 +717,23 @@ Access
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/autoloader = 1,
 		/obj/item/ammo_box/magazine/pistol45/socom = 2,
-		/obj/item/storage/bag/money/small/ncrenlisted = 1
+		/obj/item/storage/bag/money/small/ncrenlisted = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1
 		) //E
 
 /datum/outfit/loadout/shockht
 	name = "Shock Heavy Trooper"
-	backpack_contents = list(
+	backpack_contents = list(	
 		/obj/item/minigunpackbal5mm = 1,
-		/obj/item/melee/onehanded/knife/bowie = 1
+		/obj/item/storage/box/ration/menu_four = 1
 		)
 
 /datum/outfit/loadout/supportht
 	name = "Support Heavy Trooper"
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_one = 1,
 		/obj/item/gun/ballistic/automatic/r84 = 1,
-		/obj/item/ammo_box/magazine/lmg = 1,
-		/obj/item/melee/onehanded/knife/bowie = 1
+		/obj/item/ammo_box/magazine/lmg = 1
 		)
 
 
@@ -741,7 +751,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATENGINEER
 	outfit = /datum/outfit/job/ncr/f13combatengineer
-	exp_requirements = 60
+	exp_requirements = 120
 
 	loadout_options = list( // ALL: Trench tool, Limited blueprints
 		/datum/outfit/loadout/combatengineerbuilder, // Police Carbine, X4 explosive, Extra materials
@@ -772,6 +782,7 @@ Access
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
+	ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
@@ -798,6 +809,7 @@ Access
 	glasses = /obj/item/clothing/glasses/welding
 	suit_store = /obj/item/gun/ballistic/automatic/assault_carbine/policerifle
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_three = 1,
 		/obj/item/ammo_box/magazine/m5mm = 1,
 		/obj/item/grenade/plastic/c4 = 2,
 		/obj/item/stack/sheet/metal/fifty = 1,
@@ -809,6 +821,7 @@ Access
 	name = "Minelayer"
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_ten = 1,
 		/obj/item/ammo_box/magazine/pistol10mm/extended = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
 		/obj/item/book/granter/trait/explosives = 1,
@@ -827,7 +840,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_MILITARY_POLICE
 	outfit = /datum/outfit/job/ncr/f13mp
-	exp_requirements = 150
+	exp_requirements = 300
 
 	access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR3)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR3)
@@ -846,6 +859,7 @@ Access
 	backpack = /obj/item/storage/backpack/satchel/trekker
 	suit_store = /obj/item/gun/ballistic/shotgun/police
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_three = 1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
 		/obj/item/ammo_box/magazine/pistol45 = 3,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
@@ -874,7 +888,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
 	outfit = /datum/outfit/job/ncr/f13combatmedic
-	exp_requirements = 60
+	exp_requirements = 120
 
 	access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2)
@@ -901,6 +915,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
 	box_two = /obj/item/storage/survivalkit/medical/adv
 	backpack_contents = list(
+		/obj/item/storage/box/ration/menu_five = 1,
 		/obj/item/ammo_box/magazine/pistol10mm = 2,
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/storage/firstaid/regular = 1,
@@ -947,7 +962,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_CORPORAL
 	outfit = /datum/outfit/job/ncr/f13corporal
-	exp_requirements = 90
+	exp_requirements = 180
 
 	loadout_options = list(
 		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Scout carbine, 9mm sidearm
@@ -994,7 +1009,7 @@ Access
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/ammo_box/magazine/pistol9mm/doublestack = 1,
-		/obj/item/storage/box/ration/menu_two = 1
+		/obj/item/storage/box/ration/menu_seven = 1
 		)
 
 /datum/outfit/loadout/corporalcqc		//I think this one sucks, personally.
@@ -1002,7 +1017,7 @@ Access
 	suit_store = /obj/item/gun/ballistic/shotgun/hunting
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/storage/box/ration/menu_one = 1,
+		/obj/item/storage/box/ration/menu_eleven = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 6
 		)
 
@@ -1014,7 +1029,7 @@ Access
 		/obj/item/binoculars = 1,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/ammo_box/magazine/pistol9mm/doublestack = 1,
-		/obj/item/storage/box/ration/menu_one = 1
+		/obj/item/storage/box/ration/menu_four = 1
 		)
 
 // TROOPER
@@ -1075,7 +1090,7 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 3,
 		/obj/item/melee/onehanded/knife/bayonet = 1,
-		/obj/item/storage/box/ration/menu_two = 1
+		/obj/item/storage/box/ration/menu_one = 1
 		)
 
 /datum/outfit/loadout/trooperfiresupport
@@ -1084,7 +1099,7 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
 		/obj/item/stack/sheet/mineral/sandbags = 10,
-		/obj/item/storage/box/ration/menu_eight = 1
+		/obj/item/storage/box/ration/menu_ten = 1
 		)
 
 /datum/outfit/loadout/trooperhunting
@@ -1093,7 +1108,7 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/stripper/a308 = 2,
 		/obj/item/stack/sheet/mineral/sandbags = 7,
-		/obj/item/storage/box/ration/menu_eight = 1
+		/obj/item/storage/box/ration/menu_six = 1
 		)
 
 /////////////////
@@ -1114,7 +1129,7 @@ Access
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR3, ACCESS_PUBLIC)
 	display_order = JOB_DISPLAY_ORDER_MEDICALOFFICER
 	outfit = /datum/outfit/job/ncr/f13medicalofficer
-	exp_requirements = 750
+	exp_requirements = 1500
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
@@ -1187,7 +1202,7 @@ Access
 	outfit = /datum/outfit/job/ncr/f13offdutyncr
 	access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC, ACCESS_NCR)
 	minimal_access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC, ACCESS_NCR)
-	exp_requirements = 60
+	exp_requirements = 120
 
 /datum/outfit/job/ncr/f13offdutyncr
 	name = "NCR Off-Duty"
@@ -1203,12 +1218,6 @@ Access
 		/obj/item/storage/bag/money/small/ncrofficers = 1
 		)
 
-/datum/outfit/job/ncr/f13offdutyncr/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/ncruniform)
-
 // NCR Citizen
 // Really only used for ID console
 /datum/job/ncr/f13ncrcitizen
@@ -1216,6 +1225,11 @@ Access
 	access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13ncrcitizen
+
+	loadout_options = list(
+	/datum/outfit/loadout/ncrmerchant,
+	/datum/outfit/loadout/ncrsharecropper
+	)
 
 /datum/outfit/job/ncr/f13ncrcitizen
 	name = "NCR Citizen (Role)"
@@ -1228,3 +1242,30 @@ Access
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2
 		)
+
+/datum/outfit/loadout/ncrmerchant
+	name = "NCR Merchant"
+	suit = /obj/item/clothing/suit/armor/light/duster/brahmin
+	gloves = /obj/item/clothing/gloves/fingerless
+	shoes = /obj/item/clothing/shoes/f13/explorer
+
+/datum/outfit/loadout/ncrsharecropper
+	name = "NCR Sharecropper"
+	backpack_contents = list(
+		/obj/item/clothing/gloves/botanic_leather = 1,
+		/obj/item/storage/belt/utility/gardener = 1,
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/broom = 1,
+		/obj/item/twohanded/fireaxe = 1,
+		/obj/item/shovel/spade = 1,
+		/obj/item/seeds/ambrosia = 2,
+		/obj/item/seeds/tomato = 2,
+		/obj/item/seeds/wheat = 2,
+		/obj/item/seeds/corn = 2,
+		/obj/item/seeds/onion = 2,
+		/obj/item/seeds/soya = 2,
+		/obj/item/seeds/potato = 2,
+		/obj/item/seeds/sugarcane = 2,
+		/obj/item/seeds/olive = 2,
+	)

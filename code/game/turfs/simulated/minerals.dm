@@ -246,15 +246,15 @@
 	icon_state = "rock_lowchance"
 	mineralChance = 6
 	mineralSpawnChanceList = list(
-		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4, /turf/closed/mineral/titanium = 4,
-		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40, /turf/closed/mineral/lead = 30, /turf/closed/mineral/limestone = 20,
-		/*/turf/closed/mineral/gibtonite = 2, *//turf/closed/mineral/bscrystal = 1) //indestructable chance moved to child, /underground
+		/turf/closed/mineral/uranium = 1, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 3, /turf/closed/mineral/titanium = 4,
+		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 4, /turf/closed/mineral/iron = 40, /turf/closed/mineral/coal = 20, /turf/closed/mineral/lead = 20,
+		/turf/closed/mineral/limestone = 15, /*/turf/closed/mineral/gibtonite = 2, *//turf/closed/mineral/bscrystal = 1, ) //indestructable chance moved to child, /underground
 
 /turf/closed/mineral/random/low_chance/underground
 	mineralSpawnChanceList = list(
-		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4, /turf/closed/mineral/titanium = 4,
-		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40, /turf/closed/mineral/lead = 30, /turf/closed/mineral/limestone = 20,
-		/*/turf/closed/mineral/gibtonite = 2, *//turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/indestructible = 50) //fortuna edit, indestructible rocks added to chance list
+		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 3, /turf/closed/mineral/titanium = 4,
+		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 7, /turf/closed/mineral/iron = 40, /turf/closed/mineral/coal = 15, /turf/closed/mineral/lead = 20,
+		/turf/closed/mineral/limestone = 10, /*/turf/closed/mineral/gibtonite = 2, *//turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/indestructible = 50, ) //fortuna edit, indestructible rocks added to chance list
 
 /turf/closed/mineral/random/low_chance/earth_like
 	icon_state = "rock_lowchance_oxy"
