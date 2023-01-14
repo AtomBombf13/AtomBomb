@@ -104,8 +104,12 @@
 		return
 	//If the body has been fixed so that they would not be in crit when revived, give them oxyloss to put them back into crit
 	var/const/threshold = ((HEALTH_THRESHOLD_CRIT + HEALTH_THRESHOLD_DEAD) * 0.5)
+	var/time_since_death = world.time - T.timeofdeath
+	var/tlimit = CONFIG_GET(number/death_revive_time) MINUTES
 	if (revived_mob.health > threshold)
 		revived_mob.adjustOxyLoss(revived_mob.health - threshold, 0)
+	if(time_since_death > tlimit)
+		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, max(0, min(99, ((tlimit - time_since_death) / tlimit * 100))), 150)
 	else
 		var/overall_damage = total_brute + total_burn + revived_mob.getToxLoss() + revived_mob.getOxyLoss()
 		var/mobhealth = revived_mob.health
@@ -120,7 +124,5 @@
 	revived_mob.emote("gasp")
 	revived_mob.Jitter(20)
 	log_combat(revived_mob, revived_mob, "revived", src)
-	if(time_since_death > tlimit)
-		revived_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, max(0, min(99, ((tlimit - time_since_death) / tlimit * 100))), 150)
 	//add_logs(user, revived_mob, "revived (smelling salts)", src)
 	in_use = FALSE
