@@ -11,7 +11,7 @@
 /obj/item/stack/crafting/armor_plate
 	name = "armor plate"
 	desc = "an armor plate used to upgrade some types of armor."
-	icon_state = "plate"
+	icon_state = "sheet-plate"
 	merge_type = /obj/item/stack/crafting/armor_plate
 
 /obj/item/stack/crafting/armor_plate/five

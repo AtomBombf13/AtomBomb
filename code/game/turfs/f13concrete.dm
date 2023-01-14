@@ -28,7 +28,6 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 
 /obj/item/stack/sheet/mineral/limestone
 	name = "limestone chunks"
-	icon = 'modular_atom/icons/stackable_items.dmi'
 	icon_state = "sheet-limestone"
 	singular_name = "limestone chunk"
 	layer = LOW_ITEM_LAYER
@@ -126,7 +125,6 @@ Concrete = Cement 1u + Water 2u + Silicon 7u
 
 /obj/item/stack/sheet/mineral/concrete
 	name = "concrete"
-	icon = 'modular_atom/icons/stackable_items.dmi'
 	icon_state = "sheet-concrete"
 	singular_name = "concrete"
 	layer = LOW_ITEM_LAYER

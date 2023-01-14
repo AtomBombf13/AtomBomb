@@ -809,10 +809,10 @@
 	. = ..()
 	if(length(contents))
 		. += span_notice("Alt-click it to quickly draw the blade.")
-
+/*	COMMENTED OUT TO PREVENT RUNTIME IN CHILD, CANT HAVE NULL STARTING SWORD
 /obj/item/storage/belt/sabre/PopulateContents()
 	new starting_sword(src)
-
+*/
 /obj/item/storage/belt/sabre/rapier
 	name = "rapier sheath"
 	desc = "A sinister, thin sheath, suitable for a rapier."
