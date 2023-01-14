@@ -199,7 +199,7 @@
 	buildstackamount = 1
 
 /obj/structure/junk/small/tv
-	name = "pre-war electronic junk"
+	name = "broken television set"
 	desc = "Broken, a useless relic of the past."
 	icon_state = "junk_tv"
 	buildstacktype = /obj/item/stack/crafting/electronicparts

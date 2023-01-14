@@ -34969,7 +34969,7 @@
 /area/f13/tunnel)
 "xEA" = (
 /obj/structure/rack,
-/obj/item/clothing/head/helmet/f13/combat/environmental,
+/obj/effect/spawner/lootdrop/f13/armor/tier1,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/hospital)
 "xEW" = (

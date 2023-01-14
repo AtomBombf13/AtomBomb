@@ -308,6 +308,12 @@
 	icon_state = "ncr_dressjack"
 	item_state = "ncr_dressjack"
 
+/obj/item/clothing/suit/armor/ncrarmor/ncr_codressjack
+	name = "NCR dress jacket"
+	desc = "A brown dress uniform jacket intended for commissioned NCRA personnel."
+	icon_state = "ncr_codressjack"
+	item_state = "ncr_codressjack"
+
 // until togglesuits are made into normal suits, treat these as jackets
 
 /obj/item/clothing/suit/toggle/labcoat
