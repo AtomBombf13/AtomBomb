@@ -24,7 +24,7 @@
 
 /obj/item/clothing/suit/armor/medium
 	name = "medium armor template"
-	//icon = 'icons/fallout/clothing/armored_medium.dmi'
+	//icon = 'icons/fallout/clothing/armored_medium.dmi'		Why...so messy
 	//mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	slowdown = 0.5
 	cold_protection = CHEST|GROIN
@@ -575,6 +575,8 @@
 /obj/item/clothing/suit/armor/medium/raider/wastewar
 	name = "wasteland warrior armor"
 	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "wastewar"
 	item_state = "wastewar"
 	resistance_flags = FLAMMABLE

@@ -684,7 +684,7 @@
  * Racks
  */
 
-// Wooden shelf. Construct by crafting, not rack parts.
+// Wooden shelf. Construct by crafting, not rack parts.  THIS IS EVIL AND MUST DIE
 /obj/structure/shelf_wood
 	name = "wooden shelf"
 	desc = "For storage."
@@ -707,7 +707,7 @@
 	density = TRUE
 	anchored = TRUE
 	pass_flags_self = PASSTABLE | LETPASSTHROW
-	max_integrity = 20
+	max_integrity = 50
 	attack_hand_speed = CLICK_CD_MELEE
 	attack_hand_is_action = TRUE
 
@@ -715,6 +715,7 @@
 /obj/structure/rack/shelf_metal
 	name = "metal shelf"
 	desc = "Metal shelf."
+	icon = 'modular_atom/icons/shelf.dmi'
 	icon_state = "shelf"
 
 /obj/structure/rack/examine(mob/user)
@@ -787,6 +788,10 @@
 		density = FALSE
 		var/obj/item/rack_parts/newparts = new(loc)
 		transfer_fingerprints_to(newparts)
+	else
+		density = FALSE
+		var/obj/item/stack/sheet/mineral/wood/plank = new(loc)
+		transfer_fingerprints_to(plank)
 	qdel(src)
 
 

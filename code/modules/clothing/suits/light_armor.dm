@@ -704,7 +704,7 @@
 	name = "makeshift vest"
 	desc = "A makeshift vest made of heat-resistant fiber."
 	icon = 'icons/obj/clothing/suits.dmi'
-	mob_overlay_icon = null
+	mob_overlay_icon = null // ????
 	icon_state = "durathread"
 	item_state = "durathread"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
@@ -758,9 +758,9 @@
 // ARMOR KITS //
 ////////////////
 
-/obj/item/clothing/suit/armor/light/kit
+/obj/item/clothing/suit/armor/light/kit // use duct tape, metal sheet, wirecutter on it to change to another kit subtype
 	name = "armor kit"
-	desc = "Separate armor parts you can wear over your clothing, giving basic protection against bullets entering some of your organs. Very well ventilated."
+	desc = "Separate armor parts you can wear over your clothing, giving basic protection against bullets entering some of your organs. Very well ventilated. Can be modified using duct tape, metal sheets or wirecutters for different styles."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	icon_state = "armorkit"

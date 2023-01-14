@@ -3738,6 +3738,7 @@
 #include "modular_atom\blacksmith\finished_items.dm"
 #include "modular_atom\blacksmith\furnace.dm"
 #include "modular_atom\blacksmith\smithed_items.dm"
+#include "modular_atom\code\modular_atom.dm"
 #include "modular_atom\fashion\code\clothing_fashion.dm"
 #include "modular_atom\fashion\code\cosmetics.dm"
 #include "modular_atom\kitchen_50s\code\kitchen_50s.dm"

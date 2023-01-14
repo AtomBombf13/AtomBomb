@@ -564,7 +564,7 @@
 
 /obj/machinery/autolathe/ammo
 	name = "reloading bench"
-	icon = 'icons/obj/machines/reloadingbench.dmi'
+	icon = 'modular_atom/icons/ammo_lathe.dmi'
 	desc = "An ammo bench that utilizes metal and other materials to make ammo and magazines."
 	circuit = /obj/item/circuitboard/machine/autolathe/ammo
 	stored_research = /datum/techweb/specialized/autounlocking/autolathe/ammo
@@ -611,21 +611,25 @@
 		if(!simple && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_one))
 			to_chat(user, "<span class='notice'>You upgrade [src] with simple ammunition schematics.</span>")
 			simple = TRUE
+			add_overlay("book1")
 			qdel(O)
 			return
 		if(!basic && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_two))
 			to_chat(user, "<span class='notice'>You upgrade [src] with basic ammunition schematics.</span>")
 			basic = TRUE
+			add_overlay("book2")
 			qdel(O)
 			return
 		else if(!intermediate && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_three))
 			to_chat(user, "<span class='notice'>You upgrade [src] with intermediate ammunition schematics.</span>")
 			intermediate = TRUE
+			add_overlay("book3")
 			qdel(O)
 			return
 		else if(!advanced && istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
 			to_chat(user, "<span class='notice'>You upgrade [src] with advanced ammunition schematics.</span>")
 			advanced = TRUE
+			add_overlay("book4")
 			qdel(O)
 			return
 	return ..()
@@ -821,18 +825,27 @@
 		new /obj/item/book/granter/crafting_recipe/gunsmith_three(src)
 	if(advanced)
 		new /obj/item/book/granter/crafting_recipe/gunsmith_four(src)
+	cut_overlays()
 	return
 
 /obj/machinery/autolathe/ammo/unlocked_basic
 	desc = "A ammo bench where you can make ammo and magazines. Copies of Guns and Ammo, parts one and two, can be found in a drawer."
-	simple = 1
-	basic = 1
+	simple = TRUE
+	basic = TRUE
+
+/obj/machinery/autolathe/ammo/unlocked_basic/Initialize()
+	. = ..()
+	add_overlay("book2")
 
 /obj/machinery/autolathe/ammo/unlocked
-	simple = 1
-	basic = 1
-	intermediate = 1
-	advanced = 1
+	simple = TRUE
+	basic = TRUE
+	intermediate = TRUE
+	advanced = TRUE
+
+/obj/machinery/autolathe/ammo/unlocked/Initialize()
+	. = ..()
+	add_overlay("book4")
 
 /obj/machinery/autolathe/ammo/improvised
 	name = "improvised handloader bench"

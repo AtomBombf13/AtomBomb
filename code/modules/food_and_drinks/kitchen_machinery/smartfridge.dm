@@ -681,6 +681,7 @@
 /obj/machinery/smartfridge/bottlerack/alchemy_rack
 	name = "alchemy rack"
 	desc = "A neatly organized cupboard for the storage of homemade remedies and flasks."
+	icon = 'modular_atom/icons/racks.dmi'	
 	icon_state = "alchemyrack"
 	max_n_of_items = 100
 
