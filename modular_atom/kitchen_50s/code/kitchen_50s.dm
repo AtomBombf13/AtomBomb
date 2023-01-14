@@ -363,3 +363,21 @@
 	add_overlay("bonfire_grill")
 	add_overlay("bonfire_stones")
 
+/*
+GRILL TAKES COAL, COKE, NEW ANIMATION. See grill.dm
+/obj/machinery/grill
+	icon = 'modular_atom/kitchen_50s/icons/kitchen32x64.dmi'
+	plane = MOB_PLANE
+	layer = ABOVE_MOB_LAYER
+
+CAMPFIRE POTBELLU STOVE NOW TAKES COAL, COKE; NEW ANIMATION, SOUNDS, GAUZE STERILIZE. See campfire.dm
+/obj/structure/campfire
+	var/datum/looping_sound/campfire/campfire_loop
+
+/obj/structure/campfire/stove
+	icon = 'modular_atom/kitchen_50s/icons/kitchen32x64.dmi'
+	plane = MOB_PLANE // so the smoke covers mobs
+	layer = ABOVE_MOB_LAYER // so the smoke covers mobs
+
+matchbox proc updated in boxes.dm
+*/
