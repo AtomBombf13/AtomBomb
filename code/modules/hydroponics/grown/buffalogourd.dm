@@ -1,7 +1,11 @@
 /obj/item/reagent_containers/food/snacks/roastseeds/buffalogourd
 	name = "roasted gourd seeds"
 	desc = "Well prepared crispy buffalo gourd seeds, full of chewy protein."
-	list_reagents = list(/datum/reagent/consumable/cooking_oil = 1, /datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 1.5)
+	list_reagents = list(
+		/datum/reagent/consumable/cooking_oil = 1,
+		/datum/reagent/consumable/nutriment = 2,
+		/datum/reagent/consumable/nutriment/vitamin = 1.5
+		)
 
 /obj/item/seeds/buffalogourd
 	name = "pack of buffalo gourd seeds"
@@ -14,7 +18,9 @@
 	icon_grow = "gourd-grow"
 	icon_dead = "gourd-dead"
 	icon_harvest = "gourd-harvest"
-	reagents_add = list(/datum/reagent/water = 0.2,  /datum/reagent/toxin = 0.1)
+	reagents_add = list(
+		/datum/reagent/water = 0.2, 
+		/datum/reagent/toxin = 0.1)
 	lifespan = 50
 	endurance = 40
 	maturation = 10
@@ -30,7 +36,11 @@
 /obj/item/reagent_containers/food/snacks/roastseeds/buffalogourd
 	name = "roasted gourd seeds"
 	desc = "Well prepared crispy buffalo gourd seeds, full of chewy protein."
-	list_reagents = list(/datum/reagent/consumable/cooking_oil = 1, /datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 1.5)
+	list_reagents = list(
+		/datum/reagent/consumable/cooking_oil = 1,
+		/datum/reagent/consumable/nutriment = 2,
+		/datum/reagent/consumable/nutriment/vitamin = 1.5
+		)
 
 /obj/item/reagent_containers/food/snacks/grown/buffalogourd
 	seed = /obj/item/seeds/buffalogourd

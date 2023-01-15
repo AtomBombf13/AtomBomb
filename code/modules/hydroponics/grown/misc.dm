@@ -16,7 +16,10 @@
 	grind_results = list(/datum/reagent/mustardgrind = 1)
 	growing_icon = 'icons/obj/hydroponics/growing_flowers.dmi'
 	genes = list(/datum/plant_gene/trait/plant_type/weed_hardy)
-	mutatelist = list(/obj/item/seeds/starthistle/corpse_flower, /obj/item/seeds/galaxythistle)
+	mutatelist = list(
+		/obj/item/seeds/starthistle/corpse_flower,
+		/obj/item/seeds/galaxythistle
+		)
 
 /obj/item/seeds/starthistle/harvest(mob/user)
 	var/obj/machinery/hydroponics/parent = loc
@@ -81,7 +84,10 @@
 	growing_icon = 'icons/obj/hydroponics/growing_flowers.dmi'
 	genes = list(/datum/plant_gene/trait/plant_type/weed_hardy, /datum/plant_gene/trait/invasive)
 	mutatelist = list()
-	reagents_add = list(/datum/reagent/consumable/nutriment = 0.05, /datum/reagent/medicine/silibinin = 0.1)
+	reagents_add = list(
+		/datum/reagent/consumable/nutriment = 0.05,
+		/datum/reagent/medicine/silibinin = 0.1
+		)
 
 /obj/item/seeds/galaxythistle/Initialize(mapload, nogenes = FALSE)
 	. = ..()
@@ -116,7 +122,10 @@
 	growthstages = 1
 	growing_icon = 'icons/obj/hydroponics/growing_vegetables.dmi'
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.1)
+	reagents_add = list(
+		/datum/reagent/consumable/nutriment/vitamin = 0.04,
+		/datum/reagent/consumable/nutriment = 0.1
+		)
 
 	//mutatelist = list(/obj/item/seeds/replicapod)
 
@@ -176,7 +185,12 @@
 	growthstages = 2
 	rarity = 60 // Obtainable only with xenobio+superluck.
 	growing_icon = 'icons/obj/hydroponics/growing_fruits.dmi'
-	reagents_add = list(/datum/reagent/sulfur = 0.1, /datum/reagent/carbon = 0.1, /datum/reagent/nitrogen = 0.07, /datum/reagent/potassium = 0.05)
+	reagents_add = list(
+		/datum/reagent/sulfur = 0.1,
+		/datum/reagent/carbon = 0.1,
+		/datum/reagent/nitrogen = 0.07,
+		/datum/reagent/potassium = 0.05
+		)
 
 /obj/item/reagent_containers/food/snacks/grown/shell/gatfruit
 	seed = /obj/item/seeds/gatfruit
@@ -198,7 +212,11 @@
 	plantname = "Cherry Bomb Tree"
 	product = /obj/item/reagent_containers/food/snacks/grown/cherry_bomb
 	mutatelist = list()
-	reagents_add = list(/datum/reagent/consumable/nutriment = 0.1, /datum/reagent/consumable/sugar = 0.1, /datum/reagent/blackpowder = 0.7)
+	reagents_add = list(
+		/datum/reagent/consumable/nutriment = 0.1,
+		/datum/reagent/consumable/sugar = 0.1,
+		/datum/reagent/blackpowder = 0.7
+		)
 	rarity = 60 //See above
 
 /obj/item/reagent_containers/food/snacks/grown/cherry_bomb
