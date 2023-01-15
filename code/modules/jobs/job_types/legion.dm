@@ -129,7 +129,7 @@ Access
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CENTURION
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
-	exp_requirements = 750
+	exp_requirements = 1500
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
@@ -223,7 +223,7 @@ Access
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_DECANVET
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
-	exp_requirements = 450
+	exp_requirements = 900
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1)
@@ -322,12 +322,13 @@ Access
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2)
-	exp_requirements = 360
+	exp_requirements = 720
 
 	loadout_options = list(	//ALL: Gladius, Smokebomb
 		/datum/outfit/loadout/decprimfront,	// Lever action, .44 revolver, Legion lance, Throwing knives
 		/datum/outfit/loadout/decprimrear,	// Legion shield, Ballistic fist
-		/datum/outfit/loadout/decprimboom // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, Frag grenades, Coffepot bomb
+		/datum/outfit/loadout/decprimwar // Spatha, .44 revolver, Bolas
 		)
 
 	matchmaking_allowed = list(
@@ -397,8 +398,16 @@ Access
 		/obj/item/grenade/f13/frag = 2,
 		/obj/item/grenade/homemade/coffeepotbomb = 1
 		)
-
-
+		
+/datum/outfit/loadout/decprimwar
+	name = "Warmonger Prime Decanus"
+	suit_store = /obj/item/melee/onehanded/machete/spatha
+	backpack_contents = list(
+		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
+		/obj/item/ammo_box/loader/m44 = 2,
+		/obj/item/restraints/legcuffs/bola = 2
+		)
 
 // ----------------- RECRUIT DECANUS ---------------------
 
@@ -413,7 +422,7 @@ Access
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2)
-	exp_requirements = 300
+	exp_requirements = 600
 
 	loadout_options = list(
 		/datum/outfit/loadout/recdeclegion,	// Uzi, Bumper sword, Smokebomb
@@ -496,7 +505,7 @@ Access
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2, ACCESS_LEGION_COMMAND)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2, ACCESS_LEGION_COMMAND)
-	exp_requirements = 360
+	exp_requirements = 720
 
 	loadout_options = list(
 		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his Ripper and Tiger claws
@@ -584,7 +593,7 @@ Access
 	supervisors = "the Decani and the Centurion. Note that you aren't underling of assassins and neither are you equal to veterans."
 	display_order = JOB_DISPLAY_ORDER_EXPLORER
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
-	exp_requirements = 150
+	exp_requirements = 300
 
 	loadout_options = list(	// ALL: .45 Revolver, Machete
 		/datum/outfit/loadout/expambusher,	// Lever-action shotgun, Bottlecap mine, MP5
@@ -642,9 +651,9 @@ Access
 
 /datum/outfit/loadout/expsniper
 	name = "Sniper"
-	suit_store = /obj/item/gun/ballistic/rifle/mag/commando
+	suit_store = /obj/item/gun/ballistic/rifle/hunting
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/pistol45/socom = 3,
+		/obj/item/ammo_box/stripper/a308 = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/grenade/plastic/c4 = 1
@@ -664,7 +673,7 @@ Access
 	display_order = JOB_DISPLAY_ORDER_ORATOR
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION3, ACCESS_LEGION_COMMAND, ACCESS_LEGION2, ACCESS_CHANGE_IDS, ACCESS_LEGION1, ACCESS_LEGION4)
-	exp_requirements = 750
+	exp_requirements = 1500
 
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// .357 Revolver, Spatha
@@ -715,7 +724,7 @@ Access
 	supervisors = "the Decani and Centurion"
 	display_order = JOB_DISPLAY_ORDER_VETLEGIONARY
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
-	exp_requirements = 300
+	exp_requirements = 600
 
 	loadout_options = list(	//ALL: Gladius
 		/datum/outfit/loadout/vetaxe,	// AXE AND FISTS AND NOTHING FUCKING ELSE
@@ -822,13 +831,14 @@ Access
 	description = "A front line soldier who has shown ability to obey and fought in some battles. The Legions muscle, the young men who will build the future with their own blood and sacrifice, for Caesar."
 	supervisors = "the Decani and Centurion"
 	display_order = JOB_DISPLAY_ORDER_LEGIONARY
-	exp_requirements = 60
+	exp_requirements = 120
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 
 	loadout_options = list(	//ALL: Forged Machete
 		/datum/outfit/loadout/primelancer,	// .357 revolver, Buckler, Bola
 		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Firebomb
-		/datum/outfit/loadout/primebrave	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primebrave,	// Hunting shotgun, Throwing spears
+		/datum/outfit/loadout/primepila		// Legion Lance, Extra Medicine
 		)
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -888,7 +898,13 @@ Access
 		/obj/item/storage/backpack/spearquiver = 1,
 		)
 
-
+/datum/outfit/loadout/primepila
+	name = "Pilum"
+	suit_store = /obj/item/twohanded/spear/lance
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+		)
+		
 
 // ----------------- RECRUIT --------------------- //
 
@@ -1078,9 +1094,10 @@ Access
 		/obj/item/defibrillator/primitive = 1,
 		/obj/item/clothing/neck/apron/medicus_legion = 1,
 		/obj/item/clothing/gloves/f13/crudemedical = 1,
-		/obj/item/storage/belt/medical/surgical/primitive = 1,
+		/obj/item/storage/belt/medical/primitive = 1,
 		/obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
+		/obj/item/healthanalyzer = 1
 		)
 
 /datum/outfit/job/CaesarsLegion/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1181,7 +1198,7 @@ Access
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
-	exp_requirements = 150
+	exp_requirements = 300
 
 	access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_LEGION, ACCESS_LEGION2)
@@ -1219,7 +1236,6 @@ Access
 	description = "A slave that survives the breaking camps is given a Legion appropriate name (latin-tribal inspired) and bull tattoo. Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men. Do NOT escape on your own, up to you how to handle it if forcibly freed by outside forces."
 	supervisors = "Officers and Camp Exactor first, then warriors."
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
-	exp_requirements = 0
 	outfit = /datum/outfit/job/CaesarsLegion/slave
 
 	loadout_options = list(

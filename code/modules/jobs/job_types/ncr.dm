@@ -167,7 +167,7 @@ Access
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN_NCR
 	outfit = /datum/outfit/job/ncr/f13captain
-	exp_requirements = 1900
+	exp_requirements = 3800
 
 	loadout_options = list(
 		/datum/outfit/loadout/captainbackline,	// Republics Pride, El Capitan
@@ -246,7 +246,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
 	outfit = /datum/outfit/job/ncr/f13lieutenant
-	exp_requirements = 1250
+	exp_requirements = 2500
 
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -308,7 +308,7 @@ Access
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC)
 	display_order = JOB_DISPLAY_ORDER_SERGEANT
 	outfit = /datum/outfit/job/ncr/f13sergeant
-	exp_requirements = 500
+	exp_requirements = 1000
 
 	loadout_options = list( // ALL: Bayonet, M1911 sidearm
 		/datum/outfit/loadout/sergeantrifleman,	// Worn Assault Carbine
@@ -415,7 +415,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_REPRESENTATIVE
 	outfit = /datum/outfit/job/ncr/f13representative
-	exp_requirements = 750
+	exp_requirements = 1500
 
 	loadout_options = list(
 		/datum/outfit/loadout/repsenator,
@@ -496,7 +496,7 @@ Access
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_NCR3, ACCESS_NCR4, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_NCR3, ACCESS_NCR4, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13vetranger
-	exp_requirements = 1750
+	exp_requirements = 3500
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 		/datum/outfit/loadout/vrclassic, // DKS, Sequoia
@@ -587,7 +587,7 @@ Access
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13ranger
-	exp_requirements = 500
+	exp_requirements = 1000
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 	/datum/outfit/loadout/rangertrail, // Trail Carbine, .357 Revolvers
@@ -688,7 +688,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_HEAVYTROOPER
 	outfit = /datum/outfit/job/ncr/f13heavytrooper
-	exp_requirements = 375
+	exp_requirements = 750
 
 	loadout_options = list(
 		/datum/outfit/loadout/shockht,	// Minigun
@@ -751,7 +751,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATENGINEER
 	outfit = /datum/outfit/job/ncr/f13combatengineer
-	exp_requirements = 60
+	exp_requirements = 120
 
 	loadout_options = list( // ALL: Trench tool, Limited blueprints
 		/datum/outfit/loadout/combatengineerbuilder, // Police Carbine, X4 explosive, Extra materials
@@ -840,7 +840,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_MILITARY_POLICE
 	outfit = /datum/outfit/job/ncr/f13mp
-	exp_requirements = 150
+	exp_requirements = 300
 
 	access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR3)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR3)
@@ -888,7 +888,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
 	outfit = /datum/outfit/job/ncr/f13combatmedic
-	exp_requirements = 60
+	exp_requirements = 120
 
 	access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2)
 	minimal_access = list(ACCESS_PUBLIC, ACCESS_NCR, ACCESS_NCR1, ACCESS_NCR2)
@@ -962,7 +962,7 @@ Access
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_CORPORAL
 	outfit = /datum/outfit/job/ncr/f13corporal
-	exp_requirements = 90
+	exp_requirements = 180
 
 	loadout_options = list(
 		/datum/outfit/loadout/corporaldesignatedmarksman,	 // Scout carbine, 9mm sidearm
@@ -1129,7 +1129,7 @@ Access
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR3, ACCESS_PUBLIC)
 	display_order = JOB_DISPLAY_ORDER_MEDICALOFFICER
 	outfit = /datum/outfit/job/ncr/f13medicalofficer
-	exp_requirements = 750
+	exp_requirements = 1500
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/ncr,
@@ -1202,7 +1202,7 @@ Access
 	outfit = /datum/outfit/job/ncr/f13offdutyncr
 	access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC, ACCESS_NCR)
 	minimal_access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC, ACCESS_NCR)
-	exp_requirements = 60
+	exp_requirements = 120
 
 /datum/outfit/job/ncr/f13offdutyncr
 	name = "NCR Off-Duty"

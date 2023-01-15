@@ -14357,9 +14357,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "iaq" = (
-/obj/item/pickaxe,
-/obj/item/storage/bag/ore,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/structure/closet/crate/wooden,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
 "ibk" = (
 /mob/living/simple_animal/hostile/radroach,
@@ -15638,6 +15637,12 @@
 "iYp" = (
 /obj/structure/girder/reinforced,
 /turf/open/water,
+/area/f13/caves)
+"iYF" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/coke/twenty,
+/obj/item/stack/sheet/coke/twenty,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
 "iYN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21649,6 +21654,16 @@
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess"
 	},
+/area/f13/caves)
+"nzA" = (
+/obj/structure/shelf_wood,
+/obj/item/storage/bag/ore,
+/obj/item/storage/bag/ore,
+/obj/item/storage/bag/ore,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "nzK" = (
 /obj/effect/turf_decal/caution{
@@ -33040,6 +33055,13 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
+"vZW" = (
+/obj/structure/shelf_wood,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "wan" = (
 /obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
@@ -35679,9 +35701,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/building/museum)
 "yeQ" = (
-/obj/item/storage/bag/ore/large,
-/obj/item/storage/bag/ore/large,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/structure/blacksmith/furnace/sandstone,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
 "yeX" = (
 /obj/machinery/light/small{
@@ -93210,7 +93231,7 @@ aaB
 aaB
 aaB
 aaB
-jLj
+aaB
 aae
 aae
 aae
@@ -93460,15 +93481,15 @@ aak
 aae
 aak
 aae
-aaB
-aae
-aaB
-aaB
+vov
+vov
 aaB
 aaB
 aaB
+xTX
 aaB
-iaq
+aaB
+aaB
 aae
 aae
 aae
@@ -93716,17 +93737,17 @@ aae
 aae
 aae
 aae
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aaB
+aae
 iaq
+hHu
+aaB
+aaB
+aaB
+aaB
+aaB
+aaB
+aaB
+aaB
 aae
 aae
 aae
@@ -93974,8 +93995,8 @@ aae
 aae
 aae
 aae
-aaB
-aaB
+yeQ
+hHu
 aaB
 aaB
 xOS
@@ -94231,8 +94252,8 @@ aae
 aae
 aae
 aae
-aae
-aaB
+iYF
+hHu
 aaB
 aaB
 aaB
@@ -94488,15 +94509,15 @@ aak
 aae
 aae
 aae
-aae
-aae
-jLj
+xTX
 aaB
 aaB
 aaB
-vov
-vov
-vov
+aaB
+aaB
+aaB
+aaB
+aaB
 aaB
 aae
 aae
@@ -94745,16 +94766,16 @@ aae
 aae
 aae
 aae
+nzA
+vZW
+aaB
+aaB
+aaB
+aaB
+aaB
+aae
 aae
 aaB
-aaB
-aaB
-aaB
-aaB
-aaB
-aae
-aae
-yeQ
 aae
 aae
 aak
