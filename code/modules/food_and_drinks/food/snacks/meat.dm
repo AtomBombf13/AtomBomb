@@ -321,7 +321,7 @@
 
 /obj/item/reagent_containers/food/snacks/meat/steak
 	name = "steak"
-	desc = "A piece of hot spicy meat."
+	desc = "A warm steak, dripping with fat."
 	icon_state = "meatsteak"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 5)
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 1)
