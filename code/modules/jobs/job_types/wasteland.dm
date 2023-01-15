@@ -29,7 +29,7 @@ Raider
 	description = "You are a Raider - the choice of why is up to you. You are responsible for making the wasteland unsafe and today is another day to antagonize it. You may be varied in your approaches, but you must have motives that are realistic for your job."
 	supervisors = "your conscious if you have one"
 	selection_color = "#df80af"
-	exp_requirements = 0
+	exp_requirements = 300
 	exp_type = EXP_TYPE_OUTLAW
 
 	outfit = /datum/outfit/job/wasteland/f13raider
@@ -80,6 +80,7 @@ Raider
 		/obj/item/restraints/handcuffs = 2,
 		/obj/item/melee/onehanded/club = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/storage/bag/money/small/raider = 1,
 		/obj/item/radio = 1
 		)
 

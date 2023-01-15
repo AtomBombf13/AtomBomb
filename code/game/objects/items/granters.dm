@@ -662,7 +662,7 @@
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/autoaxe)
 
-obj/item/book/granter/crafting_recipe/energy
+/obj/item/book/granter/crafting_recipe/energy
 	name = "Future Weapons Today!"
 	desc = "A magazine series covering the latest trends in weapons technology. Though it probably seems a little out of date now"
 	oneuse = TRUE
@@ -762,7 +762,12 @@ obj/item/book/granter/crafting_recipe/energy
 /obj/item/book/granter/crafting_recipe/blueprint/sniper
 	name = "sniper rifle blueprint"
 	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/sniper)
+	crafting_recipe_types = list(/datum/crafting_recipe/dks)
+
+/obj/item/book/granter/crafting_recipe/blueprint/magnum_revolver
+	name = "M2045 magnum revolver rifle blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/m2405)
 
 /obj/item/book/granter/crafting_recipe/blueprint/deagle
 	name = "desert eagle blueprint"
@@ -1279,7 +1284,8 @@ obj/item/book/granter/crafting_recipe/energy
 		/datum/crafting_recipe/bitterdrink,
 		/datum/crafting_recipe/bitterdrink5,
 		/datum/crafting_recipe/healpoultice,
-		/datum/crafting_recipe/healpoultice5)
+		/datum/crafting_recipe/healpoultice5,
+		/datum/crafting_recipe/hydra)
 
 /// Both books below are for alchemy use..
 

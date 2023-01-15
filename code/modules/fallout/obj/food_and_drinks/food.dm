@@ -670,10 +670,10 @@
 	name = "salted meat"
 	desc = "Slab of meat preserved in salt. Makes you thirsty."
 	icon_state = "meatsalted"
-	bitesize = 5
+	bitesize = 2
 	filling_color = "#800000"
 	list_reagents = list(
-		/datum/reagent/consumable/nutriment = 5
+		/datum/reagent/consumable/nutriment = 7
 	)
 	bonus_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -686,17 +686,17 @@
 	name = "smoked meat"
 	desc = "Slab of meat dried by smoking. Leathery consistency."
 	icon_state = "meatsmoked"
-	bitesize = 5
+	bitesize = 2
 	filling_color = "#800000"
 	list_reagents = list(
-		/datum/reagent/consumable/nutriment = 5
+		/datum/reagent/consumable/nutriment = 9
 	)
 	bonus_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
 		/datum/reagent/consumable/nutriment/vitamin = 2
 	)
-	tastes = list("meat" = 2, "smoke" = 1)
-	foodtype = MEAT
+	tastes = list("dried meat" = 1, "smoke" = 1)
+	foodtype = JUNKFOOD | MEAT | SUGAR
 
 /obj/item/reagent_containers/food/snacks/breadhard
 	name = "hard bread"
@@ -709,9 +709,9 @@
 	list_reagents = list(
 		/datum/reagent/consumable/nutriment = 10
 	)
-	bitesize = 5
+	bitesize = 1
 	w_class = WEIGHT_CLASS_NORMAL
-	tastes = list("bread" = 1, "smoke" = 1)
+	tastes = list("bread" = 2, "smoke" = 1)
 	foodtype = GRAIN
 
 /obj/item/reagent_containers/food/snacks/f13/molejerky

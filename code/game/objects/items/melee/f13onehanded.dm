@@ -668,11 +668,11 @@
 	if(ishuman(user) && slot != SLOT_GLOVES && !H.gloves)
 		REMOVE_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
 		if(!HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagehigh = 1
-			H.dna.species.punchdamagelow = 10
+			H.dna.species.punchdamagehigh = 10
+			H.dna.species.punchdamagelow = 1
 		if(HAS_TRAIT(user, TRAIT_IRONFIST))
-			H.dna.species.punchdamagehigh = 4
-			H.dna.species.punchdamagelow = 11
+			H.dna.species.punchdamagehigh = 11
+			H.dna.species.punchdamagelow = 4
 		H.dna.species.attack_sound = 'sound/weapons/punch1.ogg'
 		H.dna.species.attack_verb = "punch"
 
@@ -861,7 +861,7 @@
 	force = 13
 	throwforce = 7
 	custom_materials = list(/datum/material/iron=MINERAL_MATERIAL_AMOUNT*3, /datum/material/wood=MINERAL_MATERIAL_AMOUNT*2)
-	custom_price = PRICE_REALLY_CHEAP
+	custom_price = PRICE_ALMOST_CHEAP
 
 // Frying pan					[ Damage CLUB - 5 ] ----------------
 /obj/item/melee/onehanded/club/fryingpan

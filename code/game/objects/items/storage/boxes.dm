@@ -631,7 +631,7 @@
 	item_state = "zippo"
 	w_class = WEIGHT_CLASS_TINY
 	slot_flags = ITEM_SLOT_BELT
-	custom_price = PRICE_CHEAP_AS_FREE
+	custom_price = PRICE_REALLY_CHEAP
 
 /obj/item/storage/box/matches/ComponentInitialize()
 	. = ..()
@@ -644,7 +644,12 @@
 
 /obj/item/storage/box/matches/attackby(obj/item/match/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/match))
-		W.matchignite()
+		if(prob(40))
+			playsound(src, 'sound/f13items/matchstick_hit.ogg', 80, TRUE)
+			return
+		else
+			W.matchignite()
+			playsound(src, 'sound/f13items/matchstick_lit.ogg', 80, TRUE)
 
 /obj/item/storage/box/lights
 	name = "box of replacement bulbs"

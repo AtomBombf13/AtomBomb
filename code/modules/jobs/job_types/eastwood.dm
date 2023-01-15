@@ -52,7 +52,7 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "The Overseer"
 	description = "A subordinate of the Overseer, you are the primary face of the town. Handling the day to day dealings of the denizens of our fair city falls to you. Those wasters outside the walls are an unknown factor, so it falls to you to maintain relations with the Wastelands many players. Be wary of the Machine down below, as with the trades and treaties in place. Balance the budget, but don't step on the Merchant's toes. Organise defences, but do not encroach on the Marshal's office. Most of all: don't lose your head."
 	selection_color = "#af9172"
-	exp_requirements = 750
+	exp_requirements = 1500
 
 	outfit = /datum/outfit/job/eastwood/f13mayor
 	access = list(ACCESS_CLONING, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS,ACCESS_ROBOTICS, ACCESS_TOWN_SEC, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TOWN_CIV, ACCESS_TOWN_DOC, ACCESS_TOWN_PROSP, ACCESS_TOWN_PREACH, ACCESS_TOWN_MERCH, ACCESS_TOWN_SCIENCE, ACCESS_TOWN_COMMAND, ACCESS_CHANGE_IDS)
@@ -113,7 +113,7 @@ here's a tip, go search DEFINES/access.dm
 	spawn_positions = 1
 	supervisors = "The Mayor and Overseer"
 	description = "As the head of the security forces, you are the face of justice in the town. Uphold the law, or bend it to suit your needs, you set the precedent for how justice is doled out in the town, so bear that in mind when you sentence that pickpocket to death. Maintain the armoury and keep that watchful eye on the elevator to the Vault below. Whatever you do, don't lose your head."
-	exp_requirements = 750
+	exp_requirements = 1500
 
 	outfit = /datum/outfit/job/eastwood/f13sheriff
 
@@ -204,7 +204,7 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "The Marshal, in his absence Mayor"
 	description = "You are part of a local police department as an officer of Eastwood, uphold laws and protect it's citizens whatever it takes. You are a subordinate of Marshal and in his absence Mayor, follow their orders as long as it doesn't endanger Eastwood or it's citizens."
 	selection_color = "#dcba97"
-	exp_requirements = 300
+	exp_requirements = 600
 
 	loadout_options = list(
 	/datum/outfit/loadout/vaultheavy,
@@ -356,11 +356,11 @@ here's a tip, go search DEFINES/access.dm
 	supervisors = "The Mayor and Overseer"
 	description = "From the board of the VTCC, you were chosen to be the chief delegator for the medical and science wings of this town's clinic. You are the mediator of workplace drama, the human resource enforcer, and the cornerstone of inspiration for your underlings. As their supervisor, it is your job to make sure that this clinic functions at peak performance."
 	selection_color = "#af9172"
-	exp_requirements = 750
+	exp_requirements = 1500
 
 	outfit = /datum/outfit/job/eastwood/f13towncmo
-	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO)
-	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO)
+	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_TOWN_CMO, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -429,8 +429,8 @@ here's a tip, go search DEFINES/access.dm
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/eastwood/f13denres
-	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC)
-	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC)
+	access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_ROBOTICS)
+	minimal_access = list(ACCESS_TOWN_SCIENCE, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_DOC, ACCESS_ROBOTICS)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/eastwood
@@ -580,7 +580,7 @@ here's a tip, go search DEFINES/access.dm
 	description = "Trade deals fall upon your shoulders to negotiate with those around the town, so ensure you never give more than you've got. Of course, selling the town is the worst thing you could do, so it should go without saying that you can't do that. Negotiate with the traders of the wastes, extort them for the shirt on their back, or set them up for life, it's up to you to decide."
 	enforces = "Your store is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of Eastwood."
 	selection_color = "#dcba97"
-	exp_requirements = 300
+	exp_requirements = 600
 
 	outfit = /datum/outfit/job/eastwood/f13shopkeeper
 	access = list(ACCESS_CARGO_BOT, ACCESS_TOWN_MERCH, ACCESS_PUBLIC, ACCESS_TOWN, ACCESS_TOWN_PROSP)
@@ -1043,8 +1043,15 @@ here's a tip, go search DEFINES/access.dm
 	/obj/item/cultivator = 1,
 	/obj/item/reagent_containers/glass/bucket/plastic = 1,
 	/obj/item/storage/bag/plants/portaseeder= 1,
-	/obj/item/seeds/bamboo = 1,
-	/obj/item/seeds/cannabis = 1
+	/obj/item/seeds/ambrosia = 2,
+	/obj/item/seeds/tomato = 2,
+	/obj/item/seeds/wheat = 2,
+	/obj/item/seeds/corn = 2,
+	/obj/item/seeds/onion = 2,
+	/obj/item/seeds/soya = 2,
+	/obj/item/seeds/potato = 2,
+	/obj/item/seeds/sugarcane = 2,
+	/obj/item/seeds/olive = 2,
 	)
 
 /////////////////////
@@ -1072,7 +1079,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	description = "You're a member of the local desperado gang, a group of chem-dealers, loan-sharkers and hitman from across the civilized wastes."
 	supervisors = "The Boss."
 	selection_color = "#df80af"
-	exp_requirements = 300
+	exp_requirements = 600
 	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/wasteland/f13enforcer
@@ -1157,7 +1164,7 @@ Roles should be limited and low since they should attempt to work within town ra
 	description = "You are the leader of the local desperado gang, a gang of bandits, cattle-rustlers, hitmen, loan-sharkers and various other criminal activities. Luckily for you, you own the casino in town with your fellow 'buisness partners'. Make use of it, keep your men in line, and turn a profit. Be it working with the locals or against them."
 	supervisors = "Whatever god you pray to. The sky's the limit!"
 	selection_color = "#df80af"
-	exp_requirements = 500
+	exp_requirements = 1000
 	exp_type = EXP_TYPE_OUTLAW
 
 	outfit = /datum/outfit/job/wasteland/f13mobboss

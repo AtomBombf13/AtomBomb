@@ -75,7 +75,7 @@ Access
 	description = "You are probably the last operating cell of the Enclave in the US, as far as you know. Now that the lore is out of the way, just make the round fun. You set the policies and the attitude of the Enclave this week."
 	supervisors = "Enclave Department of the Army."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavelt
-	exp_requirements = 1500
+	exp_requirements = 3000
 
 /datum/outfit/job/enclave/peacekeeper/enclavelt
 	name = "Enclave Lieutenant"
@@ -124,7 +124,7 @@ Access
 	description = "Second in command after Lieutenant, your role is to direct their orders directly to the sergeants and regular troops."
 	supervisors = "The Lieutenant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13gysergeant
-	exp_requirements = 1400
+	exp_requirements = 2800
 
 	loadout_options = list(
 		/datum/outfit/loadout/gysgt_laser, // AER12
@@ -176,7 +176,7 @@ Access
 	description = "Entrusted with the command of the squads assigned to the bunker, your job is to assist the Lieutenant alongside the scientists."
 	supervisors = "The Lieutenant and the Gunnery Sergeant."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavesgt
-	exp_requirements = 1200
+	exp_requirements = 2400
 
 	loadout_options = list(
 		/datum/outfit/loadout/sgt_ballistics,	// R91 Rifle
@@ -233,7 +233,7 @@ Access
 	description = "You are an operative for the remnants of the Enclave. You, unlike the normal privates, have received specialist training in either engineering or medicine."
 	supervisors = "The Lieutenant and the Sergeants."
 	outfit = /datum/outfit/job/enclave/peacekeeper/f13specialist
-	exp_requirements = 700
+	exp_requirements = 1400
 
 	loadout_options = list(
 		/datum/outfit/loadout/combatmedic, // Medical Equipment
@@ -293,7 +293,7 @@ Access
 	supervisors = "The Lieutenant and the Sergeants"
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclavespy
 	exp_type = EXP_TYPE_FALLOUT
-	exp_requirements = 600
+	exp_requirements = 1200
 
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
@@ -328,7 +328,7 @@ Access
 	description = "You're responsible for the maintenance of the base, the knowledge you've accumulated over the years is the only thing keeping the remnants alive. You've dabbled in enough to be considered a Professor in your field of research, but they call you Doctor. Support your dwindling forces and listen to the Lieutenant."
 	supervisors = "Enclave Research and Development Division."
 	outfit = /datum/outfit/job/enclave/noncombat/enclavesci
-	exp_requirements = 1000
+	exp_requirements = 2000
 
 	access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_ENCLAVE, ACCESS_ENCLAVE1, ACCESS_PUBLIC)

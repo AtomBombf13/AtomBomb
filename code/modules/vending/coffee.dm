@@ -18,7 +18,7 @@
 
 	refill_canister = /obj/item/vending_refill/coffee
 	default_price = PRICE_REALLY_CHEAP
-	extra_price = PRICE_REALLY_CHEAP
+	extra_price = PRICE_PRETTY_CHEAP
 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/coffee

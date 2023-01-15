@@ -800,7 +800,6 @@
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 26,
 				/obj/effect/spawner/bundle/f13/wattz2k = 26,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 15,
-				/obj/effect/spawner/bundle/f13/ionrifle = 5
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier / Why does this exist like why
@@ -808,7 +807,6 @@
 	loot = list(/obj/effect/spawner/bundle/f13/aer12,
 				/obj/effect/spawner/bundle/f13/plasmapistol,
 				/obj/effect/spawner/bundle/f13/wattz2kext,
-				/obj/effect/spawner/bundle/f13/ionrifle,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
@@ -816,7 +814,8 @@
 	loot = list(/obj/effect/spawner/bundle/f13/plasmarifle = 25,
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/aer14 = 20,
-				/obj/effect/spawner/bundle/f13/plasmaglock = 25
+				/obj/effect/spawner/bundle/f13/plasmaglock = 25,
+				/obj/effect/spawner/bundle/f13/ionrifle = 20
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
@@ -915,6 +914,7 @@
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/m14 = 5,
 				/obj/effect/spawner/bundle/f13/assault_carbine = 5,
+				/obj/effect/spawner/bundle/f13/magnumrevolver = 15,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
@@ -944,7 +944,8 @@
 				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
-				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
+				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil,
+				/obj/item/gun/ballistic/shotgun/hunting/nomad
 				)
 
 
@@ -1314,7 +1315,7 @@
 				/obj/item/ammo_box/magazine/m556/rifle/
 				)
 
-obj/effect/spawner/bundle/f13/combat_rifle
+/obj/effect/spawner/bundle/f13/combat_rifle
 	name = "combat rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/combat,
@@ -1363,6 +1364,13 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/w308
 	)
 
+/obj/effect/spawner/bundle/f13/magnumrevolver
+	name = "magnum revolver and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/revolver/m2405,
+				/obj/item/ammo_box/loader/rev308
+	)
+
 /obj/effect/spawner/bundle/f13/rangemaster
 	name = "rangemaster rifle and ammo spawner"
 	items = list(
@@ -1378,7 +1386,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				)
 
 /obj/effect/spawner/bundle/f13/ionrifle
-	name = "ion rifle and ammo spawner"
+	name = "pulse rifle and ammo spawner"
 	items = list(
 				/obj/item/gun/energy/ionrifle,
 				/obj/item/stock_parts/cell/ammo/mfc
@@ -2113,7 +2121,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 
 	loot = list(
-				/obj/item/stack/f13Cash/random/lowmob = 50 /*,
+				/obj/item/stack/f13Cash/random/low = 50 /*,
 				/obj/item/stack/f13Cash/random/ncr/low = 30,
 				/obj/item/stack/f13Cash/random/denarius/low = 30,
 				/obj/item/stack/f13Cash/random/aureus/low = 10 */
@@ -2125,15 +2133,15 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 
 	loot = list(
-				/obj/item/stack/f13Cash/random/medmob = 43,
+				/obj/item/stack/f13Cash/random/med = 43,
 				/* /obj/item/stack/f13Cash/random/ncr/med = 35,
 				/obj/item/stack/f13Cash/random/denarius/med = 30,
 				/obj/item/stack/f13Cash/random/aureus/med = 5, */
-				/obj/item/stack/f13Cash/random/lowmob = 40,
+				/obj/item/stack/f13Cash/random/low = 40,
 				/* /obj/item/stack/f13Cash/random/ncr/low = 19,
 				/obj/item/stack/f13Cash/random/denarius/low = 19,
 				/obj/item/stack/f13Cash/random/aureus/low = 5, */
-				/obj/item/stack/f13Cash/random/highmob = 2
+				/obj/item/stack/f13Cash/random/high = 2
 				/* /obj/item/stack/f13Cash/random/ncr/high = 1,
 				/obj/item/stack/f13Cash/random/denarius/high = 1,
 				/obj/item/stack/f13Cash/random/aureus/high = 1, */
@@ -2145,9 +2153,9 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 
 	loot = list(
-				/obj/item/stack/f13Cash/random/highmob = 25,
-				/obj/item/stack/f13Cash/random/medmob = 50,
-				/obj/item/stack/f13Cash/random/lowmob = 10
+				/obj/item/stack/f13Cash/random/high = 25,
+				/obj/item/stack/f13Cash/random/med = 50,
+				/obj/item/stack/f13Cash/random/low = 10
 				/* /obj/item/stack/f13Cash/random/ncr/high = 30,
 				/obj/item/stack/f13Cash/random/denarius/high = 30,
 				/obj/item/stack/f13Cash/random/aureus/high = 10,
@@ -2340,6 +2348,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
 		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
+		/obj/item/book/granter/crafting_recipe/blueprint/magnum_revolver,
 		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 	)
 
