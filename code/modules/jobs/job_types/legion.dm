@@ -34,7 +34,7 @@ Access
 	faction = FACTION_LEGION
 
 	forbids = "The Legion forbids: Using drugs such as stimpacks and alcohol. Ghouls joining. Women fighting (self defense and suicide allowed). Slaves carrying weapons. Using robots and advanced machines. Killing Legion members in secret, only if according to law and in public is it acceptable."
-	enforces = "The Legion demands: Obeying orders of superiors. A lore-accurate name. Wearing the uniform, unless acting as a NON-COMBAT infiltrator. Expect death as punishment for failing to obey."
+	enforces = "The Legion demands: Obeying orders of superiors. A roman style name. Wearing the uniform, unless acting as a NON-COMBAT infiltrator. Expect death as punishment for failing to obey."
 	objectivesList = list("Focus on the tribals, win them over or intimidate them.", "Focus on Town of Eastwood, display dominance.", "Send out patrols and establish checkpoints to curb use of digusting drugs and degenerate behaviour.", "Flagstaff requests more worker: acquire slaves, train them if possible, send them east for breaking if not.", "Make sure no other faction gains dominance over Town of Eastwood, if they remain neutral it can be used to the Legions advantage.")
 
 	exp_type = EXP_TYPE_LEGION
@@ -128,6 +128,7 @@ Access
 	selection_color = "#ff8f8f"
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CENTURION
+	exp_requirements = EXP_TYPE_LEGIONCOMMAND
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 	exp_requirements = 1500
 
@@ -222,6 +223,7 @@ Access
 	description = "You answer directly to the Centurion, his second in command. Lead the camp, ensure its defended, keep track of the Explorers and use your veterans to their full potential."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_DECANVET
+	exp_requirements = EXP_TYPE_LEGIONCOMMAND
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 	exp_requirements = 900
 

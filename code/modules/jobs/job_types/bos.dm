@@ -20,9 +20,9 @@ Access
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 
 	objectivesList = list(
-		"Leadership recommends the following goal for this week: Establish an outpost at the radio tower",
-		"Leadership recommends the following goal for this week: Acquire blueprints for research and preservation",
-		"Leadership recommends the following goal for this week: Acquire or confiscate dangerous tech by any means necessary."
+		"The High Elders recommend the following goal for this week: Establish an outpost at the radio tower and monitor frequencies",
+		"The High Elders recommend the following goal for this week: Study technology that can benefit our cause",
+		"The High Elders recommend the following goal for this week: Acquire or confiscate dangerous technology, adhering to the codex"
 		)
 
 GLOBAL_LIST_INIT(knight_gunsmith_recipes, list(
@@ -78,53 +78,54 @@ Elder
 	flag = F13ELDER
 	display_order = JOB_DISPLAY_ORDER_ELDER
 	head_announce = list("Security")
-	total_positions = 0
-	spawn_positions = 0
-	description = "You are the Elder of the local Brotherhood chapter."
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the Elder of this local chapter of the Brotherhood of Steel. You may be a veteran of warfare, an experienced commander or even a genius Scribe, and you command all the men within this bunker. Your main goals are to lead the Brotherhood, to solve conflicts inbetween castes and to manage the Head Paladin, Head Knight and Head Scribe."
 	supervisors = "the High Elders"
 	selection_color = "#7f8c8d"
+	exp_type = EXP_TYPE_BROTHERHOODCOMMAND
 	req_admin_notify = 1
 
-	exp_requirements = 3000
+	exp_requirements = 6000
+
+	loadout_options = list(
+	/datum/outfit/loadout/elderscribe, // Medicine and Chemistry knowledge
+	/datum/outfit/loadout/elderpaladin // Power Armor knowledge
+	)
 
 	outfit = /datum/outfit/job/bos/f13elder
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_CHANGE_IDS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_BOS4, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_MINERAL_STOREROOM, ACCESS_CHANGE_IDS, ACCESS_BOS1, ACCESS_BOS2, ACCESS_BOS3, ACCESS_BOS4, ACCESS_PUBLIC, ACCESS_ROBOTICS)
 
-/datum/outfit/job/bos/f13elder/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-
 /datum/outfit/job/bos/f13elder
 	name = "Elder"
 	jobtype = /datum/job/bos/f13elder
 	suit =	/obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
-	glasses =	/obj/item/clothing/glasses/night
+	glasses = /obj/item/clothing/glasses/sunglasses
 	accessory =	/obj/item/clothing/accessory/bos/elder
-	suit_store =	/obj/item/gun/energy/laser/laer
+	suit_store = /obj/item/gun/energy/laser/pistol
 	neck =	/obj/item/clothing/neck/mantle/bos/right
 	ears = /obj/item/radio/headset/headset_bos/command
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/melee/onehanded/knife/hunting = 1
+	)
+
+
+/datum/outfit/loadout/elderscribe
+	name = "Promoted from Head Scribe"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/headscribe = 1,
+		/obj/item/book/granter/trait/chemistry = 1,
+		/obj/item/book/granter/trait/midsurgery = 1
+	)
+
+/datum/outfit/loadout/elderpaladin
+	name = "Promoted from Head Paladin"
+	backpack_contents = list(
+		/obj/item/clothing/accessory/bos/headpaladin = 1,
+		/obj/item/book/granter/trait/pa_wear = 1
 	)
 
 /*

@@ -31,9 +31,9 @@ Access
 
 	access = list(ACCESS_NCR)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
-	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol while on duty. Execution of unarmed or otherwise subdued targets without authorisation."
-	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republic's laws. Wearing the uniform."
-	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Neutralize and capture dangerous criminals", "Leadership recommends the following goal for this week: Free slaves and establish good relations with unaligned individuals.")
+	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol while on duty. Execution of unarmed or otherwise subdued targets without authorisation. Zero sexual intercourse is tolorated while on-duty."
+	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners. Good conduct within the Republic's laws. Wearing the uniform."
+	objectivesList = list("High Command recommends the following goal for this week: Establish an outpost at the Hospital","High Command recommends the following goal for this week: Scout the region for raider activity and detain any individuals breaking NCR law in our territory","High command recommends the following goal for this week: Establish good relations with unaligned individuals and improve the diplomatic standing of the NCR","High command recommends the following goal for this week: Gather funds from the wasteland by providing a service and taxing people")
 
 /datum/outfit/job/ncr
 	name = "NCRdatums"
@@ -166,6 +166,7 @@ Access
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC, ACCESS_CHANGE_IDS, ACCESS_NCR3, ACCESS_NCR4)
 	req_admin_notify = 1
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN_NCR
+	exp_type = EXP_TYPE_NCRCOMMAND
 	outfit = /datum/outfit/job/ncr/f13captain
 	exp_requirements = 3800
 
@@ -245,6 +246,7 @@ Access
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCR_COMMAND, ACCESS_PUBLIC, ACCESS_NCR3)
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
+	exp_type = EXP_TYPE_NCRCOMMAND
 	outfit = /datum/outfit/job/ncr/f13lieutenant
 	exp_requirements = 2500
 
@@ -492,7 +494,8 @@ Access
 	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. Your primary mission is to improve general opinion of the Republic and to neutralize slavers and raiders operating in the area."
 	supervisors = "NCRA Captain, High Command"
 	selection_color = "#ffeeaa"
-	display_order = JOB_DISPLAY_ORDER_VETRANGE
+	display_order = JOB_DISPLAY_ORDER_VETRANGER
+	exp_type = EXP_TYPE_RANGER
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_NCR3, ACCESS_NCR4, ACCESS_PUBLIC)
 	minimal_access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR1, ACCESS_NCR2, ACCESS_NCRR, ACCESS_NCR3, ACCESS_NCR4, ACCESS_PUBLIC)
 	outfit = /datum/outfit/job/ncr/f13vetranger
@@ -1197,7 +1200,6 @@ Access
 	description = "While off-duty, you are relieved of both your duties and your authority. You are not required to participate in any routine duties, and you may spend your time doing whatever you please, within reason. However, you may not get in the way of on-duty personnel. Do not pull rank or give orders. Should Camp Miller be attacked, you are expected NOT to participate in the fighting, and must instead head West for safety (i.e. despawn yourself at the matrix point)."
 	supervisors = "Everyone else"
 	selection_color = "#fff5cc"
-	exp_type = EXP_TYPE_NCR
 	display_order = JOB_DISPLAY_ORDER_OFFDUTYNCR
 	outfit = /datum/outfit/job/ncr/f13offdutyncr
 	access = list(ACCESS_NCROFFDUTY, ACCESS_PUBLIC, ACCESS_NCR)

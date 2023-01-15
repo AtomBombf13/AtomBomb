@@ -47,6 +47,7 @@ here's a tip, go search DEFINES/access.dm
 	title = "Mayor"
 	flag = F13MAYOR
 	display_order = JOB_DISPLAY_ORDER_MAYOR
+	exp_type = EXP_TYPE_EASTWOODCOMMAND
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Overseer"
@@ -107,6 +108,7 @@ here's a tip, go search DEFINES/access.dm
 	title = "Provost Marshal"
 	flag = F13SHERIFF
 	display_order = JOB_DISPLAY_ORDER_SHERIFF
+	exp_type = EXP_TYPE_EASTWOODCOMMAND
 	selection_color = "#af9172"
 	head_announce = list("Security")
 	total_positions = 1
