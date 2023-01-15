@@ -67141,12 +67141,6 @@
 	icon_state = "desertsmooth5"
 	},
 /area/f13/food_preparation)
-"xhD" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_4"
-	},
-/turf/open/floor/plasteel/rockvault/sandstone,
-/area/f13/wasteland)
 "xhH" = (
 /obj/structure/chair/comfy/brown{
 	dir = 1
@@ -118101,7 +118095,7 @@ fuB
 xLC
 xLC
 nsn
-xhD
+xcW
 odm
 xLC
 aae
