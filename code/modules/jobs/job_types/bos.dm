@@ -20,8 +20,8 @@ Access
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 
 	objectivesList = list(
-		"The High Elders recommend the following goal for this week: Establish an outpost at the radio tower and monitor frequencies"
-		"The High Elders recommend the following goal for this week: Study technology that can benefit our cause"
+		"The High Elders recommend the following goal for this week: Establish an outpost at the radio tower and monitor frequencies",
+		"The High Elders recommend the following goal for this week: Study technology that can benefit our cause",
 		"The High Elders recommend the following goal for this week: Acquire or confiscate dangerous technology, adhering to the codex"
 		)
 
@@ -109,8 +109,7 @@ Elder
 	ears = /obj/item/radio/headset/headset_bos/command
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/gun/energy/laser/pistol = 1
+		/obj/item/melee/onehanded/knife/hunting = 1
 	)
 
 
