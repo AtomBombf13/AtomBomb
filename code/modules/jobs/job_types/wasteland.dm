@@ -205,7 +205,7 @@ Raider
 	name = "Quack Doctor"
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
-	r_hand = /obj/item/book/granter/trait/midsurgery
+	r_hand = /obj/item/book/granter/trait/lowsurgery
 	suit_store = /obj/item/gun/energy/laser/wattz
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/ec = 1,
@@ -245,7 +245,7 @@ Raider
 	box = /obj/item/storage/survivalkit/tribal
 	box_two = /obj/item/storage/survivalkit/medical/tribal
 	backpack_contents = list(
-		/obj/item/book/granter/trait/tribaltraditions =1,
+		/obj/item/book/granter/trait/tribaltraditions = 1,
 		/obj/item/clothing/mask/cigarette/pipe = 1,
 		/obj/item/melee/onehanded/knife/bone = 1,
 		/obj/item/book/granter/trait/bigleagues = 1

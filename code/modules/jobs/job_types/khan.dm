@@ -111,12 +111,12 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2
 		)
 
-/datum/outfit/loadout/khandrug //Pusher with 10mm Pistol
+/datum/outfit/loadout/khandrug //Pusher with Police Revolver
 	name = "Drug Pusher"
-	r_hand = /obj/item/gun/ballistic/revolver/colt6520
+	r_hand = /obj/item/gun/ballistic/revolver/police
 	neck = /obj/item/storage/belt/holster/leg
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/pistol10mm = 2,
+		/obj/item/ammo_box/loader/c38 = 2,
 		/obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
