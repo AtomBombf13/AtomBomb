@@ -10,7 +10,7 @@
 /obj/structure/fermenting_barrel
 	name = "wooden barrel"
 	desc = "A large wooden barrel. You can ferment fruits and such inside it, or just use it to hold liquid."
-	icon = 'icons/fallout/farming/farming_structures.dmi'
+	icon = 'modular_atom/icons/barrel.dmi'
 	icon_state = "barrel"
 	density = TRUE
 	anchored = FALSE
@@ -22,9 +22,40 @@
 	var/open = FALSE
 	var/speed_multiplier = 4 //How fast it distills. Defaults to 100% (1.0). Lower is better.
 
+	var/broc = FALSE // Overlay var
+	var/xander = FALSE // Overlay var
+	var/cactus = FALSE // Overlay var
+
 /obj/structure/fermenting_barrel/Initialize()
-	create_reagents(300, DRAINABLE | AMOUNT_VISIBLE) //Bluespace beakers, but without the portability or efficiency in circuits.
+	create_reagents(500, DRAINABLE | AMOUNT_VISIBLE) //Bluespace beakers, but without the portability or efficiency in circuits.
+	update_icon()
 	. = ..()
+
+/obj/structure/fermenting_barrel/update_overlays()
+	. = ..()
+	if(broc)
+		. += "broc"
+	if(xander)
+		. += "xander"
+	if(cactus)
+		. += "cactus"
+
+	if(reagents.total_volume && open)
+		var/mutable_appearance/filling = mutable_appearance('modular_atom/icons/barrel.dmi', "[icon_state]10", color = mix_color_from_reagents(reagents.reagent_list))
+		switch (reagents.total_volume)
+			if (0 to 40)
+				filling.icon_state = "[icon_state]-10"
+			if (40 to 70)
+				filling.icon_state = "[icon_state]10"
+			if (70 to 140)
+				filling.icon_state = "[icon_state]25"
+			if (140 to 250)
+				filling.icon_state = "[icon_state]50"
+			if (251 to 400)
+				filling.icon_state = "[icon_state]75"
+			if (409 to 500)
+				filling.icon_state = "[icon_state]100"
+		. += filling
 
 /obj/structure/fermenting_barrel/examine(mob/user)
 	. = ..()
@@ -46,6 +77,7 @@
 				data["tastes"] = list(fruit.tastes[1] = 1)
 			reagents.add_reagent(/datum/reagent/consumable/ethanol/fruit_wine, amount, data)
 		qdel(fruit)
+		update_icon() // new
 	playsound(src, 'sound/effects/bubbles.ogg', 50, TRUE)
 
 /obj/structure/fermenting_barrel/attackby(obj/item/I, mob/user, params)
@@ -97,6 +129,27 @@
 		icon_state = "barrel_open"
 	else
 		icon_state = "barrel"
+
+/obj/structure/fermenting_barrel/broc // for bitter production without having to label
+	name = "broc fermenting barrel"
+	desc = "A large wooden barrel with a painted broc flower on it. You can ferment fruits and such inside it, or just use it to hold liquid."
+	icon = 'modular_atom/icons/barrel.dmi'
+	broc = TRUE
+	xander = FALSE
+	cactus = FALSE
+
+/obj/structure/fermenting_barrel/broc/xander // for bitter production without having to label
+	name = "xander fermenting barrel"
+	desc = "A large wooden barrel with a painted xander root on it. You can ferment fruits and such inside it, or just use it to hold liquid."
+	broc = FALSE
+	xander = TRUE
+
+/obj/structure/fermenting_barrel/broc/cactus // for bitter production without having to label
+	name = "cactus fermenting barrel"
+	desc = "A large wooden barrel with a painted barrel cactus on it. You can ferment fruits and such inside it, or just use it to hold liquid."
+	broc = FALSE
+	cactus = TRUE
+
 
 
 //////////
@@ -346,3 +399,58 @@
 		return TRUE
 	to_chat(user, span_warning("You have to stand still to churn butter!"))
 	return TRUE
+
+
+
+// TEMPORARY PLACEMENT, MOVING TO MODULAR NEXT PR
+
+
+/*
+/obj/structure/fermenting_barrel /// updated overlays, vars, etc in farming_structures.dm
+*/
+/datum/chemical_reaction/bitterdrink
+	name = "Bitter drink"
+	id = /datum/reagent/medicine/bitter_drink
+	results = list(/datum/reagent/medicine/bitter_drink = 30)
+	required_reagents = list(/datum/reagent/consumable/ethanol/salgam = 10 , /datum/reagent/consumable/ethanol/brocbrew = 10 , /datum/reagent/consumable/ethanol/yellowpulque = 10)
+
+
+/datum/crafting_recipe/bitterdrink
+	name = "Bitterdrink"
+	result = /obj/item/reagent_containers/pill/bitterdrink
+	reqs = list(/datum/reagent/medicine/bitter_drink = 30,
+				/obj/item/reagent_containers/glass/beaker = 1)
+	tools = list(TOOL_ALCHEMY)
+	time = 10
+	category = CAT_MEDICAL
+	always_available = FALSE // Only the Twin Mothers Tribe knew the secret to making bitter drink prior to legion annexation. Any clever chemist can bootleg the recipe though.
+
+/datum/crafting_recipe/bitterdrink5
+	name = "Batch of bitterdrinks (x5)"
+	result = /obj/item/storage/box/medicine/bitterdrink5
+	reqs = list(/datum/reagent/medicine/bitter_drink = 150,
+				/obj/item/reagent_containers/glass/beaker = 5)
+	tools = list(TOOL_ALCHEMY)
+	time = 20
+	category = CAT_MEDICAL
+	always_available = FALSE
+
+/obj/item/paper/bitterdrink
+	name = "Recipe for Bitterdrink"
+	info = {"Bitter drink is a foul-smelling painkiller and healing drink favored by the Legion, often consumed by wounded soldiers on the Legion's long forced marches. The secret of its manufacture is written down below.
+	<br>
+	<b>Step 1
+	<br>
+	Acquire Xander root,broc flowers, barrel cactii and empty beakers or bottles.
+	<br>
+	Step 2
+	<br>
+	Ferment Xander root, barrel cactii and broc flowers, each in its own separate barrel.
+	<br>
+	<b>Step 3
+	<br>
+	Mix the fermented results of xander root, barrel cactii and broc flowers together in a large vessel such as a bucket.</b>
+	<br>
+	Bitter drink should be the result which can then be bottled by crafting, using the empty containers. It is a potent drink, so more than two should not be consumed."}
+
+

@@ -75,7 +75,7 @@
 /datum/reagent/consumable/ethanol/brocbrew
 	name = "Broc Brew"
 	description = "A potent healing beverage brewed from the Broc flower."
-	color = "#DFA866"
+	color = "#FF6347"
 	boozepwr = 50
 	taste_description = "dirt and roses"
 	glass_icon_state = "cognacglass"
@@ -194,10 +194,10 @@
 		M.Dizzy(2)
 	..()
 
-/datum/reagent/consumable/ethanol/yellowpulque
+/datum/reagent/consumable/ethanol/yellowpulque // There are two yellowpulques in this file =(
 	name = "Yellow Pulque"
 	description = "A sobering and extremely bitter spirit made from barrel cactus mash."
-	color = "#FEFCE7"
+	color = "#f4ec95"
 	boozepwr = -10
 	taste_description = "sweetness and pulp"
 	glass_icon_state = "yellowpulqueglass"
@@ -220,7 +220,7 @@
 /datum/reagent/consumable/ethanol/salgam
 	name = "Şalgam"
 	description = "A powerful spirit brewed from xander roots."
-	color = "#591F24"
+	color = "#825659"
 	boozepwr = 80
 	taste_description = "sour turnips"
 	glass_icon_state = "salgamglass"
