@@ -688,18 +688,6 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 
-/datum/crafting_recipe/dks
-	name = "DKS Sniper Rifle"
-	result = /obj/item/gun/ballistic/automatic/sniper
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/advanced_crafting_components/assembly = 1,
-				/obj/item/stack/crafting/metalparts = 2)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-
 /datum/crafting_recipe/policepistol
 	name = ".357 Police Pistol"
 	result = /obj/item/gun/ballistic/revolver/police
@@ -1161,7 +1149,7 @@
 	always_available = FALSE
 
 //sniper
-/datum/crafting_recipe/sniper
+/datum/crafting_recipe/dks
 	name = "DKS Sniper Rifle"
 	result = /obj/item/gun/ballistic/automatic/sniper
 	reqs = list(/obj/item/stack/sheet/metal = 5,

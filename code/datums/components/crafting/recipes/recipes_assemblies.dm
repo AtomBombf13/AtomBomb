@@ -175,11 +175,10 @@
 /datum/crafting_recipe/bellystove
 	name = "Pot belly stove"
 	result = /obj/structure/campfire/stove
-	reqs = list(/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/stack/crafting/goodparts = 2,
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/metal = 10)
 	tools = list(TOOL_WELDER)
-	time = 80
+	time = 10 SECONDS
 	subcategory = CAT_FARMING
 	category = CAT_MISC
 
@@ -187,10 +186,9 @@
 	name = "Grill"
 	result = /obj/machinery/grill
 	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/crafting/metalparts = 10,
-				/obj/item/stack/crafting/goodparts = 5)
+				/obj/item/stack/crafting/goodparts = 2)
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
-	time = 80
+	time = 10 SECONDS
 	subcategory = CAT_FARMING
 	category = CAT_MISC
 

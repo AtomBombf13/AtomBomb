@@ -762,7 +762,12 @@
 /obj/item/book/granter/crafting_recipe/blueprint/sniper
 	name = "sniper rifle blueprint"
 	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/sniper)
+	crafting_recipe_types = list(/datum/crafting_recipe/dks)
+
+/obj/item/book/granter/crafting_recipe/blueprint/magnum_revolver
+	name = "M2045 magnum revolver rifle blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/m2405)
 
 /obj/item/book/granter/crafting_recipe/blueprint/deagle
 	name = "desert eagle blueprint"

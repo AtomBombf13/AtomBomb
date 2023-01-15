@@ -29,6 +29,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	w_class = WEIGHT_CLASS_TINY
 	heat = 1000
 	grind_results = list(/datum/reagent/phosphorus = 2)
+	hitsound = "swing_hit"
 
 /obj/item/match/process()
 	smoketime--
@@ -46,7 +47,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		icon_state = "match_lit"
 		damtype = "fire"
 		force = 3
-		hitsound = 'sound/items/welder.ogg'
+		hitsound = 'sound/f13items/matchstick_lit.ogg' // seem damtype sound overrides in /obj/item parent despite that it shouldnt. 
 		item_state = "cigon"
 		name = "lit match"
 		desc = "A match. This one is lit."

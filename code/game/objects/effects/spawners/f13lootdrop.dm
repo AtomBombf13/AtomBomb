@@ -914,6 +914,7 @@
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
 				/obj/effect/spawner/bundle/f13/m14 = 5,
 				/obj/effect/spawner/bundle/f13/assault_carbine = 5,
+				/obj/effect/spawner/bundle/f13/magnumrevolver = 15,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
@@ -943,7 +944,8 @@
 				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
-				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
+				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil,
+				/obj/item/gun/ballistic/shotgun/hunting/nomad
 				)
 
 
@@ -1360,6 +1362,13 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/sniper,
 				/obj/item/ammo_box/magazine/w308
+	)
+
+/obj/effect/spawner/bundle/f13/magnumrevolver
+	name = "magnum revolver and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/revolver/m2405,
+				/obj/item/ammo_box/loader/rev308
 	)
 
 /obj/effect/spawner/bundle/f13/rangemaster
@@ -2339,6 +2348,7 @@
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
 		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
+		/obj/item/book/granter/crafting_recipe/blueprint/magnum_revolver,
 		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 	)
 
