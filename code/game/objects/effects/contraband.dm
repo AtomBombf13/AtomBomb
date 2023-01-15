@@ -576,7 +576,7 @@
 	desc = "This picture glorifies some military commander of the past. You can't tell if it was before or after the collapse."
 	icon_state = "poster72"
 	
-	/obj/structure/sign/poster/prewar/poster73
+/obj/structure/sign/poster/prewar/poster73
 	name = "old nihilist poster"
 	desc = "Nothing on earth consumes a man more quickly than the passion of resentment."
 	icon_state = "poster73"
